@@ -85,10 +85,6 @@ public class Packager
         {
             HandleLuaFile();
         }
-        if (AppConst.ExampleMode)
-        {
-            HandleExampleBundle();
-        }
         //把UI的包打进来
         HandleUIBundle();
         //处理streaming
