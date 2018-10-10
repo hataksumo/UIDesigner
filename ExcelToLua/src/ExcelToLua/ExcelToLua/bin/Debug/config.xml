@@ -1,0 +1,30 @@
+﻿<root>
+  <package name="CFG"/>
+  <path cli=".\导出配置\cli\" serv=".\导出配置\srv\" export=".\导出配置\export\" excelPath="E:\WORK\X-Game\策划\数值\配置表\" lua_cfg=".\Lua\"/>
+  <attrDesigner path=".\..\褚智勇\数值规划\玩家属性统计.xlsx" sheets="属性模板;玩家养成规划;怪物属性"/>
+  <simulator src=".\战斗模拟_源数据.xlsx" opt=".\战斗模拟_输出.xlsx"/>  
+  <designer_outputs>
+    <output src_path ="..\数值规划\属性投放.xlsx!武将细配" tar_path="..\配置表\s属性表.xlsx!属性表"
+            src_pm_key ="ID" tar_pm_key ="id"
+            src_head_row="2" src_row_beg="3" tar_head_row="0" tar_row_beg="4"
+            src_opt_cols="初始生命;初始攻击;初始物防;初始法防"
+            tar_opt_cols="max_hp;attack;defence_melee;defence_magic"/>
+  
+      <output src_path ="..\数值规划\属性投放.xlsx!武将细配" tar_path="..\配置表\s实例表.xlsx!实例表"
+            src_pm_key ="ID" tar_pm_key ="id"
+            src_head_row="2" src_row_beg="3" tar_head_row="0" tar_row_beg="4"
+            src_opt_cols="生命成长;攻击成长;物防成长;法防成长"
+            tar_opt_cols="hp_level_mod;attack_level_mod;melee_def_level_mod;magic_def_level_mod"/>
+
+      <output src_path ="..\数值规划\属性投放.xlsx!装备细配" tar_path="..\配置表\d道具表.xlsx!道具表"
+            src_pm_key ="ITEM_ID" tar_pm_key ="id"
+            src_head_row="1" src_row_beg="2" tar_head_row="0" tar_row_beg="4"
+            src_opt_cols="属性1;属性2;成长属性1;成长属性2;品质ID;装备"
+            tar_opt_cols="base_att_val1;base_att_val2;att_plus_val1;att_plus_val2;quality;#note"/>
+      <output src_path ="..\数值规划\属性投放.xlsx!装备细配" tar_path="..\配置表\z装备表.xlsx!装备表"
+            src_pm_key ="ITEM_ID" tar_pm_key ="item_id"
+            src_head_row="1" src_row_beg="2" tar_head_row="0" tar_row_beg="4"
+            src_opt_cols="属性1;属性2;成长属性1;成长属性2;装备"
+            tar_opt_cols="attr_val1;attr_val2;attr_up1;attr_up2;#note"/>
+  </designer_outputs>
+</root>
