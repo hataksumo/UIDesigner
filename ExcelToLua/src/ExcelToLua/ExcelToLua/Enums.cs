@@ -34,7 +34,7 @@ namespace ExcelToLua
     {
         indexMap,//处于索引位置的数据
         rowData,//对应excel表一行的数据
-        cellMap,//对应excel表一行中，不是叶子节点的数据
+        cellTable,//对应excel表一行中，不是叶子节点的数据
         cellData//对应一个单元格的数据
     }
 

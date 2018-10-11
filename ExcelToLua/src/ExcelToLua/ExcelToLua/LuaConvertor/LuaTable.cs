@@ -216,7 +216,8 @@ namespace ExcelToLua
     abstract class LuaTable : LuaValue
     {
         protected bool m_isStretch;
-        protected int m_maxElementOneLine; 
+        protected int m_maxElementOneLine;
+        protected bool m_printIndex;
         //protected List<string> m_notes = new List<string>();
 
         protected abstract void _OnOutputInit();
@@ -224,7 +225,11 @@ namespace ExcelToLua
         protected abstract LuaValue _GetValue(int v_index);
         protected abstract int _GetDataCount();
         public abstract bool IsEmpty();
-       // public bool is_opt_empty = true;
+        // public bool is_opt_empty = true;
+        public abstract bool addData(Key v_key, LuaValue v_val, string v_note = null);
+
+
+       
         private void _OutputElementSrcForTight(StringBuilder sb, int v_level, uint v_style)
         {
             sb.Append('{');
@@ -307,7 +312,6 @@ namespace ExcelToLua
     class LuaArray : LuaTable
     {
         protected List<LuaValue> m_data;
-        protected bool m_printIndex;
 
         public void init(bool v_isStretch = false, bool v_printIndex = false,
             int v_maxElementOneLine = 5)
@@ -363,6 +367,12 @@ namespace ExcelToLua
             return m_data.Count==0;
         }
 
+        public override bool addData(Key v_key, LuaValue v_val, string v_note)
+        {
+            Debug.Assert(v_key.keytype == KeyType.Integer && v_key.ikey <= m_data.Count+1, "只能加入整型键的数据，并且下标不可越界");
+            addData(v_val);
+            return true;
+        }
     }
 
     class LuaMap : LuaTable
@@ -378,6 +388,19 @@ namespace ExcelToLua
             m_maxElementOneLine = v_maxElementOneLine;
             m_sdata = new Dictionary<string, LuaValue>();
             m_idata = new Dictionary<int, LuaValue>();
+        }
+
+
+        public override bool addData(Key v_key, LuaValue v_val, string v_note = null)
+        {
+            switch (v_key.keytype)
+            {
+                case KeyType.Integer:
+                    return addData(v_key.ikey, v_val, v_note);
+                case KeyType.String:
+                    return addData(v_key.skey, v_val, v_note);
+            }
+            return false;
         }
 
         //当添加相同键时，return false
@@ -488,11 +511,11 @@ namespace ExcelToLua
             return m_idata.ContainsKey(v_key);
         }
 
-        public bool cointainKey(CellValue.Key v_key)
+        public bool cointainKey(Key v_key)
         {
-            if (v_key.keytype == CellValue.KeyType.Integer)
+            if (v_key.keytype == KeyType.Integer)
                 return cointainKey(v_key.ikey);
-            if (v_key.keytype == CellValue.KeyType.String)
+            if (v_key.keytype == KeyType.String)
                 return cointainKey(v_key.skey);
             return false;
         }

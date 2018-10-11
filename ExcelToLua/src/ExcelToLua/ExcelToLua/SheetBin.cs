@@ -175,18 +175,18 @@ namespace ExcelToLua
                 for (int j = 0; j < colIndex.Length; j++)
                 {
                     int col = colIndex[j];
-                    CellValue.Key the_key = data[i][col].toKey();
+                    Key the_key = data[i][col].toKey();
                     if (j == colIndex.Length - 1)
                     {
                         cur = get_or_create_index_map(cur, the_key);
-                        cur.Type = EExcelMapDataType.indexMap;
+                        cur.Type = EExcelMapDataType.rowData;
                         //把一行的数据装载进来
                         header.get_row_data(cur, data[i], v_optCode);
                     }
                     else
                     {
                         cur = get_or_create_index_map(cur, the_key);
-                        cur.Type = EExcelMapDataType.rowData;
+                        cur.Type = EExcelMapDataType.indexMap;
                     }
                     if (j == colIndex.Length - 1)
                     {
@@ -197,26 +197,28 @@ namespace ExcelToLua
             return true;
         }
 
-        private ExcelMapData get_or_create_index_map(ExcelMapData v_cur, CellValue.Key v_key)
+        private ExcelMapData get_or_create_index_map(ExcelMapData v_cur, Key v_key)
         {
-            ExcelMapData newData = null;
+            ExcelMapData rtn = v_cur.getData(v_key);
+            if (rtn != null)
+                return rtn;
             switch (v_key.keytype)
             {
-                case CellValue.KeyType.Integer:
-                    newData = new ExcelMapData();
-                    newData.initAsTableData();
-                    v_cur.addData(v_key.ikey, newData);
+                case KeyType.Integer:
+                    rtn = new ExcelMapData();
+                    rtn.initAsTableData();
+                    v_cur.addData(v_key.ikey, rtn);
                     break;
-                case CellValue.KeyType.String:
-                    newData = new ExcelMapData();
-                    newData.initAsTableData();
-                    v_cur.addData(v_key.skey, newData);
+                case KeyType.String:
+                    rtn = new ExcelMapData();
+                    rtn.initAsTableData();
+                    v_cur.addData(v_key.skey, rtn);
                     break;
                 default:
                     return null;
             }
-            Debug.Assert(newData != null, string.Format("{0} 这个键暂时不支持", v_key.keytype));
-            return newData;
+            Debug.Assert(rtn != null, string.Format("{0} 这个键暂时不支持", v_key.keytype));
+            return rtn;
         }
 
         private int[] getColIndex()

@@ -196,15 +196,18 @@ namespace ExcelToLua
             }
         }
 
+
         private void _get_row_data(Serchdata v_st, CellValue[] v_row_data,int v_optCode)
         {
             ExcelMapData curmap = v_st.curmap;
             ComplexExcelHeaderNode parrent = v_st.node;
-            string[] skeys = parrent.m_sdata.Keys.ToArray();
-            for (int i = 0; i < skeys.Length; i++)
+            List<KeyValue<ComplexExcelHeaderNode>> keyValSet = v_st.node.getKeyValueSet();
+            for (int i = 0; i < keyValSet.Count; i++)
             {
-                string the_key = skeys[i];
-                ComplexExcelHeaderNode node = parrent.m_sdata[the_key];
+                Key the_key = keyValSet[i].key;
+                ComplexExcelHeaderNode node = parrent.get_node(the_key);
+
+
                 if (node.IsSkip) continue;
                 if (node.IsLeaf)
                 {
@@ -216,49 +219,21 @@ namespace ExcelToLua
                     {
                         ExcelMapData leafData = new ExcelMapData();
                         leafData.initAsLeafeData(celldata);
+                        leafData.Type = EExcelMapDataType.cellData;
                         curmap.addData(the_key, leafData);
                     }
-                    curmap.Type = EExcelMapDataType.cellData;
                 }
                 else
                 {
                     ExcelMapData map_next = new ExcelMapData();
                     map_next.initAsTableData();
-                    map_next.Type = EExcelMapDataType.cellMap;
+                    map_next.Type = EExcelMapDataType.cellTable;
                     Serchdata sdnew = new Serchdata(node, map_next);
                     _get_row_data(sdnew, v_row_data, v_optCode);
                     if (!map_next.IsEmpty())
                         curmap.addData(the_key, map_next);
                 }
-            }
-            int[] ikeys = parrent.m_idata.Keys.ToArray();
-            for (int i = 0; i < ikeys.Length; i++)
-            {
-                int the_key = ikeys[i];
-                ComplexExcelHeaderNode node = parrent.m_idata[the_key];
-                if (node.IsSkip) continue;
-                if (node.IsLeaf)
-                {
-                    ExcelHeaderDecorate ehd = m_header_dct[node.LeafDataIdx];
-                    if (!ehd.is_need_opt(v_optCode))
-                        continue;
-                    CellValue celldata = v_row_data[node.LeafDataIdx];
-                    if (!celldata._isMiss)
-                    {
-                        ExcelMapData leafData = new ExcelMapData();
-                        leafData.initAsLeafeData(celldata);
-                        curmap.addData(the_key, leafData);
-                    }
-                }
-                else
-                {
-                    ExcelMapData map_next = new ExcelMapData();
-                    map_next.initAsTableData();
-                    Serchdata sdnew = new Serchdata(node, map_next);
-                    _get_row_data(sdnew, v_row_data, v_optCode);
-                    if(!map_next.IsEmpty())
-                        curmap.addData(the_key, map_next);
-                }
+
             }
 
         }
@@ -317,6 +292,7 @@ namespace ExcelToLua
 
 
 
+
         //public int Layer;
         public ComplexExcelHeaderNode()
         {
@@ -326,6 +302,45 @@ namespace ExcelToLua
             debug_name = "";
             m_skip = false;
         }
+
+        public List<KeyValue<ComplexExcelHeaderNode>> getKeyValueSet()
+        {
+            List<KeyValue<ComplexExcelHeaderNode>> rtn = new List<KeyValue<ComplexExcelHeaderNode>>();
+            int[] iKeys = m_idata.Keys.ToArray();
+            Array.Sort(iKeys);
+            int iLen = iKeys.Length;
+            for (int i = 0; i < iLen; i++)
+            {
+                KeyValue<ComplexExcelHeaderNode> iItem = new KeyValue<ComplexExcelHeaderNode>();
+                iItem.init(iKeys[i], m_idata[iKeys[i]]);
+                rtn.Add(iItem);
+            }
+            string[] sKeys = m_sdata.Keys.ToArray();
+            Array.Sort(sKeys);
+            int sLen = sKeys.Length;
+            for (int i = 0; i < sLen; i++)
+            {
+                KeyValue<ComplexExcelHeaderNode> sItem = new KeyValue<ComplexExcelHeaderNode>();
+                sItem.init(sKeys[i], m_sdata[sKeys[i]]);
+                rtn.Add(sItem);
+            }
+            return rtn;
+        }
+
+        public ComplexExcelHeaderNode get_node(Key v_key, bool v_bCreate = false)
+        {
+            if (v_key.keytype == KeyType.String)
+            {
+                return get_node(v_key.skey, v_bCreate);
+            }
+            else if (v_key.keytype == KeyType.Integer)
+            {
+                return get_node(v_key.ikey, v_bCreate);
+            }
+            Debug.Error("ComplexExcelHeaderNode:get_node 未知key类型");
+            return null;
+        }
+
 
         public ComplexExcelHeaderNode get_node(string v_key, bool v_bCreate = false)
         {

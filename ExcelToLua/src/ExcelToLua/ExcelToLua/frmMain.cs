@@ -168,10 +168,15 @@ namespace ExcelToLua
                             Debug.Error("未知导出语言");
                             break;
                     }
+                    if (optData.errList.Count > 0)
+                    {
+                        Debug.Error(optData.getErrInfo());
+                        return;
+                    }
                     File.WriteAllText(opt_path, optData.content);
                 }
-                Debug.Info("{0}:导表完成~~~", Path.GetFileName(v_filePath));
             }
+            Debug.Info("{0}:导表完成~~~", Path.GetFileName(v_filePath));
         }
 
         public string cliPath = "";

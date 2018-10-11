@@ -11,15 +11,6 @@ namespace ExcelToLua
 {
     abstract class CellValue
     {
-        public enum KeyType
-        { Integer,String,Nil}
-
-        public struct Key
-        {
-            public KeyType keytype;
-            public int ikey;
-            public string skey;
-        }
 
         public bool IsStretch { get { return _isStretch; }set { _isStretch = value; } }
         protected bool _isStretch = false;

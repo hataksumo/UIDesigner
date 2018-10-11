@@ -11,7 +11,54 @@ namespace ExcelToLua
         public string content;
         //public XmlDocument doc;
         public List<string> errList = new List<string>();
+        public string getErrInfo()
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < errList.Count; i++)
+            {
+                sb.Append("#ERR" + (i + 1) + ":\r\n");
+                sb.Append(errList[i]);
+            }
+            return sb.ToString();
+        }
+
+
+
     }
+
+    public enum KeyType
+    { Integer, String, Nil }
+
+    struct Key
+    {
+        public KeyType keytype;
+        public int ikey;
+        public string skey;
+    }
+
+    struct KeyValue<T>
+    {
+        public Key key;
+        public T val;
+        public void init(int v_key, T v_val)
+        {
+            key.keytype = KeyType.Integer;
+            key.ikey = v_key;
+            val = v_val;
+        }
+
+        public void init(string v_key, T v_val)
+        {
+            key.keytype = KeyType.String;
+            key.skey = v_key;
+            val = v_val;
+        }
+    }
+
+
+
+
+
 
     struct ExcelToMapData
     {
