@@ -18,6 +18,7 @@ namespace ExcelToLua
         protected abstract bool _OnInit(string v_strCellVal);
         public abstract bool Equals(CellValue v_other);
         protected abstract LuaValue _OnGetLuaValue();
+        protected abstract JsonValue _OnGetJsonValue();
         protected abstract string _OnGetXmlAttribute();
         public abstract string toKeyString();
         public bool _isNull;
@@ -44,6 +45,26 @@ namespace ExcelToLua
             }
             return _OnGetLuaValue();
         }
+
+        public virtual JsonValue getJsonValue()
+        {
+            if (_isMiss)
+            {
+                JsonNil rtn = new JsonNil();
+                rtn.init(false);
+                return rtn;
+            }
+            if (_isNull)
+            {
+                JsonNil rtn = new JsonNil();
+                rtn.init(true);
+                return rtn;
+            }
+            return _OnGetJsonValue();
+        }
+
+
+
 
         public virtual Key toKey()
         {
@@ -180,6 +201,10 @@ namespace ExcelToLua
         {
             return null;
         }
+        protected override JsonValue _OnGetJsonValue()
+        {
+            return null;
+        }
         protected override string _OnGetXmlAttribute()
         {
             return null;
@@ -232,6 +257,12 @@ namespace ExcelToLua
             rtn.init(_data);
             return rtn;
         }
+        protected override JsonValue _OnGetJsonValue()
+        {
+            JsonInteger rtn = new JsonInteger();
+            rtn.init(_data);
+            return rtn;
+        }
         public override string toKeyString()
         {
             return _data.ToString();
@@ -272,6 +303,12 @@ namespace ExcelToLua
         protected override LuaValue _OnGetLuaValue()
         {
             LuaString rtn = new LuaString();
+            rtn.init(_data);
+            return rtn;
+        }
+        protected override JsonValue _OnGetJsonValue()
+        {
+            JsonString rtn = new JsonString();
             rtn.init(_data);
             return rtn;
         }
@@ -331,12 +368,6 @@ namespace ExcelToLua
         {
             IDVal obj = v_other as IDVal;
             return obj != null && obj._data == _data;
-        }
-        protected override LuaValue _OnGetLuaValue()
-        {
-            LuaInteger rtn = new LuaInteger();
-            rtn.init(_data);
-            return rtn;
         }
         public override string toKeyString()
         {
@@ -442,6 +473,23 @@ namespace ExcelToLua
                 return new LuaNil();
             }
         }
+        protected override JsonValue _OnGetJsonValue()
+        {
+            if (m_successInit)
+            {
+                JsonArray rtn = new JsonArray();
+                rtn.init(_isStretch, ExportSheetBin.ROW_MAX_ELEMENT);
+                for (int i = 0; i < _data.Length; i++)
+                {
+                    rtn.addData(_data[i].getJsonValue());
+                }
+                return rtn;
+            }
+            else
+            {
+                return new JsonNil();
+            }
+        }
         public override string toKeyString()
         {
             return _data.ToString();
@@ -501,6 +549,13 @@ namespace ExcelToLua
             rtn.init(_data);
             return rtn;
         }
+
+        protected override JsonValue _OnGetJsonValue()
+        {
+            JsonBoolean rtn = new JsonBoolean();
+            rtn.init(_data);
+            return rtn;
+        }
         public override string toKeyString()
         {
             return _data.ToString();
@@ -554,6 +609,12 @@ namespace ExcelToLua
             rtn.init(_data10k);
             return rtn;
         }
+        protected override JsonValue _OnGetJsonValue()
+        {
+            JsonInteger rtn = new JsonInteger();
+            rtn.init(_data10k);
+            return rtn;
+        }
         public override string toKeyString()
         {
             return string.Format("{0,2}%",_data10k/10000.0);
@@ -586,6 +647,12 @@ namespace ExcelToLua
         protected override LuaValue _OnGetLuaValue()
         {
             LuaDouble rtn = new LuaDouble();
+            rtn.init(_data);
+            return rtn;
+        }
+        protected override JsonValue _OnGetJsonValue()
+        {
+            JsonDouble rtn = new JsonDouble();
             rtn.init(_data);
             return rtn;
         }
@@ -629,6 +696,12 @@ namespace ExcelToLua
             rtn.init(_data);
             return rtn;
         }
+        protected override JsonValue _OnGetJsonValue()
+        {
+            JsonDouble rtn = new JsonDouble();
+            rtn.init(_data);
+            return rtn;
+        }
         public override string toKeyString()
         {
             return _data.ToString();
@@ -657,6 +730,12 @@ namespace ExcelToLua
         protected override LuaValue _OnGetLuaValue()
         {
             return _luaval;
+        }
+
+        protected override JsonValue _OnGetJsonValue()
+        {
+            return new JsonString(_luaval.ToString());
+
         }
 
         protected override string _OnGetXmlAttribute()

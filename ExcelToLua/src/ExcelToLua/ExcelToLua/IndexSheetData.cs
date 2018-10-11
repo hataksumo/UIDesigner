@@ -57,6 +57,8 @@ namespace ExcelToLua
                 return ELanguage.lua;
             if (suffixName == ".xml")
                 return ELanguage.xml;
+            if (suffixName == ".json")
+                return ELanguage.json;
             //Debug.Warning("未知语言文件{0}", v_fileName);
             return ELanguage.lua;
         }

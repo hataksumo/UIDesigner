@@ -160,6 +160,7 @@ namespace ExcelToLua
                             optData = LuaExporter.getExportContent(cur_pair.Value, optCode[i]);
                             break;
                         case ELanguage.json:
+                            optData = JsonExporter.getExportContent(cur_pair.Value, optCode[i]);
                             break;
                         case ELanguage.xml:
                             Debug.Error("xml导出未实现");
