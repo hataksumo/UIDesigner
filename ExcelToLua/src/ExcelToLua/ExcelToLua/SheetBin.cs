@@ -157,10 +157,86 @@ namespace ExcelToLua
             return true;
         }
 
-        public bool getExportMap(LuaMap v_root,int v_optCode)
+        //把数据装载进中间结构
+        public bool getExportMap(ExcelMapData v_root,int v_optCode)
         {
-            return LuaExporter.output_luatable(v_root, this, v_optCode);
+            if (indexData.pmKey == null)
+                return false;
+            ExcelMapData rtn = v_root;
+            //rtn.init(true, ExportSheetBin.ROW_MAX_ELEMENT);
+            //rtn.Single_value_hide_key = true;
+            //主键索引
+            int[] colIndex = getColIndex();
+            if (colIndex == null) return false;
+            int head_len = header.opt_head_len(v_optCode);
+            for (int i = 0; i < data.Count; i++)
+            {
+                ExcelMapData cur = rtn;
+                for (int j = 0; j < colIndex.Length; j++)
+                {
+                    int col = colIndex[j];
+                    CellValue.Key the_key = data[i][col].toKey();
+                    if (j == colIndex.Length - 1)
+                    {
+                        cur = get_or_create_index_map(cur, the_key);
+                        cur.Type = EExcelMapDataType.indexMap;
+                        //把一行的数据装载进来
+                        header.get_row_data(cur, data[i], v_optCode);
+                    }
+                    else
+                    {
+                        cur = get_or_create_index_map(cur, the_key);
+                        cur.Type = EExcelMapDataType.rowData;
+                    }
+                    if (j == colIndex.Length - 1)
+                    {
+                        cur.Note = notes[i];
+                    }
+                }
+            }
+            return true;
         }
+
+        private ExcelMapData get_or_create_index_map(ExcelMapData v_cur, CellValue.Key v_key)
+        {
+            ExcelMapData newData = null;
+            switch (v_key.keytype)
+            {
+                case CellValue.KeyType.Integer:
+                    newData = new ExcelMapData();
+                    newData.initAsTableData();
+                    v_cur.addData(v_key.ikey, newData);
+                    break;
+                case CellValue.KeyType.String:
+                    newData = new ExcelMapData();
+                    newData.initAsTableData();
+                    v_cur.addData(v_key.skey, newData);
+                    break;
+                default:
+                    return null;
+            }
+            Debug.Assert(newData != null, string.Format("{0} 这个键暂时不支持", v_key.keytype));
+            return newData;
+        }
+
+        private int[] getColIndex()
+        {
+            string[] pmKey = indexData.pmKey;
+            int[] colIndex = new int[pmKey.Length];
+            for (int i = 0; i < pmKey.Length; i++)
+            {
+                colIndex[i] = header.getDataColIndex(pmKey[i]);
+                Debug.Assert(colIndex[i] >= 0, string.Format("没有找到名为{0}的索引", pmKey[i]));
+                if (header.get_header_Decorate(pmKey[i]).CanBeEmpty)
+                {
+                    Debug.Exception("导出集合索引时，名为{0}的索引竟然可以为空！！！", pmKey[i]);
+                    return null;
+                }
+            }
+            return colIndex;
+        }
+
+
 
     }
 

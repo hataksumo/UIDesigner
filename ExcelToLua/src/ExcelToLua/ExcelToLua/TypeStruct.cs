@@ -15,11 +15,11 @@ namespace ExcelToLua
 
     struct ExcelToMapData
     {
-        public LuaMap lua_data;
+        public ExcelMapData _data;
         public List<ExportSheetBin> sheet_bins;
-        public ExcelToMapData(LuaMap v_luaMap)
+        public ExcelToMapData(ExcelMapData v_luaMap)
         {
-            lua_data = v_luaMap;
+            _data = v_luaMap;
             sheet_bins = new List<ExportSheetBin>();
         }
 
@@ -65,6 +65,11 @@ namespace ExcelToLua
             }
             v_sb.Append(cursb);
         }
+
+        //public ELanguage Language
+        //{
+        //    get { return sheet_bins[0]}
+        //}
 
     }
 }

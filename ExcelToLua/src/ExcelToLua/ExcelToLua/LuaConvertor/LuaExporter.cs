@@ -28,7 +28,7 @@ namespace ExcelToLua
             StringBuilder sb = new StringBuilder();
             try
             {
-                LuaTable val = v_data.lua_data;
+                ExcelMapData val = v_data._data;
                 sb.Append("--[[\r\n");
                 v_data.opt_note(sb, "note");
                 sb.Append("\r\n");
@@ -54,6 +54,15 @@ namespace ExcelToLua
             return rtn;
             //sb.Append(string.Format("\r\nreturn {0}", curIndex.className));
         }
+
+        private static LuaMap _analysis(ExcelMapData v_mapData)
+        {
+
+        }
+
+
+
+
 
         private static LuaTable getLuaTableConfig(LuaMap v_root, ExportSheetBin v_sheetBin, int v_optCode)
         {

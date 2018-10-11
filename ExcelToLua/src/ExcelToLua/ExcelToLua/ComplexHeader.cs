@@ -188,8 +188,8 @@ namespace ExcelToLua
         private struct Serchdata
         {
             public ComplexExcelHeaderNode node;
-            public LuaMap curmap;
-            public Serchdata(ComplexExcelHeaderNode v_node, LuaMap v_map)
+            public ExcelMapData curmap;
+            public Serchdata(ComplexExcelHeaderNode v_node, ExcelMapData v_map)
             {
                 node = v_node;
                 curmap = v_map;
@@ -197,8 +197,8 @@ namespace ExcelToLua
         }
 
         private void _get_row_data(Serchdata v_st, CellValue[] v_row_data,int v_optCode)
-        {       
-            LuaMap curmap = v_st.curmap;
+        {
+            ExcelMapData curmap = v_st.curmap;
             ComplexExcelHeaderNode parrent = v_st.node;
             string[] skeys = parrent.m_sdata.Keys.ToArray();
             for (int i = 0; i < skeys.Length; i++)
@@ -213,12 +213,18 @@ namespace ExcelToLua
                         continue;
                     CellValue celldata = v_row_data[node.LeafDataIdx];
                     if (!celldata._isMiss)
-                        curmap.addData(the_key, celldata.getLuaValue());
+                    {
+                        ExcelMapData leafData = new ExcelMapData();
+                        leafData.initAsLeafeData(celldata);
+                        curmap.addData(the_key, leafData);
+                    }
+                    curmap.Type = EExcelMapDataType.cellData;
                 }
                 else
                 {
-                    LuaMap map_next = map_next = new LuaMap();
-                    map_next.init(false, ExportSheetBin.ROW_MAX_ELEMENT);
+                    ExcelMapData map_next = new ExcelMapData();
+                    map_next.initAsTableData();
+                    map_next.Type = EExcelMapDataType.cellMap;
                     Serchdata sdnew = new Serchdata(node, map_next);
                     _get_row_data(sdnew, v_row_data, v_optCode);
                     if (!map_next.IsEmpty())
@@ -237,13 +243,17 @@ namespace ExcelToLua
                     if (!ehd.is_need_opt(v_optCode))
                         continue;
                     CellValue celldata = v_row_data[node.LeafDataIdx];
-                    if(!celldata._isMiss)
-                        curmap.addData(the_key, celldata.getLuaValue());
+                    if (!celldata._isMiss)
+                    {
+                        ExcelMapData leafData = new ExcelMapData();
+                        leafData.initAsLeafeData(celldata);
+                        curmap.addData(the_key, leafData);
+                    }
                 }
                 else
                 {
-                    LuaMap map_next = new LuaMap();
-                    map_next.init(false, ExportSheetBin.ROW_MAX_ELEMENT);      
+                    ExcelMapData map_next = new ExcelMapData();
+                    map_next.initAsTableData();
                     Serchdata sdnew = new Serchdata(node, map_next);
                     _get_row_data(sdnew, v_row_data, v_optCode);
                     if(!map_next.IsEmpty())
@@ -254,13 +264,12 @@ namespace ExcelToLua
         }
 
 
-        public LuaMap get_row_data(LuaMap src_map,CellValue[] v_row_data,int v_optCode)
+        public ExcelMapData get_row_data(ExcelMapData src_map,CellValue[] v_row_data,int v_optCode)
         {
-            LuaMap rtn;
+            ExcelMapData rtn;
             if (src_map == null)
             {
-                rtn = new LuaMap();
-                rtn.init(false, ExportSheetBin.ROW_MAX_ELEMENT);
+                rtn = new ExcelMapData();
             }
             else
             {

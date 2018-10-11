@@ -773,7 +773,6 @@ namespace ExcelToLua
 
     class TableValue : DataFromLuaFileValue
     {
-        protected LuaMap _data;
         protected string _source;
         protected override bool _OnInit(string v_strCellVal)
         {

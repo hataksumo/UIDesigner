@@ -128,8 +128,7 @@ namespace ExcelToLua
                     if (string.IsNullOrEmpty(file_names[i])) continue;
                     if (!table_memo[i].ContainsKey(file_names[i]))
                     {
-                        LuaMap new_map = new LuaMap();
-                        new_map.init(true,ExportSheetBin.ROW_MAX_ELEMENT);
+                        ExcelMapData new_map = new ExcelMapData();
                         ExcelToMapData new_data = new ExcelToMapData(new_map);
                         table_memo[i].Add(file_names[i], new_data);
                     }
@@ -139,20 +138,40 @@ namespace ExcelToLua
                     }
                     ExcelToMapData root_table = table_memo[i][file_names[i]];
                     root_table.add_sheetbin(sheetBin);
-                    sheetBin.getExportMap(root_table.lua_data, optCode[i]);
+                    //把表中的数据读取到lua map里
+                    //应当把这里的逻辑改为，把表中数据读到一个map_data中，而后转到各语言的结构中
+                    sheetBin.getExportMap(root_table._data, optCode[i]);
                 }                  
             }
 
+            //这里应当写为，根据后缀名导出不同的语言
             for (int i = 0; i < table_memo.Length; i++)
+            {
                 foreach (var cur_pair in table_memo[i])
                 {
                     string opt_path = root_pathes[i] + cur_pair.Key;
                     OptData optData = null;
                     ExportSheetBin cur_sheetBin = sheetBin_memo[i][cur_pair.Key];
-                    optData = LuaExporter.getExportContent(cur_pair.Value, optCode[i]);
+                    ELanguage optLanguage = cur_sheetBin.indexData.getOptLanguage(i);
+
+                    switch (optLanguage)
+                    {
+                        case ELanguage.lua:
+                            optData = LuaExporter.getExportContent(cur_pair.Value, optCode[i]);
+                            break;
+                        case ELanguage.json:
+                            break;
+                        case ELanguage.xml:
+                            Debug.Error("xml导出未实现");
+                            break;
+                        default:
+                            Debug.Error("未知导出语言");
+                            break;
+                    }
                     File.WriteAllText(opt_path, optData.content);
                 }
-            Debug.Info("{0}:导表完成~~~", Path.GetFileName(v_filePath));
+                Debug.Info("{0}:导表完成~~~", Path.GetFileName(v_filePath));
+            }
         }
 
         public string cliPath = "";

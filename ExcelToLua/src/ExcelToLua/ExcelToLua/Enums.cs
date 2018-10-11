@@ -20,7 +20,8 @@ namespace ExcelToLua
     {
         none,
         lua,
-        xml
+        xml,
+        json
     }
 
     enum ECellDataStructure
@@ -28,5 +29,14 @@ namespace ExcelToLua
         single,//一个值
         array,//数组
     }
+
+    enum EExcelMapDataType
+    {
+        indexMap,//处于索引位置的数据
+        rowData,//对应excel表一行的数据
+        cellMap,//对应excel表一行中，不是叶子节点的数据
+        cellData//对应一个单元格的数据
+    }
+
 
 }

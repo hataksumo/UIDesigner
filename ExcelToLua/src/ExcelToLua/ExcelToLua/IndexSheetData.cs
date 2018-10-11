@@ -91,5 +91,11 @@ namespace ExcelToLua
             }
             return rtn;
         }
+
+        public ELanguage getOptLanguage(int v_opt)
+        {
+            ELanguage[] optLanguages = { optCliLanguage, optSrvLanguage, optCliLanguage };
+            return optLanguages[v_opt];
+        }
     }
 }
