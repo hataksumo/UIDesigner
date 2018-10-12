@@ -109,7 +109,6 @@ namespace ExcelToLua
             int[] iKeys = m_iData.Keys.ToArray();
             Array.Sort(iKeys);
             string[] sKeys = m_sData.Keys.ToArray();
-            Array.Sort(sKeys);
             int iLen = iKeys.Length;
             for (int i = 0; i < iLen; i++)
             {

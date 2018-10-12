@@ -153,6 +153,7 @@ namespace ExcelToLua
                     OptData optData = null;
                     ExportSheetBin cur_sheetBin = sheetBin_memo[i][cur_pair.Key];
                     ELanguage optLanguage = cur_sheetBin.indexData.getOptLanguage(i);
+                    bool skip = false;
 
                     switch (optLanguage)
                     {
@@ -165,16 +166,23 @@ namespace ExcelToLua
                         case ELanguage.xml:
                             Debug.Error("xml导出未实现");
                             break;
+                        case ELanguage.none:
+                            skip = true;
+                            break;
                         default:
                             Debug.Error("未知导出语言");
                             break;
                     }
-                    if (optData.errList.Count > 0)
+                    if (!skip)
                     {
-                        Debug.Error(optData.getErrInfo());
-                        return;
+                        if (optData.errList.Count > 0)
+                        {
+                            Debug.Error(optData.getErrInfo());
+                            return;
+                        }
+                        File.WriteAllText(opt_path, optData.content);
                     }
-                    File.WriteAllText(opt_path, optData.content);
+                        
                 }
             }
             Debug.Info("{0}:导表完成~~~", Path.GetFileName(v_filePath));

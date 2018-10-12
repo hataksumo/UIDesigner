@@ -60,7 +60,7 @@ namespace ExcelToLua
             if (suffixName == ".json")
                 return ELanguage.json;
             //Debug.Warning("未知语言文件{0}", v_fileName);
-            return ELanguage.lua;
+            return ELanguage.none;
         }
 
         private string[] _getPmKey(string v_symble)

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace ExcelToLua
 {
-
     abstract class JsonValue
     {
         public const uint TIGHT = 0x0001u;
@@ -62,7 +61,7 @@ namespace ExcelToLua
 
         public override void outputValue(StringBuilder sb, int v_level, uint v_style = 0)
         {
-            sb.Append("nil");
+            sb.Append("null");
         }
 
         public bool IsPrint

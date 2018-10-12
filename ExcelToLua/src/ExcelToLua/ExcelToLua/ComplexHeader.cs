@@ -316,7 +316,7 @@ namespace ExcelToLua
                 rtn.Add(iItem);
             }
             string[] sKeys = m_sdata.Keys.ToArray();
-            Array.Sort(sKeys);
+            //Array.Sort(sKeys);
             int sLen = sKeys.Length;
             for (int i = 0; i < sLen; i++)
             {
