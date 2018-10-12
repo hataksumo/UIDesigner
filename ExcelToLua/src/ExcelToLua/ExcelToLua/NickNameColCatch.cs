@@ -136,11 +136,11 @@ namespace ExcelToLua
             m_data = new List<KeyValuePair<string, int>>();
             m_keyIndex = new Dictionary<string, int>();
             m_ids = new HashSet<int>();
-            if (v_valType == "字符串")
+            if (v_valType == "string")
             {
                 m_valueType = ValueType.字符串;
             }
-            else if (v_valType == "整数")
+            else if (v_valType == "int")
             {
                 m_valueType = ValueType.整数;
             }

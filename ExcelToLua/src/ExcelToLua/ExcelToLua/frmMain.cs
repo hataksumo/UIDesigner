@@ -85,14 +85,15 @@ namespace ExcelToLua
                 catch (Exception ex)
                 {
                     Debug.Error("{0}读取索引列，第{1}行时报错，报错信息如下\r\n{2}", Path.GetFileName(v_filePath), i + 2, ex.ToString());
+                    return;
                 }
             }
 
 
-            Dictionary<string, ExcelToMapData>[] table_memo = new Dictionary<string, ExcelToMapData>[3];
-            Dictionary<string, ExportSheetBin>[] sheetBin_memo = new Dictionary<string, ExportSheetBin>[3];
-            string[] root_pathes = { Config.cliPath, Config.servPath, Config.export_path };
-            int[] optCode = { 1, 2, 3 };
+            Dictionary<string, ExcelToMapData>[] table_memo = new Dictionary<string, ExcelToMapData>[2];
+            Dictionary<string, ExportSheetBin>[] sheetBin_memo = new Dictionary<string, ExportSheetBin>[2];
+            string[] root_pathes = { Config.cliPath, Config.servPath};
+            int[] optCode = { 1, 2};
             for (int i = 0; i < table_memo.Length; i++)
             {
                 table_memo[i] = new Dictionary<string, ExcelToMapData>();
@@ -122,7 +123,7 @@ namespace ExcelToLua
                     return;
                 }
                 //根据服务端的文件名，创建获取luamap
-                string[] file_names = {curIndex.optCliFileName,curIndex.optSrvFileName, curIndex.optSrvFileName };
+                string[] file_names = {curIndex.optCliFileName,curIndex.optSrvFileName};
                 for (int i = 0; i < table_memo.Length; i++)//客户端服务端各生成一遍
                 {
                     if (string.IsNullOrEmpty(file_names[i])) continue;
@@ -177,7 +178,7 @@ namespace ExcelToLua
                     {
                         if (optData.errList.Count > 0)
                         {
-                            Debug.Error(optData.getErrInfo());
+                            Debug.Error(string.Format("在导出{0}时发生错误:\r\n", cur_pair.Key) +optData.getErrInfo());
                             return;
                         }
                         File.WriteAllText(opt_path, optData.content);

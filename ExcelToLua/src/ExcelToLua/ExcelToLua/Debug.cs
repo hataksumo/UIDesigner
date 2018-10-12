@@ -39,8 +39,9 @@ namespace ExcelToLua
 
         public static void Assert(bool v_condition, string v_warning_message = "断言冲突")
         {
-            //throw new Exception(v_warning_message);
-            WinDiagnostics.Debug.Assert(v_condition, v_warning_message);
+            if(!v_condition)
+                throw new Exception(v_warning_message);
+            //WinDiagnostics.Debug.Assert(v_condition, v_warning_message);
         }
 
         public static void ExcelError(string v_msg, params object[] v_params)
