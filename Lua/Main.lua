@@ -5,7 +5,7 @@ end
 
 --场景切换通知
 function OnLevelWasLoaded(level)
-	collectgarbage("collect")
+	collectgarbage("collect1")
 	Time.timeSinceLevelLoad = 0
 end
 
