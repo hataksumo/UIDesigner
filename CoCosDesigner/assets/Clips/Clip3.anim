@@ -1,0 +1,135 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "Clip3",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "plane1": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -196,
+                734
+              ]
+            },
+            {
+              "frame": 0.5833333333333334,
+              "value": [
+                -196,
+                409
+              ]
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": [
+                -196,
+                138
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                -196,
+                197
+              ]
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "plane2": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -4,
+                730
+              ]
+            },
+            {
+              "frame": 0.5833333333333334,
+              "value": [
+                -4,
+                408
+              ]
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": [
+                -4,
+                141
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                -4,
+                189
+              ]
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "plane3": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                191,
+                730
+              ]
+            },
+            {
+              "frame": 0.5833333333333334,
+              "value": [
+                191,
+                412
+              ]
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": [
+                191,
+                152
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                191,
+                189
+              ]
+            }
+          ],
+          "rotation": [
+            {
+              "frame": 0,
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

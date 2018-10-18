@@ -164,8 +164,8 @@
     <Compile Include="Assets\Script\ToLua\Source\LuaConst.cs" />
     <None Include="Assets\Script\ToLua\Injection\InjectionBlackList.txt" />
     <None Include="Assets\Script\ToLua\Injection\InjectionBridgeEditorInfo.xml" />
-    <None Include="Assets\Script\ToLua\Injection\LuaInjectionSkipPaths.txt" />
     <None Include="Assets\Shader\GrayImage.shader" />
+    <None Include="Assets\Script\ToLua\Injection\LuaInjectionSkipPaths.txt" />
     <None Include="Assets\Script\ToLua\readme.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/WORK/UIDesigner/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

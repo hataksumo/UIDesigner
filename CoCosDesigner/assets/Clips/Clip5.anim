@@ -1,0 +1,157 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "Clip5",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "plane1": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -229,
+                869
+              ]
+            },
+            {
+              "frame": 0.5833333333333334,
+              "value": [
+                -229,
+                419
+              ]
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": [
+                -229,
+                208
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                -229,
+                244
+              ]
+            }
+          ]
+        }
+      },
+      "plane2": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -4,
+                730
+              ]
+            },
+            {
+              "frame": 0.5833333333333334,
+              "value": [
+                -4,
+                302
+              ]
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": [
+                -4,
+                46
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                -4,
+                140
+              ]
+            }
+          ]
+        }
+      },
+      "plane3": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                244,
+                881
+              ]
+            },
+            {
+              "frame": 0.5833333333333334,
+              "value": [
+                244,
+                424
+              ]
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": [
+                244,
+                205
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                244,
+                259
+              ]
+            }
+          ]
+        }
+      },
+      "plane4": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -100,
+                1042
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                -100,
+                329
+              ]
+            }
+          ]
+        }
+      },
+      "plane5": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                123,
+                1038
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                123,
+                336
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}
