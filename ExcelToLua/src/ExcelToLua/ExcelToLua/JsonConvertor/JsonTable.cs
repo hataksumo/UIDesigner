@@ -335,7 +335,7 @@ namespace ExcelToLua
     {
         protected Dictionary<string, JsonValue> m_sdata;
         protected Dictionary<int, JsonValue> m_idata;
-        protected bool m_single_value_hide_key = true;
+        protected bool m_single_value_hide_key = false;
 
         public void init(bool v_isStretch = false,
             int v_maxElementOneLine = 5)
