@@ -12,7 +12,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "path1",
+    "_name": "Path1",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -21,7 +21,7 @@
       }
     ],
     "_active": true,
-    "_level": 2,
+    "_level": 3,
     "_components": [
       {
         "__id__": 7
@@ -71,7 +71,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 44,
+    "_localZOrder": 127,
     "groupIndex": 0,
     "_id": ""
   },
@@ -113,7 +113,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -4,
+      "x": 0,
       "y": 730,
       "z": 0
     },
@@ -227,7 +227,7 @@
     "_isTrimmedMode": true,
     "_state": 0,
     "_atlas": null,
-    "_id": "c2hvZ684RNlY7YK9rDdHy/"
+    "_id": "aaWdwM2DdLM5ZddFcKOO9f"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -260,9 +260,13 @@
     },
     "_enabled": true,
     "_defaultClip": null,
-    "_clips": [],
+    "_clips": [
+      {
+        "__uuid__": "ea235834-b440-4550-afd7-9e9801e6ff1c"
+      }
+    ],
     "playOnLoad": false,
-    "_id": "38roIcmoJFU5m1x/w22qdV"
+    "_id": "72iI2ZkotAWZlN9uxHpWPw"
   },
   {
     "__type__": "cc.PrefabInfo",
