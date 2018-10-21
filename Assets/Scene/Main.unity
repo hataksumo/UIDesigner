@@ -113,7 +113,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &196025894
+--- !u!1001 &52788193
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1897,7 +1897,7 @@ RectTransform:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224687982329306732, guid: 4b1922713b9ce9d4abc5cd23c847e0dd,
     type: 2}
-  m_PrefabInternal: {fileID: 196025894}
+  m_PrefabInternal: {fileID: 52788193}
 --- !u!1 &2002667452
 GameObject:
   m_ObjectHideFlags: 0
