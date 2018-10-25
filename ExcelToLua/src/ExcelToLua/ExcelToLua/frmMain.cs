@@ -141,7 +141,14 @@ namespace ExcelToLua
                     root_table.add_sheetbin(sheetBin);
                     //把表中的数据读取到lua map里
                     //应当把这里的逻辑改为，把表中数据读到一个map_data中，而后转到各语言的结构中
-                    sheetBin.getExportMap(root_table._data, optCode[i]);
+                    try
+                    {
+                        sheetBin.getExportMap(root_table._data, optCode[i]);
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Error("在装载【{0}】数据到中间结构时发生错误，错误信息是{1}", curIndex.sheetName, ex.ToString());
+                    }
                 }                  
             }
 

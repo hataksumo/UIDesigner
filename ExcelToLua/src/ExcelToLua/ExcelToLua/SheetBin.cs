@@ -97,19 +97,6 @@ namespace ExcelToLua
             notes = new List<string>();
         }
 
-        private string getExcelCol(int v_col)
-        {
-            StringBuilder sbCol = new StringBuilder();
-            while (v_col > 0)
-            {
-                sbCol.Append((char)(v_col % 26 + 'A' -1));
-                v_col /= 26;
-            }
-            char[] strArr = sbCol.ToString().ToCharArray();
-            Array.Reverse(strArr);
-            string rtn = new string(strArr);
-            return rtn;
-        }
 
 
         public bool init(EXCEL.Worksheet v_workSheet, IndexSheetData v_indexData, int v_rowBegin = 3)
@@ -135,7 +122,7 @@ namespace ExcelToLua
                     }
                     catch (Exception ex)
                     {
-                        Debug.Error("在导出表\"{0}\" sheet \"{1}\" 单元格{2}{3}时发生了错误，单元格内容为{4}，错误信息如下:\r\n{5}", v_workSheet.Workbook.FileName, v_indexData.sheetName, getExcelCol(col+1), row + 1, datas[row, colidx].Value, ex.ToString());
+                        Debug.Error("在导出表\"{0}\" sheet \"{1}\" 单元格{2}{3}时发生了错误，单元格内容为{4}，错误信息如下:\r\n{5}", v_workSheet.Workbook.FileName, v_indexData.sheetName, Tools.getColName(col), row + 1, datas[row, colidx].Value, ex.ToString());
                         return false;
                     }   
                 }
@@ -174,23 +161,30 @@ namespace ExcelToLua
                 ExcelMapData cur = rtn;
                 for (int j = 0; j < colIndex.Length; j++)
                 {
-                    int col = colIndex[j];
-                    Key the_key = data[i][col].toKey();
-                    if (j == colIndex.Length - 1)
+                    try
                     {
-                        cur = get_or_create_index_map(cur, the_key);
-                        cur.Type = EExcelMapDataType.rowData;
-                        //把一行的数据装载进来
-                        header.get_row_data(cur, data[i], v_optCode);
+                        int col = colIndex[j];
+                        Key the_key = data[i][col].toKey();
+                        if (j == colIndex.Length - 1)
+                        {
+                            cur = get_or_create_index_map(cur, the_key);
+                            cur.Type = EExcelMapDataType.rowData;
+                            //把一行的数据装载进来
+                            header.get_row_data(cur, data[i], v_optCode);
+                        }
+                        else
+                        {
+                            cur = get_or_create_index_map(cur, the_key);
+                            cur.Type = EExcelMapDataType.indexMap;
+                        }
+                        if (j == colIndex.Length - 1)
+                        {
+                            cur.Note = notes[i];
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        cur = get_or_create_index_map(cur, the_key);
-                        cur.Type = EExcelMapDataType.indexMap;
-                    }
-                    if (j == colIndex.Length - 1)
-                    {
-                        cur.Note = notes[i];
+                        Debug.Exception("在装载第{0}行{1}列时发生错误，错误信息是{2}", i+1, Tools.getColName(j), ex.ToString());
                     }
                 }
             }

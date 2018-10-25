@@ -34,6 +34,19 @@ namespace ExcelToLua
         public KeyType keytype;
         public int ikey;
         public string skey;
+
+        public override string ToString()
+        {
+            switch (keytype)
+            {
+                case KeyType.Integer:
+                    return ikey.ToString();
+                case KeyType.String:
+                    return skey.ToString();
+                default:
+                    return "nil";
+            }
+        }
     }
 
     struct KeyValue<T>
@@ -52,6 +65,11 @@ namespace ExcelToLua
             key.keytype = KeyType.String;
             key.skey = v_key;
             val = v_val;
+        }
+
+        public override string ToString()
+        {
+            return "key : " + key + ", val : " + val;
         }
     }
 
