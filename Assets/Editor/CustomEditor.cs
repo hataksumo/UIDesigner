@@ -10,21 +10,6 @@ public static class CustomEditor
     [MenuItem("Custom/screen shot")]
     public static void ScreenShot()
     {
-        //Application.CaptureScreenshot
-        /*try
-        {
-            string path = System.IO.Path.GetFullPath(Application.dataPath + "/../ScreanShoot/screen_shoot_" + 
-                System.DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + ".png");
-            UnityEngine.ScreenCapture.CaptureScreenshot(path);
-            UnityEngine.ScreenCapture.CaptureScreenshot("111");
-            Debug.Log(path);
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError(ex.ToString());
-        }
-        Debug.Log("OK");*/
-        //RenderTexture rt = new RenderTexture((int)rect.width, (int)rect.height, 0);
         Camera uiCamera = GameObject.Find("UICamera").GetComponent<Camera>();
         Rect shootArea = new Rect();
         shootArea.position = new Vector2(0, 0);
@@ -38,10 +23,10 @@ public static class CustomEditor
     public static Texture2D CaptrueCamera(Camera camera, Rect rect)
     {
         // 创建一个RenderTexture对象
-        
         RenderTexture rt = new RenderTexture((int)rect.width, (int)rect.height, 0);
         // 临时设置相关相机的targetTexture为rt, 并手动渲染相关相机
         RenderTexture orgrt = camera.targetTexture;
+        rt.antiAliasing = 8;
         camera.targetTexture = rt;
         camera.Render();
         camera.targetTexture = orgrt;
@@ -60,9 +45,6 @@ public static class CustomEditor
         string formatTime = DateTime.Now.ToString();
         formatTime = formatTime.Replace('/', '-').Replace(' ', '-').Replace(':', '-').ToString();
         
-
-
-
         // 最后将这些纹理数据，成一个png图片文件  
         byte[] bytes = screenShot.EncodeToPNG();
         string filename = null;
