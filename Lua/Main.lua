@@ -12,8 +12,54 @@ function getTars(v_tar)
 	return rst
 end
 
---主入口函数。从这里开始lua逻辑
-function Main()
+
+
+
+--服务端返回升级或突破成功后调用该接口
+function fn_shipUpUpdate(v_shipId,v_lv,v_blv)
+	local cfg_attr = require "attr"
+	local cfg_breakThrough = require "breakThrough"
+	local cfg_lvup = require "lvup"
+
+	local shipIds = {
+		[1] = ["2001"],
+		[2] = ["2002"],
+		[3] = ["2003"]
+	}
+
+	local attrIds = {
+		[1] = {1,2,3},
+		[2] = {1,4,5},
+		[3] = {1,4,5},
+	}
+
+	local strShipId = shipIds[v_shipId]
+
+	local attrNames = {}
+	local attrVals = {}
+
+	for i=1,#attrIds[strShipId] do
+		local attrId = attrIds[v_shipId][i]
+		attrNames[i] = cfg_attr[attrId].cname
+		for _i,attr in ipairs(cfg_lvup[strShipId][v_lv]) do
+			if attr.id == attrId then
+				--未来还会计算核能系统，真实的程序还要考虑血量大数的情况，KMB等，超出64位存储范围
+				attrVals[i] = cfg_attr[attrId].iniVal[1][v_shipId] +  math.pow(1000,attr.valw or 0) attr.valv * cfg_breakThrough[strShipId][v_blv].factor
+				break
+			end
+		end
+	end
+	--相应界面做UI更新操作
+	Event.Brocast("updateLvupAttr",v_shipId,attrNames,attrVals)
+	--通知属性系统属性发生改变
+	Event.Brocast("updateAttr")
+end
+
+
+
+
+
+function fn_updateAttr()
 	local cfg_attr = require "attr"
 	local cfg_breakThrough = require "breakThrough"
 	local cfg_chip = require "chip"
@@ -126,6 +172,15 @@ function Main()
 			end
 		end
 	end
+end
+
+
+
+
+
+--主入口函数。从这里开始lua逻辑
+function Main()
+	
 
 end
 

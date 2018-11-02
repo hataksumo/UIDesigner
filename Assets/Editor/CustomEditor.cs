@@ -26,7 +26,6 @@ public static class CustomEditor
         RenderTexture rt = new RenderTexture((int)rect.width, (int)rect.height, 0);
         // 临时设置相关相机的targetTexture为rt, 并手动渲染相关相机
         RenderTexture orgrt = camera.targetTexture;
-        rt.antiAliasing = 8;
         camera.targetTexture = rt;
         camera.Render();
         camera.targetTexture = orgrt;
@@ -55,8 +54,9 @@ public static class CustomEditor
             Debug.Log("create forder " + path);
             Directory.CreateDirectory(path);
         }
-        System.IO.File.WriteAllBytes(filename, bytes);
+        //System.IO.File.WriteAllBytes(filename, bytes);
         Debug.Log(string.Format("截屏了一张照片: {0}", filename));
+        ScreenCapture.CaptureScreenshot(filename, 0);
 
         return screenShot;
     } 
