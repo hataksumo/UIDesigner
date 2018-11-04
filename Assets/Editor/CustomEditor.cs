@@ -54,9 +54,9 @@ public static class CustomEditor
             Debug.Log("create forder " + path);
             Directory.CreateDirectory(path);
         }
-        //System.IO.File.WriteAllBytes(filename, bytes);
+        System.IO.File.WriteAllBytes(filename, bytes);
         Debug.Log(string.Format("截屏了一张照片: {0}", filename));
-        ScreenCapture.CaptureScreenshot(filename, 0);
+        //ScreenCapture.CaptureScreenshot(filename, 0);
 
         return screenShot;
     } 
