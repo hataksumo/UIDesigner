@@ -127,6 +127,9 @@ function fn_updateAttr()
 			end
 		end
 	end
+
+	--计算突破效果属性
+
 	--计算符文属性
 	for i=1,#chips do
 		local chip_id = chips[i]
@@ -180,7 +183,16 @@ end
 
 --主入口函数。从这里开始lua逻辑
 function Main()
-	
+	--获取初始属性
+	--计算各系统所加成的属性（无先后关系）
+		--升级突破核能
+		--突破效果
+		--装备（基础+强化+）
+		--符文
+		--装备套装，符文套装
+	--各系统属性相加
+	--处理slot
+	--除div
 
 end
 
