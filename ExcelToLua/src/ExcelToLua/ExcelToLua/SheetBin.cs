@@ -184,7 +184,7 @@ namespace ExcelToLua
                     }
                     catch (Exception ex)
                     {
-                        Debug.Exception("在装载第{0}行{1}列时发生错误，错误信息是{2}", i+1, Tools.getColName(j), ex.ToString());
+                        Debug.Exception("在装载第{0}行{1}列时发生错误，错误信息是{2}", i+1, Tools.getColName(colIndex[j]), ex.ToString());
                     }
                 }
             }
