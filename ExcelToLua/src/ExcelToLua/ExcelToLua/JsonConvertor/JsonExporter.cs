@@ -81,7 +81,7 @@ namespace ExcelToLua
                 }
                 catch (Exception ex)
                 {
-                    Debug.Exception("在添加{0}时发生错误", key);
+                    Debug.Exception("在添加{0}时发生错误，错误信息是:\r\n{1}", key,ex.ToString());
                 }
 
             }
