@@ -16,6 +16,19 @@ namespace ExcelToLua
             lua_instence.DoFile(v_main);
             return lua_instence;
         }
+
+        public static void SetPath(string v_path)
+        {
+            Lua.LuaFunction fun = lua_instence.GetFunction("setPath");
+            fun.Call(v_path);
+        }
+
+        public static void DoMain()
+        {
+            Lua.LuaFunction fun = lua_instence.GetFunction("main");
+            fun.Call();
+        }
+
         public static Lua.Lua Get_Instenct()
         {
             return lua_instence;

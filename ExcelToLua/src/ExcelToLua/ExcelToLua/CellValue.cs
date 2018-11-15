@@ -520,12 +520,12 @@ namespace ExcelToLua
             byte val;
             if (!byte.TryParse(v_strCellVal, out val))
             {
-                if (v_strCellVal == "true" || v_strCellVal == "TRUE")
+                if (v_strCellVal.ToLower() == "true")
                 {
                     _data = true;
                     return true;
                 }
-                else if (v_strCellVal == "false" || v_strCellVal == "FALSE")
+                else if (v_strCellVal.ToLower() == "false")
                 {
                     _data = false;
                     return true;

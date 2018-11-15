@@ -209,6 +209,8 @@ namespace ExcelToLua
             catch (Exception ex) { Debug.Error("xml解析时失败"+ex.ToString()); }
             //加载luastate
             LuaState.Init(Config.luaCfgPath+"main.lua");
+            LuaState.SetPath(Config.luaCfgPath);
+            LuaState.DoMain();
             cliPath = Config.cliPath;
             servPath = Config.servPath;
             excelPath = Config.excelPath;
@@ -245,9 +247,13 @@ namespace ExcelToLua
                 {
                     Excel.Workbook book = new Excel.Workbook(excelPath);
                     sheet = book.Worksheets[curIndex.sheetName];
+                    if (sheet == null)
+                        Debug.Exception("没有找到名为[" + curIndex.sheetName + "]的sheet");
                 }
                 catch (Exception ex) {
                     Debug.Error(ex.ToString());
+                    Application.Exit();
+                    return;
                 }
                 SheetHeader theHeader = new SheetHeader();
                 theHeader.readHeader(sheet, curIndex.headRow - 1);
