@@ -99,7 +99,7 @@ namespace ExcelToLua
                 _isMiss = true;
                 return true;
             }
-            string strVal = v_cellData.StringValue;
+            string strVal = v_cellData.Value.ToString();
             if (strVal == "[invalid]"|| strVal == "[x]")
             {
                 _isMiss = true;
