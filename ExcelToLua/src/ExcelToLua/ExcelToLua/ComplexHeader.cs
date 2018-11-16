@@ -429,6 +429,11 @@ namespace ExcelToLua
         {
             _fullName = v_sName;
             _chinese = v_sChinese;
+            if (string.IsNullOrEmpty(v_sType))
+            {
+                Debug.Exception("{0}这一列没有写类型名", v_sName);
+                return false;
+            }
             string[] types = v_sType.Split(':');
             string varType = types[0];
             string[] cons = null;
