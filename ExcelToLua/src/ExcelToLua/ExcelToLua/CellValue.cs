@@ -154,13 +154,16 @@ namespace ExcelToLua
                     rtn = new CStringVal();
                     break;
                 case "number":
-                    rtn = new FloatVal();
+                    rtn = new NumberVal();
                     break;
                 case "prob":
                     rtn = new ProbVal();
                     break;
                 case "float":
                     rtn = new FloatVal();
+                    break;
+                case "double":
+                    rtn = new DoubleVal();
                     break;
                 case "percent":
                     rtn = new PercentVal();
@@ -628,6 +631,48 @@ namespace ExcelToLua
 
     class FloatVal : CellValue
     {
+        protected float _data;
+        protected override bool _OnInit(string v_strCellVal)
+        {
+            if (!float.TryParse(v_strCellVal, out _data))
+            {
+                Debug.ExcelError(v_strCellVal + "  数据格式不对");
+                return false;
+            }
+            _data = (float)Math.Round(_data, 6);
+            return true;
+        }
+        public override bool Equals(CellValue v_other)
+        {
+            FloatVal obj = v_other as FloatVal;
+            return obj != null && obj._data == _data;
+        }
+        protected override LuaValue _OnGetLuaValue()
+        {
+            LuaFloat rtn = new LuaFloat();
+            rtn.init(_data);
+            return rtn;
+        }
+        protected override JsonValue _OnGetJsonValue()
+        {
+            JsonFloat rtn = new JsonFloat();
+            rtn.init(_data);
+            return rtn;
+        }
+        public override string toKeyString()
+        {
+            return _data.ToString();
+        }
+
+        protected override string _OnGetXmlAttribute()
+        {
+            return _data.ToString();
+        }
+    }
+
+
+    class DoubleVal : CellValue
+    {
         protected double _data;
         protected override bool _OnInit(string v_strCellVal)
         {
@@ -636,12 +681,12 @@ namespace ExcelToLua
                 Debug.ExcelError(v_strCellVal + "  数据格式不对");
                 return false;
             }
-            _data = Math.Round(_data, 6);
+            _data = Math.Round(_data, 12);
             return true;
         }
         public override bool Equals(CellValue v_other)
         {
-            FloatVal obj = v_other as FloatVal;
+            DoubleVal obj = v_other as DoubleVal;
             return obj != null && obj._data == _data;
         }
         protected override LuaValue _OnGetLuaValue()
@@ -666,6 +711,92 @@ namespace ExcelToLua
             return _data.ToString();
         }
     }
+
+    enum NumberType
+    {
+        Integer,
+        Double,
+    }
+
+    class NumberVal : CellValue
+    {
+        protected double _data;
+        protected int _iData;
+        protected NumberType _type;
+        protected override bool _OnInit(string v_strCellVal)
+        {
+            if (int.TryParse(v_strCellVal,out _iData))
+            {
+                _type = NumberType.Integer;
+                return true;
+            }
+            else if (double.TryParse(v_strCellVal, out _data))
+            {
+                _data = Math.Round(_data, 12);
+                _type = NumberType.Double;
+                return true;
+            }
+            Debug.ExcelError(v_strCellVal + "  数据格式不对");
+            return false;
+            
+        }
+        public override bool Equals(CellValue v_other)
+        {
+            NumberVal obj = v_other as NumberVal;
+            return obj != null && obj._data == _data;
+        }
+        protected override LuaValue _OnGetLuaValue()
+        {
+            switch (_type)
+            {
+                case NumberType.Integer:
+                    LuaInteger iRtn = new LuaInteger();
+                    iRtn.init(_iData);
+                    return iRtn;
+                case NumberType.Double:
+                    LuaDouble rtn = new LuaDouble();
+                    rtn.init(_data);
+                    return rtn;
+            }
+            Debug.Exception("NumberVal类型错误");
+            return new LuaNil();         
+        }
+        protected override JsonValue _OnGetJsonValue()
+        {
+            switch (_type)
+            {
+                case NumberType.Integer:
+                    JsonInteger iRtn = new JsonInteger();
+                    iRtn.init(_iData);
+                    return iRtn;
+                case NumberType.Double:
+                    JsonDouble rtn = new JsonDouble();
+                    rtn.init(_data);
+                    return rtn;
+            }
+            Debug.Exception("NumberVal类型错误");
+            return new JsonNil();
+        }
+        public override string toKeyString()
+        {
+            switch (_type)
+            {
+                case NumberType.Integer:
+                    return _iData.ToString();
+                case NumberType.Double:
+                    return _data.ToString();
+            }
+            return "null";
+        }
+
+        protected override string _OnGetXmlAttribute()
+        {
+            return _data.ToString();
+        }
+    }
+
+
+
 
     class PercentVal : CellValue
     {

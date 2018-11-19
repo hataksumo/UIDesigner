@@ -131,6 +131,32 @@ namespace ExcelToLua
         }
     }
 
+    class LuaFloat : LuaValue
+    {
+        protected float m_data;
+        protected bool m_is_precision;
+        protected int m_precision;
+
+        public LuaFloat() { }
+        public LuaFloat(float v_number)
+        {
+            init(v_number);
+        }
+
+        public void init(float v_data, bool v_is_precision = false, int v_precision = 2)
+        {
+            m_data = v_data;
+            m_precision = v_precision;
+            m_is_precision = v_is_precision;
+        }
+        public override void outputValue(StringBuilder sb, int v_level, uint v_style = 0)
+        {
+            if (m_is_precision)
+                sb.Append(Math.Round(m_data, m_precision));
+            else
+                sb.Append(m_data);
+        }
+    }
 
     class LuaDouble : LuaValue
     {
