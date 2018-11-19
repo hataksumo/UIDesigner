@@ -152,7 +152,7 @@ namespace ExcelToLua
         public override void outputValue(StringBuilder sb, int v_level, uint v_style = 0)
         {
             if (m_is_precision)
-                sb.Append(Math.Round(m_data, m_precision));
+                sb.Append(Math.Round(m_data, m_precision).ToString("#.##"));
             else
                 sb.Append(m_data);
         }
@@ -181,7 +181,7 @@ namespace ExcelToLua
             if (m_is_precision)
                 sb.Append(Math.Round(m_data, m_precision));
             else
-                sb.Append(m_data);
+                sb.Append(((Decimal)m_data).ToString());
         }
     }
 
