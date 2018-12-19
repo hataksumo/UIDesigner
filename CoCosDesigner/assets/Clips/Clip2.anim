@@ -45,6 +45,10 @@
             {
               "frame": 0,
               "value": 0
+            },
+            {
+              "frame": 1,
+              "value": 0
             }
           ]
         }
@@ -84,6 +88,10 @@
           "rotation": [
             {
               "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 1,
               "value": 0
             }
           ]
