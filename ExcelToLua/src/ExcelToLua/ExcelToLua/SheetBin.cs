@@ -122,7 +122,8 @@ namespace ExcelToLua
                     }
                     catch (Exception ex)
                     {
-                        Debug.Error("在导出表\"{0}\" sheet \"{1}\" 单元格{2}{3}时发生了错误，单元格内容为{4}，错误信息如下:\r\n{5}", v_workSheet.Workbook.FileName, v_indexData.sheetName, Tools.getColName(col), row + 1, datas[row, colidx].Value, ex.ToString());
+                        Debug.Error("在导出表\"{0}\" sheet \"{1}\" 单元格{2}{3}时发生了错误，单元格内容为{4}，错误信息如下:\r\n{5}", 
+                            v_workSheet.Workbook.FileName, v_indexData.sheetName, Tools.getColName(col), row + 1, datas[row, colidx].Value, ex.ToString());
                         return false;
                     }   
                 }
