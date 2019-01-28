@@ -163,12 +163,12 @@ namespace ExcelToLua
             {
                 case ECellDataStructure.single:
                     val = CellValue.CheckCellVal(ehd);
-                    success = val.init(v_cellData);
+                    success = val.Init(v_cellData);
                     break;
                 case ECellDataStructure.array:
                     val = new ListVal(type);
                     val.IsStretch = ehd.IsStretch;
-                    success = val.init(v_cellData);   
+                    success = val.Init(v_cellData);   
                     break;
             }
             if (success)
@@ -179,7 +179,7 @@ namespace ExcelToLua
             else
             {
                 val = new MissVal();
-                success = val.init("[nil]");
+                success = val.Init("[nil]");
                 Debug.Exception("没有找到名为{0}类型为{1}的ID", v_cellData.Value, type);
                 return null;
             }

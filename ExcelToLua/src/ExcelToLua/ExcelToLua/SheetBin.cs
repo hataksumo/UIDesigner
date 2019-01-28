@@ -165,7 +165,7 @@ namespace ExcelToLua
                     try
                     {
                         int col = colIndex[j];
-                        Key the_key = data[i][col].toKey();
+                        Key the_key = data[i][col].ToKey();
                         if (j == colIndex.Length - 1)
                         {
                             cur = get_or_create_index_map(cur, the_key);

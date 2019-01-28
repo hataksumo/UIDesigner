@@ -74,7 +74,7 @@ namespace ExcelToLua
                             _translate(data, cellTable);
                             break;
                         case EExcelMapDataType.cellData:
-                            JsonValue leafVal = data.LeafVal.getJsonValue();
+                            JsonValue leafVal = data.LeafVal.GetJsonValue();
                             v_dst.addData(key, leafVal);
                             break;
                     }

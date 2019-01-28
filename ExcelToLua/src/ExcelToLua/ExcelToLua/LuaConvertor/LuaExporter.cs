@@ -79,7 +79,7 @@ namespace ExcelToLua
                         _translate(data, cellTable);
                         break;
                     case EExcelMapDataType.cellData:
-                        LuaValue leafVal = data.LeafVal.getLuaValue();
+                        LuaValue leafVal = data.LeafVal.GetLuaValue();
                         v_dst.addData(key, leafVal);
                         break;
                 }

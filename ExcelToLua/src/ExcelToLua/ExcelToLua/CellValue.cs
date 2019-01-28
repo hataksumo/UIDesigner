@@ -20,7 +20,7 @@ namespace ExcelToLua
         protected abstract LuaValue _OnGetLuaValue();
         protected abstract JsonValue _OnGetJsonValue();
         protected abstract string _OnGetXmlAttribute();
-        public abstract string toKeyString();
+        public abstract string ToKeyString();
         public bool _isNull;
         public bool _isMiss;
         public bool _isEmpty;
@@ -31,7 +31,7 @@ namespace ExcelToLua
             _isMiss = false;
             _isEmpty = false;
         }
-        public virtual LuaValue getLuaValue()
+        public virtual LuaValue GetLuaValue()
         {
             if (_isMiss)
             {
@@ -48,7 +48,7 @@ namespace ExcelToLua
             return _OnGetLuaValue();
         }
 
-        public virtual JsonValue getJsonValue()
+        public virtual JsonValue GetJsonValue()
         {
             if (_isMiss)
             {
@@ -68,7 +68,7 @@ namespace ExcelToLua
 
 
 
-        public virtual Key toKey()
+        public virtual Key ToKey()
         {
             Key rtn = new Key();
             rtn.keytype = KeyType.String;
@@ -76,7 +76,7 @@ namespace ExcelToLua
             return rtn;
         }
 
-        public virtual XmlAttributeVal getXmlAttribute()
+        public virtual XmlAttributeVal GetXmlAttribute()
         {
             XmlAttributeVal rtn = new XmlAttributeVal();
             if (_isMiss)
@@ -94,7 +94,7 @@ namespace ExcelToLua
         }
 
 
-        public virtual bool init(EXCEL.Cell v_cellData)
+        public virtual bool Init(EXCEL.Cell v_cellData)
         {
             if (v_cellData.Value==null||string.IsNullOrEmpty(v_cellData.StringValue))
             {
@@ -102,10 +102,10 @@ namespace ExcelToLua
                 return true;
             }
             string strVal = v_cellData.Value.ToString();
-            return init(strVal);
+            return Init(strVal);
         }
 
-        public bool init(string v_strVal)
+        public bool Init(string v_strVal)
         {
             if (v_strVal == "[invalid]" || v_strVal == "[x]")
             {
@@ -214,7 +214,7 @@ namespace ExcelToLua
             return v_other is MissVal;
         }
 
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             return null;
         }
@@ -224,7 +224,7 @@ namespace ExcelToLua
             return "miss";
         }
 
-        public override Key toKey()
+        public override Key ToKey()
         {
             Key rtn = new Key();
             rtn.keytype = KeyType.String;
@@ -262,7 +262,7 @@ namespace ExcelToLua
             rtn.init(_isEmpty ? -1 : _data);
             return rtn;
         }
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             return _data.ToString();
         }
@@ -277,7 +277,7 @@ namespace ExcelToLua
             return _data.ToString();
         }
 
-        public override Key toKey()
+        public override Key ToKey()
         {
             Key rtn = new Key();
             rtn.keytype = KeyType.Integer;
@@ -311,7 +311,7 @@ namespace ExcelToLua
             rtn.init(_isEmpty ? "[empty]" : _data);
             return rtn;
         }
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             return _data.ToString();
         }
@@ -325,7 +325,7 @@ namespace ExcelToLua
         {
             return _data;
         }
-        public override Key toKey()
+        public override Key ToKey()
         {
             Key rtn = new Key();
             rtn.keytype = KeyType.String;
@@ -367,7 +367,7 @@ namespace ExcelToLua
             IDVal obj = v_other as IDVal;
             return obj != null && obj._data == _data;
         }
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             return _data.ToString();
         }
@@ -400,7 +400,7 @@ namespace ExcelToLua
             EnumVal obj = v_other as EnumVal;
             return obj != null && obj._data == _data;
         }
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             return _data.ToString();
         }
@@ -440,7 +440,7 @@ namespace ExcelToLua
             {
                 _data[i] = CheckCellVal(m_type);
                 _data[i].IsStretch = _isStretch;//传递一层
-                if (!_data[i].init(nameDatas[i]))
+                if (!_data[i].Init(nameDatas[i]))
                     return false;
             }
             m_successInit = true;
@@ -465,7 +465,7 @@ namespace ExcelToLua
                 rtn.init(_isStretch,false,ExportSheetBin.ROW_MAX_ELEMENT);
                 for (int i = 0; i < _data.Length; i++)
                 {
-                    rtn.addData(_data[i].getLuaValue());
+                    rtn.addData(_data[i].GetLuaValue());
                 }
                 return rtn;
             }
@@ -488,7 +488,7 @@ namespace ExcelToLua
                 rtn.init(_isStretch, ExportSheetBin.ROW_MAX_ELEMENT);
                 for (int i = 0; i < _data.Length; i++)
                 {
-                    rtn.addData(_data[i].getJsonValue());
+                    rtn.addData(_data[i].GetJsonValue());
                 }
                 return rtn;
             }
@@ -497,7 +497,7 @@ namespace ExcelToLua
                 return new JsonNil();
             }
         }
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             return _data.ToString();
         }
@@ -563,7 +563,7 @@ namespace ExcelToLua
             rtn.init(_data);
             return rtn;
         }
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             return _data.ToString();
         }
@@ -578,7 +578,7 @@ namespace ExcelToLua
             return _data.ToString();
         }
 
-        public override Key toKey()
+        public override Key ToKey()
         {
             Key rtn = new Key();
             rtn.keytype = KeyType.Integer;
@@ -622,7 +622,7 @@ namespace ExcelToLua
             rtn.init(_data10k);
             return rtn;
         }
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             return string.Format("{0,2}%",_data10k/10000.0);
         }
@@ -663,7 +663,7 @@ namespace ExcelToLua
             rtn.init(_isEmpty ? 0 : _data);
             return rtn;
         }
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             return _data.ToString();
         }
@@ -719,7 +719,7 @@ namespace ExcelToLua
             }
             return rtn;
         }
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             return _data.ToString();
         }
@@ -795,7 +795,7 @@ namespace ExcelToLua
             Debug.Exception("NumberVal类型错误");
             return new JsonNil();
         }
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             switch (_type)
             {
@@ -851,7 +851,7 @@ namespace ExcelToLua
             rtn.init(_data);
             return rtn;
         }
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             return _data.ToString();
         }
@@ -871,7 +871,7 @@ namespace ExcelToLua
             return _key == ((DataFromLuaFileValue)v_other)._key;
         }
 
-        public override string toKeyString()
+        public override string ToKeyString()
         {
             return "TableFrmFile_"+ _key;
         }
@@ -1006,7 +1006,7 @@ namespace ExcelToLua
             return _source == ((TableValue)v_other)._source;
         }
 
-        public override String toKeyString()
+        public override String ToKeyString()
         {
             return "TableValue: " + _source;
         }
