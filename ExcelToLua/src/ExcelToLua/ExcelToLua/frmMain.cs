@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -189,6 +190,8 @@ namespace ExcelToLua
                             return;
                         }
                         File.WriteAllText(opt_path, optData.content);
+
+                        //todo 如果是Realease模式，把文件输出到一个临时文件夹，调用LUAC，把lua文件生成到配置的cli文件夹中。
                     }
                         
                 }

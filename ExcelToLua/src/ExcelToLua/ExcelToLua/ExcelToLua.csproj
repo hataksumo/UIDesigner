@@ -122,6 +122,9 @@
     <None Include="Lua\main.lua">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Lua\tools.lua">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -145,6 +148,9 @@
     <Content Include="DLL\KeraLua.dll" />
     <Content Include="DLL\NLua.dll" />
     <Content Include="icon.ico" />
+    <Content Include="Lua\LUAC.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

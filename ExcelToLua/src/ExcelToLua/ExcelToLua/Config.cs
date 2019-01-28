@@ -41,6 +41,7 @@ namespace ExcelToLua
         public static string export_path = "";
         public static string excelPath = "";
         public static string luaCfgPath = "";
+        public static bool isRealeace = false;
         public static List<Output_designer_config> designer_opt_configs;
         public static string simulator_src = ".\\战斗模拟_源数据.xlsx";
         public static string simulator_tar = ".\\战斗模拟_输出.xlsx";
@@ -59,6 +60,9 @@ namespace ExcelToLua
             XmlNode xmlroot = xmlPathDoc.SelectSingleNode("root");
             //读取策划数据包名
             packageName = xmlroot.SelectSingleNode("package").Attributes["name"].Value;
+            //APP设置
+            XmlNode appNode = xmlroot.SelectSingleNode("app");
+            isRealeace = bool.Parse(appNode.Attributes["isRelease"].Value);
             //设置策划表路径
             XmlNode xmlPathNode = xmlroot.SelectSingleNode("path");
             cliPath = xmlPathNode.Attributes["cli"].Value;
