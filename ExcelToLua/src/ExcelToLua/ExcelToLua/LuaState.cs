@@ -20,7 +20,8 @@ namespace ExcelToLua
         public static void SetPath(string v_path)
         {
             Lua.LuaFunction fun = lua_instence.GetFunction("setPath");
-            fun.Call(v_path);
+            if(fun != null)
+                fun.Call(v_path);
         }
 
         public static void DoMain()

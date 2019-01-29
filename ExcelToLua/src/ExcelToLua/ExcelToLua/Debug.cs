@@ -37,6 +37,12 @@ namespace ExcelToLua
     WinForm.MessageBoxButtons.OK, WinForm.MessageBoxIcon.Information);
         }
 
+        public static void PureInfo(string v_msg)
+        {
+            WinForm.MessageBox.Show(v_msg, "Koid",
+WinForm.MessageBoxButtons.OK, WinForm.MessageBoxIcon.Information);
+        }
+
         public static void Assert(bool v_condition, string v_warning_message = "断言冲突")
         {
             if(!v_condition)

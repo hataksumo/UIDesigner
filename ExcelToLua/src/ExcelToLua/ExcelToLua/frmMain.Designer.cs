@@ -31,6 +31,7 @@
             this.btnSele = new System.Windows.Forms.Button();
             this.btnCalELO = new System.Windows.Forms.Button();
             this.btnOptDesign = new System.Windows.Forms.Button();
+            this.btnComoileLua = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSele
@@ -46,9 +47,9 @@
             // 
             // btnCalELO
             // 
-            this.btnCalELO.Location = new System.Drawing.Point(159, 1);
+            this.btnCalELO.Location = new System.Drawing.Point(214, 1);
             this.btnCalELO.Name = "btnCalELO";
-            this.btnCalELO.Size = new System.Drawing.Size(96, 23);
+            this.btnCalELO.Size = new System.Drawing.Size(96, 42);
             this.btnCalELO.TabIndex = 7;
             this.btnCalELO.Text = "计算ELO";
             this.btnCalELO.UseVisualStyleBackColor = true;
@@ -56,19 +57,30 @@
             // 
             // btnOptDesign
             // 
-            this.btnOptDesign.Location = new System.Drawing.Point(159, 54);
+            this.btnOptDesign.Location = new System.Drawing.Point(214, 60);
             this.btnOptDesign.Name = "btnOptDesign";
-            this.btnOptDesign.Size = new System.Drawing.Size(96, 27);
+            this.btnOptDesign.Size = new System.Drawing.Size(96, 35);
             this.btnOptDesign.TabIndex = 9;
             this.btnOptDesign.Text = "导出设计表";
             this.btnOptDesign.UseVisualStyleBackColor = true;
             this.btnOptDesign.Click += new System.EventHandler(this.btnOptDesign_Click);
             // 
+            // btnComoileLua
+            // 
+            this.btnComoileLua.Location = new System.Drawing.Point(1, 60);
+            this.btnComoileLua.Name = "btnComoileLua";
+            this.btnComoileLua.Size = new System.Drawing.Size(104, 39);
+            this.btnComoileLua.TabIndex = 10;
+            this.btnComoileLua.Text = "编译LUA";
+            this.btnComoileLua.UseVisualStyleBackColor = true;
+            this.btnComoileLua.Click += new System.EventHandler(this.btnComoileLua_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(267, 93);
+            this.ClientSize = new System.Drawing.Size(332, 107);
+            this.Controls.Add(this.btnComoileLua);
             this.Controls.Add(this.btnOptDesign);
             this.Controls.Add(this.btnCalELO);
             this.Controls.Add(this.btnSele);
@@ -84,6 +96,7 @@
         private System.Windows.Forms.Button btnSele;
         private System.Windows.Forms.Button btnCalELO;
         private System.Windows.Forms.Button btnOptDesign;
+        private System.Windows.Forms.Button btnComoileLua;
     }
 }
 

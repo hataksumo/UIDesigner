@@ -351,7 +351,54 @@ namespace ExcelToLua
                 handle();
             }
         }
+
+        private void btnComoileLua_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Multiselect = true;
+            fileDialog.Title = "请选择Lua文件";
+            fileDialog.Filter = "lua脚本文件|*.lua";
+            string[] luaFiles = null;
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                luaFiles = fileDialog.FileNames;
+                StringBuilder sb = new StringBuilder();
+                try
+                {
+                    for (int i = 0; i < luaFiles.Length; i++)
+                    {
+                        using (Process pc = new Process())
+                        {
+                            pc.StartInfo.UseShellExecute = false;
+                            pc.StartInfo.FileName = @"./Lua/LUAC.exe";
+                            string optPath = Config.export_path +  Path.GetFileNameWithoutExtension(luaFiles[i]) + ".byte";
+                            pc.StartInfo.Arguments = "-o "+ optPath + " "+ luaFiles[i];
+                            pc.StartInfo.CreateNoWindow = true;
+                            pc.StartInfo.UseShellExecute = false;
+                            //pc.StartInfo.RedirectStandardOutput = true;
+                            pc.StartInfo.RedirectStandardError = true;
+                            pc.Start();
+                            //sb.Append(pc.StandardOutput.ReadToEnd());
+                            if (sb.Length > 0) sb.Append("\r\n");
+                            sb.Append(pc.StandardError.ReadToEnd());
+                            pc.WaitForExit();
+                            //pc.BeginOutputReadLine();
+                            //sb.Append(pc.StandardOutput.ReadToEnd());
+                            //sb.AppendLine();
+                        }
+                    }
+                    if (sb.Length > 0)
+                    {
+                        Debug.PureInfo("编译发生失败，失败信息为：\r\n"+sb.ToString());
+                    }
+                    else
+                        Debug.Koid("编译成功");
+                }
+                catch (Exception ex) { Debug.Error(ex.ToString()); }
+            }
+        }
     }
+
 
     class NameCatchIndexData
     {
