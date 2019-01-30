@@ -40,6 +40,7 @@ namespace ExcelToLua
         public static string servPath = "";
         public static string export_path = "";
         public static string excelPath = "";
+        public static string indexPath = "";
         public static string luaCfgPath = "";
         public static bool isRealeace = false;
         public static List<Output_designer_config> designer_opt_configs;
@@ -69,6 +70,7 @@ namespace ExcelToLua
             servPath = xmlPathNode.Attributes["serv"].Value;
             export_path = xmlPathNode.Attributes["export"].Value;
             excelPath = xmlPathNode.Attributes["excelPath"].Value;
+            indexPath = xmlPathNode.Attributes["indexPath"].Value;
             luaCfgPath = xmlPathNode.Attributes["lua_cfg"].Value;
             if (!Directory.Exists(cliPath))
             {
@@ -100,7 +102,6 @@ namespace ExcelToLua
             if (xmlOptChildrenNodes != null)
             {
                 designer_opt_configs = new List<Output_designer_config>();
-
                 var xmlOptChildNodes = xmlOptChildrenNodes.ChildNodes;
                 for (int i = 0; i < xmlOptChildNodes.Count; i++)
                 {

@@ -217,7 +217,7 @@ namespace ExcelToLua
             cliPath = Config.cliPath;
             servPath = Config.servPath;
             excelPath = Config.excelPath;
-            Excel.Workbook indexBook = new Excel.Workbook("Index/INDEX.xlsx");
+            Excel.Workbook indexBook = new Excel.Workbook(Config.indexPath);
             Excel.Worksheet indexSheet = indexBook.Worksheets["index"];
             Excel.Cells data = indexSheet.Cells;
             SheetHeader header = new SheetHeader();
