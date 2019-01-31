@@ -17,6 +17,7 @@ namespace ExcelToLua
         public string optSrvFileName;
         public ELanguage optSrvLanguage;
         public bool isOpt;
+        public bool isDataPersistence;
         public string[] pmKey;
         public string[] shildKeys;
         public string note;
@@ -44,6 +45,12 @@ namespace ExcelToLua
             else
                 isOpt = optCols.ToString().Equals("TRUE");
             note = v_header.getData(v_data, v_row, "表注释") as string;
+            Object dataPersistence = v_header.getData(v_data, v_row, "是否导出");
+            if (dataPersistence == null) dataPersistence = false;
+            if (dataPersistence is bool)
+                isDataPersistence = (bool)dataPersistence;
+            else
+                isDataPersistence = optCols.ToString().Equals("TRUE");
         }
 
         private ELanguage getLuaguage(string v_fileName)

@@ -131,7 +131,10 @@ namespace ExcelToLua
                     if (!table_memo[i].ContainsKey(file_names[i]))
                     {
                         ExcelMapData new_map = new ExcelMapData();
-                        ExcelToMapData new_data = new ExcelToMapData(new_map);
+                        bool isDataPersistence = curIndex.isDataPersistence && (!string.IsNullOrEmpty(curIndex.optCliFileName))&&curIndex.optCliFileName.EndsWith(".lua");
+                        ExcelToMapData new_data = new ExcelToMapData(new_map,
+                            isDataPersistence,
+                            Path.GetFileNameWithoutExtension(file_names[i]));
                         table_memo[i].Add(file_names[i], new_data);
                     }
                     if (!sheetBin_memo[i].ContainsKey(file_names[i]))

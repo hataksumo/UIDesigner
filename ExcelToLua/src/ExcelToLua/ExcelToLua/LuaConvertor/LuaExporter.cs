@@ -29,8 +29,22 @@ namespace ExcelToLua
                     sb.Append("\r\n");
                 }
                 sb.Append("]]\r\n");
-                sb.Append("return");
-                root.outputValue(sb, 0);
+
+                if (v_data.IsDataPersistence)
+                {
+                    sb.AppendFormat("if ddt[v_data.className] ~= nil then\r\n\treturn {0}\r\nend\r\n", v_data.className);
+                    sb.AppendFormat("local {0} = ", v_data.className);
+                    root.outputValue(sb, 0);
+                    sb.AppendLine();
+                    sb.AppendFormat("ddt[v_data.className] = {0}\r\n", v_data.className);
+                    sb.AppendFormat("SetLooseReadonly({0})\r\n", v_data.className);
+                    sb.AppendFormat("return {0}", v_data.className);
+                }
+                else
+                {
+                    sb.Append("return");
+                    root.outputValue(sb, 0);
+                }   
             }
             catch (Exception ex)
             {

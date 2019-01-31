@@ -82,15 +82,24 @@ namespace ExcelToLua
     {
         public ExcelMapData _data;
         public List<ExportSheetBin> sheet_bins;
-        public ExcelToMapData(ExcelMapData v_luaMap)
+        public string className;
+        private readonly bool _isDataPersistence;
+        public ExcelToMapData(ExcelMapData v_luaMap,bool v_isDataPersistence,string v_className)
         {
             _data = v_luaMap;
+            _isDataPersistence = v_isDataPersistence;
+            className = v_className;
             sheet_bins = new List<ExportSheetBin>();
         }
 
         public void add_sheetbin(ExportSheetBin v_sheetbin)
         {
             sheet_bins.Add(v_sheetbin);
+        }
+
+        public bool IsDataPersistence
+        {
+            get { return _isDataPersistence; }
         }
 
         public void opt_note(StringBuilder v_sb,string v_title)
