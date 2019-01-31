@@ -289,6 +289,7 @@ namespace ExcelToLua
                     catch (Exception ex)
                     {
                         Debug.Error("{0}表[{1}],第{2}行出错啦，错误信息为:\r\n  " + ex.ToString(), curIndex.excelFileName,curIndex.sheetName,row +1);
+                        return;
                     }
                 }
             }
