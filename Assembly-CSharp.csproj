@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\EditorMain.cs" />
     <Compile Include="Assets\Script\Hello.cs" />
     <Compile Include="Assets\Script\PureMVC\Common\LuaBehaviour.cs" />
     <Compile Include="Assets\Script\PureMVC\Common\LuaLoader.cs" />
@@ -161,7 +162,88 @@
     <Compile Include="Assets\Script\ToLua\Source\Generate\BaseWrap.cs" />
     <Compile Include="Assets\Script\ToLua\Source\Generate\DelegateFactory.cs" />
     <Compile Include="Assets\Script\ToLua\Source\Generate\LuaBinder.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_AppConstWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_ByteBufferWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_GameManagerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_LuaBehaviourWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_LuaHelperWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_LuaManagerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_NetworkManagerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_PanelManagerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_ResourceManagerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_SoundManagerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_ThreadManagerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_TimerManagerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaFramework_UtilWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaInterface_DebuggerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaInterface_InjectTypeWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaInterface_LuaInjectionStationWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\LuaProfilerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\ManagerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_AnimationBlendModeWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_AnimationClipWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_AnimationStateWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_AnimationWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_AnimatorWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_ApplicationWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_AssetBundleWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_AsyncOperationWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_AudioBehaviourWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_AudioClipWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_AudioSourceWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_BehaviourWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_BlendWeightsWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_BoxColliderWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_CameraClearFlagsWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_CameraWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_CapsuleColliderWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_CharacterControllerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_ColliderWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_ComponentWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_EventSystems_UIBehaviourWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_GameObjectWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_InputWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_KeyCodeWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_LightTypeWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_LightWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_MaterialWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_MeshColliderWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_MeshRendererWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_MonoBehaviourWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_ParticleSystemWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_PhysicsWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_PlayModeWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_QueueModeWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_RectTransformWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_RendererWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_RenderSettingsWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_RenderTextureWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_ResourcesWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_RigidbodyWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_ScreenWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_ShaderWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_SkinnedMeshRendererWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_SleepTimeoutWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_SpaceWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_SphereColliderWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_Texture2DWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_TextureWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_TimeWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_TrackedReferenceWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_TransformWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_UI_GraphicWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_UI_ImageWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_UI_InputFieldWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_UI_MaskableGraphicWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_UI_RawImageWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_UI_SelectableWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_UI_TextWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_WrapModeWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_WWWWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\ViewWrap.cs" />
     <Compile Include="Assets\Script\ToLua\Source\LuaConst.cs" />
+    <Compile Include="Assets\Script\Tools.cs" />
+    <Compile Include="Assets\Script\ZfDebug.cs" />
     <None Include="Assets\Script\ToLua\Injection\InjectionBlackList.txt" />
     <None Include="Assets\Script\ToLua\Injection\InjectionBridgeEditorInfo.xml" />
     <None Include="Assets\Shader\GrayImage.shader" />
@@ -376,6 +458,9 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>E:/编程工具/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Cells">
+      <HintPath>E:/WORK/UIDesigner/Assets/Plugins/Aspose.Cells.dll</HintPath>
     </Reference>
     <Reference Include="CString">
       <HintPath>E:/WORK/UIDesigner/Assets/Plugins/CString.dll</HintPath>

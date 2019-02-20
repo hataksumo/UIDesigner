@@ -37,6 +37,14 @@ public class EditorMain : LuaClient, IDisposable
         fun = null;
     }
 
+    public new void Awake()
+    {
+        base.Awake();
+        luaState.Start();
+        luaState.DoFile("EditorMain.lua");
+        levelLoaded = luaState.GetFunction("OnLevelWasLoaded");
+    }
+
 
     public void output_excel()
     {
@@ -51,15 +59,7 @@ public class EditorMain : LuaClient, IDisposable
     }
     public void init()
     {
-        Instance = this;
-        InitLoader();
-        luaState = new LuaState();
-        OpenLibs();
-        luaState.LuaSetTop(0);
-        Bind();
-        luaState.Start();
-        luaState.DoFile("EditorMain.lua");
-        levelLoaded = luaState.GetFunction("OnLevelWasLoaded");
+
     }
     public void reload()
     {

@@ -19,8 +19,46 @@ public static class CustomEditor
 
     }
 
+    static EditorMain _client;
+    [MenuItem("Custom/执行Main")]
+    static void DoMain()
+    {
+        if (_client == null)
+        {
+            var es = GameObject.Find("EventSystem");
+            _client = es.GetComponent<EditorMain>();
+            if (_client == null)
+                _client = es.AddComponent<EditorMain>();
+            _client.init();
+        }
+        else
+            _client.reload();
+        try
+        {
+            _client.test();
+        }
+        catch (Exception ex)
+        {
+            ZFDebug.Error(ex.ToString());
+        }
 
-    public static Texture2D CaptrueCamera(Camera camera, Rect rect)
+    }
+
+    [MenuItem("Custom/清空lua")]
+    static void ClearLuaState()
+    {
+        if (_client != null)
+        {
+            _client.Dispose();
+            _client = null;
+        }
+    }
+
+
+
+
+
+        public static Texture2D CaptrueCamera(Camera camera, Rect rect)
     {
         // 创建一个RenderTexture对象
         RenderTexture rt = new RenderTexture((int)rect.width, (int)rect.height, 0);
