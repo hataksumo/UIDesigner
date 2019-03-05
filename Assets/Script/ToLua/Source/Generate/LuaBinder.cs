@@ -11,6 +11,10 @@ public static class LuaBinder
 		L.BeginModule(null);
 		LuaInterface_DebuggerWrap.Register(L);
 		LuaProfilerWrap.Register(L);
+		ExcelBookObjectWrap.Register(L);
+		ExcelHeaderWrap.Register(L);
+		ExcelSheetObjectWrap.Register(L);
+		MyToolsWrap.Register(L);
 		ViewWrap.Register(L);
 		BaseWrap.Register(L);
 		ManagerWrap.Register(L);

@@ -30,12 +30,13 @@ public class EditorMain : LuaClient, IDisposable
         LuaFunction fun = luaState.GetFunction("test");
         if (fun == null)
         {
-            ZFDebug.Error("can't find the funtion named output_excel");
+            ZFDebug.Error("can't find the funtion named test");
         }
         fun.Call();
         fun.Dispose();
         fun = null;
     }
+
 
     public new void Awake()
     {
@@ -68,6 +69,6 @@ public class EditorMain : LuaClient, IDisposable
 
     public void Dispose()
     {
-        luaState.Dispose();
+        luaState.LuaClose();
     }
 }

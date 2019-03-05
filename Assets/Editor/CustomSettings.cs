@@ -176,7 +176,11 @@ public static class CustomSettings
         //ui
         _GT(typeof(InputField)),
         _GT(typeof(Image)),
-        _GT(typeof(RawImage))
+        _GT(typeof(RawImage)),
+        _GT(typeof(ExcelBookObject)),
+        _GT(typeof(ExcelHeader)),
+        _GT(typeof(ExcelSheetObject)),
+        _GT(typeof(MyTools))
     };
 
     public static List<Type> dynamicList = new List<Type>()

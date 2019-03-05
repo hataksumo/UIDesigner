@@ -13,7 +13,7 @@ public class ExcelBookObject
     }
     public void open(string v_path)
     {
-        m_workbook = new Excel.Workbook(v_path);
+        m_workbook = new Excel.Workbook(MyTools.ExcelPath +   v_path);
     }
     public ExcelSheetObject get_sheet(string v_sheet)
     {
@@ -30,7 +30,7 @@ public class ExcelBookObject
         }
         return null;
     }
-    public void save(string v_optpath)
+    public void save(string v_optpath) 
     {
         m_workbook.Save(v_optpath);
     }

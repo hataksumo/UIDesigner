@@ -49,16 +49,28 @@ public static class CustomEditor
     {
         if (_client != null)
         {
-            _client.Dispose();
+            _client.Destroy();
             _client = null;
+        }
+    }
+
+    [MenuItem("Custom/导出Excel")]
+    static void OutputExcel()
+    {
+        try
+        {
+            _client.output_excel();
+        }
+        catch (Exception ex)
+        {
+            ZFDebug.Error(ex.ToString());
         }
     }
 
 
 
 
-
-        public static Texture2D CaptrueCamera(Camera camera, Rect rect)
+    public static Texture2D CaptrueCamera(Camera camera, Rect rect)
     {
         // 创建一个RenderTexture对象
         RenderTexture rt = new RenderTexture((int)rect.width, (int)rect.height, 0);
