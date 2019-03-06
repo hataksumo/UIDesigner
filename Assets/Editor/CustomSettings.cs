@@ -180,7 +180,8 @@ public static class CustomSettings
         _GT(typeof(ExcelBookObject)),
         _GT(typeof(ExcelHeader)),
         _GT(typeof(ExcelSheetObject)),
-        _GT(typeof(MyTools))
+        _GT(typeof(MyTools)),
+        _GT(typeof(ZFDebug)),
     };
 
     public static List<Type> dynamicList = new List<Type>()

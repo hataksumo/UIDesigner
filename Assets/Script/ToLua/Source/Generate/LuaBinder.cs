@@ -15,6 +15,7 @@ public static class LuaBinder
 		ExcelHeaderWrap.Register(L);
 		ExcelSheetObjectWrap.Register(L);
 		MyToolsWrap.Register(L);
+		ZFDebugWrap.Register(L);
 		ViewWrap.Register(L);
 		BaseWrap.Register(L);
 		ManagerWrap.Register(L);

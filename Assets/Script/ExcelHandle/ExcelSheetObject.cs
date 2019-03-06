@@ -68,6 +68,76 @@ public class ExcelSheetObject
         return m_sheet.Cells[v_row, col].Value;
     }
 
+    public int get_vali(int v_row, string v_header_name)
+    {
+        int rtn = -1;
+        object ortn = get_val(v_row, v_header_name);
+        if (ortn == null) return rtn;
+        if (ortn is double)
+        {
+            rtn = (int)(double)ortn;
+        }
+        else if (ortn is string)
+        {
+            if (!int.TryParse((string)ortn, out rtn))
+            {
+                ZFDebug.Error(string.Format("{0}不是int", (string)ortn));
+            }
+        }
+        else
+        {
+            ZFDebug.Error(string.Format("{0}表{1}列的数据类型无法解析", m_sheet_name, v_header_name));
+        }
+        return rtn;
+    }
+
+    public double get_valf(int v_row, string v_header_name)
+    {
+        double rtn = -1;
+        object ortn = get_val(v_row, v_header_name);
+        if (ortn == null) return rtn;
+        if (ortn is double)
+        {
+            rtn = (double)ortn;
+        }
+        else if (ortn is string)
+        {
+            if (!double.TryParse((string)ortn, out rtn))
+            {
+                ZFDebug.Error(string.Format("{0}不是int", (string)ortn));
+            }
+        }
+        else
+        {
+            ZFDebug.Error(string.Format("{0}表{1}的列的数据类型无法解析", m_sheet_name, v_header_name));
+        }
+        return rtn;
+    }
+
+
+
+    public string get_vals(int v_row, string v_header_name)
+    {
+        string rtn = "";
+        object ortn = get_val(v_row, v_header_name);
+        if (ortn == null) return rtn;
+        if (ortn is string)
+        {
+            rtn = (string)ortn;
+        }
+        else if (ortn is string)
+        {
+            rtn = ortn.ToString();
+        }
+        else
+        {
+            ZFDebug.Error(string.Format("{0}{1}的列的数据类型无法解析", m_sheet_name, v_header_name));
+        }
+        return rtn;
+    }
+
+
+
     public string get_string(int v_row, int v_col)
     {
         object val = get_val(v_row, v_col) as string;
