@@ -23,7 +23,8 @@ function output_excel()
 	dofile("tools")
 	local output = {
 	--"Excel\\DropOutput",
-	"Excel\\BattleCameraOutput",
+	--"Excel\\BattleCameraOutput",
+	"Excel\\jhmOutput"
 	}
 	for _i,val in ipairs(output) do
 		local fn = dofile(val)
