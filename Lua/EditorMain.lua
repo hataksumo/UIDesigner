@@ -24,7 +24,8 @@ function output_excel()
 	local output = {
 	--"Excel\\DropOutput",
 	--"Excel\\BattleCameraOutput",
-	"Excel\\jhmOutput"
+	--"Excel\\jhmOutput"
+	"Excel\\NewDropOutput"
 	}
 	for _i,val in ipairs(output) do
 		local fn = dofile(val)
