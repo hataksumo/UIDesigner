@@ -1,10 +1,10 @@
 
-local translate_sheet = function(v_dsSheet,v_dorpGroupSheet,v_dropSheet)
+local translate_sheet = function(v_dsSheet,v_dorpGroupSheet,v_dropSheet,v_sheetHangup)
 	local header = {{"普通.寄灵人Exp","普通.守护灵Exp","普通.金币"},{"高战.金币","绿材料","蓝材料","紫材料","橙材料"},{"初天","初地","初人","初级三才宝箱",
 	"中天","中地","中人","中级三才宝箱","高天"	,"高地","高人","高级三才宝箱","修身宝箱"}}
 
 	local item_name = {{"寄灵人经验","守护灵经验","金币"},{"金币","绿色基础材料","蓝色基础材料","紫色基础材料","橙色基础材料"},
-	{"初级红","初级黄","初级蓝","初级三才宝箱","中级红","中级黄","中级蓝","中级三才宝箱","高级红","高级黄","高级蓝","高级三才宝箱","修身宝箱"}}
+	{"初级蓝","初级黄","初级红","初级三才宝箱","中级蓝","中级黄","中级红","中级三才宝箱","高级蓝","高级黄","高级红","高级三才宝箱","修身宝箱"}}
 
 	local groupName = {"普通掉落1","高战掉落6","高战掉落20"}
 
@@ -47,7 +47,7 @@ local translate_sheet = function(v_dsSheet,v_dorpGroupSheet,v_dropSheet)
 	for _i,groups in ipairs(datas) do
 		for _j,theGroup in ipairs(groups) do
 			if #theGroup > 0 then
-				local id = groupSheetId+groupSheetRow
+				local id = groupSheetId+groupSheetRow - 2
 				local groupName = groups.name.."_"..theGroup.name
 				v_dorpGroupSheet:set_vali("ID",groupSheetRow,id)
 				v_dorpGroupSheet:set_vali("GroupType",groupSheetRow,3)
@@ -90,7 +90,8 @@ local output_excel = function()
 	local sheetDisigner = book:get_sheet("设计表")
 	local sheetDorpGroup = book:get_sheet("掉落组")
 	local sheetDorp = book:get_sheet("掉落")
-	translate_sheet(sheetDisigner,sheetDorpGroup,sheetDorp)
+	local sheetHangup = book:get_sheet("挂机派遣")
+	translate_sheet(sheetDisigner,sheetDorpGroup,sheetDorp,sheetHangup)
 	book:save(MyTools.ExcelPath.."drop.xlsx")
 end
 
