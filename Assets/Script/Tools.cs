@@ -8,6 +8,7 @@ using UnityEngine;
 public static class MyTools
 {
     public static string ExcelPath = Application.dataPath + "/../Excel/";
+    public static string OutputExcelPath = Application.dataPath + "/../Excel/output/";
     public static string GetDataPath()
     {
 

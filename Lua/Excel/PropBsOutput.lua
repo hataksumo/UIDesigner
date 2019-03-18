@@ -18,7 +18,6 @@ local fn_calCardProp = function()
 		local propKey= {"Atk","Def","HP","Crit","CritRate","EffectHit","EffectResist","Block","DefIgnor","R"}
 		local cardInfo = cfg_card[card_id]
 		for i,key in ipairs(propKey) do
-			--print(string.format("Prop[%s] +=  %f",key,cardInfo[key]))
 			Prop[key] = Prop[key] + cardInfo[key]
 		end
 		return Prop
@@ -141,8 +140,8 @@ local fn_calCardProp = function()
 
 		--数据加和
 		for loc,couple in ipairs(cardGroupData) do
-			finnalProp[loc].jlr.prop = finnalProp[loc].jlr.prop + lvProp[loc].propjlr + transProp[loc].propShl
-			finnalProp[loc].shl.prop = finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr
+			finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr + transProp[loc].propShl
+			finnalProp[loc].shl.prop = iniProp[loc].propShl +finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr
 		end
 
 		--处理神器数据
@@ -159,9 +158,11 @@ end
 
 local fn_output_card_prop = function(v_card_attr_sheet,v_levelSheet,v_cardData)
 	local row = 3
-	local cfg_prop = dofile("Config\\property")
-	local cfg_card = dofile("Config\\card")
+	local cfg_prop = dofile "Config\\property"
+	local cfg_card = dofile "Config\\card"
+	local cfg_global = dofile "Config\\global"
 	local card_type_name = {"寄灵人","守护灵"}
+
 	v_levelSheet:init_data()
 	for lvId,data in ipairs(v_cardData) do
 		local totalBs = 0
@@ -178,6 +179,7 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_levelSheet,v_cardData)
 					v_card_attr_sheet:set_valf(propCfgData.EnName,row,prop[propCfgData.EnName])
 					bs = bs + propCfgData.BsFactor * prop[propCfgData.EnName]
 				end
+				bs = bs - cfg_global.DefaultCritDmg * cfg_prop[105].BsFactor
 				v_card_attr_sheet:set_vali("bs",row,bs)
 				totalBs = totalBs + bs
 				row = row + 1
@@ -197,7 +199,7 @@ local fn_output_excel = function()
 	local card_prop_sheet = book:get_sheet("卡牌属性")
 	local lvds_sheet = book:get_sheet("关卡")
 	fn_output_card_prop(card_prop_sheet,lvds_sheet,card_prop)
-	book:save(MyTools.ExcelPath.."propSim.xlsx")
+	book:save(MyTools.OutputExcelPath.."propSim.xlsx")
 end
 
 return fn_output_excel
