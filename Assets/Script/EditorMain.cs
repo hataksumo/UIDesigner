@@ -37,6 +37,18 @@ public class EditorMain : LuaClient, IDisposable
         fun = null;
     }
 
+    public void calCrystall()
+    {
+        LuaFunction fun = luaState.GetFunction("recover_crystall");
+        if (fun == null)
+        {
+            ZFDebug.Error("can't find the funtion named recover_crystall");
+        }
+        fun.Call(1,1,1,6);
+        fun.Dispose();
+        fun = null;
+    }
+
 
     public new void Awake()
     {

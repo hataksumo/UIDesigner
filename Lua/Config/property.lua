@@ -17,7 +17,7 @@ local data = {
 	[102] = {EnName = "Def",CnName = "基础防御",IsHide = false,Show_Str = "基础防御 +%d",Show_Fac = 1,BsFactor = 20,Desc = "防御力越高，角色所受伤害越低。"},
 	[103] = {EnName = "HP",CnName = "基础生命",IsHide = false,Show_Str = "基础生命 +%d",Show_Fac = 1,BsFactor = 1,Desc = "生命值为0时，角色死亡。"},
 	[104] = {EnName = "Crit",CnName = "暴击率",IsHide = false,Show_Str = "暴击率 +%f%%",Show_Fac = 100,BsFactor = 100000,Desc = "伤害性技能和恢复技能会发生暴击，默认暴击伤害为1.5倍。"},
-	[105] = {EnName = "CritDmg",CnName = "暴击伤害",IsHide = false,Show_Str = "暴击伤害 +%f%%",Show_Fac = 100,BsFactor = 50000,Desc = "提升暴击后造成的伤害。"},
+	[105] = {EnName = "CritRate",CnName = "暴击伤害",IsHide = false,Show_Str = "暴击伤害 +%f%%",Show_Fac = 100,BsFactor = 50000,Desc = "提升暴击后造成的伤害。"},
 	[106] = {EnName = "EffectHit",CnName = "效果命中",IsHide = false,Show_Str = "效果命中 +%f%%",Show_Fac = 100,BsFactor = 75000,Desc = "提升Debuff的命中概率"},
 	[107] = {EnName = "EffectResist",CnName = "效果抵抗",IsHide = false,Show_Str = "效果抵抗 +%f%%",Show_Fac = 100,BsFactor = 75000,Desc = "降低遭受Debuff的概率。"},
 	[108] = {EnName = "AtkRate",CnName = "攻击百分比加成",IsHide = true,Show_Str = "攻击百分比加成 +%f%%",Show_Fac = 100,BsFactor = 0,Desc = "百分比提升基础攻击力。"},

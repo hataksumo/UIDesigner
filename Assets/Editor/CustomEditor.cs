@@ -54,6 +54,17 @@ public static class CustomEditor
         }
     }
 
+    [MenuItem("Custom/随机水晶")]
+    static void TestCrystall()
+    {
+        if (_client != null)
+        {
+            _client.calCrystall();
+            
+        }
+    }
+
+
     [MenuItem("Custom/导出Excel")]
     static void OutputExcel()
     {

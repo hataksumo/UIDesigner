@@ -22,10 +22,10 @@ public static class MyTools
 
     public static string GetJHM(int v_id)
     {
-        const ulong maxCode = 100000;
+        const ulong maxCode = 1000;
         UnityEngine.Random.InitState(v_id);
         int baseCode = v_id;
-        ulong code =  (ulong)((UnityEngine.Random.value * ulong.MaxValue)% 99991 + 100000)* maxCode + (ulong)baseCode;
+        ulong code =  (ulong)((UnityEngine.Random.value * ulong.MaxValue)% 997 + 1000) * maxCode + (ulong)baseCode;
         return code.ToString();
     }
 }
