@@ -14,7 +14,7 @@ primary key:
 return{
 	[1] = {
 		Id = 101,
-		Name = "初级神器1",
+		Name = "两仪剑",
 		NeedLevel = 1,
 		Condition = 106,
 		Icon = "ui_dtex_Shenqi_001",
@@ -52,17 +52,18 @@ return{
 			[30] = {Prop = {[1] = {id = 111,val = 129},[2] = {id = 112,val = 128}},Cost = {[1] = {id = 1401002,num = 24045},[2] = {id = 1606001,num = 3000},[3] = {id = 1606002,num = 10}}}--初级神器1-lv30
 		},
 		phaseBunus = {
-			[1] = {Lv = 5,Type = 1,Condition = 106,Desc = "所有卡牌攻击力+0.8%，生命+0.8%",Prop = {[1] = {id = 108,val = 0.008},[2] = {id = 110,val = 0.008}}},--初级神器1-5级属性
-			[2] = {Lv = 10,Type = 2,Desc = "专属技能等级+1",Effect = {[1] = 130200301,[2] = 1}},--初级神器1-10级属性
-			[3] = {Lv = 15,Type = 1,Condition = 106,Desc = "所有卡牌攻击力+1.2%，防御+0.8%",Prop = {[1] = {id = 108,val = 0.012},[2] = {id = 109,val = 0.008}}},--初级神器1-15级属性
-			[4] = {Lv = 20,Type = 2,Desc = "专属技能等级+1",Effect = {[1] = 130200301,[2] = 2}},--初级神器1-20级属性
-			[5] = {Lv = 25,Type = 1,Condition = 106,Desc = "所有卡牌防御力+1.2%，生命+0.8%",Prop = {[1] = {id = 109,val = 0.012},[2] = {id = 110,val = 0.012}}},--初级神器1-25级属性
-			[6] = {Lv = 30,Type = 2,Desc = "专属技能等级+1",Effect = {[1] = 130200301,[2] = 3}}--初级神器1-30级属性
+			[1] = {Lv = 1,Type = 1,Desc = "每回合获得水晶+1",Prop = {[1] = {id = 201,val = 2}}},--初级神器1级属性
+			[2] = {Lv = 5,Type = 1,Condition = 106,Desc = "所有卡牌攻击力+0.8%，生命+0.8%",Prop = {[1] = {id = 108,val = 0.008},[2] = {id = 110,val = 0.008}}},--初级神器1-5级属性
+			[3] = {Lv = 10,Type = 2,Desc = "专属技能等级+1",Effect = {[1] = 130200301,[2] = 1}},--初级神器1-10级属性
+			[4] = {Lv = 15,Type = 1,Condition = 106,Desc = "所有卡牌攻击力+1.2%，防御+0.8%",Prop = {[1] = {id = 108,val = 0.012},[2] = {id = 109,val = 0.008}}},--初级神器1-15级属性
+			[5] = {Lv = 20,Type = 2,Desc = "专属技能等级+1",Effect = {[1] = 130200301,[2] = 2}},--初级神器1-20级属性
+			[6] = {Lv = 25,Type = 1,Condition = 106,Desc = "所有卡牌防御力+1.2%，生命+0.8%",Prop = {[1] = {id = 109,val = 0.012},[2] = {id = 110,val = 0.012}}},--初级神器1-25级属性
+			[7] = {Lv = 30,Type = 2,Desc = "专属技能等级+1",Effect = {[1] = 130200301,[2] = 3}}--初级神器1-30级属性
 		}
 	},
 	[2] = {
 		Id = 102,
-		Name = "初级神器2",
+		Name = "无界之爪",
 		NeedLevel = 1,
 		Condition = 106,
 		Icon = "ui_dtex_Shenqi_001",
@@ -110,7 +111,7 @@ return{
 	},
 	[3] = {
 		Id = 201,
-		Name = "中级神器1",
+		Name = "踏雪白狼",
 		NeedLevel = 1,
 		Condition = 106,
 		Icon = "ui_dtex_Shenqi_002",
@@ -158,7 +159,7 @@ return{
 	},
 	[4] = {
 		Id = 202,
-		Name = "中级神器2",
+		Name = "大荒紫电",
 		NeedLevel = 1,
 		Condition = 106,
 		Icon = "ui_dtex_Shenqi_002",
@@ -206,7 +207,7 @@ return{
 	},
 	[5] = {
 		Id = 301,
-		Name = "高级神器1",
+		Name = "十殿阎罗",
 		NeedLevel = 1,
 		Condition = 101,
 		Icon = "ui_dtex_Shenqi_003",
@@ -254,7 +255,7 @@ return{
 	},
 	[6] = {
 		Id = 302,
-		Name = "高级神器2",
+		Name = "大夏龙雀",
 		NeedLevel = 1,
 		Condition = 102,
 		Icon = "ui_dtex_Shenqi_003",
@@ -302,7 +303,7 @@ return{
 	},
 	[7] = {
 		Id = 303,
-		Name = "高级神器3",
+		Name = "阿波普之刃",
 		NeedLevel = 1,
 		Condition = 103,
 		Icon = "ui_dtex_Shenqi_003",

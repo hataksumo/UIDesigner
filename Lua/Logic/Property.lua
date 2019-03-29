@@ -28,6 +28,9 @@ PropMT.__index= function(v_table,v_key)
 	if idx > 0 then
 		return v_table.data[idx]
 	else
+		if PropMT[v_key] then
+			return PropMT[v_key]
+		end
 		ZFDebug.Error(string.format("没有找到名为%s的键",v_key))
 		return nil
 	end
@@ -48,6 +51,13 @@ PropMT.__add = function(v_t1,v_t2)
 		rtn.data[i] = v_t1.data[i] + v_t2.data[i]
 	end
 	return rtn
+end
+
+PropMT.print = function(v_self)
+	for _i,val in ipairs(v_self.data) do
+		local propCfg = cfg_property[_i+PropMT.begin]
+		print(string.format(propCfg.Show_Str,val*propCfg.Show_Fac))
+	end
 end
 
 _G.CreatePropTable = function()
