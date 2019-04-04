@@ -1761,7 +1761,7 @@ local data = {
 	},--于禁
 	[1102016] = {
 		IfEntreVersion = 1,
-		Name = "西方龙",
+		Name = "提亚马特",
 		NickName = "天神圣灵",
 		Tag = {101},
 		Type = 2,
@@ -1939,7 +1939,7 @@ local data = {
 		Tag = {101},
 		Type = 2,
 		Quality = 3,
-		CrystalType = 2,
+		CrystalType = 1,
 		Sex = 1,
 		SubType = 1,
 		Atk = 0,
@@ -1969,7 +1969,7 @@ local data = {
 		Describe = "不是BUG，还没填表",
 		GuidDesc = "策略描述策划还没配好",
 		Relation = "不是BUG，还没填表",
-		mask = 612,
+		mask = 610,
 		hells = {
 			[1] = {BaseAttr = {[1] = {id = 101,val = 60},[2] = {id = 102,val = 10},[3] = {id = 103,val = 100}},UpAttr = {[1] = {id = 101,val = 10},[2] = {id = 102,val = 5},[3] = {id = 103,val = 50}}},
 			[2] = {BaseAttr = {[1] = {id = 101,val = 221},[2] = {id = 102,val = 90},[3] = {id = 103,val = 905}},UpAttr = {[1] = {id = 101,val = 14},[2] = {id = 102,val = 7},[3] = {id = 103,val = 70}},CostItem = {[1] = {id = 1401002,val = 600},[2] = {id = 1603001,val = 50}}},

@@ -1646,6 +1646,20 @@ return{
 	},
 	[10108] = {
 		[1] = {
+			jlr = {cardId = 1101001,lv = 4,bklv = 1,star = 1},
+			shl = {cardId = 1102015,lv = 4,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 4,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 4,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 4,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 4,bklv = 1,star = 1}
+		}
+	},
+	[10109] = {
+		[1] = {
 			jlr = {cardId = 1101001,lv = 5,bklv = 1,star = 1},
 			shl = {cardId = 1102015,lv = 5,bklv = 1,star = 1}
 		},
@@ -1656,6 +1670,2064 @@ return{
 		[3] = {
 			jlr = {cardId = 1101002,lv = 5,bklv = 1,star = 1},
 			shl = {cardId = 1102005,lv = 5,bklv = 1,star = 1}
+		}
+	},
+	[10201] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 7,bklv = 1,star = 1},
+			shl = {cardId = 1102015,lv = 7,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 7,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 7,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 7,bklv = 1,star = 1},
+			shl = {cardId = 1102004,lv = 7,bklv = 1,star = 1}
+		}
+	},
+	[10202] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 9,bklv = 1,star = 1},
+			shl = {cardId = 1102015,lv = 9,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 9,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 9,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 9,bklv = 1,star = 1},
+			shl = {cardId = 1102004,lv = 9,bklv = 1,star = 1}
+		}
+	},
+	[10203] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 10,bklv = 1,star = 1},
+			shl = {cardId = 1102015,lv = 10,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 10,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 10,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 10,bklv = 1,star = 1},
+			shl = {cardId = 1102004,lv = 10,bklv = 1,star = 1}
+		}
+	},
+	[10204] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 12,bklv = 1,star = 1},
+			shl = {cardId = 1102015,lv = 12,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 12,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 12,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 12,bklv = 1,star = 1},
+			shl = {cardId = 1102004,lv = 12,bklv = 1,star = 1}
+		}
+	},
+	[10205] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 13,bklv = 1,star = 1},
+			shl = {cardId = 1102015,lv = 13,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 13,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 13,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 13,bklv = 1,star = 1},
+			shl = {cardId = 1102004,lv = 13,bklv = 1,star = 1}
+		}
+	},
+	[10206] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 15,bklv = 1,star = 1},
+			shl = {cardId = 1102015,lv = 15,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 15,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 15,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 15,bklv = 1,star = 1},
+			shl = {cardId = 1102004,lv = 15,bklv = 1,star = 1}
+		}
+	},
+	[10207] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102015,lv = 15,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 15,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 15,bklv = 1,star = 1}
+		}
+	},
+	[10208] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102015,lv = 15,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 15,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 15,bklv = 2,star = 1}
+		}
+	},
+	[10209] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 18,bklv = 2,star = 1},
+			shl = {cardId = 1102015,lv = 18,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 18,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 18,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 18,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 18,bklv = 2,star = 1}
+		}
+	},
+	[10301] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 21,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 21,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 21,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 21,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 21,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 21,bklv = 2,star = 1}
+		}
+	},
+	[10302] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 22,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 22,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 22,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 22,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 22,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 22,bklv = 2,star = 1}
+		}
+	},
+	[10303] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 23,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 23,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 23,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 23,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 23,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 23,bklv = 2,star = 1}
+		}
+	},
+	[10304] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 24,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 24,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 24,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 24,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 24,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 24,bklv = 2,star = 1}
+		}
+	},
+	[10305] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 24,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 24,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 24,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 24,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 24,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 24,bklv = 2,star = 1}
+		}
+	},
+	[10306] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 25,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 25,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 25,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 25,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 25,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 25,bklv = 2,star = 1}
+		}
+	},
+	[10307] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 25,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 25,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 25,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 25,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 25,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 25,bklv = 2,star = 1}
+		}
+	},
+	[10308] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 26,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 26,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 26,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 26,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 26,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 26,bklv = 2,star = 1}
+		}
+	},
+	[10309] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 26,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 26,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 26,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 26,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 26,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 26,bklv = 2,star = 1}
+		}
+	},
+	[10310] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 27,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 27,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 27,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 27,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 27,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 27,bklv = 2,star = 1}
+		}
+	},
+	[10311] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 27,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 27,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 27,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 27,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 27,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 27,bklv = 2,star = 1}
+		}
+	},
+	[10312] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 28,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 28,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 28,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 28,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 28,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 28,bklv = 2,star = 1}
+		}
+	},
+	[10313] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 28,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 28,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 28,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 28,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 28,bklv = 2,star = 1},
+			shl = {cardId = 1102020,lv = 28,bklv = 2,star = 1}
+		}
+	},
+	[10314] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 29,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 29,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 29,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 29,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 29,bklv = 2,star = 1},
+			shl = {cardId = 1102020,lv = 29,bklv = 2,star = 1}
+		}
+	},
+	[10315] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 30,bklv = 2,star = 1},
+			shl = {cardId = 1102002,lv = 30,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 30,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 30,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 30,bklv = 2,star = 1},
+			shl = {cardId = 1102020,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[10401] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 30,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 30,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 30,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 30,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 30,bklv = 2,star = 1},
+			shl = {cardId = 1102020,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[10402] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 30,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 30,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 30,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 30,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 30,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[10403] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 30,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 30,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 30,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 30,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 30,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[10404] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 32,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 32,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 32,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 30,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 32,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[10405] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 33,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 33,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 33,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 30,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 33,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[10406] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 33,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 33,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 33,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 30,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 33,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[10407] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 34,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 34,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 34,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 34,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 34,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[10408] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 35,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 35,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 35,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 35,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 35,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[10409] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 35,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 35,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 35,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 35,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 35,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 35,bklv = 3,star = 1}
+		}
+	},
+	[10410] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 36,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 36,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 36,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 36,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 36,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 36,bklv = 3,star = 1}
+		}
+	},
+	[10411] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 36,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 36,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 36,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 36,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 36,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 36,bklv = 3,star = 1}
+		}
+	},
+	[10412] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 37,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 37,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 37,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 37,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 37,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 37,bklv = 3,star = 1}
+		}
+	},
+	[10413] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 38,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 38,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 38,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 38,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 38,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 38,bklv = 3,star = 1}
+		}
+	},
+	[10414] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 39,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 39,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 39,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 39,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 39,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 39,bklv = 3,star = 1}
+		}
+	},
+	[10415] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 40,bklv = 3,star = 1},
+			shl = {cardId = 1102002,lv = 40,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 40,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 40,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 40,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 1}
+		}
+	},
+	[10501] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 40,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 40,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 40,bklv = 3,star = 1},
+			shl = {cardId = 1102005,lv = 40,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 40,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 1}
+		}
+	},
+	[10502] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 40,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 40,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 40,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 40,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 40,bklv = 3,star = 1},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 1}
+		}
+	},
+	[10503] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 40,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 40,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 40,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 40,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 40,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 1}
+		}
+	},
+	[10504] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 42,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 40,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 42,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 40,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 42,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 1}
+		}
+	},
+	[10505] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 43,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 43,bklv = 4,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 43,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 40,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 43,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 1}
+		}
+	},
+	[10506] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 44,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 44,bklv = 4,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 44,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 40,bklv = 3,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 44,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 1}
+		}
+	},
+	[10507] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 44,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 44,bklv = 4,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 44,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 44,bklv = 4,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 44,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 1}
+		}
+	},
+	[10508] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 44,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 44,bklv = 4,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 44,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 44,bklv = 4,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 44,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 1}
+		}
+	},
+	[10509] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 45,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 45,bklv = 4,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 45,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 45,bklv = 4,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 45,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 45,bklv = 4,star = 1}
+		}
+	},
+	[10510] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 46,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 46,bklv = 4,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 46,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 46,bklv = 4,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 46,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 46,bklv = 4,star = 1}
+		}
+	},
+	[10511] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 46,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 46,bklv = 4,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 46,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 46,bklv = 4,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 46,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 46,bklv = 4,star = 1}
+		}
+	},
+	[10512] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 47,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 47,bklv = 4,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 47,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 47,bklv = 4,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 47,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 47,bklv = 4,star = 1}
+		}
+	},
+	[10513] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 48,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 48,bklv = 4,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 48,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 48,bklv = 4,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 48,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 48,bklv = 4,star = 1}
+		}
+	},
+	[10514] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 49,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 49,bklv = 4,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 49,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 49,bklv = 4,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 49,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 49,bklv = 4,star = 1}
+		}
+	},
+	[10515] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 50,bklv = 4,star = 1},
+			shl = {cardId = 1102002,lv = 50,bklv = 4,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 50,bklv = 4,star = 1},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 50,bklv = 4,star = 1},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 1}
+		}
+	},
+	[10601] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 50,bklv = 4,star = 2},
+			shl = {cardId = 1102012,lv = 50,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 50,bklv = 4,star = 2},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 50,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 2}
+		}
+	},
+	[10602] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 50,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 50,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 50,bklv = 4,star = 2},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 50,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 2}
+		}
+	},
+	[10603] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 50,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 50,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 50,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 50,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 2}
+		}
+	},
+	[10604] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 50,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 50,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 50,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 50,bklv = 5,star = 2},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 2}
+		}
+	},
+	[10605] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 52,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 50,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 52,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 52,bklv = 5,star = 2},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 2}
+		}
+	},
+	[10606] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 52,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 52,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 52,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 52,bklv = 5,star = 2},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 2}
+		}
+	},
+	[10607] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 54,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 54,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 54,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 54,bklv = 5,star = 2},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 2}
+		}
+	},
+	[10608] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 54,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 54,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 54,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 54,bklv = 5,star = 2},
+			shl = {cardId = 1102020,lv = 54,bklv = 5,star = 2}
+		}
+	},
+	[10609] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 55,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 55,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 55,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 55,bklv = 5,star = 2},
+			shl = {cardId = 1102020,lv = 55,bklv = 5,star = 2}
+		}
+	},
+	[10610] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 55,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 55,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 55,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 55,bklv = 5,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 55,bklv = 5,star = 2},
+			shl = {cardId = 1102020,lv = 55,bklv = 5,star = 2}
+		}
+	},
+	[10611] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 56,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 56,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 56,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 56,bklv = 5,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 56,bklv = 5,star = 2},
+			shl = {cardId = 1102020,lv = 56,bklv = 5,star = 2}
+		}
+	},
+	[10612] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 57,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 57,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 57,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 57,bklv = 5,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 57,bklv = 5,star = 2},
+			shl = {cardId = 1102020,lv = 57,bklv = 5,star = 2}
+		}
+	},
+	[10613] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 58,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 58,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 58,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 58,bklv = 5,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 58,bklv = 5,star = 2},
+			shl = {cardId = 1102020,lv = 58,bklv = 5,star = 2}
+		}
+	},
+	[10614] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 59,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 59,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 59,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 59,bklv = 5,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 59,bklv = 5,star = 2},
+			shl = {cardId = 1102020,lv = 59,bklv = 5,star = 2}
+		}
+	},
+	[10615] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 60,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 60,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 60,bklv = 5,star = 2},
+			shl = {cardId = 1102005,lv = 60,bklv = 5,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 60,bklv = 5,star = 2},
+			shl = {cardId = 1102020,lv = 60,bklv = 5,star = 2}
+		}
+	},
+	[20101] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 1,bklv = 1,star = 1},
+			shl = {cardId = 1102015,lv = 1,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 1,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 1,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 1,bklv = 1,star = 1},
+			shl = {cardId = 1102004,lv = 1,bklv = 1,star = 1}
+		}
+	},
+	[20102] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 5,bklv = 1,star = 1},
+			shl = {cardId = 1102015,lv = 5,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 5,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 5,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 5,bklv = 1,star = 1},
+			shl = {cardId = 1102004,lv = 5,bklv = 1,star = 1}
+		}
+	},
+	[20103] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 10,bklv = 1,star = 1},
+			shl = {cardId = 1102015,lv = 10,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 10,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 10,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 10,bklv = 1,star = 1},
+			shl = {cardId = 1102004,lv = 10,bklv = 1,star = 1}
+		}
+	},
+	[20104] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 15,bklv = 1,star = 1},
+			shl = {cardId = 1102015,lv = 15,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 15,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 15,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 15,bklv = 1,star = 1},
+			shl = {cardId = 1102004,lv = 15,bklv = 1,star = 1}
+		}
+	},
+	[20105] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102015,lv = 15,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 15,bklv = 1,star = 1},
+			shl = {cardId = 1102005,lv = 15,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 15,bklv = 1,star = 1},
+			shl = {cardId = 1102004,lv = 15,bklv = 1,star = 1}
+		}
+	},
+	[20106] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102015,lv = 15,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 15,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 15,bklv = 1,star = 1}
+		}
+	},
+	[20107] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102015,lv = 15,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 15,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102004,lv = 15,bklv = 1,star = 1}
+		}
+	},
+	[20108] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 15,bklv = 2,star = 2},
+			shl = {cardId = 1102015,lv = 15,bklv = 1,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 15,bklv = 2,star = 1},
+			shl = {cardId = 1102005,lv = 15,bklv = 1,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 15,bklv = 2,star = 2},
+			shl = {cardId = 1102004,lv = 15,bklv = 1,star = 1}
+		}
+	},
+	[20109] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 15,bklv = 2,star = 2},
+			shl = {cardId = 1102015,lv = 15,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 15,bklv = 2,star = 2},
+			shl = {cardId = 1102005,lv = 15,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 15,bklv = 2,star = 2},
+			shl = {cardId = 1102004,lv = 15,bklv = 2,star = 1}
+		}
+	},
+	[20201] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 17,bklv = 2,star = 2},
+			shl = {cardId = 1102002,lv = 17,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 17,bklv = 2,star = 2},
+			shl = {cardId = 1102005,lv = 17,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 17,bklv = 2,star = 2},
+			shl = {cardId = 1102004,lv = 17,bklv = 2,star = 1}
+		}
+	},
+	[20202] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 18,bklv = 2,star = 2},
+			shl = {cardId = 1102002,lv = 18,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 18,bklv = 2,star = 2},
+			shl = {cardId = 1102005,lv = 18,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 18,bklv = 2,star = 2},
+			shl = {cardId = 1102004,lv = 18,bklv = 2,star = 1}
+		}
+	},
+	[20203] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 20,bklv = 2,star = 2},
+			shl = {cardId = 1102002,lv = 20,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 20,bklv = 2,star = 2},
+			shl = {cardId = 1102005,lv = 20,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 20,bklv = 2,star = 2},
+			shl = {cardId = 1102004,lv = 20,bklv = 2,star = 1}
+		}
+	},
+	[20204] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 22,bklv = 2,star = 2},
+			shl = {cardId = 1102002,lv = 22,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 22,bklv = 2,star = 2},
+			shl = {cardId = 1102005,lv = 22,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 22,bklv = 2,star = 2},
+			shl = {cardId = 1102004,lv = 22,bklv = 2,star = 1}
+		}
+	},
+	[20205] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 24,bklv = 2,star = 2},
+			shl = {cardId = 1102002,lv = 24,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 24,bklv = 2,star = 2},
+			shl = {cardId = 1102005,lv = 24,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 24,bklv = 2,star = 2},
+			shl = {cardId = 1102004,lv = 24,bklv = 2,star = 1}
+		}
+	},
+	[20206] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 26,bklv = 2,star = 2},
+			shl = {cardId = 1102002,lv = 26,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 26,bklv = 2,star = 2},
+			shl = {cardId = 1102005,lv = 26,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 26,bklv = 2,star = 2},
+			shl = {cardId = 1102004,lv = 26,bklv = 2,star = 1}
+		}
+	},
+	[20207] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 28,bklv = 2,star = 2},
+			shl = {cardId = 1102002,lv = 28,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 28,bklv = 2,star = 2},
+			shl = {cardId = 1102005,lv = 28,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 28,bklv = 2,star = 2},
+			shl = {cardId = 1102004,lv = 28,bklv = 2,star = 1}
+		}
+	},
+	[20208] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 30,bklv = 2,star = 2},
+			shl = {cardId = 1102002,lv = 30,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 30,bklv = 2,star = 2},
+			shl = {cardId = 1102005,lv = 30,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101002,lv = 30,bklv = 2,star = 2},
+			shl = {cardId = 1102004,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[20209] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 30,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 30,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102004,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[20301] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 30,bklv = 2,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 30,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[20302] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 30,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 30,bklv = 2,star = 1}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[20303] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 30,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 30,bklv = 2,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 30,bklv = 2,star = 1}
+		}
+	},
+	[20304] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 30,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 30,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 30,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 30,bklv = 3,star = 1}
+		}
+	},
+	[20305] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 31,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 31,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 31,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 31,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 31,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 31,bklv = 3,star = 1}
+		}
+	},
+	[20306] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 32,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 32,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 32,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 32,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 32,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 32,bklv = 3,star = 1}
+		}
+	},
+	[20307] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 33,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 33,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 33,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 33,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 33,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 33,bklv = 3,star = 1}
+		}
+	},
+	[20308] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 34,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 34,bklv = 3,star = 1}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 34,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 34,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 34,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 34,bklv = 3,star = 1}
+		}
+	},
+	[20309] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 34,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 34,bklv = 3,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 34,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 34,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 34,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 34,bklv = 3,star = 1}
+		}
+	},
+	[20310] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 35,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 35,bklv = 3,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 35,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 35,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 35,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 35,bklv = 3,star = 2}
+		}
+	},
+	[20311] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 36,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 36,bklv = 3,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 36,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 36,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 36,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 36,bklv = 3,star = 2}
+		}
+	},
+	[20312] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 37,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 37,bklv = 3,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 37,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 37,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 37,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 37,bklv = 3,star = 2}
+		}
+	},
+	[20313] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 38,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 38,bklv = 3,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 38,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 38,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 38,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 38,bklv = 3,star = 2}
+		}
+	},
+	[20314] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 39,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 39,bklv = 3,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 39,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 39,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 39,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 39,bklv = 3,star = 2}
+		}
+	},
+	[20315] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 40,bklv = 3,star = 2},
+			shl = {cardId = 1102002,lv = 40,bklv = 3,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 40,bklv = 3,star = 2},
+			shl = {cardId = 1102005,lv = 40,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 40,bklv = 3,star = 2},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 2}
+		}
+	},
+	[20401] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 40,bklv = 4,star = 2},
+			shl = {cardId = 1102002,lv = 40,bklv = 3,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 40,bklv = 4,star = 2},
+			shl = {cardId = 1102005,lv = 40,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 40,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 2}
+		}
+	},
+	[20402] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 40,bklv = 4,star = 2},
+			shl = {cardId = 1102002,lv = 40,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 40,bklv = 4,star = 2},
+			shl = {cardId = 1102005,lv = 40,bklv = 3,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 40,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 2}
+		}
+	},
+	[20403] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 40,bklv = 4,star = 2},
+			shl = {cardId = 1102002,lv = 40,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 40,bklv = 4,star = 2},
+			shl = {cardId = 1102005,lv = 40,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 40,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 40,bklv = 3,star = 2}
+		}
+	},
+	[20404] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 40,bklv = 4,star = 2},
+			shl = {cardId = 1102002,lv = 40,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 40,bklv = 4,star = 2},
+			shl = {cardId = 1102005,lv = 40,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 40,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 40,bklv = 4,star = 2}
+		}
+	},
+	[20405] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 41,bklv = 4,star = 2},
+			shl = {cardId = 1102002,lv = 41,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 41,bklv = 4,star = 2},
+			shl = {cardId = 1102005,lv = 41,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 41,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 41,bklv = 4,star = 2}
+		}
+	},
+	[20406] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 42,bklv = 4,star = 2},
+			shl = {cardId = 1102002,lv = 42,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 42,bklv = 4,star = 2},
+			shl = {cardId = 1102005,lv = 42,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 42,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 42,bklv = 4,star = 2}
+		}
+	},
+	[20407] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 43,bklv = 4,star = 2},
+			shl = {cardId = 1102002,lv = 43,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 43,bklv = 4,star = 2},
+			shl = {cardId = 1102005,lv = 43,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 43,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 43,bklv = 4,star = 2}
+		}
+	},
+	[20408] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 44,bklv = 4,star = 2},
+			shl = {cardId = 1102002,lv = 44,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 44,bklv = 4,star = 2},
+			shl = {cardId = 1102005,lv = 44,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 44,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 44,bklv = 4,star = 2}
+		}
+	},
+	[20409] = {
+		[1] = {
+			jlr = {cardId = 1101001,lv = 45,bklv = 4,star = 2},
+			shl = {cardId = 1102002,lv = 45,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 45,bklv = 4,star = 2},
+			shl = {cardId = 1102005,lv = 45,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 45,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 45,bklv = 4,star = 2}
+		}
+	},
+	[20410] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 46,bklv = 4,star = 2},
+			shl = {cardId = 1102002,lv = 46,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 46,bklv = 4,star = 3},
+			shl = {cardId = 1102005,lv = 46,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 46,bklv = 4,star = 2},
+			shl = {cardId = 1102020,lv = 46,bklv = 4,star = 2}
+		}
+	},
+	[20411] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 47,bklv = 4,star = 2},
+			shl = {cardId = 1102002,lv = 47,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 47,bklv = 4,star = 3},
+			shl = {cardId = 1102005,lv = 47,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 47,bklv = 4,star = 3},
+			shl = {cardId = 1102020,lv = 47,bklv = 4,star = 2}
+		}
+	},
+	[20412] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 48,bklv = 4,star = 2},
+			shl = {cardId = 1102012,lv = 48,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 48,bklv = 4,star = 3},
+			shl = {cardId = 1102005,lv = 48,bklv = 4,star = 2}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 48,bklv = 4,star = 3},
+			shl = {cardId = 1102020,lv = 48,bklv = 4,star = 2}
+		}
+	},
+	[20413] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 49,bklv = 4,star = 2},
+			shl = {cardId = 1102012,lv = 49,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 49,bklv = 4,star = 3},
+			shl = {cardId = 1102005,lv = 49,bklv = 4,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 49,bklv = 4,star = 3},
+			shl = {cardId = 1102020,lv = 49,bklv = 4,star = 2}
+		}
+	},
+	[20414] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 50,bklv = 4,star = 2},
+			shl = {cardId = 1102012,lv = 50,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 50,bklv = 4,star = 3},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 50,bklv = 4,star = 3},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 3}
+		}
+	},
+	[20415] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 50,bklv = 4,star = 2},
+			shl = {cardId = 1102012,lv = 50,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 50,bklv = 4,star = 3},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 50,bklv = 4,star = 3},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 3}
+		}
+	},
+	[20501] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 50,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 50,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 50,bklv = 4,star = 3},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 50,bklv = 4,star = 3},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 3}
+		}
+	},
+	[20502] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 50,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 50,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 50,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 50,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 3}
+		}
+	},
+	[20503] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 50,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 50,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 50,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 50,bklv = 4,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 50,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 50,bklv = 4,star = 3}
+		}
+	},
+	[20504] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 50,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 50,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 50,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 50,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 50,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 50,bklv = 5,star = 3}
+		}
+	},
+	[20505] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 51,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 51,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 51,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 51,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 51,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 51,bklv = 5,star = 3}
+		}
+	},
+	[20506] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 52,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 52,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 52,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 52,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 52,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 52,bklv = 5,star = 3}
+		}
+	},
+	[20507] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 53,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 53,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 53,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 53,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 53,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 53,bklv = 5,star = 3}
+		}
+	},
+	[20508] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 54,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 54,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 54,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 54,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 54,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 54,bklv = 5,star = 3}
+		}
+	},
+	[20509] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 55,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 55,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 55,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 55,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 55,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 55,bklv = 5,star = 3}
+		}
+	},
+	[20510] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 56,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 56,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 56,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 56,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 56,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 56,bklv = 5,star = 3}
+		}
+	},
+	[20511] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 57,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 57,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 57,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 57,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 57,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 57,bklv = 5,star = 3}
+		}
+	},
+	[20512] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 58,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 58,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 58,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 58,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 58,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 58,bklv = 5,star = 3}
+		}
+	},
+	[20513] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 59,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 59,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 59,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 59,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 59,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 59,bklv = 5,star = 3}
+		}
+	},
+	[20514] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 60,bklv = 4,star = 2},
+			shl = {cardId = 1102012,lv = 60,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 60,bklv = 4,star = 3},
+			shl = {cardId = 1102005,lv = 60,bklv = 4,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 60,bklv = 4,star = 3},
+			shl = {cardId = 1102020,lv = 60,bklv = 4,star = 3}
+		}
+	},
+	[20515] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 60,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 60,bklv = 4,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 60,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 60,bklv = 4,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 60,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 60,bklv = 4,star = 3}
+		}
+	},
+	[20601] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 60,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 60,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 60,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 60,bklv = 4,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 60,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 60,bklv = 4,star = 3}
+		}
+	},
+	[20602] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 60,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 60,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 60,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 60,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 60,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 60,bklv = 4,star = 3}
+		}
+	},
+	[20603] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 60,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 60,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 60,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 60,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 60,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 60,bklv = 5,star = 3}
+		}
+	},
+	[20604] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 61,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 61,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 61,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 61,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 61,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 61,bklv = 5,star = 3}
+		}
+	},
+	[20605] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 62,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 62,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 62,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 62,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 62,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 62,bklv = 5,star = 3}
+		}
+	},
+	[20606] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 63,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 63,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 63,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 63,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 63,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 63,bklv = 5,star = 3}
+		}
+	},
+	[20607] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 64,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 64,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 64,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 64,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 64,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 64,bklv = 5,star = 3}
+		}
+	},
+	[20608] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 65,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 65,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 65,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 65,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 65,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 65,bklv = 5,star = 3}
+		}
+	},
+	[20609] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 66,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 66,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 66,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 66,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 66,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 66,bklv = 5,star = 3}
+		}
+	},
+	[20610] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 67,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 67,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 67,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 67,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 67,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 67,bklv = 5,star = 3}
+		}
+	},
+	[20611] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 68,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 68,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 68,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 68,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 68,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 68,bklv = 5,star = 3}
+		}
+	},
+	[20612] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 69,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 69,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 69,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 69,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 69,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 69,bklv = 5,star = 3}
+		}
+	},
+	[20613] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 70,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 70,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101003,lv = 70,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 70,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101014,lv = 70,bklv = 5,star = 3},
+			shl = {cardId = 1102020,lv = 70,bklv = 5,star = 3}
+		}
+	},
+	[20614] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 70,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 70,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101005,lv = 70,bklv = 5,star = 3},
+			shl = {cardId = 1102011,lv = 70,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101003,lv = 70,bklv = 5,star = 3},
+			shl = {cardId = 1102005,lv = 70,bklv = 5,star = 3}
+		}
+	},
+	[20615] = {
+		[1] = {
+			jlr = {cardId = 1101007,lv = 70,bklv = 5,star = 2},
+			shl = {cardId = 1102012,lv = 70,bklv = 5,star = 2}
+		},
+		[2] = {
+			jlr = {cardId = 1101005,lv = 70,bklv = 5,star = 3},
+			shl = {cardId = 1102011,lv = 70,bklv = 5,star = 3}
+		},
+		[3] = {
+			jlr = {cardId = 1101010,lv = 70,bklv = 5,star = 2},
+			shl = {cardId = 1102016,lv = 70,bklv = 5,star = 2}
 		}
 	}
 }

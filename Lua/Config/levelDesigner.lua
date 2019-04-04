@@ -2,15 +2,161 @@
 --note:
 
 colums:
-{rowId,行ID} ,{id,ID} ,{cardGroup,卡牌组} ,{relic,神器组} ,{bs,战斗力和}
+{rowId,行ID} ,{id,ID} ,{cardGroup,卡牌组} ,{relic,神器组} ,{module,怪组} ,{bs,战斗力和}
 primary key:
 #0 [关卡]: rowId
 ]]
 return{
-	[1] = {id = 10101,cardGroup = 10101,relic = 1},--普通关1-1
-	[2] = {id = 10102,cardGroup = 10102,relic = 1},--普通关1-2
-	[3] = {id = 10103,cardGroup = 10103,relic = 1},--普通关1-3
-	[4] = {id = 10105,cardGroup = 10105,relic = 1},--普通关1-5
-	[5] = {id = 10106,cardGroup = 10106,relic = 1},--普通关1-6
-	[6] = {id = 10108,cardGroup = 10108,relic = 1}--普通关1-8
+	[1] = {id = 10101,cardGroup = 10101,relic = 1,module = 1},--普通关1-1
+	[2] = {id = 10102,cardGroup = 10102,relic = 1,module = 2},--普通关1-2
+	[3] = {id = 10103,cardGroup = 10103,relic = 1,module = 3},--普通关1-3
+	[4] = {id = 10105,cardGroup = 10105,relic = 1,module = 4},--普通关1-5
+	[5] = {id = 10106,cardGroup = 10106,relic = 1,module = 5},--普通关1-6
+	[6] = {id = 10108,cardGroup = 10108,relic = 1,module = 6},--普通关1-8
+	[7] = {id = 10109,cardGroup = 10109,relic = 1,module = 7},--普通关1-9
+	[8] = {id = 10201,cardGroup = 10201,relic = 1,module = 8},--普通关2-1
+	[9] = {id = 10202,cardGroup = 10202,relic = 1,module = 9},--普通关2-2
+	[10] = {id = 10203,cardGroup = 10203,relic = 1,module = 10},--普通关2-3
+	[11] = {id = 10204,cardGroup = 10204,relic = 1,module = 11},--普通关2-4
+	[12] = {id = 10205,cardGroup = 10205,relic = 1,module = 12},--普通关2-5
+	[13] = {id = 10206,cardGroup = 10206,relic = 1,module = 13},--普通关2-6
+	[14] = {id = 10207,cardGroup = 10207,relic = 1,module = 14},--普通关2-7
+	[15] = {id = 10208,cardGroup = 10208,relic = 1,module = 15},--普通关2-8
+	[16] = {id = 10209,cardGroup = 10209,relic = 1,module = 16},--普通关2-9
+	[17] = {id = 10301,cardGroup = 10301,relic = 1301,module = 2},--普通关3-1
+	[18] = {id = 10302,cardGroup = 10302,relic = 1302,module = 3},--普通关3-2
+	[19] = {id = 10303,cardGroup = 10303,relic = 1303,module = 4},--普通关3-3
+	[20] = {id = 10304,cardGroup = 10304,relic = 1304,module = 5},--普通关3-4
+	[21] = {id = 10305,cardGroup = 10305,relic = 1305,module = 6},--普通关3-5
+	[22] = {id = 10306,cardGroup = 10306,relic = 1306,module = 7},--普通关3-6
+	[23] = {id = 10307,cardGroup = 10307,relic = 1307,module = 8},--普通关3-7
+	[24] = {id = 10308,cardGroup = 10308,relic = 1308,module = 9},--普通关3-8
+	[25] = {id = 10309,cardGroup = 10309,relic = 1309,module = 10},--普通关3-9
+	[26] = {id = 10310,cardGroup = 10310,relic = 1310,module = 11},--普通关3-10
+	[27] = {id = 10311,cardGroup = 10311,relic = 1311,module = 12},--普通关3-11
+	[28] = {id = 10312,cardGroup = 10312,relic = 1312,module = 13},--普通关3-12
+	[29] = {id = 10313,cardGroup = 10313,relic = 1313,module = 17},--普通关3-13
+	[30] = {id = 10314,cardGroup = 10314,relic = 1314,module = 18},--普通关3-14
+	[31] = {id = 10315,cardGroup = 10315,relic = 1315,module = 19},--普通关3-15
+	[32] = {id = 10401,cardGroup = 10401,relic = 1401,module = 2},--普通关4-1
+	[33] = {id = 10402,cardGroup = 10402,relic = 1402,module = 3},--普通关4-2
+	[34] = {id = 10403,cardGroup = 10403,relic = 1403,module = 4},--普通关4-3
+	[35] = {id = 10404,cardGroup = 10404,relic = 1404,module = 5},--普通关4-4
+	[36] = {id = 10405,cardGroup = 10405,relic = 1405,module = 6},--普通关4-5
+	[37] = {id = 10406,cardGroup = 10406,relic = 1406,module = 7},--普通关4-6
+	[38] = {id = 10407,cardGroup = 10407,relic = 1407,module = 8},--普通关4-7
+	[39] = {id = 10408,cardGroup = 10408,relic = 1408,module = 9},--普通关4-8
+	[40] = {id = 10409,cardGroup = 10409,relic = 1409,module = 10},--普通关4-9
+	[41] = {id = 10410,cardGroup = 10410,relic = 1410,module = 11},--普通关4-10
+	[42] = {id = 10411,cardGroup = 10411,relic = 1411,module = 12},--普通关4-11
+	[43] = {id = 10412,cardGroup = 10412,relic = 1412,module = 13},--普通关4-12
+	[44] = {id = 10413,cardGroup = 10413,relic = 1413,module = 14},--普通关4-13
+	[45] = {id = 10414,cardGroup = 10414,relic = 1414,module = 15},--普通关4-14
+	[46] = {id = 10415,cardGroup = 10415,relic = 1415,module = 16},--普通关4-15
+	[47] = {id = 10501,cardGroup = 10501,relic = 1501,module = 2},--普通关5-1
+	[48] = {id = 10502,cardGroup = 10502,relic = 1502,module = 3},--普通关5-2
+	[49] = {id = 10503,cardGroup = 10503,relic = 1503,module = 4},--普通关5-3
+	[50] = {id = 10504,cardGroup = 10504,relic = 1504,module = 5},--普通关5-4
+	[51] = {id = 10505,cardGroup = 10505,relic = 1505,module = 6},--普通关5-5
+	[52] = {id = 10506,cardGroup = 10506,relic = 1506,module = 7},--普通关5-6
+	[53] = {id = 10507,cardGroup = 10507,relic = 1507,module = 8},--普通关5-7
+	[54] = {id = 10508,cardGroup = 10508,relic = 1508,module = 9},--普通关5-8
+	[55] = {id = 10509,cardGroup = 10509,relic = 1509,module = 10},--普通关5-9
+	[56] = {id = 10510,cardGroup = 10510,relic = 1510,module = 11},--普通关5-10
+	[57] = {id = 10511,cardGroup = 10511,relic = 1511,module = 12},--普通关5-11
+	[58] = {id = 10512,cardGroup = 10512,relic = 1512,module = 13},--普通关5-12
+	[59] = {id = 10513,cardGroup = 10513,relic = 1513,module = 17},--普通关5-13
+	[60] = {id = 10514,cardGroup = 10514,relic = 1514,module = 18},--普通关5-14
+	[61] = {id = 10515,cardGroup = 10515,relic = 1515,module = 19},--普通关5-15
+	[62] = {id = 10601,cardGroup = 10601,relic = 1601,module = 2},--普通关6-1
+	[63] = {id = 10602,cardGroup = 10602,relic = 1602,module = 3},--普通关6-2
+	[64] = {id = 10603,cardGroup = 10603,relic = 1603,module = 4},--普通关6-3
+	[65] = {id = 10604,cardGroup = 10604,relic = 1604,module = 5},--普通关6-4
+	[66] = {id = 10605,cardGroup = 10605,relic = 1605,module = 6},--普通关6-5
+	[67] = {id = 10606,cardGroup = 10606,relic = 1606,module = 7},--普通关6-6
+	[68] = {id = 10607,cardGroup = 10607,relic = 1607,module = 8},--普通关6-7
+	[69] = {id = 10608,cardGroup = 10608,relic = 1608,module = 9},--普通关6-8
+	[70] = {id = 10609,cardGroup = 10609,relic = 1609,module = 10},--普通关6-9
+	[71] = {id = 10610,cardGroup = 10610,relic = 1610,module = 11},--普通关6-10
+	[72] = {id = 10611,cardGroup = 10611,relic = 1611,module = 12},--普通关6-11
+	[73] = {id = 10612,cardGroup = 10612,relic = 1612,module = 13},--普通关6-12
+	[74] = {id = 10613,cardGroup = 10613,relic = 1613,module = 14},--普通关6-13
+	[75] = {id = 10614,cardGroup = 10614,relic = 1614,module = 15},--普通关6-14
+	[76] = {id = 10615,cardGroup = 10615,relic = 1615,module = 16},--普通关6-15
+	[77] = {id = 20101,cardGroup = 20101,relic = 1,module = 2},--困难关1-1
+	[78] = {id = 20102,cardGroup = 20102,relic = 1,module = 3},--困难关1-2
+	[79] = {id = 20103,cardGroup = 20103,relic = 1,module = 4},--困难关1-3
+	[80] = {id = 20105,cardGroup = 20105,relic = 1,module = 5},--困难关1-5
+	[81] = {id = 20106,cardGroup = 20106,relic = 1,module = 6},--困难关1-6
+	[82] = {id = 20108,cardGroup = 20108,relic = 1,module = 7},--困难关1-8
+	[83] = {id = 20109,cardGroup = 20109,relic = 1,module = 8},--困难关1-9
+	[84] = {id = 20201,cardGroup = 20201,relic = 1,module = 9},--困难关2-1
+	[85] = {id = 20202,cardGroup = 20202,relic = 1,module = 10},--困难关2-2
+	[86] = {id = 20203,cardGroup = 20203,relic = 1,module = 11},--困难关2-3
+	[87] = {id = 20204,cardGroup = 20204,relic = 1,module = 12},--困难关2-4
+	[88] = {id = 20205,cardGroup = 20205,relic = 1,module = 13},--困难关2-5
+	[89] = {id = 20206,cardGroup = 20206,relic = 1,module = 17},--困难关2-6
+	[90] = {id = 20207,cardGroup = 20207,relic = 1,module = 18},--困难关2-7
+	[91] = {id = 20208,cardGroup = 20208,relic = 1,module = 19},--困难关2-8
+	[92] = {id = 20209,cardGroup = 20209,relic = 1,module = 2},--困难关2-9
+	[93] = {id = 20301,cardGroup = 20301,relic = 2301,module = 3},--困难关3-1
+	[94] = {id = 20302,cardGroup = 20302,relic = 2302,module = 4},--困难关3-2
+	[95] = {id = 20303,cardGroup = 20303,relic = 2303,module = 5},--困难关3-3
+	[96] = {id = 20304,cardGroup = 20304,relic = 2304,module = 6},--困难关3-4
+	[97] = {id = 20305,cardGroup = 20305,relic = 2305,module = 7},--困难关3-5
+	[98] = {id = 20306,cardGroup = 20306,relic = 2306,module = 8},--困难关3-6
+	[99] = {id = 20307,cardGroup = 20307,relic = 2307,module = 9},--困难关3-7
+	[100] = {id = 20308,cardGroup = 20308,relic = 2308,module = 10},--困难关3-8
+	[101] = {id = 20309,cardGroup = 20309,relic = 2309,module = 11},--困难关3-9
+	[102] = {id = 20310,cardGroup = 20310,relic = 2310,module = 12},--困难关3-10
+	[103] = {id = 20311,cardGroup = 20311,relic = 2311,module = 13},--困难关3-11
+	[104] = {id = 20312,cardGroup = 20312,relic = 2312,module = 14},--困难关3-12
+	[105] = {id = 20313,cardGroup = 20313,relic = 2313,module = 15},--困难关3-13
+	[106] = {id = 20314,cardGroup = 20314,relic = 2314,module = 16},--困难关3-14
+	[107] = {id = 20315,cardGroup = 20315,relic = 2315,module = 2},--困难关3-15
+	[108] = {id = 20401,cardGroup = 20401,relic = 2401,module = 3},--困难关4-1
+	[109] = {id = 20402,cardGroup = 20402,relic = 2402,module = 4},--困难关4-2
+	[110] = {id = 20403,cardGroup = 20403,relic = 2403,module = 5},--困难关4-3
+	[111] = {id = 20404,cardGroup = 20404,relic = 2404,module = 6},--困难关4-4
+	[112] = {id = 20405,cardGroup = 20405,relic = 2405,module = 7},--困难关4-5
+	[113] = {id = 20406,cardGroup = 20406,relic = 2406,module = 8},--困难关4-6
+	[114] = {id = 20407,cardGroup = 20407,relic = 2407,module = 9},--困难关4-7
+	[115] = {id = 20408,cardGroup = 20408,relic = 2408,module = 10},--困难关4-8
+	[116] = {id = 20409,cardGroup = 20409,relic = 2409,module = 11},--困难关4-9
+	[117] = {id = 20410,cardGroup = 20410,relic = 2410,module = 12},--困难关4-10
+	[118] = {id = 20411,cardGroup = 20411,relic = 2411,module = 13},--困难关4-11
+	[119] = {id = 20412,cardGroup = 20412,relic = 2412,module = 17},--困难关4-12
+	[120] = {id = 20413,cardGroup = 20413,relic = 2413,module = 18},--困难关4-13
+	[121] = {id = 20414,cardGroup = 20414,relic = 2414,module = 19},--困难关4-14
+	[122] = {id = 20415,cardGroup = 20415,relic = 2415,module = 2},--困难关4-15
+	[123] = {id = 20501,cardGroup = 20501,relic = 2501,module = 3},--困难关5-1
+	[124] = {id = 20502,cardGroup = 20502,relic = 2502,module = 4},--困难关5-2
+	[125] = {id = 20503,cardGroup = 20503,relic = 2503,module = 5},--困难关5-3
+	[126] = {id = 20504,cardGroup = 20504,relic = 2504,module = 6},--困难关5-4
+	[127] = {id = 20505,cardGroup = 20505,relic = 2505,module = 7},--困难关5-5
+	[128] = {id = 20506,cardGroup = 20506,relic = 2506,module = 8},--困难关5-6
+	[129] = {id = 20507,cardGroup = 20507,relic = 2507,module = 9},--困难关5-7
+	[130] = {id = 20508,cardGroup = 20508,relic = 2508,module = 10},--困难关5-8
+	[131] = {id = 20509,cardGroup = 20509,relic = 2509,module = 11},--困难关5-9
+	[132] = {id = 20510,cardGroup = 20510,relic = 2510,module = 12},--困难关5-10
+	[133] = {id = 20511,cardGroup = 20511,relic = 2511,module = 13},--困难关5-11
+	[134] = {id = 20512,cardGroup = 20512,relic = 2512,module = 14},--困难关5-12
+	[135] = {id = 20513,cardGroup = 20513,relic = 2513,module = 15},--困难关5-13
+	[136] = {id = 20514,cardGroup = 20514,relic = 2514,module = 16},--困难关5-14
+	[137] = {id = 20515,cardGroup = 20515,relic = 2515,module = 2},--困难关5-15
+	[138] = {id = 20601,cardGroup = 20601,relic = 2601,module = 3},--困难关6-1
+	[139] = {id = 20602,cardGroup = 20602,relic = 2602,module = 4},--困难关6-2
+	[140] = {id = 20603,cardGroup = 20603,relic = 2603,module = 5},--困难关6-3
+	[141] = {id = 20604,cardGroup = 20604,relic = 2604,module = 6},--困难关6-4
+	[142] = {id = 20605,cardGroup = 20605,relic = 2605,module = 7},--困难关6-5
+	[143] = {id = 20606,cardGroup = 20606,relic = 2606,module = 8},--困难关6-6
+	[144] = {id = 20607,cardGroup = 20607,relic = 2607,module = 9},--困难关6-7
+	[145] = {id = 20608,cardGroup = 20608,relic = 2608,module = 10},--困难关6-8
+	[146] = {id = 20609,cardGroup = 20609,relic = 2609,module = 11},--困难关6-9
+	[147] = {id = 20610,cardGroup = 20610,relic = 2610,module = 12},--困难关6-10
+	[148] = {id = 20611,cardGroup = 20611,relic = 2611,module = 13},--困难关6-11
+	[149] = {id = 20612,cardGroup = 20612,relic = 2612,module = 17},--困难关6-12
+	[150] = {id = 20613,cardGroup = 20613,relic = 2613,module = 18},--困难关6-13
+	[151] = {id = 20614,cardGroup = 20614,relic = 2614,module = 19},--困难关6-14
+	[152] = {id = 20615,cardGroup = 20615,relic = 2615,module = 20}--困难关6-15
 }

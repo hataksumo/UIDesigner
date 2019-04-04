@@ -103,6 +103,9 @@ local fn_calLevelProp = function()
 		local transProp = {}
 		local finnalProp = {}
 		finnalProp.lvId = lvInfo.id
+		if not cardGroupData then
+			print(string.format("dscfg_cardGroup[%d] is nil",cardGroupId))
+		end
 		for loc,couple in ipairs(cardGroupData) do
 			finnalProp[loc] = {}
 			iniProp[loc] = {}
@@ -175,8 +178,6 @@ local fn_calLevelProp = function()
 				data.prop.HP = math.floor(data.prop.HP * (1 + data.prop.HPRate) + data.prop.HPExt)
 			end
 		end
-
-
 
 		table.insert(lvProps,finnalProp)
 	end
