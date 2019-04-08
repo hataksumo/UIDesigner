@@ -2,12 +2,12 @@
 --note:
 
 colums:
-{ID,唯一键} ,{Name,效果名称} ,{BuffIcon,图标名称}
+{ID,唯一键} ,{Name,效果名称} ,{BuffIcon,图标名称} ,{Des,技能描述}
 primary key:
 #0 [技能BUFF]: ID
 ]]
 return{
-	[4001] = {ID = 4001,Name = "禁锢",BuffIcon = "icon_1305014"},
+	[4001] = {ID = 4001,Name = "禁锢",BuffIcon = "icon_1305014",Des = "禁止行动"},
 	[4003] = {ID = 4003,Name = "禁止召唤",BuffIcon = "icon_1305012"},
 	[4004] = {ID = 4004,Name = "禁止技能",BuffIcon = "icon_1305010"},
 	[4005] = {ID = 4005,Name = "护盾"},
