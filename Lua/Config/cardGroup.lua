@@ -1631,18 +1631,18 @@ return{
 			shl = {cha = "pt-1",lvId = "3",cardId = 1102004,lv = 1,bklv = 1,star = 1}
 		},
 		[3] = {
-			jlr = {cha = "pt-1",lvId = "3",cardId = 1101003,lv = 1,bklv = 1,star = 1,mon = {id = 207,desc = "pt-1-3-jlr-loc3",bsFac = 3,rou = 2}},
+			jlr = {cha = "pt-1",lvId = "3",cardId = 1101003,lv = 2,bklv = 1,star = 1,mon = {id = 207,desc = "pt-1-3-jlr-loc3",bsFac = 6,rou = 1.5}},
 			shl = {cha = "pt-1",lvId = "3",cardId = 1102005,lv = 7,bklv = 1,star = 1}
 		}
 	},
 	[10105] = {
 		[1] = {
-			jlr = {cha = "pt-1",lvId = "5",cardId = 1101001,lv = 2,bklv = 1,star = 1,mon = {id = 101,desc = "pt-1-5-jlr-loc1",bsFac = 1,rou = 1}},
-			shl = {cha = "pt-1",lvId = "5",cardId = 1102015,lv = 2,bklv = 1,star = 1,mon = {id = 102,desc = "pt-1-5-shl-loc1",bsFac = 1,rou = 1}}
+			jlr = {cha = "pt-1",lvId = "5",cardId = 1101001,lv = 2,bklv = 1,star = 1,mon = {id = 212,desc = "pt-1-5-jlr-loc1",bsFac = 1,rou = 1}},
+			shl = {cha = "pt-1",lvId = "5",cardId = 1102015,lv = 2,bklv = 1,star = 1,mon = {id = 233,desc = "pt-1-5-shl-loc1",bsFac = 1,rou = 1}}
 		},
 		[2] = {
-			jlr = {cha = "pt-1",lvId = "5",cardId = 1101002,lv = 2,bklv = 1,star = 1,mon = {id = 103,desc = "pt-1-5-jlr-loc2",bsFac = 1,rou = 1}},
-			shl = {cha = "pt-1",lvId = "5",cardId = 1102004,lv = 2,bklv = 1,star = 1,mon = {id = 104,desc = "pt-1-5-shl-loc2",bsFac = 1,rou = 1}}
+			jlr = {cha = "pt-1",lvId = "5",cardId = 1101002,lv = 2,bklv = 1,star = 1,mon = {id = 208,desc = "pt-1-5-jlr-loc2",bsFac = 1,rou = 1}},
+			shl = {cha = "pt-1",lvId = "5",cardId = 1102004,lv = 2,bklv = 1,star = 1,mon = {id = 228,desc = "pt-1-5-shl-loc2",bsFac = 1,rou = 1}}
 		},
 		[3] = {
 			jlr = {cha = "pt-1",lvId = "5",cardId = 1101003,lv = 2,bklv = 1,star = 1},
@@ -1651,16 +1651,16 @@ return{
 	},
 	[10106] = {
 		[1] = {
-			jlr = {cha = "pt-1",lvId = "6",cardId = 1101001,lv = 5,bklv = 1,star = 1,mon = {id = 101,desc = "pt-1-6-jlr-loc1",bsFac = 1,rou = 1}},
-			shl = {cha = "pt-1",lvId = "6",cardId = 1102015,lv = 5,bklv = 1,star = 1,mon = {id = 102,desc = "pt-1-6-shl-loc1",bsFac = 1,rou = 1}}
+			jlr = {cha = "pt-1",lvId = "6",cardId = 1101001,lv = 5,bklv = 1,star = 1,mon = {id = 101,desc = "pt-1-6-jlr-loc1",bsFac = 0.85,rou = 1}},
+			shl = {cha = "pt-1",lvId = "6",cardId = 1102015,lv = 5,bklv = 1,star = 1,mon = {id = 102,desc = "pt-1-6-shl-loc1",bsFac = 0.85,rou = 1}}
 		},
 		[2] = {
-			jlr = {cha = "pt-1",lvId = "6",cardId = 1101002,lv = 5,bklv = 1,star = 1,mon = {id = 103,desc = "pt-1-6-jlr-loc2",bsFac = 1,rou = 1}},
-			shl = {cha = "pt-1",lvId = "6",cardId = 1102004,lv = 5,bklv = 1,star = 1,mon = {id = 104,desc = "pt-1-6-shl-loc2",bsFac = 1,rou = 1}}
+			jlr = {cha = "pt-1",lvId = "6",cardId = 1101002,lv = 5,bklv = 1,star = 1,mon = {id = 103,desc = "pt-1-6-jlr-loc2",bsFac = 0.85,rou = 1}},
+			shl = {cha = "pt-1",lvId = "6",cardId = 1102004,lv = 5,bklv = 1,star = 1,mon = {id = 104,desc = "pt-1-6-shl-loc2",bsFac = 0.85,rou = 1}}
 		},
 		[3] = {
-			jlr = {cha = "pt-1",lvId = "6",cardId = 1101003,lv = 5,bklv = 1,star = 1,mon = {id = 105,desc = "pt-1-6-jlr-loc3",bsFac = 1,rou = 1}},
-			shl = {cha = "pt-1",lvId = "6",cardId = 1102005,lv = 10,bklv = 1,star = 1,mon = {id = 106,desc = "pt-1-6-shl-loc3",bsFac = 1,rou = 1}}
+			jlr = {cha = "pt-1",lvId = "6",cardId = 1101003,lv = 5,bklv = 1,star = 1,mon = {id = 105,desc = "pt-1-6-jlr-loc3",bsFac = 0.85,rou = 1}},
+			shl = {cha = "pt-1",lvId = "6",cardId = 1102005,lv = 10,bklv = 1,star = 1,mon = {id = 106,desc = "pt-1-6-shl-loc3",bsFac = 0.7,rou = 1}}
 		}
 	},
 	[10108] = {
@@ -1674,7 +1674,7 @@ return{
 		},
 		[3] = {
 			jlr = {cha = "pt-1",lvId = "8",cardId = 1101003,lv = 7,bklv = 1,star = 1,mon = {id = 209,desc = "pt-1-8-jlr-loc3",bsFac = 1,rou = 1}},
-			shl = {cha = "pt-1",lvId = "8",cardId = 1102005,lv = 12,bklv = 1,star = 1,mon = {id = 229,desc = "pt-1-8-shl-loc3",bsFac = 1,rou = 1}}
+			shl = {cha = "pt-1",lvId = "8",cardId = 1102005,lv = 12,bklv = 1,star = 1,mon = {id = 229,desc = "pt-1-8-shl-loc3",bsFac = 0.7,rou = 1}}
 		}
 	},
 	[10109] = {
@@ -1688,7 +1688,7 @@ return{
 		},
 		[3] = {
 			jlr = {cha = "pt-1",lvId = "9",cardId = 1101003,lv = 8,bklv = 1,star = 1,mon = {id = 207,desc = "pt-1-9-jlr-loc3",bsFac = 2,rou = 2}},
-			shl = {cha = "pt-1",lvId = "9",cardId = 1102005,lv = 15,bklv = 1,star = 1,mon = {id = 302,desc = "pt-1-9-shl-loc3",bsFac = 1,rou = 1}}
+			shl = {cha = "pt-1",lvId = "9",cardId = 1102005,lv = 15,bklv = 1,star = 1,mon = {id = 302,desc = "pt-1-9-shl-loc3",bsFac = 1.5,rou = 1}}
 		}
 	},
 	[10201] = {

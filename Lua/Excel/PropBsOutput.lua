@@ -205,8 +205,8 @@ local fn_calLevelProp = function()
 					monProp[loc][type] ={}
 					local the_prop = CreatePropTable()
 					the_prop = the_prop + data.prop
-					the_prop.HP =  math.floor(the_prop.HP * math.sqrt(data.mon.bsFac) / math.sqrt(data.mon.rou))
-					the_prop.Atk = math.floor(the_prop.Atk * math.sqrt(data.mon.bsFac) * math.sqrt(data.mon.rou))
+					the_prop.HP =  math.floor(the_prop.HP * math.sqrt(data.mon.bsFac) * math.sqrt(data.mon.rou))
+					the_prop.Atk = math.floor(the_prop.Atk * math.sqrt(data.mon.bsFac) / math.sqrt(data.mon.rou))
 					monProp[loc][type].prop = the_prop
 					monProp[loc][type].id = data.mon.id
 					monProp[loc][type].note = data.mon.note
@@ -295,7 +295,7 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 					end
 
 					if _i == 1 and couple[2] then
-						v_mon_attr_sheet:set_vals("DefendGrostId",row,locData.jlr.note)
+						v_mon_attr_sheet:set_vals("DefendGrostId",row,locData.shl.note)
 					end
 					row = row + 1
 				end

@@ -7,7 +7,7 @@ primary key:
 #0 [挂机派遣]: Id
 ]]
 return{
-	[1010101] = {ChaId = 301,Name = "挂机楼1-1",Difficult = 1,NeedPlotLevel = 10103,LimitMemberNum = 1,LimitPower = 300,PowerUp = 2525,DropShow = {[1] = {Id = 1401002,Desc = "900/h"},[2] = {Id = 1401004,Desc = "900/h"},[3] = {Id = 1401003,Desc = "900/h"}},DropUpShow = {[1] = {Id = 1401002,Desc = "900/h"}}},
+	[1010101] = {ChaId = 301,Name = "挂机楼1-1",Difficult = 1,NeedPlotLevel = 10101,LimitMemberNum = 1,LimitPower = 300,PowerUp = 2525,DropShow = {[1] = {Id = 1401002,Desc = "900/h"},[2] = {Id = 1401004,Desc = "900/h"},[3] = {Id = 1401003,Desc = "900/h"}},DropUpShow = {[1] = {Id = 1401002,Desc = "900/h"}}},
 	[1010102] = {ChaId = 301,Name = "挂机楼1-2",Difficult = 1,NeedPlotLevel = 10106,LimitMemberNum = 1,LimitPower = 300,PowerUp = 5917,DropShow = {[1] = {Id = 1401002,Desc = "900/h"},[2] = {Id = 1401004,Desc = "900/h"},[3] = {Id = 1401003,Desc = "900/h"}},DropUpShow = {[1] = {Id = 1401002,Desc = "900/h"}}},
 	[1010103] = {ChaId = 301,Name = "挂机塔1-1",Difficult = 2,NeedPlotLevel = 20103,LimitMemberNum = 1,LimitPower = 300,PowerUp = 12413,DropShow = {[1] = {Id = 1401002,Desc = "900/h"},[2] = {Id = 1401004,Desc = "900/h"},[3] = {Id = 1401003,Desc = "900/h"}},DropUpShow = {[1] = {Id = 1603001,Desc = "9/h"}}},
 	[1010104] = {ChaId = 301,Name = "挂机塔1-2",Difficult = 2,NeedPlotLevel = 20106,LimitMemberNum = 1,LimitPower = 300,PowerUp = 20012,DropShow = {[1] = {Id = 1401002,Desc = "900/h"},[2] = {Id = 1401004,Desc = "900/h"},[3] = {Id = 1401003,Desc = "900/h"}},DropUpShow = {[1] = {Id = 1603001,Desc = "12/h"}}},

@@ -13,7 +13,7 @@ return{
 	},
 	[1301002] = {
 		[1] = {LvUpLimit = 3,CostAdd = 0},
-		[2] = {LvUpLimit = 3,Cost = {[1] = {Id = 1701002,Val = 20}},ExpItemGroup = 1,Exp = 30,CostAdd = 0}
+		[2] = {LvUpLimit = 5,Cost = {[1] = {Id = 1701002,Val = 20}},ExpItemGroup = 1,Exp = 30,CostAdd = 0}
 	},
 	[1301003] = {
 		[1] = {LvUpLimit = 3,CostAdd = 0},
