@@ -374,6 +374,14 @@ public class ExcelSheetObject
         }
     }
 
+    public Excel.Worksheet Sheet {
+        get { return m_sheet; }
+    }
+
+    public ExcelHeader Header {
+        get { return m_header; }
+    }
+
 
 
 }

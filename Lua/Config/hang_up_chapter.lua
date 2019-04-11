@@ -7,7 +7,7 @@ primary key:
 #0 [挂机派遣章节]: ChaId
 ]]
 return{
-	[301] = {Name = "第一章巡逻",NeedPlotLevel = 10103},
+	[301] = {Name = "第一章巡逻",NeedPlotLevel = 10101},
 	[302] = {Name = "第二章巡逻",NeedPlotLevel = 10203},
 	[303] = {Name = "第三章巡逻",NeedPlotLevel = 10303},
 	[304] = {Name = "第四章巡逻",NeedPlotLevel = 10403},

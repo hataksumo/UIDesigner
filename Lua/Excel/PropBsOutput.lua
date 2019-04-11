@@ -29,6 +29,10 @@ local fn_calLevelProp = function()
 		local prop = CreatePropTable()
 		if not v_cfg then return prop end
 		local card_info = cfg_card[v_cfg.cardId]
+		if not card_info then
+			print("card_info is nil")
+			return prop
+		end
 		local cardbk_info = card_info.hells[v_cfg.bklv]
 		local cardstar_info = card_info.stars[v_cfg.star]
 		local hell_info = cfg_hell_name[v_cfg.bklv]
@@ -86,7 +90,6 @@ local fn_calLevelProp = function()
 					for _j,moduleVal in ipairs(moduleLvCfg.Prop) do
 						relicProp[moduleVal.id] = relicProp[moduleVal.id] + moduleVal.num
 						if bit32.band(moduleMask,v_mask) > 0 then
-							--print(string.format("v_prop[%d] = nil",moduleVal.id))
 							v_prop[moduleVal.id] = v_prop[moduleVal.id] + moduleVal.num
 						end
 					end
@@ -98,7 +101,7 @@ local fn_calLevelProp = function()
 
 	local lvProps = {}--卡牌数据
 	local monProps = {}--怪物的数据
-	for _i,lvInfo in ipairs(dscfg_levelDesigner) do--遍历关卡设计表
+	for lvId,lvInfo in pairs(dscfg_levelDesigner) do--遍历关卡设计表
 		local cardGroupId = lvInfo.cardGroup
 		local relicGroup = lvInfo.relic
 		--处理卡牌数据
@@ -107,16 +110,16 @@ local fn_calLevelProp = function()
 		local lvProp = {}
 		local transProp = {}
 		local finnalProp = {}
-		finnalProp.lvId = lvInfo.id
+		finnalProp.lvId = lvId
 		if not cardGroupData then
 			print(string.format("dscfg_cardGroup[%d] is nil",cardGroupId))
 		end
 		for loc,couple in ipairs(cardGroupData) do
 			finnalProp[loc] = {}
 			iniProp[loc] = {}
-			if couple.jlr then
+			if couple.jlr and couple.jlr.cardId then
 				finnalProp[loc].jlr = {}
-				finnalProp[loc].jlr.id = lvInfo.id * 100 + loc * 10 + 1
+				finnalProp[loc].jlr.id = lvId * 100 + loc * 10 + 1
 				finnalProp[loc].jlr.cardId = couple.jlr.cardId
 				finnalProp[loc].jlr.prop = CreatePropTable()
 				if couple.jlr.mon then
@@ -127,11 +130,14 @@ local fn_calLevelProp = function()
 					finnalProp[loc].jlr.mon.rou = couple.jlr.mon.rou
 					finnalProp[loc].jlr.mon.note = couple.jlr.mon.desc
 				end
+				if not couple.jlr.cardId then
+					print("couple.jlr.cardId = nil")
+				end
 				iniProp[loc].propjlr = fn_iniCardProp(couple.jlr.cardId)
 			end
-			if couple.shl then
+			if couple.shl and couple.shl.cardId then
 				finnalProp[loc].shl = {}
-				finnalProp[loc].shl.id = lvInfo.id * 100 + loc * 10 + 2
+				finnalProp[loc].shl.id = lvId * 100 + loc * 10 + 2
 				finnalProp[loc].shl.cardId = couple.shl.cardId
 				finnalProp[loc].shl.prop = CreatePropTable()
 				if couple.shl.mon then
@@ -141,6 +147,9 @@ local fn_calLevelProp = function()
 					finnalProp[loc].shl.mon.bsFac = couple.shl.mon.bsFac
 					finnalProp[loc].shl.mon.rou = couple.shl.mon.rou
 					finnalProp[loc].shl.mon.note = couple.shl.mon.desc
+				end
+				if not couple.shl.cardId then
+					print("couple.shl.cardId = nil")
 				end
 				iniProp[loc].propShl = fn_iniCardProp(couple.shl.cardId)
 			end
@@ -182,6 +191,9 @@ local fn_calLevelProp = function()
 		--处理神器数据
 		for loc,couple in ipairs(cardGroupData) do
 			if couple.jlr then
+				if not dscfg_relicGroup[relicGroup] then
+					print("can't find the relicGroup ",relicGroup)
+				end
 				fn_calRelicProp(dscfg_relicGroup[relicGroup].relic,finnalProp[loc].jlr.prop ,cfg_card[couple.jlr.cardId].mask)
 			end
 			if couple.shl then
@@ -189,11 +201,9 @@ local fn_calLevelProp = function()
 			end
 		end
 
-
-
 		--属性乘百分比系数
 		local monProp = {}
-		monProp.lvId = lvInfo.id
+		monProp.lvId = lvId
 		for loc,couple in ipairs(finnalProp) do
 			monProp[loc] = {}
 			for type,data in pairs(couple) do
@@ -217,10 +227,16 @@ local fn_calLevelProp = function()
 		table.insert(monProps,monProp)
 		table.insert(lvProps,finnalProp)
 	end
+	table.sort(lvProps,function(a,b)
+		return a.lvId < b.lvId
+	end)
+	table.sort(monProps,function(a,b)
+		return a.lvId < b.lvId
+	end)
 	return lvProps,monProps
 end
 
-local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelSheet,v_cardData,v_monData)
+local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelSheets,v_cardData,v_monData)
 	local row = 3
 	local cfg_prop = dofile "Config\\property"
 	local cfg_card = dofile "Config\\card"
@@ -228,7 +244,7 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 	local card_type_name = {"寄灵人","守护灵"}
 	local cfg_mon = dofile "Config\\monModle"
 
-	v_levelSheet:init_data()
+	--v_levelSheet:init_data()
 	for _row,data in ipairs(v_cardData) do
 		local totalBs = 0
 		local monsters = {}
@@ -253,7 +269,7 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 				end
 			end
 		end
-		v_levelSheet:set_val_by_pmid(data.lvId ,"bs",totalBs)	
+		v_levelSheets:set_val_by_pmid(tostring(data.lvId) ,"bs",totalBs)	
 	end
 
 	row = 3
@@ -302,7 +318,7 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 			end
 		end
 		for _loc,note in pairs(monsters) do
-			v_levelSheet:set_val_by_pmid(data.lvId ,string.format("Monsters[%d]",_loc),note)
+			v_levelSheets:set_val_by_pmid(tostring(data.lvId),string.format("Monsters[%d]",_loc),note)
 		end
 	end
 
@@ -318,7 +334,12 @@ local fn_output_excel = function()
 	local card_prop_sheet = book:get_sheet("卡牌属性")
 	local mon_prop_sheet = book:get_sheet("怪物属性")
 	local lvds_sheet = book:get_sheet("关卡")
-	fn_output_card_prop(card_prop_sheet,mon_prop_sheet,lvds_sheet,level_card_prop,level_mon_prop)
+	local gjlvds_sheet = book:get_sheet("挂机关卡")
+	local lvs_multi_sheet = MutiExcelSheetObject.New()
+	lvs_multi_sheet:addSheet(lvds_sheet)
+	lvs_multi_sheet:addSheet(gjlvds_sheet)
+	lvs_multi_sheet:init_data()
+	fn_output_card_prop(card_prop_sheet,mon_prop_sheet,lvs_multi_sheet,level_card_prop,level_mon_prop)
 	book:save(MyTools.OutputExcelPath.."propSim.xlsx")
 end
 

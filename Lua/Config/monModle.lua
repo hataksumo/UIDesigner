@@ -8,9 +8,9 @@ primary key:
 ]]
 return{
 	[101] = {name = "新手曹焱兵",card_id = 1101001,roleId = 1101001,color = 0,skill = {[1] = 1301001,[2] = 1302001}},--新手曹焱兵
-	[102] = {name = "新手于禁",card_id = 1102015,roleId = 1102015,color = 0,skill = {[1] = 1303015,[2] = 1304007},shl = {callCost = 4,callCd = 4,crystalType = 2}},--新手于禁
+	[102] = {name = "新手于禁",card_id = 1102015,roleId = 1102015,color = 0,skill = {[1] = 1303015,[2] = 1304006},shl = {callCost = 4,callCd = 4,crystalType = 2}},--新手于禁
 	[103] = {name = "新手曹玄亮",card_id = 1101002,roleId = 1101002,color = 0,skill = {[1] = 1301002,[2] = 1302002}},--新手曹玄亮
-	[104] = {name = "新手唐流雨",card_id = 1102004,roleId = 1102004,color = 0,skill = {[1] = 1303004,[2] = 1304006},shl = {callCost = 4,callCd = 4,crystalType = 1}},--新手唐流雨
+	[104] = {name = "新手唐流雨",card_id = 1102004,roleId = 1102004,color = 0,skill = {[1] = 1303004,[2] = 1304007},shl = {callCost = 4,callCd = 4,crystalType = 1}},--新手唐流雨
 	[105] = {name = "新手夏玲",card_id = 1101003,roleId = 1101003,color = 0,skill = {[1] = 1301003,[2] = 1302003}},--新手夏玲
 	[106] = {name = "新手李轩辕",card_id = 1102005,roleId = 1102005,color = 0,skill = {[1] = 1303005,[2] = 1304008},shl = {callCost = 4,callCd = 4,crystalType = 3}},--新手李轩辕
 	[201] = {name = "常服曹焱兵",card_id = 1101001,roleId = 1101001,color = 0,skill = {[1] = 1301001,[2] = 1302001}},--常服曹焱兵
@@ -31,7 +31,7 @@ return{
 	[216] = {name = "普通关羽",card_id = 1102001,roleId = 1102001,color = 1,skill = {[1] = 1303001,[2] = 1304006},shl = {callCost = 4,callCd = 4,crystalType = 1}},--普通关羽
 	[217] = {name = "普通许褚",card_id = 1102002,roleId = 1102002,color = 1,skill = {[1] = 1303002,[2] = 1304006},shl = {callCost = 4,callCd = 4,crystalType = 1}},--普通许褚
 	[218] = {name = "普通典韦",card_id = 1102003,roleId = 1102003,color = 2,skill = {[1] = 1303003,[2] = 1304007},shl = {callCost = 4,callCd = 4,crystalType = 2}},--普通典韦
-	[219] = {name = "普通唐流雨",card_id = 1102004,roleId = 1102004,color = 1,skill = {[1] = 1303004,[2] = 1304006},shl = {callCost = 4,callCd = 4,crystalType = 1}},--普通唐流雨
+	[219] = {name = "普通唐流雨",card_id = 1102004,roleId = 1102004,color = 1,skill = {[1] = 1303004,[2] = 1304007},shl = {callCost = 4,callCd = 4,crystalType = 1}},--普通唐流雨
 	[220] = {name = "普通李轩辕",card_id = 1102005,roleId = 1102005,color = 3,skill = {[1] = 1303005,[2] = 1304008},shl = {callCost = 4,callCd = 4,crystalType = 3}},--普通李轩辕
 	[221] = {name = "普通项羽",card_id = 1102006,roleId = 1102006,color = 2,skill = {[1] = 1303006,[2] = 1304007},shl = {callCost = 4,callCd = 4,crystalType = 2}},--普通项羽
 	[222] = {name = "普通天使缇娜",card_id = 1102007,roleId = 1102007,color = 1,skill = {[1] = 1303007,[2] = 1304006},shl = {callCost = 4,callCd = 4,crystalType = 1}},--普通天使缇娜
@@ -42,7 +42,7 @@ return{
 	[227] = {name = "普通夏侯惇",card_id = 1102012,roleId = 1102012,color = 1,skill = {[1] = 1303012,[2] = 1304006},shl = {callCost = 4,callCd = 4,crystalType = 1}},--普通夏侯惇
 	[228] = {name = "普通塞伯罗斯",card_id = 1102013,roleId = 1102013,color = 3,skill = {[1] = 1303013,[2] = 1304008},shl = {callCost = 4,callCd = 4,crystalType = 3}},--普通塞伯罗斯
 	[229] = {name = "普通石灵明",card_id = 1102014,roleId = 1102014,color = 1,skill = {[1] = 1303014,[2] = 1304006},shl = {callCost = 4,callCd = 4,crystalType = 1}},--普通石灵明
-	[230] = {name = "普通于禁",card_id = 1102015,roleId = 1102015,color = 2,skill = {[1] = 1303015,[2] = 1304007},shl = {callCost = 4,callCd = 4,crystalType = 2}},--普通于禁
+	[230] = {name = "普通于禁",card_id = 1102015,roleId = 1102015,color = 2,skill = {[1] = 1303015,[2] = 1304006},shl = {callCost = 4,callCd = 4,crystalType = 2}},--普通于禁
 	[231] = {name = "普通西方龙",card_id = 1102016,roleId = 1102016,color = 2,skill = {[1] = 1303016,[2] = 1304007},shl = {callCost = 4,callCd = 4,crystalType = 3}},--普通西方龙
 	[232] = {name = "普通飞廉",card_id = 1102017,roleId = 1102017,color = 3,skill = {[1] = 1303017,[2] = 1304008},shl = {callCost = 4,callCd = 4,crystalType = 3}},--普通飞廉
 	[233] = {name = "普通噬日",card_id = 1102018,roleId = 1102018,color = 2,skill = {[1] = 1303018,[2] = 1304007},shl = {callCost = 4,callCd = 4,crystalType = 2}},--普通噬日
@@ -61,7 +61,7 @@ return{
 	[310] = {name = "强力张郃",card_id = 1102010,roleId = 1102010,color = 3,skill = {[1] = 1303010,[2] = 1304013,[3] = 1304008},shl = {callCost = 4,callCd = 4,crystalType = 3}},--强力张郃
 	[311] = {name = "强力张飞",card_id = 1102011,roleId = 1102011,color = 2,skill = {[1] = 1303011,[2] = 1304005,[3] = 1304007},shl = {callCost = 4,callCd = 4,crystalType = 2}},--强力张飞
 	[312] = {name = "强力夏侯惇",card_id = 1102012,roleId = 1102012,color = 1,skill = {[1] = 1303012,[2] = 1304005,[3] = 1304006},shl = {callCost = 4,callCd = 4,crystalType = 1}},--强力夏侯惇
-	[313] = {name = "强力塞伯罗斯",card_id = 1102013,roleId = 1102013,color = 3,skill = {[1] = 1303013,[2] = 1304016,[3] = 1304008},shl = {callCost = 4,callCd = 4,crystalType = 3}},--强力塞伯罗斯
+	[313] = {name = "强力塞伯罗斯",card_id = 1102013,roleId = 1102013,color = 3,skill = {[1] = 1303013,[2] = 1304012,[3] = 1304008},shl = {callCost = 4,callCd = 4,crystalType = 3}},--强力塞伯罗斯
 	[314] = {name = "强力石灵明",card_id = 1102014,roleId = 1102014,color = 1,skill = {[1] = 1303014,[2] = 1304004,[3] = 1304006},shl = {callCost = 4,callCd = 4,crystalType = 1}},--强力石灵明
 	[315] = {name = "强力于禁",card_id = 1102015,roleId = 1102015,color = 2,skill = {[1] = 1303015,[2] = 1304005,[3] = 1304007},shl = {callCost = 4,callCd = 4,crystalType = 2}},--强力于禁
 	[316] = {name = "强力西方龙",card_id = 1102016,roleId = 1102016,color = 2,skill = {[1] = 1303016,[2] = 1304011,[3] = 1304007},shl = {callCost = 4,callCd = 4,crystalType = 3}},--强力西方龙
