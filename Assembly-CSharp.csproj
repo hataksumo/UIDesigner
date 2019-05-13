@@ -64,6 +64,7 @@
     <Compile Include="Assets\Script\ExcelHandle\ExcelBookObject.cs" />
     <Compile Include="Assets\Script\ExcelHandle\ExcelHeader.cs" />
     <Compile Include="Assets\Script\ExcelHandle\ExcelSheetObject.cs" />
+    <Compile Include="Assets\Script\ExcelHandle\MutiExcelSheetObject.cs" />
     <Compile Include="Assets\Script\Hello.cs" />
     <Compile Include="Assets\Script\PureMVC\Common\LuaBehaviour.cs" />
     <Compile Include="Assets\Script\PureMVC\Common\LuaLoader.cs" />
@@ -186,6 +187,7 @@
     <Compile Include="Assets\Script\ToLua\Source\Generate\LuaInterface_LuaInjectionStationWrap.cs" />
     <Compile Include="Assets\Script\ToLua\Source\Generate\LuaProfilerWrap.cs" />
     <Compile Include="Assets\Script\ToLua\Source\Generate\ManagerWrap.cs" />
+    <Compile Include="Assets\Script\ToLua\Source\Generate\MutiExcelSheetObjectWrap.cs" />
     <Compile Include="Assets\Script\ToLua\Source\Generate\MyToolsWrap.cs" />
     <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_AnimationBlendModeWrap.cs" />
     <Compile Include="Assets\Script\ToLua\Source\Generate\UnityEngine_AnimationClipWrap.cs" />

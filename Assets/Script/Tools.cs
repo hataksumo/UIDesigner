@@ -29,4 +29,9 @@ public static class MyTools
         ulong code =  (ulong)((UnityEngine.Random.value * ulong.MaxValue)% 997 + 1000) * maxCode + (ulong)baseCode;
         return code.ToString();
     }
+
+    public static double Round(float v_num, int v_p)
+    {
+        return Math.Round(v_num, v_p);
+    }
 }

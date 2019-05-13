@@ -6,8 +6,132 @@ colums:
 primary key:
 #0 [关卡]: id
 #1 [挂机关卡]: id
+#2 [芦花古楼]: id
 ]]
 return{
+	[1] = {cardGroup = 30001,relic = 4001},--风-1
+	[2] = {cardGroup = 30002,relic = 4002},--风-2
+	[3] = {cardGroup = 30003,relic = 4003},--风-3
+	[4] = {cardGroup = 30004,relic = 4004},--风-4
+	[5] = {cardGroup = 30005,relic = 4005},--风-5
+	[6] = {cardGroup = 30006,relic = 4006},--风-6
+	[7] = {cardGroup = 30007,relic = 4007},--风-7
+	[8] = {cardGroup = 30008,relic = 4008},--风-8
+	[9] = {cardGroup = 30009,relic = 4009},--风-9
+	[10] = {cardGroup = 30010,relic = 4010},--风-10
+	[11] = {cardGroup = 30011,relic = 4011},--风-11
+	[12] = {cardGroup = 30012,relic = 4012},--风-12
+	[13] = {cardGroup = 30013,relic = 4013},--风-13
+	[14] = {cardGroup = 30014,relic = 4014},--风-14
+	[15] = {cardGroup = 30015,relic = 4015},--风-15
+	[16] = {cardGroup = 30016,relic = 4016},--风-16
+	[17] = {cardGroup = 30017,relic = 4017},--风-17
+	[18] = {cardGroup = 30018,relic = 4018},--风-18
+	[19] = {cardGroup = 30019,relic = 4019},--风-19
+	[20] = {cardGroup = 30020,relic = 4020},--风-20
+	[21] = {cardGroup = 30021,relic = 4021},--风-21
+	[22] = {cardGroup = 30022,relic = 4022},--风-22
+	[23] = {cardGroup = 30023,relic = 4023},--风-23
+	[24] = {cardGroup = 30024,relic = 4024},--风-24
+	[25] = {cardGroup = 30025,relic = 4025},--风-25
+	[26] = {cardGroup = 30026,relic = 4026},--风-26
+	[27] = {cardGroup = 30027,relic = 4027},--风-27
+	[28] = {cardGroup = 30028,relic = 4028},--风-28
+	[29] = {cardGroup = 30029,relic = 4029},--风-29
+	[30] = {cardGroup = 30030,relic = 4030},--风-30
+	[31] = {cardGroup = 30031,relic = 4031},--风-31
+	[32] = {cardGroup = 30032,relic = 4032},--风-32
+	[33] = {cardGroup = 30033,relic = 4033},--风-33
+	[34] = {cardGroup = 30034,relic = 4034},--风-34
+	[35] = {cardGroup = 30035,relic = 4035},--风-35
+	[36] = {cardGroup = 30036,relic = 4036},--风-36
+	[37] = {cardGroup = 30037,relic = 4037},--风-37
+	[38] = {cardGroup = 30038,relic = 4038},--风-38
+	[39] = {cardGroup = 30039,relic = 4039},--风-39
+	[40] = {cardGroup = 30040,relic = 4040},--风-40
+	[41] = {cardGroup = 30041,relic = 4041},--风-41
+	[42] = {cardGroup = 30042,relic = 4042},--风-42
+	[43] = {cardGroup = 30043,relic = 4043},--风-43
+	[44] = {cardGroup = 30044,relic = 4044},--风-44
+	[45] = {cardGroup = 30045,relic = 4045},--风-45
+	[46] = {cardGroup = 30046,relic = 4046},--风-46
+	[47] = {cardGroup = 30047,relic = 4047},--风-47
+	[48] = {cardGroup = 30048,relic = 4048},--风-48
+	[49] = {cardGroup = 30049,relic = 4049},--风-49
+	[50] = {cardGroup = 30050,relic = 4050},--风-50
+	[51] = {cardGroup = 30051,relic = 4051},--风-51
+	[52] = {cardGroup = 30052,relic = 4052},--风-52
+	[53] = {cardGroup = 30053,relic = 4053},--风-53
+	[54] = {cardGroup = 30054,relic = 4054},--风-54
+	[55] = {cardGroup = 30055,relic = 4055},--风-55
+	[56] = {cardGroup = 30056,relic = 4056},--风-56
+	[57] = {cardGroup = 30057,relic = 4057},--风-57
+	[58] = {cardGroup = 30058,relic = 4058},--风-58
+	[59] = {cardGroup = 30059,relic = 4059},--风-59
+	[60] = {cardGroup = 30060,relic = 4060},--风-60
+	[61] = {cardGroup = 30061,relic = 4061},--风-61
+	[62] = {cardGroup = 30062,relic = 4062},--风-62
+	[63] = {cardGroup = 30063,relic = 4063},--风-63
+	[64] = {cardGroup = 30064,relic = 4064},--风-64
+	[65] = {cardGroup = 30065,relic = 4065},--风-65
+	[66] = {cardGroup = 30066,relic = 4066},--风-66
+	[67] = {cardGroup = 30067,relic = 4067},--风-67
+	[68] = {cardGroup = 30068,relic = 4068},--风-68
+	[69] = {cardGroup = 30069,relic = 4069},--风-69
+	[70] = {cardGroup = 30070,relic = 4070},--风-70
+	[71] = {cardGroup = 30071,relic = 4071},--风-71
+	[72] = {cardGroup = 30072,relic = 4072},--风-72
+	[73] = {cardGroup = 30073,relic = 4073},--风-73
+	[74] = {cardGroup = 30074,relic = 4074},--风-74
+	[75] = {cardGroup = 30075,relic = 4075},--风-75
+	[76] = {cardGroup = 30076,relic = 4076},--风-76
+	[77] = {cardGroup = 30077,relic = 4077},--风-77
+	[78] = {cardGroup = 30078,relic = 4078},--风-78
+	[79] = {cardGroup = 30079,relic = 4079},--风-79
+	[80] = {cardGroup = 30080,relic = 4080},--风-80
+	[81] = {cardGroup = 30081,relic = 4081},--风-81
+	[82] = {cardGroup = 30082,relic = 4082},--风-82
+	[83] = {cardGroup = 30083,relic = 4083},--风-83
+	[84] = {cardGroup = 30084,relic = 4084},--风-84
+	[85] = {cardGroup = 30085,relic = 4085},--风-85
+	[86] = {cardGroup = 30086,relic = 4086},--风-86
+	[87] = {cardGroup = 30087,relic = 4087},--风-87
+	[88] = {cardGroup = 30088,relic = 4088},--风-88
+	[89] = {cardGroup = 30089,relic = 4089},--风-89
+	[90] = {cardGroup = 30090,relic = 4090},--风-90
+	[91] = {cardGroup = 30091,relic = 4091},--风-91
+	[92] = {cardGroup = 30092,relic = 4092},--风-92
+	[93] = {cardGroup = 30093,relic = 4093},--风-93
+	[94] = {cardGroup = 30094,relic = 4094},--风-94
+	[95] = {cardGroup = 30095,relic = 4095},--风-95
+	[96] = {cardGroup = 30096,relic = 4096},--风-96
+	[97] = {cardGroup = 30097,relic = 4097},--风-97
+	[98] = {cardGroup = 30098,relic = 4098},--风-98
+	[99] = {cardGroup = 30099,relic = 4099},--风-99
+	[100] = {cardGroup = 30100,relic = 4100},--风-100
+	[101] = {cardGroup = 40001,relic = 1},--地煞一
+	[102] = {cardGroup = 40002,relic = 1},--地煞二
+	[103] = {cardGroup = 40003,relic = 1},--地煞三
+	[104] = {cardGroup = 40004,relic = 1},--地煞四
+	[105] = {cardGroup = 40005,relic = 1},--地煞五
+	[106] = {cardGroup = 40006,relic = 1},--地煞六
+	[107] = {cardGroup = 40007,relic = 1},--地煞七
+	[108] = {cardGroup = 40008,relic = 1},--地煞八
+	[109] = {cardGroup = 40009,relic = 1},--地煞九
+	[110] = {cardGroup = 40010,relic = 1},--天罡一
+	[111] = {cardGroup = 40011,relic = 1},--天罡二
+	[112] = {cardGroup = 40012,relic = 1},--天罡三
+	[113] = {cardGroup = 40013,relic = 1},--天罡四
+	[114] = {cardGroup = 40014,relic = 1},--天罡五
+	[115] = {cardGroup = 40015,relic = 1},--天罡六
+	[116] = {cardGroup = 40016,relic = 1},--星耀
+	[10101] = {cardGroup = 10101,relic = 1},--普通关1-1
+	[10102] = {cardGroup = 10102,relic = 1},--普通关1-2
+	[10103] = {cardGroup = 10103,relic = 1},--普通关1-3
+	[10105] = {cardGroup = 10105,relic = 1},--普通关1-5
+	[10106] = {cardGroup = 10106,relic = 1},--普通关1-6
+	[10108] = {cardGroup = 10108,relic = 1},--普通关1-8
+	[10109] = {cardGroup = 10109,relic = 1},--普通关1-9
 	[10201] = {cardGroup = 10201,relic = 1},--普通关2-1
 	[10202] = {cardGroup = 10202,relic = 1},--普通关2-2
 	[10203] = {cardGroup = 10203,relic = 1},--普通关2-3
@@ -266,6 +390,5 @@ return{
 	[30912] = {cardGroup = 912,relic = 3100},--挂机塔9-5
 	[30913] = {cardGroup = 913,relic = 3101},--挂机塔9-6
 	[30914] = {cardGroup = 914,relic = 3102},--挂机塔9-7
-	[30915] = {cardGroup = 915,relic = 3103},--挂机塔9-8
-	[40001] = {cardGroup = 40001,relic = 4001}--测试关卡
+	[30915] = {cardGroup = 915,relic = 3103}--挂机塔9-8
 }

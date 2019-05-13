@@ -25,7 +25,7 @@ local fn_calLevelProp = function()
 	end
 
 	--计算卡牌数值
-	local fn_calCardProp = function(v_cfg)
+	local fn_calCardProp = function(v_cType,v_cfg)
 		local prop = CreatePropTable()
 		if not v_cfg then return prop end
 		local card_info = cfg_card[v_cfg.cardId]
@@ -35,7 +35,7 @@ local fn_calLevelProp = function()
 		end
 		local cardbk_info = card_info.hells[v_cfg.bklv]
 		local cardstar_info = card_info.stars[v_cfg.star]
-		local hell_info = cfg_hell_name[v_cfg.bklv]
+		local hell_info = cfg_hell_name[v_cType][v_cfg.bklv]
 
 		local hpid = 103
 		local atkid = 101
@@ -154,8 +154,8 @@ local fn_calLevelProp = function()
 				iniProp[loc].propShl = fn_iniCardProp(couple.shl.cardId)
 			end
 			--计算升星升级等属性
-			local propjlr = fn_calCardProp(couple.jlr)
-			local propShl = fn_calCardProp(couple.shl)
+			local propjlr = fn_calCardProp(1,couple.jlr)
+			local propShl = fn_calCardProp(2,couple.shl)
 			lvProp[loc] = {}
 			lvProp[loc].propjlr = propjlr
 			lvProp[loc].propShl = propShl
@@ -194,6 +194,8 @@ local fn_calLevelProp = function()
 				if not dscfg_relicGroup[relicGroup] then
 					print("can't find the relicGroup ",relicGroup)
 				end
+				if finnalProp[loc] == nil then print("loc = "..loc.." can't find") end
+				if cfg_card[couple.jlr.cardId] == nil then print("couple.jlr.cardId = "..couple.jlr.cardId.." can't find") end
 				fn_calRelicProp(dscfg_relicGroup[relicGroup].relic,finnalProp[loc].jlr.prop ,cfg_card[couple.jlr.cardId].mask)
 			end
 			if couple.shl then
@@ -335,9 +337,11 @@ local fn_output_excel = function()
 	local mon_prop_sheet = book:get_sheet("怪物属性")
 	local lvds_sheet = book:get_sheet("关卡")
 	local gjlvds_sheet = book:get_sheet("挂机关卡")
+	local lhglds_sheet = book:get_sheet("芦花古楼")
 	local lvs_multi_sheet = MutiExcelSheetObject.New()
 	lvs_multi_sheet:addSheet(lvds_sheet)
 	lvs_multi_sheet:addSheet(gjlvds_sheet)
+	lvs_multi_sheet:addSheet(lhglds_sheet)
 	lvs_multi_sheet:init_data()
 	fn_output_card_prop(card_prop_sheet,mon_prop_sheet,lvs_multi_sheet,level_card_prop,level_mon_prop)
 	book:save(MyTools.OutputExcelPath.."propSim.xlsx")

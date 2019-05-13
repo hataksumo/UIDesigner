@@ -8,7 +8,7 @@ primary key:
 ]]
 return{
 	[130100101] = {FireType = 1,Type = 1,SubType = 0,DetailType = 1001,AttackNum = 1,Value = "0#0#0.1#1.2",Stack = {1,1},EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 1,Target2 = 5,Target3 = 1,Target5 = 10,Share = 0},--常服曹焱兵技能1伤害
-	[130100102] = {FireType = 1,Type = 3,SubType = 0,DetailType = 3001,AttackNum = 1,Value = "1|0#0#0#1",Stack = {1,1},EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 1,Target2 = 4,Target3 = 1,Target5 = 10,Share = 0},--常服曹焱兵技能1获得水晶
+	[130100102] = {FireType = 1,Type = 3,SubType = 0,DetailType = 3001,AttackNum = 1,Value = "1|0#0#0#2",Stack = {1,1},EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 1,Target2 = 4,Target3 = 1,Target5 = 10,Share = 0},--常服曹焱兵技能1获得水晶
 	[130100201] = {FireType = 1,Type = 1,SubType = 0,DetailType = 1001,AttackNum = 1,Value = "0#0#0.1#1.2",Stack = {1,1},EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 1,Target2 = 5,Target3 = 1,Target5 = 10,Share = 0},--曹玄亮技能1伤害
 	[130100202] = {FireType = 1,Type = 3,SubType = 0,DetailType = 3001,AttackNum = 1,Value = "2|0#0#0#1",Stack = {1,1},EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 1,Target2 = 4,Target3 = 1,Target5 = 10,Share = 0},--曹玄亮技能1获得水晶
 	[130100301] = {FireType = 1,Type = 1,SubType = 0,DetailType = 1001,AttackNum = 1,Value = "0#0#0.04#0.45",Stack = {1,1},EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 3,Target2 = 5,Target3 = 1,Target5 = 10,Share = 0},--夏玲技能1造成伤害
@@ -106,7 +106,7 @@ return{
 	[130301801] = {FireType = 1,Type = 1,SubType = 0,DetailType = 1001,AttackNum = 1,Value = "0#0#0.24#2.82",Stack = {1,1},EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 1,Target2 = 5,Target3 = 1,Target5 = 10,Share = 0},--噬日技能伤害
 	[130301802] = {FireType = 1,Type = 1,SubType = 0,DetailType = 1006,AttackNum = 1,Value = "0#0#0#0.45",Stack = {1,1},EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 3,Target2 = 1,Target3 = 1,Target5 = 10,Share = 0},--噬日技能消耗生命
 	[130301809] = {Desc = "专属武器效果:被召唤出场时立即释放1次本技能",FireType = 2,Type = 4,SubType = 1,DetailType = 4031,AttackNum = 1,Stack = {1,1},EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 3,Target2 = 1,Target3 = 1,Target5 = 10,Share = 0},--噬日专属武器出场立即释放
-	[130301901] = {FireType = 1,Type = 4,SubType = 1,DetailType = 4005,AttackNum = 1,Value = "0#0#0.23#2.76",Stack = {1,1},EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 3,Target2 = 4,Target3 = 1,Target4 = "2#0",Target5 = 1,Share = 0,FxType = 1,FxId = 5},--食火蜥技能护盾
+	[130301901] = {FireType = 1,Type = 4,SubType = 1,DetailType = 4005,AttackNum = 1,Value = "0#0#0.23#2.76",Stack = {1,1},EffectParam = 0,Duration = {0,1},EndType = 1,Target1 = 3,Target2 = 4,Target3 = 1,Target4 = "2#0",Target5 = 1,Share = 0,FxType = 1,FxId = 5},--食火蜥技能护盾
 	[130301909] = {Desc = "专属武器效果:额外为目标回复食火蜥攻击最大值240%的血量",FireType = 1,Type = 2,SubType = 1,DetailType = 2001,AttackNum = 1,Value = "0#0#0#2.4",Stack = {1,1},EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 3,Target2 = 4,Target3 = 1,Target4 = "2#0",Target5 = 1,Share = 0},--食火蜥专属武器治疗
 	[130302001] = {FireType = 1,Type = 1,SubType = 0,DetailType = 1001,AttackNum = 1,Value = "0#0#0.21#2.52",Stack = {1,1},EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 1,Target2 = 5,Target3 = 1,Target5 = 10,Share = 0},--高顺技能基础伤害
 	[130302002] = {FireType = 1,Type = 1,SubType = 0,DetailType = 1001,AttackNum = 1,Value = "0#0#0.11#1.26",Stack = {1,1},EffectCondition = "107#0.7",EffectParam = 0,Duration = {0,9999},EndType = 4,Target1 = 1,Target2 = 5,Target3 = 1,Target5 = 10,Share = 0},--高顺技能额外伤害
