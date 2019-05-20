@@ -217,6 +217,12 @@ local fn_calLevelProp = function()
 					monProp[loc][type] ={}
 					local the_prop = CreatePropTable()
 					the_prop = the_prop + data.prop
+					if data.mon.bsFac == nil or data.mon.rou == nil then
+						print(string.format("lv:%d-%d-%s is wrong",lvId,loc,type))
+					end
+
+
+
 					the_prop.HP =  math.floor(the_prop.HP * math.sqrt(data.mon.bsFac) * math.sqrt(data.mon.rou))
 					the_prop.Atk = math.floor(the_prop.Atk * math.sqrt(data.mon.bsFac) / math.sqrt(data.mon.rou))
 					monProp[loc][type].prop = the_prop
