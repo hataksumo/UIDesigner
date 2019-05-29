@@ -4,7 +4,7 @@
 专属武器激活后可以进行强化，消耗不同数量不同品质的强化石，概率升级。专属武器强化百分比提升专属武器基础属性。
 专属武器的解封，可获得属性或被动技能。消耗对应将魂碎片进行武器解封。
 colums:
-{WpID,专属武器ID} ,{CardId,卡牌ID} ,{Name,武器名} ,{Prop[1].id,属性ID1} ,{Prop[1].val,属性值1} ,{Prop[2].id,属性ID2} ,{Prop[2].val,属性值2} ,{Prop[3].id,属性ID3} ,{Prop[3].val,属性值3} ,{CostUnlock[1].id,消耗道具ID1} ,{CostUnlock[1].val,消耗道具数量1} ,{CostUnlock[2].id,消耗道具ID2} ,{CostUnlock[2].val,消耗道具数量2} ,{CostUnlock[3].id,消耗道具ID3} ,{CostUnlock[3].val,消耗道具数量3} ,{Icon,图标} ,{HelpCol,辅助列} ,{Lv,等级} ,{Cost[1].id,强化材料ID1} ,{Cost[1].val,强化材料数量1} ,{Cost[2].id,强化材料ID2} ,{Cost[2].val,强化材料数量2} ,{Cost[3].id,强化材料ID3} ,{Cost[3].val,强化材料数量3} ,{StrenthSuccessRate,强化成功率} ,{StrenthFailVoice,失败祝福值提升} ,{MaxVoice,最大祝福值} ,{PropBonus,强化值} ,{WeaponFx,武器特效} ,{PSkill,被动技能} ,{WeaponPrefab,武器预设}
+{WpID,专属武器ID} ,{CardId,卡牌ID} ,{Name,武器名} ,{Quality,品质} ,{Prop[1].id,属性ID1} ,{Prop[1].val,属性值1} ,{Prop[2].id,属性ID2} ,{Prop[2].val,属性值2} ,{Prop[3].id,属性ID3} ,{Prop[3].val,属性值3} ,{CostUnlock[1].id,消耗道具ID1} ,{CostUnlock[1].val,消耗道具数量1} ,{CostUnlock[2].id,消耗道具ID2} ,{CostUnlock[2].val,消耗道具数量2} ,{CostUnlock[3].id,消耗道具ID3} ,{CostUnlock[3].val,消耗道具数量3} ,{Icon,图标} ,{HelpCol,辅助列} ,{Lv,等级} ,{Cost[1].id,强化材料ID1} ,{Cost[1].val,强化材料数量1} ,{Cost[2].id,强化材料ID2} ,{Cost[2].val,强化材料数量2} ,{Cost[3].id,强化材料ID3} ,{Cost[3].val,强化材料数量3} ,{StrenthSuccessRate,强化成功率} ,{StrenthFailVoice,失败祝福值提升} ,{MaxVoice,最大祝福值} ,{PropBonus,强化值} ,{WeaponFx,武器特效} ,{PSkill,被动技能} ,{PSkillLevel,效果等级} ,{WeaponPrefab,武器预设}
 primary key:
 #0 [专属武器]: WpID
 #1 [专属武器强化]: WpID,HelpCol,Lv
@@ -14,11 +14,12 @@ return{
 	[1501001] = {
 		CardId = 1102001,
 		Name = "青龙偃月刀",
-		Prop = {[1] = {id = 111,val = 23625},[2] = {id = 112,val = 11812},[3] = {id = 113,val = 11812}},
+		Quality = 4,
+		Prop = {[1] = {id = 111,val = 21735},[2] = {id = 112,val = 10867},[3] = {id = 113,val = 10867}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611001,val = 30}},
 		Icon = "ui_dtex_Equip_1501001",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -73,7 +74,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609104,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609104,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609104,val = 1},[3] = {id = 1611001,val = 5}},PSkill = 130300109},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609104,val = 1},[3] = {id = 1611001,val = 5}},PSkill = 130300111,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609104,val = 2},[3] = {id = 1611001,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609104,val = 2},[3] = {id = 1611001,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609104,val = 2},[3] = {id = 1611001,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
@@ -91,11 +92,12 @@ return{
 	[1501002] = {
 		CardId = 1102002,
 		Name = "碎岩",
-		Prop = {[1] = {id = 111,val = 6930},[2] = {id = 112,val = 17325},[3] = {id = 113,val = 17325}},
+		Quality = 3,
+		Prop = {[1] = {id = 111,val = 6375},[2] = {id = 112,val = 15939},[3] = {id = 113,val = 15939}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611002,val = 30}},
 		Icon = "ui_dtex_Equip_1501002",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -150,7 +152,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609105,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609105,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609105,val = 1},[3] = {id = 1611002,val = 5}},PSkill = 130300209},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609105,val = 1},[3] = {id = 1611002,val = 5}},PSkill = 130300211,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609105,val = 2},[3] = {id = 1611002,val = 5}},Prop = {[1] = {id = 110,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609105,val = 2},[3] = {id = 1611002,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609105,val = 2},[3] = {id = 1611002,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
@@ -168,11 +170,12 @@ return{
 	[1501003] = {
 		CardId = 1102003,
 		Name = "狂鲨铁戟",
-		Prop = {[1] = {id = 111,val = 24948},[2] = {id = 112,val = 9702},[3] = {id = 113,val = 6930}},
+		Quality = 4,
+		Prop = {[1] = {id = 111,val = 22952},[2] = {id = 112,val = 8925},[3] = {id = 113,val = 6375}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611003,val = 30}},
 		Icon = "ui_dtex_Equip_1501003",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -227,7 +230,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609105,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609105,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609105,val = 1},[3] = {id = 1611003,val = 5}},PSkill = 130300309},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609105,val = 1},[3] = {id = 1611003,val = 5}},PSkill = 130300311,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609105,val = 2},[3] = {id = 1611003,val = 5}},Prop = {[1] = {id = 104,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609105,val = 2},[3] = {id = 1611003,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609105,val = 2},[3] = {id = 1611003,val = 10}},Prop = {[1] = {id = 114,val = 0.15}}},
@@ -245,11 +248,12 @@ return{
 	[1501004] = {
 		CardId = 1102004,
 		Name = "天坠灭星",
-		Prop = {[1] = {id = 111,val = 27720},[2] = {id = 112,val = 3780},[3] = {id = 113,val = 6300}},
+		Quality = 3,
+		Prop = {[1] = {id = 111,val = 25502},[2] = {id = 112,val = 3477},[3] = {id = 113,val = 5796}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611004,val = 30}},
 		Icon = "ui_dtex_Equip_1501004",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -304,7 +308,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611004,val = 5}},PSkill = 130300409},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611004,val = 5}},PSkill = 130300411,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609106,val = 2},[3] = {id = 1611004,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609106,val = 2},[3] = {id = 1611004,val = 10}},Prop = {[1] = {id = 104,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609106,val = 2},[3] = {id = 1611004,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
@@ -322,11 +326,12 @@ return{
 	[1501005] = {
 		CardId = 1102005,
 		Name = "清风化煞",
-		Prop = {[1] = {id = 111,val = 6930},[2] = {id = 112,val = 13860},[3] = {id = 113,val = 20790}},
+		Quality = 3,
+		Prop = {[1] = {id = 111,val = 6375},[2] = {id = 112,val = 12751},[3] = {id = 113,val = 19126}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611005,val = 30}},
 		Icon = "ui_dtex_Equip_1501005",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -381,7 +386,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609104,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609104,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609104,val = 1},[3] = {id = 1611005,val = 5}},PSkill = 130300509},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609104,val = 1},[3] = {id = 1611005,val = 5}},PSkill = 130300511,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609104,val = 2},[3] = {id = 1611005,val = 5}},Prop = {[1] = {id = 110,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609104,val = 2},[3] = {id = 1611005,val = 10}},Prop = {[1] = {id = 109,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609104,val = 2},[3] = {id = 1611005,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
@@ -399,11 +404,12 @@ return{
 	[1501006] = {
 		CardId = 1102006,
 		Name = "破军",
-		Prop = {[1] = {id = 111,val = 23625},[2] = {id = 112,val = 15750},[3] = {id = 113,val = 7875}},
+		Quality = 4,
+		Prop = {[1] = {id = 111,val = 21735},[2] = {id = 112,val = 14490},[3] = {id = 113,val = 7245}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611006,val = 30}},
 		Icon = "ui_dtex_Equip_1501006",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -458,7 +464,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611006,val = 5}},PSkill = 130300609},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611006,val = 5}},PSkill = 130300611,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609106,val = 2},[3] = {id = 1611006,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609106,val = 2},[3] = {id = 1611006,val = 10}},Prop = {[1] = {id = 104,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609106,val = 2},[3] = {id = 1611006,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
@@ -476,11 +482,12 @@ return{
 	[1501007] = {
 		CardId = 1102007,
 		Name = "阿尔法拉",
-		Prop = {[1] = {id = 111,val = 19404},[2] = {id = 112,val = 11088},[3] = {id = 113,val = 11088}},
+		Quality = 4,
+		Prop = {[1] = {id = 111,val = 17851},[2] = {id = 112,val = 10200},[3] = {id = 113,val = 10200}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611007,val = 30}},
 		Icon = "ui_dtex_Equip_1501007",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -535,7 +542,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611007,val = 5}},PSkill = 130300709},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611007,val = 5}},PSkill = 130300711,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609106,val = 2},[3] = {id = 1611007,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609106,val = 2},[3] = {id = 1611007,val = 10}},Prop = {[1] = {id = 106,val = 0.21}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609106,val = 2},[3] = {id = 1611007,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
@@ -553,11 +560,12 @@ return{
 	[1501008] = {
 		CardId = 1102008,
 		Name = "娑伽罗之刃",
-		Prop = {[1] = {id = 111,val = 31500},[2] = {id = 112,val = 7875},[3] = {id = 113,val = 7875}},
+		Quality = 4,
+		Prop = {[1] = {id = 111,val = 28980},[2] = {id = 112,val = 7245},[3] = {id = 113,val = 7245}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611008,val = 30}},
 		Icon = "ui_dtex_Equip_1501008",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -612,7 +620,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611008,val = 5}},PSkill = nil},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611008,val = 5}},PSkill = 130300811,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609106,val = 2},[3] = {id = 1611008,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609106,val = 2},[3] = {id = 1611008,val = 10}},Prop = {[1] = {id = 106,val = 0.21}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609106,val = 2},[3] = {id = 1611008,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
@@ -630,11 +638,12 @@ return{
 	[1501009] = {
 		CardId = 1102009,
 		Name = "白龙",
-		Prop = {[1] = {id = 111,val = 7875},[2] = {id = 112,val = 23625},[3] = {id = 113,val = 15750}},
+		Quality = 3,
+		Prop = {[1] = {id = 111,val = 7245},[2] = {id = 112,val = 21735},[3] = {id = 113,val = 14490}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611009,val = 30}},
 		Icon = "ui_dtex_Equip_1501009",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -689,7 +698,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609105,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609105,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609105,val = 1},[3] = {id = 1611009,val = 5}},PSkill = 130300909},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609105,val = 1},[3] = {id = 1611009,val = 5}},PSkill = 130300911,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609105,val = 2},[3] = {id = 1611009,val = 5}},Prop = {[1] = {id = 114,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609105,val = 2},[3] = {id = 1611009,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609105,val = 2},[3] = {id = 1611009,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
@@ -707,11 +716,12 @@ return{
 	[1501010] = {
 		CardId = 1102010,
 		Name = "流光·幻影",
-		Prop = {[1] = {id = 111,val = 23625},[2] = {id = 112,val = 11812},[3] = {id = 113,val = 11812}},
+		Quality = 4,
+		Prop = {[1] = {id = 111,val = 21735},[2] = {id = 112,val = 10867},[3] = {id = 113,val = 10867}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611010,val = 30}},
 		Icon = "ui_dtex_Equip_1501010",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -766,7 +776,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609105,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609105,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609105,val = 1},[3] = {id = 1611010,val = 5}},PSkill = 130301009},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609105,val = 1},[3] = {id = 1611010,val = 5}},PSkill = 130301011,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609105,val = 2},[3] = {id = 1611010,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609105,val = 2},[3] = {id = 1611010,val = 10}},Prop = {[1] = {id = 109,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609105,val = 2},[3] = {id = 1611010,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
@@ -784,11 +794,12 @@ return{
 	[1501011] = {
 		CardId = 1102011,
 		Name = "丈八蛇矛",
-		Prop = {[1] = {id = 111,val = 12600},[2] = {id = 112,val = 7875},[3] = {id = 113,val = 26775}},
+		Quality = 4,
+		Prop = {[1] = {id = 111,val = 11592},[2] = {id = 112,val = 7245},[3] = {id = 113,val = 24633}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611011,val = 30}},
 		Icon = "ui_dtex_Equip_1501011",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -843,7 +854,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609105,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609105,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609105,val = 1},[3] = {id = 1611011,val = 5}},PSkill = 130301109},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609105,val = 1},[3] = {id = 1611011,val = 5}},PSkill = 130301111,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609105,val = 2},[3] = {id = 1611011,val = 5}},Prop = {[1] = {id = 110,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609105,val = 2},[3] = {id = 1611011,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609105,val = 2},[3] = {id = 1611011,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
@@ -861,11 +872,12 @@ return{
 	[1501012] = {
 		CardId = 1102012,
 		Name = "鬼哭地狱",
-		Prop = {[1] = {id = 111,val = 15750},[2] = {id = 112,val = 15750},[3] = {id = 113,val = 15750}},
+		Quality = 4,
+		Prop = {[1] = {id = 111,val = 14490},[2] = {id = 112,val = 14490},[3] = {id = 113,val = 14490}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611012,val = 30}},
 		Icon = "ui_dtex_Equip_1501012",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -920,7 +932,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609105,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609105,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609105,val = 1},[3] = {id = 1611012,val = 5}},PSkill = 130301202},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609105,val = 1},[3] = {id = 1611012,val = 5}},PSkill = 130301211,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609105,val = 2},[3] = {id = 1611012,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609105,val = 2},[3] = {id = 1611012,val = 10}},Prop = {[1] = {id = 115,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609105,val = 2},[3] = {id = 1611012,val = 10}},Prop = {[1] = {id = 109,val = 0.15}}},
@@ -938,11 +950,12 @@ return{
 	[1501013] = {
 		CardId = 1102013,
 		Name = "暴食之爪",
-		Prop = {[1] = {id = 111,val = 25200},[2] = {id = 112,val = 6300},[3] = {id = 113,val = 6300}},
+		Quality = 3,
+		Prop = {[1] = {id = 111,val = 23184},[2] = {id = 112,val = 5796},[3] = {id = 113,val = 5796}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611013,val = 30}},
 		Icon = "ui_dtex_Equip_1501013",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -997,7 +1010,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611013,val = 5}},PSkill = 130301202},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611013,val = 5}},PSkill = 130301311,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609106,val = 2},[3] = {id = 1611013,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609106,val = 2},[3] = {id = 1611013,val = 10}},Prop = {[1] = {id = 104,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609106,val = 2},[3] = {id = 1611013,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
@@ -1015,11 +1028,12 @@ return{
 	[1501014] = {
 		CardId = 1102014,
 		Name = "镔铁盘龙棍",
-		Prop = {[1] = {id = 111,val = 20790},[2] = {id = 112,val = 13860},[3] = {id = 113,val = 6930}},
+		Quality = 4,
+		Prop = {[1] = {id = 111,val = 19126},[2] = {id = 112,val = 12751},[3] = {id = 113,val = 6375}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611014,val = 30}},
 		Icon = "ui_dtex_Equip_1501014",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -1074,7 +1088,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609104,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609104,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609104,val = 1},[3] = {id = 1611014,val = 5}},PSkill = 130301409},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609104,val = 1},[3] = {id = 1611014,val = 5}},PSkill = 130301411,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609104,val = 2},[3] = {id = 1611014,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609104,val = 2},[3] = {id = 1611014,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609104,val = 2},[3] = {id = 1611014,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
@@ -1092,11 +1106,12 @@ return{
 	[1501015] = {
 		CardId = 1102015,
 		Name = "恶灵灾祸",
-		Prop = {[1] = {id = 111,val = 12600},[2] = {id = 112,val = 12600},[3] = {id = 113,val = 12600}},
+		Quality = 3,
+		Prop = {[1] = {id = 111,val = 11592},[2] = {id = 112,val = 11592},[3] = {id = 113,val = 11592}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611015,val = 30}},
 		Icon = "ui_dtex_Equip_1501015",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -1151,7 +1166,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609104,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609104,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609104,val = 1},[3] = {id = 1611015,val = 5}},PSkill = 130301509},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609104,val = 1},[3] = {id = 1611015,val = 5}},PSkill = 130301511,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609104,val = 2},[3] = {id = 1611015,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609104,val = 2},[3] = {id = 1611015,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609104,val = 2},[3] = {id = 1611015,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
@@ -1169,11 +1184,12 @@ return{
 	[1501016] = {
 		CardId = 1102016,
 		Name = "诸神的裁决",
-		Prop = {[1] = {id = 111,val = 7875},[2] = {id = 112,val = 23625},[3] = {id = 113,val = 15750}},
+		Quality = 4,
+		Prop = {[1] = {id = 111,val = 7245},[2] = {id = 112,val = 21735},[3] = {id = 113,val = 14490}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611016,val = 30}},
 		Icon = "ui_dtex_Equip_1501016",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -1228,7 +1244,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611016,val = 5}},PSkill = 130301609},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611016,val = 5}},PSkill = 130301611,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609106,val = 2},[3] = {id = 1611016,val = 5}},Prop = {[1] = {id = 109,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609106,val = 2},[3] = {id = 1611016,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609106,val = 2},[3] = {id = 1611016,val = 10}},Prop = {[1] = {id = 109,val = 0.15}}},
@@ -1246,11 +1262,12 @@ return{
 	[1501017] = {
 		CardId = 1102017,
 		Name = "黑色死神",
-		Prop = {[1] = {id = 111,val = 27720},[2] = {id = 112,val = 6930},[3] = {id = 113,val = 6930}},
+		Quality = 3,
+		Prop = {[1] = {id = 111,val = 25502},[2] = {id = 112,val = 6375},[3] = {id = 113,val = 6375}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611017,val = 30}},
 		Icon = "ui_dtex_Equip_1501017",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -1305,7 +1322,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609104,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609104,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609104,val = 1},[3] = {id = 1611017,val = 5}},PSkill = 130301709},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609104,val = 1},[3] = {id = 1611017,val = 5}},PSkill = 130301711,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609104,val = 2},[3] = {id = 1611017,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609104,val = 2},[3] = {id = 1611017,val = 10}},Prop = {[1] = {id = 104,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609104,val = 2},[3] = {id = 1611017,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
@@ -1323,11 +1340,12 @@ return{
 	[1501018] = {
 		CardId = 1102018,
 		Name = "致命掠夺",
-		Prop = {[1] = {id = 111,val = 25200},[2] = {id = 112,val = 6300},[3] = {id = 113,val = 6300}},
+		Quality = 3,
+		Prop = {[1] = {id = 111,val = 23184},[2] = {id = 112,val = 5796},[3] = {id = 113,val = 5796}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611018,val = 30}},
 		Icon = "ui_dtex_Equip_1501018",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -1382,7 +1400,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611018,val = 5}},PSkill = 130301809},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611018,val = 5}},PSkill = 130301809,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609106,val = 2},[3] = {id = 1611018,val = 5}},Prop = {[1] = {id = 104,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609106,val = 2},[3] = {id = 1611018,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609106,val = 2},[3] = {id = 1611018,val = 10}},Prop = {[1] = {id = 109,val = 0.15}}},
@@ -1400,11 +1418,12 @@ return{
 	[1501019] = {
 		CardId = 1102019,
 		Name = "火焰克星",
-		Prop = {[1] = {id = 111,val = 10080},[2] = {id = 112,val = 15120},[3] = {id = 113,val = 12600}},
+		Quality = 3,
+		Prop = {[1] = {id = 111,val = 9273},[2] = {id = 112,val = 13910},[3] = {id = 113,val = 11592}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611019,val = 30}},
 		Icon = "ui_dtex_Equip_1501019",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -1459,7 +1478,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611019,val = 5}},PSkill = 130301909},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611019,val = 5}},PSkill = 130301909,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609106,val = 2},[3] = {id = 1611019,val = 5}},Prop = {[1] = {id = 109,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609106,val = 2},[3] = {id = 1611019,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609106,val = 2},[3] = {id = 1611019,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
@@ -1477,11 +1496,12 @@ return{
 	[1501020] = {
 		CardId = 1102020,
 		Name = "百战陷阵枪",
-		Prop = {[1] = {id = 111,val = 27720},[2] = {id = 112,val = 6930},[3] = {id = 113,val = 6930}},
+		Quality = 4,
+		Prop = {[1] = {id = 111,val = 25502},[2] = {id = 112,val = 6375},[3] = {id = 113,val = 6375}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611020,val = 30}},
 		Icon = "ui_dtex_Equip_1501020",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -1536,7 +1556,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609104,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609104,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609104,val = 1},[3] = {id = 1611020,val = 5}},PSkill = 130302009},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609104,val = 1},[3] = {id = 1611020,val = 5}},PSkill = 130302011,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609104,val = 2},[3] = {id = 1611020,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609104,val = 2},[3] = {id = 1611020,val = 10}},Prop = {[1] = {id = 104,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609104,val = 2},[3] = {id = 1611020,val = 10}},Prop = {[1] = {id = 105,val = 0.3}}},
@@ -1554,11 +1574,12 @@ return{
 	[1501021] = {
 		CardId = 1102021,
 		Name = "断灭一闪",
-		Prop = {[1] = {id = 111,val = 18900},[2] = {id = 112,val = 9450},[3] = {id = 113,val = 9450}},
+		Quality = 3,
+		Prop = {[1] = {id = 111,val = 17388},[2] = {id = 112,val = 8694},[3] = {id = 113,val = 8694}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611021,val = 30}},
 		Icon = "ui_dtex_Equip_1501021",
 		Strength = {
-			[0] = {},
+			[0] = {PropBonus = 0},
 			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
 			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
 			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
@@ -1613,7 +1634,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611021,val = 5}},PSkill = 130302109},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611021,val = 5}},PSkill = 130302109,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609106,val = 2},[3] = {id = 1611021,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609106,val = 2},[3] = {id = 1611021,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609106,val = 2},[3] = {id = 1611021,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},

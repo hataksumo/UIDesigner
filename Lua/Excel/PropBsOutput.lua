@@ -67,7 +67,7 @@ local fn_calLevelProp = function()
 	end
 
 
-	local fn_calRelicProp = function(v_cfg,v_prop,v_mask)
+	local fn_calRelicProp = function(v_cfg,v_prop,v_mask,v_id)
 		local relicProp = CreatePropTable()
 		for _i,val in ipairs(v_cfg) do
 			local lvCfg = cfg_relic_body[_i].Lvs[val.lv]
@@ -119,7 +119,10 @@ local fn_calLevelProp = function()
 			iniProp[loc] = {}
 			if couple.jlr and couple.jlr.cardId then
 				finnalProp[loc].jlr = {}
-				finnalProp[loc].jlr.id = lvId * 100 + loc * 10 + 1
+				if not couple.jlr.id then
+					print(string.format("lv:%d | loc:%d | shl",lvId,loc))
+				end
+				finnalProp[loc].jlr.id = couple.jlr.id
 				finnalProp[loc].jlr.cardId = couple.jlr.cardId
 				finnalProp[loc].jlr.prop = CreatePropTable()
 				if couple.jlr.mon then
@@ -137,7 +140,10 @@ local fn_calLevelProp = function()
 			end
 			if couple.shl and couple.shl.cardId then
 				finnalProp[loc].shl = {}
-				finnalProp[loc].shl.id = lvId * 100 + loc * 10 + 2
+				if not couple.shl.id then
+					print(string.format("lv:%d | loc:%d | shl",lvId,loc))
+				end
+				finnalProp[loc].shl.id = couple.shl.id
 				finnalProp[loc].shl.cardId = couple.shl.cardId
 				finnalProp[loc].shl.prop = CreatePropTable()
 				if couple.shl.mon then
@@ -181,7 +187,7 @@ local fn_calLevelProp = function()
 		--数据加和
 		for loc,couple in ipairs(cardGroupData) do
 			if finnalProp[loc].jlr then
-				finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr + transProp[loc].propShl
+				finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr
 			end
 			if finnalProp[loc].shl then
 				finnalProp[loc].shl.prop = iniProp[loc].propShl + finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr
@@ -196,10 +202,10 @@ local fn_calLevelProp = function()
 				end
 				if finnalProp[loc] == nil then print("loc = "..loc.." can't find") end
 				if cfg_card[couple.jlr.cardId] == nil then print("couple.jlr.cardId = "..couple.jlr.cardId.." can't find") end
-				fn_calRelicProp(dscfg_relicGroup[relicGroup].relic,finnalProp[loc].jlr.prop ,cfg_card[couple.jlr.cardId].mask)
+				fn_calRelicProp(dscfg_relicGroup[relicGroup].relic,finnalProp[loc].jlr.prop ,cfg_card[couple.jlr.cardId].mask,finnalProp[loc].jlr.id)
 			end
 			if couple.shl then
-				fn_calRelicProp(dscfg_relicGroup[relicGroup].relic,finnalProp[loc].shl.prop ,cfg_card[couple.shl.cardId].mask)
+				fn_calRelicProp(dscfg_relicGroup[relicGroup].relic,finnalProp[loc].shl.prop ,cfg_card[couple.shl.cardId].mask,finnalProp[loc].shl.id)
 			end
 		end
 
@@ -220,9 +226,6 @@ local fn_calLevelProp = function()
 					if data.mon.bsFac == nil or data.mon.rou == nil then
 						print(string.format("lv:%d-%d-%s is wrong",lvId,loc,type))
 					end
-
-
-
 					the_prop.HP =  math.floor(the_prop.HP * math.sqrt(data.mon.bsFac) * math.sqrt(data.mon.rou))
 					the_prop.Atk = math.floor(the_prop.Atk * math.sqrt(data.mon.bsFac) / math.sqrt(data.mon.rou))
 					monProp[loc][type].prop = the_prop
@@ -251,7 +254,6 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 	local cfg_global = dofile "Config\\global"
 	local card_type_name = {"寄灵人","守护灵"}
 	local cfg_mon = dofile "Config\\monModle"
-
 	--v_levelSheet:init_data()
 	for _row,data in ipairs(v_cardData) do
 		local totalBs = 0
@@ -321,6 +323,7 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 					if _i == 1 and couple[2] then
 						v_mon_attr_sheet:set_vals("DefendGrostId",row,locData.shl.note)
 					end
+					v_mon_attr_sheet:set_vali("Type",row,_i)
 					row = row + 1
 				end
 			end
@@ -344,10 +347,12 @@ local fn_output_excel = function()
 	local lvds_sheet = book:get_sheet("关卡")
 	local gjlvds_sheet = book:get_sheet("挂机关卡")
 	local lhglds_sheet = book:get_sheet("芦花古楼")
+	local wbossds_sheet = book:get_sheet("世界BOSS")
 	local lvs_multi_sheet = MutiExcelSheetObject.New()
 	lvs_multi_sheet:addSheet(lvds_sheet)
 	lvs_multi_sheet:addSheet(gjlvds_sheet)
 	lvs_multi_sheet:addSheet(lhglds_sheet)
+	lvs_multi_sheet:addSheet(wbossds_sheet)
 	lvs_multi_sheet:init_data()
 	fn_output_card_prop(card_prop_sheet,mon_prop_sheet,lvs_multi_sheet,level_card_prop,level_mon_prop)
 	book:save(MyTools.OutputExcelPath.."propSim.xlsx")

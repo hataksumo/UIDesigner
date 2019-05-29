@@ -84,6 +84,7 @@ function output_excel()
 	--"Excel\\NewDropOutput"
 	"Excel\\PropBsOutput"
 	--"Excel\\GuaJiPaiQian"
+	--"Excel\\RelicAct"
 	}
 	for _i,val in ipairs(output) do
 		local fn = dofile(val)
@@ -91,6 +92,8 @@ function output_excel()
 			fn()
 		elseif type(fn) == "string" then
 			ZFDebug.Error(string.format("执行%s文件时报错了，报错信息为:\r\n%s",val,fn))
+		else
+			ZFDebug.Error(string.format("执行%s文件时返回为空，信息为:\r\n%s",val,fn))
 		end
 
 		ZFDebug.Koid(string.format("%s导出完成",val))

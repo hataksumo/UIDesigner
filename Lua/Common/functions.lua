@@ -78,3 +78,11 @@ function print_raw_string(v_string)
 	end
 	print(table.concat(tt," "))
 end
+
+function table.cloneArr(v_dst,v_src)
+	local newClone = {}
+	for _i,val in ipairs(v_src) do
+		table.insert(v_dst,val)
+	end
+	return newClone
+end
