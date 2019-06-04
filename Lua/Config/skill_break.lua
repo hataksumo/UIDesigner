@@ -34,8 +34,8 @@ return{
 	},
 	[1301006] = {
 		[1] = {LvUpLimit = 5,CostAdd = 0},
-		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1701006}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"},
-		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1701006}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"}
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1701006,Val = 30}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1701006,Val = 30}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"}
 	},
 	[1301007] = {
 		[1] = {LvUpLimit = 5,CostAdd = 0},
@@ -44,8 +44,8 @@ return{
 	},
 	[1301008] = {
 		[1] = {LvUpLimit = 5,CostAdd = 0},
-		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1701008}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"},
-		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1701008}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"}
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1701008,Val = 20}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1701008,Val = 20}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"}
 	},
 	[1301009] = {
 		[1] = {LvUpLimit = 5,CostAdd = 0},
@@ -124,8 +124,8 @@ return{
 	},
 	[1302006] = {
 		[1] = {LvUpLimit = 5,CostAdd = 0},
-		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1701006}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"},
-		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1701006}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"}
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1701006,Val = 30}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1701006,Val = 30}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"}
 	},
 	[1302007] = {
 		[1] = {LvUpLimit = 5,CostAdd = 0},
@@ -134,8 +134,8 @@ return{
 	},
 	[1302008] = {
 		[1] = {LvUpLimit = 5,CostAdd = 0},
-		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1701008}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"},
-		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1701008}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"}
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1701008,Val = 20}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1701008,Val = 20}},ExpItemGroup = 1,Exp = 30,CostAdd = 0,Description = "技能突破描述"}
 	},
 	[1302009] = {
 		[1] = {LvUpLimit = 5,CostAdd = 0},
@@ -219,8 +219,8 @@ return{
 	},
 	[1303007] = {
 		[1] = {LvUpLimit = 5,CostAdd = 0},
-		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1702007}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
-		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1702007}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1702007,Val = 30}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1702007,Val = 30}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
 	},
 	[1303008] = {
 		[1] = {LvUpLimit = 5,CostAdd = 0},
@@ -291,5 +291,85 @@ return{
 		[1] = {LvUpLimit = 5,CostAdd = 0},
 		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1702021,Val = 20}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
 		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1702021,Val = 20}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304001] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304002] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304003] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304004] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304005] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304006] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304007] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304008] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304009] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304010] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304011] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304012] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304013] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304014] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304015] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
+	},
+	[1304016] = {
+		[1] = {LvUpLimit = 5,CostAdd = 0},
+		[2] = {LvUpLimit = 8,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 1,Description = "技能突破描述"},
+		[3] = {LvUpLimit = 10,Cost = {[1] = {Id = 1401002,Val = 50000}},ExpItemGroup = 1,Exp = 30,CostAdd = 2,Description = "技能突破描述"}
 	}
 }

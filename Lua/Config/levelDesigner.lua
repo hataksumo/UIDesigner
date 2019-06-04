@@ -823,36 +823,36 @@ return{
 	[42098] = {cardGroup = 42098,relic = 10390},--花-98
 	[42099] = {cardGroup = 42099,relic = 10395},--花-99
 	[42100] = {cardGroup = 42100,relic = 10400},--花-100
-	[43001] = {cardGroup = 43001,relic = 10010},--雪-1
-	[43002] = {cardGroup = 43002,relic = 10012},--雪-2
-	[43003] = {cardGroup = 43003,relic = 10014},--雪-3
-	[43004] = {cardGroup = 43004,relic = 10016},--雪-4
-	[43005] = {cardGroup = 43005,relic = 10018},--雪-5
-	[43006] = {cardGroup = 43006,relic = 10020},--雪-6
-	[43007] = {cardGroup = 43007,relic = 10022},--雪-7
-	[43008] = {cardGroup = 43008,relic = 10024},--雪-8
-	[43009] = {cardGroup = 43009,relic = 10026},--雪-9
-	[43010] = {cardGroup = 43010,relic = 10028},--雪-10
-	[43011] = {cardGroup = 43011,relic = 10030},--雪-11
-	[43012] = {cardGroup = 43012,relic = 10032},--雪-12
-	[43013] = {cardGroup = 43013,relic = 10034},--雪-13
-	[43014] = {cardGroup = 43014,relic = 10036},--雪-14
-	[43015] = {cardGroup = 43015,relic = 10038},--雪-15
-	[43016] = {cardGroup = 43016,relic = 10040},--雪-16
-	[43017] = {cardGroup = 43017,relic = 10042},--雪-17
-	[43018] = {cardGroup = 43018,relic = 10044},--雪-18
-	[43019] = {cardGroup = 43019,relic = 10046},--雪-19
-	[43020] = {cardGroup = 43020,relic = 10050},--雪-20
-	[43021] = {cardGroup = 43021,relic = 10055},--雪-21
-	[43022] = {cardGroup = 43022,relic = 10060},--雪-22
-	[43023] = {cardGroup = 43023,relic = 10065},--雪-23
-	[43024] = {cardGroup = 43024,relic = 10070},--雪-24
-	[43025] = {cardGroup = 43025,relic = 10075},--雪-25
-	[43026] = {cardGroup = 43026,relic = 10080},--雪-26
-	[43027] = {cardGroup = 43027,relic = 10085},--雪-27
-	[43028] = {cardGroup = 43028,relic = 10090},--雪-28
-	[43029] = {cardGroup = 43029,relic = 10095},--雪-29
-	[43030] = {cardGroup = 43030,relic = 10100},--雪-30
+	[43001] = {cardGroup = 43001,relic = 1},--雪-1
+	[43002] = {cardGroup = 43002,relic = 1},--雪-2
+	[43003] = {cardGroup = 43003,relic = 1},--雪-3
+	[43004] = {cardGroup = 43004,relic = 1},--雪-4
+	[43005] = {cardGroup = 43005,relic = 1},--雪-5
+	[43006] = {cardGroup = 43006,relic = 1},--雪-6
+	[43007] = {cardGroup = 43007,relic = 1},--雪-7
+	[43008] = {cardGroup = 43008,relic = 1},--雪-8
+	[43009] = {cardGroup = 43009,relic = 1},--雪-9
+	[43010] = {cardGroup = 43010,relic = 1},--雪-10
+	[43011] = {cardGroup = 43011,relic = 1},--雪-11
+	[43012] = {cardGroup = 43012,relic = 1},--雪-12
+	[43013] = {cardGroup = 43013,relic = 1},--雪-13
+	[43014] = {cardGroup = 43014,relic = 1},--雪-14
+	[43015] = {cardGroup = 43015,relic = 1},--雪-15
+	[43016] = {cardGroup = 43016,relic = 1},--雪-16
+	[43017] = {cardGroup = 43017,relic = 1},--雪-17
+	[43018] = {cardGroup = 43018,relic = 1},--雪-18
+	[43019] = {cardGroup = 43019,relic = 1},--雪-19
+	[43020] = {cardGroup = 43020,relic = 1},--雪-20
+	[43021] = {cardGroup = 43021,relic = 1},--雪-21
+	[43022] = {cardGroup = 43022,relic = 1},--雪-22
+	[43023] = {cardGroup = 43023,relic = 1},--雪-23
+	[43024] = {cardGroup = 43024,relic = 1},--雪-24
+	[43025] = {cardGroup = 43025,relic = 1},--雪-25
+	[43026] = {cardGroup = 43026,relic = 1},--雪-26
+	[43027] = {cardGroup = 43027,relic = 1},--雪-27
+	[43028] = {cardGroup = 43028,relic = 1},--雪-28
+	[43029] = {cardGroup = 43029,relic = 1},--雪-29
+	[43030] = {cardGroup = 43030,relic = 1},--雪-30
 	[43031] = {cardGroup = 43031,relic = 10105},--雪-31
 	[43032] = {cardGroup = 43032,relic = 10110},--雪-32
 	[43033] = {cardGroup = 43033,relic = 10115},--雪-33

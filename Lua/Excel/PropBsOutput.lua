@@ -129,6 +129,7 @@ local fn_calLevelProp = function()
 					finnalProp[loc].jlr.mon = {}
 					finnalProp[loc].jlr.mon.lv = couple.jlr.lv
 					finnalProp[loc].jlr.mon.id = couple.jlr.mon.id
+					finnalProp[loc].jlr.mon.skillLv = couple.jlr.mon.skillLv
 					finnalProp[loc].jlr.mon.bsFac = couple.jlr.mon.bsFac
 					finnalProp[loc].jlr.mon.rou = couple.jlr.mon.rou
 					finnalProp[loc].jlr.mon.note = couple.jlr.mon.desc
@@ -150,6 +151,7 @@ local fn_calLevelProp = function()
 					finnalProp[loc].shl.mon = {}
 					finnalProp[loc].shl.mon.lv = couple.shl.lv
 					finnalProp[loc].shl.mon.id = couple.shl.mon.id
+					finnalProp[loc].shl.mon.skillLv = couple.shl.mon.skillLv
 					finnalProp[loc].shl.mon.bsFac = couple.shl.mon.bsFac
 					finnalProp[loc].shl.mon.rou = couple.shl.mon.rou
 					finnalProp[loc].shl.mon.note = couple.shl.mon.desc
@@ -229,9 +231,17 @@ local fn_calLevelProp = function()
 					the_prop.HP =  math.floor(the_prop.HP * math.sqrt(data.mon.bsFac) * math.sqrt(data.mon.rou))
 					the_prop.Atk = math.floor(the_prop.Atk * math.sqrt(data.mon.bsFac) / math.sqrt(data.mon.rou))
 					monProp[loc][type].prop = the_prop
-					monProp[loc][type].id = data.mon.id
+					monProp[loc][type].monId = data.mon.id
+					monProp[loc][type].id = data.id
 					monProp[loc][type].note = data.mon.note
 					monProp[loc][type].lv = data.mon.lv
+					monProp[loc][type].skillLv = data.mon.skillLv
+
+					-- if lvId == 10103 then
+					-- 	print(string.format("lv = %d, monId = %d",lvId,data.id))
+					-- end
+
+					
 				end
 			end
 		end
@@ -261,7 +271,8 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 		for _loc,locData in ipairs(data) do
 			local couple = {locData.jlr,locData.shl}
 			for _i,sgCardData in ipairs(couple) do
-				if sgCardData then
+
+				if sgCardData.id then
 					local prop = sgCardData.prop
 					v_card_attr_sheet:set_valf("lvid",row,sgCardData.id)
 					v_card_attr_sheet:set_valf("loc",row,_loc)
@@ -285,24 +296,30 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 	row = 3
 	for _i,data in ipairs(v_monData) do
 		local monsters = {}
+		--print(data.lvId)
 		for _loc,locData in ipairs(data) do
-			local couple = {locData.jlr,locData.shl}
+			local couple = {locData.jlr or {},locData.shl or {}}
 			if locData.jlr then
 				monsters[_loc] = locData.jlr.note
 			end
-			for _i,sgMonData in ipairs(couple) do
-				if sgMonData then
+			for _j,sgMonData in ipairs(couple) do
+
+				if sgMonData.id then
 					local prop = sgMonData.prop
-					local monId = sgMonData.id
+					local monId = sgMonData.monId
 					local moncfgData = cfg_mon[monId]
-					v_mon_attr_sheet:set_valf("ID",row,data.lvId  * 100 + _loc*10 + _i)
-					--v_mon_attr_sheet:set_valf("loc",row,_loc)
-					v_mon_attr_sheet:set_vals("Des3",row,card_type_name[_i])
+					v_mon_attr_sheet:set_valf("ID",row,sgMonData.id)
+					v_mon_attr_sheet:set_vals("Des3",row,card_type_name[_j])
 					v_mon_attr_sheet:set_vals("Des4",row,moncfgData.name)
 					v_mon_attr_sheet:set_vals("#note",row,sgMonData.note)
 					v_mon_attr_sheet:set_val("Level",row,sgMonData.lv)
-					for _i,skillId in ipairs(moncfgData.skill) do
-						v_mon_attr_sheet:set_vali(string.format("Skill[%d]",_i),row,skillId)
+					for _k,skillId in ipairs(moncfgData.skill) do
+						v_mon_attr_sheet:set_vali(string.format("Skill[%d].Id",_k),row,skillId)
+						if _k == 1 then
+							v_mon_attr_sheet:set_vali(string.format("Skill[%d].Lv",_k),row,1)
+						else
+							v_mon_attr_sheet:set_vali(string.format("Skill[%d].Lv",_k),row,sgMonData.skillLv)
+						end
 					end
 					v_mon_attr_sheet:set_vali("RoleId",row,moncfgData.roleId)
 					if moncfgData.shl then
@@ -320,10 +337,10 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 						end
 					end
 
-					if _i == 1 and couple[2] then
+					if _j == 1 and couple[2].id then
 						v_mon_attr_sheet:set_vals("DefendGrostId",row,locData.shl.note)
 					end
-					v_mon_attr_sheet:set_vali("Type",row,_i)
+					v_mon_attr_sheet:set_vali("Type",row,_j)
 					row = row + 1
 				end
 			end
