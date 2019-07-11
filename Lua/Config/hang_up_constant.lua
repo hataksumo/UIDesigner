@@ -6,6 +6,7 @@ colums:
 primary key:
 #0 [挂机派遣常量]: ID
 ]]
+local _T = LangUtil.Language
 return{
-	[1] = {Time1 = 60,Time2 = 240,Time3 = 480,QuickPassNeedItem = 1604001,QuickPassNeedItemNum = 1,QuickPassReardTime = 120,RewardTime = 6,CostStamina = 0}
+	[1] = {Time1 = 60,Time2 = 240,Time3 = 480,QuickPassNeedItem = 1604001,QuickPassNeedItemNum = 1,QuickPassReardTime = 120,RewardTime = 1,CostStamina = 0}
 }

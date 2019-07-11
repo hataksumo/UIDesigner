@@ -6,6 +6,7 @@ colums:
 primary key:
 #0 [挂机派遣章节]: ChaId
 ]]
+local _T = LangUtil.Language
 return{
 	[301] = {Name = "第一章巡逻",NeedPlotLevel = 10109},
 	[302] = {Name = "第二章巡逻",NeedPlotLevel = 10209},

@@ -6,6 +6,7 @@ colums:
 primary key:
 #0 [技能突破碎片]: Group,Loc
 ]]
+local _T = LangUtil.Language
 return{
 	[1] = {
 		[1] = {DebrisId = 1701001,Exp = 1},

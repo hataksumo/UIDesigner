@@ -6,6 +6,7 @@ colums:
 primary key:
 #0 [卡牌定位]: ID
 ]]
+local _T = LangUtil.Language
 if ddt["card_tag"] ~= nil then
 	return ddt["card_tag"]
 end

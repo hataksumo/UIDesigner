@@ -6,6 +6,7 @@ colums:
 primary key:
 #0 [卡牌碎片]: ID
 ]]
+local _T = LangUtil.Language
 if ddt["card_debris"] ~= nil then
 	return ddt["card_debris"]
 end

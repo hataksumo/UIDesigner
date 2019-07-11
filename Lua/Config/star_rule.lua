@@ -6,6 +6,7 @@ colums:
 primary key:
 #0 [星级评分]: Id
 ]]
+local _T = LangUtil.Language
 return{
 	[1] = {Condition = 101,Param = {[1] = 1},Des = "消灭全部敌方单位",Mul = 1},--消灭全部敌人。参数: 1表示ture
 	[2] = {Condition = 102,Param = {[1] = 0.5},Des = "己方剩余血量超过%s%%",Mul = 100},--己方剩余血量百分比。参数: 剩余血量的百分比
@@ -14,5 +15,8 @@ return{
 	[5] = {Condition = 103,Param = {[1] = 8},Des = "战斗不超过%s回合",Mul = 1},--指定回合内消灭全部敌人。参数: 回合数值
 	[6] = {Condition = 104,Param = {[1] = 1},Des = "无红色守护灵上阵",Mul = 1},--限制守护灵颜色。参数: 守护灵的颜色类型id
 	[7] = {Condition = 104,Param = {[1] = 2},Des = "无黄色守护灵上阵",Mul = 1},--限制守护灵颜色。参数: 守护灵的颜色类型id
-	[8] = {Condition = 104,Param = {[1] = 3},Des = "无蓝色守护灵上阵",Mul = 1}--限制守护灵颜色。参数: 守护灵的颜色类型id
+	[8] = {Condition = 104,Param = {[1] = 3},Des = "无蓝色守护灵上阵",Mul = 1},--限制守护灵颜色。参数: 守护灵的颜色类型id
+	[9] = {Condition = 103,Param = {[1] = 1},Des = "%s回合过关",Mul = 1},--1回合过关
+	[10] = {Condition = 103,Param = {[1] = 3},Des = "%s回合过关",Mul = 1},--3回合过关
+	[11] = {Condition = 103,Param = {[1] = 5},Des = "%s回合过关",Mul = 1}--5回合过关
 }

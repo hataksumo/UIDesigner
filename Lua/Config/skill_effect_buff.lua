@@ -6,6 +6,7 @@ colums:
 primary key:
 #0 [技能Buff]: ID
 ]]
+local _T = LangUtil.Language
 return{
 	[4001] = {Name = "禁锢",BuffIcon = "icon_1305014",Des = "禁止行动"},--禁锢
 	[4003] = {Name = "禁止召唤",BuffIcon = "icon_1305012",Des = "禁止召唤守护灵"},--禁止召唤
@@ -51,7 +52,7 @@ return{
 	[4044] = {Name = "驱散正面效果"},--驱散正面效果
 	[4045] = {Name = "驱散负面效果"},--驱散负面效果
 	[4046] = {Name = "降低格挡率"},--降低格挡率
-	[4047] = {Name = "抵挡技能护盾",BuffIcon = "icon_1305003",Des = "抵挡技能伤害"},--抵挡技能护盾
+	[4047] = {Name = "抵挡技能护盾",BuffIcon = "icon_1305003",Des = "完全抵挡技能伤害"},--抵挡技能护盾
 	[4101] = {Name = "风神印记",BuffIcon = "icon_1305022",Des = "风神印记"},--风神印记
 	[4102] = {Name = "北落师门印记",BuffIcon = "icon_1305017"},--北落师门印记
 	[4103] = {Name = "盖文印记",BuffIcon = "icon_1305020",Des = "龙王印记"},--盖文印记

@@ -13,11 +13,19 @@ local fn_calLevelProp = function()
 
 	local propHash = {}
 
+	--print(dscfg_cardGroup[21014][1].shl.mon.suffer)
+
+
 	--初始化卡牌数值
 	local fn_iniCardProp = function(card_id)
 		local Prop = CreatePropTable()
 		local propKey= {"Atk","Def","HP","Crit","CritRate","EffectHit","EffectResist","Block","DefIgnor","R"}
 		local cardInfo = cfg_card[card_id]
+
+		if not cardInfo then
+			print("can't find the card id "..card_id)
+		end
+
 		for i,key in ipairs(propKey) do
 			Prop[key] = Prop[key] + cardInfo[key]
 		end
@@ -36,6 +44,10 @@ local fn_calLevelProp = function()
 		local cardbk_info = card_info.hells[v_cfg.bklv]
 		local cardstar_info = card_info.stars[v_cfg.star]
 		local hell_info = cfg_hell_name[v_cType][v_cfg.bklv]
+
+		if not hell_info then
+			print(string.format("hell_info is nil, note = %s, v_cfg.bklv = %d",v_cfg.mon.note,v_cfg.bklv))
+		end
 
 		local hpid = 103
 		local atkid = 101
@@ -71,7 +83,7 @@ local fn_calLevelProp = function()
 		local relicProp = CreatePropTable()
 		for _i,val in ipairs(v_cfg) do
 			local lvCfg = cfg_relic_body[_i].Lvs[val.lv]
-			if lvCfg then
+			if lvCfg and lvCfg.Prop then
 				local relicMask = cfg_relic_attr_condition[cfg_relic_body[_i].Condition].mask[1]
 				for _j,theprop in ipairs(lvCfg.Prop) do
 					relicProp[theprop.id] = relicProp[theprop.id] + theprop.val
@@ -130,8 +142,8 @@ local fn_calLevelProp = function()
 					finnalProp[loc].jlr.mon.lv = couple.jlr.lv
 					finnalProp[loc].jlr.mon.id = couple.jlr.mon.id
 					finnalProp[loc].jlr.mon.skillLv = couple.jlr.mon.skillLv
-					finnalProp[loc].jlr.mon.bsFac = couple.jlr.mon.bsFac
-					finnalProp[loc].jlr.mon.rou = couple.jlr.mon.rou
+					finnalProp[loc].jlr.mon.suffer = couple.jlr.mon.suffer
+					finnalProp[loc].jlr.mon.exert = couple.jlr.mon.exert
 					finnalProp[loc].jlr.mon.note = couple.jlr.mon.desc
 				end
 				if not couple.jlr.cardId then
@@ -152,8 +164,8 @@ local fn_calLevelProp = function()
 					finnalProp[loc].shl.mon.lv = couple.shl.lv
 					finnalProp[loc].shl.mon.id = couple.shl.mon.id
 					finnalProp[loc].shl.mon.skillLv = couple.shl.mon.skillLv
-					finnalProp[loc].shl.mon.bsFac = couple.shl.mon.bsFac
-					finnalProp[loc].shl.mon.rou = couple.shl.mon.rou
+					finnalProp[loc].shl.mon.exert = couple.shl.mon.exert
+					finnalProp[loc].shl.mon.suffer = couple.shl.mon.suffer
 					finnalProp[loc].shl.mon.note = couple.shl.mon.desc
 				end
 				if not couple.shl.cardId then
@@ -199,6 +211,8 @@ local fn_calLevelProp = function()
 		--处理神器数据
 		for loc,couple in ipairs(cardGroupData) do
 			if couple.jlr then
+				local the_data = couple.jlr
+				local the_prop = finnalProp[loc].jlr.prop
 				if not dscfg_relicGroup[relicGroup] then
 					print("can't find the relicGroup ",relicGroup)
 				end
@@ -225,11 +239,19 @@ local fn_calLevelProp = function()
 					monProp[loc][type] ={}
 					local the_prop = CreatePropTable()
 					the_prop = the_prop + data.prop
-					if data.mon.bsFac == nil or data.mon.rou == nil then
-						print(string.format("lv:%d-%d-%s is wrong",lvId,loc,type))
+					--the_prop.HP =  math.floor(the_prop.HP * math.sqrt(data.mon.bsFac) * math.sqrt(data.mon.rou))
+					--the_prop.Atk = math.floor(the_prop.Atk * math.sqrt(data.mon.bsFac) / math.sqrt(data.mon.rou))
+					if data.mon.suffer == nil or data.mon.exert == nil then
+						print(string.format("lv:%d-%d-%s id：%d is wrong",lvId,loc,type,data.id))
 					end
-					the_prop.HP =  math.floor(the_prop.HP * math.sqrt(data.mon.bsFac) * math.sqrt(data.mon.rou))
-					the_prop.Atk = math.floor(the_prop.Atk * math.sqrt(data.mon.bsFac) / math.sqrt(data.mon.rou))
+
+					local hp = math.floor(the_prop.Atk * data.mon.suffer)
+					local def = math.floor(the_prop.Atk / 2)
+					local atk = math.floor(the_prop.HP / data.mon.exert * (the_prop.R + def) / the_prop.R)
+					the_prop.HP = hp
+					the_prop.Atk = atk
+					the_prop.Def = def
+
 					monProp[loc][type].prop = the_prop
 					monProp[loc][type].monId = data.mon.id
 					monProp[loc][type].id = data.id
@@ -280,7 +302,9 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 					v_card_attr_sheet:set_vals("name",row,cfg_card[sgCardData.cardId].Name)
 					local bs = 0
 					for key,propCfgData in pairs(cfg_prop) do
-						v_card_attr_sheet:set_valf(propCfgData.EnName,row,prop[propCfgData.EnName])
+						if propCfgData.IsMonProp then
+							v_card_attr_sheet:set_valf(propCfgData.EnName,row,prop[propCfgData.EnName])
+						end
 						bs = bs + propCfgData.BsFactor * prop[propCfgData.EnName]
 					end
 					bs = bs - cfg_global.DefaultCritDmg * cfg_prop[105].BsFactor
@@ -308,6 +332,10 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 					local prop = sgMonData.prop
 					local monId = sgMonData.monId
 					local moncfgData = cfg_mon[monId]
+
+					if not monId then
+						print("can't find sgMonData.id ",sgMonData.id)
+					end
 					v_mon_attr_sheet:set_valf("ID",row,sgMonData.id)
 					v_mon_attr_sheet:set_vals("Des3",row,card_type_name[_j])
 					v_mon_attr_sheet:set_vals("Des4",row,moncfgData.name)
@@ -332,7 +360,7 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 					end
 					
 					for key,propCfgData in pairs(cfg_prop) do
-						if propCfgData.IsFinal then
+						if propCfgData.IsFinal and propCfgData.IsMonProp then
 							v_mon_attr_sheet:set_valf(propCfgData.EnName,row,prop[propCfgData.EnName])
 						end
 					end

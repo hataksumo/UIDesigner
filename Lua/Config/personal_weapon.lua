@@ -15,7 +15,7 @@ return{
 		CardId = 1102001,
 		Name = "青龙偃月刀",
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 21735},[2] = {id = 112,val = 10867},[3] = {id = 113,val = 10867}},
+		Prop = {[1] = {id = 111,val = 11672},[2] = {id = 112,val = 5836},[3] = {id = 113,val = 5836}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611001,val = 30}},
 		Icon = "ui_dtex_Equip_1501001",
 		Strength = {
@@ -93,7 +93,7 @@ return{
 		CardId = 1102002,
 		Name = "碎岩",
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 6375},[2] = {id = 112,val = 15939},[3] = {id = 113,val = 15939}},
+		Prop = {[1] = {id = 111,val = 3441},[2] = {id = 112,val = 8604},[3] = {id = 113,val = 8604}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611002,val = 30}},
 		Icon = "ui_dtex_Equip_1501002",
 		Strength = {
@@ -171,7 +171,7 @@ return{
 		CardId = 1102003,
 		Name = "狂鲨铁戟",
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 22952},[2] = {id = 112,val = 8925},[3] = {id = 113,val = 6375}},
+		Prop = {[1] = {id = 111,val = 12391},[2] = {id = 112,val = 4818},[3] = {id = 113,val = 3441}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611003,val = 30}},
 		Icon = "ui_dtex_Equip_1501003",
 		Strength = {
@@ -249,7 +249,7 @@ return{
 		CardId = 1102004,
 		Name = "天坠灭星",
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 25502},[2] = {id = 112,val = 3477},[3] = {id = 113,val = 5796}},
+		Prop = {[1] = {id = 111,val = 13169},[2] = {id = 112,val = 1795},[3] = {id = 113,val = 2993}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611004,val = 30}},
 		Icon = "ui_dtex_Equip_1501004",
 		Strength = {
@@ -327,7 +327,7 @@ return{
 		CardId = 1102005,
 		Name = "清风化煞",
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 6375},[2] = {id = 112,val = 12751},[3] = {id = 113,val = 19126}},
+		Prop = {[1] = {id = 111,val = 3441},[2] = {id = 112,val = 6883},[3] = {id = 113,val = 10325}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611005,val = 30}},
 		Icon = "ui_dtex_Equip_1501005",
 		Strength = {
@@ -405,7 +405,7 @@ return{
 		CardId = 1102006,
 		Name = "破军",
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 21735},[2] = {id = 112,val = 14490},[3] = {id = 113,val = 7245}},
+		Prop = {[1] = {id = 111,val = 11672},[2] = {id = 112,val = 7781},[3] = {id = 113,val = 3890}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611006,val = 30}},
 		Icon = "ui_dtex_Equip_1501006",
 		Strength = {
@@ -483,7 +483,7 @@ return{
 		CardId = 1102007,
 		Name = "阿尔法拉",
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 17851},[2] = {id = 112,val = 10200},[3] = {id = 113,val = 10200}},
+		Prop = {[1] = {id = 111,val = 9637},[2] = {id = 112,val = 5507},[3] = {id = 113,val = 5507}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611007,val = 30}},
 		Icon = "ui_dtex_Equip_1501007",
 		Strength = {
@@ -561,7 +561,7 @@ return{
 		CardId = 1102008,
 		Name = "娑伽罗之刃",
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 28980},[2] = {id = 112,val = 7245},[3] = {id = 113,val = 7245}},
+		Prop = {[1] = {id = 111,val = 15563},[2] = {id = 112,val = 3890},[3] = {id = 113,val = 3890}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611008,val = 30}},
 		Icon = "ui_dtex_Equip_1501008",
 		Strength = {
@@ -639,7 +639,7 @@ return{
 		CardId = 1102009,
 		Name = "白龙",
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 7245},[2] = {id = 112,val = 21735},[3] = {id = 113,val = 14490}},
+		Prop = {[1] = {id = 111,val = 3890},[2] = {id = 112,val = 11672},[3] = {id = 113,val = 7781}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611009,val = 30}},
 		Icon = "ui_dtex_Equip_1501009",
 		Strength = {
@@ -717,7 +717,7 @@ return{
 		CardId = 1102010,
 		Name = "流光·幻影",
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 21735},[2] = {id = 112,val = 10867},[3] = {id = 113,val = 10867}},
+		Prop = {[1] = {id = 111,val = 11672},[2] = {id = 112,val = 5836},[3] = {id = 113,val = 5836}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611010,val = 30}},
 		Icon = "ui_dtex_Equip_1501010",
 		Strength = {
@@ -795,7 +795,7 @@ return{
 		CardId = 1102011,
 		Name = "丈八蛇矛",
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 11592},[2] = {id = 112,val = 7245},[3] = {id = 113,val = 24633}},
+		Prop = {[1] = {id = 111,val = 6225},[2] = {id = 112,val = 3890},[3] = {id = 113,val = 13229}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611011,val = 30}},
 		Icon = "ui_dtex_Equip_1501011",
 		Strength = {
@@ -873,7 +873,7 @@ return{
 		CardId = 1102012,
 		Name = "鬼哭地狱",
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 14490},[2] = {id = 112,val = 14490},[3] = {id = 113,val = 14490}},
+		Prop = {[1] = {id = 111,val = 7781},[2] = {id = 112,val = 7781},[3] = {id = 113,val = 7781}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611012,val = 30}},
 		Icon = "ui_dtex_Equip_1501012",
 		Strength = {
@@ -951,7 +951,7 @@ return{
 		CardId = 1102013,
 		Name = "暴食之爪",
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 23184},[2] = {id = 112,val = 5796},[3] = {id = 113,val = 5796}},
+		Prop = {[1] = {id = 111,val = 11972},[2] = {id = 112,val = 2993},[3] = {id = 113,val = 2993}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611013,val = 30}},
 		Icon = "ui_dtex_Equip_1501013",
 		Strength = {
@@ -1029,7 +1029,7 @@ return{
 		CardId = 1102014,
 		Name = "镔铁盘龙棍",
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 19126},[2] = {id = 112,val = 12751},[3] = {id = 113,val = 6375}},
+		Prop = {[1] = {id = 111,val = 10325},[2] = {id = 112,val = 6883},[3] = {id = 113,val = 3441}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611014,val = 30}},
 		Icon = "ui_dtex_Equip_1501014",
 		Strength = {
@@ -1107,7 +1107,7 @@ return{
 		CardId = 1102015,
 		Name = "恶灵灾祸",
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 11592},[2] = {id = 112,val = 11592},[3] = {id = 113,val = 11592}},
+		Prop = {[1] = {id = 111,val = 5986},[2] = {id = 112,val = 5986},[3] = {id = 113,val = 5986}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611015,val = 30}},
 		Icon = "ui_dtex_Equip_1501015",
 		Strength = {
@@ -1185,7 +1185,7 @@ return{
 		CardId = 1102016,
 		Name = "诸神的裁决",
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 7245},[2] = {id = 112,val = 21735},[3] = {id = 113,val = 14490}},
+		Prop = {[1] = {id = 111,val = 3890},[2] = {id = 112,val = 11672},[3] = {id = 113,val = 7781}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611016,val = 30}},
 		Icon = "ui_dtex_Equip_1501016",
 		Strength = {
@@ -1263,7 +1263,7 @@ return{
 		CardId = 1102017,
 		Name = "黑色死神",
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 25502},[2] = {id = 112,val = 6375},[3] = {id = 113,val = 6375}},
+		Prop = {[1] = {id = 111,val = 13767},[2] = {id = 112,val = 3441},[3] = {id = 113,val = 3441}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611017,val = 30}},
 		Icon = "ui_dtex_Equip_1501017",
 		Strength = {
@@ -1341,7 +1341,7 @@ return{
 		CardId = 1102018,
 		Name = "致命掠夺",
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 23184},[2] = {id = 112,val = 5796},[3] = {id = 113,val = 5796}},
+		Prop = {[1] = {id = 111,val = 11972},[2] = {id = 112,val = 2993},[3] = {id = 113,val = 2993}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611018,val = 30}},
 		Icon = "ui_dtex_Equip_1501018",
 		Strength = {
@@ -1400,7 +1400,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611018,val = 5}},PSkill = 130301809,PSkillLevel = 1},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611018,val = 5}},PSkill = 130301811,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609106,val = 2},[3] = {id = 1611018,val = 5}},Prop = {[1] = {id = 104,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609106,val = 2},[3] = {id = 1611018,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609106,val = 2},[3] = {id = 1611018,val = 10}},Prop = {[1] = {id = 109,val = 0.15}}},
@@ -1419,7 +1419,7 @@ return{
 		CardId = 1102019,
 		Name = "火焰克星",
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 9273},[2] = {id = 112,val = 13910},[3] = {id = 113,val = 11592}},
+		Prop = {[1] = {id = 111,val = 4788},[2] = {id = 112,val = 7183},[3] = {id = 113,val = 5986}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611019,val = 30}},
 		Icon = "ui_dtex_Equip_1501019",
 		Strength = {
@@ -1478,7 +1478,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611019,val = 5}},PSkill = 130301909,PSkillLevel = 1},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611019,val = 5}},PSkill = 130301911,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609106,val = 2},[3] = {id = 1611019,val = 5}},Prop = {[1] = {id = 109,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609106,val = 2},[3] = {id = 1611019,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609106,val = 2},[3] = {id = 1611019,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
@@ -1497,7 +1497,7 @@ return{
 		CardId = 1102020,
 		Name = "百战陷阵枪",
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 25502},[2] = {id = 112,val = 6375},[3] = {id = 113,val = 6375}},
+		Prop = {[1] = {id = 111,val = 13767},[2] = {id = 112,val = 3441},[3] = {id = 113,val = 3441}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611020,val = 30}},
 		Icon = "ui_dtex_Equip_1501020",
 		Strength = {
@@ -1575,7 +1575,7 @@ return{
 		CardId = 1102021,
 		Name = "断灭一闪",
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 17388},[2] = {id = 112,val = 8694},[3] = {id = 113,val = 8694}},
+		Prop = {[1] = {id = 111,val = 8979},[2] = {id = 112,val = 4489},[3] = {id = 113,val = 4489}},
 		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611021,val = 30}},
 		Icon = "ui_dtex_Equip_1501021",
 		Strength = {
@@ -1634,7 +1634,7 @@ return{
 		Unseal = {
 			[1] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 111,val = 100}}},
 			[2] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609106,val = 1}},Prop = {[1] = {id = 113,val = 1000}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611021,val = 5}},PSkill = 130302109,PSkillLevel = 1},
+			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1609106,val = 1},[3] = {id = 1611021,val = 5}},PSkill = 130302111,PSkillLevel = 1},
 			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1609106,val = 2},[3] = {id = 1611021,val = 5}},Prop = {[1] = {id = 108,val = 0.15}}},
 			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1609106,val = 2},[3] = {id = 1611021,val = 10}},Prop = {[1] = {id = 110,val = 0.15}}},
 			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1609106,val = 2},[3] = {id = 1611021,val = 10}},Prop = {[1] = {id = 108,val = 0.15}}},
