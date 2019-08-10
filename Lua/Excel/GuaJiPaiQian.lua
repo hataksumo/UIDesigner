@@ -1,7 +1,7 @@
-
 local fn_output_drop = function(v_dropDsSheet,v_dropGroupSheet,v_dropSheet,v_exploreSheet)
 	local exploreDropDs = dofile"Config//exploreDropDs"
 	local exploreDs = dofile"Config//exploreDs"
+	local cfg_item = dofile"Config//item"
 	local groupId = 6000
 	local dropId = 1
 	local groupRowBg = 3
@@ -21,9 +21,9 @@ local fn_output_drop = function(v_dropDsSheet,v_dropGroupSheet,v_dropSheet,v_exp
 		for j,awardNum in ipairs(rowData.Award1) do
 			v_dropSheet:set_vali("ID",dropRow,dropId)
 			v_dropSheet:set_vali("GroupId",dropRow,groupId)
-			v_dropSheet:set_vals("#note",dropRow,string.format("%s-%sx%d",groupNote,exploreDropDs[1][j].name,awardNum))
-			v_dropSheet:set_vali("Item.id",dropRow,exploreDropDs[1][j].id)
-			v_dropSheet:set_vali("Item.type",dropRow,exploreDropDs[1][j].itemType)
+			local item_id = exploreDropDs[1][j]
+			v_dropSheet:set_vals("#note",dropRow,string.format("%s-%sx%d",groupNote,cfg_item[item_id].Name,awardNum))
+			v_dropSheet:set_vali("Item.id",dropRow,item_id)
 			v_dropSheet:set_vali("Item.numMin",dropRow,awardNum)
 			v_dropSheet:set_vali("Item.numMax",dropRow,awardNum)
 			v_dropSheet:set_vali("Weight",dropRow,10000)
@@ -42,9 +42,9 @@ local fn_output_drop = function(v_dropDsSheet,v_dropGroupSheet,v_dropSheet,v_exp
 			if awardNum > 0 then
 				v_dropSheet:set_vali("ID",dropRow,dropId)
 				v_dropSheet:set_vali("GroupId",dropRow,groupId)
-				v_dropSheet:set_vals("#note",dropRow,string.format("%s-%sx%.2f%%",groupNote,exploreDropDs[6][j].name,awardNum * 100))
-				v_dropSheet:set_vali("Item.id",dropRow,exploreDropDs[6][j].id)
-				v_dropSheet:set_vali("Item.type",dropRow,exploreDropDs[6][j].itemType)
+				local item_id = exploreDropDs[6][j]
+				v_dropSheet:set_vals("#note",dropRow,string.format("%s-%sx%.2f%%",groupNote,cfg_item[item_id].Name,awardNum * 100))
+				v_dropSheet:set_vali("Item.id",dropRow,item_id)
 				v_dropSheet:set_vali("Item.numMin",dropRow,1)
 				v_dropSheet:set_vali("Item.numMax",dropRow,1)
 				v_dropSheet:set_vali("Weight",dropRow,math.floor(10000 * awardNum))
@@ -70,9 +70,9 @@ local fn_output_drop = function(v_dropDsSheet,v_dropGroupSheet,v_dropSheet,v_exp
 			if awardNum > 0 then
 				v_dropSheet:set_vali("ID",dropRow,dropId)
 				v_dropSheet:set_vali("GroupId",dropRow,groupId)
-				v_dropSheet:set_vals("#note",dropRow,string.format("%s-%sx%.2f%%",groupNote,exploreDropDs[20][j].name,awardNum * 100))
-				v_dropSheet:set_vali("Item.id",dropRow,exploreDropDs[20][j].id)
-				v_dropSheet:set_vali("Item.type",dropRow,exploreDropDs[20][j].itemType)
+				local item_id = exploreDropDs[20][j]
+				v_dropSheet:set_vals("#note",dropRow,string.format("%s-%sx%.2f%%",groupNote,cfg_item[item_id].Name,awardNum * 100))
+				v_dropSheet:set_vali("Item.id",dropRow,item_id)
 				v_dropSheet:set_vali("Item.numMin",dropRow,1)
 				v_dropSheet:set_vali("Item.numMax",dropRow,1)
 				v_dropSheet:set_vali("Weight",dropRow, math.floor(10000 * awardNum))
@@ -116,7 +116,8 @@ local fn_output_drop = function(v_dropDsSheet,v_dropGroupSheet,v_dropSheet,v_exp
 		for j,theType in ipairs(awardType) do
 			for k,num in ipairs(rowData[theType]) do
 				if num > 0 then
-					local name = exploreDropDs[Intevals[j]][k].name
+					local item_id = exploreDropDs[Intevals[j]][k]
+					local name = cfg_item[item_id].Name
 					local idVar = string.format("DropShow[%d].Id",showIdx)
 					local descVar = string.format("DropShow[%d].Desc",showIdx)
 					v_exploreSheet:set_vals(idVar,exploreRow,name)
@@ -128,7 +129,151 @@ local fn_output_drop = function(v_dropDsSheet,v_dropGroupSheet,v_dropSheet,v_exp
 		end
 		exploreRow = exploreRow + 1
 	end
+	return groupRowBg,dropRow
+end
 
+local fn_output_eqp_drop = function(v_dropGroupSheet,v_dropSheet,v_groupRowBg,v_dropRow)
+	local cfg_drop_cha = dofile "Config\\equipDropCha"
+	local cfg_equip_drop = dofile "Config\\equipDrop"
+	local cfg_equip_group = dofile "Config\\equipGroupDs"
+	local cfg_item = dofile "Config\\item"
+	local cfg_eqp = dofile "Config\\eqp"
+	local drops = {}
+	drops[1] = {}
+	drops[2] = {}
+	local fields = {"DropQua","ForgeQua"}
+	for chaId=1,#cfg_drop_cha do
+		for _type=1,#drops do
+			drops[_type][chaId] = {}
+			if _type == 1 then
+				drops[_type][chaId].eqps = {}
+				drops[_type][chaId].sum = 0
+			elseif _type == 2 then
+				for pos=1,8 do
+					drops[_type][chaId][pos] = {}
+					drops[_type][chaId][pos].eqps = {}
+					drops[_type][chaId][pos].sum = 0
+				end
+			end
+
+			--print(string.format("drops[%d][%d].New()",_type,chaId))
+			local the_cha = cfg_drop_cha[chaId]
+			for LvId=1,#(the_cha.Equip) do
+				local prob = the_cha.Equip[LvId]
+				if prob > 0 then
+					for qua = 1,5 do
+						local quaDrop = cfg_equip_drop[LvId][fields[_type]][qua]
+						--把所有该等级段LvId和品质qua的装备加入组
+						local the_eqps = cfg_equip_group[LvId][qua]
+						if the_eqps and quaDrop > 0 then
+							for _i,the_suit in ipairs(the_eqps) do
+								for _loc,data in ipairs(the_suit) do
+									local the_weight = prob * quaDrop
+									if the_weight > 0 then
+										if _type==1 then
+											table.insert(drops[_type][chaId].eqps,{id = data.Id,weight = the_weight})
+											drops[_type][chaId].sum = drops[_type][chaId].sum + the_weight
+										elseif _type==2 and data.Rare ~= true then
+											local the_eqp = cfg_eqp[data.Id]
+											table.insert(drops[_type][chaId][the_eqp.Pos].eqps,{id = data.Id,weight = the_weight})
+											drops[_type][chaId][the_eqp.Pos].sum = drops[_type][chaId][the_eqp.Pos].sum + the_weight
+										end
+									end
+									
+								end
+							end
+						end
+					end
+				end
+			end
+
+			if _type == 1 then
+				local weight = drops[_type][chaId].sum
+				drops[_type][chaId].sum = 10000
+				local weight1 = 10000
+				for i=1,#drops[_type][chaId].eqps do
+					if i > 1 then
+						drops[_type][chaId].eqps[i].weight = math.floor(drops[_type][chaId].eqps[i].weight / weight * 10000,0)
+						weight1 = weight1 - drops[_type][chaId].eqps[i].weight
+					end
+				end
+				if #drops[_type][chaId].eqps > 0 then
+					drops[_type][chaId].eqps[1].weight = weight1
+				end
+			elseif _type == 2 then
+				for loc = 1,8 do
+					local weight = drops[_type][chaId][loc].sum
+					drops[_type][chaId].sum = 10000
+					local weight1 = 10000
+					for i=1,#drops[_type][chaId][loc].eqps do
+						if i > 1 then
+							drops[_type][chaId][loc].eqps[i].weight = math.floor(drops[_type][chaId][loc].eqps[i].weight / weight * 10000,0)
+							weight1 = weight1 - drops[_type][chaId][loc].eqps[i].weight
+						end
+					end
+					if #drops[_type][chaId][loc].eqps > 0 then
+						drops[_type][chaId][loc].eqps[1].weight = weight1
+					end
+				end
+			end
+
+
+		end
+	end
+	local groupRowBg = v_groupRowBg
+	dropRow = v_dropRow
+
+	--处理掉落
+	for chaId,dropSet in ipairs(drops[1]) do
+		v_dropGroupSheet:set_vals("#note",groupRowBg,string.format("%d章装备掉落",chaId))
+		v_dropGroupSheet:set_vali("ID",groupRowBg,8000+chaId)
+		v_dropGroupSheet:set_vali("GroupType",groupRowBg,2)
+		v_dropGroupSheet:set_vali("Weight",groupRowBg,10000)
+		groupRowBg = groupRowBg + 1
+	end
+
+	for chaId,dropSet in ipairs(drops[1]) do
+		for _loc,data in ipairs(dropSet.eqps) do
+			v_dropSheet:set_vali("GroupId",dropRow,8000+chaId)
+			local eqpName = cfg_item[data.id].Name
+			v_dropSheet:set_vals("#note",dropRow,string.format("%d章-%s",chaId,eqpName))
+			v_dropSheet:set_vali("Item.id",dropRow,data.id)
+			v_dropSheet:set_vali("Item.numMin",dropRow,1)
+			v_dropSheet:set_vali("Item.numMax",dropRow,1)
+			v_dropSheet:set_vali("Weight",dropRow,data.weight)
+			dropRow = dropRow + 1
+		end
+	end
+	--处理熔炼
+	for chaId,set in ipairs(drops[2]) do
+		for pos=1,8 do
+			local dropSet = set[pos]
+			v_dropGroupSheet:set_vals("#note",groupRowBg,string.format("%d级-pos%d-锻造",chaId*10,pos))
+			v_dropGroupSheet:set_vali("ID",groupRowBg,9000+chaId*10+pos)
+			v_dropGroupSheet:set_vali("GroupType",groupRowBg,2)
+			v_dropGroupSheet:set_vali("Weight",groupRowBg,10000)
+			groupRowBg = groupRowBg + 1
+		end
+	end
+
+	for chaId,set in ipairs(drops[2]) do
+		for pos=1,8 do
+			local dropSet = set[pos]
+			for _loc,data in ipairs(dropSet.eqps) do
+				v_dropSheet:set_vali("GroupId",dropRow,9000+chaId*10+pos)
+				local eqpName = cfg_item[data.id].Name
+				v_dropSheet:set_vals("#note",dropRow,string.format("%d级-pos%d-%s",chaId*10,pos,eqpName))
+				v_dropSheet:set_vali("Item.id",dropRow,data.id)
+				v_dropSheet:set_vali("Item.numMin",dropRow,1)
+				v_dropSheet:set_vali("Item.numMax",dropRow,1)
+				v_dropSheet:set_vali("Weight",dropRow,data.weight)
+				dropRow = dropRow + 1
+			end
+		end
+		
+	end
+	
+	return groupRowBg,dropRow
 end
 
 
@@ -139,7 +284,9 @@ local fn_output_excel = function()
 	local dropGroupSheet = book:get_sheet("掉落组")
 	local dropSheet = book:get_sheet("掉落")
 	local exploreSheet = book:get_sheet("挂机派遣")
-	fn_output_drop(dropDsSheet,dropGroupSheet,dropSheet,exploreSheet)
+	local groupRowBg,dropRow = fn_output_drop(dropDsSheet,dropGroupSheet,dropSheet,exploreSheet)
+	groupRowBg,dropRow = fn_output_eqp_drop(dropGroupSheet,dropSheet,groupRowBg,dropRow)
+
 	book:save(MyTools.OutputExcelPath.."GuaJiPaiQian.xlsx")
 end
 

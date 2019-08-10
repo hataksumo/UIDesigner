@@ -139,58 +139,58 @@ return{
 	},
 	[10201] = {
 		[1] = {
-			jlr = {cha = "pt-2",id = 1020110,cardId = 1101041,lv = 10,bklv = 1,star = 1,mon = {id = 208,desc = "pt-2-1-jlr-loc1",skillLv = 1,exert = 5,suffer = 5}},
-			shl = {cha = "pt-2",id = 1020111,cardId = 1102050,lv = 5,bklv = 1,star = 1}
+			jlr = {cha = "pt-2",id = 1020110,cardId = 1101041,lv = 6,bklv = 1,star = 1,mon = {id = 262,desc = "pt-2-1-jlr-loc1",skillLv = 1,exert = 5,suffer = 5}},
+			shl = {cha = "pt-2",id = 1020111,cardId = 1102050,lv = 6,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-2",id = 1020120,cardId = 1101002,lv = 10,bklv = 1,star = 1,mon = {id = 208,desc = "pt-2-1-jlr-loc2",skillLv = 1,exert = 5,suffer = 12}},
-			shl = {cha = "pt-2",id = 1020121,cardId = 1102004,lv = 5,bklv = 1,star = 1}
+			jlr = {cha = "pt-2",id = 1020120,cardId = 1101002,lv = 8,bklv = 1,star = 1,mon = {id = 273,desc = "pt-2-1-jlr-loc2",skillLv = 1,exert = 5,suffer = 12}},
+			shl = {cha = "pt-2",id = 1020121,cardId = 1102004,lv = 8,bklv = 1,star = 1}
 		},
 		[3] = {
-			jlr = {cha = "pt-2",id = 1020130,cardId = 1101001,lv = 10,bklv = 1,star = 1,mon = {id = 208,desc = "pt-2-1-jlr-loc3",skillLv = 1,exert = 5,suffer = 5}},
-			shl = {cha = "pt-2",id = 1020131,cardId = 1102015,lv = 5,bklv = 1,star = 1}
+			jlr = {cha = "pt-2",id = 1020130,cardId = 1101001,lv = 6,bklv = 1,star = 1,mon = {id = 280,desc = "pt-2-1-jlr-loc3",skillLv = 1,exert = 5,suffer = 5}},
+			shl = {cha = "pt-2",id = 1020131,cardId = 1102015,lv = 6,bklv = 1,star = 1}
 		}
 	},
 	[10202] = {
 		[1] = {
-			jlr = {cha = "pt-2",id = 1020210,cardId = 1101041,lv = 10,bklv = 1,star = 1,mon = {id = 208,desc = "pt-2-2-jlr-loc1",skillLv = 1,exert = 5,suffer = 5}},
-			shl = {cha = "pt-2",id = 1020211,cardId = 1102050,lv = 5,bklv = 1,star = 1}
+			jlr = {cha = "pt-2",id = 1020210,cardId = 1101041,lv = 7,bklv = 1,star = 1,mon = {id = 261,desc = "pt-2-2-jlr-loc1",skillLv = 1,exert = 5,suffer = 5}},
+			shl = {cha = "pt-2",id = 1020211,cardId = 1102050,lv = 7,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-2",id = 1020220,cardId = 1101002,lv = 10,bklv = 1,star = 1,mon = {id = 208,desc = "pt-2-2-jlr-loc2",skillLv = 1,exert = 6,suffer = 6}},
-			shl = {cha = "pt-2",id = 1020221,cardId = 1102004,lv = 5,bklv = 1,star = 1,mon = {id = 231,desc = "pt-2-2-shl-loc2",skillLv = 1,exert = 7,suffer = 9}}
+			jlr = {cha = "pt-2",id = 1020220,cardId = 1101002,lv = 9,bklv = 1,star = 1,mon = {id = 273,desc = "pt-2-2-jlr-loc2",skillLv = 1,exert = 6,suffer = 6}},
+			shl = {cha = "pt-2",id = 1020221,cardId = 1102004,lv = 9,bklv = 1,star = 1}
 		},
 		[3] = {
-			jlr = {cha = "pt-2",id = 1020230,cardId = 1101001,lv = 10,bklv = 1,star = 1,mon = {id = 208,desc = "pt-2-2-jlr-loc3",skillLv = 1,exert = 5,suffer = 5}},
-			shl = {cha = "pt-2",id = 1020231,cardId = 1102015,lv = 5,bklv = 1,star = 1}
+			jlr = {cha = "pt-2",id = 1020230,cardId = 1101001,lv = 7,bklv = 1,star = 1,mon = {id = 279,desc = "pt-2-2-jlr-loc3",skillLv = 1,exert = 5,suffer = 5}},
+			shl = {cha = "pt-2",id = 1020231,cardId = 1102015,lv = 7,bklv = 1,star = 1}
 		}
 	},
 	[10203] = {
 		[1] = {
-			jlr = {cha = "pt-2",id = 1020310,cardId = 1101041,lv = 11,bklv = 1,star = 1,mon = {id = 208,desc = "pt-2-3-jlr-loc1",skillLv = 1,exert = 6,suffer = 9}},
-			shl = {cha = "pt-2",id = 1020311,cardId = 1102050,lv = 5,bklv = 1,star = 1}
+			jlr = {cha = "pt-2",id = 1020310,cardId = 1101041,lv = 7,bklv = 1,star = 1,mon = {id = 261,desc = "pt-2-3-jlr-loc1",skillLv = 1,exert = 6,suffer = 9}},
+			shl = {cha = "pt-2",id = 1020311,cardId = 1102050,lv = 7,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-2",id = 1020320,cardId = 1101002,lv = 11,bklv = 1,star = 1,mon = {id = 212,desc = "pt-2-3-jlr-loc2",skillLv = 1,exert = 6,suffer = 6}},
-			shl = {cha = "pt-2",id = 1020321,cardId = 1102004,lv = 5,bklv = 1,star = 1,mon = {id = 236,desc = "pt-2-3-shl-loc2",skillLv = 1,exert = 7,suffer = 9}}
+			jlr = {cha = "pt-2",id = 1020320,cardId = 1101002,lv = 9,bklv = 1,star = 1,mon = {id = 277,desc = "pt-2-3-jlr-loc2",skillLv = 1,exert = 6,suffer = 6}},
+			shl = {cha = "pt-2",id = 1020321,cardId = 1102004,lv = 9,bklv = 1,star = 1}
 		},
 		[3] = {
-			jlr = {cha = "pt-2",id = 1020330,cardId = 1101001,lv = 11,bklv = 1,star = 1,mon = {id = 208,desc = "pt-2-3-jlr-loc3",skillLv = 1,exert = 6,suffer = 9}},
-			shl = {cha = "pt-2",id = 1020331,cardId = 1102015,lv = 5,bklv = 1,star = 1}
+			jlr = {cha = "pt-2",id = 1020330,cardId = 1101001,lv = 7,bklv = 1,star = 1,mon = {id = 279,desc = "pt-2-3-jlr-loc3",skillLv = 1,exert = 6,suffer = 9}},
+			shl = {cha = "pt-2",id = 1020331,cardId = 1102015,lv = 7,bklv = 1,star = 1}
 		}
 	},
 	[10204] = {
 		[1] = {
-			jlr = {cha = "pt-2",id = 1020410,cardId = 1101041,lv = 11,bklv = 1,star = 1},
-			shl = {cha = "pt-2",id = 1020411,cardId = 1102050,lv = 6,bklv = 1,star = 1,mon = {id = 261,desc = "pt-2-4-jlr-loc1",skillLv = 1,exert = 9,suffer = 6}}
+			jlr = {cha = "pt-2",id = 1020410,cardId = 1101041,lv = 8,bklv = 1,star = 1},
+			shl = {cha = "pt-2",id = 1020411,cardId = 1102050,lv = 8,bklv = 1,star = 1,mon = {id = 263,desc = "pt-2-4-jlr-loc1",skillLv = 1,exert = 9,suffer = 6}}
 		},
 		[2] = {
-			jlr = {cha = "pt-2",id = 1020420,cardId = 1101002,lv = 11,bklv = 1,star = 1},
-			shl = {cha = "pt-2",id = 1020421,cardId = 1102004,lv = 6,bklv = 1,star = 1,mon = {id = 270,desc = "pt-2-4-jlr-loc2",skillLv = 1,exert = 9,suffer = 6}}
+			jlr = {cha = "pt-2",id = 1020420,cardId = 1101002,lv = 10,bklv = 1,star = 1},
+			shl = {cha = "pt-2",id = 1020421,cardId = 1102004,lv = 10,bklv = 1,star = 1,mon = {id = 277,desc = "pt-2-4-jlr-loc2",skillLv = 1,exert = 9,suffer = 6}}
 		},
 		[3] = {
-			jlr = {cha = "pt-2",id = 1020430,cardId = 1101001,lv = 11,bklv = 1,star = 1},
-			shl = {cha = "pt-2",id = 1020431,cardId = 1102015,lv = 6,bklv = 1,star = 1,mon = {id = 279,desc = "pt-2-4-jlr-loc3",skillLv = 1,exert = 9,suffer = 6}}
+			jlr = {cha = "pt-2",id = 1020430,cardId = 1101001,lv = 8,bklv = 1,star = 1},
+			shl = {cha = "pt-2",id = 1020431,cardId = 1102015,lv = 8,bklv = 1,star = 1,mon = {id = 280,desc = "pt-2-4-jlr-loc3",skillLv = 1,exert = 9,suffer = 6}}
 		}
 	},
 	[10205] = {
@@ -209,5643 +209,5643 @@ return{
 	},
 	[10206] = {
 		[1] = {
-			jlr = {cha = "pt-2",id = 1020610,cardId = 1101041,lv = 12,bklv = 1,star = 1},
-			shl = {cha = "pt-2",id = 1020611,cardId = 1102050,lv = 8,bklv = 1,star = 1,mon = {id = 268,desc = "pt-2-6-jlr-loc1",skillLv = 1,exert = 9,suffer = 6}}
+			jlr = {cha = "pt-2",id = 1020610,cardId = 1101041,lv = 9,bklv = 1,star = 1},
+			shl = {cha = "pt-2",id = 1020611,cardId = 1102050,lv = 9,bklv = 1,star = 1,mon = {id = 268,desc = "pt-2-6-jlr-loc1",skillLv = 1,exert = 9,suffer = 6}}
 		},
 		[2] = {
-			jlr = {cha = "pt-2",id = 1020620,cardId = 1101002,lv = 12,bklv = 1,star = 1},
-			shl = {cha = "pt-2",id = 1020621,cardId = 1102004,lv = 8,bklv = 1,star = 1,mon = {id = 277,desc = "pt-2-6-jlr-loc2",skillLv = 1,exert = 9,suffer = 6}}
+			jlr = {cha = "pt-2",id = 1020620,cardId = 1101002,lv = 11,bklv = 1,star = 1},
+			shl = {cha = "pt-2",id = 1020621,cardId = 1102004,lv = 11,bklv = 1,star = 1,mon = {id = 277,desc = "pt-2-6-jlr-loc2",skillLv = 1,exert = 9,suffer = 6}}
 		},
 		[3] = {
-			jlr = {cha = "pt-2",id = 1020630,cardId = 1101001,lv = 12,bklv = 1,star = 1},
-			shl = {cha = "pt-2",id = 1020631,cardId = 1102015,lv = 8,bklv = 1,star = 1,mon = {id = 286,desc = "pt-2-6-jlr-loc3",skillLv = 1,exert = 9,suffer = 6}}
+			jlr = {cha = "pt-2",id = 1020630,cardId = 1101001,lv = 9,bklv = 1,star = 1},
+			shl = {cha = "pt-2",id = 1020631,cardId = 1102015,lv = 9,bklv = 1,star = 1,mon = {id = 286,desc = "pt-2-6-jlr-loc3",skillLv = 1,exert = 9,suffer = 6}}
 		}
 	},
 	[10207] = {
 		[1] = {
-			jlr = {cha = "pt-2",id = 1020710,cardId = 1101041,lv = 12,bklv = 1,star = 1},
-			shl = {cha = "pt-2",id = 1020711,cardId = 1102050,lv = 10,bklv = 1,star = 1,mon = {id = 268,desc = "pt-2-7-jlr-loc1",skillLv = 1,exert = 9,suffer = 6}}
+			jlr = {cha = "pt-2",id = 1020710,cardId = 1101041,lv = 9,bklv = 1,star = 1,mon = {id = 268,desc = "pt-2-7-jlr-loc1",skillLv = 1,exert = 9,suffer = 6}},
+			shl = {cha = "pt-2",id = 1020711,cardId = 1102050,lv = 9,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-2",id = 1020720,cardId = 1101002,lv = 12,bklv = 1,star = 1},
-			shl = {cha = "pt-2",id = 1020721,cardId = 1102004,lv = 10,bklv = 1,star = 1,mon = {id = 277,desc = "pt-2-7-jlr-loc2",skillLv = 1,exert = 9,suffer = 6}}
+			jlr = {cha = "pt-2",id = 1020720,cardId = 1101002,lv = 11,bklv = 1,star = 1,mon = {id = 211,desc = "pt-2-7-jlr-loc2",skillLv = 1,exert = 9,suffer = 6}},
+			shl = {cha = "pt-2",id = 1020721,cardId = 1102004,lv = 11,bklv = 1,star = 1,mon = {id = 235,desc = "pt-2-7-shl-loc2",skillLv = 1,exert = 9,suffer = 6}}
 		},
 		[3] = {
-			jlr = {cha = "pt-2",id = 1020730,cardId = 1101001,lv = 12,bklv = 1,star = 1},
-			shl = {cha = "pt-2",id = 1020731,cardId = 1102015,lv = 10,bklv = 1,star = 1,mon = {id = 286,desc = "pt-2-7-jlr-loc3",skillLv = 1,exert = 9,suffer = 6}}
+			jlr = {cha = "pt-2",id = 1020730,cardId = 1101001,lv = 9,bklv = 1,star = 1,mon = {id = 286,desc = "pt-2-7-jlr-loc3",skillLv = 1,exert = 9,suffer = 6}},
+			shl = {cha = "pt-2",id = 1020731,cardId = 1102015,lv = 9,bklv = 1,star = 1}
 		}
 	},
 	[10208] = {
 		[1] = {
-			jlr = {cha = "pt-2",id = 1020810,cardId = 1101041,lv = 12,bklv = 1,star = 1,mon = {id = 212,desc = "pt-2-8-jlr-loc1",skillLv = 1,exert = 6,suffer = 10}},
-			shl = {cha = "pt-2",id = 1020811,cardId = 1102050,lv = 12,bklv = 1,star = 1}
+			jlr = {cha = "pt-2",id = 1020810,cardId = 1101041,lv = 9,bklv = 1,star = 1,mon = {id = 268,desc = "pt-2-8-jlr-loc1",skillLv = 1,exert = 6,suffer = 10}},
+			shl = {cha = "pt-2",id = 1020811,cardId = 1102050,lv = 9,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-2",id = 1020820,cardId = 1101002,lv = 12,bklv = 1,star = 1,mon = {id = 208,desc = "pt-2-8-jlr-loc2",skillLv = 1,exert = 6,suffer = 6}},
-			shl = {cha = "pt-2",id = 1020821,cardId = 1102004,lv = 12,bklv = 1,star = 1,mon = {id = 231,desc = "pt-2-8-shl-loc2",skillLv = 1,exert = 7,suffer = 9}}
+			jlr = {cha = "pt-2",id = 1020820,cardId = 1101002,lv = 11,bklv = 1,star = 1,mon = {id = 273,desc = "pt-2-8-jlr-loc2",skillLv = 1,exert = 6,suffer = 6}},
+			shl = {cha = "pt-2",id = 1020821,cardId = 1102004,lv = 11,bklv = 1,star = 1}
 		},
 		[3] = {
-			jlr = {cha = "pt-2",id = 1020830,cardId = 1101001,lv = 12,bklv = 1,star = 1,mon = {id = 212,desc = "pt-2-8-jlr-loc3",skillLv = 1,exert = 6,suffer = 10}},
-			shl = {cha = "pt-2",id = 1020831,cardId = 1102015,lv = 12,bklv = 1,star = 1}
+			jlr = {cha = "pt-2",id = 1020830,cardId = 1101001,lv = 9,bklv = 1,star = 1,mon = {id = 286,desc = "pt-2-8-jlr-loc3",skillLv = 1,exert = 6,suffer = 10}},
+			shl = {cha = "pt-2",id = 1020831,cardId = 1102015,lv = 9,bklv = 1,star = 1}
 		}
 	},
 	[10209] = {
 		[1] = {
-			jlr = {cha = "pt-2",id = 1020910,cardId = 1101041,lv = 13,bklv = 1,star = 1,mon = {id = 212,desc = "pt-2-9-jlr-loc1",skillLv = 1,exert = 6,suffer = 10}},
-			shl = {cha = "pt-2",id = 1020911,cardId = 1102050,lv = 15,bklv = 1,star = 1}
+			jlr = {cha = "pt-2",id = 1020910,cardId = 1101041,lv = 10,bklv = 1,star = 1,mon = {id = 268,desc = "pt-2-9-jlr-loc1",skillLv = 1,exert = 6,suffer = 10}},
+			shl = {cha = "pt-2",id = 1020911,cardId = 1102050,lv = 10,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-2",id = 1020920,cardId = 1101002,lv = 13,bklv = 1,star = 1,mon = {id = 208,desc = "pt-2-9-jlr-loc2",skillLv = 1,exert = 6,suffer = 6}},
-			shl = {cha = "pt-2",id = 1020921,cardId = 1102004,lv = 15,bklv = 1,star = 1,mon = {id = 231,desc = "pt-2-9-shl-loc2",skillLv = 1,exert = 7,suffer = 9}}
+			jlr = {cha = "pt-2",id = 1020920,cardId = 1101002,lv = 12,bklv = 1,star = 1,mon = {id = 278,desc = "pt-2-9-jlr-loc2",skillLv = 1,exert = 6,suffer = 6}},
+			shl = {cha = "pt-2",id = 1020921,cardId = 1102004,lv = 12,bklv = 1,star = 1}
 		},
 		[3] = {
-			jlr = {cha = "pt-2",id = 1020930,cardId = 1101001,lv = 13,bklv = 1,star = 1,mon = {id = 212,desc = "pt-2-9-jlr-loc3",skillLv = 1,exert = 6,suffer = 10}},
-			shl = {cha = "pt-2",id = 1020931,cardId = 1102015,lv = 15,bklv = 1,star = 1}
+			jlr = {cha = "pt-2",id = 1020930,cardId = 1101001,lv = 10,bklv = 1,star = 1,mon = {id = 286,desc = "pt-2-9-jlr-loc3",skillLv = 1,exert = 6,suffer = 10}},
+			shl = {cha = "pt-2",id = 1020931,cardId = 1102015,lv = 10,bklv = 1,star = 1}
 		}
 	},
 	[10301] = {
 		[1] = {
-			jlr = {cha = "pt-3",id = 1030110,cardId = 1101001,lv = 18,bklv = 2,star = 1,mon = {id = 212,desc = "pt-3-1-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030111,cardId = 1102002,lv = 18,bklv = 2,star = 1,mon = {id = 236,desc = "pt-3-1-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030110,cardId = 1101001,lv = 18,bklv = 2,star = 1,mon = {id = 208,desc = "pt-3-1-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030111,cardId = 1102002,lv = 18,bklv = 2,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-3",id = 1030120,cardId = 1101003,lv = 18,bklv = 2,star = 1,mon = {id = 208,desc = "pt-3-1-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030121,cardId = 1102005,lv = 18,bklv = 2,star = 1,mon = {id = 231,desc = "pt-3-1-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030120,cardId = 1101003,lv = 18,bklv = 2,star = 1,mon = {id = 212,desc = "pt-3-1-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030121,cardId = 1102005,lv = 18,bklv = 2,star = 1,mon = {id = 236,desc = "pt-3-1-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-3",id = 1030130,cardId = 1101002,lv = 18,bklv = 2,star = 1,mon = {id = 209,desc = "pt-3-1-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030131,cardId = 1102004,lv = 18,bklv = 2,star = 1,mon = {id = 232,desc = "pt-3-1-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030130,cardId = 1101002,lv = 18,bklv = 2,star = 1,mon = {id = 209,desc = "pt-3-1-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030131,cardId = 1102004,lv = 18,bklv = 2,star = 1}
 		}
 	},
 	[10302] = {
 		[1] = {
-			jlr = {cha = "pt-3",id = 1030210,cardId = 1101001,lv = 19,bklv = 2,star = 1,mon = {id = 201,desc = "pt-3-2-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030211,cardId = 1102002,lv = 19,bklv = 2,star = 1,mon = {id = 220,desc = "pt-3-2-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030210,cardId = 1101001,lv = 18,bklv = 2,star = 1,mon = {id = 201,desc = "pt-3-2-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030211,cardId = 1102002,lv = 18,bklv = 2,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-3",id = 1030220,cardId = 1101003,lv = 19,bklv = 2,star = 1,mon = {id = 203,desc = "pt-3-2-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030221,cardId = 1102005,lv = 19,bklv = 2,star = 1,mon = {id = 223,desc = "pt-3-2-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030220,cardId = 1101003,lv = 18,bklv = 2,star = 1,mon = {id = 203,desc = "pt-3-2-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030221,cardId = 1102005,lv = 18,bklv = 2,star = 1,mon = {id = 223,desc = "pt-3-2-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-3",id = 1030230,cardId = 1101002,lv = 19,bklv = 2,star = 1,mon = {id = 214,desc = "pt-3-2-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030231,cardId = 1102004,lv = 19,bklv = 2,star = 1,mon = {id = 238,desc = "pt-3-2-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030230,cardId = 1101002,lv = 18,bklv = 2,star = 1,mon = {id = 214,desc = "pt-3-2-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030231,cardId = 1102004,lv = 18,bklv = 2,star = 1}
 		}
 	},
 	[10303] = {
 		[1] = {
-			jlr = {cha = "pt-3",id = 1030310,cardId = 1101001,lv = 20,bklv = 2,star = 1,mon = {id = 212,desc = "pt-3-3-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030311,cardId = 1102002,lv = 20,bklv = 2,star = 1,mon = {id = 236,desc = "pt-3-3-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030310,cardId = 1101001,lv = 18,bklv = 2,star = 1,mon = {id = 208,desc = "pt-3-3-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030311,cardId = 1102002,lv = 18,bklv = 2,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-3",id = 1030320,cardId = 1101003,lv = 20,bklv = 2,star = 1,mon = {id = 208,desc = "pt-3-3-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030321,cardId = 1102005,lv = 20,bklv = 2,star = 1,mon = {id = 231,desc = "pt-3-3-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030320,cardId = 1101003,lv = 18,bklv = 2,star = 1,mon = {id = 212,desc = "pt-3-3-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030321,cardId = 1102005,lv = 18,bklv = 2,star = 1,mon = {id = 236,desc = "pt-3-3-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-3",id = 1030330,cardId = 1101002,lv = 20,bklv = 2,star = 1,mon = {id = 209,desc = "pt-3-3-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030331,cardId = 1102004,lv = 20,bklv = 2,star = 1,mon = {id = 232,desc = "pt-3-3-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030330,cardId = 1101002,lv = 18,bklv = 2,star = 1,mon = {id = 209,desc = "pt-3-3-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030331,cardId = 1102004,lv = 18,bklv = 2,star = 1}
 		}
 	},
 	[10304] = {
 		[1] = {
-			jlr = {cha = "pt-3",id = 1030410,cardId = 1101001,lv = 21,bklv = 2,star = 1,mon = {id = 215,desc = "pt-3-4-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030411,cardId = 1102002,lv = 21,bklv = 2,star = 1,mon = {id = 239,desc = "pt-3-4-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030410,cardId = 1101001,lv = 21,bklv = 2,star = 1,mon = {id = 215,desc = "pt-3-4-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030411,cardId = 1102002,lv = 21,bklv = 2,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-3",id = 1030420,cardId = 1101003,lv = 21,bklv = 2,star = 1,mon = {id = 201,desc = "pt-3-4-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030421,cardId = 1102005,lv = 21,bklv = 2,star = 1,mon = {id = 227,desc = "pt-3-4-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030420,cardId = 1101003,lv = 21,bklv = 2,star = 1,mon = {id = 201,desc = "pt-3-4-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030421,cardId = 1102005,lv = 21,bklv = 2,star = 1,mon = {id = 227,desc = "pt-3-4-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-3",id = 1030430,cardId = 1101002,lv = 21,bklv = 2,star = 1,mon = {id = 211,desc = "pt-3-4-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030431,cardId = 1102004,lv = 21,bklv = 2,star = 1,mon = {id = 235,desc = "pt-3-4-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030430,cardId = 1101002,lv = 21,bklv = 2,star = 1,mon = {id = 211,desc = "pt-3-4-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030431,cardId = 1102004,lv = 21,bklv = 2,star = 1}
 		}
 	},
 	[10305] = {
 		[1] = {
-			jlr = {cha = "pt-3",id = 1030510,cardId = 1101001,lv = 22,bklv = 2,star = 1,mon = {id = 206,desc = "pt-3-5-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030511,cardId = 1102002,lv = 22,bklv = 2,star = 1,mon = {id = 225,desc = "pt-3-5-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030510,cardId = 1101001,lv = 22,bklv = 2,star = 1,mon = {id = 206,desc = "pt-3-5-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030511,cardId = 1102002,lv = 22,bklv = 2,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-3",id = 1030520,cardId = 1101003,lv = 22,bklv = 2,star = 1,mon = {id = 203,desc = "pt-3-5-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030521,cardId = 1102005,lv = 22,bklv = 2,star = 1,mon = {id = 223,desc = "pt-3-5-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030520,cardId = 1101003,lv = 22,bklv = 2,star = 1,mon = {id = 203,desc = "pt-3-5-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030521,cardId = 1102005,lv = 22,bklv = 2,star = 1,mon = {id = 223,desc = "pt-3-5-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-3",id = 1030530,cardId = 1101002,lv = 22,bklv = 2,star = 1,mon = {id = 212,desc = "pt-3-5-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030531,cardId = 1102004,lv = 22,bklv = 2,star = 1,mon = {id = 236,desc = "pt-3-5-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030530,cardId = 1101002,lv = 22,bklv = 2,star = 1,mon = {id = 212,desc = "pt-3-5-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030531,cardId = 1102004,lv = 22,bklv = 2,star = 1}
 		}
 	},
 	[10306] = {
 		[1] = {
-			jlr = {cha = "pt-3",id = 1030610,cardId = 1101001,lv = 23,bklv = 2,star = 1,mon = {id = 209,desc = "pt-3-6-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030611,cardId = 1102002,lv = 23,bklv = 2,star = 1,mon = {id = 232,desc = "pt-3-6-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030610,cardId = 1101001,lv = 23,bklv = 2,star = 1,mon = {id = 267,desc = "pt-3-6-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030611,cardId = 1102002,lv = 23,bklv = 2,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-3",id = 1030620,cardId = 1101003,lv = 23,bklv = 2,star = 1,mon = {id = 208,desc = "pt-3-6-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030621,cardId = 1102005,lv = 23,bklv = 2,star = 1,mon = {id = 231,desc = "pt-3-6-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030620,cardId = 1101003,lv = 23,bklv = 2,star = 1,mon = {id = 278,desc = "pt-3-6-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030621,cardId = 1102005,lv = 23,bklv = 2,star = 1}
 		},
 		[3] = {
-			jlr = {cha = "pt-3",id = 1030630,cardId = 1101002,lv = 23,bklv = 2,star = 1,mon = {id = 212,desc = "pt-3-6-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030631,cardId = 1102004,lv = 23,bklv = 2,star = 1,mon = {id = 236,desc = "pt-3-6-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030630,cardId = 1101002,lv = 23,bklv = 2,star = 1,mon = {id = 285,desc = "pt-3-6-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030631,cardId = 1102004,lv = 23,bklv = 2,star = 1}
 		}
 	},
 	[10307] = {
 		[1] = {
-			jlr = {cha = "pt-3",id = 1030710,cardId = 1101001,lv = 24,bklv = 2,star = 1,mon = {id = 213,desc = "pt-3-7-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030711,cardId = 1102002,lv = 24,bklv = 2,star = 1,mon = {id = 237,desc = "pt-3-7-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030710,cardId = 1101001,lv = 24,bklv = 2,star = 1,mon = {id = 213,desc = "pt-3-7-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030711,cardId = 1102002,lv = 24,bklv = 2,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-3",id = 1030720,cardId = 1101003,lv = 24,bklv = 2,star = 1,mon = {id = 207,desc = "pt-3-7-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030721,cardId = 1102005,lv = 24,bklv = 2,star = 1,mon = {id = 221,desc = "pt-3-7-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030720,cardId = 1101003,lv = 24,bklv = 2,star = 1,mon = {id = 207,desc = "pt-3-7-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030721,cardId = 1102005,lv = 24,bklv = 2,star = 1,mon = {id = 221,desc = "pt-3-7-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-3",id = 1030730,cardId = 1101002,lv = 24,bklv = 2,star = 1,mon = {id = 211,desc = "pt-3-7-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030731,cardId = 1102004,lv = 24,bklv = 2,star = 1,mon = {id = 235,desc = "pt-3-7-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030730,cardId = 1101002,lv = 24,bklv = 2,star = 1,mon = {id = 211,desc = "pt-3-7-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030731,cardId = 1102004,lv = 24,bklv = 2,star = 1}
 		}
 	},
 	[10308] = {
 		[1] = {
-			jlr = {cha = "pt-3",id = 1030810,cardId = 1101001,lv = 25,bklv = 2,star = 1,mon = {id = 206,desc = "pt-3-8-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030811,cardId = 1102002,lv = 25,bklv = 2,star = 1,mon = {id = 225,desc = "pt-3-8-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030810,cardId = 1101001,lv = 25,bklv = 2,star = 1,mon = {id = 205,desc = "pt-3-8-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030811,cardId = 1102002,lv = 25,bklv = 2,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "pt-3",id = 1030820,cardId = 1101003,lv = 25,bklv = 2,star = 1,mon = {id = 205,desc = "pt-3-8-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030821,cardId = 1102005,lv = 25,bklv = 2,star = 1,mon = {id = 229,desc = "pt-3-8-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030820,cardId = 1101003,lv = 25,bklv = 2,star = 1,mon = {id = 206,desc = "pt-3-8-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030821,cardId = 1102005,lv = 25,bklv = 2,star = 1,mon = {id = 225,desc = "pt-3-8-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-3",id = 1030830,cardId = 1101002,lv = 25,bklv = 2,star = 1,mon = {id = 207,desc = "pt-3-8-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030831,cardId = 1102004,lv = 25,bklv = 2,star = 1,mon = {id = 228,desc = "pt-3-8-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030830,cardId = 1101002,lv = 25,bklv = 2,star = 1,mon = {id = 207,desc = "pt-3-8-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030831,cardId = 1102004,lv = 25,bklv = 2,star = 1}
 		}
 	},
 	[10309] = {
 		[1] = {
-			jlr = {cha = "pt-3",id = 1030910,cardId = 1101001,lv = 27,bklv = 2,star = 2,mon = {id = 212,desc = "pt-3-9-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030911,cardId = 1102002,lv = 27,bklv = 2,star = 2,mon = {id = 236,desc = "pt-3-9-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030910,cardId = 1101001,lv = 25,bklv = 2,star = 2,mon = {id = 201,desc = "pt-3-9-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030911,cardId = 1102002,lv = 25,bklv = 2,star = 2,mon = {id = 220,desc = "pt-3-9-shl-loc1",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-3",id = 1030920,cardId = 1101003,lv = 27,bklv = 2,star = 2,mon = {id = 208,desc = "pt-3-9-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030921,cardId = 1102005,lv = 27,bklv = 2,star = 2,mon = {id = 231,desc = "pt-3-9-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030920,cardId = 1101003,lv = 25,bklv = 2,star = 2,mon = {id = 214,desc = "pt-3-9-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030921,cardId = 1102005,lv = 25,bklv = 2,star = 2,mon = {id = 238,desc = "pt-3-9-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-3",id = 1030930,cardId = 1101002,lv = 27,bklv = 2,star = 2,mon = {id = 209,desc = "pt-3-9-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-3",id = 1030931,cardId = 1102004,lv = 27,bklv = 2,star = 2,mon = {id = 232,desc = "pt-3-9-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-3",id = 1030930,cardId = 1101002,lv = 25,bklv = 2,star = 2,mon = {id = 203,desc = "pt-3-9-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-3",id = 1030931,cardId = 1102004,lv = 25,bklv = 2,star = 2,mon = {id = 223,desc = "pt-3-9-shl-loc3",skillLv = 1,exert = 18,suffer = 18}}
 		}
 	},
 	[10401] = {
 		[1] = {
-			jlr = {cha = "pt-4",id = 1040110,cardId = 1101001,lv = 28,bklv = 2,star = 2,mon = {id = 212,desc = "pt-4-1-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040111,cardId = 1102002,lv = 28,bklv = 2,star = 2,mon = {id = 236,desc = "pt-4-1-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040110,cardId = 1101001,lv = 28,bklv = 2,star = 2,mon = {id = 212,desc = "pt-4-1-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040111,cardId = 1102002,lv = 28,bklv = 2,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-4",id = 1040120,cardId = 1101003,lv = 28,bklv = 2,star = 2,mon = {id = 208,desc = "pt-4-1-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040121,cardId = 1102005,lv = 28,bklv = 2,star = 2,mon = {id = 231,desc = "pt-4-1-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040120,cardId = 1101003,lv = 28,bklv = 2,star = 2,mon = {id = 213,desc = "pt-4-1-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040121,cardId = 1102005,lv = 28,bklv = 2,star = 2,mon = {id = 237,desc = "pt-4-1-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-4",id = 1040130,cardId = 1101014,lv = 28,bklv = 2,star = 2,mon = {id = 213,desc = "pt-4-1-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040131,cardId = 1102020,lv = 28,bklv = 2,star = 2,mon = {id = 237,desc = "pt-4-1-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040130,cardId = 1101014,lv = 28,bklv = 2,star = 2,mon = {id = 214,desc = "pt-4-1-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040131,cardId = 1102020,lv = 28,bklv = 2,star = 2}
 		}
 	},
 	[10402] = {
 		[1] = {
-			jlr = {cha = "pt-4",id = 1040210,cardId = 1101001,lv = 29,bklv = 2,star = 2,mon = {id = 201,desc = "pt-4-2-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040211,cardId = 1102002,lv = 29,bklv = 2,star = 2,mon = {id = 220,desc = "pt-4-2-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040210,cardId = 1101001,lv = 29,bklv = 2,star = 2,mon = {id = 201,desc = "pt-4-2-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040211,cardId = 1102002,lv = 29,bklv = 2,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-4",id = 1040220,cardId = 1101003,lv = 29,bklv = 2,star = 2,mon = {id = 203,desc = "pt-4-2-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040221,cardId = 1102005,lv = 29,bklv = 2,star = 2,mon = {id = 223,desc = "pt-4-2-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040220,cardId = 1101003,lv = 29,bklv = 2,star = 2,mon = {id = 203,desc = "pt-4-2-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040221,cardId = 1102005,lv = 29,bklv = 2,star = 2,mon = {id = 223,desc = "pt-4-2-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-4",id = 1040230,cardId = 1101014,lv = 29,bklv = 2,star = 2,mon = {id = 214,desc = "pt-4-2-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040231,cardId = 1102020,lv = 29,bklv = 2,star = 2,mon = {id = 238,desc = "pt-4-2-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040230,cardId = 1101014,lv = 29,bklv = 2,star = 2,mon = {id = 214,desc = "pt-4-2-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040231,cardId = 1102020,lv = 29,bklv = 2,star = 2}
 		}
 	},
 	[10403] = {
 		[1] = {
-			jlr = {cha = "pt-4",id = 1040310,cardId = 1101001,lv = 30,bklv = 3,star = 2,mon = {id = 212,desc = "pt-4-3-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040311,cardId = 1102002,lv = 30,bklv = 3,star = 2,mon = {id = 236,desc = "pt-4-3-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040310,cardId = 1101001,lv = 30,bklv = 3,star = 2,mon = {id = 212,desc = "pt-4-3-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040311,cardId = 1102002,lv = 30,bklv = 3,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-4",id = 1040320,cardId = 1101003,lv = 30,bklv = 3,star = 2,mon = {id = 208,desc = "pt-4-3-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040321,cardId = 1102005,lv = 30,bklv = 3,star = 2,mon = {id = 231,desc = "pt-4-3-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040320,cardId = 1101003,lv = 30,bklv = 3,star = 2,mon = {id = 208,desc = "pt-4-3-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040321,cardId = 1102005,lv = 30,bklv = 3,star = 2,mon = {id = 231,desc = "pt-4-3-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-4",id = 1040330,cardId = 1101014,lv = 30,bklv = 3,star = 2,mon = {id = 209,desc = "pt-4-3-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040331,cardId = 1102020,lv = 30,bklv = 3,star = 2,mon = {id = 232,desc = "pt-4-3-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040330,cardId = 1101014,lv = 30,bklv = 3,star = 2,mon = {id = 209,desc = "pt-4-3-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040331,cardId = 1102020,lv = 30,bklv = 3,star = 2}
 		}
 	},
 	[10404] = {
 		[1] = {
-			jlr = {cha = "pt-4",id = 1040410,cardId = 1101001,lv = 31,bklv = 3,star = 2,mon = {id = 215,desc = "pt-4-4-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040411,cardId = 1102002,lv = 31,bklv = 3,star = 2,mon = {id = 239,desc = "pt-4-4-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040410,cardId = 1101001,lv = 31,bklv = 3,star = 2,mon = {id = 215,desc = "pt-4-4-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040411,cardId = 1102002,lv = 31,bklv = 3,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-4",id = 1040420,cardId = 1101003,lv = 31,bklv = 3,star = 2,mon = {id = 201,desc = "pt-4-4-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040421,cardId = 1102005,lv = 31,bklv = 3,star = 2,mon = {id = 227,desc = "pt-4-4-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040420,cardId = 1101003,lv = 31,bklv = 3,star = 2,mon = {id = 201,desc = "pt-4-4-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040421,cardId = 1102005,lv = 31,bklv = 3,star = 2,mon = {id = 227,desc = "pt-4-4-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-4",id = 1040430,cardId = 1101014,lv = 31,bklv = 3,star = 2,mon = {id = 211,desc = "pt-4-4-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040431,cardId = 1102020,lv = 31,bklv = 3,star = 2,mon = {id = 235,desc = "pt-4-4-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040430,cardId = 1101014,lv = 31,bklv = 3,star = 2,mon = {id = 211,desc = "pt-4-4-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040431,cardId = 1102020,lv = 31,bklv = 3,star = 2}
 		}
 	},
 	[10405] = {
 		[1] = {
-			jlr = {cha = "pt-4",id = 1040510,cardId = 1101001,lv = 32,bklv = 3,star = 2,mon = {id = 206,desc = "pt-4-5-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040511,cardId = 1102002,lv = 32,bklv = 3,star = 2,mon = {id = 225,desc = "pt-4-5-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040510,cardId = 1101001,lv = 32,bklv = 3,star = 2,mon = {id = 206,desc = "pt-4-5-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040511,cardId = 1102002,lv = 32,bklv = 3,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-4",id = 1040520,cardId = 1101003,lv = 32,bklv = 3,star = 2,mon = {id = 203,desc = "pt-4-5-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040521,cardId = 1102005,lv = 32,bklv = 3,star = 2,mon = {id = 223,desc = "pt-4-5-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040520,cardId = 1101003,lv = 32,bklv = 3,star = 2,mon = {id = 203,desc = "pt-4-5-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040521,cardId = 1102005,lv = 32,bklv = 3,star = 2,mon = {id = 223,desc = "pt-4-5-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-4",id = 1040530,cardId = 1101014,lv = 32,bklv = 3,star = 2,mon = {id = 212,desc = "pt-4-5-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040531,cardId = 1102020,lv = 32,bklv = 3,star = 2,mon = {id = 236,desc = "pt-4-5-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040530,cardId = 1101014,lv = 32,bklv = 3,star = 2,mon = {id = 212,desc = "pt-4-5-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040531,cardId = 1102020,lv = 32,bklv = 3,star = 2}
 		}
 	},
 	[10406] = {
 		[1] = {
-			jlr = {cha = "pt-4",id = 1040610,cardId = 1101001,lv = 33,bklv = 3,star = 2,mon = {id = 209,desc = "pt-4-6-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040611,cardId = 1102002,lv = 33,bklv = 3,star = 2,mon = {id = 232,desc = "pt-4-6-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040610,cardId = 1101001,lv = 33,bklv = 3,star = 2,mon = {id = 209,desc = "pt-4-6-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040611,cardId = 1102002,lv = 33,bklv = 3,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-4",id = 1040620,cardId = 1101003,lv = 33,bklv = 3,star = 2,mon = {id = 208,desc = "pt-4-6-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040621,cardId = 1102005,lv = 33,bklv = 3,star = 2,mon = {id = 231,desc = "pt-4-6-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040620,cardId = 1101003,lv = 33,bklv = 3,star = 2,mon = {id = 208,desc = "pt-4-6-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040621,cardId = 1102005,lv = 33,bklv = 3,star = 2,mon = {id = 231,desc = "pt-4-6-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-4",id = 1040630,cardId = 1101014,lv = 33,bklv = 3,star = 2,mon = {id = 212,desc = "pt-4-6-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040631,cardId = 1102020,lv = 33,bklv = 3,star = 2,mon = {id = 236,desc = "pt-4-6-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040630,cardId = 1101014,lv = 33,bklv = 3,star = 2,mon = {id = 212,desc = "pt-4-6-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040631,cardId = 1102020,lv = 33,bklv = 3,star = 2}
 		}
 	},
 	[10407] = {
 		[1] = {
-			jlr = {cha = "pt-4",id = 1040710,cardId = 1101001,lv = 34,bklv = 3,star = 2,mon = {id = 207,desc = "pt-4-7-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040711,cardId = 1102002,lv = 34,bklv = 3,star = 2,mon = {id = 227,desc = "pt-4-7-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040710,cardId = 1101001,lv = 34,bklv = 3,star = 2,mon = {id = 207,desc = "pt-4-7-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040711,cardId = 1102002,lv = 34,bklv = 3,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-4",id = 1040720,cardId = 1101003,lv = 34,bklv = 3,star = 2,mon = {id = 207,desc = "pt-4-7-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040721,cardId = 1102005,lv = 34,bklv = 3,star = 2,mon = {id = 221,desc = "pt-4-7-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040720,cardId = 1101003,lv = 34,bklv = 3,star = 2,mon = {id = 207,desc = "pt-4-7-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040721,cardId = 1102005,lv = 34,bklv = 3,star = 2,mon = {id = 221,desc = "pt-4-7-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-4",id = 1040730,cardId = 1101014,lv = 34,bklv = 3,star = 2,mon = {id = 211,desc = "pt-4-7-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040731,cardId = 1102020,lv = 34,bklv = 3,star = 2,mon = {id = 235,desc = "pt-4-7-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040730,cardId = 1101014,lv = 34,bklv = 3,star = 2,mon = {id = 211,desc = "pt-4-7-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040731,cardId = 1102020,lv = 34,bklv = 3,star = 2}
 		}
 	},
 	[10408] = {
 		[1] = {
-			jlr = {cha = "pt-4",id = 1040810,cardId = 1101001,lv = 35,bklv = 3,star = 2,mon = {id = 207,desc = "pt-4-8-jlr-loc1",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040811,cardId = 1102002,lv = 35,bklv = 3,star = 2,mon = {id = 230,desc = "pt-4-8-shl-loc1",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040810,cardId = 1101001,lv = 35,bklv = 3,star = 2,mon = {id = 207,desc = "pt-4-8-jlr-loc1",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040811,cardId = 1102002,lv = 35,bklv = 3,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-4",id = 1040820,cardId = 1101003,lv = 35,bklv = 3,star = 2,mon = {id = 205,desc = "pt-4-8-jlr-loc2",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040821,cardId = 1102005,lv = 35,bklv = 3,star = 2,mon = {id = 229,desc = "pt-4-8-shl-loc2",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040820,cardId = 1101003,lv = 35,bklv = 3,star = 2,mon = {id = 205,desc = "pt-4-8-jlr-loc2",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040821,cardId = 1102005,lv = 35,bklv = 3,star = 2,mon = {id = 229,desc = "pt-4-8-shl-loc2",skillLv = 1,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-4",id = 1040830,cardId = 1101014,lv = 35,bklv = 3,star = 2,mon = {id = 210,desc = "pt-4-8-jlr-loc3",skillLv = 1,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040831,cardId = 1102020,lv = 35,bklv = 3,star = 2,mon = {id = 234,desc = "pt-4-8-shl-loc3",skillLv = 1,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040830,cardId = 1101014,lv = 35,bklv = 3,star = 2,mon = {id = 210,desc = "pt-4-8-jlr-loc3",skillLv = 1,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040831,cardId = 1102020,lv = 35,bklv = 3,star = 2}
 		}
 	},
 	[10409] = {
 		[1] = {
-			jlr = {cha = "pt-4",id = 1040910,cardId = 1101001,lv = 37,bklv = 3,star = 2,mon = {id = 212,desc = "pt-4-9-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040911,cardId = 1102002,lv = 37,bklv = 3,star = 2,mon = {id = 236,desc = "pt-4-9-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040910,cardId = 1101001,lv = 36,bklv = 3,star = 2,mon = {id = 212,desc = "pt-4-9-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040911,cardId = 1102002,lv = 36,bklv = 3,star = 2,mon = {id = 236,desc = "pt-4-9-shl-loc1",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-4",id = 1040920,cardId = 1101003,lv = 37,bklv = 3,star = 2,mon = {id = 208,desc = "pt-4-9-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040921,cardId = 1102005,lv = 37,bklv = 3,star = 2,mon = {id = 231,desc = "pt-4-9-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040920,cardId = 1101003,lv = 36,bklv = 3,star = 2,mon = {id = 208,desc = "pt-4-9-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040921,cardId = 1102005,lv = 36,bklv = 3,star = 2,mon = {id = 231,desc = "pt-4-9-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-4",id = 1040930,cardId = 1101014,lv = 37,bklv = 3,star = 2,mon = {id = 209,desc = "pt-4-9-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-4",id = 1040931,cardId = 1102020,lv = 37,bklv = 3,star = 2,mon = {id = 232,desc = "pt-4-9-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-4",id = 1040930,cardId = 1101014,lv = 36,bklv = 3,star = 2,mon = {id = 209,desc = "pt-4-9-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-4",id = 1040931,cardId = 1102020,lv = 36,bklv = 3,star = 2,mon = {id = 232,desc = "pt-4-9-shl-loc3",skillLv = 2,exert = 18,suffer = 18}}
 		}
 	},
 	[10501] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1050110,cardId = 1101007,lv = 38,bklv = 3,star = 2,mon = {id = 212,desc = "pt-5-1-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050111,cardId = 1102002,lv = 38,bklv = 3,star = 2,mon = {id = 236,desc = "pt-5-1-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050110,cardId = 1101007,lv = 36,bklv = 3,star = 2,mon = {id = 212,desc = "pt-5-1-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050111,cardId = 1102002,lv = 36,bklv = 3,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1050120,cardId = 1101003,lv = 38,bklv = 3,star = 2,mon = {id = 208,desc = "pt-5-1-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050121,cardId = 1102005,lv = 38,bklv = 3,star = 2,mon = {id = 231,desc = "pt-5-1-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050120,cardId = 1101003,lv = 36,bklv = 3,star = 2,mon = {id = 208,desc = "pt-5-1-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050121,cardId = 1102005,lv = 36,bklv = 3,star = 2,mon = {id = 231,desc = "pt-5-1-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1050130,cardId = 1101014,lv = 38,bklv = 3,star = 2,mon = {id = 209,desc = "pt-5-1-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050131,cardId = 1102020,lv = 38,bklv = 3,star = 2,mon = {id = 232,desc = "pt-5-1-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050130,cardId = 1101014,lv = 36,bklv = 3,star = 2,mon = {id = 209,desc = "pt-5-1-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050131,cardId = 1102020,lv = 36,bklv = 3,star = 2}
 		}
 	},
 	[10502] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1050210,cardId = 1101007,lv = 39,bklv = 3,star = 2,mon = {id = 201,desc = "pt-5-2-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050211,cardId = 1102002,lv = 39,bklv = 3,star = 2,mon = {id = 220,desc = "pt-5-2-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050210,cardId = 1101007,lv = 39,bklv = 3,star = 2,mon = {id = 201,desc = "pt-5-2-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050211,cardId = 1102002,lv = 39,bklv = 3,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1050220,cardId = 1101003,lv = 39,bklv = 3,star = 2,mon = {id = 203,desc = "pt-5-2-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050221,cardId = 1102005,lv = 39,bklv = 3,star = 2,mon = {id = 223,desc = "pt-5-2-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050220,cardId = 1101003,lv = 39,bklv = 3,star = 2,mon = {id = 203,desc = "pt-5-2-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050221,cardId = 1102005,lv = 39,bklv = 3,star = 2,mon = {id = 223,desc = "pt-5-2-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1050230,cardId = 1101014,lv = 39,bklv = 3,star = 2,mon = {id = 214,desc = "pt-5-2-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050231,cardId = 1102020,lv = 39,bklv = 3,star = 2,mon = {id = 238,desc = "pt-5-2-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050230,cardId = 1101014,lv = 39,bklv = 3,star = 2,mon = {id = 214,desc = "pt-5-2-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050231,cardId = 1102020,lv = 39,bklv = 3,star = 2}
 		}
 	},
 	[10503] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1050310,cardId = 1101007,lv = 40,bklv = 4,star = 2,mon = {id = 212,desc = "pt-5-3-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050311,cardId = 1102002,lv = 40,bklv = 4,star = 2,mon = {id = 236,desc = "pt-5-3-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050310,cardId = 1101007,lv = 40,bklv = 4,star = 2,mon = {id = 212,desc = "pt-5-3-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050311,cardId = 1102002,lv = 40,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1050320,cardId = 1101003,lv = 40,bklv = 4,star = 2,mon = {id = 208,desc = "pt-5-3-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050321,cardId = 1102005,lv = 40,bklv = 4,star = 2,mon = {id = 231,desc = "pt-5-3-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050320,cardId = 1101003,lv = 40,bklv = 4,star = 2,mon = {id = 208,desc = "pt-5-3-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050321,cardId = 1102005,lv = 40,bklv = 4,star = 2,mon = {id = 231,desc = "pt-5-3-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1050330,cardId = 1101014,lv = 40,bklv = 4,star = 2,mon = {id = 209,desc = "pt-5-3-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050331,cardId = 1102020,lv = 40,bklv = 4,star = 2,mon = {id = 232,desc = "pt-5-3-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050330,cardId = 1101014,lv = 40,bklv = 4,star = 2,mon = {id = 209,desc = "pt-5-3-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050331,cardId = 1102020,lv = 40,bklv = 4,star = 2}
 		}
 	},
 	[10504] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1050410,cardId = 1101007,lv = 40,bklv = 4,star = 2,mon = {id = 215,desc = "pt-5-4-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050411,cardId = 1102002,lv = 40,bklv = 4,star = 2,mon = {id = 239,desc = "pt-5-4-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050410,cardId = 1101007,lv = 40,bklv = 4,star = 2,mon = {id = 215,desc = "pt-5-4-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050411,cardId = 1102002,lv = 40,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1050420,cardId = 1101003,lv = 40,bklv = 4,star = 2,mon = {id = 201,desc = "pt-5-4-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050421,cardId = 1102005,lv = 40,bklv = 4,star = 2,mon = {id = 227,desc = "pt-5-4-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050420,cardId = 1101003,lv = 40,bklv = 4,star = 2,mon = {id = 201,desc = "pt-5-4-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050421,cardId = 1102005,lv = 40,bklv = 4,star = 2,mon = {id = 227,desc = "pt-5-4-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1050430,cardId = 1101014,lv = 40,bklv = 4,star = 2,mon = {id = 211,desc = "pt-5-4-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050431,cardId = 1102020,lv = 40,bklv = 4,star = 2,mon = {id = 235,desc = "pt-5-4-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050430,cardId = 1101014,lv = 40,bklv = 4,star = 2,mon = {id = 211,desc = "pt-5-4-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050431,cardId = 1102020,lv = 40,bklv = 4,star = 2}
 		}
 	},
 	[10505] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1050510,cardId = 1101007,lv = 41,bklv = 4,star = 2,mon = {id = 206,desc = "pt-5-5-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050511,cardId = 1102002,lv = 41,bklv = 4,star = 2,mon = {id = 225,desc = "pt-5-5-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050510,cardId = 1101007,lv = 41,bklv = 4,star = 2,mon = {id = 206,desc = "pt-5-5-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050511,cardId = 1102002,lv = 41,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1050520,cardId = 1101003,lv = 41,bklv = 4,star = 2,mon = {id = 203,desc = "pt-5-5-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050521,cardId = 1102005,lv = 41,bklv = 4,star = 2,mon = {id = 223,desc = "pt-5-5-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050520,cardId = 1101003,lv = 41,bklv = 4,star = 2,mon = {id = 203,desc = "pt-5-5-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050521,cardId = 1102005,lv = 41,bklv = 4,star = 2,mon = {id = 223,desc = "pt-5-5-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1050530,cardId = 1101014,lv = 41,bklv = 4,star = 2,mon = {id = 212,desc = "pt-5-5-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050531,cardId = 1102020,lv = 41,bklv = 4,star = 2,mon = {id = 236,desc = "pt-5-5-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050530,cardId = 1101014,lv = 41,bklv = 4,star = 2,mon = {id = 212,desc = "pt-5-5-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050531,cardId = 1102020,lv = 41,bklv = 4,star = 2}
 		}
 	},
 	[10506] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1050610,cardId = 1101007,lv = 41,bklv = 4,star = 2,mon = {id = 209,desc = "pt-5-6-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050611,cardId = 1102002,lv = 41,bklv = 4,star = 2,mon = {id = 232,desc = "pt-5-6-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050610,cardId = 1101007,lv = 41,bklv = 4,star = 2,mon = {id = 209,desc = "pt-5-6-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050611,cardId = 1102002,lv = 41,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1050620,cardId = 1101003,lv = 41,bklv = 4,star = 2,mon = {id = 208,desc = "pt-5-6-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050621,cardId = 1102005,lv = 41,bklv = 4,star = 2,mon = {id = 231,desc = "pt-5-6-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050620,cardId = 1101003,lv = 41,bklv = 4,star = 2,mon = {id = 208,desc = "pt-5-6-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050621,cardId = 1102005,lv = 41,bklv = 4,star = 2,mon = {id = 231,desc = "pt-5-6-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1050630,cardId = 1101014,lv = 41,bklv = 4,star = 2,mon = {id = 212,desc = "pt-5-6-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050631,cardId = 1102020,lv = 41,bklv = 4,star = 2,mon = {id = 236,desc = "pt-5-6-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050630,cardId = 1101014,lv = 41,bklv = 4,star = 2,mon = {id = 212,desc = "pt-5-6-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050631,cardId = 1102020,lv = 41,bklv = 4,star = 2}
 		}
 	},
 	[10507] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1050710,cardId = 1101007,lv = 42,bklv = 4,star = 2,mon = {id = 213,desc = "pt-5-7-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050711,cardId = 1102002,lv = 42,bklv = 4,star = 2,mon = {id = 237,desc = "pt-5-7-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050710,cardId = 1101007,lv = 42,bklv = 4,star = 2,mon = {id = 213,desc = "pt-5-7-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050711,cardId = 1102002,lv = 42,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1050720,cardId = 1101003,lv = 42,bklv = 4,star = 2,mon = {id = 207,desc = "pt-5-7-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050721,cardId = 1102005,lv = 42,bklv = 4,star = 2,mon = {id = 221,desc = "pt-5-7-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050720,cardId = 1101003,lv = 42,bklv = 4,star = 2,mon = {id = 207,desc = "pt-5-7-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050721,cardId = 1102005,lv = 42,bklv = 4,star = 2,mon = {id = 221,desc = "pt-5-7-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1050730,cardId = 1101014,lv = 42,bklv = 4,star = 2,mon = {id = 211,desc = "pt-5-7-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050731,cardId = 1102020,lv = 42,bklv = 4,star = 2,mon = {id = 235,desc = "pt-5-7-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050730,cardId = 1101014,lv = 42,bklv = 4,star = 2,mon = {id = 211,desc = "pt-5-7-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050731,cardId = 1102020,lv = 42,bklv = 4,star = 2}
 		}
 	},
 	[10508] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1050810,cardId = 1101007,lv = 42,bklv = 4,star = 2,mon = {id = 206,desc = "pt-5-8-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050811,cardId = 1102002,lv = 42,bklv = 4,star = 2,mon = {id = 225,desc = "pt-5-8-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050810,cardId = 1101007,lv = 42,bklv = 4,star = 2,mon = {id = 206,desc = "pt-5-8-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050811,cardId = 1102002,lv = 42,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1050820,cardId = 1101003,lv = 42,bklv = 4,star = 2,mon = {id = 205,desc = "pt-5-8-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050821,cardId = 1102005,lv = 42,bklv = 4,star = 2,mon = {id = 229,desc = "pt-5-8-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050820,cardId = 1101003,lv = 42,bklv = 4,star = 2,mon = {id = 205,desc = "pt-5-8-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050821,cardId = 1102005,lv = 42,bklv = 4,star = 2,mon = {id = 229,desc = "pt-5-8-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1050830,cardId = 1101014,lv = 42,bklv = 4,star = 2,mon = {id = 207,desc = "pt-5-8-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050831,cardId = 1102020,lv = 42,bklv = 4,star = 2,mon = {id = 228,desc = "pt-5-8-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050830,cardId = 1101014,lv = 42,bklv = 4,star = 2,mon = {id = 207,desc = "pt-5-8-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050831,cardId = 1102020,lv = 42,bklv = 4,star = 2}
 		}
 	},
 	[10509] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1050910,cardId = 1101007,lv = 43,bklv = 4,star = 2,mon = {id = 212,desc = "pt-5-9-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050911,cardId = 1102002,lv = 43,bklv = 4,star = 2,mon = {id = 236,desc = "pt-5-9-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050910,cardId = 1101007,lv = 43,bklv = 4,star = 2,mon = {id = 212,desc = "pt-5-9-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050911,cardId = 1102002,lv = 43,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1050920,cardId = 1101003,lv = 43,bklv = 4,star = 2,mon = {id = 208,desc = "pt-5-9-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050921,cardId = 1102005,lv = 43,bklv = 4,star = 2,mon = {id = 231,desc = "pt-5-9-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050920,cardId = 1101003,lv = 43,bklv = 4,star = 2,mon = {id = 208,desc = "pt-5-9-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050921,cardId = 1102005,lv = 43,bklv = 4,star = 2,mon = {id = 231,desc = "pt-5-9-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1050930,cardId = 1101014,lv = 43,bklv = 4,star = 2,mon = {id = 209,desc = "pt-5-9-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1050931,cardId = 1102020,lv = 43,bklv = 4,star = 2,mon = {id = 232,desc = "pt-5-9-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1050930,cardId = 1101014,lv = 43,bklv = 4,star = 2,mon = {id = 209,desc = "pt-5-9-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1050931,cardId = 1102020,lv = 43,bklv = 4,star = 2}
 		}
 	},
 	[10510] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1051010,cardId = 1101007,lv = 43,bklv = 4,star = 2,mon = {id = 201,desc = "pt-5-10-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051011,cardId = 1102002,lv = 43,bklv = 4,star = 2,mon = {id = 220,desc = "pt-5-10-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051010,cardId = 1101007,lv = 43,bklv = 4,star = 2,mon = {id = 201,desc = "pt-5-10-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051011,cardId = 1102002,lv = 43,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1051020,cardId = 1101003,lv = 43,bklv = 4,star = 2,mon = {id = 203,desc = "pt-5-10-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051021,cardId = 1102005,lv = 43,bklv = 4,star = 2,mon = {id = 223,desc = "pt-5-10-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051020,cardId = 1101003,lv = 43,bklv = 4,star = 2,mon = {id = 203,desc = "pt-5-10-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051021,cardId = 1102005,lv = 43,bklv = 4,star = 2,mon = {id = 223,desc = "pt-5-10-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1051030,cardId = 1101014,lv = 43,bklv = 4,star = 2,mon = {id = 214,desc = "pt-5-10-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051031,cardId = 1102020,lv = 43,bklv = 4,star = 2,mon = {id = 238,desc = "pt-5-10-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051030,cardId = 1101014,lv = 43,bklv = 4,star = 2,mon = {id = 214,desc = "pt-5-10-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051031,cardId = 1102020,lv = 43,bklv = 4,star = 2}
 		}
 	},
 	[10511] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1051110,cardId = 1101007,lv = 43,bklv = 4,star = 2,mon = {id = 212,desc = "pt-5-11-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051111,cardId = 1102002,lv = 43,bklv = 4,star = 2,mon = {id = 236,desc = "pt-5-11-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051110,cardId = 1101007,lv = 43,bklv = 4,star = 2,mon = {id = 212,desc = "pt-5-11-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051111,cardId = 1102002,lv = 43,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1051120,cardId = 1101003,lv = 43,bklv = 4,star = 2,mon = {id = 208,desc = "pt-5-11-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051121,cardId = 1102005,lv = 43,bklv = 4,star = 2,mon = {id = 231,desc = "pt-5-11-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051120,cardId = 1101003,lv = 43,bklv = 4,star = 2,mon = {id = 208,desc = "pt-5-11-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051121,cardId = 1102005,lv = 43,bklv = 4,star = 2,mon = {id = 231,desc = "pt-5-11-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1051130,cardId = 1101014,lv = 43,bklv = 4,star = 2,mon = {id = 209,desc = "pt-5-11-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051131,cardId = 1102020,lv = 43,bklv = 4,star = 2,mon = {id = 232,desc = "pt-5-11-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051130,cardId = 1101014,lv = 43,bklv = 4,star = 2,mon = {id = 209,desc = "pt-5-11-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051131,cardId = 1102020,lv = 43,bklv = 4,star = 2}
 		}
 	},
 	[10512] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1051210,cardId = 1101007,lv = 44,bklv = 4,star = 2,mon = {id = 215,desc = "pt-5-12-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051211,cardId = 1102002,lv = 44,bklv = 4,star = 2,mon = {id = 239,desc = "pt-5-12-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051210,cardId = 1101007,lv = 44,bklv = 4,star = 2,mon = {id = 215,desc = "pt-5-12-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051211,cardId = 1102002,lv = 44,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1051220,cardId = 1101003,lv = 44,bklv = 4,star = 2,mon = {id = 201,desc = "pt-5-12-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051221,cardId = 1102005,lv = 44,bklv = 4,star = 2,mon = {id = 227,desc = "pt-5-12-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051220,cardId = 1101003,lv = 44,bklv = 4,star = 2,mon = {id = 201,desc = "pt-5-12-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051221,cardId = 1102005,lv = 44,bklv = 4,star = 2,mon = {id = 227,desc = "pt-5-12-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1051230,cardId = 1101014,lv = 44,bklv = 4,star = 2,mon = {id = 211,desc = "pt-5-12-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051231,cardId = 1102020,lv = 44,bklv = 4,star = 2,mon = {id = 235,desc = "pt-5-12-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051230,cardId = 1101014,lv = 44,bklv = 4,star = 2,mon = {id = 211,desc = "pt-5-12-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051231,cardId = 1102020,lv = 44,bklv = 4,star = 2}
 		}
 	},
 	[10513] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1051310,cardId = 1101007,lv = 44,bklv = 4,star = 2,mon = {id = 209,desc = "pt-5-13-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051311,cardId = 1102002,lv = 44,bklv = 4,star = 2,mon = {id = 232,desc = "pt-5-13-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051310,cardId = 1101007,lv = 44,bklv = 4,star = 2,mon = {id = 209,desc = "pt-5-13-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051311,cardId = 1102002,lv = 44,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1051320,cardId = 1101003,lv = 44,bklv = 4,star = 2,mon = {id = 208,desc = "pt-5-13-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051321,cardId = 1102005,lv = 44,bklv = 4,star = 2,mon = {id = 231,desc = "pt-5-13-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051320,cardId = 1101003,lv = 44,bklv = 4,star = 2,mon = {id = 208,desc = "pt-5-13-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051321,cardId = 1102005,lv = 44,bklv = 4,star = 2,mon = {id = 231,desc = "pt-5-13-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1051330,cardId = 1101014,lv = 44,bklv = 4,star = 2,mon = {id = 212,desc = "pt-5-13-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051331,cardId = 1102020,lv = 44,bklv = 4,star = 2,mon = {id = 236,desc = "pt-5-13-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051330,cardId = 1101014,lv = 44,bklv = 4,star = 2,mon = {id = 212,desc = "pt-5-13-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051331,cardId = 1102020,lv = 44,bklv = 4,star = 2}
 		}
 	},
 	[10514] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1051410,cardId = 1101007,lv = 45,bklv = 4,star = 2,mon = {id = 213,desc = "pt-5-14-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051411,cardId = 1102002,lv = 45,bklv = 4,star = 2,mon = {id = 237,desc = "pt-5-14-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051410,cardId = 1101007,lv = 45,bklv = 4,star = 2,mon = {id = 213,desc = "pt-5-14-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051411,cardId = 1102002,lv = 45,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1051420,cardId = 1101003,lv = 45,bklv = 4,star = 2,mon = {id = 207,desc = "pt-5-14-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051421,cardId = 1102005,lv = 45,bklv = 4,star = 2,mon = {id = 221,desc = "pt-5-14-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051420,cardId = 1101003,lv = 45,bklv = 4,star = 2,mon = {id = 207,desc = "pt-5-14-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051421,cardId = 1102005,lv = 45,bklv = 4,star = 2,mon = {id = 221,desc = "pt-5-14-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1051430,cardId = 1101014,lv = 45,bklv = 4,star = 2,mon = {id = 211,desc = "pt-5-14-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051431,cardId = 1102020,lv = 45,bklv = 4,star = 2,mon = {id = 235,desc = "pt-5-14-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051430,cardId = 1101014,lv = 45,bklv = 4,star = 2,mon = {id = 211,desc = "pt-5-14-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051431,cardId = 1102020,lv = 45,bklv = 4,star = 2}
 		}
 	},
 	[10515] = {
 		[1] = {
-			jlr = {cha = "pt-5",id = 1051510,cardId = 1101007,lv = 47,bklv = 4,star = 2,mon = {id = 205,desc = "pt-5-15-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051511,cardId = 1102002,lv = 47,bklv = 4,star = 2,mon = {id = 219,desc = "pt-5-15-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051510,cardId = 1101007,lv = 47,bklv = 4,star = 2,mon = {id = 205,desc = "pt-5-15-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051511,cardId = 1102002,lv = 47,bklv = 4,star = 2,mon = {id = 219,desc = "pt-5-15-shl-loc1",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-5",id = 1051520,cardId = 1101003,lv = 47,bklv = 4,star = 2,mon = {id = 204,desc = "pt-5-15-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051521,cardId = 1102005,lv = 47,bklv = 4,star = 2,mon = {id = 224,desc = "pt-5-15-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051520,cardId = 1101003,lv = 47,bklv = 4,star = 2,mon = {id = 204,desc = "pt-5-15-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051521,cardId = 1102005,lv = 47,bklv = 4,star = 2,mon = {id = 224,desc = "pt-5-15-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-5",id = 1051530,cardId = 1101014,lv = 47,bklv = 4,star = 2,mon = {id = 207,desc = "pt-5-15-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-5",id = 1051531,cardId = 1102020,lv = 47,bklv = 4,star = 2,mon = {id = 228,desc = "pt-5-15-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-5",id = 1051530,cardId = 1101014,lv = 47,bklv = 4,star = 2,mon = {id = 207,desc = "pt-5-15-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-5",id = 1051531,cardId = 1102020,lv = 47,bklv = 4,star = 2,mon = {id = 228,desc = "pt-5-15-shl-loc3",skillLv = 3,exert = 18,suffer = 18}}
 		}
 	},
 	[10601] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1060110,cardId = 1101007,lv = 48,bklv = 4,star = 2,mon = {id = 212,desc = "pt-6-1-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060111,cardId = 1102012,lv = 48,bklv = 4,star = 2,mon = {id = 236,desc = "pt-6-1-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060110,cardId = 1101007,lv = 48,bklv = 4,star = 2,mon = {id = 212,desc = "pt-6-1-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060111,cardId = 1102012,lv = 48,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1060120,cardId = 1101003,lv = 48,bklv = 4,star = 2,mon = {id = 208,desc = "pt-6-1-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060121,cardId = 1102005,lv = 48,bklv = 4,star = 2,mon = {id = 231,desc = "pt-6-1-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060120,cardId = 1101003,lv = 48,bklv = 4,star = 2,mon = {id = 208,desc = "pt-6-1-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060121,cardId = 1102005,lv = 48,bklv = 4,star = 2,mon = {id = 231,desc = "pt-6-1-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1060130,cardId = 1101014,lv = 48,bklv = 4,star = 2,mon = {id = 213,desc = "pt-6-1-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060131,cardId = 1102020,lv = 48,bklv = 4,star = 2,mon = {id = 237,desc = "pt-6-1-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060130,cardId = 1101014,lv = 48,bklv = 4,star = 2,mon = {id = 213,desc = "pt-6-1-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060131,cardId = 1102020,lv = 48,bklv = 4,star = 2}
 		}
 	},
 	[10602] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1060210,cardId = 1101007,lv = 49,bklv = 4,star = 2,mon = {id = 201,desc = "pt-6-2-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060211,cardId = 1102012,lv = 49,bklv = 4,star = 2,mon = {id = 220,desc = "pt-6-2-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060210,cardId = 1101007,lv = 49,bklv = 4,star = 2,mon = {id = 201,desc = "pt-6-2-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060211,cardId = 1102012,lv = 49,bklv = 4,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1060220,cardId = 1101003,lv = 49,bklv = 4,star = 2,mon = {id = 203,desc = "pt-6-2-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060221,cardId = 1102005,lv = 49,bklv = 4,star = 2,mon = {id = 223,desc = "pt-6-2-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060220,cardId = 1101003,lv = 49,bklv = 4,star = 2,mon = {id = 203,desc = "pt-6-2-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060221,cardId = 1102005,lv = 49,bklv = 4,star = 2,mon = {id = 223,desc = "pt-6-2-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1060230,cardId = 1101014,lv = 49,bklv = 4,star = 2,mon = {id = 214,desc = "pt-6-2-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060231,cardId = 1102020,lv = 49,bklv = 4,star = 2,mon = {id = 238,desc = "pt-6-2-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060230,cardId = 1101014,lv = 49,bklv = 4,star = 2,mon = {id = 214,desc = "pt-6-2-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060231,cardId = 1102020,lv = 49,bklv = 4,star = 2}
 		}
 	},
 	[10603] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1060310,cardId = 1101007,lv = 50,bklv = 5,star = 2,mon = {id = 212,desc = "pt-6-3-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060311,cardId = 1102012,lv = 50,bklv = 5,star = 2,mon = {id = 236,desc = "pt-6-3-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060310,cardId = 1101007,lv = 50,bklv = 5,star = 2,mon = {id = 212,desc = "pt-6-3-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060311,cardId = 1102012,lv = 50,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1060320,cardId = 1101003,lv = 50,bklv = 5,star = 2,mon = {id = 208,desc = "pt-6-3-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060321,cardId = 1102005,lv = 50,bklv = 5,star = 2,mon = {id = 231,desc = "pt-6-3-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060320,cardId = 1101003,lv = 50,bklv = 5,star = 2,mon = {id = 208,desc = "pt-6-3-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060321,cardId = 1102005,lv = 50,bklv = 5,star = 2,mon = {id = 231,desc = "pt-6-3-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1060330,cardId = 1101014,lv = 50,bklv = 5,star = 2,mon = {id = 209,desc = "pt-6-3-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060331,cardId = 1102020,lv = 50,bklv = 5,star = 2,mon = {id = 232,desc = "pt-6-3-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060330,cardId = 1101014,lv = 50,bklv = 5,star = 2,mon = {id = 209,desc = "pt-6-3-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060331,cardId = 1102020,lv = 50,bklv = 5,star = 2}
 		}
 	},
 	[10604] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1060410,cardId = 1101007,lv = 50,bklv = 5,star = 2,mon = {id = 215,desc = "pt-6-4-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060411,cardId = 1102012,lv = 50,bklv = 5,star = 2,mon = {id = 239,desc = "pt-6-4-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060410,cardId = 1101007,lv = 50,bklv = 5,star = 2,mon = {id = 215,desc = "pt-6-4-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060411,cardId = 1102012,lv = 50,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1060420,cardId = 1101003,lv = 50,bklv = 5,star = 2,mon = {id = 201,desc = "pt-6-4-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060421,cardId = 1102005,lv = 50,bklv = 5,star = 2,mon = {id = 227,desc = "pt-6-4-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060420,cardId = 1101003,lv = 50,bklv = 5,star = 2,mon = {id = 201,desc = "pt-6-4-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060421,cardId = 1102005,lv = 50,bklv = 5,star = 2,mon = {id = 227,desc = "pt-6-4-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1060430,cardId = 1101014,lv = 50,bklv = 5,star = 2,mon = {id = 211,desc = "pt-6-4-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060431,cardId = 1102020,lv = 50,bklv = 5,star = 2,mon = {id = 235,desc = "pt-6-4-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060430,cardId = 1101014,lv = 50,bklv = 5,star = 2,mon = {id = 211,desc = "pt-6-4-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060431,cardId = 1102020,lv = 50,bklv = 5,star = 2}
 		}
 	},
 	[10605] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1060510,cardId = 1101007,lv = 51,bklv = 5,star = 2,mon = {id = 206,desc = "pt-6-5-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060511,cardId = 1102012,lv = 51,bklv = 5,star = 2,mon = {id = 225,desc = "pt-6-5-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060510,cardId = 1101007,lv = 51,bklv = 5,star = 2,mon = {id = 206,desc = "pt-6-5-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060511,cardId = 1102012,lv = 51,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1060520,cardId = 1101003,lv = 51,bklv = 5,star = 2,mon = {id = 203,desc = "pt-6-5-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060521,cardId = 1102005,lv = 51,bklv = 5,star = 2,mon = {id = 223,desc = "pt-6-5-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060520,cardId = 1101003,lv = 51,bklv = 5,star = 2,mon = {id = 203,desc = "pt-6-5-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060521,cardId = 1102005,lv = 51,bklv = 5,star = 2,mon = {id = 223,desc = "pt-6-5-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1060530,cardId = 1101014,lv = 51,bklv = 5,star = 2,mon = {id = 212,desc = "pt-6-5-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060531,cardId = 1102020,lv = 51,bklv = 5,star = 2,mon = {id = 236,desc = "pt-6-5-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060530,cardId = 1101014,lv = 51,bklv = 5,star = 2,mon = {id = 212,desc = "pt-6-5-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060531,cardId = 1102020,lv = 51,bklv = 5,star = 2}
 		}
 	},
 	[10606] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1060610,cardId = 1101007,lv = 51,bklv = 5,star = 2,mon = {id = 209,desc = "pt-6-6-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060611,cardId = 1102012,lv = 51,bklv = 5,star = 2,mon = {id = 232,desc = "pt-6-6-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060610,cardId = 1101007,lv = 51,bklv = 5,star = 2,mon = {id = 209,desc = "pt-6-6-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060611,cardId = 1102012,lv = 51,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1060620,cardId = 1101003,lv = 51,bklv = 5,star = 2,mon = {id = 208,desc = "pt-6-6-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060621,cardId = 1102005,lv = 51,bklv = 5,star = 2,mon = {id = 231,desc = "pt-6-6-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060620,cardId = 1101003,lv = 51,bklv = 5,star = 2,mon = {id = 208,desc = "pt-6-6-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060621,cardId = 1102005,lv = 51,bklv = 5,star = 2,mon = {id = 231,desc = "pt-6-6-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1060630,cardId = 1101014,lv = 51,bklv = 5,star = 2,mon = {id = 212,desc = "pt-6-6-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060631,cardId = 1102020,lv = 51,bklv = 5,star = 2,mon = {id = 236,desc = "pt-6-6-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060630,cardId = 1101014,lv = 51,bklv = 5,star = 2,mon = {id = 212,desc = "pt-6-6-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060631,cardId = 1102020,lv = 51,bklv = 5,star = 2}
 		}
 	},
 	[10607] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1060710,cardId = 1101007,lv = 52,bklv = 5,star = 2,mon = {id = 207,desc = "pt-6-7-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060711,cardId = 1102012,lv = 52,bklv = 5,star = 2,mon = {id = 227,desc = "pt-6-7-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060710,cardId = 1101007,lv = 52,bklv = 5,star = 2,mon = {id = 207,desc = "pt-6-7-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060711,cardId = 1102012,lv = 52,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1060720,cardId = 1101003,lv = 52,bklv = 5,star = 2,mon = {id = 207,desc = "pt-6-7-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060721,cardId = 1102005,lv = 52,bklv = 5,star = 2,mon = {id = 221,desc = "pt-6-7-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060720,cardId = 1101003,lv = 52,bklv = 5,star = 2,mon = {id = 207,desc = "pt-6-7-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060721,cardId = 1102005,lv = 52,bklv = 5,star = 2,mon = {id = 221,desc = "pt-6-7-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1060730,cardId = 1101014,lv = 52,bklv = 5,star = 2,mon = {id = 211,desc = "pt-6-7-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060731,cardId = 1102020,lv = 52,bklv = 5,star = 2,mon = {id = 235,desc = "pt-6-7-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060730,cardId = 1101014,lv = 52,bklv = 5,star = 2,mon = {id = 211,desc = "pt-6-7-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060731,cardId = 1102020,lv = 52,bklv = 5,star = 2}
 		}
 	},
 	[10608] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1060810,cardId = 1101007,lv = 52,bklv = 5,star = 2,mon = {id = 207,desc = "pt-6-8-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060811,cardId = 1102012,lv = 52,bklv = 5,star = 2,mon = {id = 230,desc = "pt-6-8-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060810,cardId = 1101007,lv = 52,bklv = 5,star = 2,mon = {id = 207,desc = "pt-6-8-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060811,cardId = 1102012,lv = 52,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1060820,cardId = 1101003,lv = 52,bklv = 5,star = 2,mon = {id = 205,desc = "pt-6-8-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060821,cardId = 1102005,lv = 52,bklv = 5,star = 2,mon = {id = 229,desc = "pt-6-8-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060820,cardId = 1101003,lv = 52,bklv = 5,star = 2,mon = {id = 205,desc = "pt-6-8-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060821,cardId = 1102005,lv = 52,bklv = 5,star = 2,mon = {id = 229,desc = "pt-6-8-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1060830,cardId = 1101014,lv = 52,bklv = 5,star = 2,mon = {id = 210,desc = "pt-6-8-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060831,cardId = 1102020,lv = 52,bklv = 5,star = 2,mon = {id = 234,desc = "pt-6-8-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060830,cardId = 1101014,lv = 52,bklv = 5,star = 2,mon = {id = 210,desc = "pt-6-8-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060831,cardId = 1102020,lv = 52,bklv = 5,star = 2}
 		}
 	},
 	[10609] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1060910,cardId = 1101007,lv = 53,bklv = 5,star = 2,mon = {id = 212,desc = "pt-6-9-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060911,cardId = 1102012,lv = 53,bklv = 5,star = 2,mon = {id = 236,desc = "pt-6-9-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060910,cardId = 1101007,lv = 53,bklv = 5,star = 2,mon = {id = 212,desc = "pt-6-9-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060911,cardId = 1102012,lv = 53,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1060920,cardId = 1101003,lv = 53,bklv = 5,star = 2,mon = {id = 208,desc = "pt-6-9-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060921,cardId = 1102005,lv = 53,bklv = 5,star = 2,mon = {id = 231,desc = "pt-6-9-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060920,cardId = 1101003,lv = 53,bklv = 5,star = 2,mon = {id = 208,desc = "pt-6-9-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060921,cardId = 1102005,lv = 53,bklv = 5,star = 2,mon = {id = 231,desc = "pt-6-9-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1060930,cardId = 1101014,lv = 53,bklv = 5,star = 2,mon = {id = 209,desc = "pt-6-9-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1060931,cardId = 1102020,lv = 53,bklv = 5,star = 2,mon = {id = 232,desc = "pt-6-9-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1060930,cardId = 1101014,lv = 53,bklv = 5,star = 2,mon = {id = 209,desc = "pt-6-9-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1060931,cardId = 1102020,lv = 53,bklv = 5,star = 2}
 		}
 	},
 	[10610] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1061010,cardId = 1101007,lv = 53,bklv = 5,star = 2,mon = {id = 201,desc = "pt-6-10-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061011,cardId = 1102012,lv = 53,bklv = 5,star = 2,mon = {id = 220,desc = "pt-6-10-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061010,cardId = 1101007,lv = 53,bklv = 5,star = 2,mon = {id = 201,desc = "pt-6-10-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061011,cardId = 1102012,lv = 53,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1061020,cardId = 1101003,lv = 53,bklv = 5,star = 2,mon = {id = 203,desc = "pt-6-10-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061021,cardId = 1102005,lv = 53,bklv = 5,star = 2,mon = {id = 223,desc = "pt-6-10-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061020,cardId = 1101003,lv = 53,bklv = 5,star = 2,mon = {id = 203,desc = "pt-6-10-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061021,cardId = 1102005,lv = 53,bklv = 5,star = 2,mon = {id = 223,desc = "pt-6-10-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1061030,cardId = 1101014,lv = 53,bklv = 5,star = 2,mon = {id = 214,desc = "pt-6-10-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061031,cardId = 1102020,lv = 53,bklv = 5,star = 2,mon = {id = 238,desc = "pt-6-10-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061030,cardId = 1101014,lv = 53,bklv = 5,star = 2,mon = {id = 214,desc = "pt-6-10-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061031,cardId = 1102020,lv = 53,bklv = 5,star = 2}
 		}
 	},
 	[10611] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1061110,cardId = 1101007,lv = 53,bklv = 5,star = 2,mon = {id = 212,desc = "pt-6-11-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061111,cardId = 1102012,lv = 53,bklv = 5,star = 2,mon = {id = 236,desc = "pt-6-11-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061110,cardId = 1101007,lv = 53,bklv = 5,star = 2,mon = {id = 212,desc = "pt-6-11-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061111,cardId = 1102012,lv = 53,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1061120,cardId = 1101003,lv = 53,bklv = 5,star = 2,mon = {id = 208,desc = "pt-6-11-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061121,cardId = 1102005,lv = 53,bklv = 5,star = 2,mon = {id = 231,desc = "pt-6-11-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061120,cardId = 1101003,lv = 53,bklv = 5,star = 2,mon = {id = 208,desc = "pt-6-11-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061121,cardId = 1102005,lv = 53,bklv = 5,star = 2,mon = {id = 231,desc = "pt-6-11-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1061130,cardId = 1101014,lv = 53,bklv = 5,star = 2,mon = {id = 209,desc = "pt-6-11-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061131,cardId = 1102020,lv = 53,bklv = 5,star = 2,mon = {id = 232,desc = "pt-6-11-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061130,cardId = 1101014,lv = 53,bklv = 5,star = 2,mon = {id = 209,desc = "pt-6-11-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061131,cardId = 1102020,lv = 53,bklv = 5,star = 2}
 		}
 	},
 	[10612] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1061210,cardId = 1101007,lv = 54,bklv = 5,star = 2,mon = {id = 215,desc = "pt-6-12-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061211,cardId = 1102012,lv = 54,bklv = 5,star = 2,mon = {id = 239,desc = "pt-6-12-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061210,cardId = 1101007,lv = 54,bklv = 5,star = 2,mon = {id = 215,desc = "pt-6-12-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061211,cardId = 1102012,lv = 54,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1061220,cardId = 1101003,lv = 54,bklv = 5,star = 2,mon = {id = 201,desc = "pt-6-12-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061221,cardId = 1102005,lv = 54,bklv = 5,star = 2,mon = {id = 227,desc = "pt-6-12-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061220,cardId = 1101003,lv = 54,bklv = 5,star = 2,mon = {id = 201,desc = "pt-6-12-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061221,cardId = 1102005,lv = 54,bklv = 5,star = 2,mon = {id = 227,desc = "pt-6-12-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1061230,cardId = 1101014,lv = 54,bklv = 5,star = 2,mon = {id = 211,desc = "pt-6-12-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061231,cardId = 1102020,lv = 54,bklv = 5,star = 2,mon = {id = 235,desc = "pt-6-12-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061230,cardId = 1101014,lv = 54,bklv = 5,star = 2,mon = {id = 211,desc = "pt-6-12-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061231,cardId = 1102020,lv = 54,bklv = 5,star = 2}
 		}
 	},
 	[10613] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1061310,cardId = 1101007,lv = 54,bklv = 5,star = 2,mon = {id = 209,desc = "pt-6-13-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061311,cardId = 1102012,lv = 54,bklv = 5,star = 2,mon = {id = 232,desc = "pt-6-13-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061310,cardId = 1101007,lv = 54,bklv = 5,star = 2,mon = {id = 209,desc = "pt-6-13-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061311,cardId = 1102012,lv = 54,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1061320,cardId = 1101003,lv = 54,bklv = 5,star = 2,mon = {id = 208,desc = "pt-6-13-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061321,cardId = 1102005,lv = 54,bklv = 5,star = 2,mon = {id = 231,desc = "pt-6-13-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061320,cardId = 1101003,lv = 54,bklv = 5,star = 2,mon = {id = 208,desc = "pt-6-13-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061321,cardId = 1102005,lv = 54,bklv = 5,star = 2,mon = {id = 231,desc = "pt-6-13-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1061330,cardId = 1101014,lv = 54,bklv = 5,star = 2,mon = {id = 212,desc = "pt-6-13-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061331,cardId = 1102020,lv = 54,bklv = 5,star = 2,mon = {id = 236,desc = "pt-6-13-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061330,cardId = 1101014,lv = 54,bklv = 5,star = 2,mon = {id = 212,desc = "pt-6-13-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061331,cardId = 1102020,lv = 54,bklv = 5,star = 2}
 		}
 	},
 	[10614] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1061410,cardId = 1101007,lv = 55,bklv = 5,star = 2,mon = {id = 207,desc = "pt-6-14-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061411,cardId = 1102012,lv = 55,bklv = 5,star = 2,mon = {id = 227,desc = "pt-6-14-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061410,cardId = 1101007,lv = 55,bklv = 5,star = 2,mon = {id = 207,desc = "pt-6-14-jlr-loc1",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061411,cardId = 1102012,lv = 55,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1061420,cardId = 1101003,lv = 55,bklv = 5,star = 2,mon = {id = 207,desc = "pt-6-14-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061421,cardId = 1102005,lv = 55,bklv = 5,star = 2,mon = {id = 221,desc = "pt-6-14-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061420,cardId = 1101003,lv = 55,bklv = 5,star = 2,mon = {id = 207,desc = "pt-6-14-jlr-loc2",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061421,cardId = 1102005,lv = 55,bklv = 5,star = 2,mon = {id = 221,desc = "pt-6-14-shl-loc2",skillLv = 3,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1061430,cardId = 1101014,lv = 55,bklv = 5,star = 2,mon = {id = 211,desc = "pt-6-14-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061431,cardId = 1102020,lv = 55,bklv = 5,star = 2,mon = {id = 235,desc = "pt-6-14-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061430,cardId = 1101014,lv = 55,bklv = 5,star = 2,mon = {id = 211,desc = "pt-6-14-jlr-loc3",skillLv = 3,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061431,cardId = 1102020,lv = 55,bklv = 5,star = 2}
 		}
 	},
 	[10615] = {
 		[1] = {
-			jlr = {cha = "pt-6",id = 1061510,cardId = 1101007,lv = 57,bklv = 5,star = 2,mon = {id = 205,desc = "pt-6-15-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061511,cardId = 1102012,lv = 57,bklv = 5,star = 2,mon = {id = 219,desc = "pt-6-15-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061510,cardId = 1101007,lv = 57,bklv = 5,star = 2,mon = {id = 205,desc = "pt-6-15-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061511,cardId = 1102012,lv = 57,bklv = 5,star = 2,mon = {id = 229,desc = "pt-6-15-shl-loc1",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-6",id = 1061520,cardId = 1101003,lv = 57,bklv = 5,star = 2,mon = {id = 204,desc = "pt-6-15-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061521,cardId = 1102005,lv = 57,bklv = 5,star = 2,mon = {id = 224,desc = "pt-6-15-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061520,cardId = 1101003,lv = 57,bklv = 5,star = 2,mon = {id = 204,desc = "pt-6-15-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061521,cardId = 1102005,lv = 57,bklv = 5,star = 2,mon = {id = 224,desc = "pt-6-15-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-6",id = 1061530,cardId = 1101014,lv = 57,bklv = 5,star = 2,mon = {id = 207,desc = "pt-6-15-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-6",id = 1061531,cardId = 1102020,lv = 57,bklv = 5,star = 2,mon = {id = 228,desc = "pt-6-15-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-6",id = 1061530,cardId = 1101014,lv = 57,bklv = 5,star = 2,mon = {id = 207,desc = "pt-6-15-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-6",id = 1061531,cardId = 1102020,lv = 57,bklv = 5,star = 2,mon = {id = 228,desc = "pt-6-15-shl-loc3",skillLv = 4,exert = 18,suffer = 18}}
 		}
 	},
 	[10701] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1070110,cardId = 1101007,lv = 58,bklv = 5,star = 2,mon = {id = 212,desc = "pt-7-1-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070111,cardId = 1102012,lv = 58,bklv = 5,star = 2,mon = {id = 236,desc = "pt-7-1-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070110,cardId = 1101007,lv = 58,bklv = 5,star = 2,mon = {id = 212,desc = "pt-7-1-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070111,cardId = 1102012,lv = 58,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1070120,cardId = 1101003,lv = 58,bklv = 5,star = 2,mon = {id = 208,desc = "pt-7-1-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070121,cardId = 1102005,lv = 58,bklv = 5,star = 2,mon = {id = 231,desc = "pt-7-1-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070120,cardId = 1101003,lv = 58,bklv = 5,star = 2,mon = {id = 208,desc = "pt-7-1-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070121,cardId = 1102005,lv = 58,bklv = 5,star = 2,mon = {id = 231,desc = "pt-7-1-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1070130,cardId = 1101014,lv = 58,bklv = 5,star = 2,mon = {id = 213,desc = "pt-7-1-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070131,cardId = 1102020,lv = 58,bklv = 5,star = 2,mon = {id = 237,desc = "pt-7-1-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070130,cardId = 1101014,lv = 58,bklv = 5,star = 2,mon = {id = 213,desc = "pt-7-1-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070131,cardId = 1102020,lv = 58,bklv = 5,star = 2}
 		}
 	},
 	[10702] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1070210,cardId = 1101007,lv = 59,bklv = 5,star = 2,mon = {id = 201,desc = "pt-7-2-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070211,cardId = 1102012,lv = 59,bklv = 5,star = 2,mon = {id = 220,desc = "pt-7-2-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070210,cardId = 1101007,lv = 59,bklv = 5,star = 2,mon = {id = 201,desc = "pt-7-2-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070211,cardId = 1102012,lv = 59,bklv = 5,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1070220,cardId = 1101003,lv = 59,bklv = 5,star = 2,mon = {id = 203,desc = "pt-7-2-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070221,cardId = 1102005,lv = 59,bklv = 5,star = 2,mon = {id = 223,desc = "pt-7-2-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070220,cardId = 1101003,lv = 59,bklv = 5,star = 2,mon = {id = 203,desc = "pt-7-2-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070221,cardId = 1102005,lv = 59,bklv = 5,star = 2,mon = {id = 223,desc = "pt-7-2-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1070230,cardId = 1101014,lv = 59,bklv = 5,star = 2,mon = {id = 214,desc = "pt-7-2-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070231,cardId = 1102020,lv = 59,bklv = 5,star = 2,mon = {id = 238,desc = "pt-7-2-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070230,cardId = 1101014,lv = 59,bklv = 5,star = 2,mon = {id = 214,desc = "pt-7-2-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070231,cardId = 1102020,lv = 59,bklv = 5,star = 2}
 		}
 	},
 	[10703] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1070310,cardId = 1101007,lv = 60,bklv = 6,star = 2,mon = {id = 212,desc = "pt-7-3-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070311,cardId = 1102012,lv = 60,bklv = 6,star = 2,mon = {id = 236,desc = "pt-7-3-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070310,cardId = 1101007,lv = 60,bklv = 6,star = 2,mon = {id = 212,desc = "pt-7-3-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070311,cardId = 1102012,lv = 60,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1070320,cardId = 1101003,lv = 60,bklv = 6,star = 2,mon = {id = 208,desc = "pt-7-3-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070321,cardId = 1102005,lv = 60,bklv = 6,star = 2,mon = {id = 231,desc = "pt-7-3-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070320,cardId = 1101003,lv = 60,bklv = 6,star = 2,mon = {id = 208,desc = "pt-7-3-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070321,cardId = 1102005,lv = 60,bklv = 6,star = 2,mon = {id = 231,desc = "pt-7-3-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1070330,cardId = 1101014,lv = 60,bklv = 6,star = 2,mon = {id = 209,desc = "pt-7-3-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070331,cardId = 1102020,lv = 60,bklv = 6,star = 2,mon = {id = 232,desc = "pt-7-3-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070330,cardId = 1101014,lv = 60,bklv = 6,star = 2,mon = {id = 209,desc = "pt-7-3-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070331,cardId = 1102020,lv = 60,bklv = 6,star = 2}
 		}
 	},
 	[10704] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1070410,cardId = 1101007,lv = 60,bklv = 6,star = 2,mon = {id = 215,desc = "pt-7-4-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070411,cardId = 1102012,lv = 60,bklv = 6,star = 2,mon = {id = 239,desc = "pt-7-4-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070410,cardId = 1101007,lv = 60,bklv = 6,star = 2,mon = {id = 215,desc = "pt-7-4-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070411,cardId = 1102012,lv = 60,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1070420,cardId = 1101003,lv = 60,bklv = 6,star = 2,mon = {id = 201,desc = "pt-7-4-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070421,cardId = 1102005,lv = 60,bklv = 6,star = 2,mon = {id = 227,desc = "pt-7-4-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070420,cardId = 1101003,lv = 60,bklv = 6,star = 2,mon = {id = 201,desc = "pt-7-4-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070421,cardId = 1102005,lv = 60,bklv = 6,star = 2,mon = {id = 227,desc = "pt-7-4-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1070430,cardId = 1101014,lv = 60,bklv = 6,star = 2,mon = {id = 211,desc = "pt-7-4-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070431,cardId = 1102020,lv = 60,bklv = 6,star = 2,mon = {id = 235,desc = "pt-7-4-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070430,cardId = 1101014,lv = 60,bklv = 6,star = 2,mon = {id = 211,desc = "pt-7-4-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070431,cardId = 1102020,lv = 60,bklv = 6,star = 2}
 		}
 	},
 	[10705] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1070510,cardId = 1101007,lv = 61,bklv = 6,star = 2,mon = {id = 206,desc = "pt-7-5-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070511,cardId = 1102012,lv = 61,bklv = 6,star = 2,mon = {id = 225,desc = "pt-7-5-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070510,cardId = 1101007,lv = 61,bklv = 6,star = 2,mon = {id = 206,desc = "pt-7-5-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070511,cardId = 1102012,lv = 61,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1070520,cardId = 1101003,lv = 61,bklv = 6,star = 2,mon = {id = 203,desc = "pt-7-5-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070521,cardId = 1102005,lv = 61,bklv = 6,star = 2,mon = {id = 223,desc = "pt-7-5-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070520,cardId = 1101003,lv = 61,bklv = 6,star = 2,mon = {id = 203,desc = "pt-7-5-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070521,cardId = 1102005,lv = 61,bklv = 6,star = 2,mon = {id = 223,desc = "pt-7-5-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1070530,cardId = 1101014,lv = 61,bklv = 6,star = 2,mon = {id = 212,desc = "pt-7-5-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070531,cardId = 1102020,lv = 61,bklv = 6,star = 2,mon = {id = 236,desc = "pt-7-5-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070530,cardId = 1101014,lv = 61,bklv = 6,star = 2,mon = {id = 212,desc = "pt-7-5-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070531,cardId = 1102020,lv = 61,bklv = 6,star = 2}
 		}
 	},
 	[10706] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1070610,cardId = 1101007,lv = 61,bklv = 6,star = 2,mon = {id = 209,desc = "pt-7-6-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070611,cardId = 1102012,lv = 61,bklv = 6,star = 2,mon = {id = 232,desc = "pt-7-6-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070610,cardId = 1101007,lv = 61,bklv = 6,star = 2,mon = {id = 209,desc = "pt-7-6-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070611,cardId = 1102012,lv = 61,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1070620,cardId = 1101003,lv = 61,bklv = 6,star = 2,mon = {id = 208,desc = "pt-7-6-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070621,cardId = 1102005,lv = 61,bklv = 6,star = 2,mon = {id = 231,desc = "pt-7-6-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070620,cardId = 1101003,lv = 61,bklv = 6,star = 2,mon = {id = 208,desc = "pt-7-6-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070621,cardId = 1102005,lv = 61,bklv = 6,star = 2,mon = {id = 231,desc = "pt-7-6-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1070630,cardId = 1101014,lv = 61,bklv = 6,star = 2,mon = {id = 212,desc = "pt-7-6-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070631,cardId = 1102020,lv = 61,bklv = 6,star = 2,mon = {id = 236,desc = "pt-7-6-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070630,cardId = 1101014,lv = 61,bklv = 6,star = 2,mon = {id = 212,desc = "pt-7-6-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070631,cardId = 1102020,lv = 61,bklv = 6,star = 2}
 		}
 	},
 	[10707] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1070710,cardId = 1101007,lv = 62,bklv = 6,star = 2,mon = {id = 207,desc = "pt-7-7-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070711,cardId = 1102012,lv = 62,bklv = 6,star = 2,mon = {id = 227,desc = "pt-7-7-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070710,cardId = 1101007,lv = 62,bklv = 6,star = 2,mon = {id = 207,desc = "pt-7-7-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070711,cardId = 1102012,lv = 62,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1070720,cardId = 1101003,lv = 62,bklv = 6,star = 2,mon = {id = 207,desc = "pt-7-7-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070721,cardId = 1102005,lv = 62,bklv = 6,star = 2,mon = {id = 221,desc = "pt-7-7-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070720,cardId = 1101003,lv = 62,bklv = 6,star = 2,mon = {id = 207,desc = "pt-7-7-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070721,cardId = 1102005,lv = 62,bklv = 6,star = 2,mon = {id = 221,desc = "pt-7-7-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1070730,cardId = 1101014,lv = 62,bklv = 6,star = 2,mon = {id = 211,desc = "pt-7-7-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070731,cardId = 1102020,lv = 62,bklv = 6,star = 2,mon = {id = 235,desc = "pt-7-7-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070730,cardId = 1101014,lv = 62,bklv = 6,star = 2,mon = {id = 211,desc = "pt-7-7-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070731,cardId = 1102020,lv = 62,bklv = 6,star = 2}
 		}
 	},
 	[10708] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1070810,cardId = 1101007,lv = 62,bklv = 6,star = 2,mon = {id = 207,desc = "pt-7-8-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070811,cardId = 1102012,lv = 62,bklv = 6,star = 2,mon = {id = 230,desc = "pt-7-8-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070810,cardId = 1101007,lv = 62,bklv = 6,star = 2,mon = {id = 207,desc = "pt-7-8-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070811,cardId = 1102012,lv = 62,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1070820,cardId = 1101003,lv = 62,bklv = 6,star = 2,mon = {id = 205,desc = "pt-7-8-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070821,cardId = 1102005,lv = 62,bklv = 6,star = 2,mon = {id = 229,desc = "pt-7-8-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070820,cardId = 1101003,lv = 62,bklv = 6,star = 2,mon = {id = 205,desc = "pt-7-8-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070821,cardId = 1102005,lv = 62,bklv = 6,star = 2,mon = {id = 229,desc = "pt-7-8-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1070830,cardId = 1101014,lv = 62,bklv = 6,star = 2,mon = {id = 210,desc = "pt-7-8-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070831,cardId = 1102020,lv = 62,bklv = 6,star = 2,mon = {id = 234,desc = "pt-7-8-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070830,cardId = 1101014,lv = 62,bklv = 6,star = 2,mon = {id = 210,desc = "pt-7-8-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070831,cardId = 1102020,lv = 62,bklv = 6,star = 2}
 		}
 	},
 	[10709] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1070910,cardId = 1101007,lv = 63,bklv = 6,star = 2,mon = {id = 212,desc = "pt-7-9-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070911,cardId = 1102012,lv = 63,bklv = 6,star = 2,mon = {id = 236,desc = "pt-7-9-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070910,cardId = 1101007,lv = 63,bklv = 6,star = 2,mon = {id = 212,desc = "pt-7-9-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070911,cardId = 1102012,lv = 63,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1070920,cardId = 1101003,lv = 63,bklv = 6,star = 2,mon = {id = 208,desc = "pt-7-9-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070921,cardId = 1102005,lv = 63,bklv = 6,star = 2,mon = {id = 231,desc = "pt-7-9-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070920,cardId = 1101003,lv = 63,bklv = 6,star = 2,mon = {id = 208,desc = "pt-7-9-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070921,cardId = 1102005,lv = 63,bklv = 6,star = 2,mon = {id = 231,desc = "pt-7-9-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1070930,cardId = 1101014,lv = 63,bklv = 6,star = 2,mon = {id = 209,desc = "pt-7-9-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1070931,cardId = 1102020,lv = 63,bklv = 6,star = 2,mon = {id = 232,desc = "pt-7-9-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1070930,cardId = 1101014,lv = 63,bklv = 6,star = 2,mon = {id = 209,desc = "pt-7-9-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1070931,cardId = 1102020,lv = 63,bklv = 6,star = 2}
 		}
 	},
 	[10710] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1071010,cardId = 1101007,lv = 63,bklv = 6,star = 2,mon = {id = 201,desc = "pt-7-10-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071011,cardId = 1102012,lv = 63,bklv = 6,star = 2,mon = {id = 220,desc = "pt-7-10-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071010,cardId = 1101007,lv = 63,bklv = 6,star = 2,mon = {id = 201,desc = "pt-7-10-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071011,cardId = 1102012,lv = 63,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1071020,cardId = 1101003,lv = 63,bklv = 6,star = 2,mon = {id = 203,desc = "pt-7-10-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071021,cardId = 1102005,lv = 63,bklv = 6,star = 2,mon = {id = 223,desc = "pt-7-10-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071020,cardId = 1101003,lv = 63,bklv = 6,star = 2,mon = {id = 203,desc = "pt-7-10-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071021,cardId = 1102005,lv = 63,bklv = 6,star = 2,mon = {id = 223,desc = "pt-7-10-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1071030,cardId = 1101014,lv = 63,bklv = 6,star = 2,mon = {id = 214,desc = "pt-7-10-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071031,cardId = 1102020,lv = 63,bklv = 6,star = 2,mon = {id = 238,desc = "pt-7-10-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071030,cardId = 1101014,lv = 63,bklv = 6,star = 2,mon = {id = 214,desc = "pt-7-10-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071031,cardId = 1102020,lv = 63,bklv = 6,star = 2}
 		}
 	},
 	[10711] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1071110,cardId = 1101007,lv = 63,bklv = 6,star = 2,mon = {id = 212,desc = "pt-7-11-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071111,cardId = 1102012,lv = 63,bklv = 6,star = 2,mon = {id = 236,desc = "pt-7-11-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071110,cardId = 1101007,lv = 63,bklv = 6,star = 2,mon = {id = 212,desc = "pt-7-11-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071111,cardId = 1102012,lv = 63,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1071120,cardId = 1101003,lv = 63,bklv = 6,star = 2,mon = {id = 208,desc = "pt-7-11-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071121,cardId = 1102005,lv = 63,bklv = 6,star = 2,mon = {id = 231,desc = "pt-7-11-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071120,cardId = 1101003,lv = 63,bklv = 6,star = 2,mon = {id = 208,desc = "pt-7-11-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071121,cardId = 1102005,lv = 63,bklv = 6,star = 2,mon = {id = 231,desc = "pt-7-11-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1071130,cardId = 1101014,lv = 63,bklv = 6,star = 2,mon = {id = 209,desc = "pt-7-11-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071131,cardId = 1102020,lv = 63,bklv = 6,star = 2,mon = {id = 232,desc = "pt-7-11-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071130,cardId = 1101014,lv = 63,bklv = 6,star = 2,mon = {id = 209,desc = "pt-7-11-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071131,cardId = 1102020,lv = 63,bklv = 6,star = 2}
 		}
 	},
 	[10712] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1071210,cardId = 1101007,lv = 64,bklv = 6,star = 2,mon = {id = 215,desc = "pt-7-12-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071211,cardId = 1102012,lv = 64,bklv = 6,star = 2,mon = {id = 239,desc = "pt-7-12-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071210,cardId = 1101007,lv = 64,bklv = 6,star = 2,mon = {id = 215,desc = "pt-7-12-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071211,cardId = 1102012,lv = 64,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1071220,cardId = 1101003,lv = 64,bklv = 6,star = 2,mon = {id = 201,desc = "pt-7-12-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071221,cardId = 1102005,lv = 64,bklv = 6,star = 2,mon = {id = 227,desc = "pt-7-12-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071220,cardId = 1101003,lv = 64,bklv = 6,star = 2,mon = {id = 201,desc = "pt-7-12-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071221,cardId = 1102005,lv = 64,bklv = 6,star = 2,mon = {id = 227,desc = "pt-7-12-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1071230,cardId = 1101014,lv = 64,bklv = 6,star = 2,mon = {id = 211,desc = "pt-7-12-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071231,cardId = 1102020,lv = 64,bklv = 6,star = 2,mon = {id = 235,desc = "pt-7-12-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071230,cardId = 1101014,lv = 64,bklv = 6,star = 2,mon = {id = 211,desc = "pt-7-12-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071231,cardId = 1102020,lv = 64,bklv = 6,star = 2}
 		}
 	},
 	[10713] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1071310,cardId = 1101007,lv = 64,bklv = 6,star = 2,mon = {id = 209,desc = "pt-7-13-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071311,cardId = 1102012,lv = 64,bklv = 6,star = 2,mon = {id = 232,desc = "pt-7-13-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071310,cardId = 1101007,lv = 64,bklv = 6,star = 2,mon = {id = 209,desc = "pt-7-13-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071311,cardId = 1102012,lv = 64,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1071320,cardId = 1101003,lv = 64,bklv = 6,star = 2,mon = {id = 208,desc = "pt-7-13-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071321,cardId = 1102005,lv = 64,bklv = 6,star = 2,mon = {id = 231,desc = "pt-7-13-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071320,cardId = 1101003,lv = 64,bklv = 6,star = 2,mon = {id = 208,desc = "pt-7-13-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071321,cardId = 1102005,lv = 64,bklv = 6,star = 2,mon = {id = 231,desc = "pt-7-13-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1071330,cardId = 1101014,lv = 64,bklv = 6,star = 2,mon = {id = 212,desc = "pt-7-13-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071331,cardId = 1102020,lv = 64,bklv = 6,star = 2,mon = {id = 236,desc = "pt-7-13-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071330,cardId = 1101014,lv = 64,bklv = 6,star = 2,mon = {id = 212,desc = "pt-7-13-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071331,cardId = 1102020,lv = 64,bklv = 6,star = 2}
 		}
 	},
 	[10714] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1071410,cardId = 1101007,lv = 65,bklv = 6,star = 2,mon = {id = 207,desc = "pt-7-14-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071411,cardId = 1102012,lv = 65,bklv = 6,star = 2,mon = {id = 227,desc = "pt-7-14-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071410,cardId = 1101007,lv = 65,bklv = 6,star = 2,mon = {id = 207,desc = "pt-7-14-jlr-loc1",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071411,cardId = 1102012,lv = 65,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1071420,cardId = 1101003,lv = 65,bklv = 6,star = 2,mon = {id = 207,desc = "pt-7-14-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071421,cardId = 1102005,lv = 65,bklv = 6,star = 2,mon = {id = 221,desc = "pt-7-14-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071420,cardId = 1101003,lv = 65,bklv = 6,star = 2,mon = {id = 207,desc = "pt-7-14-jlr-loc2",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071421,cardId = 1102005,lv = 65,bklv = 6,star = 2,mon = {id = 221,desc = "pt-7-14-shl-loc2",skillLv = 4,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1071430,cardId = 1101014,lv = 65,bklv = 6,star = 2,mon = {id = 211,desc = "pt-7-14-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071431,cardId = 1102020,lv = 65,bklv = 6,star = 2,mon = {id = 235,desc = "pt-7-14-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071430,cardId = 1101014,lv = 65,bklv = 6,star = 2,mon = {id = 211,desc = "pt-7-14-jlr-loc3",skillLv = 4,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071431,cardId = 1102020,lv = 65,bklv = 6,star = 2}
 		}
 	},
 	[10715] = {
 		[1] = {
-			jlr = {cha = "pt-7",id = 1071510,cardId = 1101007,lv = 67,bklv = 6,star = 2,mon = {id = 205,desc = "pt-7-15-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071511,cardId = 1102012,lv = 67,bklv = 6,star = 2,mon = {id = 219,desc = "pt-7-15-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071510,cardId = 1101007,lv = 67,bklv = 6,star = 2,mon = {id = 205,desc = "pt-7-15-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071511,cardId = 1102012,lv = 67,bklv = 6,star = 2,mon = {id = 219,desc = "pt-7-15-shl-loc1",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-7",id = 1071520,cardId = 1101003,lv = 67,bklv = 6,star = 2,mon = {id = 204,desc = "pt-7-15-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071521,cardId = 1102005,lv = 67,bklv = 6,star = 2,mon = {id = 224,desc = "pt-7-15-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071520,cardId = 1101003,lv = 67,bklv = 6,star = 2,mon = {id = 204,desc = "pt-7-15-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071521,cardId = 1102005,lv = 67,bklv = 6,star = 2,mon = {id = 224,desc = "pt-7-15-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-7",id = 1071530,cardId = 1101014,lv = 67,bklv = 6,star = 2,mon = {id = 207,desc = "pt-7-15-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-7",id = 1071531,cardId = 1102020,lv = 67,bklv = 6,star = 2,mon = {id = 228,desc = "pt-7-15-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-7",id = 1071530,cardId = 1101014,lv = 67,bklv = 6,star = 2,mon = {id = 207,desc = "pt-7-15-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-7",id = 1071531,cardId = 1102020,lv = 67,bklv = 6,star = 2,mon = {id = 230,desc = "pt-7-15-shl-loc3",skillLv = 5,exert = 18,suffer = 18}}
 		}
 	},
 	[10801] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1080110,cardId = 1101007,lv = 68,bklv = 6,star = 2,mon = {id = 212,desc = "pt-8-1-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080111,cardId = 1102012,lv = 68,bklv = 6,star = 2,mon = {id = 236,desc = "pt-8-1-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080110,cardId = 1101007,lv = 68,bklv = 6,star = 2,mon = {id = 212,desc = "pt-8-1-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080111,cardId = 1102012,lv = 68,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1080120,cardId = 1101003,lv = 68,bklv = 6,star = 2,mon = {id = 208,desc = "pt-8-1-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080121,cardId = 1102005,lv = 68,bklv = 6,star = 2,mon = {id = 231,desc = "pt-8-1-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080120,cardId = 1101003,lv = 68,bklv = 6,star = 2,mon = {id = 208,desc = "pt-8-1-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080121,cardId = 1102005,lv = 68,bklv = 6,star = 2,mon = {id = 231,desc = "pt-8-1-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1080130,cardId = 1101014,lv = 68,bklv = 6,star = 2,mon = {id = 213,desc = "pt-8-1-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080131,cardId = 1102020,lv = 68,bklv = 6,star = 2,mon = {id = 237,desc = "pt-8-1-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080130,cardId = 1101014,lv = 68,bklv = 6,star = 2,mon = {id = 213,desc = "pt-8-1-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080131,cardId = 1102020,lv = 68,bklv = 6,star = 2}
 		}
 	},
 	[10802] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1080210,cardId = 1101007,lv = 69,bklv = 6,star = 2,mon = {id = 201,desc = "pt-8-2-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080211,cardId = 1102012,lv = 69,bklv = 6,star = 2,mon = {id = 220,desc = "pt-8-2-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080210,cardId = 1101007,lv = 69,bklv = 6,star = 2,mon = {id = 201,desc = "pt-8-2-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080211,cardId = 1102012,lv = 69,bklv = 6,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1080220,cardId = 1101003,lv = 69,bklv = 6,star = 2,mon = {id = 203,desc = "pt-8-2-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080221,cardId = 1102005,lv = 69,bklv = 6,star = 2,mon = {id = 223,desc = "pt-8-2-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080220,cardId = 1101003,lv = 69,bklv = 6,star = 2,mon = {id = 203,desc = "pt-8-2-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080221,cardId = 1102005,lv = 69,bklv = 6,star = 2,mon = {id = 223,desc = "pt-8-2-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1080230,cardId = 1101014,lv = 69,bklv = 6,star = 2,mon = {id = 214,desc = "pt-8-2-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080231,cardId = 1102020,lv = 69,bklv = 6,star = 2,mon = {id = 238,desc = "pt-8-2-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080230,cardId = 1101014,lv = 69,bklv = 6,star = 2,mon = {id = 214,desc = "pt-8-2-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080231,cardId = 1102020,lv = 69,bklv = 6,star = 2}
 		}
 	},
 	[10803] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1080310,cardId = 1101007,lv = 70,bklv = 7,star = 2,mon = {id = 212,desc = "pt-8-3-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080311,cardId = 1102012,lv = 70,bklv = 7,star = 2,mon = {id = 236,desc = "pt-8-3-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080310,cardId = 1101007,lv = 70,bklv = 7,star = 2,mon = {id = 212,desc = "pt-8-3-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080311,cardId = 1102012,lv = 70,bklv = 7,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1080320,cardId = 1101003,lv = 70,bklv = 7,star = 2,mon = {id = 208,desc = "pt-8-3-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080321,cardId = 1102005,lv = 70,bklv = 7,star = 2,mon = {id = 231,desc = "pt-8-3-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080320,cardId = 1101003,lv = 70,bklv = 7,star = 2,mon = {id = 208,desc = "pt-8-3-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080321,cardId = 1102005,lv = 70,bklv = 7,star = 2,mon = {id = 231,desc = "pt-8-3-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1080330,cardId = 1101014,lv = 70,bklv = 7,star = 2,mon = {id = 209,desc = "pt-8-3-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080331,cardId = 1102020,lv = 70,bklv = 7,star = 2,mon = {id = 232,desc = "pt-8-3-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080330,cardId = 1101014,lv = 70,bklv = 7,star = 2,mon = {id = 209,desc = "pt-8-3-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080331,cardId = 1102020,lv = 70,bklv = 7,star = 2}
 		}
 	},
 	[10804] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1080410,cardId = 1101007,lv = 70,bklv = 7,star = 2,mon = {id = 215,desc = "pt-8-4-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080411,cardId = 1102012,lv = 70,bklv = 7,star = 2,mon = {id = 239,desc = "pt-8-4-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080410,cardId = 1101007,lv = 70,bklv = 7,star = 2,mon = {id = 215,desc = "pt-8-4-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080411,cardId = 1102012,lv = 70,bklv = 7,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1080420,cardId = 1101003,lv = 70,bklv = 7,star = 2,mon = {id = 201,desc = "pt-8-4-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080421,cardId = 1102005,lv = 70,bklv = 7,star = 2,mon = {id = 227,desc = "pt-8-4-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080420,cardId = 1101003,lv = 70,bklv = 7,star = 2,mon = {id = 201,desc = "pt-8-4-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080421,cardId = 1102005,lv = 70,bklv = 7,star = 2,mon = {id = 227,desc = "pt-8-4-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1080430,cardId = 1101014,lv = 70,bklv = 7,star = 2,mon = {id = 211,desc = "pt-8-4-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080431,cardId = 1102020,lv = 70,bklv = 7,star = 2,mon = {id = 235,desc = "pt-8-4-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080430,cardId = 1101014,lv = 70,bklv = 7,star = 2,mon = {id = 211,desc = "pt-8-4-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080431,cardId = 1102020,lv = 70,bklv = 7,star = 2}
 		}
 	},
 	[10805] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1080510,cardId = 1101007,lv = 71,bklv = 7,star = 2,mon = {id = 206,desc = "pt-8-5-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080511,cardId = 1102012,lv = 71,bklv = 7,star = 2,mon = {id = 225,desc = "pt-8-5-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080510,cardId = 1101007,lv = 71,bklv = 7,star = 2,mon = {id = 206,desc = "pt-8-5-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080511,cardId = 1102012,lv = 71,bklv = 7,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1080520,cardId = 1101003,lv = 71,bklv = 7,star = 2,mon = {id = 203,desc = "pt-8-5-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080521,cardId = 1102005,lv = 71,bklv = 7,star = 2,mon = {id = 223,desc = "pt-8-5-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080520,cardId = 1101003,lv = 71,bklv = 7,star = 2,mon = {id = 203,desc = "pt-8-5-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080521,cardId = 1102005,lv = 71,bklv = 7,star = 2,mon = {id = 223,desc = "pt-8-5-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1080530,cardId = 1101014,lv = 71,bklv = 7,star = 2,mon = {id = 212,desc = "pt-8-5-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080531,cardId = 1102020,lv = 71,bklv = 7,star = 2,mon = {id = 236,desc = "pt-8-5-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080530,cardId = 1101014,lv = 71,bklv = 7,star = 2,mon = {id = 212,desc = "pt-8-5-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080531,cardId = 1102020,lv = 71,bklv = 7,star = 2}
 		}
 	},
 	[10806] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1080610,cardId = 1101007,lv = 71,bklv = 7,star = 2,mon = {id = 209,desc = "pt-8-6-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080611,cardId = 1102012,lv = 71,bklv = 7,star = 2,mon = {id = 232,desc = "pt-8-6-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080610,cardId = 1101007,lv = 71,bklv = 7,star = 2,mon = {id = 209,desc = "pt-8-6-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080611,cardId = 1102012,lv = 71,bklv = 7,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1080620,cardId = 1101003,lv = 71,bklv = 7,star = 2,mon = {id = 208,desc = "pt-8-6-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080621,cardId = 1102005,lv = 71,bklv = 7,star = 2,mon = {id = 231,desc = "pt-8-6-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080620,cardId = 1101003,lv = 71,bklv = 7,star = 2,mon = {id = 208,desc = "pt-8-6-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080621,cardId = 1102005,lv = 71,bklv = 7,star = 2,mon = {id = 231,desc = "pt-8-6-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1080630,cardId = 1101014,lv = 71,bklv = 7,star = 2,mon = {id = 212,desc = "pt-8-6-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080631,cardId = 1102020,lv = 71,bklv = 7,star = 2,mon = {id = 236,desc = "pt-8-6-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080630,cardId = 1101014,lv = 71,bklv = 7,star = 2,mon = {id = 212,desc = "pt-8-6-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080631,cardId = 1102020,lv = 71,bklv = 7,star = 2}
 		}
 	},
 	[10807] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1080710,cardId = 1101007,lv = 72,bklv = 7,star = 2,mon = {id = 207,desc = "pt-8-7-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080711,cardId = 1102012,lv = 72,bklv = 7,star = 2,mon = {id = 227,desc = "pt-8-7-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080710,cardId = 1101007,lv = 72,bklv = 7,star = 2,mon = {id = 207,desc = "pt-8-7-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080711,cardId = 1102012,lv = 72,bklv = 7,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1080720,cardId = 1101003,lv = 72,bklv = 7,star = 2,mon = {id = 207,desc = "pt-8-7-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080721,cardId = 1102005,lv = 72,bklv = 7,star = 2,mon = {id = 221,desc = "pt-8-7-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080720,cardId = 1101003,lv = 72,bklv = 7,star = 2,mon = {id = 207,desc = "pt-8-7-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080721,cardId = 1102005,lv = 72,bklv = 7,star = 2,mon = {id = 221,desc = "pt-8-7-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1080730,cardId = 1101014,lv = 72,bklv = 7,star = 2,mon = {id = 211,desc = "pt-8-7-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080731,cardId = 1102020,lv = 72,bklv = 7,star = 2,mon = {id = 235,desc = "pt-8-7-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080730,cardId = 1101014,lv = 72,bklv = 7,star = 2,mon = {id = 211,desc = "pt-8-7-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080731,cardId = 1102020,lv = 72,bklv = 7,star = 2}
 		}
 	},
 	[10808] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1080810,cardId = 1101007,lv = 72,bklv = 7,star = 2,mon = {id = 207,desc = "pt-8-8-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080811,cardId = 1102012,lv = 72,bklv = 7,star = 2,mon = {id = 230,desc = "pt-8-8-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080810,cardId = 1101007,lv = 72,bklv = 7,star = 2,mon = {id = 207,desc = "pt-8-8-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080811,cardId = 1102012,lv = 72,bklv = 7,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1080820,cardId = 1101003,lv = 72,bklv = 7,star = 2,mon = {id = 205,desc = "pt-8-8-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080821,cardId = 1102005,lv = 72,bklv = 7,star = 2,mon = {id = 229,desc = "pt-8-8-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080820,cardId = 1101003,lv = 72,bklv = 7,star = 2,mon = {id = 205,desc = "pt-8-8-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080821,cardId = 1102005,lv = 72,bklv = 7,star = 2,mon = {id = 229,desc = "pt-8-8-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1080830,cardId = 1101014,lv = 72,bklv = 7,star = 2,mon = {id = 210,desc = "pt-8-8-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080831,cardId = 1102020,lv = 72,bklv = 7,star = 2,mon = {id = 234,desc = "pt-8-8-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080830,cardId = 1101014,lv = 72,bklv = 7,star = 2,mon = {id = 210,desc = "pt-8-8-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080831,cardId = 1102020,lv = 72,bklv = 7,star = 2}
 		}
 	},
 	[10809] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1080910,cardId = 1101007,lv = 73,bklv = 7,star = 2,mon = {id = 212,desc = "pt-8-9-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080911,cardId = 1102012,lv = 73,bklv = 7,star = 2,mon = {id = 236,desc = "pt-8-9-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080910,cardId = 1101007,lv = 73,bklv = 7,star = 2,mon = {id = 212,desc = "pt-8-9-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080911,cardId = 1102012,lv = 73,bklv = 7,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1080920,cardId = 1101003,lv = 73,bklv = 7,star = 2,mon = {id = 208,desc = "pt-8-9-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080921,cardId = 1102005,lv = 73,bklv = 7,star = 2,mon = {id = 231,desc = "pt-8-9-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080920,cardId = 1101003,lv = 73,bklv = 7,star = 2,mon = {id = 208,desc = "pt-8-9-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080921,cardId = 1102005,lv = 73,bklv = 7,star = 2,mon = {id = 231,desc = "pt-8-9-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1080930,cardId = 1101014,lv = 73,bklv = 7,star = 2,mon = {id = 209,desc = "pt-8-9-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1080931,cardId = 1102020,lv = 73,bklv = 7,star = 2,mon = {id = 232,desc = "pt-8-9-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1080930,cardId = 1101014,lv = 73,bklv = 7,star = 2,mon = {id = 209,desc = "pt-8-9-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1080931,cardId = 1102020,lv = 73,bklv = 7,star = 2}
 		}
 	},
 	[10810] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1081010,cardId = 1101007,lv = 73,bklv = 7,star = 2,mon = {id = 201,desc = "pt-8-10-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081011,cardId = 1102012,lv = 73,bklv = 7,star = 2,mon = {id = 220,desc = "pt-8-10-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081010,cardId = 1101007,lv = 73,bklv = 7,star = 2,mon = {id = 201,desc = "pt-8-10-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081011,cardId = 1102012,lv = 73,bklv = 7,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1081020,cardId = 1101003,lv = 73,bklv = 7,star = 2,mon = {id = 203,desc = "pt-8-10-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081021,cardId = 1102005,lv = 73,bklv = 7,star = 2,mon = {id = 223,desc = "pt-8-10-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081020,cardId = 1101003,lv = 73,bklv = 7,star = 2,mon = {id = 203,desc = "pt-8-10-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081021,cardId = 1102005,lv = 73,bklv = 7,star = 2,mon = {id = 223,desc = "pt-8-10-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1081030,cardId = 1101014,lv = 73,bklv = 7,star = 2,mon = {id = 214,desc = "pt-8-10-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081031,cardId = 1102020,lv = 73,bklv = 7,star = 2,mon = {id = 238,desc = "pt-8-10-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081030,cardId = 1101014,lv = 73,bklv = 7,star = 2,mon = {id = 214,desc = "pt-8-10-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081031,cardId = 1102020,lv = 73,bklv = 7,star = 2}
 		}
 	},
 	[10811] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1081110,cardId = 1101007,lv = 73,bklv = 7,star = 2,mon = {id = 212,desc = "pt-8-11-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081111,cardId = 1102012,lv = 73,bklv = 7,star = 2,mon = {id = 236,desc = "pt-8-11-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081110,cardId = 1101007,lv = 73,bklv = 7,star = 2,mon = {id = 212,desc = "pt-8-11-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081111,cardId = 1102012,lv = 73,bklv = 7,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1081120,cardId = 1101003,lv = 73,bklv = 7,star = 2,mon = {id = 208,desc = "pt-8-11-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081121,cardId = 1102005,lv = 73,bklv = 7,star = 2,mon = {id = 231,desc = "pt-8-11-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081120,cardId = 1101003,lv = 73,bklv = 7,star = 2,mon = {id = 208,desc = "pt-8-11-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081121,cardId = 1102005,lv = 73,bklv = 7,star = 2,mon = {id = 231,desc = "pt-8-11-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1081130,cardId = 1101014,lv = 73,bklv = 7,star = 2,mon = {id = 209,desc = "pt-8-11-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081131,cardId = 1102020,lv = 73,bklv = 7,star = 2,mon = {id = 232,desc = "pt-8-11-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081130,cardId = 1101014,lv = 73,bklv = 7,star = 2,mon = {id = 209,desc = "pt-8-11-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081131,cardId = 1102020,lv = 73,bklv = 7,star = 2}
 		}
 	},
 	[10812] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1081210,cardId = 1101007,lv = 74,bklv = 7,star = 2,mon = {id = 215,desc = "pt-8-12-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081211,cardId = 1102012,lv = 74,bklv = 7,star = 2,mon = {id = 239,desc = "pt-8-12-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081210,cardId = 1101007,lv = 74,bklv = 7,star = 2,mon = {id = 215,desc = "pt-8-12-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081211,cardId = 1102012,lv = 74,bklv = 7,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1081220,cardId = 1101003,lv = 74,bklv = 7,star = 2,mon = {id = 201,desc = "pt-8-12-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081221,cardId = 1102005,lv = 74,bklv = 7,star = 2,mon = {id = 227,desc = "pt-8-12-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081220,cardId = 1101003,lv = 74,bklv = 7,star = 2,mon = {id = 201,desc = "pt-8-12-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081221,cardId = 1102005,lv = 74,bklv = 7,star = 2,mon = {id = 227,desc = "pt-8-12-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1081230,cardId = 1101014,lv = 74,bklv = 7,star = 2,mon = {id = 211,desc = "pt-8-12-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081231,cardId = 1102020,lv = 74,bklv = 7,star = 2,mon = {id = 235,desc = "pt-8-12-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081230,cardId = 1101014,lv = 74,bklv = 7,star = 2,mon = {id = 211,desc = "pt-8-12-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081231,cardId = 1102020,lv = 74,bklv = 7,star = 2}
 		}
 	},
 	[10813] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1081310,cardId = 1101007,lv = 74,bklv = 7,star = 2,mon = {id = 209,desc = "pt-8-13-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081311,cardId = 1102012,lv = 74,bklv = 7,star = 2,mon = {id = 232,desc = "pt-8-13-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081310,cardId = 1101007,lv = 74,bklv = 7,star = 2,mon = {id = 209,desc = "pt-8-13-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081311,cardId = 1102012,lv = 74,bklv = 7,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1081320,cardId = 1101003,lv = 74,bklv = 7,star = 2,mon = {id = 208,desc = "pt-8-13-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081321,cardId = 1102005,lv = 74,bklv = 7,star = 2,mon = {id = 231,desc = "pt-8-13-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081320,cardId = 1101003,lv = 74,bklv = 7,star = 2,mon = {id = 208,desc = "pt-8-13-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081321,cardId = 1102005,lv = 74,bklv = 7,star = 2,mon = {id = 231,desc = "pt-8-13-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1081330,cardId = 1101014,lv = 74,bklv = 7,star = 2,mon = {id = 212,desc = "pt-8-13-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081331,cardId = 1102020,lv = 74,bklv = 7,star = 2,mon = {id = 236,desc = "pt-8-13-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081330,cardId = 1101014,lv = 74,bklv = 7,star = 2,mon = {id = 212,desc = "pt-8-13-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081331,cardId = 1102020,lv = 74,bklv = 7,star = 2}
 		}
 	},
 	[10814] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1081410,cardId = 1101007,lv = 75,bklv = 7,star = 2,mon = {id = 207,desc = "pt-8-14-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081411,cardId = 1102012,lv = 75,bklv = 7,star = 2,mon = {id = 227,desc = "pt-8-14-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081410,cardId = 1101007,lv = 75,bklv = 7,star = 2,mon = {id = 207,desc = "pt-8-14-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081411,cardId = 1102012,lv = 75,bklv = 7,star = 2}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1081420,cardId = 1101003,lv = 75,bklv = 7,star = 2,mon = {id = 207,desc = "pt-8-14-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081421,cardId = 1102005,lv = 75,bklv = 7,star = 2,mon = {id = 221,desc = "pt-8-14-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081420,cardId = 1101003,lv = 75,bklv = 7,star = 2,mon = {id = 207,desc = "pt-8-14-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081421,cardId = 1102005,lv = 75,bklv = 7,star = 2,mon = {id = 221,desc = "pt-8-14-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1081430,cardId = 1101014,lv = 75,bklv = 7,star = 2,mon = {id = 211,desc = "pt-8-14-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081431,cardId = 1102020,lv = 75,bklv = 7,star = 2,mon = {id = 235,desc = "pt-8-14-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081430,cardId = 1101014,lv = 75,bklv = 7,star = 2,mon = {id = 211,desc = "pt-8-14-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081431,cardId = 1102020,lv = 75,bklv = 7,star = 2}
 		}
 	},
 	[10815] = {
 		[1] = {
-			jlr = {cha = "pt-8",id = 1081510,cardId = 1101007,lv = 77,bklv = 7,star = 3,mon = {id = 205,desc = "pt-8-15-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081511,cardId = 1102012,lv = 77,bklv = 7,star = 3,mon = {id = 219,desc = "pt-8-15-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081510,cardId = 1101007,lv = 77,bklv = 7,star = 3,mon = {id = 205,desc = "pt-8-15-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081511,cardId = 1102012,lv = 77,bklv = 7,star = 3,mon = {id = 250,desc = "pt-8-15-shl-loc1",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-8",id = 1081520,cardId = 1101003,lv = 77,bklv = 7,star = 3,mon = {id = 204,desc = "pt-8-15-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081521,cardId = 1102005,lv = 77,bklv = 7,star = 3,mon = {id = 224,desc = "pt-8-15-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081520,cardId = 1101003,lv = 77,bklv = 7,star = 3,mon = {id = 204,desc = "pt-8-15-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081521,cardId = 1102005,lv = 77,bklv = 7,star = 3,mon = {id = 224,desc = "pt-8-15-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-8",id = 1081530,cardId = 1101014,lv = 77,bklv = 7,star = 3,mon = {id = 207,desc = "pt-8-15-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-8",id = 1081531,cardId = 1102020,lv = 77,bklv = 7,star = 3,mon = {id = 228,desc = "pt-8-15-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-8",id = 1081530,cardId = 1101014,lv = 77,bklv = 7,star = 3,mon = {id = 207,desc = "pt-8-15-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-8",id = 1081531,cardId = 1102020,lv = 77,bklv = 7,star = 3,mon = {id = 248,desc = "pt-8-15-shl-loc3",skillLv = 5,exert = 18,suffer = 18}}
 		}
 	},
 	[10901] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1090110,cardId = 1101007,lv = 78,bklv = 7,star = 3,mon = {id = 212,desc = "pt-9-1-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090111,cardId = 1102012,lv = 78,bklv = 7,star = 3,mon = {id = 236,desc = "pt-9-1-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090110,cardId = 1101007,lv = 78,bklv = 7,star = 3,mon = {id = 212,desc = "pt-9-1-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090111,cardId = 1102012,lv = 78,bklv = 7,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1090120,cardId = 1101003,lv = 78,bklv = 7,star = 3,mon = {id = 208,desc = "pt-9-1-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090121,cardId = 1102005,lv = 78,bklv = 7,star = 3,mon = {id = 231,desc = "pt-9-1-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090120,cardId = 1101003,lv = 78,bklv = 7,star = 3,mon = {id = 208,desc = "pt-9-1-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090121,cardId = 1102005,lv = 78,bklv = 7,star = 3,mon = {id = 231,desc = "pt-9-1-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1090130,cardId = 1101014,lv = 78,bklv = 7,star = 3,mon = {id = 213,desc = "pt-9-1-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090131,cardId = 1102020,lv = 78,bklv = 7,star = 3,mon = {id = 237,desc = "pt-9-1-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090130,cardId = 1101014,lv = 78,bklv = 7,star = 3,mon = {id = 213,desc = "pt-9-1-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090131,cardId = 1102020,lv = 78,bklv = 7,star = 3}
 		}
 	},
 	[10902] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1090210,cardId = 1101007,lv = 79,bklv = 7,star = 3,mon = {id = 201,desc = "pt-9-2-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090211,cardId = 1102012,lv = 79,bklv = 7,star = 3,mon = {id = 220,desc = "pt-9-2-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090210,cardId = 1101007,lv = 79,bklv = 7,star = 3,mon = {id = 201,desc = "pt-9-2-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090211,cardId = 1102012,lv = 79,bklv = 7,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1090220,cardId = 1101003,lv = 79,bklv = 7,star = 3,mon = {id = 203,desc = "pt-9-2-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090221,cardId = 1102005,lv = 79,bklv = 7,star = 3,mon = {id = 223,desc = "pt-9-2-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090220,cardId = 1101003,lv = 79,bklv = 7,star = 3,mon = {id = 203,desc = "pt-9-2-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090221,cardId = 1102005,lv = 79,bklv = 7,star = 3,mon = {id = 223,desc = "pt-9-2-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1090230,cardId = 1101014,lv = 79,bklv = 7,star = 3,mon = {id = 214,desc = "pt-9-2-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090231,cardId = 1102020,lv = 79,bklv = 7,star = 3,mon = {id = 238,desc = "pt-9-2-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090230,cardId = 1101014,lv = 79,bklv = 7,star = 3,mon = {id = 214,desc = "pt-9-2-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090231,cardId = 1102020,lv = 79,bklv = 7,star = 3}
 		}
 	},
 	[10903] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1090310,cardId = 1101007,lv = 80,bklv = 8,star = 3,mon = {id = 212,desc = "pt-9-3-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090311,cardId = 1102012,lv = 80,bklv = 8,star = 3,mon = {id = 236,desc = "pt-9-3-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090310,cardId = 1101007,lv = 80,bklv = 8,star = 3,mon = {id = 212,desc = "pt-9-3-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090311,cardId = 1102012,lv = 80,bklv = 8,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1090320,cardId = 1101003,lv = 80,bklv = 8,star = 3,mon = {id = 208,desc = "pt-9-3-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090321,cardId = 1102005,lv = 80,bklv = 8,star = 3,mon = {id = 231,desc = "pt-9-3-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090320,cardId = 1101003,lv = 80,bklv = 8,star = 3,mon = {id = 208,desc = "pt-9-3-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090321,cardId = 1102005,lv = 80,bklv = 8,star = 3,mon = {id = 231,desc = "pt-9-3-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1090330,cardId = 1101014,lv = 80,bklv = 8,star = 3,mon = {id = 209,desc = "pt-9-3-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090331,cardId = 1102020,lv = 80,bklv = 8,star = 3,mon = {id = 232,desc = "pt-9-3-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090330,cardId = 1101014,lv = 80,bklv = 8,star = 3,mon = {id = 209,desc = "pt-9-3-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090331,cardId = 1102020,lv = 80,bklv = 8,star = 3}
 		}
 	},
 	[10904] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1090410,cardId = 1101007,lv = 80,bklv = 8,star = 3,mon = {id = 215,desc = "pt-9-4-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090411,cardId = 1102012,lv = 80,bklv = 8,star = 3,mon = {id = 239,desc = "pt-9-4-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090410,cardId = 1101007,lv = 80,bklv = 8,star = 3,mon = {id = 215,desc = "pt-9-4-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090411,cardId = 1102012,lv = 80,bklv = 8,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1090420,cardId = 1101003,lv = 80,bklv = 8,star = 3,mon = {id = 201,desc = "pt-9-4-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090421,cardId = 1102005,lv = 80,bklv = 8,star = 3,mon = {id = 227,desc = "pt-9-4-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090420,cardId = 1101003,lv = 80,bklv = 8,star = 3,mon = {id = 201,desc = "pt-9-4-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090421,cardId = 1102005,lv = 80,bklv = 8,star = 3,mon = {id = 227,desc = "pt-9-4-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1090430,cardId = 1101014,lv = 80,bklv = 8,star = 3,mon = {id = 211,desc = "pt-9-4-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090431,cardId = 1102020,lv = 80,bklv = 8,star = 3,mon = {id = 235,desc = "pt-9-4-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090430,cardId = 1101014,lv = 80,bklv = 8,star = 3,mon = {id = 211,desc = "pt-9-4-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090431,cardId = 1102020,lv = 80,bklv = 8,star = 3}
 		}
 	},
 	[10905] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1090510,cardId = 1101007,lv = 81,bklv = 8,star = 3,mon = {id = 206,desc = "pt-9-5-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090511,cardId = 1102012,lv = 81,bklv = 8,star = 3,mon = {id = 225,desc = "pt-9-5-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090510,cardId = 1101007,lv = 81,bklv = 8,star = 3,mon = {id = 206,desc = "pt-9-5-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090511,cardId = 1102012,lv = 81,bklv = 8,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1090520,cardId = 1101003,lv = 81,bklv = 8,star = 3,mon = {id = 203,desc = "pt-9-5-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090521,cardId = 1102005,lv = 81,bklv = 8,star = 3,mon = {id = 223,desc = "pt-9-5-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090520,cardId = 1101003,lv = 81,bklv = 8,star = 3,mon = {id = 203,desc = "pt-9-5-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090521,cardId = 1102005,lv = 81,bklv = 8,star = 3,mon = {id = 223,desc = "pt-9-5-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1090530,cardId = 1101014,lv = 81,bklv = 8,star = 3,mon = {id = 212,desc = "pt-9-5-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090531,cardId = 1102020,lv = 81,bklv = 8,star = 3,mon = {id = 236,desc = "pt-9-5-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090530,cardId = 1101014,lv = 81,bklv = 8,star = 3,mon = {id = 212,desc = "pt-9-5-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090531,cardId = 1102020,lv = 81,bklv = 8,star = 3}
 		}
 	},
 	[10906] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1090610,cardId = 1101007,lv = 81,bklv = 8,star = 3,mon = {id = 209,desc = "pt-9-6-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090611,cardId = 1102012,lv = 81,bklv = 8,star = 3,mon = {id = 232,desc = "pt-9-6-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090610,cardId = 1101007,lv = 81,bklv = 8,star = 3,mon = {id = 209,desc = "pt-9-6-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090611,cardId = 1102012,lv = 81,bklv = 8,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1090620,cardId = 1101003,lv = 81,bklv = 8,star = 3,mon = {id = 208,desc = "pt-9-6-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090621,cardId = 1102005,lv = 81,bklv = 8,star = 3,mon = {id = 231,desc = "pt-9-6-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090620,cardId = 1101003,lv = 81,bklv = 8,star = 3,mon = {id = 208,desc = "pt-9-6-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090621,cardId = 1102005,lv = 81,bklv = 8,star = 3,mon = {id = 231,desc = "pt-9-6-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1090630,cardId = 1101014,lv = 81,bklv = 8,star = 3,mon = {id = 212,desc = "pt-9-6-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090631,cardId = 1102020,lv = 81,bklv = 8,star = 3,mon = {id = 236,desc = "pt-9-6-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090630,cardId = 1101014,lv = 81,bklv = 8,star = 3,mon = {id = 212,desc = "pt-9-6-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090631,cardId = 1102020,lv = 81,bklv = 8,star = 3}
 		}
 	},
 	[10907] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1090710,cardId = 1101007,lv = 82,bklv = 8,star = 3,mon = {id = 207,desc = "pt-9-7-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090711,cardId = 1102012,lv = 82,bklv = 8,star = 3,mon = {id = 227,desc = "pt-9-7-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090710,cardId = 1101007,lv = 82,bklv = 8,star = 3,mon = {id = 207,desc = "pt-9-7-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090711,cardId = 1102012,lv = 82,bklv = 8,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1090720,cardId = 1101003,lv = 82,bklv = 8,star = 3,mon = {id = 207,desc = "pt-9-7-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090721,cardId = 1102005,lv = 82,bklv = 8,star = 3,mon = {id = 221,desc = "pt-9-7-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090720,cardId = 1101003,lv = 82,bklv = 8,star = 3,mon = {id = 207,desc = "pt-9-7-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090721,cardId = 1102005,lv = 82,bklv = 8,star = 3,mon = {id = 221,desc = "pt-9-7-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1090730,cardId = 1101014,lv = 82,bklv = 8,star = 3,mon = {id = 211,desc = "pt-9-7-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090731,cardId = 1102020,lv = 82,bklv = 8,star = 3,mon = {id = 235,desc = "pt-9-7-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090730,cardId = 1101014,lv = 82,bklv = 8,star = 3,mon = {id = 211,desc = "pt-9-7-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090731,cardId = 1102020,lv = 82,bklv = 8,star = 3}
 		}
 	},
 	[10908] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1090810,cardId = 1101007,lv = 82,bklv = 8,star = 3,mon = {id = 207,desc = "pt-9-8-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090811,cardId = 1102012,lv = 82,bklv = 8,star = 3,mon = {id = 230,desc = "pt-9-8-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090810,cardId = 1101007,lv = 82,bklv = 8,star = 3,mon = {id = 207,desc = "pt-9-8-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090811,cardId = 1102012,lv = 82,bklv = 8,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1090820,cardId = 1101003,lv = 82,bklv = 8,star = 3,mon = {id = 205,desc = "pt-9-8-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090821,cardId = 1102005,lv = 82,bklv = 8,star = 3,mon = {id = 229,desc = "pt-9-8-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090820,cardId = 1101003,lv = 82,bklv = 8,star = 3,mon = {id = 205,desc = "pt-9-8-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090821,cardId = 1102005,lv = 82,bklv = 8,star = 3,mon = {id = 229,desc = "pt-9-8-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1090830,cardId = 1101014,lv = 82,bklv = 8,star = 3,mon = {id = 210,desc = "pt-9-8-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090831,cardId = 1102020,lv = 82,bklv = 8,star = 3,mon = {id = 234,desc = "pt-9-8-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090830,cardId = 1101014,lv = 82,bklv = 8,star = 3,mon = {id = 210,desc = "pt-9-8-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090831,cardId = 1102020,lv = 82,bklv = 8,star = 3}
 		}
 	},
 	[10909] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1090910,cardId = 1101007,lv = 83,bklv = 8,star = 3,mon = {id = 212,desc = "pt-9-9-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090911,cardId = 1102012,lv = 83,bklv = 8,star = 3,mon = {id = 236,desc = "pt-9-9-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090910,cardId = 1101007,lv = 83,bklv = 8,star = 3,mon = {id = 212,desc = "pt-9-9-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090911,cardId = 1102012,lv = 83,bklv = 8,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1090920,cardId = 1101003,lv = 83,bklv = 8,star = 3,mon = {id = 208,desc = "pt-9-9-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090921,cardId = 1102005,lv = 83,bklv = 8,star = 3,mon = {id = 231,desc = "pt-9-9-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090920,cardId = 1101003,lv = 83,bklv = 8,star = 3,mon = {id = 208,desc = "pt-9-9-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090921,cardId = 1102005,lv = 83,bklv = 8,star = 3,mon = {id = 231,desc = "pt-9-9-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1090930,cardId = 1101014,lv = 83,bklv = 8,star = 3,mon = {id = 209,desc = "pt-9-9-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1090931,cardId = 1102020,lv = 83,bklv = 8,star = 3,mon = {id = 232,desc = "pt-9-9-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1090930,cardId = 1101014,lv = 83,bklv = 8,star = 3,mon = {id = 209,desc = "pt-9-9-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1090931,cardId = 1102020,lv = 83,bklv = 8,star = 3}
 		}
 	},
 	[10910] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1091010,cardId = 1101007,lv = 83,bklv = 8,star = 3,mon = {id = 201,desc = "pt-9-10-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091011,cardId = 1102012,lv = 83,bklv = 8,star = 3,mon = {id = 220,desc = "pt-9-10-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091010,cardId = 1101007,lv = 83,bklv = 8,star = 3,mon = {id = 201,desc = "pt-9-10-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091011,cardId = 1102012,lv = 83,bklv = 8,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1091020,cardId = 1101003,lv = 83,bklv = 8,star = 3,mon = {id = 203,desc = "pt-9-10-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091021,cardId = 1102005,lv = 83,bklv = 8,star = 3,mon = {id = 223,desc = "pt-9-10-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091020,cardId = 1101003,lv = 83,bklv = 8,star = 3,mon = {id = 203,desc = "pt-9-10-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091021,cardId = 1102005,lv = 83,bklv = 8,star = 3,mon = {id = 223,desc = "pt-9-10-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1091030,cardId = 1101014,lv = 83,bklv = 8,star = 3,mon = {id = 214,desc = "pt-9-10-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091031,cardId = 1102020,lv = 83,bklv = 8,star = 3,mon = {id = 238,desc = "pt-9-10-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091030,cardId = 1101014,lv = 83,bklv = 8,star = 3,mon = {id = 214,desc = "pt-9-10-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091031,cardId = 1102020,lv = 83,bklv = 8,star = 3}
 		}
 	},
 	[10911] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1091110,cardId = 1101007,lv = 83,bklv = 8,star = 3,mon = {id = 212,desc = "pt-9-11-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091111,cardId = 1102012,lv = 83,bklv = 8,star = 3,mon = {id = 236,desc = "pt-9-11-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091110,cardId = 1101007,lv = 83,bklv = 8,star = 3,mon = {id = 212,desc = "pt-9-11-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091111,cardId = 1102012,lv = 83,bklv = 8,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1091120,cardId = 1101003,lv = 83,bklv = 8,star = 3,mon = {id = 208,desc = "pt-9-11-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091121,cardId = 1102005,lv = 83,bklv = 8,star = 3,mon = {id = 231,desc = "pt-9-11-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091120,cardId = 1101003,lv = 83,bklv = 8,star = 3,mon = {id = 208,desc = "pt-9-11-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091121,cardId = 1102005,lv = 83,bklv = 8,star = 3,mon = {id = 231,desc = "pt-9-11-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1091130,cardId = 1101014,lv = 83,bklv = 8,star = 3,mon = {id = 209,desc = "pt-9-11-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091131,cardId = 1102020,lv = 83,bklv = 8,star = 3,mon = {id = 232,desc = "pt-9-11-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091130,cardId = 1101014,lv = 83,bklv = 8,star = 3,mon = {id = 209,desc = "pt-9-11-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091131,cardId = 1102020,lv = 83,bklv = 8,star = 3}
 		}
 	},
 	[10912] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1091210,cardId = 1101007,lv = 84,bklv = 8,star = 3,mon = {id = 215,desc = "pt-9-12-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091211,cardId = 1102012,lv = 84,bklv = 8,star = 3,mon = {id = 239,desc = "pt-9-12-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091210,cardId = 1101007,lv = 84,bklv = 8,star = 3,mon = {id = 215,desc = "pt-9-12-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091211,cardId = 1102012,lv = 84,bklv = 8,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1091220,cardId = 1101003,lv = 84,bklv = 8,star = 3,mon = {id = 201,desc = "pt-9-12-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091221,cardId = 1102005,lv = 84,bklv = 8,star = 3,mon = {id = 227,desc = "pt-9-12-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091220,cardId = 1101003,lv = 84,bklv = 8,star = 3,mon = {id = 201,desc = "pt-9-12-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091221,cardId = 1102005,lv = 84,bklv = 8,star = 3,mon = {id = 227,desc = "pt-9-12-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1091230,cardId = 1101014,lv = 84,bklv = 8,star = 3,mon = {id = 211,desc = "pt-9-12-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091231,cardId = 1102020,lv = 84,bklv = 8,star = 3,mon = {id = 235,desc = "pt-9-12-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091230,cardId = 1101014,lv = 84,bklv = 8,star = 3,mon = {id = 211,desc = "pt-9-12-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091231,cardId = 1102020,lv = 84,bklv = 8,star = 3}
 		}
 	},
 	[10913] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1091310,cardId = 1101007,lv = 84,bklv = 8,star = 3,mon = {id = 209,desc = "pt-9-13-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091311,cardId = 1102012,lv = 84,bklv = 8,star = 3,mon = {id = 232,desc = "pt-9-13-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091310,cardId = 1101007,lv = 84,bklv = 8,star = 3,mon = {id = 209,desc = "pt-9-13-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091311,cardId = 1102012,lv = 84,bklv = 8,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1091320,cardId = 1101003,lv = 84,bklv = 8,star = 3,mon = {id = 208,desc = "pt-9-13-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091321,cardId = 1102005,lv = 84,bklv = 8,star = 3,mon = {id = 231,desc = "pt-9-13-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091320,cardId = 1101003,lv = 84,bklv = 8,star = 3,mon = {id = 208,desc = "pt-9-13-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091321,cardId = 1102005,lv = 84,bklv = 8,star = 3,mon = {id = 231,desc = "pt-9-13-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1091330,cardId = 1101014,lv = 84,bklv = 8,star = 3,mon = {id = 212,desc = "pt-9-13-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091331,cardId = 1102020,lv = 84,bklv = 8,star = 3,mon = {id = 236,desc = "pt-9-13-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091330,cardId = 1101014,lv = 84,bklv = 8,star = 3,mon = {id = 212,desc = "pt-9-13-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091331,cardId = 1102020,lv = 84,bklv = 8,star = 3}
 		}
 	},
 	[10914] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1091410,cardId = 1101007,lv = 85,bklv = 9,star = 3,mon = {id = 207,desc = "pt-9-14-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091411,cardId = 1102012,lv = 85,bklv = 9,star = 3,mon = {id = 227,desc = "pt-9-14-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091410,cardId = 1101007,lv = 85,bklv = 9,star = 3,mon = {id = 207,desc = "pt-9-14-jlr-loc1",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091411,cardId = 1102012,lv = 85,bklv = 9,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1091420,cardId = 1101003,lv = 85,bklv = 9,star = 3,mon = {id = 207,desc = "pt-9-14-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091421,cardId = 1102005,lv = 85,bklv = 9,star = 3,mon = {id = 221,desc = "pt-9-14-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091420,cardId = 1101003,lv = 85,bklv = 9,star = 3,mon = {id = 207,desc = "pt-9-14-jlr-loc2",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091421,cardId = 1102005,lv = 85,bklv = 9,star = 3,mon = {id = 221,desc = "pt-9-14-shl-loc2",skillLv = 5,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1091430,cardId = 1101014,lv = 85,bklv = 9,star = 3,mon = {id = 211,desc = "pt-9-14-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091431,cardId = 1102020,lv = 85,bklv = 9,star = 3,mon = {id = 235,desc = "pt-9-14-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091430,cardId = 1101014,lv = 85,bklv = 9,star = 3,mon = {id = 211,desc = "pt-9-14-jlr-loc3",skillLv = 5,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091431,cardId = 1102020,lv = 85,bklv = 9,star = 3}
 		}
 	},
 	[10915] = {
 		[1] = {
-			jlr = {cha = "pt-9",id = 1091510,cardId = 1101007,lv = 87,bklv = 9,star = 3,mon = {id = 205,desc = "pt-9-15-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091511,cardId = 1102012,lv = 87,bklv = 9,star = 3,mon = {id = 219,desc = "pt-9-15-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091510,cardId = 1101007,lv = 87,bklv = 9,star = 3,mon = {id = 212,desc = "pt-9-15-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091511,cardId = 1102012,lv = 87,bklv = 9,star = 3,mon = {id = 257,desc = "pt-9-15-shl-loc1",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-9",id = 1091520,cardId = 1101003,lv = 87,bklv = 9,star = 3,mon = {id = 204,desc = "pt-9-15-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091521,cardId = 1102005,lv = 87,bklv = 9,star = 3,mon = {id = 224,desc = "pt-9-15-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091520,cardId = 1101003,lv = 87,bklv = 9,star = 3,mon = {id = 208,desc = "pt-9-15-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091521,cardId = 1102005,lv = 87,bklv = 9,star = 3,mon = {id = 252,desc = "pt-9-15-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-9",id = 1091530,cardId = 1101014,lv = 87,bklv = 9,star = 3,mon = {id = 207,desc = "pt-9-15-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-9",id = 1091531,cardId = 1102020,lv = 87,bklv = 9,star = 3,mon = {id = 228,desc = "pt-9-15-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-9",id = 1091530,cardId = 1101014,lv = 87,bklv = 9,star = 3,mon = {id = 209,desc = "pt-9-15-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-9",id = 1091531,cardId = 1102020,lv = 87,bklv = 9,star = 3,mon = {id = 253,desc = "pt-9-15-shl-loc3",skillLv = 6,exert = 18,suffer = 18}}
 		}
 	},
 	[11001] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1100110,cardId = 1101007,lv = 88,bklv = 9,star = 3,mon = {id = 212,desc = "pt-10-1-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100111,cardId = 1102012,lv = 88,bklv = 9,star = 3,mon = {id = 236,desc = "pt-10-1-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100110,cardId = 1101007,lv = 88,bklv = 9,star = 3,mon = {id = 212,desc = "pt-10-1-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100111,cardId = 1102012,lv = 88,bklv = 9,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1100120,cardId = 1101003,lv = 88,bklv = 9,star = 3,mon = {id = 208,desc = "pt-10-1-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100121,cardId = 1102005,lv = 88,bklv = 9,star = 3,mon = {id = 231,desc = "pt-10-1-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100120,cardId = 1101003,lv = 88,bklv = 9,star = 3,mon = {id = 208,desc = "pt-10-1-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100121,cardId = 1102005,lv = 88,bklv = 9,star = 3,mon = {id = 231,desc = "pt-10-1-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1100130,cardId = 1101014,lv = 88,bklv = 9,star = 3,mon = {id = 213,desc = "pt-10-1-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100131,cardId = 1102020,lv = 88,bklv = 9,star = 3,mon = {id = 237,desc = "pt-10-1-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100130,cardId = 1101014,lv = 88,bklv = 9,star = 3,mon = {id = 213,desc = "pt-10-1-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100131,cardId = 1102020,lv = 88,bklv = 9,star = 3}
 		}
 	},
 	[11002] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1100210,cardId = 1101007,lv = 89,bklv = 9,star = 3,mon = {id = 201,desc = "pt-10-2-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100211,cardId = 1102012,lv = 89,bklv = 9,star = 3,mon = {id = 220,desc = "pt-10-2-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100210,cardId = 1101007,lv = 89,bklv = 9,star = 3,mon = {id = 201,desc = "pt-10-2-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100211,cardId = 1102012,lv = 89,bklv = 9,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1100220,cardId = 1101003,lv = 89,bklv = 9,star = 3,mon = {id = 203,desc = "pt-10-2-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100221,cardId = 1102005,lv = 89,bklv = 9,star = 3,mon = {id = 223,desc = "pt-10-2-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100220,cardId = 1101003,lv = 89,bklv = 9,star = 3,mon = {id = 203,desc = "pt-10-2-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100221,cardId = 1102005,lv = 89,bklv = 9,star = 3,mon = {id = 223,desc = "pt-10-2-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1100230,cardId = 1101014,lv = 89,bklv = 9,star = 3,mon = {id = 214,desc = "pt-10-2-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100231,cardId = 1102020,lv = 89,bklv = 9,star = 3,mon = {id = 238,desc = "pt-10-2-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100230,cardId = 1101014,lv = 89,bklv = 9,star = 3,mon = {id = 214,desc = "pt-10-2-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100231,cardId = 1102020,lv = 89,bklv = 9,star = 3}
 		}
 	},
 	[11003] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1100310,cardId = 1101007,lv = 90,bklv = 10,star = 3,mon = {id = 212,desc = "pt-10-3-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100311,cardId = 1102012,lv = 90,bklv = 10,star = 3,mon = {id = 236,desc = "pt-10-3-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100310,cardId = 1101007,lv = 90,bklv = 10,star = 3,mon = {id = 212,desc = "pt-10-3-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100311,cardId = 1102012,lv = 90,bklv = 10,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1100320,cardId = 1101003,lv = 90,bklv = 10,star = 3,mon = {id = 208,desc = "pt-10-3-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100321,cardId = 1102005,lv = 90,bklv = 10,star = 3,mon = {id = 231,desc = "pt-10-3-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100320,cardId = 1101003,lv = 90,bklv = 10,star = 3,mon = {id = 208,desc = "pt-10-3-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100321,cardId = 1102005,lv = 90,bklv = 10,star = 3,mon = {id = 231,desc = "pt-10-3-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1100330,cardId = 1101014,lv = 90,bklv = 10,star = 3,mon = {id = 209,desc = "pt-10-3-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100331,cardId = 1102020,lv = 90,bklv = 10,star = 3,mon = {id = 232,desc = "pt-10-3-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100330,cardId = 1101014,lv = 90,bklv = 10,star = 3,mon = {id = 209,desc = "pt-10-3-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100331,cardId = 1102020,lv = 90,bklv = 10,star = 3}
 		}
 	},
 	[11004] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1100410,cardId = 1101007,lv = 90,bklv = 10,star = 3,mon = {id = 215,desc = "pt-10-4-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100411,cardId = 1102012,lv = 90,bklv = 10,star = 3,mon = {id = 239,desc = "pt-10-4-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100410,cardId = 1101007,lv = 90,bklv = 10,star = 3,mon = {id = 215,desc = "pt-10-4-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100411,cardId = 1102012,lv = 90,bklv = 10,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1100420,cardId = 1101003,lv = 90,bklv = 10,star = 3,mon = {id = 201,desc = "pt-10-4-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100421,cardId = 1102005,lv = 90,bklv = 10,star = 3,mon = {id = 227,desc = "pt-10-4-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100420,cardId = 1101003,lv = 90,bklv = 10,star = 3,mon = {id = 201,desc = "pt-10-4-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100421,cardId = 1102005,lv = 90,bklv = 10,star = 3,mon = {id = 227,desc = "pt-10-4-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1100430,cardId = 1101014,lv = 90,bklv = 10,star = 3,mon = {id = 211,desc = "pt-10-4-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100431,cardId = 1102020,lv = 90,bklv = 10,star = 3,mon = {id = 235,desc = "pt-10-4-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100430,cardId = 1101014,lv = 90,bklv = 10,star = 3,mon = {id = 211,desc = "pt-10-4-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100431,cardId = 1102020,lv = 90,bklv = 10,star = 3}
 		}
 	},
 	[11005] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1100510,cardId = 1101007,lv = 91,bklv = 10,star = 3,mon = {id = 206,desc = "pt-10-5-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100511,cardId = 1102012,lv = 91,bklv = 10,star = 3,mon = {id = 225,desc = "pt-10-5-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100510,cardId = 1101007,lv = 91,bklv = 10,star = 3,mon = {id = 206,desc = "pt-10-5-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100511,cardId = 1102012,lv = 91,bklv = 10,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1100520,cardId = 1101003,lv = 91,bklv = 10,star = 3,mon = {id = 203,desc = "pt-10-5-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100521,cardId = 1102005,lv = 91,bklv = 10,star = 3,mon = {id = 223,desc = "pt-10-5-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100520,cardId = 1101003,lv = 91,bklv = 10,star = 3,mon = {id = 203,desc = "pt-10-5-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100521,cardId = 1102005,lv = 91,bklv = 10,star = 3,mon = {id = 223,desc = "pt-10-5-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1100530,cardId = 1101014,lv = 91,bklv = 10,star = 3,mon = {id = 212,desc = "pt-10-5-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100531,cardId = 1102020,lv = 91,bklv = 10,star = 3,mon = {id = 236,desc = "pt-10-5-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100530,cardId = 1101014,lv = 91,bklv = 10,star = 3,mon = {id = 212,desc = "pt-10-5-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100531,cardId = 1102020,lv = 91,bklv = 10,star = 3}
 		}
 	},
 	[11006] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1100610,cardId = 1101007,lv = 91,bklv = 10,star = 3,mon = {id = 209,desc = "pt-10-6-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100611,cardId = 1102012,lv = 91,bklv = 10,star = 3,mon = {id = 232,desc = "pt-10-6-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100610,cardId = 1101007,lv = 91,bklv = 10,star = 3,mon = {id = 209,desc = "pt-10-6-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100611,cardId = 1102012,lv = 91,bklv = 10,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1100620,cardId = 1101003,lv = 91,bklv = 10,star = 3,mon = {id = 208,desc = "pt-10-6-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100621,cardId = 1102005,lv = 91,bklv = 10,star = 3,mon = {id = 231,desc = "pt-10-6-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100620,cardId = 1101003,lv = 91,bklv = 10,star = 3,mon = {id = 208,desc = "pt-10-6-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100621,cardId = 1102005,lv = 91,bklv = 10,star = 3,mon = {id = 231,desc = "pt-10-6-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1100630,cardId = 1101014,lv = 91,bklv = 10,star = 3,mon = {id = 212,desc = "pt-10-6-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100631,cardId = 1102020,lv = 91,bklv = 10,star = 3,mon = {id = 236,desc = "pt-10-6-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100630,cardId = 1101014,lv = 91,bklv = 10,star = 3,mon = {id = 212,desc = "pt-10-6-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100631,cardId = 1102020,lv = 91,bklv = 10,star = 3}
 		}
 	},
 	[11007] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1100710,cardId = 1101007,lv = 92,bklv = 10,star = 3,mon = {id = 207,desc = "pt-10-7-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100711,cardId = 1102012,lv = 92,bklv = 10,star = 3,mon = {id = 227,desc = "pt-10-7-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100710,cardId = 1101007,lv = 92,bklv = 10,star = 3,mon = {id = 207,desc = "pt-10-7-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100711,cardId = 1102012,lv = 92,bklv = 10,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1100720,cardId = 1101003,lv = 92,bklv = 10,star = 3,mon = {id = 207,desc = "pt-10-7-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100721,cardId = 1102005,lv = 92,bklv = 10,star = 3,mon = {id = 221,desc = "pt-10-7-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100720,cardId = 1101003,lv = 92,bklv = 10,star = 3,mon = {id = 207,desc = "pt-10-7-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100721,cardId = 1102005,lv = 92,bklv = 10,star = 3,mon = {id = 221,desc = "pt-10-7-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1100730,cardId = 1101014,lv = 92,bklv = 10,star = 3,mon = {id = 211,desc = "pt-10-7-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100731,cardId = 1102020,lv = 92,bklv = 10,star = 3,mon = {id = 235,desc = "pt-10-7-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100730,cardId = 1101014,lv = 92,bklv = 10,star = 3,mon = {id = 211,desc = "pt-10-7-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100731,cardId = 1102020,lv = 92,bklv = 10,star = 3}
 		}
 	},
 	[11008] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1100810,cardId = 1101007,lv = 92,bklv = 10,star = 3,mon = {id = 207,desc = "pt-10-8-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100811,cardId = 1102012,lv = 92,bklv = 10,star = 3,mon = {id = 230,desc = "pt-10-8-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100810,cardId = 1101007,lv = 92,bklv = 10,star = 3,mon = {id = 207,desc = "pt-10-8-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100811,cardId = 1102012,lv = 92,bklv = 10,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1100820,cardId = 1101003,lv = 92,bklv = 10,star = 3,mon = {id = 205,desc = "pt-10-8-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100821,cardId = 1102005,lv = 92,bklv = 10,star = 3,mon = {id = 229,desc = "pt-10-8-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100820,cardId = 1101003,lv = 92,bklv = 10,star = 3,mon = {id = 205,desc = "pt-10-8-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100821,cardId = 1102005,lv = 92,bklv = 10,star = 3,mon = {id = 229,desc = "pt-10-8-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1100830,cardId = 1101014,lv = 92,bklv = 10,star = 3,mon = {id = 210,desc = "pt-10-8-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100831,cardId = 1102020,lv = 92,bklv = 10,star = 3,mon = {id = 234,desc = "pt-10-8-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100830,cardId = 1101014,lv = 92,bklv = 10,star = 3,mon = {id = 210,desc = "pt-10-8-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100831,cardId = 1102020,lv = 92,bklv = 10,star = 3}
 		}
 	},
 	[11009] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1100910,cardId = 1101007,lv = 93,bklv = 10,star = 3,mon = {id = 212,desc = "pt-10-9-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100911,cardId = 1102012,lv = 93,bklv = 10,star = 3,mon = {id = 236,desc = "pt-10-9-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100910,cardId = 1101007,lv = 93,bklv = 10,star = 3,mon = {id = 212,desc = "pt-10-9-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100911,cardId = 1102012,lv = 93,bklv = 10,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1100920,cardId = 1101003,lv = 93,bklv = 10,star = 3,mon = {id = 208,desc = "pt-10-9-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100921,cardId = 1102005,lv = 93,bklv = 10,star = 3,mon = {id = 231,desc = "pt-10-9-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100920,cardId = 1101003,lv = 93,bklv = 10,star = 3,mon = {id = 208,desc = "pt-10-9-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100921,cardId = 1102005,lv = 93,bklv = 10,star = 3,mon = {id = 231,desc = "pt-10-9-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1100930,cardId = 1101014,lv = 93,bklv = 10,star = 3,mon = {id = 209,desc = "pt-10-9-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1100931,cardId = 1102020,lv = 93,bklv = 10,star = 3,mon = {id = 232,desc = "pt-10-9-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1100930,cardId = 1101014,lv = 93,bklv = 10,star = 3,mon = {id = 209,desc = "pt-10-9-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1100931,cardId = 1102020,lv = 93,bklv = 10,star = 3}
 		}
 	},
 	[11010] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1101010,cardId = 1101007,lv = 93,bklv = 10,star = 3,mon = {id = 201,desc = "pt-10-10-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101011,cardId = 1102012,lv = 93,bklv = 10,star = 3,mon = {id = 220,desc = "pt-10-10-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101010,cardId = 1101007,lv = 93,bklv = 10,star = 3,mon = {id = 201,desc = "pt-10-10-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101011,cardId = 1102012,lv = 93,bklv = 10,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1101020,cardId = 1101003,lv = 93,bklv = 10,star = 3,mon = {id = 203,desc = "pt-10-10-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101021,cardId = 1102005,lv = 93,bklv = 10,star = 3,mon = {id = 223,desc = "pt-10-10-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101020,cardId = 1101003,lv = 93,bklv = 10,star = 3,mon = {id = 203,desc = "pt-10-10-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101021,cardId = 1102005,lv = 93,bklv = 10,star = 3,mon = {id = 223,desc = "pt-10-10-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1101030,cardId = 1101014,lv = 93,bklv = 10,star = 3,mon = {id = 214,desc = "pt-10-10-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101031,cardId = 1102020,lv = 93,bklv = 10,star = 3,mon = {id = 238,desc = "pt-10-10-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101030,cardId = 1101014,lv = 93,bklv = 10,star = 3,mon = {id = 214,desc = "pt-10-10-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101031,cardId = 1102020,lv = 93,bklv = 10,star = 3}
 		}
 	},
 	[11011] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1101110,cardId = 1101007,lv = 93,bklv = 10,star = 3,mon = {id = 212,desc = "pt-10-11-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101111,cardId = 1102012,lv = 93,bklv = 10,star = 3,mon = {id = 236,desc = "pt-10-11-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101110,cardId = 1101007,lv = 93,bklv = 10,star = 3,mon = {id = 212,desc = "pt-10-11-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101111,cardId = 1102012,lv = 93,bklv = 10,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1101120,cardId = 1101003,lv = 93,bklv = 10,star = 3,mon = {id = 208,desc = "pt-10-11-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101121,cardId = 1102005,lv = 93,bklv = 10,star = 3,mon = {id = 231,desc = "pt-10-11-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101120,cardId = 1101003,lv = 93,bklv = 10,star = 3,mon = {id = 208,desc = "pt-10-11-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101121,cardId = 1102005,lv = 93,bklv = 10,star = 3,mon = {id = 231,desc = "pt-10-11-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1101130,cardId = 1101014,lv = 93,bklv = 10,star = 3,mon = {id = 209,desc = "pt-10-11-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101131,cardId = 1102020,lv = 93,bklv = 10,star = 3,mon = {id = 232,desc = "pt-10-11-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101130,cardId = 1101014,lv = 93,bklv = 10,star = 3,mon = {id = 209,desc = "pt-10-11-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101131,cardId = 1102020,lv = 93,bklv = 10,star = 3}
 		}
 	},
 	[11012] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1101210,cardId = 1101007,lv = 94,bklv = 10,star = 3,mon = {id = 215,desc = "pt-10-12-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101211,cardId = 1102012,lv = 94,bklv = 10,star = 3,mon = {id = 239,desc = "pt-10-12-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101210,cardId = 1101007,lv = 94,bklv = 10,star = 3,mon = {id = 215,desc = "pt-10-12-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101211,cardId = 1102012,lv = 94,bklv = 10,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1101220,cardId = 1101003,lv = 94,bklv = 10,star = 3,mon = {id = 201,desc = "pt-10-12-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101221,cardId = 1102005,lv = 94,bklv = 10,star = 3,mon = {id = 227,desc = "pt-10-12-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101220,cardId = 1101003,lv = 94,bklv = 10,star = 3,mon = {id = 201,desc = "pt-10-12-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101221,cardId = 1102005,lv = 94,bklv = 10,star = 3,mon = {id = 227,desc = "pt-10-12-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1101230,cardId = 1101014,lv = 94,bklv = 10,star = 3,mon = {id = 211,desc = "pt-10-12-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101231,cardId = 1102020,lv = 94,bklv = 10,star = 3,mon = {id = 235,desc = "pt-10-12-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101230,cardId = 1101014,lv = 94,bklv = 10,star = 3,mon = {id = 211,desc = "pt-10-12-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101231,cardId = 1102020,lv = 94,bklv = 10,star = 3}
 		}
 	},
 	[11013] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1101310,cardId = 1101007,lv = 94,bklv = 10,star = 3,mon = {id = 209,desc = "pt-10-13-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101311,cardId = 1102012,lv = 94,bklv = 10,star = 3,mon = {id = 232,desc = "pt-10-13-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101310,cardId = 1101007,lv = 94,bklv = 10,star = 3,mon = {id = 209,desc = "pt-10-13-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101311,cardId = 1102012,lv = 94,bklv = 10,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1101320,cardId = 1101003,lv = 94,bklv = 10,star = 3,mon = {id = 208,desc = "pt-10-13-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101321,cardId = 1102005,lv = 94,bklv = 10,star = 3,mon = {id = 231,desc = "pt-10-13-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101320,cardId = 1101003,lv = 94,bklv = 10,star = 3,mon = {id = 208,desc = "pt-10-13-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101321,cardId = 1102005,lv = 94,bklv = 10,star = 3,mon = {id = 231,desc = "pt-10-13-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1101330,cardId = 1101014,lv = 94,bklv = 10,star = 3,mon = {id = 212,desc = "pt-10-13-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101331,cardId = 1102020,lv = 94,bklv = 10,star = 3,mon = {id = 236,desc = "pt-10-13-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101330,cardId = 1101014,lv = 94,bklv = 10,star = 3,mon = {id = 212,desc = "pt-10-13-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101331,cardId = 1102020,lv = 94,bklv = 10,star = 3}
 		}
 	},
 	[11014] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1101410,cardId = 1101007,lv = 95,bklv = 11,star = 3,mon = {id = 207,desc = "pt-10-14-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101411,cardId = 1102012,lv = 95,bklv = 11,star = 3,mon = {id = 227,desc = "pt-10-14-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101410,cardId = 1101007,lv = 95,bklv = 11,star = 3,mon = {id = 207,desc = "pt-10-14-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101411,cardId = 1102012,lv = 95,bklv = 11,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1101420,cardId = 1101003,lv = 95,bklv = 11,star = 3,mon = {id = 207,desc = "pt-10-14-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101421,cardId = 1102005,lv = 95,bklv = 11,star = 3,mon = {id = 221,desc = "pt-10-14-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101420,cardId = 1101003,lv = 95,bklv = 11,star = 3,mon = {id = 207,desc = "pt-10-14-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101421,cardId = 1102005,lv = 95,bklv = 11,star = 3,mon = {id = 221,desc = "pt-10-14-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1101430,cardId = 1101014,lv = 95,bklv = 11,star = 3,mon = {id = 211,desc = "pt-10-14-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101431,cardId = 1102020,lv = 95,bklv = 11,star = 3,mon = {id = 235,desc = "pt-10-14-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101430,cardId = 1101014,lv = 95,bklv = 11,star = 3,mon = {id = 211,desc = "pt-10-14-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101431,cardId = 1102020,lv = 95,bklv = 11,star = 3}
 		}
 	},
 	[11015] = {
 		[1] = {
-			jlr = {cha = "pt-10",id = 1101510,cardId = 1101007,lv = 97,bklv = 11,star = 3,mon = {id = 205,desc = "pt-10-15-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101511,cardId = 1102012,lv = 97,bklv = 11,star = 3,mon = {id = 219,desc = "pt-10-15-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101510,cardId = 1101007,lv = 97,bklv = 11,star = 3,mon = {id = 215,desc = "pt-10-15-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101511,cardId = 1102012,lv = 97,bklv = 11,star = 3,mon = {id = 260,desc = "pt-10-15-shl-loc1",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-10",id = 1101520,cardId = 1101003,lv = 97,bklv = 11,star = 3,mon = {id = 204,desc = "pt-10-15-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101521,cardId = 1102005,lv = 97,bklv = 11,star = 3,mon = {id = 224,desc = "pt-10-15-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101520,cardId = 1101003,lv = 97,bklv = 11,star = 3,mon = {id = 201,desc = "pt-10-15-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101521,cardId = 1102005,lv = 97,bklv = 11,star = 3,mon = {id = 248,desc = "pt-10-15-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-10",id = 1101530,cardId = 1101014,lv = 97,bklv = 11,star = 3,mon = {id = 207,desc = "pt-10-15-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-10",id = 1101531,cardId = 1102020,lv = 97,bklv = 11,star = 3,mon = {id = 228,desc = "pt-10-15-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-10",id = 1101530,cardId = 1101014,lv = 97,bklv = 11,star = 3,mon = {id = 211,desc = "pt-10-15-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-10",id = 1101531,cardId = 1102020,lv = 97,bklv = 11,star = 3,mon = {id = 256,desc = "pt-10-15-shl-loc3",skillLv = 6,exert = 18,suffer = 18}}
 		}
 	},
 	[11101] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1110110,cardId = 1101007,lv = 98,bklv = 11,star = 3,mon = {id = 212,desc = "pt-11-1-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110111,cardId = 1102012,lv = 98,bklv = 11,star = 3,mon = {id = 236,desc = "pt-11-1-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110110,cardId = 1101007,lv = 98,bklv = 11,star = 3,mon = {id = 212,desc = "pt-11-1-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110111,cardId = 1102012,lv = 98,bklv = 11,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1110120,cardId = 1101003,lv = 98,bklv = 11,star = 3,mon = {id = 208,desc = "pt-11-1-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110121,cardId = 1102005,lv = 98,bklv = 11,star = 3,mon = {id = 231,desc = "pt-11-1-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110120,cardId = 1101003,lv = 98,bklv = 11,star = 3,mon = {id = 208,desc = "pt-11-1-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110121,cardId = 1102005,lv = 98,bklv = 11,star = 3,mon = {id = 231,desc = "pt-11-1-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1110130,cardId = 1101014,lv = 98,bklv = 11,star = 3,mon = {id = 213,desc = "pt-11-1-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110131,cardId = 1102020,lv = 98,bklv = 11,star = 3,mon = {id = 237,desc = "pt-11-1-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110130,cardId = 1101014,lv = 98,bklv = 11,star = 3,mon = {id = 213,desc = "pt-11-1-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110131,cardId = 1102020,lv = 98,bklv = 11,star = 3}
 		}
 	},
 	[11102] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1110210,cardId = 1101007,lv = 99,bklv = 11,star = 3,mon = {id = 201,desc = "pt-11-2-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110211,cardId = 1102012,lv = 99,bklv = 11,star = 3,mon = {id = 220,desc = "pt-11-2-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110210,cardId = 1101007,lv = 99,bklv = 11,star = 3,mon = {id = 201,desc = "pt-11-2-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110211,cardId = 1102012,lv = 99,bklv = 11,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1110220,cardId = 1101003,lv = 99,bklv = 11,star = 3,mon = {id = 203,desc = "pt-11-2-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110221,cardId = 1102005,lv = 99,bklv = 11,star = 3,mon = {id = 223,desc = "pt-11-2-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110220,cardId = 1101003,lv = 99,bklv = 11,star = 3,mon = {id = 203,desc = "pt-11-2-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110221,cardId = 1102005,lv = 99,bklv = 11,star = 3,mon = {id = 223,desc = "pt-11-2-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1110230,cardId = 1101014,lv = 99,bklv = 11,star = 3,mon = {id = 214,desc = "pt-11-2-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110231,cardId = 1102020,lv = 99,bklv = 11,star = 3,mon = {id = 238,desc = "pt-11-2-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110230,cardId = 1101014,lv = 99,bklv = 11,star = 3,mon = {id = 214,desc = "pt-11-2-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110231,cardId = 1102020,lv = 99,bklv = 11,star = 3}
 		}
 	},
 	[11103] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1110310,cardId = 1101007,lv = 100,bklv = 12,star = 3,mon = {id = 212,desc = "pt-11-3-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110311,cardId = 1102012,lv = 100,bklv = 12,star = 3,mon = {id = 236,desc = "pt-11-3-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110310,cardId = 1101007,lv = 100,bklv = 12,star = 3,mon = {id = 212,desc = "pt-11-3-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110311,cardId = 1102012,lv = 100,bklv = 12,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1110320,cardId = 1101003,lv = 100,bklv = 12,star = 3,mon = {id = 208,desc = "pt-11-3-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110321,cardId = 1102005,lv = 100,bklv = 12,star = 3,mon = {id = 231,desc = "pt-11-3-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110320,cardId = 1101003,lv = 100,bklv = 12,star = 3,mon = {id = 208,desc = "pt-11-3-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110321,cardId = 1102005,lv = 100,bklv = 12,star = 3,mon = {id = 231,desc = "pt-11-3-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1110330,cardId = 1101014,lv = 100,bklv = 12,star = 3,mon = {id = 209,desc = "pt-11-3-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110331,cardId = 1102020,lv = 100,bklv = 12,star = 3,mon = {id = 232,desc = "pt-11-3-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110330,cardId = 1101014,lv = 100,bklv = 12,star = 3,mon = {id = 209,desc = "pt-11-3-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110331,cardId = 1102020,lv = 100,bklv = 12,star = 3}
 		}
 	},
 	[11104] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1110410,cardId = 1101007,lv = 100,bklv = 12,star = 3,mon = {id = 215,desc = "pt-11-4-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110411,cardId = 1102012,lv = 100,bklv = 12,star = 3,mon = {id = 239,desc = "pt-11-4-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110410,cardId = 1101007,lv = 100,bklv = 12,star = 3,mon = {id = 215,desc = "pt-11-4-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110411,cardId = 1102012,lv = 100,bklv = 12,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1110420,cardId = 1101003,lv = 100,bklv = 12,star = 3,mon = {id = 201,desc = "pt-11-4-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110421,cardId = 1102005,lv = 100,bklv = 12,star = 3,mon = {id = 227,desc = "pt-11-4-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110420,cardId = 1101003,lv = 100,bklv = 12,star = 3,mon = {id = 201,desc = "pt-11-4-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110421,cardId = 1102005,lv = 100,bklv = 12,star = 3,mon = {id = 227,desc = "pt-11-4-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1110430,cardId = 1101014,lv = 100,bklv = 12,star = 3,mon = {id = 211,desc = "pt-11-4-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110431,cardId = 1102020,lv = 100,bklv = 12,star = 3,mon = {id = 235,desc = "pt-11-4-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110430,cardId = 1101014,lv = 100,bklv = 12,star = 3,mon = {id = 211,desc = "pt-11-4-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110431,cardId = 1102020,lv = 100,bklv = 12,star = 3}
 		}
 	},
 	[11105] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1110510,cardId = 1101007,lv = 101,bklv = 12,star = 3,mon = {id = 206,desc = "pt-11-5-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110511,cardId = 1102012,lv = 101,bklv = 12,star = 3,mon = {id = 225,desc = "pt-11-5-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110510,cardId = 1101007,lv = 101,bklv = 12,star = 3,mon = {id = 206,desc = "pt-11-5-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110511,cardId = 1102012,lv = 101,bklv = 12,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1110520,cardId = 1101003,lv = 101,bklv = 12,star = 3,mon = {id = 203,desc = "pt-11-5-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110521,cardId = 1102005,lv = 101,bklv = 12,star = 3,mon = {id = 223,desc = "pt-11-5-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110520,cardId = 1101003,lv = 101,bklv = 12,star = 3,mon = {id = 203,desc = "pt-11-5-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110521,cardId = 1102005,lv = 101,bklv = 12,star = 3,mon = {id = 223,desc = "pt-11-5-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1110530,cardId = 1101014,lv = 101,bklv = 12,star = 3,mon = {id = 212,desc = "pt-11-5-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110531,cardId = 1102020,lv = 101,bklv = 12,star = 3,mon = {id = 236,desc = "pt-11-5-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110530,cardId = 1101014,lv = 101,bklv = 12,star = 3,mon = {id = 212,desc = "pt-11-5-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110531,cardId = 1102020,lv = 101,bklv = 12,star = 3}
 		}
 	},
 	[11106] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1110610,cardId = 1101007,lv = 101,bklv = 12,star = 3,mon = {id = 209,desc = "pt-11-6-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110611,cardId = 1102012,lv = 101,bklv = 12,star = 3,mon = {id = 232,desc = "pt-11-6-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110610,cardId = 1101007,lv = 101,bklv = 12,star = 3,mon = {id = 209,desc = "pt-11-6-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110611,cardId = 1102012,lv = 101,bklv = 12,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1110620,cardId = 1101003,lv = 101,bklv = 12,star = 3,mon = {id = 208,desc = "pt-11-6-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110621,cardId = 1102005,lv = 101,bklv = 12,star = 3,mon = {id = 231,desc = "pt-11-6-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110620,cardId = 1101003,lv = 101,bklv = 12,star = 3,mon = {id = 208,desc = "pt-11-6-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110621,cardId = 1102005,lv = 101,bklv = 12,star = 3,mon = {id = 231,desc = "pt-11-6-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1110630,cardId = 1101014,lv = 101,bklv = 12,star = 3,mon = {id = 212,desc = "pt-11-6-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110631,cardId = 1102020,lv = 101,bklv = 12,star = 3,mon = {id = 236,desc = "pt-11-6-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110630,cardId = 1101014,lv = 101,bklv = 12,star = 3,mon = {id = 212,desc = "pt-11-6-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110631,cardId = 1102020,lv = 101,bklv = 12,star = 3}
 		}
 	},
 	[11107] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1110710,cardId = 1101007,lv = 102,bklv = 12,star = 3,mon = {id = 207,desc = "pt-11-7-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110711,cardId = 1102012,lv = 102,bklv = 12,star = 3,mon = {id = 227,desc = "pt-11-7-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110710,cardId = 1101007,lv = 102,bklv = 12,star = 3,mon = {id = 207,desc = "pt-11-7-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110711,cardId = 1102012,lv = 102,bklv = 12,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1110720,cardId = 1101003,lv = 102,bklv = 12,star = 3,mon = {id = 207,desc = "pt-11-7-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110721,cardId = 1102005,lv = 102,bklv = 12,star = 3,mon = {id = 221,desc = "pt-11-7-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110720,cardId = 1101003,lv = 102,bklv = 12,star = 3,mon = {id = 207,desc = "pt-11-7-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110721,cardId = 1102005,lv = 102,bklv = 12,star = 3,mon = {id = 221,desc = "pt-11-7-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1110730,cardId = 1101014,lv = 102,bklv = 12,star = 3,mon = {id = 211,desc = "pt-11-7-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110731,cardId = 1102020,lv = 102,bklv = 12,star = 3,mon = {id = 235,desc = "pt-11-7-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110730,cardId = 1101014,lv = 102,bklv = 12,star = 3,mon = {id = 211,desc = "pt-11-7-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110731,cardId = 1102020,lv = 102,bklv = 12,star = 3}
 		}
 	},
 	[11108] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1110810,cardId = 1101007,lv = 102,bklv = 12,star = 3,mon = {id = 207,desc = "pt-11-8-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110811,cardId = 1102012,lv = 102,bklv = 12,star = 3,mon = {id = 230,desc = "pt-11-8-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110810,cardId = 1101007,lv = 102,bklv = 12,star = 3,mon = {id = 207,desc = "pt-11-8-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110811,cardId = 1102012,lv = 102,bklv = 12,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1110820,cardId = 1101003,lv = 102,bklv = 12,star = 3,mon = {id = 205,desc = "pt-11-8-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110821,cardId = 1102005,lv = 102,bklv = 12,star = 3,mon = {id = 229,desc = "pt-11-8-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110820,cardId = 1101003,lv = 102,bklv = 12,star = 3,mon = {id = 205,desc = "pt-11-8-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110821,cardId = 1102005,lv = 102,bklv = 12,star = 3,mon = {id = 229,desc = "pt-11-8-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1110830,cardId = 1101014,lv = 102,bklv = 12,star = 3,mon = {id = 210,desc = "pt-11-8-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110831,cardId = 1102020,lv = 102,bklv = 12,star = 3,mon = {id = 234,desc = "pt-11-8-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110830,cardId = 1101014,lv = 102,bklv = 12,star = 3,mon = {id = 210,desc = "pt-11-8-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110831,cardId = 1102020,lv = 102,bklv = 12,star = 3}
 		}
 	},
 	[11109] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1110910,cardId = 1101007,lv = 103,bklv = 12,star = 3,mon = {id = 212,desc = "pt-11-9-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110911,cardId = 1102012,lv = 103,bklv = 12,star = 3,mon = {id = 236,desc = "pt-11-9-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110910,cardId = 1101007,lv = 103,bklv = 12,star = 3,mon = {id = 212,desc = "pt-11-9-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110911,cardId = 1102012,lv = 103,bklv = 12,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1110920,cardId = 1101003,lv = 103,bklv = 12,star = 3,mon = {id = 208,desc = "pt-11-9-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110921,cardId = 1102005,lv = 103,bklv = 12,star = 3,mon = {id = 231,desc = "pt-11-9-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110920,cardId = 1101003,lv = 103,bklv = 12,star = 3,mon = {id = 208,desc = "pt-11-9-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110921,cardId = 1102005,lv = 103,bklv = 12,star = 3,mon = {id = 231,desc = "pt-11-9-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1110930,cardId = 1101014,lv = 103,bklv = 12,star = 3,mon = {id = 209,desc = "pt-11-9-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1110931,cardId = 1102020,lv = 103,bklv = 12,star = 3,mon = {id = 232,desc = "pt-11-9-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1110930,cardId = 1101014,lv = 103,bklv = 12,star = 3,mon = {id = 209,desc = "pt-11-9-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1110931,cardId = 1102020,lv = 103,bklv = 12,star = 3}
 		}
 	},
 	[11110] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1111010,cardId = 1101007,lv = 103,bklv = 12,star = 3,mon = {id = 201,desc = "pt-11-10-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111011,cardId = 1102012,lv = 103,bklv = 12,star = 3,mon = {id = 220,desc = "pt-11-10-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111010,cardId = 1101007,lv = 103,bklv = 12,star = 3,mon = {id = 201,desc = "pt-11-10-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111011,cardId = 1102012,lv = 103,bklv = 12,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1111020,cardId = 1101003,lv = 103,bklv = 12,star = 3,mon = {id = 203,desc = "pt-11-10-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111021,cardId = 1102005,lv = 103,bklv = 12,star = 3,mon = {id = 223,desc = "pt-11-10-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111020,cardId = 1101003,lv = 103,bklv = 12,star = 3,mon = {id = 203,desc = "pt-11-10-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111021,cardId = 1102005,lv = 103,bklv = 12,star = 3,mon = {id = 223,desc = "pt-11-10-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1111030,cardId = 1101014,lv = 103,bklv = 12,star = 3,mon = {id = 214,desc = "pt-11-10-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111031,cardId = 1102020,lv = 103,bklv = 12,star = 3,mon = {id = 238,desc = "pt-11-10-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111030,cardId = 1101014,lv = 103,bklv = 12,star = 3,mon = {id = 214,desc = "pt-11-10-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111031,cardId = 1102020,lv = 103,bklv = 12,star = 3}
 		}
 	},
 	[11111] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1111110,cardId = 1101007,lv = 103,bklv = 12,star = 3,mon = {id = 212,desc = "pt-11-11-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111111,cardId = 1102012,lv = 103,bklv = 12,star = 3,mon = {id = 236,desc = "pt-11-11-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111110,cardId = 1101007,lv = 103,bklv = 12,star = 3,mon = {id = 212,desc = "pt-11-11-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111111,cardId = 1102012,lv = 103,bklv = 12,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1111120,cardId = 1101003,lv = 103,bklv = 12,star = 3,mon = {id = 208,desc = "pt-11-11-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111121,cardId = 1102005,lv = 103,bklv = 12,star = 3,mon = {id = 231,desc = "pt-11-11-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111120,cardId = 1101003,lv = 103,bklv = 12,star = 3,mon = {id = 208,desc = "pt-11-11-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111121,cardId = 1102005,lv = 103,bklv = 12,star = 3,mon = {id = 231,desc = "pt-11-11-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1111130,cardId = 1101014,lv = 103,bklv = 12,star = 3,mon = {id = 209,desc = "pt-11-11-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111131,cardId = 1102020,lv = 103,bklv = 12,star = 3,mon = {id = 232,desc = "pt-11-11-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111130,cardId = 1101014,lv = 103,bklv = 12,star = 3,mon = {id = 209,desc = "pt-11-11-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111131,cardId = 1102020,lv = 103,bklv = 12,star = 3}
 		}
 	},
 	[11112] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1111210,cardId = 1101007,lv = 104,bklv = 12,star = 3,mon = {id = 215,desc = "pt-11-12-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111211,cardId = 1102012,lv = 104,bklv = 12,star = 3,mon = {id = 239,desc = "pt-11-12-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111210,cardId = 1101007,lv = 104,bklv = 12,star = 3,mon = {id = 215,desc = "pt-11-12-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111211,cardId = 1102012,lv = 104,bklv = 12,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1111220,cardId = 1101003,lv = 104,bklv = 12,star = 3,mon = {id = 201,desc = "pt-11-12-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111221,cardId = 1102005,lv = 104,bklv = 12,star = 3,mon = {id = 227,desc = "pt-11-12-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111220,cardId = 1101003,lv = 104,bklv = 12,star = 3,mon = {id = 201,desc = "pt-11-12-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111221,cardId = 1102005,lv = 104,bklv = 12,star = 3,mon = {id = 227,desc = "pt-11-12-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1111230,cardId = 1101014,lv = 104,bklv = 12,star = 3,mon = {id = 211,desc = "pt-11-12-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111231,cardId = 1102020,lv = 104,bklv = 12,star = 3,mon = {id = 235,desc = "pt-11-12-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111230,cardId = 1101014,lv = 104,bklv = 12,star = 3,mon = {id = 211,desc = "pt-11-12-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111231,cardId = 1102020,lv = 104,bklv = 12,star = 3}
 		}
 	},
 	[11113] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1111310,cardId = 1101007,lv = 104,bklv = 12,star = 3,mon = {id = 209,desc = "pt-11-13-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111311,cardId = 1102012,lv = 104,bklv = 12,star = 3,mon = {id = 232,desc = "pt-11-13-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111310,cardId = 1101007,lv = 104,bklv = 12,star = 3,mon = {id = 209,desc = "pt-11-13-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111311,cardId = 1102012,lv = 104,bklv = 12,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1111320,cardId = 1101003,lv = 104,bklv = 12,star = 3,mon = {id = 208,desc = "pt-11-13-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111321,cardId = 1102005,lv = 104,bklv = 12,star = 3,mon = {id = 231,desc = "pt-11-13-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111320,cardId = 1101003,lv = 104,bklv = 12,star = 3,mon = {id = 208,desc = "pt-11-13-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111321,cardId = 1102005,lv = 104,bklv = 12,star = 3,mon = {id = 231,desc = "pt-11-13-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1111330,cardId = 1101014,lv = 104,bklv = 12,star = 3,mon = {id = 212,desc = "pt-11-13-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111331,cardId = 1102020,lv = 104,bklv = 12,star = 3,mon = {id = 236,desc = "pt-11-13-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111330,cardId = 1101014,lv = 104,bklv = 12,star = 3,mon = {id = 212,desc = "pt-11-13-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111331,cardId = 1102020,lv = 104,bklv = 12,star = 3}
 		}
 	},
 	[11114] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1111410,cardId = 1101007,lv = 105,bklv = 13,star = 3,mon = {id = 207,desc = "pt-11-14-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111411,cardId = 1102012,lv = 105,bklv = 13,star = 3,mon = {id = 227,desc = "pt-11-14-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111410,cardId = 1101007,lv = 105,bklv = 13,star = 3,mon = {id = 207,desc = "pt-11-14-jlr-loc1",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111411,cardId = 1102012,lv = 105,bklv = 13,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1111420,cardId = 1101003,lv = 105,bklv = 13,star = 3,mon = {id = 207,desc = "pt-11-14-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111421,cardId = 1102005,lv = 105,bklv = 13,star = 3,mon = {id = 221,desc = "pt-11-14-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111420,cardId = 1101003,lv = 105,bklv = 13,star = 3,mon = {id = 207,desc = "pt-11-14-jlr-loc2",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111421,cardId = 1102005,lv = 105,bklv = 13,star = 3,mon = {id = 221,desc = "pt-11-14-shl-loc2",skillLv = 6,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1111430,cardId = 1101014,lv = 105,bklv = 13,star = 3,mon = {id = 211,desc = "pt-11-14-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111431,cardId = 1102020,lv = 105,bklv = 13,star = 3,mon = {id = 235,desc = "pt-11-14-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111430,cardId = 1101014,lv = 105,bklv = 13,star = 3,mon = {id = 211,desc = "pt-11-14-jlr-loc3",skillLv = 6,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111431,cardId = 1102020,lv = 105,bklv = 13,star = 3}
 		}
 	},
 	[11115] = {
 		[1] = {
-			jlr = {cha = "pt-11",id = 1111510,cardId = 1101007,lv = 107,bklv = 13,star = 3,mon = {id = 205,desc = "pt-11-15-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111511,cardId = 1102012,lv = 107,bklv = 13,star = 3,mon = {id = 219,desc = "pt-11-15-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111510,cardId = 1101007,lv = 107,bklv = 13,star = 3,mon = {id = 209,desc = "pt-11-15-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111511,cardId = 1102012,lv = 107,bklv = 13,star = 3,mon = {id = 253,desc = "pt-11-15-shl-loc1",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-11",id = 1111520,cardId = 1101003,lv = 107,bklv = 13,star = 3,mon = {id = 204,desc = "pt-11-15-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111521,cardId = 1102005,lv = 107,bklv = 13,star = 3,mon = {id = 224,desc = "pt-11-15-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111520,cardId = 1101003,lv = 107,bklv = 13,star = 3,mon = {id = 208,desc = "pt-11-15-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111521,cardId = 1102005,lv = 107,bklv = 13,star = 3,mon = {id = 252,desc = "pt-11-15-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-11",id = 1111530,cardId = 1101014,lv = 107,bklv = 13,star = 3,mon = {id = 207,desc = "pt-11-15-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-11",id = 1111531,cardId = 1102020,lv = 107,bklv = 13,star = 3,mon = {id = 228,desc = "pt-11-15-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-11",id = 1111530,cardId = 1101014,lv = 107,bklv = 13,star = 3,mon = {id = 212,desc = "pt-11-15-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-11",id = 1111531,cardId = 1102020,lv = 107,bklv = 13,star = 3,mon = {id = 257,desc = "pt-11-15-shl-loc3",skillLv = 7,exert = 18,suffer = 18}}
 		}
 	},
 	[11201] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1120110,cardId = 1101007,lv = 108,bklv = 13,star = 3,mon = {id = 212,desc = "pt-12-1-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120111,cardId = 1102012,lv = 108,bklv = 13,star = 3,mon = {id = 236,desc = "pt-12-1-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120110,cardId = 1101007,lv = 108,bklv = 13,star = 3,mon = {id = 212,desc = "pt-12-1-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120111,cardId = 1102012,lv = 108,bklv = 13,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1120120,cardId = 1101003,lv = 108,bklv = 13,star = 3,mon = {id = 208,desc = "pt-12-1-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120121,cardId = 1102005,lv = 108,bklv = 13,star = 3,mon = {id = 231,desc = "pt-12-1-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120120,cardId = 1101003,lv = 108,bklv = 13,star = 3,mon = {id = 208,desc = "pt-12-1-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120121,cardId = 1102005,lv = 108,bklv = 13,star = 3,mon = {id = 231,desc = "pt-12-1-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1120130,cardId = 1101014,lv = 108,bklv = 13,star = 3,mon = {id = 213,desc = "pt-12-1-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120131,cardId = 1102020,lv = 108,bklv = 13,star = 3,mon = {id = 237,desc = "pt-12-1-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120130,cardId = 1101014,lv = 108,bklv = 13,star = 3,mon = {id = 213,desc = "pt-12-1-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120131,cardId = 1102020,lv = 108,bklv = 13,star = 3}
 		}
 	},
 	[11202] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1120210,cardId = 1101007,lv = 109,bklv = 13,star = 3,mon = {id = 201,desc = "pt-12-2-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120211,cardId = 1102012,lv = 109,bklv = 13,star = 3,mon = {id = 220,desc = "pt-12-2-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120210,cardId = 1101007,lv = 109,bklv = 13,star = 3,mon = {id = 201,desc = "pt-12-2-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120211,cardId = 1102012,lv = 109,bklv = 13,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1120220,cardId = 1101003,lv = 109,bklv = 13,star = 3,mon = {id = 203,desc = "pt-12-2-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120221,cardId = 1102005,lv = 109,bklv = 13,star = 3,mon = {id = 223,desc = "pt-12-2-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120220,cardId = 1101003,lv = 109,bklv = 13,star = 3,mon = {id = 203,desc = "pt-12-2-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120221,cardId = 1102005,lv = 109,bklv = 13,star = 3,mon = {id = 223,desc = "pt-12-2-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1120230,cardId = 1101014,lv = 109,bklv = 13,star = 3,mon = {id = 214,desc = "pt-12-2-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120231,cardId = 1102020,lv = 109,bklv = 13,star = 3,mon = {id = 238,desc = "pt-12-2-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120230,cardId = 1101014,lv = 109,bklv = 13,star = 3,mon = {id = 214,desc = "pt-12-2-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120231,cardId = 1102020,lv = 109,bklv = 13,star = 3}
 		}
 	},
 	[11203] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1120310,cardId = 1101007,lv = 110,bklv = 14,star = 3,mon = {id = 212,desc = "pt-12-3-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120311,cardId = 1102012,lv = 110,bklv = 14,star = 3,mon = {id = 236,desc = "pt-12-3-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120310,cardId = 1101007,lv = 110,bklv = 14,star = 3,mon = {id = 212,desc = "pt-12-3-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120311,cardId = 1102012,lv = 110,bklv = 14,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1120320,cardId = 1101003,lv = 110,bklv = 14,star = 3,mon = {id = 208,desc = "pt-12-3-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120321,cardId = 1102005,lv = 110,bklv = 14,star = 3,mon = {id = 231,desc = "pt-12-3-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120320,cardId = 1101003,lv = 110,bklv = 14,star = 3,mon = {id = 208,desc = "pt-12-3-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120321,cardId = 1102005,lv = 110,bklv = 14,star = 3,mon = {id = 231,desc = "pt-12-3-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1120330,cardId = 1101014,lv = 110,bklv = 14,star = 3,mon = {id = 209,desc = "pt-12-3-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120331,cardId = 1102020,lv = 110,bklv = 14,star = 3,mon = {id = 232,desc = "pt-12-3-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120330,cardId = 1101014,lv = 110,bklv = 14,star = 3,mon = {id = 209,desc = "pt-12-3-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120331,cardId = 1102020,lv = 110,bklv = 14,star = 3}
 		}
 	},
 	[11204] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1120410,cardId = 1101007,lv = 110,bklv = 14,star = 3,mon = {id = 215,desc = "pt-12-4-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120411,cardId = 1102012,lv = 110,bklv = 14,star = 3,mon = {id = 239,desc = "pt-12-4-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120410,cardId = 1101007,lv = 110,bklv = 14,star = 3,mon = {id = 215,desc = "pt-12-4-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120411,cardId = 1102012,lv = 110,bklv = 14,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1120420,cardId = 1101003,lv = 110,bklv = 14,star = 3,mon = {id = 201,desc = "pt-12-4-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120421,cardId = 1102005,lv = 110,bklv = 14,star = 3,mon = {id = 227,desc = "pt-12-4-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120420,cardId = 1101003,lv = 110,bklv = 14,star = 3,mon = {id = 201,desc = "pt-12-4-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120421,cardId = 1102005,lv = 110,bklv = 14,star = 3,mon = {id = 227,desc = "pt-12-4-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1120430,cardId = 1101014,lv = 110,bklv = 14,star = 3,mon = {id = 211,desc = "pt-12-4-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120431,cardId = 1102020,lv = 110,bklv = 14,star = 3,mon = {id = 235,desc = "pt-12-4-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120430,cardId = 1101014,lv = 110,bklv = 14,star = 3,mon = {id = 211,desc = "pt-12-4-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120431,cardId = 1102020,lv = 110,bklv = 14,star = 3}
 		}
 	},
 	[11205] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1120510,cardId = 1101007,lv = 111,bklv = 14,star = 3,mon = {id = 206,desc = "pt-12-5-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120511,cardId = 1102012,lv = 111,bklv = 14,star = 3,mon = {id = 225,desc = "pt-12-5-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120510,cardId = 1101007,lv = 111,bklv = 14,star = 3,mon = {id = 206,desc = "pt-12-5-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120511,cardId = 1102012,lv = 111,bklv = 14,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1120520,cardId = 1101003,lv = 111,bklv = 14,star = 3,mon = {id = 203,desc = "pt-12-5-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120521,cardId = 1102005,lv = 111,bklv = 14,star = 3,mon = {id = 223,desc = "pt-12-5-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120520,cardId = 1101003,lv = 111,bklv = 14,star = 3,mon = {id = 203,desc = "pt-12-5-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120521,cardId = 1102005,lv = 111,bklv = 14,star = 3,mon = {id = 223,desc = "pt-12-5-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1120530,cardId = 1101014,lv = 111,bklv = 14,star = 3,mon = {id = 212,desc = "pt-12-5-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120531,cardId = 1102020,lv = 111,bklv = 14,star = 3,mon = {id = 236,desc = "pt-12-5-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120530,cardId = 1101014,lv = 111,bklv = 14,star = 3,mon = {id = 212,desc = "pt-12-5-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120531,cardId = 1102020,lv = 111,bklv = 14,star = 3}
 		}
 	},
 	[11206] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1120610,cardId = 1101007,lv = 111,bklv = 14,star = 3,mon = {id = 209,desc = "pt-12-6-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120611,cardId = 1102012,lv = 111,bklv = 14,star = 3,mon = {id = 232,desc = "pt-12-6-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120610,cardId = 1101007,lv = 111,bklv = 14,star = 3,mon = {id = 209,desc = "pt-12-6-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120611,cardId = 1102012,lv = 111,bklv = 14,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1120620,cardId = 1101003,lv = 111,bklv = 14,star = 3,mon = {id = 208,desc = "pt-12-6-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120621,cardId = 1102005,lv = 111,bklv = 14,star = 3,mon = {id = 231,desc = "pt-12-6-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120620,cardId = 1101003,lv = 111,bklv = 14,star = 3,mon = {id = 208,desc = "pt-12-6-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120621,cardId = 1102005,lv = 111,bklv = 14,star = 3,mon = {id = 231,desc = "pt-12-6-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1120630,cardId = 1101014,lv = 111,bklv = 14,star = 3,mon = {id = 212,desc = "pt-12-6-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120631,cardId = 1102020,lv = 111,bklv = 14,star = 3,mon = {id = 236,desc = "pt-12-6-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120630,cardId = 1101014,lv = 111,bklv = 14,star = 3,mon = {id = 212,desc = "pt-12-6-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120631,cardId = 1102020,lv = 111,bklv = 14,star = 3}
 		}
 	},
 	[11207] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1120710,cardId = 1101007,lv = 112,bklv = 14,star = 3,mon = {id = 207,desc = "pt-12-7-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120711,cardId = 1102012,lv = 112,bklv = 14,star = 3,mon = {id = 227,desc = "pt-12-7-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120710,cardId = 1101007,lv = 112,bklv = 14,star = 3,mon = {id = 207,desc = "pt-12-7-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120711,cardId = 1102012,lv = 112,bklv = 14,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1120720,cardId = 1101003,lv = 112,bklv = 14,star = 3,mon = {id = 207,desc = "pt-12-7-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120721,cardId = 1102005,lv = 112,bklv = 14,star = 3,mon = {id = 221,desc = "pt-12-7-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120720,cardId = 1101003,lv = 112,bklv = 14,star = 3,mon = {id = 207,desc = "pt-12-7-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120721,cardId = 1102005,lv = 112,bklv = 14,star = 3,mon = {id = 221,desc = "pt-12-7-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1120730,cardId = 1101014,lv = 112,bklv = 14,star = 3,mon = {id = 211,desc = "pt-12-7-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120731,cardId = 1102020,lv = 112,bklv = 14,star = 3,mon = {id = 235,desc = "pt-12-7-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120730,cardId = 1101014,lv = 112,bklv = 14,star = 3,mon = {id = 211,desc = "pt-12-7-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120731,cardId = 1102020,lv = 112,bklv = 14,star = 3}
 		}
 	},
 	[11208] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1120810,cardId = 1101007,lv = 112,bklv = 14,star = 3,mon = {id = 207,desc = "pt-12-8-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120811,cardId = 1102012,lv = 112,bklv = 14,star = 3,mon = {id = 230,desc = "pt-12-8-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120810,cardId = 1101007,lv = 112,bklv = 14,star = 3,mon = {id = 207,desc = "pt-12-8-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120811,cardId = 1102012,lv = 112,bklv = 14,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1120820,cardId = 1101003,lv = 112,bklv = 14,star = 3,mon = {id = 205,desc = "pt-12-8-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120821,cardId = 1102005,lv = 112,bklv = 14,star = 3,mon = {id = 229,desc = "pt-12-8-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120820,cardId = 1101003,lv = 112,bklv = 14,star = 3,mon = {id = 205,desc = "pt-12-8-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120821,cardId = 1102005,lv = 112,bklv = 14,star = 3,mon = {id = 229,desc = "pt-12-8-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1120830,cardId = 1101014,lv = 112,bklv = 14,star = 3,mon = {id = 210,desc = "pt-12-8-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120831,cardId = 1102020,lv = 112,bklv = 14,star = 3,mon = {id = 234,desc = "pt-12-8-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120830,cardId = 1101014,lv = 112,bklv = 14,star = 3,mon = {id = 210,desc = "pt-12-8-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120831,cardId = 1102020,lv = 112,bklv = 14,star = 3}
 		}
 	},
 	[11209] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1120910,cardId = 1101007,lv = 113,bklv = 14,star = 3,mon = {id = 212,desc = "pt-12-9-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120911,cardId = 1102012,lv = 113,bklv = 14,star = 3,mon = {id = 236,desc = "pt-12-9-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120910,cardId = 1101007,lv = 113,bklv = 14,star = 3,mon = {id = 212,desc = "pt-12-9-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120911,cardId = 1102012,lv = 113,bklv = 14,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1120920,cardId = 1101003,lv = 113,bklv = 14,star = 3,mon = {id = 208,desc = "pt-12-9-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120921,cardId = 1102005,lv = 113,bklv = 14,star = 3,mon = {id = 231,desc = "pt-12-9-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120920,cardId = 1101003,lv = 113,bklv = 14,star = 3,mon = {id = 208,desc = "pt-12-9-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120921,cardId = 1102005,lv = 113,bklv = 14,star = 3,mon = {id = 231,desc = "pt-12-9-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1120930,cardId = 1101014,lv = 113,bklv = 14,star = 3,mon = {id = 209,desc = "pt-12-9-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1120931,cardId = 1102020,lv = 113,bklv = 14,star = 3,mon = {id = 232,desc = "pt-12-9-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1120930,cardId = 1101014,lv = 113,bklv = 14,star = 3,mon = {id = 209,desc = "pt-12-9-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1120931,cardId = 1102020,lv = 113,bklv = 14,star = 3}
 		}
 	},
 	[11210] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1121010,cardId = 1101007,lv = 113,bklv = 14,star = 3,mon = {id = 201,desc = "pt-12-10-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121011,cardId = 1102012,lv = 113,bklv = 14,star = 3,mon = {id = 220,desc = "pt-12-10-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121010,cardId = 1101007,lv = 113,bklv = 14,star = 3,mon = {id = 201,desc = "pt-12-10-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121011,cardId = 1102012,lv = 113,bklv = 14,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1121020,cardId = 1101003,lv = 113,bklv = 14,star = 3,mon = {id = 203,desc = "pt-12-10-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121021,cardId = 1102005,lv = 113,bklv = 14,star = 3,mon = {id = 223,desc = "pt-12-10-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121020,cardId = 1101003,lv = 113,bklv = 14,star = 3,mon = {id = 203,desc = "pt-12-10-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121021,cardId = 1102005,lv = 113,bklv = 14,star = 3,mon = {id = 223,desc = "pt-12-10-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1121030,cardId = 1101014,lv = 113,bklv = 14,star = 3,mon = {id = 214,desc = "pt-12-10-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121031,cardId = 1102020,lv = 113,bklv = 14,star = 3,mon = {id = 238,desc = "pt-12-10-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121030,cardId = 1101014,lv = 113,bklv = 14,star = 3,mon = {id = 214,desc = "pt-12-10-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121031,cardId = 1102020,lv = 113,bklv = 14,star = 3}
 		}
 	},
 	[11211] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1121110,cardId = 1101007,lv = 113,bklv = 14,star = 3,mon = {id = 212,desc = "pt-12-11-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121111,cardId = 1102012,lv = 113,bklv = 14,star = 3,mon = {id = 236,desc = "pt-12-11-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121110,cardId = 1101007,lv = 113,bklv = 14,star = 3,mon = {id = 212,desc = "pt-12-11-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121111,cardId = 1102012,lv = 113,bklv = 14,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1121120,cardId = 1101003,lv = 113,bklv = 14,star = 3,mon = {id = 208,desc = "pt-12-11-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121121,cardId = 1102005,lv = 113,bklv = 14,star = 3,mon = {id = 231,desc = "pt-12-11-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121120,cardId = 1101003,lv = 113,bklv = 14,star = 3,mon = {id = 208,desc = "pt-12-11-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121121,cardId = 1102005,lv = 113,bklv = 14,star = 3,mon = {id = 231,desc = "pt-12-11-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1121130,cardId = 1101014,lv = 113,bklv = 14,star = 3,mon = {id = 209,desc = "pt-12-11-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121131,cardId = 1102020,lv = 113,bklv = 14,star = 3,mon = {id = 232,desc = "pt-12-11-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121130,cardId = 1101014,lv = 113,bklv = 14,star = 3,mon = {id = 209,desc = "pt-12-11-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121131,cardId = 1102020,lv = 113,bklv = 14,star = 3}
 		}
 	},
 	[11212] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1121210,cardId = 1101007,lv = 114,bklv = 14,star = 3,mon = {id = 215,desc = "pt-12-12-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121211,cardId = 1102012,lv = 114,bklv = 14,star = 3,mon = {id = 239,desc = "pt-12-12-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121210,cardId = 1101007,lv = 114,bklv = 14,star = 3,mon = {id = 215,desc = "pt-12-12-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121211,cardId = 1102012,lv = 114,bklv = 14,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1121220,cardId = 1101003,lv = 114,bklv = 14,star = 3,mon = {id = 201,desc = "pt-12-12-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121221,cardId = 1102005,lv = 114,bklv = 14,star = 3,mon = {id = 227,desc = "pt-12-12-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121220,cardId = 1101003,lv = 114,bklv = 14,star = 3,mon = {id = 201,desc = "pt-12-12-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121221,cardId = 1102005,lv = 114,bklv = 14,star = 3,mon = {id = 227,desc = "pt-12-12-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1121230,cardId = 1101014,lv = 114,bklv = 14,star = 3,mon = {id = 211,desc = "pt-12-12-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121231,cardId = 1102020,lv = 114,bklv = 14,star = 3,mon = {id = 235,desc = "pt-12-12-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121230,cardId = 1101014,lv = 114,bklv = 14,star = 3,mon = {id = 211,desc = "pt-12-12-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121231,cardId = 1102020,lv = 114,bklv = 14,star = 3}
 		}
 	},
 	[11213] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1121310,cardId = 1101007,lv = 114,bklv = 14,star = 3,mon = {id = 209,desc = "pt-12-13-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121311,cardId = 1102012,lv = 114,bklv = 14,star = 3,mon = {id = 232,desc = "pt-12-13-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121310,cardId = 1101007,lv = 114,bklv = 14,star = 3,mon = {id = 209,desc = "pt-12-13-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121311,cardId = 1102012,lv = 114,bklv = 14,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1121320,cardId = 1101003,lv = 114,bklv = 14,star = 3,mon = {id = 208,desc = "pt-12-13-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121321,cardId = 1102005,lv = 114,bklv = 14,star = 3,mon = {id = 231,desc = "pt-12-13-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121320,cardId = 1101003,lv = 114,bklv = 14,star = 3,mon = {id = 208,desc = "pt-12-13-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121321,cardId = 1102005,lv = 114,bklv = 14,star = 3,mon = {id = 231,desc = "pt-12-13-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1121330,cardId = 1101014,lv = 114,bklv = 14,star = 3,mon = {id = 212,desc = "pt-12-13-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121331,cardId = 1102020,lv = 114,bklv = 14,star = 3,mon = {id = 236,desc = "pt-12-13-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121330,cardId = 1101014,lv = 114,bklv = 14,star = 3,mon = {id = 212,desc = "pt-12-13-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121331,cardId = 1102020,lv = 114,bklv = 14,star = 3}
 		}
 	},
 	[11214] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1121410,cardId = 1101007,lv = 115,bklv = 15,star = 3,mon = {id = 207,desc = "pt-12-14-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121411,cardId = 1102012,lv = 115,bklv = 15,star = 3,mon = {id = 227,desc = "pt-12-14-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121410,cardId = 1101007,lv = 115,bklv = 15,star = 3,mon = {id = 207,desc = "pt-12-14-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121411,cardId = 1102012,lv = 115,bklv = 15,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1121420,cardId = 1101003,lv = 115,bklv = 15,star = 3,mon = {id = 207,desc = "pt-12-14-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121421,cardId = 1102005,lv = 115,bklv = 15,star = 3,mon = {id = 221,desc = "pt-12-14-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121420,cardId = 1101003,lv = 115,bklv = 15,star = 3,mon = {id = 207,desc = "pt-12-14-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121421,cardId = 1102005,lv = 115,bklv = 15,star = 3,mon = {id = 221,desc = "pt-12-14-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1121430,cardId = 1101014,lv = 115,bklv = 15,star = 3,mon = {id = 211,desc = "pt-12-14-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121431,cardId = 1102020,lv = 115,bklv = 15,star = 3,mon = {id = 235,desc = "pt-12-14-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121430,cardId = 1101014,lv = 115,bklv = 15,star = 3,mon = {id = 211,desc = "pt-12-14-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121431,cardId = 1102020,lv = 115,bklv = 15,star = 3}
 		}
 	},
 	[11215] = {
 		[1] = {
-			jlr = {cha = "pt-12",id = 1121510,cardId = 1101007,lv = 117,bklv = 15,star = 4,mon = {id = 205,desc = "pt-12-15-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121511,cardId = 1102012,lv = 117,bklv = 15,star = 4,mon = {id = 219,desc = "pt-12-15-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121510,cardId = 1101007,lv = 117,bklv = 15,star = 4,mon = {id = 207,desc = "pt-12-15-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121511,cardId = 1102012,lv = 117,bklv = 15,star = 4,mon = {id = 251,desc = "pt-12-15-shl-loc1",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-12",id = 1121520,cardId = 1101003,lv = 117,bklv = 15,star = 4,mon = {id = 204,desc = "pt-12-15-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121521,cardId = 1102005,lv = 117,bklv = 15,star = 4,mon = {id = 224,desc = "pt-12-15-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121520,cardId = 1101003,lv = 117,bklv = 15,star = 4,mon = {id = 205,desc = "pt-12-15-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121521,cardId = 1102005,lv = 117,bklv = 15,star = 4,mon = {id = 250,desc = "pt-12-15-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-12",id = 1121530,cardId = 1101014,lv = 117,bklv = 15,star = 4,mon = {id = 207,desc = "pt-12-15-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-12",id = 1121531,cardId = 1102020,lv = 117,bklv = 15,star = 4,mon = {id = 228,desc = "pt-12-15-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-12",id = 1121530,cardId = 1101014,lv = 117,bklv = 15,star = 4,mon = {id = 210,desc = "pt-12-15-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-12",id = 1121531,cardId = 1102020,lv = 117,bklv = 15,star = 4,mon = {id = 255,desc = "pt-12-15-shl-loc3",skillLv = 7,exert = 18,suffer = 18}}
 		}
 	},
 	[11301] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1130110,cardId = 1101007,lv = 118,bklv = 15,star = 4,mon = {id = 212,desc = "pt-13-1-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130111,cardId = 1102012,lv = 118,bklv = 15,star = 4,mon = {id = 236,desc = "pt-13-1-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130110,cardId = 1101007,lv = 118,bklv = 15,star = 4,mon = {id = 212,desc = "pt-13-1-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130111,cardId = 1102012,lv = 118,bklv = 15,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1130120,cardId = 1101003,lv = 118,bklv = 15,star = 4,mon = {id = 208,desc = "pt-13-1-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130121,cardId = 1102005,lv = 118,bklv = 15,star = 4,mon = {id = 231,desc = "pt-13-1-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130120,cardId = 1101003,lv = 118,bklv = 15,star = 4,mon = {id = 208,desc = "pt-13-1-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130121,cardId = 1102005,lv = 118,bklv = 15,star = 4,mon = {id = 231,desc = "pt-13-1-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1130130,cardId = 1101014,lv = 118,bklv = 15,star = 4,mon = {id = 213,desc = "pt-13-1-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130131,cardId = 1102020,lv = 118,bklv = 15,star = 4,mon = {id = 237,desc = "pt-13-1-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130130,cardId = 1101014,lv = 118,bklv = 15,star = 4,mon = {id = 213,desc = "pt-13-1-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130131,cardId = 1102020,lv = 118,bklv = 15,star = 4}
 		}
 	},
 	[11302] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1130210,cardId = 1101007,lv = 119,bklv = 15,star = 4,mon = {id = 201,desc = "pt-13-2-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130211,cardId = 1102012,lv = 119,bklv = 15,star = 4,mon = {id = 220,desc = "pt-13-2-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130210,cardId = 1101007,lv = 119,bklv = 15,star = 4,mon = {id = 201,desc = "pt-13-2-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130211,cardId = 1102012,lv = 119,bklv = 15,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1130220,cardId = 1101003,lv = 119,bklv = 15,star = 4,mon = {id = 203,desc = "pt-13-2-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130221,cardId = 1102005,lv = 119,bklv = 15,star = 4,mon = {id = 223,desc = "pt-13-2-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130220,cardId = 1101003,lv = 119,bklv = 15,star = 4,mon = {id = 203,desc = "pt-13-2-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130221,cardId = 1102005,lv = 119,bklv = 15,star = 4,mon = {id = 223,desc = "pt-13-2-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1130230,cardId = 1101014,lv = 119,bklv = 15,star = 4,mon = {id = 214,desc = "pt-13-2-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130231,cardId = 1102020,lv = 119,bklv = 15,star = 4,mon = {id = 238,desc = "pt-13-2-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130230,cardId = 1101014,lv = 119,bklv = 15,star = 4,mon = {id = 214,desc = "pt-13-2-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130231,cardId = 1102020,lv = 119,bklv = 15,star = 4}
 		}
 	},
 	[11303] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1130310,cardId = 1101007,lv = 120,bklv = 16,star = 4,mon = {id = 212,desc = "pt-13-3-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130311,cardId = 1102012,lv = 120,bklv = 16,star = 4,mon = {id = 236,desc = "pt-13-3-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130310,cardId = 1101007,lv = 120,bklv = 16,star = 4,mon = {id = 212,desc = "pt-13-3-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130311,cardId = 1102012,lv = 120,bklv = 16,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1130320,cardId = 1101003,lv = 120,bklv = 16,star = 4,mon = {id = 208,desc = "pt-13-3-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130321,cardId = 1102005,lv = 120,bklv = 16,star = 4,mon = {id = 231,desc = "pt-13-3-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130320,cardId = 1101003,lv = 120,bklv = 16,star = 4,mon = {id = 208,desc = "pt-13-3-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130321,cardId = 1102005,lv = 120,bklv = 16,star = 4,mon = {id = 231,desc = "pt-13-3-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1130330,cardId = 1101014,lv = 120,bklv = 16,star = 4,mon = {id = 209,desc = "pt-13-3-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130331,cardId = 1102020,lv = 120,bklv = 16,star = 4,mon = {id = 232,desc = "pt-13-3-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130330,cardId = 1101014,lv = 120,bklv = 16,star = 4,mon = {id = 209,desc = "pt-13-3-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130331,cardId = 1102020,lv = 120,bklv = 16,star = 4}
 		}
 	},
 	[11304] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1130410,cardId = 1101007,lv = 120,bklv = 16,star = 4,mon = {id = 215,desc = "pt-13-4-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130411,cardId = 1102012,lv = 120,bklv = 16,star = 4,mon = {id = 239,desc = "pt-13-4-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130410,cardId = 1101007,lv = 120,bklv = 16,star = 4,mon = {id = 215,desc = "pt-13-4-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130411,cardId = 1102012,lv = 120,bklv = 16,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1130420,cardId = 1101003,lv = 120,bklv = 16,star = 4,mon = {id = 201,desc = "pt-13-4-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130421,cardId = 1102005,lv = 120,bklv = 16,star = 4,mon = {id = 227,desc = "pt-13-4-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130420,cardId = 1101003,lv = 120,bklv = 16,star = 4,mon = {id = 201,desc = "pt-13-4-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130421,cardId = 1102005,lv = 120,bklv = 16,star = 4,mon = {id = 227,desc = "pt-13-4-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1130430,cardId = 1101014,lv = 120,bklv = 16,star = 4,mon = {id = 211,desc = "pt-13-4-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130431,cardId = 1102020,lv = 120,bklv = 16,star = 4,mon = {id = 235,desc = "pt-13-4-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130430,cardId = 1101014,lv = 120,bklv = 16,star = 4,mon = {id = 211,desc = "pt-13-4-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130431,cardId = 1102020,lv = 120,bklv = 16,star = 4}
 		}
 	},
 	[11305] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1130510,cardId = 1101007,lv = 121,bklv = 16,star = 4,mon = {id = 206,desc = "pt-13-5-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130511,cardId = 1102012,lv = 121,bklv = 16,star = 4,mon = {id = 225,desc = "pt-13-5-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130510,cardId = 1101007,lv = 121,bklv = 16,star = 4,mon = {id = 206,desc = "pt-13-5-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130511,cardId = 1102012,lv = 121,bklv = 16,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1130520,cardId = 1101003,lv = 121,bklv = 16,star = 4,mon = {id = 203,desc = "pt-13-5-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130521,cardId = 1102005,lv = 121,bklv = 16,star = 4,mon = {id = 223,desc = "pt-13-5-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130520,cardId = 1101003,lv = 121,bklv = 16,star = 4,mon = {id = 203,desc = "pt-13-5-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130521,cardId = 1102005,lv = 121,bklv = 16,star = 4,mon = {id = 223,desc = "pt-13-5-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1130530,cardId = 1101014,lv = 121,bklv = 16,star = 4,mon = {id = 212,desc = "pt-13-5-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130531,cardId = 1102020,lv = 121,bklv = 16,star = 4,mon = {id = 236,desc = "pt-13-5-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130530,cardId = 1101014,lv = 121,bklv = 16,star = 4,mon = {id = 212,desc = "pt-13-5-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130531,cardId = 1102020,lv = 121,bklv = 16,star = 4}
 		}
 	},
 	[11306] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1130610,cardId = 1101007,lv = 121,bklv = 16,star = 4,mon = {id = 209,desc = "pt-13-6-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130611,cardId = 1102012,lv = 121,bklv = 16,star = 4,mon = {id = 232,desc = "pt-13-6-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130610,cardId = 1101007,lv = 121,bklv = 16,star = 4,mon = {id = 209,desc = "pt-13-6-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130611,cardId = 1102012,lv = 121,bklv = 16,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1130620,cardId = 1101003,lv = 121,bklv = 16,star = 4,mon = {id = 208,desc = "pt-13-6-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130621,cardId = 1102005,lv = 121,bklv = 16,star = 4,mon = {id = 231,desc = "pt-13-6-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130620,cardId = 1101003,lv = 121,bklv = 16,star = 4,mon = {id = 208,desc = "pt-13-6-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130621,cardId = 1102005,lv = 121,bklv = 16,star = 4,mon = {id = 231,desc = "pt-13-6-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1130630,cardId = 1101014,lv = 121,bklv = 16,star = 4,mon = {id = 212,desc = "pt-13-6-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130631,cardId = 1102020,lv = 121,bklv = 16,star = 4,mon = {id = 236,desc = "pt-13-6-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130630,cardId = 1101014,lv = 121,bklv = 16,star = 4,mon = {id = 212,desc = "pt-13-6-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130631,cardId = 1102020,lv = 121,bklv = 16,star = 4}
 		}
 	},
 	[11307] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1130710,cardId = 1101007,lv = 122,bklv = 16,star = 4,mon = {id = 207,desc = "pt-13-7-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130711,cardId = 1102012,lv = 122,bklv = 16,star = 4,mon = {id = 227,desc = "pt-13-7-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130710,cardId = 1101007,lv = 122,bklv = 16,star = 4,mon = {id = 207,desc = "pt-13-7-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130711,cardId = 1102012,lv = 122,bklv = 16,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1130720,cardId = 1101003,lv = 122,bklv = 16,star = 4,mon = {id = 207,desc = "pt-13-7-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130721,cardId = 1102005,lv = 122,bklv = 16,star = 4,mon = {id = 221,desc = "pt-13-7-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130720,cardId = 1101003,lv = 122,bklv = 16,star = 4,mon = {id = 207,desc = "pt-13-7-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130721,cardId = 1102005,lv = 122,bklv = 16,star = 4,mon = {id = 221,desc = "pt-13-7-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1130730,cardId = 1101014,lv = 122,bklv = 16,star = 4,mon = {id = 211,desc = "pt-13-7-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130731,cardId = 1102020,lv = 122,bklv = 16,star = 4,mon = {id = 235,desc = "pt-13-7-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130730,cardId = 1101014,lv = 122,bklv = 16,star = 4,mon = {id = 211,desc = "pt-13-7-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130731,cardId = 1102020,lv = 122,bklv = 16,star = 4}
 		}
 	},
 	[11308] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1130810,cardId = 1101007,lv = 122,bklv = 16,star = 4,mon = {id = 207,desc = "pt-13-8-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130811,cardId = 1102012,lv = 122,bklv = 16,star = 4,mon = {id = 230,desc = "pt-13-8-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130810,cardId = 1101007,lv = 122,bklv = 16,star = 4,mon = {id = 207,desc = "pt-13-8-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130811,cardId = 1102012,lv = 122,bklv = 16,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1130820,cardId = 1101003,lv = 122,bklv = 16,star = 4,mon = {id = 205,desc = "pt-13-8-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130821,cardId = 1102005,lv = 122,bklv = 16,star = 4,mon = {id = 229,desc = "pt-13-8-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130820,cardId = 1101003,lv = 122,bklv = 16,star = 4,mon = {id = 205,desc = "pt-13-8-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130821,cardId = 1102005,lv = 122,bklv = 16,star = 4,mon = {id = 229,desc = "pt-13-8-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1130830,cardId = 1101014,lv = 122,bklv = 16,star = 4,mon = {id = 210,desc = "pt-13-8-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130831,cardId = 1102020,lv = 122,bklv = 16,star = 4,mon = {id = 234,desc = "pt-13-8-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130830,cardId = 1101014,lv = 122,bklv = 16,star = 4,mon = {id = 210,desc = "pt-13-8-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130831,cardId = 1102020,lv = 122,bklv = 16,star = 4}
 		}
 	},
 	[11309] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1130910,cardId = 1101007,lv = 123,bklv = 16,star = 4,mon = {id = 212,desc = "pt-13-9-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130911,cardId = 1102012,lv = 123,bklv = 16,star = 4,mon = {id = 236,desc = "pt-13-9-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130910,cardId = 1101007,lv = 123,bklv = 16,star = 4,mon = {id = 212,desc = "pt-13-9-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130911,cardId = 1102012,lv = 123,bklv = 16,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1130920,cardId = 1101003,lv = 123,bklv = 16,star = 4,mon = {id = 208,desc = "pt-13-9-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130921,cardId = 1102005,lv = 123,bklv = 16,star = 4,mon = {id = 231,desc = "pt-13-9-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130920,cardId = 1101003,lv = 123,bklv = 16,star = 4,mon = {id = 208,desc = "pt-13-9-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130921,cardId = 1102005,lv = 123,bklv = 16,star = 4,mon = {id = 231,desc = "pt-13-9-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1130930,cardId = 1101014,lv = 123,bklv = 16,star = 4,mon = {id = 209,desc = "pt-13-9-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1130931,cardId = 1102020,lv = 123,bklv = 16,star = 4,mon = {id = 232,desc = "pt-13-9-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1130930,cardId = 1101014,lv = 123,bklv = 16,star = 4,mon = {id = 209,desc = "pt-13-9-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1130931,cardId = 1102020,lv = 123,bklv = 16,star = 4}
 		}
 	},
 	[11310] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1131010,cardId = 1101007,lv = 123,bklv = 16,star = 4,mon = {id = 201,desc = "pt-13-10-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131011,cardId = 1102012,lv = 123,bklv = 16,star = 4,mon = {id = 220,desc = "pt-13-10-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131010,cardId = 1101007,lv = 123,bklv = 16,star = 4,mon = {id = 201,desc = "pt-13-10-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131011,cardId = 1102012,lv = 123,bklv = 16,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1131020,cardId = 1101003,lv = 123,bklv = 16,star = 4,mon = {id = 203,desc = "pt-13-10-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131021,cardId = 1102005,lv = 123,bklv = 16,star = 4,mon = {id = 223,desc = "pt-13-10-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131020,cardId = 1101003,lv = 123,bklv = 16,star = 4,mon = {id = 203,desc = "pt-13-10-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131021,cardId = 1102005,lv = 123,bklv = 16,star = 4,mon = {id = 223,desc = "pt-13-10-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1131030,cardId = 1101014,lv = 123,bklv = 16,star = 4,mon = {id = 214,desc = "pt-13-10-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131031,cardId = 1102020,lv = 123,bklv = 16,star = 4,mon = {id = 238,desc = "pt-13-10-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131030,cardId = 1101014,lv = 123,bklv = 16,star = 4,mon = {id = 214,desc = "pt-13-10-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131031,cardId = 1102020,lv = 123,bklv = 16,star = 4}
 		}
 	},
 	[11311] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1131110,cardId = 1101007,lv = 123,bklv = 16,star = 4,mon = {id = 212,desc = "pt-13-11-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131111,cardId = 1102012,lv = 123,bklv = 16,star = 4,mon = {id = 236,desc = "pt-13-11-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131110,cardId = 1101007,lv = 123,bklv = 16,star = 4,mon = {id = 212,desc = "pt-13-11-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131111,cardId = 1102012,lv = 123,bklv = 16,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1131120,cardId = 1101003,lv = 123,bklv = 16,star = 4,mon = {id = 208,desc = "pt-13-11-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131121,cardId = 1102005,lv = 123,bklv = 16,star = 4,mon = {id = 231,desc = "pt-13-11-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131120,cardId = 1101003,lv = 123,bklv = 16,star = 4,mon = {id = 208,desc = "pt-13-11-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131121,cardId = 1102005,lv = 123,bklv = 16,star = 4,mon = {id = 231,desc = "pt-13-11-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1131130,cardId = 1101014,lv = 123,bklv = 16,star = 4,mon = {id = 209,desc = "pt-13-11-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131131,cardId = 1102020,lv = 123,bklv = 16,star = 4,mon = {id = 232,desc = "pt-13-11-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131130,cardId = 1101014,lv = 123,bklv = 16,star = 4,mon = {id = 209,desc = "pt-13-11-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131131,cardId = 1102020,lv = 123,bklv = 16,star = 4}
 		}
 	},
 	[11312] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1131210,cardId = 1101007,lv = 124,bklv = 16,star = 4,mon = {id = 215,desc = "pt-13-12-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131211,cardId = 1102012,lv = 124,bklv = 16,star = 4,mon = {id = 239,desc = "pt-13-12-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131210,cardId = 1101007,lv = 124,bklv = 16,star = 4,mon = {id = 215,desc = "pt-13-12-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131211,cardId = 1102012,lv = 124,bklv = 16,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1131220,cardId = 1101003,lv = 124,bklv = 16,star = 4,mon = {id = 201,desc = "pt-13-12-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131221,cardId = 1102005,lv = 124,bklv = 16,star = 4,mon = {id = 227,desc = "pt-13-12-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131220,cardId = 1101003,lv = 124,bklv = 16,star = 4,mon = {id = 201,desc = "pt-13-12-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131221,cardId = 1102005,lv = 124,bklv = 16,star = 4,mon = {id = 227,desc = "pt-13-12-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1131230,cardId = 1101014,lv = 124,bklv = 16,star = 4,mon = {id = 211,desc = "pt-13-12-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131231,cardId = 1102020,lv = 124,bklv = 16,star = 4,mon = {id = 235,desc = "pt-13-12-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131230,cardId = 1101014,lv = 124,bklv = 16,star = 4,mon = {id = 211,desc = "pt-13-12-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131231,cardId = 1102020,lv = 124,bklv = 16,star = 4}
 		}
 	},
 	[11313] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1131310,cardId = 1101007,lv = 124,bklv = 16,star = 4,mon = {id = 209,desc = "pt-13-13-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131311,cardId = 1102012,lv = 124,bklv = 16,star = 4,mon = {id = 232,desc = "pt-13-13-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131310,cardId = 1101007,lv = 124,bklv = 16,star = 4,mon = {id = 209,desc = "pt-13-13-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131311,cardId = 1102012,lv = 124,bklv = 16,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1131320,cardId = 1101003,lv = 124,bklv = 16,star = 4,mon = {id = 208,desc = "pt-13-13-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131321,cardId = 1102005,lv = 124,bklv = 16,star = 4,mon = {id = 231,desc = "pt-13-13-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131320,cardId = 1101003,lv = 124,bklv = 16,star = 4,mon = {id = 208,desc = "pt-13-13-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131321,cardId = 1102005,lv = 124,bklv = 16,star = 4,mon = {id = 231,desc = "pt-13-13-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1131330,cardId = 1101014,lv = 124,bklv = 16,star = 4,mon = {id = 212,desc = "pt-13-13-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131331,cardId = 1102020,lv = 124,bklv = 16,star = 4,mon = {id = 236,desc = "pt-13-13-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131330,cardId = 1101014,lv = 124,bklv = 16,star = 4,mon = {id = 212,desc = "pt-13-13-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131331,cardId = 1102020,lv = 124,bklv = 16,star = 4}
 		}
 	},
 	[11314] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1131410,cardId = 1101007,lv = 125,bklv = 17,star = 4,mon = {id = 207,desc = "pt-13-14-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131411,cardId = 1102012,lv = 125,bklv = 17,star = 4,mon = {id = 227,desc = "pt-13-14-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131410,cardId = 1101007,lv = 125,bklv = 17,star = 4,mon = {id = 207,desc = "pt-13-14-jlr-loc1",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131411,cardId = 1102012,lv = 125,bklv = 17,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1131420,cardId = 1101003,lv = 125,bklv = 17,star = 4,mon = {id = 207,desc = "pt-13-14-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131421,cardId = 1102005,lv = 125,bklv = 17,star = 4,mon = {id = 221,desc = "pt-13-14-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131420,cardId = 1101003,lv = 125,bklv = 17,star = 4,mon = {id = 207,desc = "pt-13-14-jlr-loc2",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131421,cardId = 1102005,lv = 125,bklv = 17,star = 4,mon = {id = 221,desc = "pt-13-14-shl-loc2",skillLv = 7,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1131430,cardId = 1101014,lv = 125,bklv = 17,star = 4,mon = {id = 211,desc = "pt-13-14-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131431,cardId = 1102020,lv = 125,bklv = 17,star = 4,mon = {id = 235,desc = "pt-13-14-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131430,cardId = 1101014,lv = 125,bklv = 17,star = 4,mon = {id = 211,desc = "pt-13-14-jlr-loc3",skillLv = 7,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131431,cardId = 1102020,lv = 125,bklv = 17,star = 4}
 		}
 	},
 	[11315] = {
 		[1] = {
-			jlr = {cha = "pt-13",id = 1131510,cardId = 1101007,lv = 127,bklv = 17,star = 4,mon = {id = 205,desc = "pt-13-15-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131511,cardId = 1102012,lv = 127,bklv = 17,star = 4,mon = {id = 219,desc = "pt-13-15-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131510,cardId = 1101007,lv = 127,bklv = 17,star = 4,mon = {id = 201,desc = "pt-13-15-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131511,cardId = 1102012,lv = 127,bklv = 17,star = 4,mon = {id = 241,desc = "pt-13-15-shl-loc1",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-13",id = 1131520,cardId = 1101003,lv = 127,bklv = 17,star = 4,mon = {id = 204,desc = "pt-13-15-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131521,cardId = 1102005,lv = 127,bklv = 17,star = 4,mon = {id = 224,desc = "pt-13-15-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131520,cardId = 1101003,lv = 127,bklv = 17,star = 4,mon = {id = 203,desc = "pt-13-15-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131521,cardId = 1102005,lv = 127,bklv = 17,star = 4,mon = {id = 244,desc = "pt-13-15-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-13",id = 1131530,cardId = 1101014,lv = 127,bklv = 17,star = 4,mon = {id = 207,desc = "pt-13-15-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-13",id = 1131531,cardId = 1102020,lv = 127,bklv = 17,star = 4,mon = {id = 228,desc = "pt-13-15-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-13",id = 1131530,cardId = 1101014,lv = 127,bklv = 17,star = 4,mon = {id = 214,desc = "pt-13-15-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-13",id = 1131531,cardId = 1102020,lv = 127,bklv = 17,star = 4,mon = {id = 259,desc = "pt-13-15-shl-loc3",skillLv = 8,exert = 18,suffer = 18}}
 		}
 	},
 	[11401] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1140110,cardId = 1101007,lv = 128,bklv = 17,star = 4,mon = {id = 212,desc = "pt-14-1-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140111,cardId = 1102012,lv = 128,bklv = 17,star = 4,mon = {id = 236,desc = "pt-14-1-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140110,cardId = 1101007,lv = 128,bklv = 17,star = 4,mon = {id = 212,desc = "pt-14-1-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140111,cardId = 1102012,lv = 128,bklv = 17,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1140120,cardId = 1101003,lv = 128,bklv = 17,star = 4,mon = {id = 208,desc = "pt-14-1-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140121,cardId = 1102005,lv = 128,bklv = 17,star = 4,mon = {id = 231,desc = "pt-14-1-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140120,cardId = 1101003,lv = 128,bklv = 17,star = 4,mon = {id = 208,desc = "pt-14-1-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140121,cardId = 1102005,lv = 128,bklv = 17,star = 4,mon = {id = 231,desc = "pt-14-1-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1140130,cardId = 1101014,lv = 128,bklv = 17,star = 4,mon = {id = 213,desc = "pt-14-1-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140131,cardId = 1102020,lv = 128,bklv = 17,star = 4,mon = {id = 237,desc = "pt-14-1-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140130,cardId = 1101014,lv = 128,bklv = 17,star = 4,mon = {id = 213,desc = "pt-14-1-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140131,cardId = 1102020,lv = 128,bklv = 17,star = 4}
 		}
 	},
 	[11402] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1140210,cardId = 1101007,lv = 129,bklv = 17,star = 4,mon = {id = 201,desc = "pt-14-2-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140211,cardId = 1102012,lv = 129,bklv = 17,star = 4,mon = {id = 220,desc = "pt-14-2-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140210,cardId = 1101007,lv = 129,bklv = 17,star = 4,mon = {id = 201,desc = "pt-14-2-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140211,cardId = 1102012,lv = 129,bklv = 17,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1140220,cardId = 1101003,lv = 129,bklv = 17,star = 4,mon = {id = 203,desc = "pt-14-2-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140221,cardId = 1102005,lv = 129,bklv = 17,star = 4,mon = {id = 223,desc = "pt-14-2-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140220,cardId = 1101003,lv = 129,bklv = 17,star = 4,mon = {id = 203,desc = "pt-14-2-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140221,cardId = 1102005,lv = 129,bklv = 17,star = 4,mon = {id = 223,desc = "pt-14-2-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1140230,cardId = 1101014,lv = 129,bklv = 17,star = 4,mon = {id = 214,desc = "pt-14-2-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140231,cardId = 1102020,lv = 129,bklv = 17,star = 4,mon = {id = 238,desc = "pt-14-2-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140230,cardId = 1101014,lv = 129,bklv = 17,star = 4,mon = {id = 214,desc = "pt-14-2-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140231,cardId = 1102020,lv = 129,bklv = 17,star = 4}
 		}
 	},
 	[11403] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1140310,cardId = 1101007,lv = 130,bklv = 18,star = 4,mon = {id = 212,desc = "pt-14-3-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140311,cardId = 1102012,lv = 130,bklv = 18,star = 4,mon = {id = 236,desc = "pt-14-3-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140310,cardId = 1101007,lv = 130,bklv = 18,star = 4,mon = {id = 212,desc = "pt-14-3-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140311,cardId = 1102012,lv = 130,bklv = 18,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1140320,cardId = 1101003,lv = 130,bklv = 18,star = 4,mon = {id = 208,desc = "pt-14-3-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140321,cardId = 1102005,lv = 130,bklv = 18,star = 4,mon = {id = 231,desc = "pt-14-3-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140320,cardId = 1101003,lv = 130,bklv = 18,star = 4,mon = {id = 208,desc = "pt-14-3-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140321,cardId = 1102005,lv = 130,bklv = 18,star = 4,mon = {id = 231,desc = "pt-14-3-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1140330,cardId = 1101014,lv = 130,bklv = 18,star = 4,mon = {id = 209,desc = "pt-14-3-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140331,cardId = 1102020,lv = 130,bklv = 18,star = 4,mon = {id = 232,desc = "pt-14-3-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140330,cardId = 1101014,lv = 130,bklv = 18,star = 4,mon = {id = 209,desc = "pt-14-3-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140331,cardId = 1102020,lv = 130,bklv = 18,star = 4}
 		}
 	},
 	[11404] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1140410,cardId = 1101007,lv = 130,bklv = 18,star = 4,mon = {id = 215,desc = "pt-14-4-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140411,cardId = 1102012,lv = 130,bklv = 18,star = 4,mon = {id = 239,desc = "pt-14-4-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140410,cardId = 1101007,lv = 130,bklv = 18,star = 4,mon = {id = 215,desc = "pt-14-4-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140411,cardId = 1102012,lv = 130,bklv = 18,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1140420,cardId = 1101003,lv = 130,bklv = 18,star = 4,mon = {id = 201,desc = "pt-14-4-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140421,cardId = 1102005,lv = 130,bklv = 18,star = 4,mon = {id = 227,desc = "pt-14-4-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140420,cardId = 1101003,lv = 130,bklv = 18,star = 4,mon = {id = 201,desc = "pt-14-4-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140421,cardId = 1102005,lv = 130,bklv = 18,star = 4,mon = {id = 227,desc = "pt-14-4-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1140430,cardId = 1101014,lv = 130,bklv = 18,star = 4,mon = {id = 211,desc = "pt-14-4-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140431,cardId = 1102020,lv = 130,bklv = 18,star = 4,mon = {id = 235,desc = "pt-14-4-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140430,cardId = 1101014,lv = 130,bklv = 18,star = 4,mon = {id = 211,desc = "pt-14-4-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140431,cardId = 1102020,lv = 130,bklv = 18,star = 4}
 		}
 	},
 	[11405] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1140510,cardId = 1101007,lv = 131,bklv = 18,star = 4,mon = {id = 206,desc = "pt-14-5-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140511,cardId = 1102012,lv = 131,bklv = 18,star = 4,mon = {id = 225,desc = "pt-14-5-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140510,cardId = 1101007,lv = 131,bklv = 18,star = 4,mon = {id = 206,desc = "pt-14-5-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140511,cardId = 1102012,lv = 131,bklv = 18,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1140520,cardId = 1101003,lv = 131,bklv = 18,star = 4,mon = {id = 203,desc = "pt-14-5-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140521,cardId = 1102005,lv = 131,bklv = 18,star = 4,mon = {id = 223,desc = "pt-14-5-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140520,cardId = 1101003,lv = 131,bklv = 18,star = 4,mon = {id = 203,desc = "pt-14-5-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140521,cardId = 1102005,lv = 131,bklv = 18,star = 4,mon = {id = 223,desc = "pt-14-5-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1140530,cardId = 1101014,lv = 131,bklv = 18,star = 4,mon = {id = 212,desc = "pt-14-5-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140531,cardId = 1102020,lv = 131,bklv = 18,star = 4,mon = {id = 236,desc = "pt-14-5-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140530,cardId = 1101014,lv = 131,bklv = 18,star = 4,mon = {id = 212,desc = "pt-14-5-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140531,cardId = 1102020,lv = 131,bklv = 18,star = 4}
 		}
 	},
 	[11406] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1140610,cardId = 1101007,lv = 131,bklv = 18,star = 4,mon = {id = 209,desc = "pt-14-6-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140611,cardId = 1102012,lv = 131,bklv = 18,star = 4,mon = {id = 232,desc = "pt-14-6-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140610,cardId = 1101007,lv = 131,bklv = 18,star = 4,mon = {id = 209,desc = "pt-14-6-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140611,cardId = 1102012,lv = 131,bklv = 18,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1140620,cardId = 1101003,lv = 131,bklv = 18,star = 4,mon = {id = 208,desc = "pt-14-6-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140621,cardId = 1102005,lv = 131,bklv = 18,star = 4,mon = {id = 231,desc = "pt-14-6-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140620,cardId = 1101003,lv = 131,bklv = 18,star = 4,mon = {id = 208,desc = "pt-14-6-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140621,cardId = 1102005,lv = 131,bklv = 18,star = 4,mon = {id = 231,desc = "pt-14-6-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1140630,cardId = 1101014,lv = 131,bklv = 18,star = 4,mon = {id = 212,desc = "pt-14-6-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140631,cardId = 1102020,lv = 131,bklv = 18,star = 4,mon = {id = 236,desc = "pt-14-6-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140630,cardId = 1101014,lv = 131,bklv = 18,star = 4,mon = {id = 212,desc = "pt-14-6-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140631,cardId = 1102020,lv = 131,bklv = 18,star = 4}
 		}
 	},
 	[11407] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1140710,cardId = 1101007,lv = 132,bklv = 18,star = 4,mon = {id = 207,desc = "pt-14-7-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140711,cardId = 1102012,lv = 132,bklv = 18,star = 4,mon = {id = 227,desc = "pt-14-7-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140710,cardId = 1101007,lv = 132,bklv = 18,star = 4,mon = {id = 207,desc = "pt-14-7-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140711,cardId = 1102012,lv = 132,bklv = 18,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1140720,cardId = 1101003,lv = 132,bklv = 18,star = 4,mon = {id = 207,desc = "pt-14-7-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140721,cardId = 1102005,lv = 132,bklv = 18,star = 4,mon = {id = 221,desc = "pt-14-7-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140720,cardId = 1101003,lv = 132,bklv = 18,star = 4,mon = {id = 207,desc = "pt-14-7-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140721,cardId = 1102005,lv = 132,bklv = 18,star = 4,mon = {id = 221,desc = "pt-14-7-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1140730,cardId = 1101014,lv = 132,bklv = 18,star = 4,mon = {id = 211,desc = "pt-14-7-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140731,cardId = 1102020,lv = 132,bklv = 18,star = 4,mon = {id = 235,desc = "pt-14-7-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140730,cardId = 1101014,lv = 132,bklv = 18,star = 4,mon = {id = 211,desc = "pt-14-7-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140731,cardId = 1102020,lv = 132,bklv = 18,star = 4}
 		}
 	},
 	[11408] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1140810,cardId = 1101007,lv = 132,bklv = 18,star = 4,mon = {id = 207,desc = "pt-14-8-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140811,cardId = 1102012,lv = 132,bklv = 18,star = 4,mon = {id = 230,desc = "pt-14-8-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140810,cardId = 1101007,lv = 132,bklv = 18,star = 4,mon = {id = 207,desc = "pt-14-8-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140811,cardId = 1102012,lv = 132,bklv = 18,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1140820,cardId = 1101003,lv = 132,bklv = 18,star = 4,mon = {id = 205,desc = "pt-14-8-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140821,cardId = 1102005,lv = 132,bklv = 18,star = 4,mon = {id = 229,desc = "pt-14-8-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140820,cardId = 1101003,lv = 132,bklv = 18,star = 4,mon = {id = 205,desc = "pt-14-8-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140821,cardId = 1102005,lv = 132,bklv = 18,star = 4,mon = {id = 229,desc = "pt-14-8-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1140830,cardId = 1101014,lv = 132,bklv = 18,star = 4,mon = {id = 210,desc = "pt-14-8-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140831,cardId = 1102020,lv = 132,bklv = 18,star = 4,mon = {id = 234,desc = "pt-14-8-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140830,cardId = 1101014,lv = 132,bklv = 18,star = 4,mon = {id = 210,desc = "pt-14-8-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140831,cardId = 1102020,lv = 132,bklv = 18,star = 4}
 		}
 	},
 	[11409] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1140910,cardId = 1101007,lv = 133,bklv = 18,star = 4,mon = {id = 212,desc = "pt-14-9-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140911,cardId = 1102012,lv = 133,bklv = 18,star = 4,mon = {id = 236,desc = "pt-14-9-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140910,cardId = 1101007,lv = 133,bklv = 18,star = 4,mon = {id = 212,desc = "pt-14-9-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140911,cardId = 1102012,lv = 133,bklv = 18,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1140920,cardId = 1101003,lv = 133,bklv = 18,star = 4,mon = {id = 208,desc = "pt-14-9-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140921,cardId = 1102005,lv = 133,bklv = 18,star = 4,mon = {id = 231,desc = "pt-14-9-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140920,cardId = 1101003,lv = 133,bklv = 18,star = 4,mon = {id = 208,desc = "pt-14-9-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140921,cardId = 1102005,lv = 133,bklv = 18,star = 4,mon = {id = 231,desc = "pt-14-9-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1140930,cardId = 1101014,lv = 133,bklv = 18,star = 4,mon = {id = 209,desc = "pt-14-9-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1140931,cardId = 1102020,lv = 133,bklv = 18,star = 4,mon = {id = 232,desc = "pt-14-9-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1140930,cardId = 1101014,lv = 133,bklv = 18,star = 4,mon = {id = 209,desc = "pt-14-9-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1140931,cardId = 1102020,lv = 133,bklv = 18,star = 4}
 		}
 	},
 	[11410] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1141010,cardId = 1101007,lv = 133,bklv = 18,star = 4,mon = {id = 201,desc = "pt-14-10-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141011,cardId = 1102012,lv = 133,bklv = 18,star = 4,mon = {id = 220,desc = "pt-14-10-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141010,cardId = 1101007,lv = 133,bklv = 18,star = 4,mon = {id = 201,desc = "pt-14-10-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141011,cardId = 1102012,lv = 133,bklv = 18,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1141020,cardId = 1101003,lv = 133,bklv = 18,star = 4,mon = {id = 203,desc = "pt-14-10-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141021,cardId = 1102005,lv = 133,bklv = 18,star = 4,mon = {id = 223,desc = "pt-14-10-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141020,cardId = 1101003,lv = 133,bklv = 18,star = 4,mon = {id = 203,desc = "pt-14-10-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141021,cardId = 1102005,lv = 133,bklv = 18,star = 4,mon = {id = 223,desc = "pt-14-10-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1141030,cardId = 1101014,lv = 133,bklv = 18,star = 4,mon = {id = 214,desc = "pt-14-10-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141031,cardId = 1102020,lv = 133,bklv = 18,star = 4,mon = {id = 238,desc = "pt-14-10-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141030,cardId = 1101014,lv = 133,bklv = 18,star = 4,mon = {id = 214,desc = "pt-14-10-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141031,cardId = 1102020,lv = 133,bklv = 18,star = 4}
 		}
 	},
 	[11411] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1141110,cardId = 1101007,lv = 133,bklv = 18,star = 4,mon = {id = 212,desc = "pt-14-11-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141111,cardId = 1102012,lv = 133,bklv = 18,star = 4,mon = {id = 236,desc = "pt-14-11-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141110,cardId = 1101007,lv = 133,bklv = 18,star = 4,mon = {id = 212,desc = "pt-14-11-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141111,cardId = 1102012,lv = 133,bklv = 18,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1141120,cardId = 1101003,lv = 133,bklv = 18,star = 4,mon = {id = 208,desc = "pt-14-11-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141121,cardId = 1102005,lv = 133,bklv = 18,star = 4,mon = {id = 231,desc = "pt-14-11-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141120,cardId = 1101003,lv = 133,bklv = 18,star = 4,mon = {id = 208,desc = "pt-14-11-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141121,cardId = 1102005,lv = 133,bklv = 18,star = 4,mon = {id = 231,desc = "pt-14-11-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1141130,cardId = 1101014,lv = 133,bklv = 18,star = 4,mon = {id = 209,desc = "pt-14-11-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141131,cardId = 1102020,lv = 133,bklv = 18,star = 4,mon = {id = 232,desc = "pt-14-11-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141130,cardId = 1101014,lv = 133,bklv = 18,star = 4,mon = {id = 209,desc = "pt-14-11-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141131,cardId = 1102020,lv = 133,bklv = 18,star = 4}
 		}
 	},
 	[11412] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1141210,cardId = 1101007,lv = 134,bklv = 18,star = 4,mon = {id = 215,desc = "pt-14-12-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141211,cardId = 1102012,lv = 134,bklv = 18,star = 4,mon = {id = 239,desc = "pt-14-12-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141210,cardId = 1101007,lv = 134,bklv = 18,star = 4,mon = {id = 215,desc = "pt-14-12-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141211,cardId = 1102012,lv = 134,bklv = 18,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1141220,cardId = 1101003,lv = 134,bklv = 18,star = 4,mon = {id = 201,desc = "pt-14-12-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141221,cardId = 1102005,lv = 134,bklv = 18,star = 4,mon = {id = 227,desc = "pt-14-12-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141220,cardId = 1101003,lv = 134,bklv = 18,star = 4,mon = {id = 201,desc = "pt-14-12-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141221,cardId = 1102005,lv = 134,bklv = 18,star = 4,mon = {id = 227,desc = "pt-14-12-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1141230,cardId = 1101014,lv = 134,bklv = 18,star = 4,mon = {id = 211,desc = "pt-14-12-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141231,cardId = 1102020,lv = 134,bklv = 18,star = 4,mon = {id = 235,desc = "pt-14-12-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141230,cardId = 1101014,lv = 134,bklv = 18,star = 4,mon = {id = 211,desc = "pt-14-12-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141231,cardId = 1102020,lv = 134,bklv = 18,star = 4}
 		}
 	},
 	[11413] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1141310,cardId = 1101007,lv = 134,bklv = 18,star = 4,mon = {id = 209,desc = "pt-14-13-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141311,cardId = 1102012,lv = 134,bklv = 18,star = 4,mon = {id = 232,desc = "pt-14-13-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141310,cardId = 1101007,lv = 134,bklv = 18,star = 4,mon = {id = 209,desc = "pt-14-13-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141311,cardId = 1102012,lv = 134,bklv = 18,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1141320,cardId = 1101003,lv = 134,bklv = 18,star = 4,mon = {id = 208,desc = "pt-14-13-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141321,cardId = 1102005,lv = 134,bklv = 18,star = 4,mon = {id = 231,desc = "pt-14-13-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141320,cardId = 1101003,lv = 134,bklv = 18,star = 4,mon = {id = 208,desc = "pt-14-13-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141321,cardId = 1102005,lv = 134,bklv = 18,star = 4,mon = {id = 231,desc = "pt-14-13-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1141330,cardId = 1101014,lv = 134,bklv = 18,star = 4,mon = {id = 212,desc = "pt-14-13-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141331,cardId = 1102020,lv = 134,bklv = 18,star = 4,mon = {id = 236,desc = "pt-14-13-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141330,cardId = 1101014,lv = 134,bklv = 18,star = 4,mon = {id = 212,desc = "pt-14-13-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141331,cardId = 1102020,lv = 134,bklv = 18,star = 4}
 		}
 	},
 	[11414] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1141410,cardId = 1101007,lv = 135,bklv = 19,star = 4,mon = {id = 207,desc = "pt-14-14-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141411,cardId = 1102012,lv = 135,bklv = 19,star = 4,mon = {id = 227,desc = "pt-14-14-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141410,cardId = 1101007,lv = 135,bklv = 19,star = 4,mon = {id = 207,desc = "pt-14-14-jlr-loc1",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141411,cardId = 1102012,lv = 135,bklv = 19,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1141420,cardId = 1101003,lv = 135,bklv = 19,star = 4,mon = {id = 207,desc = "pt-14-14-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141421,cardId = 1102005,lv = 135,bklv = 19,star = 4,mon = {id = 221,desc = "pt-14-14-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141420,cardId = 1101003,lv = 135,bklv = 19,star = 4,mon = {id = 207,desc = "pt-14-14-jlr-loc2",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141421,cardId = 1102005,lv = 135,bklv = 19,star = 4,mon = {id = 221,desc = "pt-14-14-shl-loc2",skillLv = 8,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1141430,cardId = 1101014,lv = 135,bklv = 19,star = 4,mon = {id = 211,desc = "pt-14-14-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141431,cardId = 1102020,lv = 135,bklv = 19,star = 4,mon = {id = 235,desc = "pt-14-14-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141430,cardId = 1101014,lv = 135,bklv = 19,star = 4,mon = {id = 211,desc = "pt-14-14-jlr-loc3",skillLv = 8,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141431,cardId = 1102020,lv = 135,bklv = 19,star = 4}
 		}
 	},
 	[11415] = {
 		[1] = {
-			jlr = {cha = "pt-14",id = 1141510,cardId = 1101007,lv = 137,bklv = 19,star = 4,mon = {id = 205,desc = "pt-14-15-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141511,cardId = 1102012,lv = 137,bklv = 19,star = 4,mon = {id = 219,desc = "pt-14-15-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141510,cardId = 1101007,lv = 137,bklv = 19,star = 4,mon = {id = 206,desc = "pt-14-15-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141511,cardId = 1102012,lv = 137,bklv = 19,star = 4,mon = {id = 246,desc = "pt-14-15-shl-loc1",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-14",id = 1141520,cardId = 1101003,lv = 137,bklv = 19,star = 4,mon = {id = 204,desc = "pt-14-15-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141521,cardId = 1102005,lv = 137,bklv = 19,star = 4,mon = {id = 224,desc = "pt-14-15-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141520,cardId = 1101003,lv = 137,bklv = 19,star = 4,mon = {id = 203,desc = "pt-14-15-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141521,cardId = 1102005,lv = 137,bklv = 19,star = 4,mon = {id = 244,desc = "pt-14-15-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-14",id = 1141530,cardId = 1101014,lv = 137,bklv = 19,star = 4,mon = {id = 207,desc = "pt-14-15-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-14",id = 1141531,cardId = 1102020,lv = 137,bklv = 19,star = 4,mon = {id = 228,desc = "pt-14-15-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-14",id = 1141530,cardId = 1101014,lv = 137,bklv = 19,star = 4,mon = {id = 212,desc = "pt-14-15-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-14",id = 1141531,cardId = 1102020,lv = 137,bklv = 19,star = 4,mon = {id = 257,desc = "pt-14-15-shl-loc3",skillLv = 9,exert = 18,suffer = 18}}
 		}
 	},
 	[11501] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1150110,cardId = 1101007,lv = 138,bklv = 19,star = 4,mon = {id = 212,desc = "pt-15-1-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150111,cardId = 1102012,lv = 138,bklv = 19,star = 4,mon = {id = 236,desc = "pt-15-1-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150110,cardId = 1101007,lv = 138,bklv = 19,star = 4,mon = {id = 212,desc = "pt-15-1-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150111,cardId = 1102012,lv = 138,bklv = 19,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1150120,cardId = 1101003,lv = 138,bklv = 19,star = 4,mon = {id = 208,desc = "pt-15-1-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150121,cardId = 1102005,lv = 138,bklv = 19,star = 4,mon = {id = 231,desc = "pt-15-1-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150120,cardId = 1101003,lv = 138,bklv = 19,star = 4,mon = {id = 208,desc = "pt-15-1-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150121,cardId = 1102005,lv = 138,bklv = 19,star = 4,mon = {id = 231,desc = "pt-15-1-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1150130,cardId = 1101014,lv = 138,bklv = 19,star = 4,mon = {id = 213,desc = "pt-15-1-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150131,cardId = 1102020,lv = 138,bklv = 19,star = 4,mon = {id = 237,desc = "pt-15-1-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150130,cardId = 1101014,lv = 138,bklv = 19,star = 4,mon = {id = 213,desc = "pt-15-1-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150131,cardId = 1102020,lv = 138,bklv = 19,star = 4}
 		}
 	},
 	[11502] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1150210,cardId = 1101007,lv = 139,bklv = 19,star = 4,mon = {id = 201,desc = "pt-15-2-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150211,cardId = 1102012,lv = 139,bklv = 19,star = 4,mon = {id = 220,desc = "pt-15-2-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150210,cardId = 1101007,lv = 139,bklv = 19,star = 4,mon = {id = 201,desc = "pt-15-2-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150211,cardId = 1102012,lv = 139,bklv = 19,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1150220,cardId = 1101003,lv = 139,bklv = 19,star = 4,mon = {id = 203,desc = "pt-15-2-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150221,cardId = 1102005,lv = 139,bklv = 19,star = 4,mon = {id = 223,desc = "pt-15-2-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150220,cardId = 1101003,lv = 139,bklv = 19,star = 4,mon = {id = 203,desc = "pt-15-2-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150221,cardId = 1102005,lv = 139,bklv = 19,star = 4,mon = {id = 223,desc = "pt-15-2-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1150230,cardId = 1101014,lv = 139,bklv = 19,star = 4,mon = {id = 214,desc = "pt-15-2-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150231,cardId = 1102020,lv = 139,bklv = 19,star = 4,mon = {id = 238,desc = "pt-15-2-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150230,cardId = 1101014,lv = 139,bklv = 19,star = 4,mon = {id = 214,desc = "pt-15-2-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150231,cardId = 1102020,lv = 139,bklv = 19,star = 4}
 		}
 	},
 	[11503] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1150310,cardId = 1101007,lv = 140,bklv = 20,star = 4,mon = {id = 212,desc = "pt-15-3-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150311,cardId = 1102012,lv = 140,bklv = 20,star = 4,mon = {id = 236,desc = "pt-15-3-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150310,cardId = 1101007,lv = 140,bklv = 20,star = 4,mon = {id = 212,desc = "pt-15-3-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150311,cardId = 1102012,lv = 140,bklv = 20,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1150320,cardId = 1101003,lv = 140,bklv = 20,star = 4,mon = {id = 208,desc = "pt-15-3-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150321,cardId = 1102005,lv = 140,bklv = 20,star = 4,mon = {id = 231,desc = "pt-15-3-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150320,cardId = 1101003,lv = 140,bklv = 20,star = 4,mon = {id = 208,desc = "pt-15-3-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150321,cardId = 1102005,lv = 140,bklv = 20,star = 4,mon = {id = 231,desc = "pt-15-3-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1150330,cardId = 1101014,lv = 140,bklv = 20,star = 4,mon = {id = 209,desc = "pt-15-3-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150331,cardId = 1102020,lv = 140,bklv = 20,star = 4,mon = {id = 232,desc = "pt-15-3-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150330,cardId = 1101014,lv = 140,bklv = 20,star = 4,mon = {id = 209,desc = "pt-15-3-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150331,cardId = 1102020,lv = 140,bklv = 20,star = 4}
 		}
 	},
 	[11504] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1150410,cardId = 1101007,lv = 140,bklv = 20,star = 4,mon = {id = 215,desc = "pt-15-4-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150411,cardId = 1102012,lv = 140,bklv = 20,star = 4,mon = {id = 239,desc = "pt-15-4-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150410,cardId = 1101007,lv = 140,bklv = 20,star = 4,mon = {id = 215,desc = "pt-15-4-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150411,cardId = 1102012,lv = 140,bklv = 20,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1150420,cardId = 1101003,lv = 140,bklv = 20,star = 4,mon = {id = 201,desc = "pt-15-4-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150421,cardId = 1102005,lv = 140,bklv = 20,star = 4,mon = {id = 227,desc = "pt-15-4-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150420,cardId = 1101003,lv = 140,bklv = 20,star = 4,mon = {id = 201,desc = "pt-15-4-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150421,cardId = 1102005,lv = 140,bklv = 20,star = 4,mon = {id = 227,desc = "pt-15-4-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1150430,cardId = 1101014,lv = 140,bklv = 20,star = 4,mon = {id = 211,desc = "pt-15-4-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150431,cardId = 1102020,lv = 140,bklv = 20,star = 4,mon = {id = 235,desc = "pt-15-4-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150430,cardId = 1101014,lv = 140,bklv = 20,star = 4,mon = {id = 211,desc = "pt-15-4-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150431,cardId = 1102020,lv = 140,bklv = 20,star = 4}
 		}
 	},
 	[11505] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1150510,cardId = 1101007,lv = 141,bklv = 20,star = 4,mon = {id = 206,desc = "pt-15-5-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150511,cardId = 1102012,lv = 141,bklv = 20,star = 4,mon = {id = 225,desc = "pt-15-5-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150510,cardId = 1101007,lv = 141,bklv = 20,star = 4,mon = {id = 206,desc = "pt-15-5-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150511,cardId = 1102012,lv = 141,bklv = 20,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1150520,cardId = 1101003,lv = 141,bklv = 20,star = 4,mon = {id = 203,desc = "pt-15-5-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150521,cardId = 1102005,lv = 141,bklv = 20,star = 4,mon = {id = 223,desc = "pt-15-5-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150520,cardId = 1101003,lv = 141,bklv = 20,star = 4,mon = {id = 203,desc = "pt-15-5-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150521,cardId = 1102005,lv = 141,bklv = 20,star = 4,mon = {id = 223,desc = "pt-15-5-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1150530,cardId = 1101014,lv = 141,bklv = 20,star = 4,mon = {id = 212,desc = "pt-15-5-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150531,cardId = 1102020,lv = 141,bklv = 20,star = 4,mon = {id = 236,desc = "pt-15-5-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150530,cardId = 1101014,lv = 141,bklv = 20,star = 4,mon = {id = 212,desc = "pt-15-5-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150531,cardId = 1102020,lv = 141,bklv = 20,star = 4}
 		}
 	},
 	[11506] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1150610,cardId = 1101007,lv = 141,bklv = 20,star = 4,mon = {id = 209,desc = "pt-15-6-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150611,cardId = 1102012,lv = 141,bklv = 20,star = 4,mon = {id = 232,desc = "pt-15-6-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150610,cardId = 1101007,lv = 141,bklv = 20,star = 4,mon = {id = 209,desc = "pt-15-6-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150611,cardId = 1102012,lv = 141,bklv = 20,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1150620,cardId = 1101003,lv = 141,bklv = 20,star = 4,mon = {id = 208,desc = "pt-15-6-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150621,cardId = 1102005,lv = 141,bklv = 20,star = 4,mon = {id = 231,desc = "pt-15-6-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150620,cardId = 1101003,lv = 141,bklv = 20,star = 4,mon = {id = 208,desc = "pt-15-6-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150621,cardId = 1102005,lv = 141,bklv = 20,star = 4,mon = {id = 231,desc = "pt-15-6-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1150630,cardId = 1101014,lv = 141,bklv = 20,star = 4,mon = {id = 212,desc = "pt-15-6-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150631,cardId = 1102020,lv = 141,bklv = 20,star = 4,mon = {id = 236,desc = "pt-15-6-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150630,cardId = 1101014,lv = 141,bklv = 20,star = 4,mon = {id = 212,desc = "pt-15-6-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150631,cardId = 1102020,lv = 141,bklv = 20,star = 4}
 		}
 	},
 	[11507] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1150710,cardId = 1101007,lv = 142,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-7-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150711,cardId = 1102012,lv = 142,bklv = 20,star = 4,mon = {id = 227,desc = "pt-15-7-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150710,cardId = 1101007,lv = 142,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-7-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150711,cardId = 1102012,lv = 142,bklv = 20,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1150720,cardId = 1101003,lv = 142,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-7-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150721,cardId = 1102005,lv = 142,bklv = 20,star = 4,mon = {id = 221,desc = "pt-15-7-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150720,cardId = 1101003,lv = 142,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-7-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150721,cardId = 1102005,lv = 142,bklv = 20,star = 4,mon = {id = 221,desc = "pt-15-7-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1150730,cardId = 1101014,lv = 142,bklv = 20,star = 4,mon = {id = 211,desc = "pt-15-7-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150731,cardId = 1102020,lv = 142,bklv = 20,star = 4,mon = {id = 235,desc = "pt-15-7-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150730,cardId = 1101014,lv = 142,bklv = 20,star = 4,mon = {id = 211,desc = "pt-15-7-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150731,cardId = 1102020,lv = 142,bklv = 20,star = 4}
 		}
 	},
 	[11508] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1150810,cardId = 1101007,lv = 142,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-8-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150811,cardId = 1102012,lv = 142,bklv = 20,star = 4,mon = {id = 230,desc = "pt-15-8-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150810,cardId = 1101007,lv = 142,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-8-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150811,cardId = 1102012,lv = 142,bklv = 20,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1150820,cardId = 1101003,lv = 142,bklv = 20,star = 4,mon = {id = 205,desc = "pt-15-8-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150821,cardId = 1102005,lv = 142,bklv = 20,star = 4,mon = {id = 229,desc = "pt-15-8-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150820,cardId = 1101003,lv = 142,bklv = 20,star = 4,mon = {id = 205,desc = "pt-15-8-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150821,cardId = 1102005,lv = 142,bklv = 20,star = 4,mon = {id = 229,desc = "pt-15-8-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1150830,cardId = 1101014,lv = 142,bklv = 20,star = 4,mon = {id = 210,desc = "pt-15-8-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150831,cardId = 1102020,lv = 142,bklv = 20,star = 4,mon = {id = 234,desc = "pt-15-8-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150830,cardId = 1101014,lv = 142,bklv = 20,star = 4,mon = {id = 210,desc = "pt-15-8-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150831,cardId = 1102020,lv = 142,bklv = 20,star = 4}
 		}
 	},
 	[11509] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1150910,cardId = 1101007,lv = 143,bklv = 20,star = 4,mon = {id = 212,desc = "pt-15-9-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150911,cardId = 1102012,lv = 143,bklv = 20,star = 4,mon = {id = 236,desc = "pt-15-9-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150910,cardId = 1101007,lv = 143,bklv = 20,star = 4,mon = {id = 212,desc = "pt-15-9-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150911,cardId = 1102012,lv = 143,bklv = 20,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1150920,cardId = 1101003,lv = 143,bklv = 20,star = 4,mon = {id = 208,desc = "pt-15-9-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150921,cardId = 1102005,lv = 143,bklv = 20,star = 4,mon = {id = 231,desc = "pt-15-9-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150920,cardId = 1101003,lv = 143,bklv = 20,star = 4,mon = {id = 208,desc = "pt-15-9-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150921,cardId = 1102005,lv = 143,bklv = 20,star = 4,mon = {id = 231,desc = "pt-15-9-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1150930,cardId = 1101014,lv = 143,bklv = 20,star = 4,mon = {id = 209,desc = "pt-15-9-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1150931,cardId = 1102020,lv = 143,bklv = 20,star = 4,mon = {id = 232,desc = "pt-15-9-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1150930,cardId = 1101014,lv = 143,bklv = 20,star = 4,mon = {id = 209,desc = "pt-15-9-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1150931,cardId = 1102020,lv = 143,bklv = 20,star = 4}
 		}
 	},
 	[11510] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1151010,cardId = 1101007,lv = 143,bklv = 20,star = 4,mon = {id = 201,desc = "pt-15-10-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151011,cardId = 1102012,lv = 143,bklv = 20,star = 4,mon = {id = 220,desc = "pt-15-10-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151010,cardId = 1101007,lv = 143,bklv = 20,star = 4,mon = {id = 201,desc = "pt-15-10-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151011,cardId = 1102012,lv = 143,bklv = 20,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1151020,cardId = 1101003,lv = 143,bklv = 20,star = 4,mon = {id = 203,desc = "pt-15-10-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151021,cardId = 1102005,lv = 143,bklv = 20,star = 4,mon = {id = 223,desc = "pt-15-10-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151020,cardId = 1101003,lv = 143,bklv = 20,star = 4,mon = {id = 203,desc = "pt-15-10-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151021,cardId = 1102005,lv = 143,bklv = 20,star = 4,mon = {id = 223,desc = "pt-15-10-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1151030,cardId = 1101014,lv = 143,bklv = 20,star = 4,mon = {id = 214,desc = "pt-15-10-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151031,cardId = 1102020,lv = 143,bklv = 20,star = 4,mon = {id = 238,desc = "pt-15-10-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151030,cardId = 1101014,lv = 143,bklv = 20,star = 4,mon = {id = 214,desc = "pt-15-10-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151031,cardId = 1102020,lv = 143,bklv = 20,star = 4}
 		}
 	},
 	[11511] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1151110,cardId = 1101007,lv = 143,bklv = 20,star = 4,mon = {id = 212,desc = "pt-15-11-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151111,cardId = 1102012,lv = 143,bklv = 20,star = 4,mon = {id = 236,desc = "pt-15-11-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151110,cardId = 1101007,lv = 143,bklv = 20,star = 4,mon = {id = 212,desc = "pt-15-11-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151111,cardId = 1102012,lv = 143,bklv = 20,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1151120,cardId = 1101003,lv = 143,bklv = 20,star = 4,mon = {id = 208,desc = "pt-15-11-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151121,cardId = 1102005,lv = 143,bklv = 20,star = 4,mon = {id = 231,desc = "pt-15-11-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151120,cardId = 1101003,lv = 143,bklv = 20,star = 4,mon = {id = 208,desc = "pt-15-11-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151121,cardId = 1102005,lv = 143,bklv = 20,star = 4,mon = {id = 231,desc = "pt-15-11-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1151130,cardId = 1101014,lv = 143,bklv = 20,star = 4,mon = {id = 209,desc = "pt-15-11-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151131,cardId = 1102020,lv = 143,bklv = 20,star = 4,mon = {id = 232,desc = "pt-15-11-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151130,cardId = 1101014,lv = 143,bklv = 20,star = 4,mon = {id = 209,desc = "pt-15-11-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151131,cardId = 1102020,lv = 143,bklv = 20,star = 4}
 		}
 	},
 	[11512] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1151210,cardId = 1101007,lv = 144,bklv = 20,star = 4,mon = {id = 215,desc = "pt-15-12-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151211,cardId = 1102012,lv = 144,bklv = 20,star = 4,mon = {id = 239,desc = "pt-15-12-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151210,cardId = 1101007,lv = 144,bklv = 20,star = 4,mon = {id = 215,desc = "pt-15-12-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151211,cardId = 1102012,lv = 144,bklv = 20,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1151220,cardId = 1101003,lv = 144,bklv = 20,star = 4,mon = {id = 201,desc = "pt-15-12-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151221,cardId = 1102005,lv = 144,bklv = 20,star = 4,mon = {id = 227,desc = "pt-15-12-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151220,cardId = 1101003,lv = 144,bklv = 20,star = 4,mon = {id = 201,desc = "pt-15-12-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151221,cardId = 1102005,lv = 144,bklv = 20,star = 4,mon = {id = 227,desc = "pt-15-12-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1151230,cardId = 1101014,lv = 144,bklv = 20,star = 4,mon = {id = 211,desc = "pt-15-12-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151231,cardId = 1102020,lv = 144,bklv = 20,star = 4,mon = {id = 235,desc = "pt-15-12-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151230,cardId = 1101014,lv = 144,bklv = 20,star = 4,mon = {id = 211,desc = "pt-15-12-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151231,cardId = 1102020,lv = 144,bklv = 20,star = 4}
 		}
 	},
 	[11513] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1151310,cardId = 1101007,lv = 144,bklv = 20,star = 4,mon = {id = 209,desc = "pt-15-13-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151311,cardId = 1102012,lv = 144,bklv = 20,star = 4,mon = {id = 232,desc = "pt-15-13-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151310,cardId = 1101007,lv = 144,bklv = 20,star = 4,mon = {id = 209,desc = "pt-15-13-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151311,cardId = 1102012,lv = 144,bklv = 20,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1151320,cardId = 1101003,lv = 144,bklv = 20,star = 4,mon = {id = 208,desc = "pt-15-13-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151321,cardId = 1102005,lv = 144,bklv = 20,star = 4,mon = {id = 231,desc = "pt-15-13-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151320,cardId = 1101003,lv = 144,bklv = 20,star = 4,mon = {id = 208,desc = "pt-15-13-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151321,cardId = 1102005,lv = 144,bklv = 20,star = 4,mon = {id = 231,desc = "pt-15-13-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1151330,cardId = 1101014,lv = 144,bklv = 20,star = 4,mon = {id = 212,desc = "pt-15-13-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151331,cardId = 1102020,lv = 144,bklv = 20,star = 4,mon = {id = 236,desc = "pt-15-13-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151330,cardId = 1101014,lv = 144,bklv = 20,star = 4,mon = {id = 212,desc = "pt-15-13-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151331,cardId = 1102020,lv = 144,bklv = 20,star = 4}
 		}
 	},
 	[11514] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1151410,cardId = 1101007,lv = 145,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-14-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151411,cardId = 1102012,lv = 145,bklv = 20,star = 4,mon = {id = 227,desc = "pt-15-14-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151410,cardId = 1101007,lv = 145,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-14-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151411,cardId = 1102012,lv = 145,bklv = 20,star = 4}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1151420,cardId = 1101003,lv = 145,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-14-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151421,cardId = 1102005,lv = 145,bklv = 20,star = 4,mon = {id = 221,desc = "pt-15-14-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151420,cardId = 1101003,lv = 145,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-14-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151421,cardId = 1102005,lv = 145,bklv = 20,star = 4,mon = {id = 221,desc = "pt-15-14-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1151430,cardId = 1101014,lv = 145,bklv = 20,star = 4,mon = {id = 211,desc = "pt-15-14-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151431,cardId = 1102020,lv = 145,bklv = 20,star = 4,mon = {id = 235,desc = "pt-15-14-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151430,cardId = 1101014,lv = 145,bklv = 20,star = 4,mon = {id = 211,desc = "pt-15-14-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151431,cardId = 1102020,lv = 145,bklv = 20,star = 4}
 		}
 	},
 	[11515] = {
 		[1] = {
-			jlr = {cha = "pt-15",id = 1151510,cardId = 1101007,lv = 145,bklv = 20,star = 4,mon = {id = 205,desc = "pt-15-15-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151511,cardId = 1102012,lv = 145,bklv = 20,star = 4,mon = {id = 219,desc = "pt-15-15-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151510,cardId = 1101007,lv = 145,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-15-jlr-loc1",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151511,cardId = 1102012,lv = 145,bklv = 20,star = 4,mon = {id = 248,desc = "pt-15-15-shl-loc1",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[2] = {
-			jlr = {cha = "pt-15",id = 1151520,cardId = 1101003,lv = 145,bklv = 20,star = 4,mon = {id = 204,desc = "pt-15-15-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151521,cardId = 1102005,lv = 145,bklv = 20,star = 4,mon = {id = 224,desc = "pt-15-15-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151520,cardId = 1101003,lv = 145,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-15-jlr-loc2",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151521,cardId = 1102005,lv = 145,bklv = 20,star = 4,mon = {id = 242,desc = "pt-15-15-shl-loc2",skillLv = 9,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "pt-15",id = 1151530,cardId = 1101014,lv = 145,bklv = 20,star = 4,mon = {id = 207,desc = "pt-15-15-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "pt-15",id = 1151531,cardId = 1102020,lv = 145,bklv = 20,star = 4,mon = {id = 228,desc = "pt-15-15-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "pt-15",id = 1151530,cardId = 1101014,lv = 145,bklv = 20,star = 4,mon = {id = 211,desc = "pt-15-15-jlr-loc3",skillLv = 9,exert = 12,suffer = 9}},
+			shl = {cha = "pt-15",id = 1151531,cardId = 1102020,lv = 145,bklv = 20,star = 4,mon = {id = 256,desc = "pt-15-15-shl-loc3",skillLv = 9,exert = 18,suffer = 18}}
 		}
 	},
 	[20101] = {
 		[1] = {
-			jlr = {cha = "kn-1",id = 2010110,cardId = 1101001,lv = 10,bklv = 1,star = 1,mon = {id = 212,desc = "kn-1-1-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010111,cardId = 1102015,lv = 10,bklv = 1,star = 1,mon = {id = 257,desc = "kn-1-1-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010110,cardId = 1101001,lv = 10,bklv = 1,star = 1,mon = {id = 212,desc = "kn-1-1-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010111,cardId = 1102015,lv = 10,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "kn-1",id = 2010120,cardId = 1101003,lv = 10,bklv = 1,star = 1,mon = {id = 208,desc = "kn-1-1-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010121,cardId = 1102005,lv = 10,bklv = 1,star = 1,mon = {id = 252,desc = "kn-1-1-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010120,cardId = 1101003,lv = 10,bklv = 1,star = 1,mon = {id = 208,desc = "kn-1-1-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010121,cardId = 1102005,lv = 10,bklv = 1,star = 1,mon = {id = 252,desc = "kn-1-1-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "kn-1",id = 2010130,cardId = 1101002,lv = 10,bklv = 1,star = 1,mon = {id = 209,desc = "kn-1-1-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010131,cardId = 1102004,lv = 10,bklv = 1,star = 1,mon = {id = 253,desc = "kn-1-1-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010130,cardId = 1101002,lv = 10,bklv = 1,star = 1,mon = {id = 209,desc = "kn-1-1-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010131,cardId = 1102004,lv = 10,bklv = 1,star = 1}
 		}
 	},
 	[20102] = {
 		[1] = {
-			jlr = {cha = "kn-1",id = 2010210,cardId = 1101001,lv = 11,bklv = 1,star = 1,mon = {id = 201,desc = "kn-1-2-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010211,cardId = 1102015,lv = 11,bklv = 1,star = 1,mon = {id = 241,desc = "kn-1-2-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010210,cardId = 1101001,lv = 11,bklv = 1,star = 1,mon = {id = 201,desc = "kn-1-2-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010211,cardId = 1102015,lv = 11,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "kn-1",id = 2010220,cardId = 1101003,lv = 11,bklv = 1,star = 1,mon = {id = 203,desc = "kn-1-2-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010221,cardId = 1102005,lv = 11,bklv = 1,star = 1,mon = {id = 244,desc = "kn-1-2-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010220,cardId = 1101003,lv = 11,bklv = 1,star = 1,mon = {id = 203,desc = "kn-1-2-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010221,cardId = 1102005,lv = 11,bklv = 1,star = 1,mon = {id = 244,desc = "kn-1-2-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "kn-1",id = 2010230,cardId = 1101002,lv = 11,bklv = 1,star = 1,mon = {id = 214,desc = "kn-1-2-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010231,cardId = 1102004,lv = 11,bklv = 1,star = 1,mon = {id = 259,desc = "kn-1-2-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010230,cardId = 1101002,lv = 11,bklv = 1,star = 1,mon = {id = 214,desc = "kn-1-2-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010231,cardId = 1102004,lv = 11,bklv = 1,star = 1}
 		}
 	},
 	[20103] = {
 		[1] = {
-			jlr = {cha = "kn-1",id = 2010310,cardId = 1101001,lv = 12,bklv = 1,star = 1,mon = {id = 212,desc = "kn-1-3-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010311,cardId = 1102015,lv = 12,bklv = 1,star = 1,mon = {id = 257,desc = "kn-1-3-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010310,cardId = 1101001,lv = 12,bklv = 1,star = 1,mon = {id = 212,desc = "kn-1-3-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010311,cardId = 1102015,lv = 12,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "kn-1",id = 2010320,cardId = 1101003,lv = 12,bklv = 1,star = 1,mon = {id = 208,desc = "kn-1-3-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010321,cardId = 1102005,lv = 12,bklv = 1,star = 1,mon = {id = 252,desc = "kn-1-3-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010320,cardId = 1101003,lv = 12,bklv = 1,star = 1,mon = {id = 208,desc = "kn-1-3-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010321,cardId = 1102005,lv = 12,bklv = 1,star = 1,mon = {id = 252,desc = "kn-1-3-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "kn-1",id = 2010330,cardId = 1101002,lv = 12,bklv = 1,star = 1,mon = {id = 209,desc = "kn-1-3-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010331,cardId = 1102004,lv = 12,bklv = 1,star = 1,mon = {id = 253,desc = "kn-1-3-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010330,cardId = 1101002,lv = 12,bklv = 1,star = 1,mon = {id = 209,desc = "kn-1-3-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010331,cardId = 1102004,lv = 12,bklv = 1,star = 1}
 		}
 	},
 	[20104] = {
 		[1] = {
-			jlr = {cha = "kn-1",id = 2010410,cardId = 1101001,lv = 12,bklv = 1,star = 1,mon = {id = 215,desc = "kn-1-4-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010411,cardId = 1102015,lv = 12,bklv = 1,star = 1,mon = {id = 260,desc = "kn-1-4-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010410,cardId = 1101001,lv = 12,bklv = 1,star = 1,mon = {id = 215,desc = "kn-1-4-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010411,cardId = 1102015,lv = 12,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "kn-1",id = 2010420,cardId = 1101003,lv = 12,bklv = 1,star = 1,mon = {id = 201,desc = "kn-1-4-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010421,cardId = 1102005,lv = 12,bklv = 1,star = 1,mon = {id = 248,desc = "kn-1-4-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010420,cardId = 1101003,lv = 12,bklv = 1,star = 1,mon = {id = 201,desc = "kn-1-4-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010421,cardId = 1102005,lv = 12,bklv = 1,star = 1,mon = {id = 248,desc = "kn-1-4-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "kn-1",id = 2010430,cardId = 1101002,lv = 12,bklv = 1,star = 1,mon = {id = 211,desc = "kn-1-4-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010431,cardId = 1102004,lv = 12,bklv = 1,star = 1,mon = {id = 256,desc = "kn-1-4-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010430,cardId = 1101002,lv = 12,bklv = 1,star = 1,mon = {id = 211,desc = "kn-1-4-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010431,cardId = 1102004,lv = 12,bklv = 1,star = 1}
 		}
 	},
 	[20105] = {
 		[1] = {
-			jlr = {cha = "kn-1",id = 2010510,cardId = 1101001,lv = 13,bklv = 1,star = 1,mon = {id = 206,desc = "kn-1-5-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010511,cardId = 1102015,lv = 13,bklv = 1,star = 1,mon = {id = 246,desc = "kn-1-5-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010510,cardId = 1101001,lv = 13,bklv = 1,star = 1,mon = {id = 206,desc = "kn-1-5-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010511,cardId = 1102015,lv = 13,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "kn-1",id = 2010520,cardId = 1101003,lv = 13,bklv = 1,star = 1,mon = {id = 203,desc = "kn-1-5-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010521,cardId = 1102005,lv = 13,bklv = 1,star = 1,mon = {id = 244,desc = "kn-1-5-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010520,cardId = 1101003,lv = 13,bklv = 1,star = 1,mon = {id = 203,desc = "kn-1-5-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010521,cardId = 1102005,lv = 13,bklv = 1,star = 1,mon = {id = 244,desc = "kn-1-5-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "kn-1",id = 2010530,cardId = 1101002,lv = 13,bklv = 1,star = 1,mon = {id = 212,desc = "kn-1-5-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010531,cardId = 1102004,lv = 13,bklv = 1,star = 1,mon = {id = 257,desc = "kn-1-5-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010530,cardId = 1101002,lv = 13,bklv = 1,star = 1,mon = {id = 212,desc = "kn-1-5-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010531,cardId = 1102004,lv = 13,bklv = 1,star = 1}
 		}
 	},
 	[20106] = {
 		[1] = {
-			jlr = {cha = "kn-1",id = 2010610,cardId = 1101001,lv = 13,bklv = 1,star = 1,mon = {id = 209,desc = "kn-1-6-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010611,cardId = 1102015,lv = 13,bklv = 1,star = 1,mon = {id = 253,desc = "kn-1-6-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010610,cardId = 1101001,lv = 13,bklv = 1,star = 1,mon = {id = 209,desc = "kn-1-6-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010611,cardId = 1102015,lv = 13,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "kn-1",id = 2010620,cardId = 1101003,lv = 13,bklv = 1,star = 1,mon = {id = 208,desc = "kn-1-6-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010621,cardId = 1102005,lv = 13,bklv = 1,star = 1,mon = {id = 252,desc = "kn-1-6-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010620,cardId = 1101003,lv = 13,bklv = 1,star = 1,mon = {id = 208,desc = "kn-1-6-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010621,cardId = 1102005,lv = 13,bklv = 1,star = 1,mon = {id = 252,desc = "kn-1-6-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "kn-1",id = 2010630,cardId = 1101002,lv = 13,bklv = 1,star = 1,mon = {id = 212,desc = "kn-1-6-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010631,cardId = 1102004,lv = 13,bklv = 1,star = 1,mon = {id = 257,desc = "kn-1-6-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010630,cardId = 1101002,lv = 13,bklv = 1,star = 1,mon = {id = 212,desc = "kn-1-6-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010631,cardId = 1102004,lv = 13,bklv = 1,star = 1}
 		}
 	},
 	[20107] = {
 		[1] = {
-			jlr = {cha = "kn-1",id = 2010710,cardId = 1101001,lv = 14,bklv = 1,star = 1,mon = {id = 213,desc = "kn-1-7-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010711,cardId = 1102015,lv = 14,bklv = 1,star = 1,mon = {id = 258,desc = "kn-1-7-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010710,cardId = 1101001,lv = 14,bklv = 1,star = 1,mon = {id = 213,desc = "kn-1-7-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010711,cardId = 1102015,lv = 14,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "kn-1",id = 2010720,cardId = 1101003,lv = 14,bklv = 1,star = 1,mon = {id = 207,desc = "kn-1-7-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010721,cardId = 1102005,lv = 14,bklv = 1,star = 1,mon = {id = 242,desc = "kn-1-7-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010720,cardId = 1101003,lv = 14,bklv = 1,star = 1,mon = {id = 207,desc = "kn-1-7-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010721,cardId = 1102005,lv = 14,bklv = 1,star = 1,mon = {id = 242,desc = "kn-1-7-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "kn-1",id = 2010730,cardId = 1101002,lv = 14,bklv = 1,star = 1,mon = {id = 211,desc = "kn-1-7-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010731,cardId = 1102004,lv = 14,bklv = 1,star = 1,mon = {id = 256,desc = "kn-1-7-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010730,cardId = 1101002,lv = 14,bklv = 1,star = 1,mon = {id = 211,desc = "kn-1-7-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010731,cardId = 1102004,lv = 14,bklv = 1,star = 1}
 		}
 	},
 	[20108] = {
 		[1] = {
-			jlr = {cha = "kn-1",id = 2010810,cardId = 1101001,lv = 14,bklv = 1,star = 1,mon = {id = 209,desc = "kn-1-8-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010811,cardId = 1102015,lv = 14,bklv = 1,star = 1,mon = {id = 253,desc = "kn-1-8-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010810,cardId = 1101001,lv = 14,bklv = 1,star = 1,mon = {id = 209,desc = "kn-1-8-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010811,cardId = 1102015,lv = 14,bklv = 1,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "kn-1",id = 2010820,cardId = 1101003,lv = 14,bklv = 1,star = 1,mon = {id = 208,desc = "kn-1-8-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010821,cardId = 1102005,lv = 14,bklv = 1,star = 1,mon = {id = 252,desc = "kn-1-8-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010820,cardId = 1101003,lv = 14,bklv = 1,star = 1,mon = {id = 208,desc = "kn-1-8-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010821,cardId = 1102005,lv = 14,bklv = 1,star = 1,mon = {id = 252,desc = "kn-1-8-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "kn-1",id = 2010830,cardId = 1101002,lv = 14,bklv = 1,star = 1,mon = {id = 212,desc = "kn-1-8-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010831,cardId = 1102004,lv = 14,bklv = 1,star = 1,mon = {id = 257,desc = "kn-1-8-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010830,cardId = 1101002,lv = 14,bklv = 1,star = 1,mon = {id = 212,desc = "kn-1-8-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010831,cardId = 1102004,lv = 14,bklv = 1,star = 1}
 		}
 	},
 	[20109] = {
 		[1] = {
-			jlr = {cha = "kn-1",id = 2010910,cardId = 1101001,lv = 15,bklv = 2,star = 1,mon = {id = 207,desc = "kn-1-9-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010911,cardId = 1102015,lv = 15,bklv = 2,star = 1,mon = {id = 251,desc = "kn-1-9-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010910,cardId = 1101001,lv = 15,bklv = 2,star = 1,mon = {id = 207,desc = "kn-1-9-jlr-loc1",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010911,cardId = 1102015,lv = 15,bklv = 2,star = 1}
 		},
 		[2] = {
-			jlr = {cha = "kn-1",id = 2010920,cardId = 1101003,lv = 15,bklv = 2,star = 1,mon = {id = 205,desc = "kn-1-9-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010921,cardId = 1102005,lv = 15,bklv = 2,star = 1,mon = {id = 250,desc = "kn-1-9-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010920,cardId = 1101003,lv = 15,bklv = 2,star = 1,mon = {id = 205,desc = "kn-1-9-jlr-loc2",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010921,cardId = 1102005,lv = 15,bklv = 2,star = 1,mon = {id = 250,desc = "kn-1-9-shl-loc2",skillLv = 2,exert = 18,suffer = 18}}
 		},
 		[3] = {
-			jlr = {cha = "kn-1",id = 2010930,cardId = 1101002,lv = 15,bklv = 2,star = 1,mon = {id = 210,desc = "kn-1-9-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-1",id = 2010931,cardId = 1102004,lv = 15,bklv = 2,star = 1,mon = {id = 255,desc = "kn-1-9-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-1",id = 2010930,cardId = 1101002,lv = 15,bklv = 2,star = 1,mon = {id = 210,desc = "kn-1-9-jlr-loc3",skillLv = 2,exert = 12,suffer = 9}},
+			shl = {cha = "kn-1",id = 2010931,cardId = 1102004,lv = 15,bklv = 2,star = 1}
 		}
 	},
 	[20201] = {
 		[1] = {
-			jlr = {cha = "kn-2",id = 2020110,cardId = 1101001,lv = 15,bklv = 2,star = 2,mon = {id = 212,desc = "kn-2-1-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020111,cardId = 1102002,lv = 15,bklv = 2,star = 2,mon = {id = 257,desc = "kn-2-1-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020110,cardId = 1101001,lv = 15,bklv = 2,star = 2,mon = {id = 212,desc = "kn-2-1-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020111,cardId = 1102002,lv = 15,bklv = 2,star = 2,mon = {id = 257,desc = "kn-2-1-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-2",id = 2020120,cardId = 1101003,lv = 15,bklv = 2,star = 2,mon = {id = 208,desc = "kn-2-1-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020121,cardId = 1102005,lv = 15,bklv = 2,star = 2,mon = {id = 252,desc = "kn-2-1-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020120,cardId = 1101003,lv = 15,bklv = 2,star = 2,mon = {id = 208,desc = "kn-2-1-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020121,cardId = 1102005,lv = 15,bklv = 2,star = 2,mon = {id = 252,desc = "kn-2-1-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-2",id = 2020130,cardId = 1101002,lv = 15,bklv = 2,star = 2,mon = {id = 209,desc = "kn-2-1-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020131,cardId = 1102004,lv = 15,bklv = 2,star = 2,mon = {id = 253,desc = "kn-2-1-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020130,cardId = 1101002,lv = 15,bklv = 2,star = 2,mon = {id = 209,desc = "kn-2-1-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020131,cardId = 1102004,lv = 15,bklv = 2,star = 2,mon = {id = 253,desc = "kn-2-1-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20202] = {
 		[1] = {
-			jlr = {cha = "kn-2",id = 2020210,cardId = 1101001,lv = 16,bklv = 2,star = 2,mon = {id = 201,desc = "kn-2-2-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020211,cardId = 1102002,lv = 16,bklv = 2,star = 2,mon = {id = 241,desc = "kn-2-2-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020210,cardId = 1101001,lv = 16,bklv = 2,star = 2,mon = {id = 201,desc = "kn-2-2-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020211,cardId = 1102002,lv = 16,bklv = 2,star = 2,mon = {id = 241,desc = "kn-2-2-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-2",id = 2020220,cardId = 1101003,lv = 16,bklv = 2,star = 2,mon = {id = 203,desc = "kn-2-2-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020221,cardId = 1102005,lv = 16,bklv = 2,star = 2,mon = {id = 244,desc = "kn-2-2-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020220,cardId = 1101003,lv = 16,bklv = 2,star = 2,mon = {id = 203,desc = "kn-2-2-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020221,cardId = 1102005,lv = 16,bklv = 2,star = 2,mon = {id = 244,desc = "kn-2-2-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-2",id = 2020230,cardId = 1101002,lv = 16,bklv = 2,star = 2,mon = {id = 214,desc = "kn-2-2-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020231,cardId = 1102004,lv = 16,bklv = 2,star = 2,mon = {id = 259,desc = "kn-2-2-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020230,cardId = 1101002,lv = 16,bklv = 2,star = 2,mon = {id = 214,desc = "kn-2-2-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020231,cardId = 1102004,lv = 16,bklv = 2,star = 2,mon = {id = 259,desc = "kn-2-2-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20203] = {
 		[1] = {
-			jlr = {cha = "kn-2",id = 2020310,cardId = 1101001,lv = 17,bklv = 2,star = 2,mon = {id = 212,desc = "kn-2-3-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020311,cardId = 1102002,lv = 17,bklv = 2,star = 2,mon = {id = 257,desc = "kn-2-3-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020310,cardId = 1101001,lv = 17,bklv = 2,star = 2,mon = {id = 212,desc = "kn-2-3-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020311,cardId = 1102002,lv = 17,bklv = 2,star = 2,mon = {id = 257,desc = "kn-2-3-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-2",id = 2020320,cardId = 1101003,lv = 17,bklv = 2,star = 2,mon = {id = 208,desc = "kn-2-3-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020321,cardId = 1102005,lv = 17,bklv = 2,star = 2,mon = {id = 252,desc = "kn-2-3-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020320,cardId = 1101003,lv = 17,bklv = 2,star = 2,mon = {id = 208,desc = "kn-2-3-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020321,cardId = 1102005,lv = 17,bklv = 2,star = 2,mon = {id = 252,desc = "kn-2-3-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-2",id = 2020330,cardId = 1101002,lv = 17,bklv = 2,star = 2,mon = {id = 209,desc = "kn-2-3-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020331,cardId = 1102004,lv = 17,bklv = 2,star = 2,mon = {id = 253,desc = "kn-2-3-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020330,cardId = 1101002,lv = 17,bklv = 2,star = 2,mon = {id = 209,desc = "kn-2-3-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020331,cardId = 1102004,lv = 17,bklv = 2,star = 2,mon = {id = 253,desc = "kn-2-3-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20204] = {
 		[1] = {
-			jlr = {cha = "kn-2",id = 2020410,cardId = 1101001,lv = 18,bklv = 2,star = 2,mon = {id = 215,desc = "kn-2-4-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020411,cardId = 1102002,lv = 18,bklv = 2,star = 2,mon = {id = 260,desc = "kn-2-4-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020410,cardId = 1101001,lv = 18,bklv = 2,star = 2,mon = {id = 215,desc = "kn-2-4-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020411,cardId = 1102002,lv = 18,bklv = 2,star = 2,mon = {id = 260,desc = "kn-2-4-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-2",id = 2020420,cardId = 1101003,lv = 18,bklv = 2,star = 2,mon = {id = 201,desc = "kn-2-4-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020421,cardId = 1102005,lv = 18,bklv = 2,star = 2,mon = {id = 248,desc = "kn-2-4-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020420,cardId = 1101003,lv = 18,bklv = 2,star = 2,mon = {id = 201,desc = "kn-2-4-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020421,cardId = 1102005,lv = 18,bklv = 2,star = 2,mon = {id = 248,desc = "kn-2-4-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-2",id = 2020430,cardId = 1101002,lv = 18,bklv = 2,star = 2,mon = {id = 211,desc = "kn-2-4-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020431,cardId = 1102004,lv = 18,bklv = 2,star = 2,mon = {id = 256,desc = "kn-2-4-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020430,cardId = 1101002,lv = 18,bklv = 2,star = 2,mon = {id = 211,desc = "kn-2-4-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020431,cardId = 1102004,lv = 18,bklv = 2,star = 2,mon = {id = 256,desc = "kn-2-4-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20205] = {
 		[1] = {
-			jlr = {cha = "kn-2",id = 2020510,cardId = 1101001,lv = 19,bklv = 2,star = 2,mon = {id = 206,desc = "kn-2-5-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020511,cardId = 1102002,lv = 19,bklv = 2,star = 2,mon = {id = 246,desc = "kn-2-5-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020510,cardId = 1101001,lv = 19,bklv = 2,star = 2,mon = {id = 206,desc = "kn-2-5-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020511,cardId = 1102002,lv = 19,bklv = 2,star = 2,mon = {id = 246,desc = "kn-2-5-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-2",id = 2020520,cardId = 1101003,lv = 19,bklv = 2,star = 2,mon = {id = 203,desc = "kn-2-5-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020521,cardId = 1102005,lv = 19,bklv = 2,star = 2,mon = {id = 244,desc = "kn-2-5-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020520,cardId = 1101003,lv = 19,bklv = 2,star = 2,mon = {id = 203,desc = "kn-2-5-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020521,cardId = 1102005,lv = 19,bklv = 2,star = 2,mon = {id = 244,desc = "kn-2-5-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-2",id = 2020530,cardId = 1101002,lv = 19,bklv = 2,star = 2,mon = {id = 212,desc = "kn-2-5-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020531,cardId = 1102004,lv = 19,bklv = 2,star = 2,mon = {id = 257,desc = "kn-2-5-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020530,cardId = 1101002,lv = 19,bklv = 2,star = 2,mon = {id = 212,desc = "kn-2-5-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020531,cardId = 1102004,lv = 19,bklv = 2,star = 2,mon = {id = 257,desc = "kn-2-5-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20206] = {
 		[1] = {
-			jlr = {cha = "kn-2",id = 2020610,cardId = 1101001,lv = 20,bklv = 2,star = 2,mon = {id = 209,desc = "kn-2-6-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020611,cardId = 1102002,lv = 20,bklv = 2,star = 2,mon = {id = 253,desc = "kn-2-6-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020610,cardId = 1101001,lv = 20,bklv = 2,star = 2,mon = {id = 209,desc = "kn-2-6-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020611,cardId = 1102002,lv = 20,bklv = 2,star = 2,mon = {id = 253,desc = "kn-2-6-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-2",id = 2020620,cardId = 1101003,lv = 20,bklv = 2,star = 2,mon = {id = 208,desc = "kn-2-6-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020621,cardId = 1102005,lv = 20,bklv = 2,star = 2,mon = {id = 252,desc = "kn-2-6-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020620,cardId = 1101003,lv = 20,bklv = 2,star = 2,mon = {id = 208,desc = "kn-2-6-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020621,cardId = 1102005,lv = 20,bklv = 2,star = 2,mon = {id = 252,desc = "kn-2-6-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-2",id = 2020630,cardId = 1101002,lv = 20,bklv = 2,star = 2,mon = {id = 212,desc = "kn-2-6-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020631,cardId = 1102004,lv = 20,bklv = 2,star = 2,mon = {id = 257,desc = "kn-2-6-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020630,cardId = 1101002,lv = 20,bklv = 2,star = 2,mon = {id = 212,desc = "kn-2-6-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020631,cardId = 1102004,lv = 20,bklv = 2,star = 2,mon = {id = 257,desc = "kn-2-6-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20207] = {
 		[1] = {
-			jlr = {cha = "kn-2",id = 2020710,cardId = 1101001,lv = 21,bklv = 2,star = 2,mon = {id = 207,desc = "kn-2-7-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020711,cardId = 1102002,lv = 21,bklv = 2,star = 2,mon = {id = 248,desc = "kn-2-7-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020710,cardId = 1101001,lv = 21,bklv = 2,star = 2,mon = {id = 207,desc = "kn-2-7-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020711,cardId = 1102002,lv = 21,bklv = 2,star = 2,mon = {id = 248,desc = "kn-2-7-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-2",id = 2020720,cardId = 1101003,lv = 21,bklv = 2,star = 2,mon = {id = 207,desc = "kn-2-7-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020721,cardId = 1102005,lv = 21,bklv = 2,star = 2,mon = {id = 242,desc = "kn-2-7-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020720,cardId = 1101003,lv = 21,bklv = 2,star = 2,mon = {id = 207,desc = "kn-2-7-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020721,cardId = 1102005,lv = 21,bklv = 2,star = 2,mon = {id = 242,desc = "kn-2-7-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-2",id = 2020730,cardId = 1101002,lv = 21,bklv = 2,star = 2,mon = {id = 211,desc = "kn-2-7-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020731,cardId = 1102004,lv = 21,bklv = 2,star = 2,mon = {id = 256,desc = "kn-2-7-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020730,cardId = 1101002,lv = 21,bklv = 2,star = 2,mon = {id = 211,desc = "kn-2-7-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020731,cardId = 1102004,lv = 21,bklv = 2,star = 2,mon = {id = 256,desc = "kn-2-7-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20208] = {
 		[1] = {
-			jlr = {cha = "kn-2",id = 2020810,cardId = 1101001,lv = 22,bklv = 2,star = 2,mon = {id = 209,desc = "kn-2-8-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020811,cardId = 1102002,lv = 22,bklv = 2,star = 2,mon = {id = 253,desc = "kn-2-8-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020810,cardId = 1101001,lv = 22,bklv = 2,star = 2,mon = {id = 209,desc = "kn-2-8-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020811,cardId = 1102002,lv = 22,bklv = 2,star = 2,mon = {id = 253,desc = "kn-2-8-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-2",id = 2020820,cardId = 1101003,lv = 22,bklv = 2,star = 2,mon = {id = 208,desc = "kn-2-8-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020821,cardId = 1102005,lv = 22,bklv = 2,star = 2,mon = {id = 252,desc = "kn-2-8-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020820,cardId = 1101003,lv = 22,bklv = 2,star = 2,mon = {id = 208,desc = "kn-2-8-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020821,cardId = 1102005,lv = 22,bklv = 2,star = 2,mon = {id = 252,desc = "kn-2-8-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-2",id = 2020830,cardId = 1101002,lv = 22,bklv = 2,star = 2,mon = {id = 212,desc = "kn-2-8-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020831,cardId = 1102004,lv = 22,bklv = 2,star = 2,mon = {id = 257,desc = "kn-2-8-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020830,cardId = 1101002,lv = 22,bklv = 2,star = 2,mon = {id = 212,desc = "kn-2-8-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020831,cardId = 1102004,lv = 22,bklv = 2,star = 2,mon = {id = 257,desc = "kn-2-8-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20209] = {
 		[1] = {
-			jlr = {cha = "kn-2",id = 2020910,cardId = 1101001,lv = 23,bklv = 2,star = 2,mon = {id = 207,desc = "kn-2-9-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020911,cardId = 1102002,lv = 23,bklv = 2,star = 2,mon = {id = 251,desc = "kn-2-9-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020910,cardId = 1101001,lv = 23,bklv = 2,star = 2,mon = {id = 207,desc = "kn-2-9-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020911,cardId = 1102002,lv = 23,bklv = 2,star = 2,mon = {id = 251,desc = "kn-2-9-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-2",id = 2020920,cardId = 1101003,lv = 23,bklv = 2,star = 2,mon = {id = 205,desc = "kn-2-9-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020921,cardId = 1102005,lv = 23,bklv = 2,star = 2,mon = {id = 250,desc = "kn-2-9-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020920,cardId = 1101003,lv = 23,bklv = 2,star = 2,mon = {id = 205,desc = "kn-2-9-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020921,cardId = 1102005,lv = 23,bklv = 2,star = 2,mon = {id = 250,desc = "kn-2-9-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-2",id = 2020930,cardId = 1101014,lv = 23,bklv = 2,star = 2,mon = {id = 210,desc = "kn-2-9-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-2",id = 2020931,cardId = 1102004,lv = 23,bklv = 2,star = 2,mon = {id = 255,desc = "kn-2-9-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-2",id = 2020930,cardId = 1101014,lv = 23,bklv = 2,star = 2,mon = {id = 210,desc = "kn-2-9-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-2",id = 2020931,cardId = 1102004,lv = 23,bklv = 2,star = 2,mon = {id = 255,desc = "kn-2-9-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20301] = {
 		[1] = {
-			jlr = {cha = "kn-3",id = 2030110,cardId = 1101001,lv = 25,bklv = 2,star = 2,mon = {id = 212,desc = "kn-3-1-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030111,cardId = 1102002,lv = 25,bklv = 2,star = 2,mon = {id = 257,desc = "kn-3-1-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030110,cardId = 1101001,lv = 25,bklv = 2,star = 2,mon = {id = 212,desc = "kn-3-1-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030111,cardId = 1102002,lv = 25,bklv = 2,star = 2,mon = {id = 257,desc = "kn-3-1-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-3",id = 2030120,cardId = 1101003,lv = 25,bklv = 2,star = 2,mon = {id = 208,desc = "kn-3-1-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030121,cardId = 1102005,lv = 25,bklv = 2,star = 2,mon = {id = 252,desc = "kn-3-1-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030120,cardId = 1101003,lv = 25,bklv = 2,star = 2,mon = {id = 208,desc = "kn-3-1-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030121,cardId = 1102005,lv = 25,bklv = 2,star = 2,mon = {id = 252,desc = "kn-3-1-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-3",id = 2030130,cardId = 1101014,lv = 25,bklv = 2,star = 2,mon = {id = 209,desc = "kn-3-1-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030131,cardId = 1102020,lv = 25,bklv = 2,star = 2,mon = {id = 253,desc = "kn-3-1-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030130,cardId = 1101014,lv = 25,bklv = 2,star = 2,mon = {id = 209,desc = "kn-3-1-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030131,cardId = 1102020,lv = 25,bklv = 2,star = 2,mon = {id = 253,desc = "kn-3-1-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20302] = {
 		[1] = {
-			jlr = {cha = "kn-3",id = 2030210,cardId = 1101001,lv = 26,bklv = 2,star = 2,mon = {id = 201,desc = "kn-3-2-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030211,cardId = 1102002,lv = 26,bklv = 2,star = 2,mon = {id = 241,desc = "kn-3-2-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030210,cardId = 1101001,lv = 26,bklv = 2,star = 2,mon = {id = 201,desc = "kn-3-2-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030211,cardId = 1102002,lv = 26,bklv = 2,star = 2,mon = {id = 241,desc = "kn-3-2-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-3",id = 2030220,cardId = 1101003,lv = 26,bklv = 2,star = 2,mon = {id = 203,desc = "kn-3-2-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030221,cardId = 1102005,lv = 26,bklv = 2,star = 2,mon = {id = 244,desc = "kn-3-2-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030220,cardId = 1101003,lv = 26,bklv = 2,star = 2,mon = {id = 203,desc = "kn-3-2-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030221,cardId = 1102005,lv = 26,bklv = 2,star = 2,mon = {id = 244,desc = "kn-3-2-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-3",id = 2030230,cardId = 1101014,lv = 26,bklv = 2,star = 2,mon = {id = 214,desc = "kn-3-2-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030231,cardId = 1102020,lv = 26,bklv = 2,star = 2,mon = {id = 259,desc = "kn-3-2-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030230,cardId = 1101014,lv = 26,bklv = 2,star = 2,mon = {id = 214,desc = "kn-3-2-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030231,cardId = 1102020,lv = 26,bklv = 2,star = 2,mon = {id = 259,desc = "kn-3-2-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20303] = {
 		[1] = {
-			jlr = {cha = "kn-3",id = 2030310,cardId = 1101001,lv = 27,bklv = 2,star = 2,mon = {id = 212,desc = "kn-3-3-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030311,cardId = 1102002,lv = 27,bklv = 2,star = 2,mon = {id = 257,desc = "kn-3-3-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030310,cardId = 1101001,lv = 27,bklv = 2,star = 2,mon = {id = 212,desc = "kn-3-3-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030311,cardId = 1102002,lv = 27,bklv = 2,star = 2,mon = {id = 257,desc = "kn-3-3-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-3",id = 2030320,cardId = 1101003,lv = 27,bklv = 2,star = 2,mon = {id = 208,desc = "kn-3-3-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030321,cardId = 1102005,lv = 27,bklv = 2,star = 2,mon = {id = 252,desc = "kn-3-3-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030320,cardId = 1101003,lv = 27,bklv = 2,star = 2,mon = {id = 208,desc = "kn-3-3-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030321,cardId = 1102005,lv = 27,bklv = 2,star = 2,mon = {id = 252,desc = "kn-3-3-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-3",id = 2030330,cardId = 1101014,lv = 27,bklv = 2,star = 2,mon = {id = 209,desc = "kn-3-3-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030331,cardId = 1102020,lv = 27,bklv = 2,star = 2,mon = {id = 253,desc = "kn-3-3-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030330,cardId = 1101014,lv = 27,bklv = 2,star = 2,mon = {id = 209,desc = "kn-3-3-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030331,cardId = 1102020,lv = 27,bklv = 2,star = 2,mon = {id = 253,desc = "kn-3-3-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20304] = {
 		[1] = {
-			jlr = {cha = "kn-3",id = 2030410,cardId = 1101001,lv = 28,bklv = 2,star = 2,mon = {id = 215,desc = "kn-3-4-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030411,cardId = 1102002,lv = 28,bklv = 2,star = 2,mon = {id = 260,desc = "kn-3-4-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030410,cardId = 1101001,lv = 28,bklv = 2,star = 2,mon = {id = 215,desc = "kn-3-4-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030411,cardId = 1102002,lv = 28,bklv = 2,star = 2,mon = {id = 260,desc = "kn-3-4-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-3",id = 2030420,cardId = 1101003,lv = 28,bklv = 2,star = 2,mon = {id = 201,desc = "kn-3-4-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030421,cardId = 1102005,lv = 28,bklv = 2,star = 2,mon = {id = 248,desc = "kn-3-4-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030420,cardId = 1101003,lv = 28,bklv = 2,star = 2,mon = {id = 201,desc = "kn-3-4-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030421,cardId = 1102005,lv = 28,bklv = 2,star = 2,mon = {id = 248,desc = "kn-3-4-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-3",id = 2030430,cardId = 1101014,lv = 28,bklv = 2,star = 2,mon = {id = 211,desc = "kn-3-4-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030431,cardId = 1102020,lv = 28,bklv = 2,star = 2,mon = {id = 256,desc = "kn-3-4-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030430,cardId = 1101014,lv = 28,bklv = 2,star = 2,mon = {id = 211,desc = "kn-3-4-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030431,cardId = 1102020,lv = 28,bklv = 2,star = 2,mon = {id = 256,desc = "kn-3-4-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20305] = {
 		[1] = {
-			jlr = {cha = "kn-3",id = 2030510,cardId = 1101001,lv = 29,bklv = 2,star = 2,mon = {id = 206,desc = "kn-3-5-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030511,cardId = 1102002,lv = 29,bklv = 2,star = 2,mon = {id = 246,desc = "kn-3-5-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030510,cardId = 1101001,lv = 29,bklv = 2,star = 2,mon = {id = 206,desc = "kn-3-5-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030511,cardId = 1102002,lv = 29,bklv = 2,star = 2,mon = {id = 246,desc = "kn-3-5-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-3",id = 2030520,cardId = 1101003,lv = 29,bklv = 2,star = 2,mon = {id = 203,desc = "kn-3-5-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030521,cardId = 1102005,lv = 29,bklv = 2,star = 2,mon = {id = 244,desc = "kn-3-5-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030520,cardId = 1101003,lv = 29,bklv = 2,star = 2,mon = {id = 203,desc = "kn-3-5-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030521,cardId = 1102005,lv = 29,bklv = 2,star = 2,mon = {id = 244,desc = "kn-3-5-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-3",id = 2030530,cardId = 1101014,lv = 29,bklv = 2,star = 2,mon = {id = 212,desc = "kn-3-5-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030531,cardId = 1102020,lv = 29,bklv = 2,star = 2,mon = {id = 257,desc = "kn-3-5-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030530,cardId = 1101014,lv = 29,bklv = 2,star = 2,mon = {id = 212,desc = "kn-3-5-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030531,cardId = 1102020,lv = 29,bklv = 2,star = 2,mon = {id = 257,desc = "kn-3-5-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20306] = {
 		[1] = {
-			jlr = {cha = "kn-3",id = 2030610,cardId = 1101001,lv = 30,bklv = 3,star = 2,mon = {id = 209,desc = "kn-3-6-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030611,cardId = 1102002,lv = 30,bklv = 3,star = 2,mon = {id = 253,desc = "kn-3-6-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030610,cardId = 1101001,lv = 30,bklv = 3,star = 2,mon = {id = 209,desc = "kn-3-6-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030611,cardId = 1102002,lv = 30,bklv = 3,star = 2,mon = {id = 253,desc = "kn-3-6-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-3",id = 2030620,cardId = 1101003,lv = 30,bklv = 3,star = 2,mon = {id = 208,desc = "kn-3-6-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030621,cardId = 1102005,lv = 30,bklv = 3,star = 2,mon = {id = 252,desc = "kn-3-6-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030620,cardId = 1101003,lv = 30,bklv = 3,star = 2,mon = {id = 208,desc = "kn-3-6-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030621,cardId = 1102005,lv = 30,bklv = 3,star = 2,mon = {id = 252,desc = "kn-3-6-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-3",id = 2030630,cardId = 1101014,lv = 30,bklv = 3,star = 2,mon = {id = 212,desc = "kn-3-6-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030631,cardId = 1102020,lv = 30,bklv = 3,star = 2,mon = {id = 257,desc = "kn-3-6-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030630,cardId = 1101014,lv = 30,bklv = 3,star = 2,mon = {id = 212,desc = "kn-3-6-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030631,cardId = 1102020,lv = 30,bklv = 3,star = 2,mon = {id = 257,desc = "kn-3-6-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20307] = {
 		[1] = {
-			jlr = {cha = "kn-3",id = 2030710,cardId = 1101001,lv = 31,bklv = 3,star = 2,mon = {id = 213,desc = "kn-3-7-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030711,cardId = 1102002,lv = 31,bklv = 3,star = 2,mon = {id = 258,desc = "kn-3-7-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030710,cardId = 1101001,lv = 31,bklv = 3,star = 2,mon = {id = 213,desc = "kn-3-7-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030711,cardId = 1102002,lv = 31,bklv = 3,star = 2,mon = {id = 258,desc = "kn-3-7-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-3",id = 2030720,cardId = 1101003,lv = 31,bklv = 3,star = 2,mon = {id = 207,desc = "kn-3-7-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030721,cardId = 1102005,lv = 31,bklv = 3,star = 2,mon = {id = 242,desc = "kn-3-7-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030720,cardId = 1101003,lv = 31,bklv = 3,star = 2,mon = {id = 207,desc = "kn-3-7-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030721,cardId = 1102005,lv = 31,bklv = 3,star = 2,mon = {id = 242,desc = "kn-3-7-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-3",id = 2030730,cardId = 1101014,lv = 31,bklv = 3,star = 2,mon = {id = 211,desc = "kn-3-7-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030731,cardId = 1102020,lv = 31,bklv = 3,star = 2,mon = {id = 256,desc = "kn-3-7-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030730,cardId = 1101014,lv = 31,bklv = 3,star = 2,mon = {id = 211,desc = "kn-3-7-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030731,cardId = 1102020,lv = 31,bklv = 3,star = 2,mon = {id = 256,desc = "kn-3-7-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20308] = {
 		[1] = {
-			jlr = {cha = "kn-3",id = 2030810,cardId = 1101001,lv = 32,bklv = 3,star = 2,mon = {id = 206,desc = "kn-3-8-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030811,cardId = 1102002,lv = 32,bklv = 3,star = 2,mon = {id = 246,desc = "kn-3-8-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030810,cardId = 1101001,lv = 32,bklv = 3,star = 2,mon = {id = 206,desc = "kn-3-8-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030811,cardId = 1102002,lv = 32,bklv = 3,star = 2,mon = {id = 246,desc = "kn-3-8-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-3",id = 2030820,cardId = 1101003,lv = 32,bklv = 3,star = 2,mon = {id = 205,desc = "kn-3-8-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030821,cardId = 1102005,lv = 32,bklv = 3,star = 2,mon = {id = 250,desc = "kn-3-8-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030820,cardId = 1101003,lv = 32,bklv = 3,star = 2,mon = {id = 205,desc = "kn-3-8-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030821,cardId = 1102005,lv = 32,bklv = 3,star = 2,mon = {id = 250,desc = "kn-3-8-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-3",id = 2030830,cardId = 1101014,lv = 32,bklv = 3,star = 2,mon = {id = 207,desc = "kn-3-8-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030831,cardId = 1102020,lv = 32,bklv = 3,star = 2,mon = {id = 249,desc = "kn-3-8-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030830,cardId = 1101014,lv = 32,bklv = 3,star = 2,mon = {id = 207,desc = "kn-3-8-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030831,cardId = 1102020,lv = 32,bklv = 3,star = 2,mon = {id = 249,desc = "kn-3-8-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20309] = {
 		[1] = {
-			jlr = {cha = "kn-3",id = 2030910,cardId = 1101001,lv = 33,bklv = 3,star = 2,mon = {id = 212,desc = "kn-3-9-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030911,cardId = 1102002,lv = 33,bklv = 3,star = 2,mon = {id = 257,desc = "kn-3-9-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030910,cardId = 1101001,lv = 33,bklv = 3,star = 2,mon = {id = 212,desc = "kn-3-9-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030911,cardId = 1102002,lv = 33,bklv = 3,star = 2,mon = {id = 257,desc = "kn-3-9-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-3",id = 2030920,cardId = 1101003,lv = 33,bklv = 3,star = 2,mon = {id = 208,desc = "kn-3-9-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030921,cardId = 1102005,lv = 33,bklv = 3,star = 2,mon = {id = 252,desc = "kn-3-9-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030920,cardId = 1101003,lv = 33,bklv = 3,star = 2,mon = {id = 208,desc = "kn-3-9-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030921,cardId = 1102005,lv = 33,bklv = 3,star = 2,mon = {id = 252,desc = "kn-3-9-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-3",id = 2030930,cardId = 1101014,lv = 33,bklv = 3,star = 2,mon = {id = 209,desc = "kn-3-9-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-3",id = 2030931,cardId = 1102020,lv = 33,bklv = 3,star = 2,mon = {id = 253,desc = "kn-3-9-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-3",id = 2030930,cardId = 1101014,lv = 33,bklv = 3,star = 2,mon = {id = 209,desc = "kn-3-9-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-3",id = 2030931,cardId = 1102020,lv = 33,bklv = 3,star = 2,mon = {id = 253,desc = "kn-3-9-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20401] = {
 		[1] = {
-			jlr = {cha = "kn-4",id = 2040110,cardId = 1101001,lv = 35,bklv = 3,star = 3,mon = {id = 212,desc = "kn-4-1-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040111,cardId = 1102002,lv = 35,bklv = 3,star = 3,mon = {id = 257,desc = "kn-4-1-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040110,cardId = 1101001,lv = 35,bklv = 3,star = 3,mon = {id = 212,desc = "kn-4-1-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040111,cardId = 1102002,lv = 35,bklv = 3,star = 3,mon = {id = 257,desc = "kn-4-1-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-4",id = 2040120,cardId = 1101003,lv = 35,bklv = 3,star = 3,mon = {id = 208,desc = "kn-4-1-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040121,cardId = 1102005,lv = 35,bklv = 3,star = 3,mon = {id = 252,desc = "kn-4-1-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040120,cardId = 1101003,lv = 35,bklv = 3,star = 3,mon = {id = 208,desc = "kn-4-1-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040121,cardId = 1102005,lv = 35,bklv = 3,star = 3,mon = {id = 252,desc = "kn-4-1-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-4",id = 2040130,cardId = 1101014,lv = 35,bklv = 3,star = 3,mon = {id = 213,desc = "kn-4-1-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040131,cardId = 1102020,lv = 35,bklv = 3,star = 3,mon = {id = 258,desc = "kn-4-1-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040130,cardId = 1101014,lv = 35,bklv = 3,star = 3,mon = {id = 213,desc = "kn-4-1-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040131,cardId = 1102020,lv = 35,bklv = 3,star = 3,mon = {id = 258,desc = "kn-4-1-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20402] = {
 		[1] = {
-			jlr = {cha = "kn-4",id = 2040210,cardId = 1101001,lv = 36,bklv = 3,star = 3,mon = {id = 201,desc = "kn-4-2-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040211,cardId = 1102002,lv = 36,bklv = 3,star = 3,mon = {id = 241,desc = "kn-4-2-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040210,cardId = 1101001,lv = 36,bklv = 3,star = 3,mon = {id = 201,desc = "kn-4-2-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040211,cardId = 1102002,lv = 36,bklv = 3,star = 3,mon = {id = 241,desc = "kn-4-2-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-4",id = 2040220,cardId = 1101003,lv = 36,bklv = 3,star = 3,mon = {id = 203,desc = "kn-4-2-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040221,cardId = 1102005,lv = 36,bklv = 3,star = 3,mon = {id = 244,desc = "kn-4-2-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040220,cardId = 1101003,lv = 36,bklv = 3,star = 3,mon = {id = 203,desc = "kn-4-2-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040221,cardId = 1102005,lv = 36,bklv = 3,star = 3,mon = {id = 244,desc = "kn-4-2-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-4",id = 2040230,cardId = 1101014,lv = 36,bklv = 3,star = 3,mon = {id = 214,desc = "kn-4-2-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040231,cardId = 1102020,lv = 36,bklv = 3,star = 3,mon = {id = 259,desc = "kn-4-2-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040230,cardId = 1101014,lv = 36,bklv = 3,star = 3,mon = {id = 214,desc = "kn-4-2-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040231,cardId = 1102020,lv = 36,bklv = 3,star = 3,mon = {id = 259,desc = "kn-4-2-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20403] = {
 		[1] = {
-			jlr = {cha = "kn-4",id = 2040310,cardId = 1101001,lv = 37,bklv = 3,star = 3,mon = {id = 212,desc = "kn-4-3-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040311,cardId = 1102002,lv = 37,bklv = 3,star = 3,mon = {id = 257,desc = "kn-4-3-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040310,cardId = 1101001,lv = 37,bklv = 3,star = 3,mon = {id = 212,desc = "kn-4-3-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040311,cardId = 1102002,lv = 37,bklv = 3,star = 3,mon = {id = 257,desc = "kn-4-3-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-4",id = 2040320,cardId = 1101003,lv = 37,bklv = 3,star = 3,mon = {id = 208,desc = "kn-4-3-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040321,cardId = 1102005,lv = 37,bklv = 3,star = 3,mon = {id = 252,desc = "kn-4-3-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040320,cardId = 1101003,lv = 37,bklv = 3,star = 3,mon = {id = 208,desc = "kn-4-3-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040321,cardId = 1102005,lv = 37,bklv = 3,star = 3,mon = {id = 252,desc = "kn-4-3-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-4",id = 2040330,cardId = 1101014,lv = 37,bklv = 3,star = 3,mon = {id = 209,desc = "kn-4-3-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040331,cardId = 1102020,lv = 37,bklv = 3,star = 3,mon = {id = 253,desc = "kn-4-3-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040330,cardId = 1101014,lv = 37,bklv = 3,star = 3,mon = {id = 209,desc = "kn-4-3-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040331,cardId = 1102020,lv = 37,bklv = 3,star = 3,mon = {id = 253,desc = "kn-4-3-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20404] = {
 		[1] = {
-			jlr = {cha = "kn-4",id = 2040410,cardId = 1101001,lv = 38,bklv = 3,star = 3,mon = {id = 215,desc = "kn-4-4-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040411,cardId = 1102002,lv = 38,bklv = 3,star = 3,mon = {id = 260,desc = "kn-4-4-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040410,cardId = 1101001,lv = 38,bklv = 3,star = 3,mon = {id = 215,desc = "kn-4-4-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040411,cardId = 1102002,lv = 38,bklv = 3,star = 3,mon = {id = 260,desc = "kn-4-4-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-4",id = 2040420,cardId = 1101003,lv = 38,bklv = 3,star = 3,mon = {id = 201,desc = "kn-4-4-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040421,cardId = 1102005,lv = 38,bklv = 3,star = 3,mon = {id = 248,desc = "kn-4-4-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040420,cardId = 1101003,lv = 38,bklv = 3,star = 3,mon = {id = 201,desc = "kn-4-4-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040421,cardId = 1102005,lv = 38,bklv = 3,star = 3,mon = {id = 248,desc = "kn-4-4-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-4",id = 2040430,cardId = 1101014,lv = 38,bklv = 3,star = 3,mon = {id = 211,desc = "kn-4-4-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040431,cardId = 1102020,lv = 38,bklv = 3,star = 3,mon = {id = 256,desc = "kn-4-4-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040430,cardId = 1101014,lv = 38,bklv = 3,star = 3,mon = {id = 211,desc = "kn-4-4-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040431,cardId = 1102020,lv = 38,bklv = 3,star = 3,mon = {id = 256,desc = "kn-4-4-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20405] = {
 		[1] = {
-			jlr = {cha = "kn-4",id = 2040510,cardId = 1101001,lv = 39,bklv = 3,star = 3,mon = {id = 206,desc = "kn-4-5-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040511,cardId = 1102002,lv = 39,bklv = 3,star = 3,mon = {id = 246,desc = "kn-4-5-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040510,cardId = 1101001,lv = 39,bklv = 3,star = 3,mon = {id = 206,desc = "kn-4-5-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040511,cardId = 1102002,lv = 39,bklv = 3,star = 3,mon = {id = 246,desc = "kn-4-5-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-4",id = 2040520,cardId = 1101003,lv = 39,bklv = 3,star = 3,mon = {id = 203,desc = "kn-4-5-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040521,cardId = 1102005,lv = 39,bklv = 3,star = 3,mon = {id = 244,desc = "kn-4-5-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040520,cardId = 1101003,lv = 39,bklv = 3,star = 3,mon = {id = 203,desc = "kn-4-5-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040521,cardId = 1102005,lv = 39,bklv = 3,star = 3,mon = {id = 244,desc = "kn-4-5-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-4",id = 2040530,cardId = 1101014,lv = 39,bklv = 3,star = 3,mon = {id = 212,desc = "kn-4-5-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040531,cardId = 1102020,lv = 39,bklv = 3,star = 3,mon = {id = 257,desc = "kn-4-5-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040530,cardId = 1101014,lv = 39,bklv = 3,star = 3,mon = {id = 212,desc = "kn-4-5-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040531,cardId = 1102020,lv = 39,bklv = 3,star = 3,mon = {id = 257,desc = "kn-4-5-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20406] = {
 		[1] = {
-			jlr = {cha = "kn-4",id = 2040610,cardId = 1101001,lv = 40,bklv = 4,star = 3,mon = {id = 209,desc = "kn-4-6-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040611,cardId = 1102002,lv = 40,bklv = 4,star = 3,mon = {id = 253,desc = "kn-4-6-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040610,cardId = 1101001,lv = 40,bklv = 4,star = 3,mon = {id = 209,desc = "kn-4-6-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040611,cardId = 1102002,lv = 40,bklv = 4,star = 3,mon = {id = 253,desc = "kn-4-6-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-4",id = 2040620,cardId = 1101003,lv = 40,bklv = 4,star = 3,mon = {id = 208,desc = "kn-4-6-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040621,cardId = 1102005,lv = 40,bklv = 4,star = 3,mon = {id = 252,desc = "kn-4-6-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040620,cardId = 1101003,lv = 40,bklv = 4,star = 3,mon = {id = 208,desc = "kn-4-6-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040621,cardId = 1102005,lv = 40,bklv = 4,star = 3,mon = {id = 252,desc = "kn-4-6-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-4",id = 2040630,cardId = 1101014,lv = 40,bklv = 4,star = 3,mon = {id = 212,desc = "kn-4-6-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040631,cardId = 1102020,lv = 40,bklv = 4,star = 3,mon = {id = 257,desc = "kn-4-6-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040630,cardId = 1101014,lv = 40,bklv = 4,star = 3,mon = {id = 212,desc = "kn-4-6-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040631,cardId = 1102020,lv = 40,bklv = 4,star = 3,mon = {id = 257,desc = "kn-4-6-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20407] = {
 		[1] = {
-			jlr = {cha = "kn-4",id = 2040710,cardId = 1101001,lv = 41,bklv = 4,star = 3,mon = {id = 213,desc = "kn-4-7-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040711,cardId = 1102002,lv = 41,bklv = 4,star = 3,mon = {id = 258,desc = "kn-4-7-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040710,cardId = 1101001,lv = 41,bklv = 4,star = 3,mon = {id = 213,desc = "kn-4-7-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040711,cardId = 1102002,lv = 41,bklv = 4,star = 3,mon = {id = 258,desc = "kn-4-7-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-4",id = 2040720,cardId = 1101003,lv = 41,bklv = 4,star = 3,mon = {id = 207,desc = "kn-4-7-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040721,cardId = 1102005,lv = 41,bklv = 4,star = 3,mon = {id = 242,desc = "kn-4-7-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040720,cardId = 1101003,lv = 41,bklv = 4,star = 3,mon = {id = 207,desc = "kn-4-7-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040721,cardId = 1102005,lv = 41,bklv = 4,star = 3,mon = {id = 242,desc = "kn-4-7-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-4",id = 2040730,cardId = 1101014,lv = 41,bklv = 4,star = 3,mon = {id = 211,desc = "kn-4-7-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040731,cardId = 1102020,lv = 41,bklv = 4,star = 3,mon = {id = 256,desc = "kn-4-7-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040730,cardId = 1101014,lv = 41,bklv = 4,star = 3,mon = {id = 211,desc = "kn-4-7-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040731,cardId = 1102020,lv = 41,bklv = 4,star = 3,mon = {id = 256,desc = "kn-4-7-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20408] = {
 		[1] = {
-			jlr = {cha = "kn-4",id = 2040810,cardId = 1101001,lv = 42,bklv = 4,star = 3,mon = {id = 207,desc = "kn-4-8-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040811,cardId = 1102002,lv = 42,bklv = 4,star = 3,mon = {id = 251,desc = "kn-4-8-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040810,cardId = 1101001,lv = 42,bklv = 4,star = 3,mon = {id = 207,desc = "kn-4-8-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040811,cardId = 1102002,lv = 42,bklv = 4,star = 3,mon = {id = 251,desc = "kn-4-8-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-4",id = 2040820,cardId = 1101003,lv = 42,bklv = 4,star = 3,mon = {id = 205,desc = "kn-4-8-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040821,cardId = 1102005,lv = 42,bklv = 4,star = 3,mon = {id = 250,desc = "kn-4-8-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040820,cardId = 1101003,lv = 42,bklv = 4,star = 3,mon = {id = 205,desc = "kn-4-8-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040821,cardId = 1102005,lv = 42,bklv = 4,star = 3,mon = {id = 250,desc = "kn-4-8-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-4",id = 2040830,cardId = 1101014,lv = 42,bklv = 4,star = 3,mon = {id = 210,desc = "kn-4-8-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040831,cardId = 1102020,lv = 42,bklv = 4,star = 3,mon = {id = 255,desc = "kn-4-8-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040830,cardId = 1101014,lv = 42,bklv = 4,star = 3,mon = {id = 210,desc = "kn-4-8-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040831,cardId = 1102020,lv = 42,bklv = 4,star = 3,mon = {id = 255,desc = "kn-4-8-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20409] = {
 		[1] = {
-			jlr = {cha = "kn-4",id = 2040910,cardId = 1101001,lv = 43,bklv = 4,star = 3,mon = {id = 212,desc = "kn-4-9-jlr-loc1",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040911,cardId = 1102002,lv = 43,bklv = 4,star = 3,mon = {id = 257,desc = "kn-4-9-shl-loc1",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040910,cardId = 1101001,lv = 43,bklv = 4,star = 3,mon = {id = 212,desc = "kn-4-9-jlr-loc1",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040911,cardId = 1102002,lv = 43,bklv = 4,star = 3,mon = {id = 257,desc = "kn-4-9-shl-loc1",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-4",id = 2040920,cardId = 1101003,lv = 43,bklv = 4,star = 3,mon = {id = 208,desc = "kn-4-9-jlr-loc2",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040921,cardId = 1102005,lv = 43,bklv = 4,star = 3,mon = {id = 252,desc = "kn-4-9-shl-loc2",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040920,cardId = 1101003,lv = 43,bklv = 4,star = 3,mon = {id = 208,desc = "kn-4-9-jlr-loc2",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040921,cardId = 1102005,lv = 43,bklv = 4,star = 3,mon = {id = 252,desc = "kn-4-9-shl-loc2",skillLv = 2,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-4",id = 2040930,cardId = 1101014,lv = 43,bklv = 4,star = 3,mon = {id = 209,desc = "kn-4-9-jlr-loc3",skillLv = 2,exert = 6,suffer = 8}},
-			shl = {cha = "kn-4",id = 2040931,cardId = 1102020,lv = 43,bklv = 4,star = 3,mon = {id = 253,desc = "kn-4-9-shl-loc3",skillLv = 2,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-4",id = 2040930,cardId = 1101014,lv = 43,bklv = 4,star = 3,mon = {id = 209,desc = "kn-4-9-jlr-loc3",skillLv = 2,exert = 12,suffer = 12}},
+			shl = {cha = "kn-4",id = 2040931,cardId = 1102020,lv = 43,bklv = 4,star = 3,mon = {id = 253,desc = "kn-4-9-shl-loc3",skillLv = 2,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20501] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2050110,cardId = 1101007,lv = 45,bklv = 4,star = 3,mon = {id = 212,desc = "kn-5-1-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050111,cardId = 1102012,lv = 45,bklv = 4,star = 3,mon = {id = 257,desc = "kn-5-1-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050110,cardId = 1101007,lv = 45,bklv = 4,star = 3,mon = {id = 212,desc = "kn-5-1-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050111,cardId = 1102012,lv = 45,bklv = 4,star = 3,mon = {id = 257,desc = "kn-5-1-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2050120,cardId = 1101003,lv = 45,bklv = 4,star = 3,mon = {id = 208,desc = "kn-5-1-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050121,cardId = 1102005,lv = 45,bklv = 4,star = 3,mon = {id = 252,desc = "kn-5-1-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050120,cardId = 1101003,lv = 45,bklv = 4,star = 3,mon = {id = 208,desc = "kn-5-1-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050121,cardId = 1102005,lv = 45,bklv = 4,star = 3,mon = {id = 252,desc = "kn-5-1-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2050130,cardId = 1101014,lv = 45,bklv = 4,star = 3,mon = {id = 209,desc = "kn-5-1-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050131,cardId = 1102020,lv = 45,bklv = 4,star = 3,mon = {id = 253,desc = "kn-5-1-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050130,cardId = 1101014,lv = 45,bklv = 4,star = 3,mon = {id = 209,desc = "kn-5-1-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050131,cardId = 1102020,lv = 45,bklv = 4,star = 3,mon = {id = 253,desc = "kn-5-1-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20502] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2050210,cardId = 1101007,lv = 46,bklv = 4,star = 3,mon = {id = 201,desc = "kn-5-2-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050211,cardId = 1102012,lv = 46,bklv = 4,star = 3,mon = {id = 241,desc = "kn-5-2-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050210,cardId = 1101007,lv = 46,bklv = 4,star = 3,mon = {id = 201,desc = "kn-5-2-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050211,cardId = 1102012,lv = 46,bklv = 4,star = 3,mon = {id = 241,desc = "kn-5-2-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2050220,cardId = 1101003,lv = 46,bklv = 4,star = 3,mon = {id = 203,desc = "kn-5-2-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050221,cardId = 1102005,lv = 46,bklv = 4,star = 3,mon = {id = 244,desc = "kn-5-2-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050220,cardId = 1101003,lv = 46,bklv = 4,star = 3,mon = {id = 203,desc = "kn-5-2-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050221,cardId = 1102005,lv = 46,bklv = 4,star = 3,mon = {id = 244,desc = "kn-5-2-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2050230,cardId = 1101014,lv = 46,bklv = 4,star = 3,mon = {id = 214,desc = "kn-5-2-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050231,cardId = 1102020,lv = 46,bklv = 4,star = 3,mon = {id = 259,desc = "kn-5-2-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050230,cardId = 1101014,lv = 46,bklv = 4,star = 3,mon = {id = 214,desc = "kn-5-2-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050231,cardId = 1102020,lv = 46,bklv = 4,star = 3,mon = {id = 259,desc = "kn-5-2-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20503] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2050310,cardId = 1101007,lv = 46,bklv = 4,star = 3,mon = {id = 212,desc = "kn-5-3-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050311,cardId = 1102012,lv = 46,bklv = 4,star = 3,mon = {id = 257,desc = "kn-5-3-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050310,cardId = 1101007,lv = 46,bklv = 4,star = 3,mon = {id = 212,desc = "kn-5-3-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050311,cardId = 1102012,lv = 46,bklv = 4,star = 3,mon = {id = 257,desc = "kn-5-3-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2050320,cardId = 1101003,lv = 46,bklv = 4,star = 3,mon = {id = 208,desc = "kn-5-3-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050321,cardId = 1102005,lv = 46,bklv = 4,star = 3,mon = {id = 252,desc = "kn-5-3-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050320,cardId = 1101003,lv = 46,bklv = 4,star = 3,mon = {id = 208,desc = "kn-5-3-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050321,cardId = 1102005,lv = 46,bklv = 4,star = 3,mon = {id = 252,desc = "kn-5-3-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2050330,cardId = 1101014,lv = 46,bklv = 4,star = 3,mon = {id = 209,desc = "kn-5-3-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050331,cardId = 1102020,lv = 46,bklv = 4,star = 3,mon = {id = 253,desc = "kn-5-3-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050330,cardId = 1101014,lv = 46,bklv = 4,star = 3,mon = {id = 209,desc = "kn-5-3-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050331,cardId = 1102020,lv = 46,bklv = 4,star = 3,mon = {id = 253,desc = "kn-5-3-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20504] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2050410,cardId = 1101007,lv = 47,bklv = 4,star = 3,mon = {id = 215,desc = "kn-5-4-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050411,cardId = 1102012,lv = 47,bklv = 4,star = 3,mon = {id = 260,desc = "kn-5-4-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050410,cardId = 1101007,lv = 47,bklv = 4,star = 3,mon = {id = 215,desc = "kn-5-4-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050411,cardId = 1102012,lv = 47,bklv = 4,star = 3,mon = {id = 260,desc = "kn-5-4-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2050420,cardId = 1101003,lv = 47,bklv = 4,star = 3,mon = {id = 201,desc = "kn-5-4-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050421,cardId = 1102005,lv = 47,bklv = 4,star = 3,mon = {id = 248,desc = "kn-5-4-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050420,cardId = 1101003,lv = 47,bklv = 4,star = 3,mon = {id = 201,desc = "kn-5-4-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050421,cardId = 1102005,lv = 47,bklv = 4,star = 3,mon = {id = 248,desc = "kn-5-4-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2050430,cardId = 1101014,lv = 47,bklv = 4,star = 3,mon = {id = 211,desc = "kn-5-4-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050431,cardId = 1102020,lv = 47,bklv = 4,star = 3,mon = {id = 256,desc = "kn-5-4-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050430,cardId = 1101014,lv = 47,bklv = 4,star = 3,mon = {id = 211,desc = "kn-5-4-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050431,cardId = 1102020,lv = 47,bklv = 4,star = 3,mon = {id = 256,desc = "kn-5-4-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20505] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2050510,cardId = 1101007,lv = 47,bklv = 4,star = 3,mon = {id = 206,desc = "kn-5-5-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050511,cardId = 1102012,lv = 47,bklv = 4,star = 3,mon = {id = 246,desc = "kn-5-5-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050510,cardId = 1101007,lv = 47,bklv = 4,star = 3,mon = {id = 206,desc = "kn-5-5-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050511,cardId = 1102012,lv = 47,bklv = 4,star = 3,mon = {id = 246,desc = "kn-5-5-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2050520,cardId = 1101003,lv = 47,bklv = 4,star = 3,mon = {id = 203,desc = "kn-5-5-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050521,cardId = 1102005,lv = 47,bklv = 4,star = 3,mon = {id = 244,desc = "kn-5-5-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050520,cardId = 1101003,lv = 47,bklv = 4,star = 3,mon = {id = 203,desc = "kn-5-5-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050521,cardId = 1102005,lv = 47,bklv = 4,star = 3,mon = {id = 244,desc = "kn-5-5-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2050530,cardId = 1101014,lv = 47,bklv = 4,star = 3,mon = {id = 212,desc = "kn-5-5-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050531,cardId = 1102020,lv = 47,bklv = 4,star = 3,mon = {id = 257,desc = "kn-5-5-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050530,cardId = 1101014,lv = 47,bklv = 4,star = 3,mon = {id = 212,desc = "kn-5-5-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050531,cardId = 1102020,lv = 47,bklv = 4,star = 3,mon = {id = 257,desc = "kn-5-5-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20506] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2050610,cardId = 1101007,lv = 48,bklv = 4,star = 3,mon = {id = 209,desc = "kn-5-6-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050611,cardId = 1102012,lv = 48,bklv = 4,star = 3,mon = {id = 253,desc = "kn-5-6-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050610,cardId = 1101007,lv = 48,bklv = 4,star = 3,mon = {id = 209,desc = "kn-5-6-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050611,cardId = 1102012,lv = 48,bklv = 4,star = 3,mon = {id = 253,desc = "kn-5-6-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2050620,cardId = 1101003,lv = 48,bklv = 4,star = 3,mon = {id = 208,desc = "kn-5-6-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050621,cardId = 1102005,lv = 48,bklv = 4,star = 3,mon = {id = 252,desc = "kn-5-6-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050620,cardId = 1101003,lv = 48,bklv = 4,star = 3,mon = {id = 208,desc = "kn-5-6-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050621,cardId = 1102005,lv = 48,bklv = 4,star = 3,mon = {id = 252,desc = "kn-5-6-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2050630,cardId = 1101014,lv = 48,bklv = 4,star = 3,mon = {id = 212,desc = "kn-5-6-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050631,cardId = 1102020,lv = 48,bklv = 4,star = 3,mon = {id = 257,desc = "kn-5-6-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050630,cardId = 1101014,lv = 48,bklv = 4,star = 3,mon = {id = 212,desc = "kn-5-6-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050631,cardId = 1102020,lv = 48,bklv = 4,star = 3,mon = {id = 257,desc = "kn-5-6-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20507] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2050710,cardId = 1101007,lv = 48,bklv = 4,star = 3,mon = {id = 213,desc = "kn-5-7-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050711,cardId = 1102012,lv = 48,bklv = 4,star = 3,mon = {id = 258,desc = "kn-5-7-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050710,cardId = 1101007,lv = 48,bklv = 4,star = 3,mon = {id = 213,desc = "kn-5-7-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050711,cardId = 1102012,lv = 48,bklv = 4,star = 3,mon = {id = 258,desc = "kn-5-7-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2050720,cardId = 1101003,lv = 48,bklv = 4,star = 3,mon = {id = 207,desc = "kn-5-7-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050721,cardId = 1102005,lv = 48,bklv = 4,star = 3,mon = {id = 242,desc = "kn-5-7-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050720,cardId = 1101003,lv = 48,bklv = 4,star = 3,mon = {id = 207,desc = "kn-5-7-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050721,cardId = 1102005,lv = 48,bklv = 4,star = 3,mon = {id = 242,desc = "kn-5-7-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2050730,cardId = 1101014,lv = 48,bklv = 4,star = 3,mon = {id = 211,desc = "kn-5-7-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050731,cardId = 1102020,lv = 48,bklv = 4,star = 3,mon = {id = 256,desc = "kn-5-7-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050730,cardId = 1101014,lv = 48,bklv = 4,star = 3,mon = {id = 211,desc = "kn-5-7-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050731,cardId = 1102020,lv = 48,bklv = 4,star = 3,mon = {id = 256,desc = "kn-5-7-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20508] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2050810,cardId = 1101007,lv = 49,bklv = 4,star = 3,mon = {id = 206,desc = "kn-5-8-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050811,cardId = 1102012,lv = 49,bklv = 4,star = 3,mon = {id = 246,desc = "kn-5-8-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050810,cardId = 1101007,lv = 49,bklv = 4,star = 3,mon = {id = 206,desc = "kn-5-8-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050811,cardId = 1102012,lv = 49,bklv = 4,star = 3,mon = {id = 246,desc = "kn-5-8-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2050820,cardId = 1101003,lv = 49,bklv = 4,star = 3,mon = {id = 205,desc = "kn-5-8-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050821,cardId = 1102005,lv = 49,bklv = 4,star = 3,mon = {id = 250,desc = "kn-5-8-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050820,cardId = 1101003,lv = 49,bklv = 4,star = 3,mon = {id = 205,desc = "kn-5-8-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050821,cardId = 1102005,lv = 49,bklv = 4,star = 3,mon = {id = 250,desc = "kn-5-8-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2050830,cardId = 1101014,lv = 49,bklv = 4,star = 3,mon = {id = 207,desc = "kn-5-8-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050831,cardId = 1102020,lv = 49,bklv = 4,star = 3,mon = {id = 249,desc = "kn-5-8-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050830,cardId = 1101014,lv = 49,bklv = 4,star = 3,mon = {id = 207,desc = "kn-5-8-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050831,cardId = 1102020,lv = 49,bklv = 4,star = 3,mon = {id = 249,desc = "kn-5-8-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20509] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2050910,cardId = 1101007,lv = 50,bklv = 5,star = 3,mon = {id = 212,desc = "kn-5-9-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050911,cardId = 1102012,lv = 50,bklv = 5,star = 3,mon = {id = 257,desc = "kn-5-9-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050910,cardId = 1101007,lv = 50,bklv = 5,star = 3,mon = {id = 212,desc = "kn-5-9-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050911,cardId = 1102012,lv = 50,bklv = 5,star = 3,mon = {id = 257,desc = "kn-5-9-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2050920,cardId = 1101003,lv = 50,bklv = 5,star = 3,mon = {id = 208,desc = "kn-5-9-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050921,cardId = 1102005,lv = 50,bklv = 5,star = 3,mon = {id = 252,desc = "kn-5-9-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050920,cardId = 1101003,lv = 50,bklv = 5,star = 3,mon = {id = 208,desc = "kn-5-9-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050921,cardId = 1102005,lv = 50,bklv = 5,star = 3,mon = {id = 252,desc = "kn-5-9-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2050930,cardId = 1101014,lv = 50,bklv = 5,star = 3,mon = {id = 209,desc = "kn-5-9-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2050931,cardId = 1102020,lv = 50,bklv = 5,star = 3,mon = {id = 253,desc = "kn-5-9-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2050930,cardId = 1101014,lv = 50,bklv = 5,star = 3,mon = {id = 209,desc = "kn-5-9-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2050931,cardId = 1102020,lv = 50,bklv = 5,star = 3,mon = {id = 253,desc = "kn-5-9-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20510] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2051010,cardId = 1101007,lv = 50,bklv = 5,star = 3,mon = {id = 201,desc = "kn-5-10-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051011,cardId = 1102012,lv = 50,bklv = 5,star = 3,mon = {id = 241,desc = "kn-5-10-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051010,cardId = 1101007,lv = 50,bklv = 5,star = 3,mon = {id = 201,desc = "kn-5-10-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051011,cardId = 1102012,lv = 50,bklv = 5,star = 3,mon = {id = 241,desc = "kn-5-10-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2051020,cardId = 1101003,lv = 50,bklv = 5,star = 3,mon = {id = 203,desc = "kn-5-10-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051021,cardId = 1102005,lv = 50,bklv = 5,star = 3,mon = {id = 244,desc = "kn-5-10-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051020,cardId = 1101003,lv = 50,bklv = 5,star = 3,mon = {id = 203,desc = "kn-5-10-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051021,cardId = 1102005,lv = 50,bklv = 5,star = 3,mon = {id = 244,desc = "kn-5-10-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2051030,cardId = 1101014,lv = 50,bklv = 5,star = 3,mon = {id = 214,desc = "kn-5-10-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051031,cardId = 1102020,lv = 50,bklv = 5,star = 3,mon = {id = 259,desc = "kn-5-10-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051030,cardId = 1101014,lv = 50,bklv = 5,star = 3,mon = {id = 214,desc = "kn-5-10-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051031,cardId = 1102020,lv = 50,bklv = 5,star = 3,mon = {id = 259,desc = "kn-5-10-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20511] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2051110,cardId = 1101007,lv = 50,bklv = 5,star = 3,mon = {id = 212,desc = "kn-5-11-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051111,cardId = 1102012,lv = 50,bklv = 5,star = 3,mon = {id = 257,desc = "kn-5-11-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051110,cardId = 1101007,lv = 50,bklv = 5,star = 3,mon = {id = 212,desc = "kn-5-11-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051111,cardId = 1102012,lv = 50,bklv = 5,star = 3,mon = {id = 257,desc = "kn-5-11-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2051120,cardId = 1101003,lv = 50,bklv = 5,star = 3,mon = {id = 208,desc = "kn-5-11-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051121,cardId = 1102005,lv = 50,bklv = 5,star = 3,mon = {id = 252,desc = "kn-5-11-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051120,cardId = 1101003,lv = 50,bklv = 5,star = 3,mon = {id = 208,desc = "kn-5-11-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051121,cardId = 1102005,lv = 50,bklv = 5,star = 3,mon = {id = 252,desc = "kn-5-11-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2051130,cardId = 1101014,lv = 50,bklv = 5,star = 3,mon = {id = 209,desc = "kn-5-11-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051131,cardId = 1102020,lv = 50,bklv = 5,star = 3,mon = {id = 253,desc = "kn-5-11-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051130,cardId = 1101014,lv = 50,bklv = 5,star = 3,mon = {id = 209,desc = "kn-5-11-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051131,cardId = 1102020,lv = 50,bklv = 5,star = 3,mon = {id = 253,desc = "kn-5-11-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20512] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2051210,cardId = 1101007,lv = 51,bklv = 5,star = 3,mon = {id = 215,desc = "kn-5-12-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051211,cardId = 1102012,lv = 51,bklv = 5,star = 3,mon = {id = 260,desc = "kn-5-12-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051210,cardId = 1101007,lv = 51,bklv = 5,star = 3,mon = {id = 215,desc = "kn-5-12-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051211,cardId = 1102012,lv = 51,bklv = 5,star = 3,mon = {id = 260,desc = "kn-5-12-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2051220,cardId = 1101003,lv = 51,bklv = 5,star = 3,mon = {id = 201,desc = "kn-5-12-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051221,cardId = 1102005,lv = 51,bklv = 5,star = 3,mon = {id = 248,desc = "kn-5-12-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051220,cardId = 1101003,lv = 51,bklv = 5,star = 3,mon = {id = 201,desc = "kn-5-12-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051221,cardId = 1102005,lv = 51,bklv = 5,star = 3,mon = {id = 248,desc = "kn-5-12-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2051230,cardId = 1101014,lv = 51,bklv = 5,star = 3,mon = {id = 211,desc = "kn-5-12-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051231,cardId = 1102020,lv = 51,bklv = 5,star = 3,mon = {id = 256,desc = "kn-5-12-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051230,cardId = 1101014,lv = 51,bklv = 5,star = 3,mon = {id = 211,desc = "kn-5-12-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051231,cardId = 1102020,lv = 51,bklv = 5,star = 3,mon = {id = 256,desc = "kn-5-12-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20513] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2051310,cardId = 1101007,lv = 52,bklv = 5,star = 3,mon = {id = 209,desc = "kn-5-13-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051311,cardId = 1102012,lv = 52,bklv = 5,star = 3,mon = {id = 253,desc = "kn-5-13-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051310,cardId = 1101007,lv = 52,bklv = 5,star = 3,mon = {id = 209,desc = "kn-5-13-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051311,cardId = 1102012,lv = 52,bklv = 5,star = 3,mon = {id = 253,desc = "kn-5-13-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2051320,cardId = 1101003,lv = 52,bklv = 5,star = 3,mon = {id = 208,desc = "kn-5-13-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051321,cardId = 1102005,lv = 52,bklv = 5,star = 3,mon = {id = 252,desc = "kn-5-13-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051320,cardId = 1101003,lv = 52,bklv = 5,star = 3,mon = {id = 208,desc = "kn-5-13-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051321,cardId = 1102005,lv = 52,bklv = 5,star = 3,mon = {id = 252,desc = "kn-5-13-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2051330,cardId = 1101014,lv = 52,bklv = 5,star = 3,mon = {id = 212,desc = "kn-5-13-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051331,cardId = 1102020,lv = 52,bklv = 5,star = 3,mon = {id = 257,desc = "kn-5-13-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051330,cardId = 1101014,lv = 52,bklv = 5,star = 3,mon = {id = 212,desc = "kn-5-13-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051331,cardId = 1102020,lv = 52,bklv = 5,star = 3,mon = {id = 257,desc = "kn-5-13-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20514] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2051410,cardId = 1101007,lv = 53,bklv = 5,star = 3,mon = {id = 207,desc = "kn-5-14-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051411,cardId = 1102012,lv = 53,bklv = 5,star = 3,mon = {id = 248,desc = "kn-5-14-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051410,cardId = 1101007,lv = 53,bklv = 5,star = 3,mon = {id = 207,desc = "kn-5-14-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051411,cardId = 1102012,lv = 53,bklv = 5,star = 3,mon = {id = 248,desc = "kn-5-14-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2051420,cardId = 1101003,lv = 53,bklv = 5,star = 3,mon = {id = 207,desc = "kn-5-14-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051421,cardId = 1102005,lv = 53,bklv = 5,star = 3,mon = {id = 242,desc = "kn-5-14-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051420,cardId = 1101003,lv = 53,bklv = 5,star = 3,mon = {id = 207,desc = "kn-5-14-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051421,cardId = 1102005,lv = 53,bklv = 5,star = 3,mon = {id = 242,desc = "kn-5-14-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2051430,cardId = 1101014,lv = 53,bklv = 5,star = 3,mon = {id = 211,desc = "kn-5-14-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051431,cardId = 1102020,lv = 53,bklv = 5,star = 3,mon = {id = 256,desc = "kn-5-14-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051430,cardId = 1101014,lv = 53,bklv = 5,star = 3,mon = {id = 211,desc = "kn-5-14-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051431,cardId = 1102020,lv = 53,bklv = 5,star = 3,mon = {id = 256,desc = "kn-5-14-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20515] = {
 		[1] = {
-			jlr = {cha = "kn-5",id = 2051510,cardId = 1101007,lv = 54,bklv = 5,star = 3,mon = {id = 205,desc = "kn-5-15-jlr-loc1",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051511,cardId = 1102012,lv = 54,bklv = 5,star = 3,mon = {id = 240,desc = "kn-5-15-shl-loc1",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051510,cardId = 1101007,lv = 54,bklv = 5,star = 3,mon = {id = 205,desc = "kn-5-15-jlr-loc1",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051511,cardId = 1102012,lv = 54,bklv = 5,star = 3,mon = {id = 240,desc = "kn-5-15-shl-loc1",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-5",id = 2051520,cardId = 1101003,lv = 54,bklv = 5,star = 3,mon = {id = 204,desc = "kn-5-15-jlr-loc2",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051521,cardId = 1102005,lv = 54,bklv = 5,star = 3,mon = {id = 245,desc = "kn-5-15-shl-loc2",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051520,cardId = 1101003,lv = 54,bklv = 5,star = 3,mon = {id = 204,desc = "kn-5-15-jlr-loc2",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051521,cardId = 1102005,lv = 54,bklv = 5,star = 3,mon = {id = 245,desc = "kn-5-15-shl-loc2",skillLv = 3,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-5",id = 2051530,cardId = 1101014,lv = 54,bklv = 5,star = 3,mon = {id = 207,desc = "kn-5-15-jlr-loc3",skillLv = 3,exert = 6,suffer = 8}},
-			shl = {cha = "kn-5",id = 2051531,cardId = 1102020,lv = 54,bklv = 5,star = 3,mon = {id = 249,desc = "kn-5-15-shl-loc3",skillLv = 3,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-5",id = 2051530,cardId = 1101014,lv = 54,bklv = 5,star = 3,mon = {id = 207,desc = "kn-5-15-jlr-loc3",skillLv = 3,exert = 12,suffer = 12}},
+			shl = {cha = "kn-5",id = 2051531,cardId = 1102020,lv = 54,bklv = 5,star = 3,mon = {id = 249,desc = "kn-5-15-shl-loc3",skillLv = 3,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20601] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2060110,cardId = 1101007,lv = 55,bklv = 5,star = 3,mon = {id = 212,desc = "kn-6-1-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060111,cardId = 1102012,lv = 55,bklv = 5,star = 3,mon = {id = 257,desc = "kn-6-1-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060110,cardId = 1101007,lv = 55,bklv = 5,star = 3,mon = {id = 212,desc = "kn-6-1-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060111,cardId = 1102012,lv = 55,bklv = 5,star = 3,mon = {id = 257,desc = "kn-6-1-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2060120,cardId = 1101003,lv = 55,bklv = 5,star = 3,mon = {id = 208,desc = "kn-6-1-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060121,cardId = 1102005,lv = 55,bklv = 5,star = 3,mon = {id = 252,desc = "kn-6-1-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060120,cardId = 1101003,lv = 55,bklv = 5,star = 3,mon = {id = 208,desc = "kn-6-1-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060121,cardId = 1102005,lv = 55,bklv = 5,star = 3,mon = {id = 252,desc = "kn-6-1-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2060130,cardId = 1101014,lv = 55,bklv = 5,star = 3,mon = {id = 213,desc = "kn-6-1-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060131,cardId = 1102020,lv = 55,bklv = 5,star = 3,mon = {id = 258,desc = "kn-6-1-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060130,cardId = 1101014,lv = 55,bklv = 5,star = 3,mon = {id = 213,desc = "kn-6-1-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060131,cardId = 1102020,lv = 55,bklv = 5,star = 3,mon = {id = 258,desc = "kn-6-1-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20602] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2060210,cardId = 1101007,lv = 56,bklv = 5,star = 3,mon = {id = 201,desc = "kn-6-2-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060211,cardId = 1102012,lv = 56,bklv = 5,star = 3,mon = {id = 241,desc = "kn-6-2-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060210,cardId = 1101007,lv = 56,bklv = 5,star = 3,mon = {id = 201,desc = "kn-6-2-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060211,cardId = 1102012,lv = 56,bklv = 5,star = 3,mon = {id = 241,desc = "kn-6-2-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2060220,cardId = 1101003,lv = 56,bklv = 5,star = 3,mon = {id = 203,desc = "kn-6-2-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060221,cardId = 1102005,lv = 56,bklv = 5,star = 3,mon = {id = 244,desc = "kn-6-2-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060220,cardId = 1101003,lv = 56,bklv = 5,star = 3,mon = {id = 203,desc = "kn-6-2-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060221,cardId = 1102005,lv = 56,bklv = 5,star = 3,mon = {id = 244,desc = "kn-6-2-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2060230,cardId = 1101014,lv = 56,bklv = 5,star = 3,mon = {id = 214,desc = "kn-6-2-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060231,cardId = 1102020,lv = 56,bklv = 5,star = 3,mon = {id = 259,desc = "kn-6-2-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060230,cardId = 1101014,lv = 56,bklv = 5,star = 3,mon = {id = 214,desc = "kn-6-2-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060231,cardId = 1102020,lv = 56,bklv = 5,star = 3,mon = {id = 259,desc = "kn-6-2-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20603] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2060310,cardId = 1101007,lv = 56,bklv = 5,star = 3,mon = {id = 212,desc = "kn-6-3-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060311,cardId = 1102012,lv = 56,bklv = 5,star = 3,mon = {id = 257,desc = "kn-6-3-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060310,cardId = 1101007,lv = 56,bklv = 5,star = 3,mon = {id = 212,desc = "kn-6-3-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060311,cardId = 1102012,lv = 56,bklv = 5,star = 3,mon = {id = 257,desc = "kn-6-3-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2060320,cardId = 1101003,lv = 56,bklv = 5,star = 3,mon = {id = 208,desc = "kn-6-3-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060321,cardId = 1102005,lv = 56,bklv = 5,star = 3,mon = {id = 252,desc = "kn-6-3-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060320,cardId = 1101003,lv = 56,bklv = 5,star = 3,mon = {id = 208,desc = "kn-6-3-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060321,cardId = 1102005,lv = 56,bklv = 5,star = 3,mon = {id = 252,desc = "kn-6-3-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2060330,cardId = 1101014,lv = 56,bklv = 5,star = 3,mon = {id = 209,desc = "kn-6-3-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060331,cardId = 1102020,lv = 56,bklv = 5,star = 3,mon = {id = 253,desc = "kn-6-3-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060330,cardId = 1101014,lv = 56,bklv = 5,star = 3,mon = {id = 209,desc = "kn-6-3-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060331,cardId = 1102020,lv = 56,bklv = 5,star = 3,mon = {id = 253,desc = "kn-6-3-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20604] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2060410,cardId = 1101007,lv = 57,bklv = 5,star = 3,mon = {id = 215,desc = "kn-6-4-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060411,cardId = 1102012,lv = 57,bklv = 5,star = 3,mon = {id = 260,desc = "kn-6-4-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060410,cardId = 1101007,lv = 57,bklv = 5,star = 3,mon = {id = 215,desc = "kn-6-4-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060411,cardId = 1102012,lv = 57,bklv = 5,star = 3,mon = {id = 260,desc = "kn-6-4-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2060420,cardId = 1101003,lv = 57,bklv = 5,star = 3,mon = {id = 201,desc = "kn-6-4-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060421,cardId = 1102005,lv = 57,bklv = 5,star = 3,mon = {id = 248,desc = "kn-6-4-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060420,cardId = 1101003,lv = 57,bklv = 5,star = 3,mon = {id = 201,desc = "kn-6-4-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060421,cardId = 1102005,lv = 57,bklv = 5,star = 3,mon = {id = 248,desc = "kn-6-4-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2060430,cardId = 1101014,lv = 57,bklv = 5,star = 3,mon = {id = 211,desc = "kn-6-4-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060431,cardId = 1102020,lv = 57,bklv = 5,star = 3,mon = {id = 256,desc = "kn-6-4-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060430,cardId = 1101014,lv = 57,bklv = 5,star = 3,mon = {id = 211,desc = "kn-6-4-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060431,cardId = 1102020,lv = 57,bklv = 5,star = 3,mon = {id = 256,desc = "kn-6-4-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20605] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2060510,cardId = 1101007,lv = 57,bklv = 5,star = 3,mon = {id = 206,desc = "kn-6-5-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060511,cardId = 1102012,lv = 57,bklv = 5,star = 3,mon = {id = 246,desc = "kn-6-5-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060510,cardId = 1101007,lv = 57,bklv = 5,star = 3,mon = {id = 206,desc = "kn-6-5-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060511,cardId = 1102012,lv = 57,bklv = 5,star = 3,mon = {id = 246,desc = "kn-6-5-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2060520,cardId = 1101003,lv = 57,bklv = 5,star = 3,mon = {id = 203,desc = "kn-6-5-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060521,cardId = 1102005,lv = 57,bklv = 5,star = 3,mon = {id = 244,desc = "kn-6-5-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060520,cardId = 1101003,lv = 57,bklv = 5,star = 3,mon = {id = 203,desc = "kn-6-5-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060521,cardId = 1102005,lv = 57,bklv = 5,star = 3,mon = {id = 244,desc = "kn-6-5-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2060530,cardId = 1101014,lv = 57,bklv = 5,star = 3,mon = {id = 212,desc = "kn-6-5-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060531,cardId = 1102020,lv = 57,bklv = 5,star = 3,mon = {id = 257,desc = "kn-6-5-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060530,cardId = 1101014,lv = 57,bklv = 5,star = 3,mon = {id = 212,desc = "kn-6-5-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060531,cardId = 1102020,lv = 57,bklv = 5,star = 3,mon = {id = 257,desc = "kn-6-5-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20606] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2060610,cardId = 1101007,lv = 58,bklv = 5,star = 3,mon = {id = 209,desc = "kn-6-6-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060611,cardId = 1102012,lv = 58,bklv = 5,star = 3,mon = {id = 253,desc = "kn-6-6-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060610,cardId = 1101007,lv = 58,bklv = 5,star = 3,mon = {id = 209,desc = "kn-6-6-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060611,cardId = 1102012,lv = 58,bklv = 5,star = 3,mon = {id = 253,desc = "kn-6-6-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2060620,cardId = 1101003,lv = 58,bklv = 5,star = 3,mon = {id = 208,desc = "kn-6-6-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060621,cardId = 1102005,lv = 58,bklv = 5,star = 3,mon = {id = 252,desc = "kn-6-6-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060620,cardId = 1101003,lv = 58,bklv = 5,star = 3,mon = {id = 208,desc = "kn-6-6-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060621,cardId = 1102005,lv = 58,bklv = 5,star = 3,mon = {id = 252,desc = "kn-6-6-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2060630,cardId = 1101014,lv = 58,bklv = 5,star = 3,mon = {id = 212,desc = "kn-6-6-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060631,cardId = 1102020,lv = 58,bklv = 5,star = 3,mon = {id = 257,desc = "kn-6-6-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060630,cardId = 1101014,lv = 58,bklv = 5,star = 3,mon = {id = 212,desc = "kn-6-6-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060631,cardId = 1102020,lv = 58,bklv = 5,star = 3,mon = {id = 257,desc = "kn-6-6-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20607] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2060710,cardId = 1101007,lv = 58,bklv = 5,star = 3,mon = {id = 207,desc = "kn-6-7-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060711,cardId = 1102012,lv = 58,bklv = 5,star = 3,mon = {id = 248,desc = "kn-6-7-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060710,cardId = 1101007,lv = 58,bklv = 5,star = 3,mon = {id = 207,desc = "kn-6-7-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060711,cardId = 1102012,lv = 58,bklv = 5,star = 3,mon = {id = 248,desc = "kn-6-7-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2060720,cardId = 1101003,lv = 58,bklv = 5,star = 3,mon = {id = 207,desc = "kn-6-7-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060721,cardId = 1102005,lv = 58,bklv = 5,star = 3,mon = {id = 242,desc = "kn-6-7-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060720,cardId = 1101003,lv = 58,bklv = 5,star = 3,mon = {id = 207,desc = "kn-6-7-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060721,cardId = 1102005,lv = 58,bklv = 5,star = 3,mon = {id = 242,desc = "kn-6-7-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2060730,cardId = 1101014,lv = 58,bklv = 5,star = 3,mon = {id = 211,desc = "kn-6-7-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060731,cardId = 1102020,lv = 58,bklv = 5,star = 3,mon = {id = 256,desc = "kn-6-7-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060730,cardId = 1101014,lv = 58,bklv = 5,star = 3,mon = {id = 211,desc = "kn-6-7-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060731,cardId = 1102020,lv = 58,bklv = 5,star = 3,mon = {id = 256,desc = "kn-6-7-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20608] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2060810,cardId = 1101007,lv = 59,bklv = 5,star = 3,mon = {id = 207,desc = "kn-6-8-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060811,cardId = 1102012,lv = 59,bklv = 5,star = 3,mon = {id = 251,desc = "kn-6-8-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060810,cardId = 1101007,lv = 59,bklv = 5,star = 3,mon = {id = 207,desc = "kn-6-8-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060811,cardId = 1102012,lv = 59,bklv = 5,star = 3,mon = {id = 251,desc = "kn-6-8-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2060820,cardId = 1101003,lv = 59,bklv = 5,star = 3,mon = {id = 205,desc = "kn-6-8-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060821,cardId = 1102005,lv = 59,bklv = 5,star = 3,mon = {id = 250,desc = "kn-6-8-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060820,cardId = 1101003,lv = 59,bklv = 5,star = 3,mon = {id = 205,desc = "kn-6-8-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060821,cardId = 1102005,lv = 59,bklv = 5,star = 3,mon = {id = 250,desc = "kn-6-8-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2060830,cardId = 1101014,lv = 59,bklv = 5,star = 3,mon = {id = 210,desc = "kn-6-8-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060831,cardId = 1102020,lv = 59,bklv = 5,star = 3,mon = {id = 255,desc = "kn-6-8-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060830,cardId = 1101014,lv = 59,bklv = 5,star = 3,mon = {id = 210,desc = "kn-6-8-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060831,cardId = 1102020,lv = 59,bklv = 5,star = 3,mon = {id = 255,desc = "kn-6-8-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20609] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2060910,cardId = 1101007,lv = 60,bklv = 6,star = 3,mon = {id = 212,desc = "kn-6-9-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060911,cardId = 1102012,lv = 60,bklv = 6,star = 3,mon = {id = 257,desc = "kn-6-9-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060910,cardId = 1101007,lv = 60,bklv = 6,star = 3,mon = {id = 212,desc = "kn-6-9-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060911,cardId = 1102012,lv = 60,bklv = 6,star = 3,mon = {id = 257,desc = "kn-6-9-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2060920,cardId = 1101003,lv = 60,bklv = 6,star = 3,mon = {id = 208,desc = "kn-6-9-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060921,cardId = 1102005,lv = 60,bklv = 6,star = 3,mon = {id = 252,desc = "kn-6-9-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060920,cardId = 1101003,lv = 60,bklv = 6,star = 3,mon = {id = 208,desc = "kn-6-9-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060921,cardId = 1102005,lv = 60,bklv = 6,star = 3,mon = {id = 252,desc = "kn-6-9-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2060930,cardId = 1101014,lv = 60,bklv = 6,star = 3,mon = {id = 209,desc = "kn-6-9-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2060931,cardId = 1102020,lv = 60,bklv = 6,star = 3,mon = {id = 253,desc = "kn-6-9-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2060930,cardId = 1101014,lv = 60,bklv = 6,star = 3,mon = {id = 209,desc = "kn-6-9-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2060931,cardId = 1102020,lv = 60,bklv = 6,star = 3,mon = {id = 253,desc = "kn-6-9-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20610] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2061010,cardId = 1101007,lv = 60,bklv = 6,star = 3,mon = {id = 201,desc = "kn-6-10-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061011,cardId = 1102012,lv = 60,bklv = 6,star = 3,mon = {id = 241,desc = "kn-6-10-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061010,cardId = 1101007,lv = 60,bklv = 6,star = 3,mon = {id = 201,desc = "kn-6-10-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061011,cardId = 1102012,lv = 60,bklv = 6,star = 3,mon = {id = 241,desc = "kn-6-10-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2061020,cardId = 1101003,lv = 60,bklv = 6,star = 3,mon = {id = 203,desc = "kn-6-10-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061021,cardId = 1102005,lv = 60,bklv = 6,star = 3,mon = {id = 244,desc = "kn-6-10-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061020,cardId = 1101003,lv = 60,bklv = 6,star = 3,mon = {id = 203,desc = "kn-6-10-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061021,cardId = 1102005,lv = 60,bklv = 6,star = 3,mon = {id = 244,desc = "kn-6-10-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2061030,cardId = 1101014,lv = 60,bklv = 6,star = 3,mon = {id = 214,desc = "kn-6-10-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061031,cardId = 1102020,lv = 60,bklv = 6,star = 3,mon = {id = 259,desc = "kn-6-10-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061030,cardId = 1101014,lv = 60,bklv = 6,star = 3,mon = {id = 214,desc = "kn-6-10-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061031,cardId = 1102020,lv = 60,bklv = 6,star = 3,mon = {id = 259,desc = "kn-6-10-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20611] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2061110,cardId = 1101007,lv = 60,bklv = 6,star = 3,mon = {id = 212,desc = "kn-6-11-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061111,cardId = 1102012,lv = 60,bklv = 6,star = 3,mon = {id = 257,desc = "kn-6-11-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061110,cardId = 1101007,lv = 60,bklv = 6,star = 3,mon = {id = 212,desc = "kn-6-11-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061111,cardId = 1102012,lv = 60,bklv = 6,star = 3,mon = {id = 257,desc = "kn-6-11-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2061120,cardId = 1101003,lv = 60,bklv = 6,star = 3,mon = {id = 208,desc = "kn-6-11-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061121,cardId = 1102005,lv = 60,bklv = 6,star = 3,mon = {id = 252,desc = "kn-6-11-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061120,cardId = 1101003,lv = 60,bklv = 6,star = 3,mon = {id = 208,desc = "kn-6-11-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061121,cardId = 1102005,lv = 60,bklv = 6,star = 3,mon = {id = 252,desc = "kn-6-11-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2061130,cardId = 1101014,lv = 60,bklv = 6,star = 3,mon = {id = 209,desc = "kn-6-11-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061131,cardId = 1102020,lv = 60,bklv = 6,star = 3,mon = {id = 253,desc = "kn-6-11-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061130,cardId = 1101014,lv = 60,bklv = 6,star = 3,mon = {id = 209,desc = "kn-6-11-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061131,cardId = 1102020,lv = 60,bklv = 6,star = 3,mon = {id = 253,desc = "kn-6-11-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20612] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2061210,cardId = 1101007,lv = 61,bklv = 6,star = 3,mon = {id = 215,desc = "kn-6-12-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061211,cardId = 1102012,lv = 61,bklv = 6,star = 3,mon = {id = 260,desc = "kn-6-12-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061210,cardId = 1101007,lv = 61,bklv = 6,star = 3,mon = {id = 215,desc = "kn-6-12-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061211,cardId = 1102012,lv = 61,bklv = 6,star = 3,mon = {id = 260,desc = "kn-6-12-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2061220,cardId = 1101003,lv = 61,bklv = 6,star = 3,mon = {id = 201,desc = "kn-6-12-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061221,cardId = 1102005,lv = 61,bklv = 6,star = 3,mon = {id = 248,desc = "kn-6-12-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061220,cardId = 1101003,lv = 61,bklv = 6,star = 3,mon = {id = 201,desc = "kn-6-12-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061221,cardId = 1102005,lv = 61,bklv = 6,star = 3,mon = {id = 248,desc = "kn-6-12-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2061230,cardId = 1101014,lv = 61,bklv = 6,star = 3,mon = {id = 211,desc = "kn-6-12-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061231,cardId = 1102020,lv = 61,bklv = 6,star = 3,mon = {id = 256,desc = "kn-6-12-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061230,cardId = 1101014,lv = 61,bklv = 6,star = 3,mon = {id = 211,desc = "kn-6-12-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061231,cardId = 1102020,lv = 61,bklv = 6,star = 3,mon = {id = 256,desc = "kn-6-12-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20613] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2061310,cardId = 1101007,lv = 62,bklv = 6,star = 3,mon = {id = 209,desc = "kn-6-13-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061311,cardId = 1102012,lv = 62,bklv = 6,star = 3,mon = {id = 253,desc = "kn-6-13-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061310,cardId = 1101007,lv = 62,bklv = 6,star = 3,mon = {id = 209,desc = "kn-6-13-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061311,cardId = 1102012,lv = 62,bklv = 6,star = 3,mon = {id = 253,desc = "kn-6-13-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2061320,cardId = 1101003,lv = 62,bklv = 6,star = 3,mon = {id = 208,desc = "kn-6-13-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061321,cardId = 1102005,lv = 62,bklv = 6,star = 3,mon = {id = 252,desc = "kn-6-13-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061320,cardId = 1101003,lv = 62,bklv = 6,star = 3,mon = {id = 208,desc = "kn-6-13-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061321,cardId = 1102005,lv = 62,bklv = 6,star = 3,mon = {id = 252,desc = "kn-6-13-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2061330,cardId = 1101014,lv = 62,bklv = 6,star = 3,mon = {id = 212,desc = "kn-6-13-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061331,cardId = 1102020,lv = 62,bklv = 6,star = 3,mon = {id = 257,desc = "kn-6-13-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061330,cardId = 1101014,lv = 62,bklv = 6,star = 3,mon = {id = 212,desc = "kn-6-13-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061331,cardId = 1102020,lv = 62,bklv = 6,star = 3,mon = {id = 257,desc = "kn-6-13-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20614] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2061410,cardId = 1101007,lv = 63,bklv = 6,star = 3,mon = {id = 207,desc = "kn-6-14-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061411,cardId = 1102012,lv = 63,bklv = 6,star = 3,mon = {id = 248,desc = "kn-6-14-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061410,cardId = 1101007,lv = 63,bklv = 6,star = 3,mon = {id = 207,desc = "kn-6-14-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061411,cardId = 1102012,lv = 63,bklv = 6,star = 3,mon = {id = 248,desc = "kn-6-14-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2061420,cardId = 1101005,lv = 63,bklv = 6,star = 3,mon = {id = 207,desc = "kn-6-14-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061421,cardId = 1102011,lv = 63,bklv = 6,star = 3,mon = {id = 242,desc = "kn-6-14-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061420,cardId = 1101005,lv = 63,bklv = 6,star = 3,mon = {id = 207,desc = "kn-6-14-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061421,cardId = 1102011,lv = 63,bklv = 6,star = 3,mon = {id = 242,desc = "kn-6-14-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2061430,cardId = 1101003,lv = 63,bklv = 6,star = 3,mon = {id = 211,desc = "kn-6-14-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061431,cardId = 1102005,lv = 63,bklv = 6,star = 3,mon = {id = 256,desc = "kn-6-14-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061430,cardId = 1101003,lv = 63,bklv = 6,star = 3,mon = {id = 211,desc = "kn-6-14-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061431,cardId = 1102005,lv = 63,bklv = 6,star = 3,mon = {id = 256,desc = "kn-6-14-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20615] = {
 		[1] = {
-			jlr = {cha = "kn-6",id = 2061510,cardId = 1101007,lv = 64,bklv = 6,star = 3,mon = {id = 205,desc = "kn-6-15-jlr-loc1",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061511,cardId = 1102012,lv = 64,bklv = 6,star = 3,mon = {id = 240,desc = "kn-6-15-shl-loc1",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061510,cardId = 1101007,lv = 64,bklv = 6,star = 3,mon = {id = 205,desc = "kn-6-15-jlr-loc1",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061511,cardId = 1102012,lv = 64,bklv = 6,star = 3,mon = {id = 240,desc = "kn-6-15-shl-loc1",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-6",id = 2061520,cardId = 1101005,lv = 64,bklv = 6,star = 3,mon = {id = 204,desc = "kn-6-15-jlr-loc2",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061521,cardId = 1102011,lv = 64,bklv = 6,star = 3,mon = {id = 245,desc = "kn-6-15-shl-loc2",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061520,cardId = 1101005,lv = 64,bklv = 6,star = 3,mon = {id = 204,desc = "kn-6-15-jlr-loc2",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061521,cardId = 1102011,lv = 64,bklv = 6,star = 3,mon = {id = 245,desc = "kn-6-15-shl-loc2",skillLv = 4,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-6",id = 2061530,cardId = 1101010,lv = 64,bklv = 6,star = 3,mon = {id = 207,desc = "kn-6-15-jlr-loc3",skillLv = 4,exert = 6,suffer = 8}},
-			shl = {cha = "kn-6",id = 2061531,cardId = 1102016,lv = 64,bklv = 6,star = 3,mon = {id = 249,desc = "kn-6-15-shl-loc3",skillLv = 4,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-6",id = 2061530,cardId = 1101010,lv = 64,bklv = 6,star = 3,mon = {id = 207,desc = "kn-6-15-jlr-loc3",skillLv = 4,exert = 12,suffer = 12}},
+			shl = {cha = "kn-6",id = 2061531,cardId = 1102016,lv = 64,bklv = 6,star = 3,mon = {id = 249,desc = "kn-6-15-shl-loc3",skillLv = 4,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20701] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2070110,cardId = 1101007,lv = 65,bklv = 6,star = 3,mon = {id = 212,desc = "kn-7-1-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070111,cardId = 1102012,lv = 65,bklv = 6,star = 3,mon = {id = 257,desc = "kn-7-1-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070110,cardId = 1101007,lv = 65,bklv = 6,star = 3,mon = {id = 212,desc = "kn-7-1-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070111,cardId = 1102012,lv = 65,bklv = 6,star = 3,mon = {id = 257,desc = "kn-7-1-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2070120,cardId = 1101003,lv = 65,bklv = 6,star = 3,mon = {id = 208,desc = "kn-7-1-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070121,cardId = 1102005,lv = 65,bklv = 6,star = 3,mon = {id = 252,desc = "kn-7-1-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070120,cardId = 1101003,lv = 65,bklv = 6,star = 3,mon = {id = 208,desc = "kn-7-1-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070121,cardId = 1102005,lv = 65,bklv = 6,star = 3,mon = {id = 252,desc = "kn-7-1-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2070130,cardId = 1101014,lv = 65,bklv = 6,star = 3,mon = {id = 213,desc = "kn-7-1-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070131,cardId = 1102020,lv = 65,bklv = 6,star = 3,mon = {id = 258,desc = "kn-7-1-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070130,cardId = 1101014,lv = 65,bklv = 6,star = 3,mon = {id = 213,desc = "kn-7-1-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070131,cardId = 1102020,lv = 65,bklv = 6,star = 3,mon = {id = 258,desc = "kn-7-1-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20702] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2070210,cardId = 1101007,lv = 66,bklv = 6,star = 3,mon = {id = 201,desc = "kn-7-2-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070211,cardId = 1102012,lv = 66,bklv = 6,star = 3,mon = {id = 241,desc = "kn-7-2-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070210,cardId = 1101007,lv = 66,bklv = 6,star = 3,mon = {id = 201,desc = "kn-7-2-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070211,cardId = 1102012,lv = 66,bklv = 6,star = 3,mon = {id = 241,desc = "kn-7-2-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2070220,cardId = 1101003,lv = 66,bklv = 6,star = 3,mon = {id = 203,desc = "kn-7-2-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070221,cardId = 1102005,lv = 66,bklv = 6,star = 3,mon = {id = 244,desc = "kn-7-2-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070220,cardId = 1101003,lv = 66,bklv = 6,star = 3,mon = {id = 203,desc = "kn-7-2-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070221,cardId = 1102005,lv = 66,bklv = 6,star = 3,mon = {id = 244,desc = "kn-7-2-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2070230,cardId = 1101014,lv = 66,bklv = 6,star = 3,mon = {id = 214,desc = "kn-7-2-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070231,cardId = 1102020,lv = 66,bklv = 6,star = 3,mon = {id = 259,desc = "kn-7-2-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070230,cardId = 1101014,lv = 66,bklv = 6,star = 3,mon = {id = 214,desc = "kn-7-2-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070231,cardId = 1102020,lv = 66,bklv = 6,star = 3,mon = {id = 259,desc = "kn-7-2-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20703] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2070310,cardId = 1101007,lv = 66,bklv = 6,star = 3,mon = {id = 212,desc = "kn-7-3-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070311,cardId = 1102012,lv = 66,bklv = 6,star = 3,mon = {id = 257,desc = "kn-7-3-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070310,cardId = 1101007,lv = 66,bklv = 6,star = 3,mon = {id = 212,desc = "kn-7-3-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070311,cardId = 1102012,lv = 66,bklv = 6,star = 3,mon = {id = 257,desc = "kn-7-3-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2070320,cardId = 1101003,lv = 66,bklv = 6,star = 3,mon = {id = 208,desc = "kn-7-3-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070321,cardId = 1102005,lv = 66,bklv = 6,star = 3,mon = {id = 252,desc = "kn-7-3-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070320,cardId = 1101003,lv = 66,bklv = 6,star = 3,mon = {id = 208,desc = "kn-7-3-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070321,cardId = 1102005,lv = 66,bklv = 6,star = 3,mon = {id = 252,desc = "kn-7-3-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2070330,cardId = 1101014,lv = 66,bklv = 6,star = 3,mon = {id = 209,desc = "kn-7-3-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070331,cardId = 1102020,lv = 66,bklv = 6,star = 3,mon = {id = 253,desc = "kn-7-3-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070330,cardId = 1101014,lv = 66,bklv = 6,star = 3,mon = {id = 209,desc = "kn-7-3-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070331,cardId = 1102020,lv = 66,bklv = 6,star = 3,mon = {id = 253,desc = "kn-7-3-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20704] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2070410,cardId = 1101007,lv = 67,bklv = 6,star = 3,mon = {id = 215,desc = "kn-7-4-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070411,cardId = 1102012,lv = 67,bklv = 6,star = 3,mon = {id = 260,desc = "kn-7-4-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070410,cardId = 1101007,lv = 67,bklv = 6,star = 3,mon = {id = 215,desc = "kn-7-4-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070411,cardId = 1102012,lv = 67,bklv = 6,star = 3,mon = {id = 260,desc = "kn-7-4-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2070420,cardId = 1101003,lv = 67,bklv = 6,star = 3,mon = {id = 201,desc = "kn-7-4-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070421,cardId = 1102005,lv = 67,bklv = 6,star = 3,mon = {id = 248,desc = "kn-7-4-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070420,cardId = 1101003,lv = 67,bklv = 6,star = 3,mon = {id = 201,desc = "kn-7-4-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070421,cardId = 1102005,lv = 67,bklv = 6,star = 3,mon = {id = 248,desc = "kn-7-4-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2070430,cardId = 1101014,lv = 67,bklv = 6,star = 3,mon = {id = 211,desc = "kn-7-4-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070431,cardId = 1102020,lv = 67,bklv = 6,star = 3,mon = {id = 256,desc = "kn-7-4-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070430,cardId = 1101014,lv = 67,bklv = 6,star = 3,mon = {id = 211,desc = "kn-7-4-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070431,cardId = 1102020,lv = 67,bklv = 6,star = 3,mon = {id = 256,desc = "kn-7-4-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20705] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2070510,cardId = 1101007,lv = 67,bklv = 6,star = 3,mon = {id = 206,desc = "kn-7-5-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070511,cardId = 1102012,lv = 67,bklv = 6,star = 3,mon = {id = 246,desc = "kn-7-5-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070510,cardId = 1101007,lv = 67,bklv = 6,star = 3,mon = {id = 206,desc = "kn-7-5-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070511,cardId = 1102012,lv = 67,bklv = 6,star = 3,mon = {id = 246,desc = "kn-7-5-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2070520,cardId = 1101003,lv = 67,bklv = 6,star = 3,mon = {id = 203,desc = "kn-7-5-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070521,cardId = 1102005,lv = 67,bklv = 6,star = 3,mon = {id = 244,desc = "kn-7-5-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070520,cardId = 1101003,lv = 67,bklv = 6,star = 3,mon = {id = 203,desc = "kn-7-5-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070521,cardId = 1102005,lv = 67,bklv = 6,star = 3,mon = {id = 244,desc = "kn-7-5-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2070530,cardId = 1101014,lv = 67,bklv = 6,star = 3,mon = {id = 212,desc = "kn-7-5-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070531,cardId = 1102020,lv = 67,bklv = 6,star = 3,mon = {id = 257,desc = "kn-7-5-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070530,cardId = 1101014,lv = 67,bklv = 6,star = 3,mon = {id = 212,desc = "kn-7-5-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070531,cardId = 1102020,lv = 67,bklv = 6,star = 3,mon = {id = 257,desc = "kn-7-5-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20706] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2070610,cardId = 1101007,lv = 68,bklv = 6,star = 3,mon = {id = 209,desc = "kn-7-6-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070611,cardId = 1102012,lv = 68,bklv = 6,star = 3,mon = {id = 253,desc = "kn-7-6-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070610,cardId = 1101007,lv = 68,bklv = 6,star = 3,mon = {id = 209,desc = "kn-7-6-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070611,cardId = 1102012,lv = 68,bklv = 6,star = 3,mon = {id = 253,desc = "kn-7-6-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2070620,cardId = 1101003,lv = 68,bklv = 6,star = 3,mon = {id = 208,desc = "kn-7-6-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070621,cardId = 1102005,lv = 68,bklv = 6,star = 3,mon = {id = 252,desc = "kn-7-6-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070620,cardId = 1101003,lv = 68,bklv = 6,star = 3,mon = {id = 208,desc = "kn-7-6-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070621,cardId = 1102005,lv = 68,bklv = 6,star = 3,mon = {id = 252,desc = "kn-7-6-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2070630,cardId = 1101014,lv = 68,bklv = 6,star = 3,mon = {id = 212,desc = "kn-7-6-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070631,cardId = 1102020,lv = 68,bklv = 6,star = 3,mon = {id = 257,desc = "kn-7-6-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070630,cardId = 1101014,lv = 68,bklv = 6,star = 3,mon = {id = 212,desc = "kn-7-6-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070631,cardId = 1102020,lv = 68,bklv = 6,star = 3,mon = {id = 257,desc = "kn-7-6-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20707] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2070710,cardId = 1101007,lv = 68,bklv = 6,star = 3,mon = {id = 207,desc = "kn-7-7-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070711,cardId = 1102012,lv = 68,bklv = 6,star = 3,mon = {id = 248,desc = "kn-7-7-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070710,cardId = 1101007,lv = 68,bklv = 6,star = 3,mon = {id = 207,desc = "kn-7-7-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070711,cardId = 1102012,lv = 68,bklv = 6,star = 3,mon = {id = 248,desc = "kn-7-7-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2070720,cardId = 1101003,lv = 68,bklv = 6,star = 3,mon = {id = 207,desc = "kn-7-7-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070721,cardId = 1102005,lv = 68,bklv = 6,star = 3,mon = {id = 242,desc = "kn-7-7-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070720,cardId = 1101003,lv = 68,bklv = 6,star = 3,mon = {id = 207,desc = "kn-7-7-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070721,cardId = 1102005,lv = 68,bklv = 6,star = 3,mon = {id = 242,desc = "kn-7-7-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2070730,cardId = 1101014,lv = 68,bklv = 6,star = 3,mon = {id = 211,desc = "kn-7-7-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070731,cardId = 1102020,lv = 68,bklv = 6,star = 3,mon = {id = 256,desc = "kn-7-7-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070730,cardId = 1101014,lv = 68,bklv = 6,star = 3,mon = {id = 211,desc = "kn-7-7-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070731,cardId = 1102020,lv = 68,bklv = 6,star = 3,mon = {id = 256,desc = "kn-7-7-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20708] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2070810,cardId = 1101007,lv = 69,bklv = 6,star = 3,mon = {id = 207,desc = "kn-7-8-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070811,cardId = 1102012,lv = 69,bklv = 6,star = 3,mon = {id = 251,desc = "kn-7-8-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070810,cardId = 1101007,lv = 69,bklv = 6,star = 3,mon = {id = 207,desc = "kn-7-8-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070811,cardId = 1102012,lv = 69,bklv = 6,star = 3,mon = {id = 251,desc = "kn-7-8-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2070820,cardId = 1101003,lv = 69,bklv = 6,star = 3,mon = {id = 205,desc = "kn-7-8-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070821,cardId = 1102005,lv = 69,bklv = 6,star = 3,mon = {id = 250,desc = "kn-7-8-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070820,cardId = 1101003,lv = 69,bklv = 6,star = 3,mon = {id = 205,desc = "kn-7-8-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070821,cardId = 1102005,lv = 69,bklv = 6,star = 3,mon = {id = 250,desc = "kn-7-8-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2070830,cardId = 1101014,lv = 69,bklv = 6,star = 3,mon = {id = 210,desc = "kn-7-8-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070831,cardId = 1102020,lv = 69,bklv = 6,star = 3,mon = {id = 255,desc = "kn-7-8-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070830,cardId = 1101014,lv = 69,bklv = 6,star = 3,mon = {id = 210,desc = "kn-7-8-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070831,cardId = 1102020,lv = 69,bklv = 6,star = 3,mon = {id = 255,desc = "kn-7-8-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20709] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2070910,cardId = 1101007,lv = 70,bklv = 7,star = 3,mon = {id = 212,desc = "kn-7-9-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070911,cardId = 1102012,lv = 70,bklv = 7,star = 3,mon = {id = 257,desc = "kn-7-9-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070910,cardId = 1101007,lv = 70,bklv = 7,star = 3,mon = {id = 212,desc = "kn-7-9-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070911,cardId = 1102012,lv = 70,bklv = 7,star = 3,mon = {id = 257,desc = "kn-7-9-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2070920,cardId = 1101003,lv = 70,bklv = 7,star = 3,mon = {id = 208,desc = "kn-7-9-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070921,cardId = 1102005,lv = 70,bklv = 7,star = 3,mon = {id = 252,desc = "kn-7-9-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070920,cardId = 1101003,lv = 70,bklv = 7,star = 3,mon = {id = 208,desc = "kn-7-9-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070921,cardId = 1102005,lv = 70,bklv = 7,star = 3,mon = {id = 252,desc = "kn-7-9-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2070930,cardId = 1101014,lv = 70,bklv = 7,star = 3,mon = {id = 209,desc = "kn-7-9-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2070931,cardId = 1102020,lv = 70,bklv = 7,star = 3,mon = {id = 253,desc = "kn-7-9-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2070930,cardId = 1101014,lv = 70,bklv = 7,star = 3,mon = {id = 209,desc = "kn-7-9-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2070931,cardId = 1102020,lv = 70,bklv = 7,star = 3,mon = {id = 253,desc = "kn-7-9-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20710] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2071010,cardId = 1101007,lv = 70,bklv = 7,star = 3,mon = {id = 201,desc = "kn-7-10-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071011,cardId = 1102012,lv = 70,bklv = 7,star = 3,mon = {id = 241,desc = "kn-7-10-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071010,cardId = 1101007,lv = 70,bklv = 7,star = 3,mon = {id = 201,desc = "kn-7-10-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071011,cardId = 1102012,lv = 70,bklv = 7,star = 3,mon = {id = 241,desc = "kn-7-10-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2071020,cardId = 1101003,lv = 70,bklv = 7,star = 3,mon = {id = 203,desc = "kn-7-10-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071021,cardId = 1102005,lv = 70,bklv = 7,star = 3,mon = {id = 244,desc = "kn-7-10-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071020,cardId = 1101003,lv = 70,bklv = 7,star = 3,mon = {id = 203,desc = "kn-7-10-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071021,cardId = 1102005,lv = 70,bklv = 7,star = 3,mon = {id = 244,desc = "kn-7-10-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2071030,cardId = 1101014,lv = 70,bklv = 7,star = 3,mon = {id = 214,desc = "kn-7-10-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071031,cardId = 1102020,lv = 70,bklv = 7,star = 3,mon = {id = 259,desc = "kn-7-10-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071030,cardId = 1101014,lv = 70,bklv = 7,star = 3,mon = {id = 214,desc = "kn-7-10-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071031,cardId = 1102020,lv = 70,bklv = 7,star = 3,mon = {id = 259,desc = "kn-7-10-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20711] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2071110,cardId = 1101007,lv = 70,bklv = 7,star = 3,mon = {id = 212,desc = "kn-7-11-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071111,cardId = 1102012,lv = 70,bklv = 7,star = 3,mon = {id = 257,desc = "kn-7-11-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071110,cardId = 1101007,lv = 70,bklv = 7,star = 3,mon = {id = 212,desc = "kn-7-11-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071111,cardId = 1102012,lv = 70,bklv = 7,star = 3,mon = {id = 257,desc = "kn-7-11-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2071120,cardId = 1101003,lv = 70,bklv = 7,star = 3,mon = {id = 208,desc = "kn-7-11-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071121,cardId = 1102005,lv = 70,bklv = 7,star = 3,mon = {id = 252,desc = "kn-7-11-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071120,cardId = 1101003,lv = 70,bklv = 7,star = 3,mon = {id = 208,desc = "kn-7-11-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071121,cardId = 1102005,lv = 70,bklv = 7,star = 3,mon = {id = 252,desc = "kn-7-11-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2071130,cardId = 1101014,lv = 70,bklv = 7,star = 3,mon = {id = 209,desc = "kn-7-11-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071131,cardId = 1102020,lv = 70,bklv = 7,star = 3,mon = {id = 253,desc = "kn-7-11-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071130,cardId = 1101014,lv = 70,bklv = 7,star = 3,mon = {id = 209,desc = "kn-7-11-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071131,cardId = 1102020,lv = 70,bklv = 7,star = 3,mon = {id = 253,desc = "kn-7-11-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20712] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2071210,cardId = 1101007,lv = 71,bklv = 7,star = 3,mon = {id = 215,desc = "kn-7-12-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071211,cardId = 1102012,lv = 71,bklv = 7,star = 3,mon = {id = 260,desc = "kn-7-12-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071210,cardId = 1101007,lv = 71,bklv = 7,star = 3,mon = {id = 215,desc = "kn-7-12-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071211,cardId = 1102012,lv = 71,bklv = 7,star = 3,mon = {id = 260,desc = "kn-7-12-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2071220,cardId = 1101003,lv = 71,bklv = 7,star = 3,mon = {id = 201,desc = "kn-7-12-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071221,cardId = 1102005,lv = 71,bklv = 7,star = 3,mon = {id = 248,desc = "kn-7-12-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071220,cardId = 1101003,lv = 71,bklv = 7,star = 3,mon = {id = 201,desc = "kn-7-12-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071221,cardId = 1102005,lv = 71,bklv = 7,star = 3,mon = {id = 248,desc = "kn-7-12-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2071230,cardId = 1101014,lv = 71,bklv = 7,star = 3,mon = {id = 211,desc = "kn-7-12-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071231,cardId = 1102020,lv = 71,bklv = 7,star = 3,mon = {id = 256,desc = "kn-7-12-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071230,cardId = 1101014,lv = 71,bklv = 7,star = 3,mon = {id = 211,desc = "kn-7-12-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071231,cardId = 1102020,lv = 71,bklv = 7,star = 3,mon = {id = 256,desc = "kn-7-12-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20713] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2071310,cardId = 1101007,lv = 72,bklv = 7,star = 3,mon = {id = 209,desc = "kn-7-13-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071311,cardId = 1102012,lv = 72,bklv = 7,star = 3,mon = {id = 253,desc = "kn-7-13-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071310,cardId = 1101007,lv = 72,bklv = 7,star = 3,mon = {id = 209,desc = "kn-7-13-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071311,cardId = 1102012,lv = 72,bklv = 7,star = 3,mon = {id = 253,desc = "kn-7-13-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2071320,cardId = 1101003,lv = 72,bklv = 7,star = 3,mon = {id = 208,desc = "kn-7-13-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071321,cardId = 1102005,lv = 72,bklv = 7,star = 3,mon = {id = 252,desc = "kn-7-13-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071320,cardId = 1101003,lv = 72,bklv = 7,star = 3,mon = {id = 208,desc = "kn-7-13-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071321,cardId = 1102005,lv = 72,bklv = 7,star = 3,mon = {id = 252,desc = "kn-7-13-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2071330,cardId = 1101014,lv = 72,bklv = 7,star = 3,mon = {id = 212,desc = "kn-7-13-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071331,cardId = 1102020,lv = 72,bklv = 7,star = 3,mon = {id = 257,desc = "kn-7-13-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071330,cardId = 1101014,lv = 72,bklv = 7,star = 3,mon = {id = 212,desc = "kn-7-13-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071331,cardId = 1102020,lv = 72,bklv = 7,star = 3,mon = {id = 257,desc = "kn-7-13-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20714] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2071410,cardId = 1101007,lv = 73,bklv = 7,star = 3,mon = {id = 207,desc = "kn-7-14-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071411,cardId = 1102012,lv = 73,bklv = 7,star = 3,mon = {id = 248,desc = "kn-7-14-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071410,cardId = 1101007,lv = 73,bklv = 7,star = 3,mon = {id = 207,desc = "kn-7-14-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071411,cardId = 1102012,lv = 73,bklv = 7,star = 3,mon = {id = 248,desc = "kn-7-14-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2071420,cardId = 1101005,lv = 73,bklv = 7,star = 3,mon = {id = 207,desc = "kn-7-14-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071421,cardId = 1102011,lv = 73,bklv = 7,star = 3,mon = {id = 242,desc = "kn-7-14-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071420,cardId = 1101005,lv = 73,bklv = 7,star = 3,mon = {id = 207,desc = "kn-7-14-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071421,cardId = 1102011,lv = 73,bklv = 7,star = 3,mon = {id = 242,desc = "kn-7-14-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2071430,cardId = 1101003,lv = 73,bklv = 7,star = 3,mon = {id = 211,desc = "kn-7-14-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071431,cardId = 1102005,lv = 73,bklv = 7,star = 3,mon = {id = 256,desc = "kn-7-14-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071430,cardId = 1101003,lv = 73,bklv = 7,star = 3,mon = {id = 211,desc = "kn-7-14-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071431,cardId = 1102005,lv = 73,bklv = 7,star = 3,mon = {id = 256,desc = "kn-7-14-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20715] = {
 		[1] = {
-			jlr = {cha = "kn-7",id = 2071510,cardId = 1101007,lv = 74,bklv = 7,star = 3,mon = {id = 205,desc = "kn-7-15-jlr-loc1",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071511,cardId = 1102012,lv = 74,bklv = 7,star = 3,mon = {id = 240,desc = "kn-7-15-shl-loc1",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071510,cardId = 1101007,lv = 74,bklv = 7,star = 3,mon = {id = 205,desc = "kn-7-15-jlr-loc1",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071511,cardId = 1102012,lv = 74,bklv = 7,star = 3,mon = {id = 240,desc = "kn-7-15-shl-loc1",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-7",id = 2071520,cardId = 1101005,lv = 74,bklv = 7,star = 3,mon = {id = 204,desc = "kn-7-15-jlr-loc2",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071521,cardId = 1102011,lv = 74,bklv = 7,star = 3,mon = {id = 245,desc = "kn-7-15-shl-loc2",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071520,cardId = 1101005,lv = 74,bklv = 7,star = 3,mon = {id = 204,desc = "kn-7-15-jlr-loc2",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071521,cardId = 1102011,lv = 74,bklv = 7,star = 3,mon = {id = 245,desc = "kn-7-15-shl-loc2",skillLv = 5,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-7",id = 2071530,cardId = 1101010,lv = 74,bklv = 7,star = 3,mon = {id = 207,desc = "kn-7-15-jlr-loc3",skillLv = 5,exert = 6,suffer = 8}},
-			shl = {cha = "kn-7",id = 2071531,cardId = 1102016,lv = 74,bklv = 7,star = 3,mon = {id = 249,desc = "kn-7-15-shl-loc3",skillLv = 5,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-7",id = 2071530,cardId = 1101010,lv = 74,bklv = 7,star = 3,mon = {id = 207,desc = "kn-7-15-jlr-loc3",skillLv = 5,exert = 12,suffer = 12}},
+			shl = {cha = "kn-7",id = 2071531,cardId = 1102016,lv = 74,bklv = 7,star = 3,mon = {id = 249,desc = "kn-7-15-shl-loc3",skillLv = 5,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20801] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2080110,cardId = 1101007,lv = 75,bklv = 7,star = 3,mon = {id = 212,desc = "kn-8-1-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080111,cardId = 1102012,lv = 75,bklv = 7,star = 3,mon = {id = 257,desc = "kn-8-1-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080110,cardId = 1101007,lv = 75,bklv = 7,star = 3,mon = {id = 212,desc = "kn-8-1-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080111,cardId = 1102012,lv = 75,bklv = 7,star = 3,mon = {id = 257,desc = "kn-8-1-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2080120,cardId = 1101003,lv = 75,bklv = 7,star = 3,mon = {id = 208,desc = "kn-8-1-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080121,cardId = 1102005,lv = 75,bklv = 7,star = 3,mon = {id = 252,desc = "kn-8-1-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080120,cardId = 1101003,lv = 75,bklv = 7,star = 3,mon = {id = 208,desc = "kn-8-1-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080121,cardId = 1102005,lv = 75,bklv = 7,star = 3,mon = {id = 252,desc = "kn-8-1-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2080130,cardId = 1101014,lv = 75,bklv = 7,star = 3,mon = {id = 213,desc = "kn-8-1-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080131,cardId = 1102020,lv = 75,bklv = 7,star = 3,mon = {id = 258,desc = "kn-8-1-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080130,cardId = 1101014,lv = 75,bklv = 7,star = 3,mon = {id = 213,desc = "kn-8-1-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080131,cardId = 1102020,lv = 75,bklv = 7,star = 3,mon = {id = 258,desc = "kn-8-1-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20802] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2080210,cardId = 1101007,lv = 76,bklv = 7,star = 3,mon = {id = 201,desc = "kn-8-2-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080211,cardId = 1102012,lv = 76,bklv = 7,star = 3,mon = {id = 241,desc = "kn-8-2-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080210,cardId = 1101007,lv = 76,bklv = 7,star = 3,mon = {id = 201,desc = "kn-8-2-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080211,cardId = 1102012,lv = 76,bklv = 7,star = 3,mon = {id = 241,desc = "kn-8-2-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2080220,cardId = 1101003,lv = 76,bklv = 7,star = 3,mon = {id = 203,desc = "kn-8-2-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080221,cardId = 1102005,lv = 76,bklv = 7,star = 3,mon = {id = 244,desc = "kn-8-2-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080220,cardId = 1101003,lv = 76,bklv = 7,star = 3,mon = {id = 203,desc = "kn-8-2-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080221,cardId = 1102005,lv = 76,bklv = 7,star = 3,mon = {id = 244,desc = "kn-8-2-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2080230,cardId = 1101014,lv = 76,bklv = 7,star = 3,mon = {id = 214,desc = "kn-8-2-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080231,cardId = 1102020,lv = 76,bklv = 7,star = 3,mon = {id = 259,desc = "kn-8-2-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080230,cardId = 1101014,lv = 76,bklv = 7,star = 3,mon = {id = 214,desc = "kn-8-2-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080231,cardId = 1102020,lv = 76,bklv = 7,star = 3,mon = {id = 259,desc = "kn-8-2-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20803] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2080310,cardId = 1101007,lv = 76,bklv = 7,star = 3,mon = {id = 212,desc = "kn-8-3-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080311,cardId = 1102012,lv = 76,bklv = 7,star = 3,mon = {id = 257,desc = "kn-8-3-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080310,cardId = 1101007,lv = 76,bklv = 7,star = 3,mon = {id = 212,desc = "kn-8-3-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080311,cardId = 1102012,lv = 76,bklv = 7,star = 3,mon = {id = 257,desc = "kn-8-3-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2080320,cardId = 1101003,lv = 76,bklv = 7,star = 3,mon = {id = 208,desc = "kn-8-3-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080321,cardId = 1102005,lv = 76,bklv = 7,star = 3,mon = {id = 252,desc = "kn-8-3-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080320,cardId = 1101003,lv = 76,bklv = 7,star = 3,mon = {id = 208,desc = "kn-8-3-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080321,cardId = 1102005,lv = 76,bklv = 7,star = 3,mon = {id = 252,desc = "kn-8-3-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2080330,cardId = 1101014,lv = 76,bklv = 7,star = 3,mon = {id = 209,desc = "kn-8-3-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080331,cardId = 1102020,lv = 76,bklv = 7,star = 3,mon = {id = 253,desc = "kn-8-3-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080330,cardId = 1101014,lv = 76,bklv = 7,star = 3,mon = {id = 209,desc = "kn-8-3-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080331,cardId = 1102020,lv = 76,bklv = 7,star = 3,mon = {id = 253,desc = "kn-8-3-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20804] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2080410,cardId = 1101007,lv = 77,bklv = 7,star = 3,mon = {id = 215,desc = "kn-8-4-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080411,cardId = 1102012,lv = 77,bklv = 7,star = 3,mon = {id = 260,desc = "kn-8-4-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080410,cardId = 1101007,lv = 77,bklv = 7,star = 3,mon = {id = 215,desc = "kn-8-4-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080411,cardId = 1102012,lv = 77,bklv = 7,star = 3,mon = {id = 260,desc = "kn-8-4-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2080420,cardId = 1101003,lv = 77,bklv = 7,star = 3,mon = {id = 201,desc = "kn-8-4-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080421,cardId = 1102005,lv = 77,bklv = 7,star = 3,mon = {id = 248,desc = "kn-8-4-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080420,cardId = 1101003,lv = 77,bklv = 7,star = 3,mon = {id = 201,desc = "kn-8-4-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080421,cardId = 1102005,lv = 77,bklv = 7,star = 3,mon = {id = 248,desc = "kn-8-4-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2080430,cardId = 1101014,lv = 77,bklv = 7,star = 3,mon = {id = 211,desc = "kn-8-4-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080431,cardId = 1102020,lv = 77,bklv = 7,star = 3,mon = {id = 256,desc = "kn-8-4-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080430,cardId = 1101014,lv = 77,bklv = 7,star = 3,mon = {id = 211,desc = "kn-8-4-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080431,cardId = 1102020,lv = 77,bklv = 7,star = 3,mon = {id = 256,desc = "kn-8-4-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20805] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2080510,cardId = 1101007,lv = 77,bklv = 7,star = 3,mon = {id = 206,desc = "kn-8-5-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080511,cardId = 1102012,lv = 77,bklv = 7,star = 3,mon = {id = 246,desc = "kn-8-5-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080510,cardId = 1101007,lv = 77,bklv = 7,star = 3,mon = {id = 206,desc = "kn-8-5-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080511,cardId = 1102012,lv = 77,bklv = 7,star = 3,mon = {id = 246,desc = "kn-8-5-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2080520,cardId = 1101003,lv = 77,bklv = 7,star = 3,mon = {id = 203,desc = "kn-8-5-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080521,cardId = 1102005,lv = 77,bklv = 7,star = 3,mon = {id = 244,desc = "kn-8-5-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080520,cardId = 1101003,lv = 77,bklv = 7,star = 3,mon = {id = 203,desc = "kn-8-5-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080521,cardId = 1102005,lv = 77,bklv = 7,star = 3,mon = {id = 244,desc = "kn-8-5-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2080530,cardId = 1101014,lv = 77,bklv = 7,star = 3,mon = {id = 212,desc = "kn-8-5-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080531,cardId = 1102020,lv = 77,bklv = 7,star = 3,mon = {id = 257,desc = "kn-8-5-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080530,cardId = 1101014,lv = 77,bklv = 7,star = 3,mon = {id = 212,desc = "kn-8-5-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080531,cardId = 1102020,lv = 77,bklv = 7,star = 3,mon = {id = 257,desc = "kn-8-5-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20806] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2080610,cardId = 1101007,lv = 78,bklv = 7,star = 3,mon = {id = 209,desc = "kn-8-6-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080611,cardId = 1102012,lv = 78,bklv = 7,star = 3,mon = {id = 253,desc = "kn-8-6-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080610,cardId = 1101007,lv = 78,bklv = 7,star = 3,mon = {id = 209,desc = "kn-8-6-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080611,cardId = 1102012,lv = 78,bklv = 7,star = 3,mon = {id = 253,desc = "kn-8-6-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2080620,cardId = 1101003,lv = 78,bklv = 7,star = 3,mon = {id = 208,desc = "kn-8-6-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080621,cardId = 1102005,lv = 78,bklv = 7,star = 3,mon = {id = 252,desc = "kn-8-6-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080620,cardId = 1101003,lv = 78,bklv = 7,star = 3,mon = {id = 208,desc = "kn-8-6-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080621,cardId = 1102005,lv = 78,bklv = 7,star = 3,mon = {id = 252,desc = "kn-8-6-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2080630,cardId = 1101014,lv = 78,bklv = 7,star = 3,mon = {id = 212,desc = "kn-8-6-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080631,cardId = 1102020,lv = 78,bklv = 7,star = 3,mon = {id = 257,desc = "kn-8-6-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080630,cardId = 1101014,lv = 78,bklv = 7,star = 3,mon = {id = 212,desc = "kn-8-6-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080631,cardId = 1102020,lv = 78,bklv = 7,star = 3,mon = {id = 257,desc = "kn-8-6-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20807] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2080710,cardId = 1101007,lv = 78,bklv = 7,star = 3,mon = {id = 207,desc = "kn-8-7-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080711,cardId = 1102012,lv = 78,bklv = 7,star = 3,mon = {id = 248,desc = "kn-8-7-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080710,cardId = 1101007,lv = 78,bklv = 7,star = 3,mon = {id = 207,desc = "kn-8-7-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080711,cardId = 1102012,lv = 78,bklv = 7,star = 3,mon = {id = 248,desc = "kn-8-7-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2080720,cardId = 1101003,lv = 78,bklv = 7,star = 3,mon = {id = 207,desc = "kn-8-7-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080721,cardId = 1102005,lv = 78,bklv = 7,star = 3,mon = {id = 242,desc = "kn-8-7-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080720,cardId = 1101003,lv = 78,bklv = 7,star = 3,mon = {id = 207,desc = "kn-8-7-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080721,cardId = 1102005,lv = 78,bklv = 7,star = 3,mon = {id = 242,desc = "kn-8-7-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2080730,cardId = 1101014,lv = 78,bklv = 7,star = 3,mon = {id = 211,desc = "kn-8-7-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080731,cardId = 1102020,lv = 78,bklv = 7,star = 3,mon = {id = 256,desc = "kn-8-7-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080730,cardId = 1101014,lv = 78,bklv = 7,star = 3,mon = {id = 211,desc = "kn-8-7-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080731,cardId = 1102020,lv = 78,bklv = 7,star = 3,mon = {id = 256,desc = "kn-8-7-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20808] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2080810,cardId = 1101007,lv = 79,bklv = 7,star = 3,mon = {id = 207,desc = "kn-8-8-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080811,cardId = 1102012,lv = 79,bklv = 7,star = 3,mon = {id = 251,desc = "kn-8-8-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080810,cardId = 1101007,lv = 79,bklv = 7,star = 3,mon = {id = 207,desc = "kn-8-8-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080811,cardId = 1102012,lv = 79,bklv = 7,star = 3,mon = {id = 251,desc = "kn-8-8-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2080820,cardId = 1101003,lv = 79,bklv = 7,star = 3,mon = {id = 205,desc = "kn-8-8-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080821,cardId = 1102005,lv = 79,bklv = 7,star = 3,mon = {id = 250,desc = "kn-8-8-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080820,cardId = 1101003,lv = 79,bklv = 7,star = 3,mon = {id = 205,desc = "kn-8-8-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080821,cardId = 1102005,lv = 79,bklv = 7,star = 3,mon = {id = 250,desc = "kn-8-8-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2080830,cardId = 1101014,lv = 79,bklv = 7,star = 3,mon = {id = 210,desc = "kn-8-8-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080831,cardId = 1102020,lv = 79,bklv = 7,star = 4,mon = {id = 255,desc = "kn-8-8-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080830,cardId = 1101014,lv = 79,bklv = 7,star = 3,mon = {id = 210,desc = "kn-8-8-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080831,cardId = 1102020,lv = 79,bklv = 7,star = 4,mon = {id = 255,desc = "kn-8-8-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20809] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2080910,cardId = 1101007,lv = 80,bklv = 8,star = 4,mon = {id = 212,desc = "kn-8-9-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080911,cardId = 1102012,lv = 80,bklv = 8,star = 4,mon = {id = 257,desc = "kn-8-9-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080910,cardId = 1101007,lv = 80,bklv = 8,star = 4,mon = {id = 212,desc = "kn-8-9-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080911,cardId = 1102012,lv = 80,bklv = 8,star = 4,mon = {id = 257,desc = "kn-8-9-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2080920,cardId = 1101003,lv = 80,bklv = 8,star = 4,mon = {id = 208,desc = "kn-8-9-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080921,cardId = 1102005,lv = 80,bklv = 8,star = 4,mon = {id = 252,desc = "kn-8-9-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080920,cardId = 1101003,lv = 80,bklv = 8,star = 4,mon = {id = 208,desc = "kn-8-9-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080921,cardId = 1102005,lv = 80,bklv = 8,star = 4,mon = {id = 252,desc = "kn-8-9-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2080930,cardId = 1101014,lv = 80,bklv = 8,star = 4,mon = {id = 209,desc = "kn-8-9-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2080931,cardId = 1102020,lv = 80,bklv = 8,star = 4,mon = {id = 253,desc = "kn-8-9-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2080930,cardId = 1101014,lv = 80,bklv = 8,star = 4,mon = {id = 209,desc = "kn-8-9-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2080931,cardId = 1102020,lv = 80,bklv = 8,star = 4,mon = {id = 253,desc = "kn-8-9-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20810] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2081010,cardId = 1101007,lv = 80,bklv = 8,star = 4,mon = {id = 201,desc = "kn-8-10-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081011,cardId = 1102012,lv = 80,bklv = 8,star = 4,mon = {id = 241,desc = "kn-8-10-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081010,cardId = 1101007,lv = 80,bklv = 8,star = 4,mon = {id = 201,desc = "kn-8-10-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081011,cardId = 1102012,lv = 80,bklv = 8,star = 4,mon = {id = 241,desc = "kn-8-10-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2081020,cardId = 1101003,lv = 80,bklv = 8,star = 4,mon = {id = 203,desc = "kn-8-10-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081021,cardId = 1102005,lv = 80,bklv = 8,star = 4,mon = {id = 244,desc = "kn-8-10-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081020,cardId = 1101003,lv = 80,bklv = 8,star = 4,mon = {id = 203,desc = "kn-8-10-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081021,cardId = 1102005,lv = 80,bklv = 8,star = 4,mon = {id = 244,desc = "kn-8-10-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2081030,cardId = 1101014,lv = 80,bklv = 8,star = 4,mon = {id = 214,desc = "kn-8-10-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081031,cardId = 1102020,lv = 80,bklv = 8,star = 4,mon = {id = 259,desc = "kn-8-10-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081030,cardId = 1101014,lv = 80,bklv = 8,star = 4,mon = {id = 214,desc = "kn-8-10-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081031,cardId = 1102020,lv = 80,bklv = 8,star = 4,mon = {id = 259,desc = "kn-8-10-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20811] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2081110,cardId = 1101007,lv = 80,bklv = 8,star = 4,mon = {id = 212,desc = "kn-8-11-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081111,cardId = 1102012,lv = 80,bklv = 8,star = 4,mon = {id = 257,desc = "kn-8-11-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081110,cardId = 1101007,lv = 80,bklv = 8,star = 4,mon = {id = 212,desc = "kn-8-11-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081111,cardId = 1102012,lv = 80,bklv = 8,star = 4,mon = {id = 257,desc = "kn-8-11-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2081120,cardId = 1101003,lv = 80,bklv = 8,star = 4,mon = {id = 208,desc = "kn-8-11-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081121,cardId = 1102005,lv = 80,bklv = 8,star = 4,mon = {id = 252,desc = "kn-8-11-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081120,cardId = 1101003,lv = 80,bklv = 8,star = 4,mon = {id = 208,desc = "kn-8-11-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081121,cardId = 1102005,lv = 80,bklv = 8,star = 4,mon = {id = 252,desc = "kn-8-11-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2081130,cardId = 1101014,lv = 80,bklv = 8,star = 4,mon = {id = 209,desc = "kn-8-11-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081131,cardId = 1102020,lv = 80,bklv = 8,star = 4,mon = {id = 253,desc = "kn-8-11-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081130,cardId = 1101014,lv = 80,bklv = 8,star = 4,mon = {id = 209,desc = "kn-8-11-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081131,cardId = 1102020,lv = 80,bklv = 8,star = 4,mon = {id = 253,desc = "kn-8-11-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20812] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2081210,cardId = 1101007,lv = 81,bklv = 8,star = 4,mon = {id = 215,desc = "kn-8-12-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081211,cardId = 1102012,lv = 81,bklv = 8,star = 4,mon = {id = 260,desc = "kn-8-12-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081210,cardId = 1101007,lv = 81,bklv = 8,star = 4,mon = {id = 215,desc = "kn-8-12-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081211,cardId = 1102012,lv = 81,bklv = 8,star = 4,mon = {id = 260,desc = "kn-8-12-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2081220,cardId = 1101003,lv = 81,bklv = 8,star = 4,mon = {id = 201,desc = "kn-8-12-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081221,cardId = 1102005,lv = 81,bklv = 8,star = 4,mon = {id = 248,desc = "kn-8-12-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081220,cardId = 1101003,lv = 81,bklv = 8,star = 4,mon = {id = 201,desc = "kn-8-12-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081221,cardId = 1102005,lv = 81,bklv = 8,star = 4,mon = {id = 248,desc = "kn-8-12-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2081230,cardId = 1101014,lv = 81,bklv = 8,star = 4,mon = {id = 211,desc = "kn-8-12-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081231,cardId = 1102020,lv = 81,bklv = 8,star = 4,mon = {id = 256,desc = "kn-8-12-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081230,cardId = 1101014,lv = 81,bklv = 8,star = 4,mon = {id = 211,desc = "kn-8-12-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081231,cardId = 1102020,lv = 81,bklv = 8,star = 4,mon = {id = 256,desc = "kn-8-12-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20813] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2081310,cardId = 1101007,lv = 82,bklv = 8,star = 4,mon = {id = 209,desc = "kn-8-13-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081311,cardId = 1102012,lv = 82,bklv = 8,star = 4,mon = {id = 253,desc = "kn-8-13-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081310,cardId = 1101007,lv = 82,bklv = 8,star = 4,mon = {id = 209,desc = "kn-8-13-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081311,cardId = 1102012,lv = 82,bklv = 8,star = 4,mon = {id = 253,desc = "kn-8-13-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2081320,cardId = 1101003,lv = 82,bklv = 8,star = 4,mon = {id = 208,desc = "kn-8-13-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081321,cardId = 1102005,lv = 82,bklv = 8,star = 4,mon = {id = 252,desc = "kn-8-13-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081320,cardId = 1101003,lv = 82,bklv = 8,star = 4,mon = {id = 208,desc = "kn-8-13-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081321,cardId = 1102005,lv = 82,bklv = 8,star = 4,mon = {id = 252,desc = "kn-8-13-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2081330,cardId = 1101014,lv = 82,bklv = 8,star = 4,mon = {id = 212,desc = "kn-8-13-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081331,cardId = 1102020,lv = 82,bklv = 8,star = 4,mon = {id = 257,desc = "kn-8-13-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081330,cardId = 1101014,lv = 82,bklv = 8,star = 4,mon = {id = 212,desc = "kn-8-13-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081331,cardId = 1102020,lv = 82,bklv = 8,star = 4,mon = {id = 257,desc = "kn-8-13-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20814] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2081410,cardId = 1101007,lv = 83,bklv = 8,star = 4,mon = {id = 207,desc = "kn-8-14-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081411,cardId = 1102012,lv = 83,bklv = 8,star = 4,mon = {id = 248,desc = "kn-8-14-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081410,cardId = 1101007,lv = 83,bklv = 8,star = 4,mon = {id = 207,desc = "kn-8-14-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081411,cardId = 1102012,lv = 83,bklv = 8,star = 4,mon = {id = 248,desc = "kn-8-14-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2081420,cardId = 1101005,lv = 83,bklv = 8,star = 4,mon = {id = 207,desc = "kn-8-14-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081421,cardId = 1102011,lv = 83,bklv = 8,star = 4,mon = {id = 242,desc = "kn-8-14-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081420,cardId = 1101005,lv = 83,bklv = 8,star = 4,mon = {id = 207,desc = "kn-8-14-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081421,cardId = 1102011,lv = 83,bklv = 8,star = 4,mon = {id = 242,desc = "kn-8-14-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2081430,cardId = 1101003,lv = 83,bklv = 8,star = 4,mon = {id = 211,desc = "kn-8-14-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081431,cardId = 1102005,lv = 83,bklv = 8,star = 4,mon = {id = 256,desc = "kn-8-14-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081430,cardId = 1101003,lv = 83,bklv = 8,star = 4,mon = {id = 211,desc = "kn-8-14-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081431,cardId = 1102005,lv = 83,bklv = 8,star = 4,mon = {id = 256,desc = "kn-8-14-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20815] = {
 		[1] = {
-			jlr = {cha = "kn-8",id = 2081510,cardId = 1101007,lv = 84,bklv = 8,star = 4,mon = {id = 205,desc = "kn-8-15-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081511,cardId = 1102012,lv = 84,bklv = 8,star = 4,mon = {id = 240,desc = "kn-8-15-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081510,cardId = 1101007,lv = 84,bklv = 8,star = 4,mon = {id = 205,desc = "kn-8-15-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081511,cardId = 1102012,lv = 84,bklv = 8,star = 4,mon = {id = 240,desc = "kn-8-15-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-8",id = 2081520,cardId = 1101005,lv = 84,bklv = 8,star = 4,mon = {id = 204,desc = "kn-8-15-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081521,cardId = 1102011,lv = 84,bklv = 8,star = 4,mon = {id = 245,desc = "kn-8-15-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081520,cardId = 1101005,lv = 84,bklv = 8,star = 4,mon = {id = 204,desc = "kn-8-15-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081521,cardId = 1102011,lv = 84,bklv = 8,star = 4,mon = {id = 245,desc = "kn-8-15-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-8",id = 2081530,cardId = 1101010,lv = 84,bklv = 8,star = 4,mon = {id = 207,desc = "kn-8-15-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-8",id = 2081531,cardId = 1102016,lv = 84,bklv = 8,star = 3,mon = {id = 249,desc = "kn-8-15-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-8",id = 2081530,cardId = 1101010,lv = 84,bklv = 8,star = 4,mon = {id = 207,desc = "kn-8-15-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-8",id = 2081531,cardId = 1102016,lv = 84,bklv = 8,star = 3,mon = {id = 249,desc = "kn-8-15-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20901] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2090110,cardId = 1101007,lv = 85,bklv = 9,star = 4,mon = {id = 212,desc = "kn-9-1-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090111,cardId = 1102012,lv = 85,bklv = 9,star = 4,mon = {id = 257,desc = "kn-9-1-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090110,cardId = 1101007,lv = 85,bklv = 9,star = 4,mon = {id = 212,desc = "kn-9-1-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090111,cardId = 1102012,lv = 85,bklv = 9,star = 4,mon = {id = 257,desc = "kn-9-1-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2090120,cardId = 1101003,lv = 85,bklv = 9,star = 4,mon = {id = 208,desc = "kn-9-1-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090121,cardId = 1102005,lv = 85,bklv = 9,star = 4,mon = {id = 252,desc = "kn-9-1-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090120,cardId = 1101003,lv = 85,bklv = 9,star = 4,mon = {id = 208,desc = "kn-9-1-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090121,cardId = 1102005,lv = 85,bklv = 9,star = 4,mon = {id = 252,desc = "kn-9-1-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2090130,cardId = 1101014,lv = 85,bklv = 9,star = 4,mon = {id = 213,desc = "kn-9-1-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090131,cardId = 1102020,lv = 85,bklv = 9,star = 4,mon = {id = 258,desc = "kn-9-1-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090130,cardId = 1101014,lv = 85,bklv = 9,star = 4,mon = {id = 213,desc = "kn-9-1-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090131,cardId = 1102020,lv = 85,bklv = 9,star = 4,mon = {id = 258,desc = "kn-9-1-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20902] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2090210,cardId = 1101007,lv = 86,bklv = 9,star = 4,mon = {id = 201,desc = "kn-9-2-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090211,cardId = 1102012,lv = 86,bklv = 9,star = 4,mon = {id = 241,desc = "kn-9-2-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090210,cardId = 1101007,lv = 86,bklv = 9,star = 4,mon = {id = 201,desc = "kn-9-2-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090211,cardId = 1102012,lv = 86,bklv = 9,star = 4,mon = {id = 241,desc = "kn-9-2-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2090220,cardId = 1101003,lv = 86,bklv = 9,star = 4,mon = {id = 203,desc = "kn-9-2-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090221,cardId = 1102005,lv = 86,bklv = 9,star = 4,mon = {id = 244,desc = "kn-9-2-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090220,cardId = 1101003,lv = 86,bklv = 9,star = 4,mon = {id = 203,desc = "kn-9-2-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090221,cardId = 1102005,lv = 86,bklv = 9,star = 4,mon = {id = 244,desc = "kn-9-2-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2090230,cardId = 1101014,lv = 86,bklv = 9,star = 4,mon = {id = 214,desc = "kn-9-2-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090231,cardId = 1102020,lv = 86,bklv = 9,star = 4,mon = {id = 259,desc = "kn-9-2-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090230,cardId = 1101014,lv = 86,bklv = 9,star = 4,mon = {id = 214,desc = "kn-9-2-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090231,cardId = 1102020,lv = 86,bklv = 9,star = 4,mon = {id = 259,desc = "kn-9-2-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20903] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2090310,cardId = 1101007,lv = 86,bklv = 9,star = 4,mon = {id = 212,desc = "kn-9-3-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090311,cardId = 1102012,lv = 86,bklv = 9,star = 4,mon = {id = 257,desc = "kn-9-3-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090310,cardId = 1101007,lv = 86,bklv = 9,star = 4,mon = {id = 212,desc = "kn-9-3-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090311,cardId = 1102012,lv = 86,bklv = 9,star = 4,mon = {id = 257,desc = "kn-9-3-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2090320,cardId = 1101003,lv = 86,bklv = 9,star = 4,mon = {id = 208,desc = "kn-9-3-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090321,cardId = 1102005,lv = 86,bklv = 9,star = 4,mon = {id = 252,desc = "kn-9-3-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090320,cardId = 1101003,lv = 86,bklv = 9,star = 4,mon = {id = 208,desc = "kn-9-3-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090321,cardId = 1102005,lv = 86,bklv = 9,star = 4,mon = {id = 252,desc = "kn-9-3-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2090330,cardId = 1101014,lv = 86,bklv = 9,star = 4,mon = {id = 209,desc = "kn-9-3-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090331,cardId = 1102020,lv = 86,bklv = 9,star = 4,mon = {id = 253,desc = "kn-9-3-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090330,cardId = 1101014,lv = 86,bklv = 9,star = 4,mon = {id = 209,desc = "kn-9-3-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090331,cardId = 1102020,lv = 86,bklv = 9,star = 4,mon = {id = 253,desc = "kn-9-3-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20904] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2090410,cardId = 1101007,lv = 87,bklv = 9,star = 4,mon = {id = 215,desc = "kn-9-4-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090411,cardId = 1102012,lv = 87,bklv = 9,star = 4,mon = {id = 260,desc = "kn-9-4-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090410,cardId = 1101007,lv = 87,bklv = 9,star = 4,mon = {id = 215,desc = "kn-9-4-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090411,cardId = 1102012,lv = 87,bklv = 9,star = 4,mon = {id = 260,desc = "kn-9-4-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2090420,cardId = 1101003,lv = 87,bklv = 9,star = 4,mon = {id = 201,desc = "kn-9-4-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090421,cardId = 1102005,lv = 87,bklv = 9,star = 4,mon = {id = 248,desc = "kn-9-4-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090420,cardId = 1101003,lv = 87,bklv = 9,star = 4,mon = {id = 201,desc = "kn-9-4-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090421,cardId = 1102005,lv = 87,bklv = 9,star = 4,mon = {id = 248,desc = "kn-9-4-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2090430,cardId = 1101014,lv = 87,bklv = 9,star = 4,mon = {id = 211,desc = "kn-9-4-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090431,cardId = 1102020,lv = 87,bklv = 9,star = 4,mon = {id = 256,desc = "kn-9-4-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090430,cardId = 1101014,lv = 87,bklv = 9,star = 4,mon = {id = 211,desc = "kn-9-4-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090431,cardId = 1102020,lv = 87,bklv = 9,star = 4,mon = {id = 256,desc = "kn-9-4-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20905] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2090510,cardId = 1101007,lv = 87,bklv = 9,star = 4,mon = {id = 206,desc = "kn-9-5-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090511,cardId = 1102012,lv = 87,bklv = 9,star = 4,mon = {id = 246,desc = "kn-9-5-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090510,cardId = 1101007,lv = 87,bklv = 9,star = 4,mon = {id = 206,desc = "kn-9-5-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090511,cardId = 1102012,lv = 87,bklv = 9,star = 4,mon = {id = 246,desc = "kn-9-5-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2090520,cardId = 1101003,lv = 87,bklv = 9,star = 4,mon = {id = 203,desc = "kn-9-5-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090521,cardId = 1102005,lv = 87,bklv = 9,star = 4,mon = {id = 244,desc = "kn-9-5-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090520,cardId = 1101003,lv = 87,bklv = 9,star = 4,mon = {id = 203,desc = "kn-9-5-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090521,cardId = 1102005,lv = 87,bklv = 9,star = 4,mon = {id = 244,desc = "kn-9-5-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2090530,cardId = 1101014,lv = 87,bklv = 9,star = 4,mon = {id = 212,desc = "kn-9-5-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090531,cardId = 1102020,lv = 87,bklv = 9,star = 4,mon = {id = 257,desc = "kn-9-5-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090530,cardId = 1101014,lv = 87,bklv = 9,star = 4,mon = {id = 212,desc = "kn-9-5-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090531,cardId = 1102020,lv = 87,bklv = 9,star = 4,mon = {id = 257,desc = "kn-9-5-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20906] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2090610,cardId = 1101007,lv = 88,bklv = 9,star = 4,mon = {id = 209,desc = "kn-9-6-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090611,cardId = 1102012,lv = 88,bklv = 9,star = 4,mon = {id = 253,desc = "kn-9-6-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090610,cardId = 1101007,lv = 88,bklv = 9,star = 4,mon = {id = 209,desc = "kn-9-6-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090611,cardId = 1102012,lv = 88,bklv = 9,star = 4,mon = {id = 253,desc = "kn-9-6-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2090620,cardId = 1101003,lv = 88,bklv = 9,star = 4,mon = {id = 208,desc = "kn-9-6-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090621,cardId = 1102005,lv = 88,bklv = 9,star = 4,mon = {id = 252,desc = "kn-9-6-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090620,cardId = 1101003,lv = 88,bklv = 9,star = 4,mon = {id = 208,desc = "kn-9-6-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090621,cardId = 1102005,lv = 88,bklv = 9,star = 4,mon = {id = 252,desc = "kn-9-6-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2090630,cardId = 1101014,lv = 88,bklv = 9,star = 4,mon = {id = 212,desc = "kn-9-6-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090631,cardId = 1102020,lv = 88,bklv = 9,star = 4,mon = {id = 257,desc = "kn-9-6-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090630,cardId = 1101014,lv = 88,bklv = 9,star = 4,mon = {id = 212,desc = "kn-9-6-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090631,cardId = 1102020,lv = 88,bklv = 9,star = 4,mon = {id = 257,desc = "kn-9-6-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20907] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2090710,cardId = 1101007,lv = 88,bklv = 9,star = 4,mon = {id = 207,desc = "kn-9-7-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090711,cardId = 1102012,lv = 88,bklv = 9,star = 4,mon = {id = 248,desc = "kn-9-7-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090710,cardId = 1101007,lv = 88,bklv = 9,star = 4,mon = {id = 207,desc = "kn-9-7-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090711,cardId = 1102012,lv = 88,bklv = 9,star = 4,mon = {id = 248,desc = "kn-9-7-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2090720,cardId = 1101003,lv = 88,bklv = 9,star = 4,mon = {id = 207,desc = "kn-9-7-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090721,cardId = 1102005,lv = 88,bklv = 9,star = 4,mon = {id = 242,desc = "kn-9-7-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090720,cardId = 1101003,lv = 88,bklv = 9,star = 4,mon = {id = 207,desc = "kn-9-7-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090721,cardId = 1102005,lv = 88,bklv = 9,star = 4,mon = {id = 242,desc = "kn-9-7-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2090730,cardId = 1101014,lv = 88,bklv = 9,star = 4,mon = {id = 211,desc = "kn-9-7-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090731,cardId = 1102020,lv = 88,bklv = 9,star = 4,mon = {id = 256,desc = "kn-9-7-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090730,cardId = 1101014,lv = 88,bklv = 9,star = 4,mon = {id = 211,desc = "kn-9-7-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090731,cardId = 1102020,lv = 88,bklv = 9,star = 4,mon = {id = 256,desc = "kn-9-7-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20908] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2090810,cardId = 1101007,lv = 89,bklv = 9,star = 4,mon = {id = 207,desc = "kn-9-8-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090811,cardId = 1102012,lv = 89,bklv = 9,star = 4,mon = {id = 251,desc = "kn-9-8-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090810,cardId = 1101007,lv = 89,bklv = 9,star = 4,mon = {id = 207,desc = "kn-9-8-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090811,cardId = 1102012,lv = 89,bklv = 9,star = 4,mon = {id = 251,desc = "kn-9-8-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2090820,cardId = 1101003,lv = 89,bklv = 9,star = 4,mon = {id = 205,desc = "kn-9-8-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090821,cardId = 1102005,lv = 89,bklv = 9,star = 4,mon = {id = 250,desc = "kn-9-8-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090820,cardId = 1101003,lv = 89,bklv = 9,star = 4,mon = {id = 205,desc = "kn-9-8-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090821,cardId = 1102005,lv = 89,bklv = 9,star = 4,mon = {id = 250,desc = "kn-9-8-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2090830,cardId = 1101014,lv = 89,bklv = 9,star = 4,mon = {id = 210,desc = "kn-9-8-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090831,cardId = 1102020,lv = 89,bklv = 9,star = 4,mon = {id = 255,desc = "kn-9-8-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090830,cardId = 1101014,lv = 89,bklv = 9,star = 4,mon = {id = 210,desc = "kn-9-8-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090831,cardId = 1102020,lv = 89,bklv = 9,star = 4,mon = {id = 255,desc = "kn-9-8-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20909] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2090910,cardId = 1101007,lv = 90,bklv = 10,star = 4,mon = {id = 212,desc = "kn-9-9-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090911,cardId = 1102012,lv = 90,bklv = 10,star = 4,mon = {id = 257,desc = "kn-9-9-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090910,cardId = 1101007,lv = 90,bklv = 10,star = 4,mon = {id = 212,desc = "kn-9-9-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090911,cardId = 1102012,lv = 90,bklv = 10,star = 4,mon = {id = 257,desc = "kn-9-9-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2090920,cardId = 1101003,lv = 90,bklv = 10,star = 4,mon = {id = 208,desc = "kn-9-9-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090921,cardId = 1102005,lv = 90,bklv = 10,star = 4,mon = {id = 252,desc = "kn-9-9-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090920,cardId = 1101003,lv = 90,bklv = 10,star = 4,mon = {id = 208,desc = "kn-9-9-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090921,cardId = 1102005,lv = 90,bklv = 10,star = 4,mon = {id = 252,desc = "kn-9-9-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2090930,cardId = 1101014,lv = 90,bklv = 10,star = 4,mon = {id = 209,desc = "kn-9-9-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2090931,cardId = 1102020,lv = 90,bklv = 10,star = 4,mon = {id = 253,desc = "kn-9-9-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2090930,cardId = 1101014,lv = 90,bklv = 10,star = 4,mon = {id = 209,desc = "kn-9-9-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2090931,cardId = 1102020,lv = 90,bklv = 10,star = 4,mon = {id = 253,desc = "kn-9-9-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20910] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2091010,cardId = 1101007,lv = 90,bklv = 10,star = 4,mon = {id = 201,desc = "kn-9-10-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091011,cardId = 1102012,lv = 90,bklv = 10,star = 4,mon = {id = 241,desc = "kn-9-10-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091010,cardId = 1101007,lv = 90,bklv = 10,star = 4,mon = {id = 201,desc = "kn-9-10-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091011,cardId = 1102012,lv = 90,bklv = 10,star = 4,mon = {id = 241,desc = "kn-9-10-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2091020,cardId = 1101003,lv = 90,bklv = 10,star = 4,mon = {id = 203,desc = "kn-9-10-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091021,cardId = 1102005,lv = 90,bklv = 10,star = 4,mon = {id = 244,desc = "kn-9-10-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091020,cardId = 1101003,lv = 90,bklv = 10,star = 4,mon = {id = 203,desc = "kn-9-10-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091021,cardId = 1102005,lv = 90,bklv = 10,star = 4,mon = {id = 244,desc = "kn-9-10-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2091030,cardId = 1101014,lv = 90,bklv = 10,star = 4,mon = {id = 214,desc = "kn-9-10-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091031,cardId = 1102020,lv = 90,bklv = 10,star = 4,mon = {id = 259,desc = "kn-9-10-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091030,cardId = 1101014,lv = 90,bklv = 10,star = 4,mon = {id = 214,desc = "kn-9-10-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091031,cardId = 1102020,lv = 90,bklv = 10,star = 4,mon = {id = 259,desc = "kn-9-10-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20911] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2091110,cardId = 1101007,lv = 90,bklv = 10,star = 4,mon = {id = 212,desc = "kn-9-11-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091111,cardId = 1102012,lv = 90,bklv = 10,star = 4,mon = {id = 257,desc = "kn-9-11-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091110,cardId = 1101007,lv = 90,bklv = 10,star = 4,mon = {id = 212,desc = "kn-9-11-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091111,cardId = 1102012,lv = 90,bklv = 10,star = 4,mon = {id = 257,desc = "kn-9-11-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2091120,cardId = 1101003,lv = 90,bklv = 10,star = 4,mon = {id = 208,desc = "kn-9-11-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091121,cardId = 1102005,lv = 90,bklv = 10,star = 4,mon = {id = 252,desc = "kn-9-11-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091120,cardId = 1101003,lv = 90,bklv = 10,star = 4,mon = {id = 208,desc = "kn-9-11-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091121,cardId = 1102005,lv = 90,bklv = 10,star = 4,mon = {id = 252,desc = "kn-9-11-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2091130,cardId = 1101014,lv = 90,bklv = 10,star = 4,mon = {id = 209,desc = "kn-9-11-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091131,cardId = 1102020,lv = 90,bklv = 10,star = 4,mon = {id = 253,desc = "kn-9-11-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091130,cardId = 1101014,lv = 90,bklv = 10,star = 4,mon = {id = 209,desc = "kn-9-11-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091131,cardId = 1102020,lv = 90,bklv = 10,star = 4,mon = {id = 253,desc = "kn-9-11-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20912] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2091210,cardId = 1101007,lv = 91,bklv = 10,star = 4,mon = {id = 215,desc = "kn-9-12-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091211,cardId = 1102012,lv = 91,bklv = 10,star = 4,mon = {id = 260,desc = "kn-9-12-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091210,cardId = 1101007,lv = 91,bklv = 10,star = 4,mon = {id = 215,desc = "kn-9-12-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091211,cardId = 1102012,lv = 91,bklv = 10,star = 4,mon = {id = 260,desc = "kn-9-12-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2091220,cardId = 1101003,lv = 91,bklv = 10,star = 4,mon = {id = 201,desc = "kn-9-12-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091221,cardId = 1102005,lv = 91,bklv = 10,star = 4,mon = {id = 248,desc = "kn-9-12-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091220,cardId = 1101003,lv = 91,bklv = 10,star = 4,mon = {id = 201,desc = "kn-9-12-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091221,cardId = 1102005,lv = 91,bklv = 10,star = 4,mon = {id = 248,desc = "kn-9-12-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2091230,cardId = 1101014,lv = 91,bklv = 10,star = 4,mon = {id = 211,desc = "kn-9-12-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091231,cardId = 1102020,lv = 91,bklv = 10,star = 4,mon = {id = 256,desc = "kn-9-12-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091230,cardId = 1101014,lv = 91,bklv = 10,star = 4,mon = {id = 211,desc = "kn-9-12-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091231,cardId = 1102020,lv = 91,bklv = 10,star = 4,mon = {id = 256,desc = "kn-9-12-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20913] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2091310,cardId = 1101007,lv = 92,bklv = 10,star = 4,mon = {id = 209,desc = "kn-9-13-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091311,cardId = 1102012,lv = 92,bklv = 10,star = 4,mon = {id = 253,desc = "kn-9-13-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091310,cardId = 1101007,lv = 92,bklv = 10,star = 4,mon = {id = 209,desc = "kn-9-13-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091311,cardId = 1102012,lv = 92,bklv = 10,star = 4,mon = {id = 253,desc = "kn-9-13-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2091320,cardId = 1101003,lv = 92,bklv = 10,star = 4,mon = {id = 208,desc = "kn-9-13-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091321,cardId = 1102005,lv = 92,bklv = 10,star = 4,mon = {id = 252,desc = "kn-9-13-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091320,cardId = 1101003,lv = 92,bklv = 10,star = 4,mon = {id = 208,desc = "kn-9-13-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091321,cardId = 1102005,lv = 92,bklv = 10,star = 4,mon = {id = 252,desc = "kn-9-13-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2091330,cardId = 1101014,lv = 92,bklv = 10,star = 4,mon = {id = 212,desc = "kn-9-13-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091331,cardId = 1102020,lv = 92,bklv = 10,star = 4,mon = {id = 257,desc = "kn-9-13-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091330,cardId = 1101014,lv = 92,bklv = 10,star = 4,mon = {id = 212,desc = "kn-9-13-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091331,cardId = 1102020,lv = 92,bklv = 10,star = 4,mon = {id = 257,desc = "kn-9-13-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20914] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2091410,cardId = 1101007,lv = 93,bklv = 10,star = 4,mon = {id = 207,desc = "kn-9-14-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091411,cardId = 1102012,lv = 93,bklv = 10,star = 4,mon = {id = 248,desc = "kn-9-14-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091410,cardId = 1101007,lv = 93,bklv = 10,star = 4,mon = {id = 207,desc = "kn-9-14-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091411,cardId = 1102012,lv = 93,bklv = 10,star = 4,mon = {id = 248,desc = "kn-9-14-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2091420,cardId = 1101005,lv = 93,bklv = 10,star = 4,mon = {id = 207,desc = "kn-9-14-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091421,cardId = 1102011,lv = 93,bklv = 10,star = 4,mon = {id = 242,desc = "kn-9-14-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091420,cardId = 1101005,lv = 93,bklv = 10,star = 4,mon = {id = 207,desc = "kn-9-14-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091421,cardId = 1102011,lv = 93,bklv = 10,star = 4,mon = {id = 242,desc = "kn-9-14-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2091430,cardId = 1101003,lv = 93,bklv = 10,star = 4,mon = {id = 211,desc = "kn-9-14-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091431,cardId = 1102005,lv = 93,bklv = 10,star = 4,mon = {id = 256,desc = "kn-9-14-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091430,cardId = 1101003,lv = 93,bklv = 10,star = 4,mon = {id = 211,desc = "kn-9-14-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091431,cardId = 1102005,lv = 93,bklv = 10,star = 4,mon = {id = 256,desc = "kn-9-14-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[20915] = {
 		[1] = {
-			jlr = {cha = "kn-9",id = 2091510,cardId = 1101007,lv = 94,bklv = 10,star = 4,mon = {id = 205,desc = "kn-9-15-jlr-loc1",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091511,cardId = 1102012,lv = 94,bklv = 10,star = 4,mon = {id = 240,desc = "kn-9-15-shl-loc1",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091510,cardId = 1101007,lv = 94,bklv = 10,star = 4,mon = {id = 205,desc = "kn-9-15-jlr-loc1",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091511,cardId = 1102012,lv = 94,bklv = 10,star = 4,mon = {id = 240,desc = "kn-9-15-shl-loc1",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-9",id = 2091520,cardId = 1101005,lv = 94,bklv = 10,star = 4,mon = {id = 204,desc = "kn-9-15-jlr-loc2",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091521,cardId = 1102011,lv = 94,bklv = 10,star = 4,mon = {id = 245,desc = "kn-9-15-shl-loc2",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091520,cardId = 1101005,lv = 94,bklv = 10,star = 4,mon = {id = 204,desc = "kn-9-15-jlr-loc2",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091521,cardId = 1102011,lv = 94,bklv = 10,star = 4,mon = {id = 245,desc = "kn-9-15-shl-loc2",skillLv = 6,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-9",id = 2091530,cardId = 1101010,lv = 94,bklv = 10,star = 4,mon = {id = 207,desc = "kn-9-15-jlr-loc3",skillLv = 6,exert = 6,suffer = 8}},
-			shl = {cha = "kn-9",id = 2091531,cardId = 1102016,lv = 94,bklv = 10,star = 4,mon = {id = 249,desc = "kn-9-15-shl-loc3",skillLv = 6,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-9",id = 2091530,cardId = 1101010,lv = 94,bklv = 10,star = 4,mon = {id = 207,desc = "kn-9-15-jlr-loc3",skillLv = 6,exert = 12,suffer = 12}},
+			shl = {cha = "kn-9",id = 2091531,cardId = 1102016,lv = 94,bklv = 10,star = 4,mon = {id = 249,desc = "kn-9-15-shl-loc3",skillLv = 6,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21001] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2100110,cardId = 1101007,lv = 95,bklv = 11,star = 4,mon = {id = 212,desc = "kn-10-1-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100111,cardId = 1102012,lv = 95,bklv = 11,star = 4,mon = {id = 257,desc = "kn-10-1-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100110,cardId = 1101007,lv = 95,bklv = 11,star = 4,mon = {id = 212,desc = "kn-10-1-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100111,cardId = 1102012,lv = 95,bklv = 11,star = 4,mon = {id = 257,desc = "kn-10-1-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2100120,cardId = 1101003,lv = 95,bklv = 11,star = 4,mon = {id = 208,desc = "kn-10-1-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100121,cardId = 1102005,lv = 95,bklv = 11,star = 4,mon = {id = 252,desc = "kn-10-1-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100120,cardId = 1101003,lv = 95,bklv = 11,star = 4,mon = {id = 208,desc = "kn-10-1-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100121,cardId = 1102005,lv = 95,bklv = 11,star = 4,mon = {id = 252,desc = "kn-10-1-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2100130,cardId = 1101014,lv = 95,bklv = 11,star = 4,mon = {id = 213,desc = "kn-10-1-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100131,cardId = 1102020,lv = 95,bklv = 11,star = 4,mon = {id = 258,desc = "kn-10-1-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100130,cardId = 1101014,lv = 95,bklv = 11,star = 4,mon = {id = 213,desc = "kn-10-1-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100131,cardId = 1102020,lv = 95,bklv = 11,star = 4,mon = {id = 258,desc = "kn-10-1-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21002] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2100210,cardId = 1101007,lv = 96,bklv = 11,star = 4,mon = {id = 201,desc = "kn-10-2-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100211,cardId = 1102012,lv = 96,bklv = 11,star = 4,mon = {id = 241,desc = "kn-10-2-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100210,cardId = 1101007,lv = 96,bklv = 11,star = 4,mon = {id = 201,desc = "kn-10-2-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100211,cardId = 1102012,lv = 96,bklv = 11,star = 4,mon = {id = 241,desc = "kn-10-2-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2100220,cardId = 1101003,lv = 96,bklv = 11,star = 4,mon = {id = 203,desc = "kn-10-2-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100221,cardId = 1102005,lv = 96,bklv = 11,star = 4,mon = {id = 244,desc = "kn-10-2-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100220,cardId = 1101003,lv = 96,bklv = 11,star = 4,mon = {id = 203,desc = "kn-10-2-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100221,cardId = 1102005,lv = 96,bklv = 11,star = 4,mon = {id = 244,desc = "kn-10-2-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2100230,cardId = 1101014,lv = 96,bklv = 11,star = 4,mon = {id = 214,desc = "kn-10-2-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100231,cardId = 1102020,lv = 96,bklv = 11,star = 4,mon = {id = 259,desc = "kn-10-2-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100230,cardId = 1101014,lv = 96,bklv = 11,star = 4,mon = {id = 214,desc = "kn-10-2-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100231,cardId = 1102020,lv = 96,bklv = 11,star = 4,mon = {id = 259,desc = "kn-10-2-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21003] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2100310,cardId = 1101007,lv = 96,bklv = 11,star = 4,mon = {id = 212,desc = "kn-10-3-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100311,cardId = 1102012,lv = 96,bklv = 11,star = 4,mon = {id = 257,desc = "kn-10-3-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100310,cardId = 1101007,lv = 96,bklv = 11,star = 4,mon = {id = 212,desc = "kn-10-3-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100311,cardId = 1102012,lv = 96,bklv = 11,star = 4,mon = {id = 257,desc = "kn-10-3-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2100320,cardId = 1101003,lv = 96,bklv = 11,star = 4,mon = {id = 208,desc = "kn-10-3-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100321,cardId = 1102005,lv = 96,bklv = 11,star = 4,mon = {id = 252,desc = "kn-10-3-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100320,cardId = 1101003,lv = 96,bklv = 11,star = 4,mon = {id = 208,desc = "kn-10-3-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100321,cardId = 1102005,lv = 96,bklv = 11,star = 4,mon = {id = 252,desc = "kn-10-3-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2100330,cardId = 1101014,lv = 96,bklv = 11,star = 4,mon = {id = 209,desc = "kn-10-3-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100331,cardId = 1102020,lv = 96,bklv = 11,star = 4,mon = {id = 253,desc = "kn-10-3-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100330,cardId = 1101014,lv = 96,bklv = 11,star = 4,mon = {id = 209,desc = "kn-10-3-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100331,cardId = 1102020,lv = 96,bklv = 11,star = 4,mon = {id = 253,desc = "kn-10-3-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21004] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2100410,cardId = 1101007,lv = 97,bklv = 11,star = 4,mon = {id = 215,desc = "kn-10-4-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100411,cardId = 1102012,lv = 97,bklv = 11,star = 4,mon = {id = 260,desc = "kn-10-4-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100410,cardId = 1101007,lv = 97,bklv = 11,star = 4,mon = {id = 215,desc = "kn-10-4-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100411,cardId = 1102012,lv = 97,bklv = 11,star = 4,mon = {id = 260,desc = "kn-10-4-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2100420,cardId = 1101003,lv = 97,bklv = 11,star = 4,mon = {id = 201,desc = "kn-10-4-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100421,cardId = 1102005,lv = 97,bklv = 11,star = 4,mon = {id = 248,desc = "kn-10-4-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100420,cardId = 1101003,lv = 97,bklv = 11,star = 4,mon = {id = 201,desc = "kn-10-4-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100421,cardId = 1102005,lv = 97,bklv = 11,star = 4,mon = {id = 248,desc = "kn-10-4-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2100430,cardId = 1101014,lv = 97,bklv = 11,star = 4,mon = {id = 211,desc = "kn-10-4-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100431,cardId = 1102020,lv = 97,bklv = 11,star = 4,mon = {id = 256,desc = "kn-10-4-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100430,cardId = 1101014,lv = 97,bklv = 11,star = 4,mon = {id = 211,desc = "kn-10-4-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100431,cardId = 1102020,lv = 97,bklv = 11,star = 4,mon = {id = 256,desc = "kn-10-4-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21005] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2100510,cardId = 1101007,lv = 97,bklv = 11,star = 4,mon = {id = 206,desc = "kn-10-5-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100511,cardId = 1102012,lv = 97,bklv = 11,star = 4,mon = {id = 246,desc = "kn-10-5-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100510,cardId = 1101007,lv = 97,bklv = 11,star = 4,mon = {id = 206,desc = "kn-10-5-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100511,cardId = 1102012,lv = 97,bklv = 11,star = 4,mon = {id = 246,desc = "kn-10-5-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2100520,cardId = 1101003,lv = 97,bklv = 11,star = 4,mon = {id = 203,desc = "kn-10-5-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100521,cardId = 1102005,lv = 97,bklv = 11,star = 4,mon = {id = 244,desc = "kn-10-5-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100520,cardId = 1101003,lv = 97,bklv = 11,star = 4,mon = {id = 203,desc = "kn-10-5-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100521,cardId = 1102005,lv = 97,bklv = 11,star = 4,mon = {id = 244,desc = "kn-10-5-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2100530,cardId = 1101014,lv = 97,bklv = 11,star = 4,mon = {id = 212,desc = "kn-10-5-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100531,cardId = 1102020,lv = 97,bklv = 11,star = 4,mon = {id = 257,desc = "kn-10-5-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100530,cardId = 1101014,lv = 97,bklv = 11,star = 4,mon = {id = 212,desc = "kn-10-5-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100531,cardId = 1102020,lv = 97,bklv = 11,star = 4,mon = {id = 257,desc = "kn-10-5-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21006] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2100610,cardId = 1101007,lv = 98,bklv = 11,star = 4,mon = {id = 209,desc = "kn-10-6-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100611,cardId = 1102012,lv = 98,bklv = 11,star = 4,mon = {id = 253,desc = "kn-10-6-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100610,cardId = 1101007,lv = 98,bklv = 11,star = 4,mon = {id = 209,desc = "kn-10-6-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100611,cardId = 1102012,lv = 98,bklv = 11,star = 4,mon = {id = 253,desc = "kn-10-6-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2100620,cardId = 1101003,lv = 98,bklv = 11,star = 4,mon = {id = 208,desc = "kn-10-6-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100621,cardId = 1102005,lv = 98,bklv = 11,star = 4,mon = {id = 252,desc = "kn-10-6-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100620,cardId = 1101003,lv = 98,bklv = 11,star = 4,mon = {id = 208,desc = "kn-10-6-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100621,cardId = 1102005,lv = 98,bklv = 11,star = 4,mon = {id = 252,desc = "kn-10-6-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2100630,cardId = 1101014,lv = 98,bklv = 11,star = 4,mon = {id = 212,desc = "kn-10-6-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100631,cardId = 1102020,lv = 98,bklv = 11,star = 4,mon = {id = 257,desc = "kn-10-6-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100630,cardId = 1101014,lv = 98,bklv = 11,star = 4,mon = {id = 212,desc = "kn-10-6-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100631,cardId = 1102020,lv = 98,bklv = 11,star = 4,mon = {id = 257,desc = "kn-10-6-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21007] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2100710,cardId = 1101007,lv = 98,bklv = 11,star = 4,mon = {id = 207,desc = "kn-10-7-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100711,cardId = 1102012,lv = 98,bklv = 11,star = 4,mon = {id = 248,desc = "kn-10-7-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100710,cardId = 1101007,lv = 98,bklv = 11,star = 4,mon = {id = 207,desc = "kn-10-7-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100711,cardId = 1102012,lv = 98,bklv = 11,star = 4,mon = {id = 248,desc = "kn-10-7-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2100720,cardId = 1101003,lv = 98,bklv = 11,star = 4,mon = {id = 207,desc = "kn-10-7-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100721,cardId = 1102005,lv = 98,bklv = 11,star = 4,mon = {id = 242,desc = "kn-10-7-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100720,cardId = 1101003,lv = 98,bklv = 11,star = 4,mon = {id = 207,desc = "kn-10-7-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100721,cardId = 1102005,lv = 98,bklv = 11,star = 4,mon = {id = 242,desc = "kn-10-7-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2100730,cardId = 1101014,lv = 98,bklv = 11,star = 4,mon = {id = 211,desc = "kn-10-7-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100731,cardId = 1102020,lv = 98,bklv = 11,star = 4,mon = {id = 256,desc = "kn-10-7-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100730,cardId = 1101014,lv = 98,bklv = 11,star = 4,mon = {id = 211,desc = "kn-10-7-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100731,cardId = 1102020,lv = 98,bklv = 11,star = 4,mon = {id = 256,desc = "kn-10-7-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21008] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2100810,cardId = 1101007,lv = 99,bklv = 11,star = 4,mon = {id = 207,desc = "kn-10-8-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100811,cardId = 1102012,lv = 99,bklv = 11,star = 4,mon = {id = 251,desc = "kn-10-8-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100810,cardId = 1101007,lv = 99,bklv = 11,star = 4,mon = {id = 207,desc = "kn-10-8-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100811,cardId = 1102012,lv = 99,bklv = 11,star = 4,mon = {id = 251,desc = "kn-10-8-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2100820,cardId = 1101003,lv = 99,bklv = 11,star = 4,mon = {id = 205,desc = "kn-10-8-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100821,cardId = 1102005,lv = 99,bklv = 11,star = 4,mon = {id = 250,desc = "kn-10-8-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100820,cardId = 1101003,lv = 99,bklv = 11,star = 4,mon = {id = 205,desc = "kn-10-8-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100821,cardId = 1102005,lv = 99,bklv = 11,star = 4,mon = {id = 250,desc = "kn-10-8-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2100830,cardId = 1101014,lv = 99,bklv = 11,star = 4,mon = {id = 210,desc = "kn-10-8-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100831,cardId = 1102020,lv = 99,bklv = 11,star = 4,mon = {id = 255,desc = "kn-10-8-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100830,cardId = 1101014,lv = 99,bklv = 11,star = 4,mon = {id = 210,desc = "kn-10-8-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100831,cardId = 1102020,lv = 99,bklv = 11,star = 4,mon = {id = 255,desc = "kn-10-8-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21009] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2100910,cardId = 1101007,lv = 100,bklv = 12,star = 4,mon = {id = 212,desc = "kn-10-9-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100911,cardId = 1102012,lv = 100,bklv = 12,star = 4,mon = {id = 257,desc = "kn-10-9-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100910,cardId = 1101007,lv = 100,bklv = 12,star = 4,mon = {id = 212,desc = "kn-10-9-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100911,cardId = 1102012,lv = 100,bklv = 12,star = 4,mon = {id = 257,desc = "kn-10-9-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2100920,cardId = 1101003,lv = 100,bklv = 12,star = 4,mon = {id = 208,desc = "kn-10-9-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100921,cardId = 1102005,lv = 100,bklv = 12,star = 4,mon = {id = 252,desc = "kn-10-9-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100920,cardId = 1101003,lv = 100,bklv = 12,star = 4,mon = {id = 208,desc = "kn-10-9-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100921,cardId = 1102005,lv = 100,bklv = 12,star = 4,mon = {id = 252,desc = "kn-10-9-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2100930,cardId = 1101014,lv = 100,bklv = 12,star = 4,mon = {id = 209,desc = "kn-10-9-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2100931,cardId = 1102020,lv = 100,bklv = 12,star = 4,mon = {id = 253,desc = "kn-10-9-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2100930,cardId = 1101014,lv = 100,bklv = 12,star = 4,mon = {id = 209,desc = "kn-10-9-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2100931,cardId = 1102020,lv = 100,bklv = 12,star = 4,mon = {id = 253,desc = "kn-10-9-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21010] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2101010,cardId = 1101007,lv = 100,bklv = 12,star = 4,mon = {id = 201,desc = "kn-10-10-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101011,cardId = 1102012,lv = 100,bklv = 12,star = 4,mon = {id = 241,desc = "kn-10-10-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101010,cardId = 1101007,lv = 100,bklv = 12,star = 4,mon = {id = 201,desc = "kn-10-10-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101011,cardId = 1102012,lv = 100,bklv = 12,star = 4,mon = {id = 241,desc = "kn-10-10-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2101020,cardId = 1101003,lv = 100,bklv = 12,star = 4,mon = {id = 203,desc = "kn-10-10-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101021,cardId = 1102005,lv = 100,bklv = 12,star = 4,mon = {id = 244,desc = "kn-10-10-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101020,cardId = 1101003,lv = 100,bklv = 12,star = 4,mon = {id = 203,desc = "kn-10-10-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101021,cardId = 1102005,lv = 100,bklv = 12,star = 4,mon = {id = 244,desc = "kn-10-10-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2101030,cardId = 1101014,lv = 100,bklv = 12,star = 4,mon = {id = 214,desc = "kn-10-10-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101031,cardId = 1102020,lv = 100,bklv = 12,star = 4,mon = {id = 259,desc = "kn-10-10-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101030,cardId = 1101014,lv = 100,bklv = 12,star = 4,mon = {id = 214,desc = "kn-10-10-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101031,cardId = 1102020,lv = 100,bklv = 12,star = 4,mon = {id = 259,desc = "kn-10-10-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21011] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2101110,cardId = 1101007,lv = 100,bklv = 12,star = 4,mon = {id = 212,desc = "kn-10-11-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101111,cardId = 1102012,lv = 100,bklv = 12,star = 4,mon = {id = 257,desc = "kn-10-11-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101110,cardId = 1101007,lv = 100,bklv = 12,star = 4,mon = {id = 212,desc = "kn-10-11-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101111,cardId = 1102012,lv = 100,bklv = 12,star = 4,mon = {id = 257,desc = "kn-10-11-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2101120,cardId = 1101003,lv = 100,bklv = 12,star = 4,mon = {id = 208,desc = "kn-10-11-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101121,cardId = 1102005,lv = 100,bklv = 12,star = 4,mon = {id = 252,desc = "kn-10-11-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101120,cardId = 1101003,lv = 100,bklv = 12,star = 4,mon = {id = 208,desc = "kn-10-11-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101121,cardId = 1102005,lv = 100,bklv = 12,star = 4,mon = {id = 252,desc = "kn-10-11-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2101130,cardId = 1101014,lv = 100,bklv = 12,star = 4,mon = {id = 209,desc = "kn-10-11-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101131,cardId = 1102020,lv = 100,bklv = 12,star = 4,mon = {id = 253,desc = "kn-10-11-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101130,cardId = 1101014,lv = 100,bklv = 12,star = 4,mon = {id = 209,desc = "kn-10-11-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101131,cardId = 1102020,lv = 100,bklv = 12,star = 4,mon = {id = 253,desc = "kn-10-11-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21012] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2101210,cardId = 1101007,lv = 101,bklv = 12,star = 4,mon = {id = 215,desc = "kn-10-12-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101211,cardId = 1102012,lv = 101,bklv = 12,star = 4,mon = {id = 260,desc = "kn-10-12-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101210,cardId = 1101007,lv = 101,bklv = 12,star = 4,mon = {id = 215,desc = "kn-10-12-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101211,cardId = 1102012,lv = 101,bklv = 12,star = 4,mon = {id = 260,desc = "kn-10-12-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2101220,cardId = 1101003,lv = 101,bklv = 12,star = 4,mon = {id = 201,desc = "kn-10-12-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101221,cardId = 1102005,lv = 101,bklv = 12,star = 4,mon = {id = 248,desc = "kn-10-12-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101220,cardId = 1101003,lv = 101,bklv = 12,star = 4,mon = {id = 201,desc = "kn-10-12-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101221,cardId = 1102005,lv = 101,bklv = 12,star = 4,mon = {id = 248,desc = "kn-10-12-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2101230,cardId = 1101014,lv = 101,bklv = 12,star = 4,mon = {id = 211,desc = "kn-10-12-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101231,cardId = 1102020,lv = 101,bklv = 12,star = 4,mon = {id = 256,desc = "kn-10-12-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101230,cardId = 1101014,lv = 101,bklv = 12,star = 4,mon = {id = 211,desc = "kn-10-12-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101231,cardId = 1102020,lv = 101,bklv = 12,star = 4,mon = {id = 256,desc = "kn-10-12-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21013] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2101310,cardId = 1101007,lv = 102,bklv = 12,star = 4,mon = {id = 209,desc = "kn-10-13-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101311,cardId = 1102012,lv = 102,bklv = 12,star = 4,mon = {id = 253,desc = "kn-10-13-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101310,cardId = 1101007,lv = 102,bklv = 12,star = 4,mon = {id = 209,desc = "kn-10-13-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101311,cardId = 1102012,lv = 102,bklv = 12,star = 4,mon = {id = 253,desc = "kn-10-13-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2101320,cardId = 1101003,lv = 102,bklv = 12,star = 4,mon = {id = 208,desc = "kn-10-13-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101321,cardId = 1102005,lv = 102,bklv = 12,star = 4,mon = {id = 252,desc = "kn-10-13-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101320,cardId = 1101003,lv = 102,bklv = 12,star = 4,mon = {id = 208,desc = "kn-10-13-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101321,cardId = 1102005,lv = 102,bklv = 12,star = 4,mon = {id = 252,desc = "kn-10-13-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2101330,cardId = 1101014,lv = 102,bklv = 12,star = 4,mon = {id = 212,desc = "kn-10-13-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101331,cardId = 1102020,lv = 102,bklv = 12,star = 4,mon = {id = 257,desc = "kn-10-13-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101330,cardId = 1101014,lv = 102,bklv = 12,star = 4,mon = {id = 212,desc = "kn-10-13-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101331,cardId = 1102020,lv = 102,bklv = 12,star = 4,mon = {id = 257,desc = "kn-10-13-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21014] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2101410,cardId = 1101007,lv = 103,bklv = 12,star = 4,mon = {id = 207,desc = "kn-10-14-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101411,cardId = 1102012,lv = 103,bklv = 12,star = 4,mon = {id = 248,desc = "kn-10-14-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101410,cardId = 1101007,lv = 103,bklv = 12,star = 4,mon = {id = 207,desc = "kn-10-14-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101411,cardId = 1102012,lv = 103,bklv = 12,star = 4,mon = {id = 248,desc = "kn-10-14-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2101420,cardId = 1101005,lv = 103,bklv = 12,star = 4,mon = {id = 207,desc = "kn-10-14-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101421,cardId = 1102011,lv = 103,bklv = 12,star = 4,mon = {id = 242,desc = "kn-10-14-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101420,cardId = 1101005,lv = 103,bklv = 12,star = 4,mon = {id = 207,desc = "kn-10-14-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101421,cardId = 1102011,lv = 103,bklv = 12,star = 4,mon = {id = 242,desc = "kn-10-14-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2101430,cardId = 1101003,lv = 103,bklv = 12,star = 4,mon = {id = 211,desc = "kn-10-14-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101431,cardId = 1102005,lv = 103,bklv = 12,star = 4,mon = {id = 256,desc = "kn-10-14-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101430,cardId = 1101003,lv = 103,bklv = 12,star = 4,mon = {id = 211,desc = "kn-10-14-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101431,cardId = 1102005,lv = 103,bklv = 12,star = 4,mon = {id = 256,desc = "kn-10-14-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21015] = {
 		[1] = {
-			jlr = {cha = "kn-10",id = 2101510,cardId = 1101007,lv = 104,bklv = 12,star = 4,mon = {id = 205,desc = "kn-10-15-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101511,cardId = 1102012,lv = 104,bklv = 12,star = 4,mon = {id = 240,desc = "kn-10-15-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101510,cardId = 1101007,lv = 104,bklv = 12,star = 4,mon = {id = 205,desc = "kn-10-15-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101511,cardId = 1102012,lv = 104,bklv = 12,star = 4,mon = {id = 240,desc = "kn-10-15-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-10",id = 2101520,cardId = 1101005,lv = 104,bklv = 12,star = 4,mon = {id = 204,desc = "kn-10-15-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101521,cardId = 1102011,lv = 104,bklv = 12,star = 4,mon = {id = 245,desc = "kn-10-15-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101520,cardId = 1101005,lv = 104,bklv = 12,star = 4,mon = {id = 204,desc = "kn-10-15-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101521,cardId = 1102011,lv = 104,bklv = 12,star = 4,mon = {id = 245,desc = "kn-10-15-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-10",id = 2101530,cardId = 1101010,lv = 104,bklv = 12,star = 4,mon = {id = 207,desc = "kn-10-15-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-10",id = 2101531,cardId = 1102016,lv = 104,bklv = 12,star = 4,mon = {id = 249,desc = "kn-10-15-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-10",id = 2101530,cardId = 1101010,lv = 104,bklv = 12,star = 4,mon = {id = 207,desc = "kn-10-15-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-10",id = 2101531,cardId = 1102016,lv = 104,bklv = 12,star = 4,mon = {id = 249,desc = "kn-10-15-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21101] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2110110,cardId = 1101007,lv = 105,bklv = 13,star = 4,mon = {id = 212,desc = "kn-11-1-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110111,cardId = 1102012,lv = 105,bklv = 13,star = 4,mon = {id = 257,desc = "kn-11-1-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110110,cardId = 1101007,lv = 105,bklv = 13,star = 4,mon = {id = 212,desc = "kn-11-1-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110111,cardId = 1102012,lv = 105,bklv = 13,star = 4,mon = {id = 257,desc = "kn-11-1-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2110120,cardId = 1101003,lv = 105,bklv = 13,star = 4,mon = {id = 208,desc = "kn-11-1-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110121,cardId = 1102005,lv = 105,bklv = 13,star = 4,mon = {id = 252,desc = "kn-11-1-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110120,cardId = 1101003,lv = 105,bklv = 13,star = 4,mon = {id = 208,desc = "kn-11-1-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110121,cardId = 1102005,lv = 105,bklv = 13,star = 4,mon = {id = 252,desc = "kn-11-1-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2110130,cardId = 1101014,lv = 105,bklv = 13,star = 4,mon = {id = 213,desc = "kn-11-1-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110131,cardId = 1102020,lv = 105,bklv = 13,star = 4,mon = {id = 258,desc = "kn-11-1-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110130,cardId = 1101014,lv = 105,bklv = 13,star = 4,mon = {id = 213,desc = "kn-11-1-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110131,cardId = 1102020,lv = 105,bklv = 13,star = 4,mon = {id = 258,desc = "kn-11-1-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21102] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2110210,cardId = 1101007,lv = 106,bklv = 13,star = 4,mon = {id = 201,desc = "kn-11-2-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110211,cardId = 1102012,lv = 106,bklv = 13,star = 4,mon = {id = 241,desc = "kn-11-2-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110210,cardId = 1101007,lv = 106,bklv = 13,star = 4,mon = {id = 201,desc = "kn-11-2-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110211,cardId = 1102012,lv = 106,bklv = 13,star = 4,mon = {id = 241,desc = "kn-11-2-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2110220,cardId = 1101003,lv = 106,bklv = 13,star = 4,mon = {id = 203,desc = "kn-11-2-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110221,cardId = 1102005,lv = 106,bklv = 13,star = 4,mon = {id = 244,desc = "kn-11-2-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110220,cardId = 1101003,lv = 106,bklv = 13,star = 4,mon = {id = 203,desc = "kn-11-2-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110221,cardId = 1102005,lv = 106,bklv = 13,star = 4,mon = {id = 244,desc = "kn-11-2-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2110230,cardId = 1101014,lv = 106,bklv = 13,star = 4,mon = {id = 214,desc = "kn-11-2-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110231,cardId = 1102020,lv = 106,bklv = 13,star = 4,mon = {id = 259,desc = "kn-11-2-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110230,cardId = 1101014,lv = 106,bklv = 13,star = 4,mon = {id = 214,desc = "kn-11-2-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110231,cardId = 1102020,lv = 106,bklv = 13,star = 4,mon = {id = 259,desc = "kn-11-2-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21103] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2110310,cardId = 1101007,lv = 106,bklv = 13,star = 4,mon = {id = 212,desc = "kn-11-3-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110311,cardId = 1102012,lv = 106,bklv = 13,star = 4,mon = {id = 257,desc = "kn-11-3-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110310,cardId = 1101007,lv = 106,bklv = 13,star = 4,mon = {id = 212,desc = "kn-11-3-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110311,cardId = 1102012,lv = 106,bklv = 13,star = 4,mon = {id = 257,desc = "kn-11-3-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2110320,cardId = 1101003,lv = 106,bklv = 13,star = 4,mon = {id = 208,desc = "kn-11-3-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110321,cardId = 1102005,lv = 106,bklv = 13,star = 4,mon = {id = 252,desc = "kn-11-3-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110320,cardId = 1101003,lv = 106,bklv = 13,star = 4,mon = {id = 208,desc = "kn-11-3-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110321,cardId = 1102005,lv = 106,bklv = 13,star = 4,mon = {id = 252,desc = "kn-11-3-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2110330,cardId = 1101014,lv = 106,bklv = 13,star = 4,mon = {id = 209,desc = "kn-11-3-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110331,cardId = 1102020,lv = 106,bklv = 13,star = 4,mon = {id = 253,desc = "kn-11-3-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110330,cardId = 1101014,lv = 106,bklv = 13,star = 4,mon = {id = 209,desc = "kn-11-3-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110331,cardId = 1102020,lv = 106,bklv = 13,star = 4,mon = {id = 253,desc = "kn-11-3-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21104] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2110410,cardId = 1101007,lv = 107,bklv = 13,star = 4,mon = {id = 215,desc = "kn-11-4-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110411,cardId = 1102012,lv = 107,bklv = 13,star = 4,mon = {id = 260,desc = "kn-11-4-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110410,cardId = 1101007,lv = 107,bklv = 13,star = 4,mon = {id = 215,desc = "kn-11-4-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110411,cardId = 1102012,lv = 107,bklv = 13,star = 4,mon = {id = 260,desc = "kn-11-4-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2110420,cardId = 1101003,lv = 107,bklv = 13,star = 4,mon = {id = 201,desc = "kn-11-4-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110421,cardId = 1102005,lv = 107,bklv = 13,star = 4,mon = {id = 248,desc = "kn-11-4-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110420,cardId = 1101003,lv = 107,bklv = 13,star = 4,mon = {id = 201,desc = "kn-11-4-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110421,cardId = 1102005,lv = 107,bklv = 13,star = 4,mon = {id = 248,desc = "kn-11-4-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2110430,cardId = 1101014,lv = 107,bklv = 13,star = 4,mon = {id = 211,desc = "kn-11-4-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110431,cardId = 1102020,lv = 107,bklv = 13,star = 4,mon = {id = 256,desc = "kn-11-4-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110430,cardId = 1101014,lv = 107,bklv = 13,star = 4,mon = {id = 211,desc = "kn-11-4-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110431,cardId = 1102020,lv = 107,bklv = 13,star = 4,mon = {id = 256,desc = "kn-11-4-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21105] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2110510,cardId = 1101007,lv = 107,bklv = 13,star = 4,mon = {id = 206,desc = "kn-11-5-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110511,cardId = 1102012,lv = 107,bklv = 13,star = 4,mon = {id = 246,desc = "kn-11-5-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110510,cardId = 1101007,lv = 107,bklv = 13,star = 4,mon = {id = 206,desc = "kn-11-5-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110511,cardId = 1102012,lv = 107,bklv = 13,star = 4,mon = {id = 246,desc = "kn-11-5-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2110520,cardId = 1101003,lv = 107,bklv = 13,star = 4,mon = {id = 203,desc = "kn-11-5-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110521,cardId = 1102005,lv = 107,bklv = 13,star = 4,mon = {id = 244,desc = "kn-11-5-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110520,cardId = 1101003,lv = 107,bklv = 13,star = 4,mon = {id = 203,desc = "kn-11-5-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110521,cardId = 1102005,lv = 107,bklv = 13,star = 4,mon = {id = 244,desc = "kn-11-5-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2110530,cardId = 1101014,lv = 107,bklv = 13,star = 4,mon = {id = 212,desc = "kn-11-5-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110531,cardId = 1102020,lv = 107,bklv = 13,star = 4,mon = {id = 257,desc = "kn-11-5-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110530,cardId = 1101014,lv = 107,bklv = 13,star = 4,mon = {id = 212,desc = "kn-11-5-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110531,cardId = 1102020,lv = 107,bklv = 13,star = 4,mon = {id = 257,desc = "kn-11-5-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21106] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2110610,cardId = 1101007,lv = 108,bklv = 13,star = 4,mon = {id = 209,desc = "kn-11-6-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110611,cardId = 1102012,lv = 108,bklv = 13,star = 4,mon = {id = 253,desc = "kn-11-6-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110610,cardId = 1101007,lv = 108,bklv = 13,star = 4,mon = {id = 209,desc = "kn-11-6-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110611,cardId = 1102012,lv = 108,bklv = 13,star = 4,mon = {id = 253,desc = "kn-11-6-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2110620,cardId = 1101003,lv = 108,bklv = 13,star = 4,mon = {id = 208,desc = "kn-11-6-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110621,cardId = 1102005,lv = 108,bklv = 13,star = 4,mon = {id = 252,desc = "kn-11-6-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110620,cardId = 1101003,lv = 108,bklv = 13,star = 4,mon = {id = 208,desc = "kn-11-6-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110621,cardId = 1102005,lv = 108,bklv = 13,star = 4,mon = {id = 252,desc = "kn-11-6-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2110630,cardId = 1101014,lv = 108,bklv = 13,star = 4,mon = {id = 212,desc = "kn-11-6-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110631,cardId = 1102020,lv = 108,bklv = 13,star = 4,mon = {id = 257,desc = "kn-11-6-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110630,cardId = 1101014,lv = 108,bklv = 13,star = 4,mon = {id = 212,desc = "kn-11-6-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110631,cardId = 1102020,lv = 108,bklv = 13,star = 4,mon = {id = 257,desc = "kn-11-6-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21107] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2110710,cardId = 1101007,lv = 108,bklv = 13,star = 4,mon = {id = 207,desc = "kn-11-7-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110711,cardId = 1102012,lv = 108,bklv = 13,star = 4,mon = {id = 248,desc = "kn-11-7-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110710,cardId = 1101007,lv = 108,bklv = 13,star = 4,mon = {id = 207,desc = "kn-11-7-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110711,cardId = 1102012,lv = 108,bklv = 13,star = 4,mon = {id = 248,desc = "kn-11-7-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2110720,cardId = 1101003,lv = 108,bklv = 13,star = 4,mon = {id = 207,desc = "kn-11-7-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110721,cardId = 1102005,lv = 108,bklv = 13,star = 4,mon = {id = 242,desc = "kn-11-7-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110720,cardId = 1101003,lv = 108,bklv = 13,star = 4,mon = {id = 207,desc = "kn-11-7-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110721,cardId = 1102005,lv = 108,bklv = 13,star = 4,mon = {id = 242,desc = "kn-11-7-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2110730,cardId = 1101014,lv = 108,bklv = 13,star = 4,mon = {id = 211,desc = "kn-11-7-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110731,cardId = 1102020,lv = 108,bklv = 13,star = 4,mon = {id = 256,desc = "kn-11-7-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110730,cardId = 1101014,lv = 108,bklv = 13,star = 4,mon = {id = 211,desc = "kn-11-7-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110731,cardId = 1102020,lv = 108,bklv = 13,star = 4,mon = {id = 256,desc = "kn-11-7-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21108] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2110810,cardId = 1101007,lv = 109,bklv = 13,star = 4,mon = {id = 207,desc = "kn-11-8-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110811,cardId = 1102012,lv = 109,bklv = 13,star = 4,mon = {id = 251,desc = "kn-11-8-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110810,cardId = 1101007,lv = 109,bklv = 13,star = 4,mon = {id = 207,desc = "kn-11-8-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110811,cardId = 1102012,lv = 109,bklv = 13,star = 4,mon = {id = 251,desc = "kn-11-8-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2110820,cardId = 1101003,lv = 109,bklv = 13,star = 4,mon = {id = 205,desc = "kn-11-8-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110821,cardId = 1102005,lv = 109,bklv = 13,star = 4,mon = {id = 250,desc = "kn-11-8-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110820,cardId = 1101003,lv = 109,bklv = 13,star = 4,mon = {id = 205,desc = "kn-11-8-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110821,cardId = 1102005,lv = 109,bklv = 13,star = 4,mon = {id = 250,desc = "kn-11-8-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2110830,cardId = 1101014,lv = 109,bklv = 13,star = 4,mon = {id = 210,desc = "kn-11-8-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110831,cardId = 1102020,lv = 109,bklv = 13,star = 4,mon = {id = 255,desc = "kn-11-8-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110830,cardId = 1101014,lv = 109,bklv = 13,star = 4,mon = {id = 210,desc = "kn-11-8-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110831,cardId = 1102020,lv = 109,bklv = 13,star = 4,mon = {id = 255,desc = "kn-11-8-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21109] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2110910,cardId = 1101007,lv = 110,bklv = 14,star = 4,mon = {id = 212,desc = "kn-11-9-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110911,cardId = 1102012,lv = 110,bklv = 14,star = 4,mon = {id = 257,desc = "kn-11-9-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110910,cardId = 1101007,lv = 110,bklv = 14,star = 4,mon = {id = 212,desc = "kn-11-9-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110911,cardId = 1102012,lv = 110,bklv = 14,star = 4,mon = {id = 257,desc = "kn-11-9-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2110920,cardId = 1101003,lv = 110,bklv = 14,star = 4,mon = {id = 208,desc = "kn-11-9-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110921,cardId = 1102005,lv = 110,bklv = 14,star = 4,mon = {id = 252,desc = "kn-11-9-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110920,cardId = 1101003,lv = 110,bklv = 14,star = 4,mon = {id = 208,desc = "kn-11-9-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110921,cardId = 1102005,lv = 110,bklv = 14,star = 4,mon = {id = 252,desc = "kn-11-9-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2110930,cardId = 1101014,lv = 110,bklv = 14,star = 4,mon = {id = 209,desc = "kn-11-9-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2110931,cardId = 1102020,lv = 110,bklv = 14,star = 4,mon = {id = 253,desc = "kn-11-9-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2110930,cardId = 1101014,lv = 110,bklv = 14,star = 4,mon = {id = 209,desc = "kn-11-9-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2110931,cardId = 1102020,lv = 110,bklv = 14,star = 4,mon = {id = 253,desc = "kn-11-9-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21110] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2111010,cardId = 1101007,lv = 110,bklv = 14,star = 4,mon = {id = 201,desc = "kn-11-10-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111011,cardId = 1102012,lv = 110,bklv = 14,star = 4,mon = {id = 241,desc = "kn-11-10-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111010,cardId = 1101007,lv = 110,bklv = 14,star = 4,mon = {id = 201,desc = "kn-11-10-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111011,cardId = 1102012,lv = 110,bklv = 14,star = 4,mon = {id = 241,desc = "kn-11-10-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2111020,cardId = 1101003,lv = 110,bklv = 14,star = 4,mon = {id = 203,desc = "kn-11-10-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111021,cardId = 1102005,lv = 110,bklv = 14,star = 4,mon = {id = 244,desc = "kn-11-10-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111020,cardId = 1101003,lv = 110,bklv = 14,star = 4,mon = {id = 203,desc = "kn-11-10-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111021,cardId = 1102005,lv = 110,bklv = 14,star = 4,mon = {id = 244,desc = "kn-11-10-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2111030,cardId = 1101014,lv = 110,bklv = 14,star = 4,mon = {id = 214,desc = "kn-11-10-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111031,cardId = 1102020,lv = 110,bklv = 14,star = 4,mon = {id = 259,desc = "kn-11-10-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111030,cardId = 1101014,lv = 110,bklv = 14,star = 4,mon = {id = 214,desc = "kn-11-10-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111031,cardId = 1102020,lv = 110,bklv = 14,star = 4,mon = {id = 259,desc = "kn-11-10-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21111] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2111110,cardId = 1101007,lv = 110,bklv = 14,star = 4,mon = {id = 212,desc = "kn-11-11-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111111,cardId = 1102012,lv = 110,bklv = 14,star = 4,mon = {id = 257,desc = "kn-11-11-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111110,cardId = 1101007,lv = 110,bklv = 14,star = 4,mon = {id = 212,desc = "kn-11-11-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111111,cardId = 1102012,lv = 110,bklv = 14,star = 4,mon = {id = 257,desc = "kn-11-11-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2111120,cardId = 1101003,lv = 110,bklv = 14,star = 4,mon = {id = 208,desc = "kn-11-11-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111121,cardId = 1102005,lv = 110,bklv = 14,star = 4,mon = {id = 252,desc = "kn-11-11-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111120,cardId = 1101003,lv = 110,bklv = 14,star = 4,mon = {id = 208,desc = "kn-11-11-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111121,cardId = 1102005,lv = 110,bklv = 14,star = 4,mon = {id = 252,desc = "kn-11-11-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2111130,cardId = 1101014,lv = 110,bklv = 14,star = 4,mon = {id = 209,desc = "kn-11-11-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111131,cardId = 1102020,lv = 110,bklv = 14,star = 4,mon = {id = 253,desc = "kn-11-11-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111130,cardId = 1101014,lv = 110,bklv = 14,star = 4,mon = {id = 209,desc = "kn-11-11-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111131,cardId = 1102020,lv = 110,bklv = 14,star = 4,mon = {id = 253,desc = "kn-11-11-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21112] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2111210,cardId = 1101007,lv = 111,bklv = 14,star = 4,mon = {id = 215,desc = "kn-11-12-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111211,cardId = 1102012,lv = 111,bklv = 14,star = 4,mon = {id = 260,desc = "kn-11-12-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111210,cardId = 1101007,lv = 111,bklv = 14,star = 4,mon = {id = 215,desc = "kn-11-12-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111211,cardId = 1102012,lv = 111,bklv = 14,star = 4,mon = {id = 260,desc = "kn-11-12-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2111220,cardId = 1101003,lv = 111,bklv = 14,star = 4,mon = {id = 201,desc = "kn-11-12-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111221,cardId = 1102005,lv = 111,bklv = 14,star = 4,mon = {id = 248,desc = "kn-11-12-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111220,cardId = 1101003,lv = 111,bklv = 14,star = 4,mon = {id = 201,desc = "kn-11-12-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111221,cardId = 1102005,lv = 111,bklv = 14,star = 4,mon = {id = 248,desc = "kn-11-12-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2111230,cardId = 1101014,lv = 111,bklv = 14,star = 4,mon = {id = 211,desc = "kn-11-12-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111231,cardId = 1102020,lv = 111,bklv = 14,star = 4,mon = {id = 256,desc = "kn-11-12-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111230,cardId = 1101014,lv = 111,bklv = 14,star = 4,mon = {id = 211,desc = "kn-11-12-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111231,cardId = 1102020,lv = 111,bklv = 14,star = 4,mon = {id = 256,desc = "kn-11-12-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21113] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2111310,cardId = 1101007,lv = 112,bklv = 14,star = 4,mon = {id = 209,desc = "kn-11-13-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111311,cardId = 1102012,lv = 112,bklv = 14,star = 4,mon = {id = 253,desc = "kn-11-13-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111310,cardId = 1101007,lv = 112,bklv = 14,star = 4,mon = {id = 209,desc = "kn-11-13-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111311,cardId = 1102012,lv = 112,bklv = 14,star = 4,mon = {id = 253,desc = "kn-11-13-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2111320,cardId = 1101003,lv = 112,bklv = 14,star = 4,mon = {id = 208,desc = "kn-11-13-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111321,cardId = 1102005,lv = 112,bklv = 14,star = 4,mon = {id = 252,desc = "kn-11-13-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111320,cardId = 1101003,lv = 112,bklv = 14,star = 4,mon = {id = 208,desc = "kn-11-13-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111321,cardId = 1102005,lv = 112,bklv = 14,star = 4,mon = {id = 252,desc = "kn-11-13-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2111330,cardId = 1101014,lv = 112,bklv = 14,star = 4,mon = {id = 212,desc = "kn-11-13-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111331,cardId = 1102020,lv = 112,bklv = 14,star = 4,mon = {id = 257,desc = "kn-11-13-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111330,cardId = 1101014,lv = 112,bklv = 14,star = 4,mon = {id = 212,desc = "kn-11-13-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111331,cardId = 1102020,lv = 112,bklv = 14,star = 4,mon = {id = 257,desc = "kn-11-13-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21114] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2111410,cardId = 1101007,lv = 113,bklv = 14,star = 4,mon = {id = 207,desc = "kn-11-14-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111411,cardId = 1102012,lv = 113,bklv = 14,star = 4,mon = {id = 248,desc = "kn-11-14-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111410,cardId = 1101007,lv = 113,bklv = 14,star = 4,mon = {id = 207,desc = "kn-11-14-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111411,cardId = 1102012,lv = 113,bklv = 14,star = 4,mon = {id = 248,desc = "kn-11-14-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2111420,cardId = 1101005,lv = 113,bklv = 14,star = 4,mon = {id = 207,desc = "kn-11-14-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111421,cardId = 1102011,lv = 113,bklv = 14,star = 4,mon = {id = 242,desc = "kn-11-14-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111420,cardId = 1101005,lv = 113,bklv = 14,star = 4,mon = {id = 207,desc = "kn-11-14-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111421,cardId = 1102011,lv = 113,bklv = 14,star = 4,mon = {id = 242,desc = "kn-11-14-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2111430,cardId = 1101003,lv = 113,bklv = 14,star = 4,mon = {id = 211,desc = "kn-11-14-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111431,cardId = 1102005,lv = 113,bklv = 14,star = 4,mon = {id = 256,desc = "kn-11-14-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111430,cardId = 1101003,lv = 113,bklv = 14,star = 4,mon = {id = 211,desc = "kn-11-14-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111431,cardId = 1102005,lv = 113,bklv = 14,star = 4,mon = {id = 256,desc = "kn-11-14-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21115] = {
 		[1] = {
-			jlr = {cha = "kn-11",id = 2111510,cardId = 1101007,lv = 114,bklv = 14,star = 4,mon = {id = 205,desc = "kn-11-15-jlr-loc1",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111511,cardId = 1102012,lv = 114,bklv = 14,star = 4,mon = {id = 240,desc = "kn-11-15-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111510,cardId = 1101007,lv = 114,bklv = 14,star = 4,mon = {id = 205,desc = "kn-11-15-jlr-loc1",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111511,cardId = 1102012,lv = 114,bklv = 14,star = 4,mon = {id = 240,desc = "kn-11-15-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-11",id = 2111520,cardId = 1101005,lv = 114,bklv = 14,star = 4,mon = {id = 204,desc = "kn-11-15-jlr-loc2",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111521,cardId = 1102011,lv = 114,bklv = 14,star = 4,mon = {id = 245,desc = "kn-11-15-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111520,cardId = 1101005,lv = 114,bklv = 14,star = 4,mon = {id = 204,desc = "kn-11-15-jlr-loc2",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111521,cardId = 1102011,lv = 114,bklv = 14,star = 4,mon = {id = 245,desc = "kn-11-15-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-11",id = 2111530,cardId = 1101010,lv = 114,bklv = 14,star = 4,mon = {id = 207,desc = "kn-11-15-jlr-loc3",skillLv = 7,exert = 6,suffer = 8}},
-			shl = {cha = "kn-11",id = 2111531,cardId = 1102016,lv = 114,bklv = 14,star = 4,mon = {id = 249,desc = "kn-11-15-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-11",id = 2111530,cardId = 1101010,lv = 114,bklv = 14,star = 4,mon = {id = 207,desc = "kn-11-15-jlr-loc3",skillLv = 7,exert = 12,suffer = 12}},
+			shl = {cha = "kn-11",id = 2111531,cardId = 1102016,lv = 114,bklv = 14,star = 4,mon = {id = 249,desc = "kn-11-15-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21201] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2120110,cardId = 1101007,lv = 115,bklv = 15,star = 4,mon = {id = 212,desc = "kn-12-1-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120111,cardId = 1102012,lv = 115,bklv = 15,star = 4,mon = {id = 257,desc = "kn-12-1-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120110,cardId = 1101007,lv = 115,bklv = 15,star = 4,mon = {id = 212,desc = "kn-12-1-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120111,cardId = 1102012,lv = 115,bklv = 15,star = 4,mon = {id = 257,desc = "kn-12-1-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2120120,cardId = 1101003,lv = 115,bklv = 15,star = 4,mon = {id = 208,desc = "kn-12-1-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120121,cardId = 1102005,lv = 115,bklv = 15,star = 4,mon = {id = 252,desc = "kn-12-1-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120120,cardId = 1101003,lv = 115,bklv = 15,star = 4,mon = {id = 208,desc = "kn-12-1-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120121,cardId = 1102005,lv = 115,bklv = 15,star = 4,mon = {id = 252,desc = "kn-12-1-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2120130,cardId = 1101014,lv = 115,bklv = 15,star = 4,mon = {id = 213,desc = "kn-12-1-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120131,cardId = 1102020,lv = 115,bklv = 15,star = 4,mon = {id = 258,desc = "kn-12-1-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120130,cardId = 1101014,lv = 115,bklv = 15,star = 4,mon = {id = 213,desc = "kn-12-1-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120131,cardId = 1102020,lv = 115,bklv = 15,star = 4,mon = {id = 258,desc = "kn-12-1-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21202] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2120210,cardId = 1101007,lv = 116,bklv = 15,star = 4,mon = {id = 201,desc = "kn-12-2-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120211,cardId = 1102012,lv = 116,bklv = 15,star = 4,mon = {id = 241,desc = "kn-12-2-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120210,cardId = 1101007,lv = 116,bklv = 15,star = 4,mon = {id = 201,desc = "kn-12-2-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120211,cardId = 1102012,lv = 116,bklv = 15,star = 4,mon = {id = 241,desc = "kn-12-2-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2120220,cardId = 1101003,lv = 116,bklv = 15,star = 4,mon = {id = 203,desc = "kn-12-2-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120221,cardId = 1102005,lv = 116,bklv = 15,star = 4,mon = {id = 244,desc = "kn-12-2-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120220,cardId = 1101003,lv = 116,bklv = 15,star = 4,mon = {id = 203,desc = "kn-12-2-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120221,cardId = 1102005,lv = 116,bklv = 15,star = 4,mon = {id = 244,desc = "kn-12-2-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2120230,cardId = 1101014,lv = 116,bklv = 15,star = 4,mon = {id = 214,desc = "kn-12-2-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120231,cardId = 1102020,lv = 116,bklv = 15,star = 4,mon = {id = 259,desc = "kn-12-2-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120230,cardId = 1101014,lv = 116,bklv = 15,star = 4,mon = {id = 214,desc = "kn-12-2-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120231,cardId = 1102020,lv = 116,bklv = 15,star = 4,mon = {id = 259,desc = "kn-12-2-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21203] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2120310,cardId = 1101007,lv = 116,bklv = 15,star = 4,mon = {id = 212,desc = "kn-12-3-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120311,cardId = 1102012,lv = 116,bklv = 15,star = 4,mon = {id = 257,desc = "kn-12-3-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120310,cardId = 1101007,lv = 116,bklv = 15,star = 4,mon = {id = 212,desc = "kn-12-3-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120311,cardId = 1102012,lv = 116,bklv = 15,star = 4,mon = {id = 257,desc = "kn-12-3-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2120320,cardId = 1101003,lv = 116,bklv = 15,star = 4,mon = {id = 208,desc = "kn-12-3-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120321,cardId = 1102005,lv = 116,bklv = 15,star = 4,mon = {id = 252,desc = "kn-12-3-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120320,cardId = 1101003,lv = 116,bklv = 15,star = 4,mon = {id = 208,desc = "kn-12-3-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120321,cardId = 1102005,lv = 116,bklv = 15,star = 4,mon = {id = 252,desc = "kn-12-3-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2120330,cardId = 1101014,lv = 116,bklv = 15,star = 4,mon = {id = 209,desc = "kn-12-3-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120331,cardId = 1102020,lv = 116,bklv = 15,star = 4,mon = {id = 253,desc = "kn-12-3-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120330,cardId = 1101014,lv = 116,bklv = 15,star = 4,mon = {id = 209,desc = "kn-12-3-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120331,cardId = 1102020,lv = 116,bklv = 15,star = 4,mon = {id = 253,desc = "kn-12-3-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21204] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2120410,cardId = 1101007,lv = 117,bklv = 15,star = 4,mon = {id = 215,desc = "kn-12-4-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120411,cardId = 1102012,lv = 117,bklv = 15,star = 4,mon = {id = 260,desc = "kn-12-4-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120410,cardId = 1101007,lv = 117,bklv = 15,star = 4,mon = {id = 215,desc = "kn-12-4-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120411,cardId = 1102012,lv = 117,bklv = 15,star = 4,mon = {id = 260,desc = "kn-12-4-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2120420,cardId = 1101003,lv = 117,bklv = 15,star = 4,mon = {id = 201,desc = "kn-12-4-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120421,cardId = 1102005,lv = 117,bklv = 15,star = 4,mon = {id = 248,desc = "kn-12-4-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120420,cardId = 1101003,lv = 117,bklv = 15,star = 4,mon = {id = 201,desc = "kn-12-4-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120421,cardId = 1102005,lv = 117,bklv = 15,star = 4,mon = {id = 248,desc = "kn-12-4-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2120430,cardId = 1101014,lv = 117,bklv = 15,star = 4,mon = {id = 211,desc = "kn-12-4-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120431,cardId = 1102020,lv = 117,bklv = 15,star = 4,mon = {id = 256,desc = "kn-12-4-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120430,cardId = 1101014,lv = 117,bklv = 15,star = 4,mon = {id = 211,desc = "kn-12-4-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120431,cardId = 1102020,lv = 117,bklv = 15,star = 4,mon = {id = 256,desc = "kn-12-4-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21205] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2120510,cardId = 1101007,lv = 117,bklv = 15,star = 4,mon = {id = 206,desc = "kn-12-5-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120511,cardId = 1102012,lv = 117,bklv = 15,star = 4,mon = {id = 246,desc = "kn-12-5-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120510,cardId = 1101007,lv = 117,bklv = 15,star = 4,mon = {id = 206,desc = "kn-12-5-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120511,cardId = 1102012,lv = 117,bklv = 15,star = 4,mon = {id = 246,desc = "kn-12-5-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2120520,cardId = 1101003,lv = 117,bklv = 15,star = 4,mon = {id = 203,desc = "kn-12-5-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120521,cardId = 1102005,lv = 117,bklv = 15,star = 4,mon = {id = 244,desc = "kn-12-5-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120520,cardId = 1101003,lv = 117,bklv = 15,star = 4,mon = {id = 203,desc = "kn-12-5-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120521,cardId = 1102005,lv = 117,bklv = 15,star = 4,mon = {id = 244,desc = "kn-12-5-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2120530,cardId = 1101014,lv = 117,bklv = 15,star = 4,mon = {id = 212,desc = "kn-12-5-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120531,cardId = 1102020,lv = 117,bklv = 15,star = 4,mon = {id = 257,desc = "kn-12-5-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120530,cardId = 1101014,lv = 117,bklv = 15,star = 4,mon = {id = 212,desc = "kn-12-5-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120531,cardId = 1102020,lv = 117,bklv = 15,star = 4,mon = {id = 257,desc = "kn-12-5-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21206] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2120610,cardId = 1101007,lv = 118,bklv = 15,star = 4,mon = {id = 209,desc = "kn-12-6-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120611,cardId = 1102012,lv = 118,bklv = 15,star = 4,mon = {id = 253,desc = "kn-12-6-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120610,cardId = 1101007,lv = 118,bklv = 15,star = 4,mon = {id = 209,desc = "kn-12-6-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120611,cardId = 1102012,lv = 118,bklv = 15,star = 4,mon = {id = 253,desc = "kn-12-6-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2120620,cardId = 1101003,lv = 118,bklv = 15,star = 4,mon = {id = 208,desc = "kn-12-6-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120621,cardId = 1102005,lv = 118,bklv = 15,star = 4,mon = {id = 252,desc = "kn-12-6-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120620,cardId = 1101003,lv = 118,bklv = 15,star = 4,mon = {id = 208,desc = "kn-12-6-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120621,cardId = 1102005,lv = 118,bklv = 15,star = 4,mon = {id = 252,desc = "kn-12-6-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2120630,cardId = 1101014,lv = 118,bklv = 15,star = 4,mon = {id = 212,desc = "kn-12-6-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120631,cardId = 1102020,lv = 118,bklv = 15,star = 4,mon = {id = 257,desc = "kn-12-6-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120630,cardId = 1101014,lv = 118,bklv = 15,star = 4,mon = {id = 212,desc = "kn-12-6-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120631,cardId = 1102020,lv = 118,bklv = 15,star = 4,mon = {id = 257,desc = "kn-12-6-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21207] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2120710,cardId = 1101007,lv = 118,bklv = 15,star = 4,mon = {id = 207,desc = "kn-12-7-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120711,cardId = 1102012,lv = 118,bklv = 15,star = 4,mon = {id = 248,desc = "kn-12-7-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120710,cardId = 1101007,lv = 118,bklv = 15,star = 4,mon = {id = 207,desc = "kn-12-7-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120711,cardId = 1102012,lv = 118,bklv = 15,star = 4,mon = {id = 248,desc = "kn-12-7-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2120720,cardId = 1101003,lv = 118,bklv = 15,star = 4,mon = {id = 207,desc = "kn-12-7-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120721,cardId = 1102005,lv = 118,bklv = 15,star = 4,mon = {id = 242,desc = "kn-12-7-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120720,cardId = 1101003,lv = 118,bklv = 15,star = 4,mon = {id = 207,desc = "kn-12-7-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120721,cardId = 1102005,lv = 118,bklv = 15,star = 4,mon = {id = 242,desc = "kn-12-7-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2120730,cardId = 1101014,lv = 118,bklv = 15,star = 4,mon = {id = 211,desc = "kn-12-7-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120731,cardId = 1102020,lv = 118,bklv = 15,star = 4,mon = {id = 256,desc = "kn-12-7-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120730,cardId = 1101014,lv = 118,bklv = 15,star = 4,mon = {id = 211,desc = "kn-12-7-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120731,cardId = 1102020,lv = 118,bklv = 15,star = 4,mon = {id = 256,desc = "kn-12-7-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21208] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2120810,cardId = 1101007,lv = 119,bklv = 15,star = 4,mon = {id = 207,desc = "kn-12-8-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120811,cardId = 1102012,lv = 119,bklv = 15,star = 4,mon = {id = 251,desc = "kn-12-8-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120810,cardId = 1101007,lv = 119,bklv = 15,star = 4,mon = {id = 207,desc = "kn-12-8-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120811,cardId = 1102012,lv = 119,bklv = 15,star = 4,mon = {id = 251,desc = "kn-12-8-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2120820,cardId = 1101003,lv = 119,bklv = 15,star = 4,mon = {id = 205,desc = "kn-12-8-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120821,cardId = 1102005,lv = 119,bklv = 15,star = 4,mon = {id = 250,desc = "kn-12-8-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120820,cardId = 1101003,lv = 119,bklv = 15,star = 4,mon = {id = 205,desc = "kn-12-8-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120821,cardId = 1102005,lv = 119,bklv = 15,star = 4,mon = {id = 250,desc = "kn-12-8-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2120830,cardId = 1101014,lv = 119,bklv = 15,star = 4,mon = {id = 210,desc = "kn-12-8-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120831,cardId = 1102020,lv = 119,bklv = 15,star = 4,mon = {id = 255,desc = "kn-12-8-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120830,cardId = 1101014,lv = 119,bklv = 15,star = 4,mon = {id = 210,desc = "kn-12-8-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120831,cardId = 1102020,lv = 119,bklv = 15,star = 4,mon = {id = 255,desc = "kn-12-8-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21209] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2120910,cardId = 1101007,lv = 120,bklv = 16,star = 4,mon = {id = 212,desc = "kn-12-9-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120911,cardId = 1102012,lv = 120,bklv = 16,star = 4,mon = {id = 257,desc = "kn-12-9-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120910,cardId = 1101007,lv = 120,bklv = 16,star = 4,mon = {id = 212,desc = "kn-12-9-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120911,cardId = 1102012,lv = 120,bklv = 16,star = 4,mon = {id = 257,desc = "kn-12-9-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2120920,cardId = 1101003,lv = 120,bklv = 16,star = 4,mon = {id = 208,desc = "kn-12-9-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120921,cardId = 1102005,lv = 120,bklv = 16,star = 4,mon = {id = 252,desc = "kn-12-9-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120920,cardId = 1101003,lv = 120,bklv = 16,star = 4,mon = {id = 208,desc = "kn-12-9-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120921,cardId = 1102005,lv = 120,bklv = 16,star = 4,mon = {id = 252,desc = "kn-12-9-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2120930,cardId = 1101014,lv = 120,bklv = 16,star = 4,mon = {id = 209,desc = "kn-12-9-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2120931,cardId = 1102020,lv = 120,bklv = 16,star = 4,mon = {id = 253,desc = "kn-12-9-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2120930,cardId = 1101014,lv = 120,bklv = 16,star = 4,mon = {id = 209,desc = "kn-12-9-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2120931,cardId = 1102020,lv = 120,bklv = 16,star = 4,mon = {id = 253,desc = "kn-12-9-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21210] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2121010,cardId = 1101007,lv = 120,bklv = 16,star = 4,mon = {id = 201,desc = "kn-12-10-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121011,cardId = 1102012,lv = 120,bklv = 16,star = 4,mon = {id = 241,desc = "kn-12-10-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121010,cardId = 1101007,lv = 120,bklv = 16,star = 4,mon = {id = 201,desc = "kn-12-10-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121011,cardId = 1102012,lv = 120,bklv = 16,star = 4,mon = {id = 241,desc = "kn-12-10-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2121020,cardId = 1101003,lv = 120,bklv = 16,star = 4,mon = {id = 203,desc = "kn-12-10-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121021,cardId = 1102005,lv = 120,bklv = 16,star = 4,mon = {id = 244,desc = "kn-12-10-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121020,cardId = 1101003,lv = 120,bklv = 16,star = 4,mon = {id = 203,desc = "kn-12-10-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121021,cardId = 1102005,lv = 120,bklv = 16,star = 4,mon = {id = 244,desc = "kn-12-10-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2121030,cardId = 1101014,lv = 120,bklv = 16,star = 4,mon = {id = 214,desc = "kn-12-10-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121031,cardId = 1102020,lv = 120,bklv = 16,star = 4,mon = {id = 259,desc = "kn-12-10-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121030,cardId = 1101014,lv = 120,bklv = 16,star = 4,mon = {id = 214,desc = "kn-12-10-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121031,cardId = 1102020,lv = 120,bklv = 16,star = 4,mon = {id = 259,desc = "kn-12-10-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21211] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2121110,cardId = 1101007,lv = 120,bklv = 16,star = 4,mon = {id = 212,desc = "kn-12-11-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121111,cardId = 1102012,lv = 120,bklv = 16,star = 4,mon = {id = 257,desc = "kn-12-11-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121110,cardId = 1101007,lv = 120,bklv = 16,star = 4,mon = {id = 212,desc = "kn-12-11-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121111,cardId = 1102012,lv = 120,bklv = 16,star = 4,mon = {id = 257,desc = "kn-12-11-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2121120,cardId = 1101003,lv = 120,bklv = 16,star = 4,mon = {id = 208,desc = "kn-12-11-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121121,cardId = 1102005,lv = 120,bklv = 16,star = 4,mon = {id = 252,desc = "kn-12-11-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121120,cardId = 1101003,lv = 120,bklv = 16,star = 4,mon = {id = 208,desc = "kn-12-11-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121121,cardId = 1102005,lv = 120,bklv = 16,star = 4,mon = {id = 252,desc = "kn-12-11-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2121130,cardId = 1101014,lv = 120,bklv = 16,star = 4,mon = {id = 209,desc = "kn-12-11-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121131,cardId = 1102020,lv = 120,bklv = 16,star = 4,mon = {id = 253,desc = "kn-12-11-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121130,cardId = 1101014,lv = 120,bklv = 16,star = 4,mon = {id = 209,desc = "kn-12-11-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121131,cardId = 1102020,lv = 120,bklv = 16,star = 4,mon = {id = 253,desc = "kn-12-11-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21212] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2121210,cardId = 1101007,lv = 121,bklv = 16,star = 4,mon = {id = 215,desc = "kn-12-12-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121211,cardId = 1102012,lv = 121,bklv = 16,star = 4,mon = {id = 260,desc = "kn-12-12-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121210,cardId = 1101007,lv = 121,bklv = 16,star = 4,mon = {id = 215,desc = "kn-12-12-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121211,cardId = 1102012,lv = 121,bklv = 16,star = 4,mon = {id = 260,desc = "kn-12-12-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2121220,cardId = 1101003,lv = 121,bklv = 16,star = 4,mon = {id = 201,desc = "kn-12-12-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121221,cardId = 1102005,lv = 121,bklv = 16,star = 4,mon = {id = 248,desc = "kn-12-12-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121220,cardId = 1101003,lv = 121,bklv = 16,star = 4,mon = {id = 201,desc = "kn-12-12-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121221,cardId = 1102005,lv = 121,bklv = 16,star = 4,mon = {id = 248,desc = "kn-12-12-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2121230,cardId = 1101014,lv = 121,bklv = 16,star = 4,mon = {id = 211,desc = "kn-12-12-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121231,cardId = 1102020,lv = 121,bklv = 16,star = 4,mon = {id = 256,desc = "kn-12-12-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121230,cardId = 1101014,lv = 121,bklv = 16,star = 4,mon = {id = 211,desc = "kn-12-12-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121231,cardId = 1102020,lv = 121,bklv = 16,star = 4,mon = {id = 256,desc = "kn-12-12-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21213] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2121310,cardId = 1101007,lv = 122,bklv = 16,star = 4,mon = {id = 209,desc = "kn-12-13-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121311,cardId = 1102012,lv = 122,bklv = 16,star = 4,mon = {id = 253,desc = "kn-12-13-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121310,cardId = 1101007,lv = 122,bklv = 16,star = 4,mon = {id = 209,desc = "kn-12-13-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121311,cardId = 1102012,lv = 122,bklv = 16,star = 4,mon = {id = 253,desc = "kn-12-13-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2121320,cardId = 1101003,lv = 122,bklv = 16,star = 4,mon = {id = 208,desc = "kn-12-13-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121321,cardId = 1102005,lv = 122,bklv = 16,star = 4,mon = {id = 252,desc = "kn-12-13-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121320,cardId = 1101003,lv = 122,bklv = 16,star = 4,mon = {id = 208,desc = "kn-12-13-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121321,cardId = 1102005,lv = 122,bklv = 16,star = 4,mon = {id = 252,desc = "kn-12-13-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2121330,cardId = 1101014,lv = 122,bklv = 16,star = 4,mon = {id = 212,desc = "kn-12-13-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121331,cardId = 1102020,lv = 122,bklv = 16,star = 4,mon = {id = 257,desc = "kn-12-13-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121330,cardId = 1101014,lv = 122,bklv = 16,star = 4,mon = {id = 212,desc = "kn-12-13-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121331,cardId = 1102020,lv = 122,bklv = 16,star = 4,mon = {id = 257,desc = "kn-12-13-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21214] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2121410,cardId = 1101007,lv = 123,bklv = 16,star = 4,mon = {id = 207,desc = "kn-12-14-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121411,cardId = 1102012,lv = 123,bklv = 16,star = 4,mon = {id = 248,desc = "kn-12-14-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121410,cardId = 1101007,lv = 123,bklv = 16,star = 4,mon = {id = 207,desc = "kn-12-14-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121411,cardId = 1102012,lv = 123,bklv = 16,star = 4,mon = {id = 248,desc = "kn-12-14-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2121420,cardId = 1101005,lv = 123,bklv = 16,star = 4,mon = {id = 207,desc = "kn-12-14-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121421,cardId = 1102011,lv = 123,bklv = 16,star = 4,mon = {id = 242,desc = "kn-12-14-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121420,cardId = 1101005,lv = 123,bklv = 16,star = 4,mon = {id = 207,desc = "kn-12-14-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121421,cardId = 1102011,lv = 123,bklv = 16,star = 4,mon = {id = 242,desc = "kn-12-14-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2121430,cardId = 1101003,lv = 123,bklv = 16,star = 4,mon = {id = 211,desc = "kn-12-14-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121431,cardId = 1102005,lv = 123,bklv = 16,star = 4,mon = {id = 256,desc = "kn-12-14-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121430,cardId = 1101003,lv = 123,bklv = 16,star = 4,mon = {id = 211,desc = "kn-12-14-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121431,cardId = 1102005,lv = 123,bklv = 16,star = 4,mon = {id = 256,desc = "kn-12-14-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21215] = {
 		[1] = {
-			jlr = {cha = "kn-12",id = 2121510,cardId = 1101007,lv = 124,bklv = 16,star = 4,mon = {id = 205,desc = "kn-12-15-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121511,cardId = 1102012,lv = 124,bklv = 16,star = 4,mon = {id = 240,desc = "kn-12-15-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121510,cardId = 1101007,lv = 124,bklv = 16,star = 4,mon = {id = 205,desc = "kn-12-15-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121511,cardId = 1102012,lv = 124,bklv = 16,star = 4,mon = {id = 240,desc = "kn-12-15-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-12",id = 2121520,cardId = 1101005,lv = 124,bklv = 16,star = 4,mon = {id = 204,desc = "kn-12-15-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121521,cardId = 1102011,lv = 124,bklv = 16,star = 4,mon = {id = 245,desc = "kn-12-15-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121520,cardId = 1101005,lv = 124,bklv = 16,star = 4,mon = {id = 204,desc = "kn-12-15-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121521,cardId = 1102011,lv = 124,bklv = 16,star = 4,mon = {id = 245,desc = "kn-12-15-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-12",id = 2121530,cardId = 1101010,lv = 124,bklv = 16,star = 4,mon = {id = 207,desc = "kn-12-15-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-12",id = 2121531,cardId = 1102016,lv = 124,bklv = 16,star = 4,mon = {id = 249,desc = "kn-12-15-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-12",id = 2121530,cardId = 1101010,lv = 124,bklv = 16,star = 4,mon = {id = 207,desc = "kn-12-15-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-12",id = 2121531,cardId = 1102016,lv = 124,bklv = 16,star = 4,mon = {id = 249,desc = "kn-12-15-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21301] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2130110,cardId = 1101007,lv = 125,bklv = 17,star = 5,mon = {id = 212,desc = "kn-13-1-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130111,cardId = 1102012,lv = 125,bklv = 17,star = 5,mon = {id = 257,desc = "kn-13-1-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130110,cardId = 1101007,lv = 125,bklv = 17,star = 5,mon = {id = 212,desc = "kn-13-1-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130111,cardId = 1102012,lv = 125,bklv = 17,star = 5,mon = {id = 257,desc = "kn-13-1-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2130120,cardId = 1101003,lv = 125,bklv = 17,star = 5,mon = {id = 208,desc = "kn-13-1-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130121,cardId = 1102005,lv = 125,bklv = 17,star = 5,mon = {id = 252,desc = "kn-13-1-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130120,cardId = 1101003,lv = 125,bklv = 17,star = 5,mon = {id = 208,desc = "kn-13-1-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130121,cardId = 1102005,lv = 125,bklv = 17,star = 5,mon = {id = 252,desc = "kn-13-1-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2130130,cardId = 1101014,lv = 125,bklv = 17,star = 5,mon = {id = 213,desc = "kn-13-1-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130131,cardId = 1102020,lv = 125,bklv = 17,star = 5,mon = {id = 258,desc = "kn-13-1-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130130,cardId = 1101014,lv = 125,bklv = 17,star = 5,mon = {id = 213,desc = "kn-13-1-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130131,cardId = 1102020,lv = 125,bklv = 17,star = 5,mon = {id = 258,desc = "kn-13-1-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21302] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2130210,cardId = 1101007,lv = 126,bklv = 17,star = 5,mon = {id = 201,desc = "kn-13-2-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130211,cardId = 1102012,lv = 126,bklv = 17,star = 5,mon = {id = 241,desc = "kn-13-2-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130210,cardId = 1101007,lv = 126,bklv = 17,star = 5,mon = {id = 201,desc = "kn-13-2-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130211,cardId = 1102012,lv = 126,bklv = 17,star = 5,mon = {id = 241,desc = "kn-13-2-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2130220,cardId = 1101003,lv = 126,bklv = 17,star = 5,mon = {id = 203,desc = "kn-13-2-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130221,cardId = 1102005,lv = 126,bklv = 17,star = 5,mon = {id = 244,desc = "kn-13-2-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130220,cardId = 1101003,lv = 126,bklv = 17,star = 5,mon = {id = 203,desc = "kn-13-2-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130221,cardId = 1102005,lv = 126,bklv = 17,star = 5,mon = {id = 244,desc = "kn-13-2-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2130230,cardId = 1101014,lv = 126,bklv = 17,star = 5,mon = {id = 214,desc = "kn-13-2-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130231,cardId = 1102020,lv = 126,bklv = 17,star = 5,mon = {id = 259,desc = "kn-13-2-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130230,cardId = 1101014,lv = 126,bklv = 17,star = 5,mon = {id = 214,desc = "kn-13-2-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130231,cardId = 1102020,lv = 126,bklv = 17,star = 5,mon = {id = 259,desc = "kn-13-2-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21303] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2130310,cardId = 1101007,lv = 126,bklv = 17,star = 5,mon = {id = 212,desc = "kn-13-3-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130311,cardId = 1102012,lv = 126,bklv = 17,star = 5,mon = {id = 257,desc = "kn-13-3-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130310,cardId = 1101007,lv = 126,bklv = 17,star = 5,mon = {id = 212,desc = "kn-13-3-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130311,cardId = 1102012,lv = 126,bklv = 17,star = 5,mon = {id = 257,desc = "kn-13-3-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2130320,cardId = 1101003,lv = 126,bklv = 17,star = 5,mon = {id = 208,desc = "kn-13-3-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130321,cardId = 1102005,lv = 126,bklv = 17,star = 5,mon = {id = 252,desc = "kn-13-3-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130320,cardId = 1101003,lv = 126,bklv = 17,star = 5,mon = {id = 208,desc = "kn-13-3-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130321,cardId = 1102005,lv = 126,bklv = 17,star = 5,mon = {id = 252,desc = "kn-13-3-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2130330,cardId = 1101014,lv = 126,bklv = 17,star = 5,mon = {id = 209,desc = "kn-13-3-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130331,cardId = 1102020,lv = 126,bklv = 17,star = 5,mon = {id = 253,desc = "kn-13-3-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130330,cardId = 1101014,lv = 126,bklv = 17,star = 5,mon = {id = 209,desc = "kn-13-3-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130331,cardId = 1102020,lv = 126,bklv = 17,star = 5,mon = {id = 253,desc = "kn-13-3-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21304] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2130410,cardId = 1101007,lv = 127,bklv = 17,star = 5,mon = {id = 215,desc = "kn-13-4-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130411,cardId = 1102012,lv = 127,bklv = 17,star = 5,mon = {id = 260,desc = "kn-13-4-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130410,cardId = 1101007,lv = 127,bklv = 17,star = 5,mon = {id = 215,desc = "kn-13-4-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130411,cardId = 1102012,lv = 127,bklv = 17,star = 5,mon = {id = 260,desc = "kn-13-4-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2130420,cardId = 1101003,lv = 127,bklv = 17,star = 5,mon = {id = 201,desc = "kn-13-4-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130421,cardId = 1102005,lv = 127,bklv = 17,star = 5,mon = {id = 248,desc = "kn-13-4-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130420,cardId = 1101003,lv = 127,bklv = 17,star = 5,mon = {id = 201,desc = "kn-13-4-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130421,cardId = 1102005,lv = 127,bklv = 17,star = 5,mon = {id = 248,desc = "kn-13-4-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2130430,cardId = 1101014,lv = 127,bklv = 17,star = 5,mon = {id = 211,desc = "kn-13-4-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130431,cardId = 1102020,lv = 127,bklv = 17,star = 5,mon = {id = 256,desc = "kn-13-4-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130430,cardId = 1101014,lv = 127,bklv = 17,star = 5,mon = {id = 211,desc = "kn-13-4-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130431,cardId = 1102020,lv = 127,bklv = 17,star = 5,mon = {id = 256,desc = "kn-13-4-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21305] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2130510,cardId = 1101007,lv = 127,bklv = 17,star = 5,mon = {id = 206,desc = "kn-13-5-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130511,cardId = 1102012,lv = 127,bklv = 17,star = 5,mon = {id = 246,desc = "kn-13-5-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130510,cardId = 1101007,lv = 127,bklv = 17,star = 5,mon = {id = 206,desc = "kn-13-5-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130511,cardId = 1102012,lv = 127,bklv = 17,star = 5,mon = {id = 246,desc = "kn-13-5-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2130520,cardId = 1101003,lv = 127,bklv = 17,star = 5,mon = {id = 203,desc = "kn-13-5-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130521,cardId = 1102005,lv = 127,bklv = 17,star = 5,mon = {id = 244,desc = "kn-13-5-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130520,cardId = 1101003,lv = 127,bklv = 17,star = 5,mon = {id = 203,desc = "kn-13-5-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130521,cardId = 1102005,lv = 127,bklv = 17,star = 5,mon = {id = 244,desc = "kn-13-5-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2130530,cardId = 1101014,lv = 127,bklv = 17,star = 5,mon = {id = 212,desc = "kn-13-5-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130531,cardId = 1102020,lv = 127,bklv = 17,star = 5,mon = {id = 257,desc = "kn-13-5-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130530,cardId = 1101014,lv = 127,bklv = 17,star = 5,mon = {id = 212,desc = "kn-13-5-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130531,cardId = 1102020,lv = 127,bklv = 17,star = 5,mon = {id = 257,desc = "kn-13-5-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21306] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2130610,cardId = 1101007,lv = 128,bklv = 17,star = 5,mon = {id = 209,desc = "kn-13-6-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130611,cardId = 1102012,lv = 128,bklv = 17,star = 5,mon = {id = 253,desc = "kn-13-6-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130610,cardId = 1101007,lv = 128,bklv = 17,star = 5,mon = {id = 209,desc = "kn-13-6-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130611,cardId = 1102012,lv = 128,bklv = 17,star = 5,mon = {id = 253,desc = "kn-13-6-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2130620,cardId = 1101003,lv = 128,bklv = 17,star = 5,mon = {id = 208,desc = "kn-13-6-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130621,cardId = 1102005,lv = 128,bklv = 17,star = 5,mon = {id = 252,desc = "kn-13-6-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130620,cardId = 1101003,lv = 128,bklv = 17,star = 5,mon = {id = 208,desc = "kn-13-6-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130621,cardId = 1102005,lv = 128,bklv = 17,star = 5,mon = {id = 252,desc = "kn-13-6-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2130630,cardId = 1101014,lv = 128,bklv = 17,star = 5,mon = {id = 212,desc = "kn-13-6-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130631,cardId = 1102020,lv = 128,bklv = 17,star = 5,mon = {id = 257,desc = "kn-13-6-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130630,cardId = 1101014,lv = 128,bklv = 17,star = 5,mon = {id = 212,desc = "kn-13-6-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130631,cardId = 1102020,lv = 128,bklv = 17,star = 5,mon = {id = 257,desc = "kn-13-6-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21307] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2130710,cardId = 1101007,lv = 128,bklv = 17,star = 5,mon = {id = 207,desc = "kn-13-7-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130711,cardId = 1102012,lv = 128,bklv = 17,star = 5,mon = {id = 248,desc = "kn-13-7-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130710,cardId = 1101007,lv = 128,bklv = 17,star = 5,mon = {id = 207,desc = "kn-13-7-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130711,cardId = 1102012,lv = 128,bklv = 17,star = 5,mon = {id = 248,desc = "kn-13-7-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2130720,cardId = 1101003,lv = 128,bklv = 17,star = 5,mon = {id = 207,desc = "kn-13-7-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130721,cardId = 1102005,lv = 128,bklv = 17,star = 5,mon = {id = 242,desc = "kn-13-7-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130720,cardId = 1101003,lv = 128,bklv = 17,star = 5,mon = {id = 207,desc = "kn-13-7-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130721,cardId = 1102005,lv = 128,bklv = 17,star = 5,mon = {id = 242,desc = "kn-13-7-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2130730,cardId = 1101014,lv = 128,bklv = 17,star = 5,mon = {id = 211,desc = "kn-13-7-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130731,cardId = 1102020,lv = 128,bklv = 17,star = 5,mon = {id = 256,desc = "kn-13-7-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130730,cardId = 1101014,lv = 128,bklv = 17,star = 5,mon = {id = 211,desc = "kn-13-7-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130731,cardId = 1102020,lv = 128,bklv = 17,star = 5,mon = {id = 256,desc = "kn-13-7-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21308] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2130810,cardId = 1101007,lv = 129,bklv = 17,star = 5,mon = {id = 207,desc = "kn-13-8-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130811,cardId = 1102012,lv = 129,bklv = 17,star = 5,mon = {id = 251,desc = "kn-13-8-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130810,cardId = 1101007,lv = 129,bklv = 17,star = 5,mon = {id = 207,desc = "kn-13-8-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130811,cardId = 1102012,lv = 129,bklv = 17,star = 5,mon = {id = 251,desc = "kn-13-8-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2130820,cardId = 1101003,lv = 129,bklv = 17,star = 5,mon = {id = 205,desc = "kn-13-8-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130821,cardId = 1102005,lv = 129,bklv = 17,star = 5,mon = {id = 250,desc = "kn-13-8-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130820,cardId = 1101003,lv = 129,bklv = 17,star = 5,mon = {id = 205,desc = "kn-13-8-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130821,cardId = 1102005,lv = 129,bklv = 17,star = 5,mon = {id = 250,desc = "kn-13-8-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2130830,cardId = 1101014,lv = 129,bklv = 17,star = 5,mon = {id = 210,desc = "kn-13-8-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130831,cardId = 1102020,lv = 129,bklv = 17,star = 5,mon = {id = 255,desc = "kn-13-8-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130830,cardId = 1101014,lv = 129,bklv = 17,star = 5,mon = {id = 210,desc = "kn-13-8-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130831,cardId = 1102020,lv = 129,bklv = 17,star = 5,mon = {id = 255,desc = "kn-13-8-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21309] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2130910,cardId = 1101007,lv = 130,bklv = 18,star = 5,mon = {id = 212,desc = "kn-13-9-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130911,cardId = 1102012,lv = 130,bklv = 18,star = 5,mon = {id = 257,desc = "kn-13-9-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130910,cardId = 1101007,lv = 130,bklv = 18,star = 5,mon = {id = 212,desc = "kn-13-9-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130911,cardId = 1102012,lv = 130,bklv = 18,star = 5,mon = {id = 257,desc = "kn-13-9-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2130920,cardId = 1101003,lv = 130,bklv = 18,star = 5,mon = {id = 208,desc = "kn-13-9-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130921,cardId = 1102005,lv = 130,bklv = 18,star = 5,mon = {id = 252,desc = "kn-13-9-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130920,cardId = 1101003,lv = 130,bklv = 18,star = 5,mon = {id = 208,desc = "kn-13-9-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130921,cardId = 1102005,lv = 130,bklv = 18,star = 5,mon = {id = 252,desc = "kn-13-9-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2130930,cardId = 1101014,lv = 130,bklv = 18,star = 5,mon = {id = 209,desc = "kn-13-9-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2130931,cardId = 1102020,lv = 130,bklv = 18,star = 5,mon = {id = 253,desc = "kn-13-9-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2130930,cardId = 1101014,lv = 130,bklv = 18,star = 5,mon = {id = 209,desc = "kn-13-9-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2130931,cardId = 1102020,lv = 130,bklv = 18,star = 5,mon = {id = 253,desc = "kn-13-9-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21310] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2131010,cardId = 1101007,lv = 130,bklv = 18,star = 5,mon = {id = 201,desc = "kn-13-10-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131011,cardId = 1102012,lv = 130,bklv = 18,star = 5,mon = {id = 241,desc = "kn-13-10-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131010,cardId = 1101007,lv = 130,bklv = 18,star = 5,mon = {id = 201,desc = "kn-13-10-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131011,cardId = 1102012,lv = 130,bklv = 18,star = 5,mon = {id = 241,desc = "kn-13-10-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2131020,cardId = 1101003,lv = 130,bklv = 18,star = 5,mon = {id = 203,desc = "kn-13-10-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131021,cardId = 1102005,lv = 130,bklv = 18,star = 5,mon = {id = 244,desc = "kn-13-10-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131020,cardId = 1101003,lv = 130,bklv = 18,star = 5,mon = {id = 203,desc = "kn-13-10-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131021,cardId = 1102005,lv = 130,bklv = 18,star = 5,mon = {id = 244,desc = "kn-13-10-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2131030,cardId = 1101014,lv = 130,bklv = 18,star = 5,mon = {id = 214,desc = "kn-13-10-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131031,cardId = 1102020,lv = 130,bklv = 18,star = 5,mon = {id = 259,desc = "kn-13-10-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131030,cardId = 1101014,lv = 130,bklv = 18,star = 5,mon = {id = 214,desc = "kn-13-10-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131031,cardId = 1102020,lv = 130,bklv = 18,star = 5,mon = {id = 259,desc = "kn-13-10-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21311] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2131110,cardId = 1101007,lv = 130,bklv = 18,star = 5,mon = {id = 212,desc = "kn-13-11-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131111,cardId = 1102012,lv = 130,bklv = 18,star = 5,mon = {id = 257,desc = "kn-13-11-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131110,cardId = 1101007,lv = 130,bklv = 18,star = 5,mon = {id = 212,desc = "kn-13-11-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131111,cardId = 1102012,lv = 130,bklv = 18,star = 5,mon = {id = 257,desc = "kn-13-11-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2131120,cardId = 1101003,lv = 130,bklv = 18,star = 5,mon = {id = 208,desc = "kn-13-11-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131121,cardId = 1102005,lv = 130,bklv = 18,star = 5,mon = {id = 252,desc = "kn-13-11-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131120,cardId = 1101003,lv = 130,bklv = 18,star = 5,mon = {id = 208,desc = "kn-13-11-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131121,cardId = 1102005,lv = 130,bklv = 18,star = 5,mon = {id = 252,desc = "kn-13-11-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2131130,cardId = 1101014,lv = 130,bklv = 18,star = 5,mon = {id = 209,desc = "kn-13-11-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131131,cardId = 1102020,lv = 130,bklv = 18,star = 5,mon = {id = 253,desc = "kn-13-11-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131130,cardId = 1101014,lv = 130,bklv = 18,star = 5,mon = {id = 209,desc = "kn-13-11-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131131,cardId = 1102020,lv = 130,bklv = 18,star = 5,mon = {id = 253,desc = "kn-13-11-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21312] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2131210,cardId = 1101007,lv = 131,bklv = 18,star = 5,mon = {id = 215,desc = "kn-13-12-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131211,cardId = 1102012,lv = 131,bklv = 18,star = 5,mon = {id = 260,desc = "kn-13-12-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131210,cardId = 1101007,lv = 131,bklv = 18,star = 5,mon = {id = 215,desc = "kn-13-12-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131211,cardId = 1102012,lv = 131,bklv = 18,star = 5,mon = {id = 260,desc = "kn-13-12-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2131220,cardId = 1101003,lv = 131,bklv = 18,star = 5,mon = {id = 201,desc = "kn-13-12-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131221,cardId = 1102005,lv = 131,bklv = 18,star = 5,mon = {id = 248,desc = "kn-13-12-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131220,cardId = 1101003,lv = 131,bklv = 18,star = 5,mon = {id = 201,desc = "kn-13-12-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131221,cardId = 1102005,lv = 131,bklv = 18,star = 5,mon = {id = 248,desc = "kn-13-12-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2131230,cardId = 1101014,lv = 131,bklv = 18,star = 5,mon = {id = 211,desc = "kn-13-12-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131231,cardId = 1102020,lv = 131,bklv = 18,star = 5,mon = {id = 256,desc = "kn-13-12-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131230,cardId = 1101014,lv = 131,bklv = 18,star = 5,mon = {id = 211,desc = "kn-13-12-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131231,cardId = 1102020,lv = 131,bklv = 18,star = 5,mon = {id = 256,desc = "kn-13-12-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21313] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2131310,cardId = 1101007,lv = 132,bklv = 18,star = 5,mon = {id = 209,desc = "kn-13-13-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131311,cardId = 1102012,lv = 132,bklv = 18,star = 5,mon = {id = 253,desc = "kn-13-13-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131310,cardId = 1101007,lv = 132,bklv = 18,star = 5,mon = {id = 209,desc = "kn-13-13-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131311,cardId = 1102012,lv = 132,bklv = 18,star = 5,mon = {id = 253,desc = "kn-13-13-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2131320,cardId = 1101003,lv = 132,bklv = 18,star = 5,mon = {id = 208,desc = "kn-13-13-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131321,cardId = 1102005,lv = 132,bklv = 18,star = 5,mon = {id = 252,desc = "kn-13-13-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131320,cardId = 1101003,lv = 132,bklv = 18,star = 5,mon = {id = 208,desc = "kn-13-13-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131321,cardId = 1102005,lv = 132,bklv = 18,star = 5,mon = {id = 252,desc = "kn-13-13-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2131330,cardId = 1101014,lv = 132,bklv = 18,star = 5,mon = {id = 212,desc = "kn-13-13-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131331,cardId = 1102020,lv = 132,bklv = 18,star = 5,mon = {id = 257,desc = "kn-13-13-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131330,cardId = 1101014,lv = 132,bklv = 18,star = 5,mon = {id = 212,desc = "kn-13-13-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131331,cardId = 1102020,lv = 132,bklv = 18,star = 5,mon = {id = 257,desc = "kn-13-13-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21314] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2131410,cardId = 1101007,lv = 133,bklv = 18,star = 5,mon = {id = 207,desc = "kn-13-14-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131411,cardId = 1102012,lv = 133,bklv = 18,star = 5,mon = {id = 248,desc = "kn-13-14-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131410,cardId = 1101007,lv = 133,bklv = 18,star = 5,mon = {id = 207,desc = "kn-13-14-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131411,cardId = 1102012,lv = 133,bklv = 18,star = 5,mon = {id = 248,desc = "kn-13-14-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2131420,cardId = 1101005,lv = 133,bklv = 18,star = 5,mon = {id = 207,desc = "kn-13-14-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131421,cardId = 1102011,lv = 133,bklv = 18,star = 5,mon = {id = 242,desc = "kn-13-14-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131420,cardId = 1101005,lv = 133,bklv = 18,star = 5,mon = {id = 207,desc = "kn-13-14-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131421,cardId = 1102011,lv = 133,bklv = 18,star = 5,mon = {id = 242,desc = "kn-13-14-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2131430,cardId = 1101003,lv = 133,bklv = 18,star = 5,mon = {id = 211,desc = "kn-13-14-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131431,cardId = 1102005,lv = 133,bklv = 18,star = 5,mon = {id = 256,desc = "kn-13-14-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131430,cardId = 1101003,lv = 133,bklv = 18,star = 5,mon = {id = 211,desc = "kn-13-14-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131431,cardId = 1102005,lv = 133,bklv = 18,star = 5,mon = {id = 256,desc = "kn-13-14-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21315] = {
 		[1] = {
-			jlr = {cha = "kn-13",id = 2131510,cardId = 1101007,lv = 134,bklv = 18,star = 5,mon = {id = 205,desc = "kn-13-15-jlr-loc1",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131511,cardId = 1102012,lv = 134,bklv = 18,star = 5,mon = {id = 240,desc = "kn-13-15-shl-loc1",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131510,cardId = 1101007,lv = 134,bklv = 18,star = 5,mon = {id = 205,desc = "kn-13-15-jlr-loc1",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131511,cardId = 1102012,lv = 134,bklv = 18,star = 5,mon = {id = 240,desc = "kn-13-15-shl-loc1",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-13",id = 2131520,cardId = 1101005,lv = 134,bklv = 18,star = 5,mon = {id = 204,desc = "kn-13-15-jlr-loc2",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131521,cardId = 1102011,lv = 134,bklv = 18,star = 5,mon = {id = 245,desc = "kn-13-15-shl-loc2",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131520,cardId = 1101005,lv = 134,bklv = 18,star = 5,mon = {id = 204,desc = "kn-13-15-jlr-loc2",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131521,cardId = 1102011,lv = 134,bklv = 18,star = 5,mon = {id = 245,desc = "kn-13-15-shl-loc2",skillLv = 8,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-13",id = 2131530,cardId = 1101010,lv = 134,bklv = 18,star = 5,mon = {id = 207,desc = "kn-13-15-jlr-loc3",skillLv = 8,exert = 6,suffer = 8}},
-			shl = {cha = "kn-13",id = 2131531,cardId = 1102016,lv = 134,bklv = 18,star = 5,mon = {id = 249,desc = "kn-13-15-shl-loc3",skillLv = 8,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-13",id = 2131530,cardId = 1101010,lv = 134,bklv = 18,star = 5,mon = {id = 207,desc = "kn-13-15-jlr-loc3",skillLv = 8,exert = 12,suffer = 12}},
+			shl = {cha = "kn-13",id = 2131531,cardId = 1102016,lv = 134,bklv = 18,star = 5,mon = {id = 249,desc = "kn-13-15-shl-loc3",skillLv = 8,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21401] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2140110,cardId = 1101007,lv = 135,bklv = 19,star = 5,mon = {id = 212,desc = "kn-14-1-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140111,cardId = 1102012,lv = 135,bklv = 19,star = 5,mon = {id = 257,desc = "kn-14-1-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140110,cardId = 1101007,lv = 135,bklv = 19,star = 5,mon = {id = 212,desc = "kn-14-1-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140111,cardId = 1102012,lv = 135,bklv = 19,star = 5,mon = {id = 257,desc = "kn-14-1-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2140120,cardId = 1101003,lv = 135,bklv = 19,star = 5,mon = {id = 208,desc = "kn-14-1-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140121,cardId = 1102005,lv = 135,bklv = 19,star = 5,mon = {id = 252,desc = "kn-14-1-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140120,cardId = 1101003,lv = 135,bklv = 19,star = 5,mon = {id = 208,desc = "kn-14-1-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140121,cardId = 1102005,lv = 135,bklv = 19,star = 5,mon = {id = 252,desc = "kn-14-1-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2140130,cardId = 1101014,lv = 135,bklv = 19,star = 5,mon = {id = 213,desc = "kn-14-1-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140131,cardId = 1102020,lv = 135,bklv = 19,star = 5,mon = {id = 258,desc = "kn-14-1-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140130,cardId = 1101014,lv = 135,bklv = 19,star = 5,mon = {id = 213,desc = "kn-14-1-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140131,cardId = 1102020,lv = 135,bklv = 19,star = 5,mon = {id = 258,desc = "kn-14-1-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21402] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2140210,cardId = 1101007,lv = 136,bklv = 19,star = 5,mon = {id = 201,desc = "kn-14-2-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140211,cardId = 1102012,lv = 136,bklv = 19,star = 5,mon = {id = 241,desc = "kn-14-2-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140210,cardId = 1101007,lv = 136,bklv = 19,star = 5,mon = {id = 201,desc = "kn-14-2-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140211,cardId = 1102012,lv = 136,bklv = 19,star = 5,mon = {id = 241,desc = "kn-14-2-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2140220,cardId = 1101003,lv = 136,bklv = 19,star = 5,mon = {id = 203,desc = "kn-14-2-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140221,cardId = 1102005,lv = 136,bklv = 19,star = 5,mon = {id = 244,desc = "kn-14-2-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140220,cardId = 1101003,lv = 136,bklv = 19,star = 5,mon = {id = 203,desc = "kn-14-2-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140221,cardId = 1102005,lv = 136,bklv = 19,star = 5,mon = {id = 244,desc = "kn-14-2-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2140230,cardId = 1101014,lv = 136,bklv = 19,star = 5,mon = {id = 214,desc = "kn-14-2-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140231,cardId = 1102020,lv = 136,bklv = 19,star = 5,mon = {id = 259,desc = "kn-14-2-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140230,cardId = 1101014,lv = 136,bklv = 19,star = 5,mon = {id = 214,desc = "kn-14-2-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140231,cardId = 1102020,lv = 136,bklv = 19,star = 5,mon = {id = 259,desc = "kn-14-2-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21403] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2140310,cardId = 1101007,lv = 136,bklv = 19,star = 5,mon = {id = 212,desc = "kn-14-3-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140311,cardId = 1102012,lv = 136,bklv = 19,star = 5,mon = {id = 257,desc = "kn-14-3-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140310,cardId = 1101007,lv = 136,bklv = 19,star = 5,mon = {id = 212,desc = "kn-14-3-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140311,cardId = 1102012,lv = 136,bklv = 19,star = 5,mon = {id = 257,desc = "kn-14-3-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2140320,cardId = 1101003,lv = 136,bklv = 19,star = 5,mon = {id = 208,desc = "kn-14-3-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140321,cardId = 1102005,lv = 136,bklv = 19,star = 5,mon = {id = 252,desc = "kn-14-3-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140320,cardId = 1101003,lv = 136,bklv = 19,star = 5,mon = {id = 208,desc = "kn-14-3-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140321,cardId = 1102005,lv = 136,bklv = 19,star = 5,mon = {id = 252,desc = "kn-14-3-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2140330,cardId = 1101014,lv = 136,bklv = 19,star = 5,mon = {id = 209,desc = "kn-14-3-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140331,cardId = 1102020,lv = 136,bklv = 19,star = 5,mon = {id = 253,desc = "kn-14-3-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140330,cardId = 1101014,lv = 136,bklv = 19,star = 5,mon = {id = 209,desc = "kn-14-3-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140331,cardId = 1102020,lv = 136,bklv = 19,star = 5,mon = {id = 253,desc = "kn-14-3-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21404] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2140410,cardId = 1101007,lv = 137,bklv = 19,star = 5,mon = {id = 215,desc = "kn-14-4-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140411,cardId = 1102012,lv = 137,bklv = 19,star = 5,mon = {id = 260,desc = "kn-14-4-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140410,cardId = 1101007,lv = 137,bklv = 19,star = 5,mon = {id = 215,desc = "kn-14-4-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140411,cardId = 1102012,lv = 137,bklv = 19,star = 5,mon = {id = 260,desc = "kn-14-4-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2140420,cardId = 1101003,lv = 137,bklv = 19,star = 5,mon = {id = 201,desc = "kn-14-4-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140421,cardId = 1102005,lv = 137,bklv = 19,star = 5,mon = {id = 248,desc = "kn-14-4-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140420,cardId = 1101003,lv = 137,bklv = 19,star = 5,mon = {id = 201,desc = "kn-14-4-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140421,cardId = 1102005,lv = 137,bklv = 19,star = 5,mon = {id = 248,desc = "kn-14-4-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2140430,cardId = 1101014,lv = 137,bklv = 19,star = 5,mon = {id = 211,desc = "kn-14-4-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140431,cardId = 1102020,lv = 137,bklv = 19,star = 5,mon = {id = 256,desc = "kn-14-4-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140430,cardId = 1101014,lv = 137,bklv = 19,star = 5,mon = {id = 211,desc = "kn-14-4-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140431,cardId = 1102020,lv = 137,bklv = 19,star = 5,mon = {id = 256,desc = "kn-14-4-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21405] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2140510,cardId = 1101007,lv = 137,bklv = 19,star = 5,mon = {id = 206,desc = "kn-14-5-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140511,cardId = 1102012,lv = 137,bklv = 19,star = 5,mon = {id = 246,desc = "kn-14-5-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140510,cardId = 1101007,lv = 137,bklv = 19,star = 5,mon = {id = 206,desc = "kn-14-5-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140511,cardId = 1102012,lv = 137,bklv = 19,star = 5,mon = {id = 246,desc = "kn-14-5-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2140520,cardId = 1101003,lv = 137,bklv = 19,star = 5,mon = {id = 203,desc = "kn-14-5-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140521,cardId = 1102005,lv = 137,bklv = 19,star = 5,mon = {id = 244,desc = "kn-14-5-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140520,cardId = 1101003,lv = 137,bklv = 19,star = 5,mon = {id = 203,desc = "kn-14-5-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140521,cardId = 1102005,lv = 137,bklv = 19,star = 5,mon = {id = 244,desc = "kn-14-5-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2140530,cardId = 1101014,lv = 137,bklv = 19,star = 5,mon = {id = 212,desc = "kn-14-5-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140531,cardId = 1102020,lv = 137,bklv = 19,star = 5,mon = {id = 257,desc = "kn-14-5-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140530,cardId = 1101014,lv = 137,bklv = 19,star = 5,mon = {id = 212,desc = "kn-14-5-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140531,cardId = 1102020,lv = 137,bklv = 19,star = 5,mon = {id = 257,desc = "kn-14-5-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21406] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2140610,cardId = 1101007,lv = 138,bklv = 19,star = 5,mon = {id = 209,desc = "kn-14-6-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140611,cardId = 1102012,lv = 138,bklv = 19,star = 5,mon = {id = 253,desc = "kn-14-6-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140610,cardId = 1101007,lv = 138,bklv = 19,star = 5,mon = {id = 209,desc = "kn-14-6-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140611,cardId = 1102012,lv = 138,bklv = 19,star = 5,mon = {id = 253,desc = "kn-14-6-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2140620,cardId = 1101003,lv = 138,bklv = 19,star = 5,mon = {id = 208,desc = "kn-14-6-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140621,cardId = 1102005,lv = 138,bklv = 19,star = 5,mon = {id = 252,desc = "kn-14-6-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140620,cardId = 1101003,lv = 138,bklv = 19,star = 5,mon = {id = 208,desc = "kn-14-6-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140621,cardId = 1102005,lv = 138,bklv = 19,star = 5,mon = {id = 252,desc = "kn-14-6-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2140630,cardId = 1101014,lv = 138,bklv = 19,star = 5,mon = {id = 212,desc = "kn-14-6-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140631,cardId = 1102020,lv = 138,bklv = 19,star = 5,mon = {id = 257,desc = "kn-14-6-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140630,cardId = 1101014,lv = 138,bklv = 19,star = 5,mon = {id = 212,desc = "kn-14-6-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140631,cardId = 1102020,lv = 138,bklv = 19,star = 5,mon = {id = 257,desc = "kn-14-6-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21407] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2140710,cardId = 1101007,lv = 138,bklv = 19,star = 5,mon = {id = 207,desc = "kn-14-7-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140711,cardId = 1102012,lv = 138,bklv = 19,star = 5,mon = {id = 248,desc = "kn-14-7-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140710,cardId = 1101007,lv = 138,bklv = 19,star = 5,mon = {id = 207,desc = "kn-14-7-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140711,cardId = 1102012,lv = 138,bklv = 19,star = 5,mon = {id = 248,desc = "kn-14-7-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2140720,cardId = 1101003,lv = 138,bklv = 19,star = 5,mon = {id = 207,desc = "kn-14-7-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140721,cardId = 1102005,lv = 138,bklv = 19,star = 5,mon = {id = 242,desc = "kn-14-7-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140720,cardId = 1101003,lv = 138,bklv = 19,star = 5,mon = {id = 207,desc = "kn-14-7-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140721,cardId = 1102005,lv = 138,bklv = 19,star = 5,mon = {id = 242,desc = "kn-14-7-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2140730,cardId = 1101014,lv = 138,bklv = 19,star = 5,mon = {id = 211,desc = "kn-14-7-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140731,cardId = 1102020,lv = 138,bklv = 19,star = 5,mon = {id = 256,desc = "kn-14-7-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140730,cardId = 1101014,lv = 138,bklv = 19,star = 5,mon = {id = 211,desc = "kn-14-7-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140731,cardId = 1102020,lv = 138,bklv = 19,star = 5,mon = {id = 256,desc = "kn-14-7-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21408] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2140810,cardId = 1101007,lv = 139,bklv = 19,star = 5,mon = {id = 207,desc = "kn-14-8-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140811,cardId = 1102012,lv = 139,bklv = 19,star = 5,mon = {id = 251,desc = "kn-14-8-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140810,cardId = 1101007,lv = 139,bklv = 19,star = 5,mon = {id = 207,desc = "kn-14-8-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140811,cardId = 1102012,lv = 139,bklv = 19,star = 5,mon = {id = 251,desc = "kn-14-8-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2140820,cardId = 1101003,lv = 139,bklv = 19,star = 5,mon = {id = 205,desc = "kn-14-8-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140821,cardId = 1102005,lv = 139,bklv = 19,star = 5,mon = {id = 250,desc = "kn-14-8-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140820,cardId = 1101003,lv = 139,bklv = 19,star = 5,mon = {id = 205,desc = "kn-14-8-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140821,cardId = 1102005,lv = 139,bklv = 19,star = 5,mon = {id = 250,desc = "kn-14-8-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2140830,cardId = 1101014,lv = 139,bklv = 19,star = 5,mon = {id = 210,desc = "kn-14-8-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140831,cardId = 1102020,lv = 139,bklv = 19,star = 5,mon = {id = 255,desc = "kn-14-8-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140830,cardId = 1101014,lv = 139,bklv = 19,star = 5,mon = {id = 210,desc = "kn-14-8-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140831,cardId = 1102020,lv = 139,bklv = 19,star = 5,mon = {id = 255,desc = "kn-14-8-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21409] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2140910,cardId = 1101007,lv = 140,bklv = 20,star = 5,mon = {id = 212,desc = "kn-14-9-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140911,cardId = 1102012,lv = 140,bklv = 20,star = 5,mon = {id = 257,desc = "kn-14-9-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140910,cardId = 1101007,lv = 140,bklv = 20,star = 5,mon = {id = 212,desc = "kn-14-9-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140911,cardId = 1102012,lv = 140,bklv = 20,star = 5,mon = {id = 257,desc = "kn-14-9-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2140920,cardId = 1101003,lv = 140,bklv = 20,star = 5,mon = {id = 208,desc = "kn-14-9-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140921,cardId = 1102005,lv = 140,bklv = 20,star = 5,mon = {id = 252,desc = "kn-14-9-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140920,cardId = 1101003,lv = 140,bklv = 20,star = 5,mon = {id = 208,desc = "kn-14-9-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140921,cardId = 1102005,lv = 140,bklv = 20,star = 5,mon = {id = 252,desc = "kn-14-9-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2140930,cardId = 1101014,lv = 140,bklv = 20,star = 5,mon = {id = 209,desc = "kn-14-9-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2140931,cardId = 1102020,lv = 140,bklv = 20,star = 5,mon = {id = 253,desc = "kn-14-9-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2140930,cardId = 1101014,lv = 140,bklv = 20,star = 5,mon = {id = 209,desc = "kn-14-9-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2140931,cardId = 1102020,lv = 140,bklv = 20,star = 5,mon = {id = 253,desc = "kn-14-9-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21410] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2141010,cardId = 1101007,lv = 140,bklv = 20,star = 5,mon = {id = 201,desc = "kn-14-10-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141011,cardId = 1102012,lv = 140,bklv = 20,star = 5,mon = {id = 241,desc = "kn-14-10-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141010,cardId = 1101007,lv = 140,bklv = 20,star = 5,mon = {id = 201,desc = "kn-14-10-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141011,cardId = 1102012,lv = 140,bklv = 20,star = 5,mon = {id = 241,desc = "kn-14-10-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2141020,cardId = 1101003,lv = 140,bklv = 20,star = 5,mon = {id = 203,desc = "kn-14-10-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141021,cardId = 1102005,lv = 140,bklv = 20,star = 5,mon = {id = 244,desc = "kn-14-10-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141020,cardId = 1101003,lv = 140,bklv = 20,star = 5,mon = {id = 203,desc = "kn-14-10-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141021,cardId = 1102005,lv = 140,bklv = 20,star = 5,mon = {id = 244,desc = "kn-14-10-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2141030,cardId = 1101014,lv = 140,bklv = 20,star = 5,mon = {id = 214,desc = "kn-14-10-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141031,cardId = 1102020,lv = 140,bklv = 20,star = 5,mon = {id = 259,desc = "kn-14-10-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141030,cardId = 1101014,lv = 140,bklv = 20,star = 5,mon = {id = 214,desc = "kn-14-10-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141031,cardId = 1102020,lv = 140,bklv = 20,star = 5,mon = {id = 259,desc = "kn-14-10-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21411] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2141110,cardId = 1101007,lv = 140,bklv = 20,star = 5,mon = {id = 212,desc = "kn-14-11-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141111,cardId = 1102012,lv = 140,bklv = 20,star = 5,mon = {id = 257,desc = "kn-14-11-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141110,cardId = 1101007,lv = 140,bklv = 20,star = 5,mon = {id = 212,desc = "kn-14-11-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141111,cardId = 1102012,lv = 140,bklv = 20,star = 5,mon = {id = 257,desc = "kn-14-11-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2141120,cardId = 1101003,lv = 140,bklv = 20,star = 5,mon = {id = 208,desc = "kn-14-11-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141121,cardId = 1102005,lv = 140,bklv = 20,star = 5,mon = {id = 252,desc = "kn-14-11-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141120,cardId = 1101003,lv = 140,bklv = 20,star = 5,mon = {id = 208,desc = "kn-14-11-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141121,cardId = 1102005,lv = 140,bklv = 20,star = 5,mon = {id = 252,desc = "kn-14-11-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2141130,cardId = 1101014,lv = 140,bklv = 20,star = 5,mon = {id = 209,desc = "kn-14-11-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141131,cardId = 1102020,lv = 140,bklv = 20,star = 5,mon = {id = 253,desc = "kn-14-11-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141130,cardId = 1101014,lv = 140,bklv = 20,star = 5,mon = {id = 209,desc = "kn-14-11-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141131,cardId = 1102020,lv = 140,bklv = 20,star = 5,mon = {id = 253,desc = "kn-14-11-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21412] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2141210,cardId = 1101007,lv = 141,bklv = 20,star = 5,mon = {id = 215,desc = "kn-14-12-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141211,cardId = 1102012,lv = 141,bklv = 20,star = 5,mon = {id = 260,desc = "kn-14-12-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141210,cardId = 1101007,lv = 141,bklv = 20,star = 5,mon = {id = 215,desc = "kn-14-12-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141211,cardId = 1102012,lv = 141,bklv = 20,star = 5,mon = {id = 260,desc = "kn-14-12-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2141220,cardId = 1101003,lv = 141,bklv = 20,star = 5,mon = {id = 201,desc = "kn-14-12-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141221,cardId = 1102005,lv = 141,bklv = 20,star = 5,mon = {id = 248,desc = "kn-14-12-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141220,cardId = 1101003,lv = 141,bklv = 20,star = 5,mon = {id = 201,desc = "kn-14-12-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141221,cardId = 1102005,lv = 141,bklv = 20,star = 5,mon = {id = 248,desc = "kn-14-12-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2141230,cardId = 1101014,lv = 141,bklv = 20,star = 5,mon = {id = 211,desc = "kn-14-12-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141231,cardId = 1102020,lv = 141,bklv = 20,star = 5,mon = {id = 256,desc = "kn-14-12-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141230,cardId = 1101014,lv = 141,bklv = 20,star = 5,mon = {id = 211,desc = "kn-14-12-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141231,cardId = 1102020,lv = 141,bklv = 20,star = 5,mon = {id = 256,desc = "kn-14-12-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21413] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2141310,cardId = 1101007,lv = 142,bklv = 20,star = 5,mon = {id = 209,desc = "kn-14-13-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141311,cardId = 1102012,lv = 142,bklv = 20,star = 5,mon = {id = 253,desc = "kn-14-13-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141310,cardId = 1101007,lv = 142,bklv = 20,star = 5,mon = {id = 209,desc = "kn-14-13-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141311,cardId = 1102012,lv = 142,bklv = 20,star = 5,mon = {id = 253,desc = "kn-14-13-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2141320,cardId = 1101003,lv = 142,bklv = 20,star = 5,mon = {id = 208,desc = "kn-14-13-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141321,cardId = 1102005,lv = 142,bklv = 20,star = 5,mon = {id = 252,desc = "kn-14-13-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141320,cardId = 1101003,lv = 142,bklv = 20,star = 5,mon = {id = 208,desc = "kn-14-13-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141321,cardId = 1102005,lv = 142,bklv = 20,star = 5,mon = {id = 252,desc = "kn-14-13-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2141330,cardId = 1101014,lv = 142,bklv = 20,star = 5,mon = {id = 212,desc = "kn-14-13-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141331,cardId = 1102020,lv = 142,bklv = 20,star = 5,mon = {id = 257,desc = "kn-14-13-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141330,cardId = 1101014,lv = 142,bklv = 20,star = 5,mon = {id = 212,desc = "kn-14-13-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141331,cardId = 1102020,lv = 142,bklv = 20,star = 5,mon = {id = 257,desc = "kn-14-13-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21414] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2141410,cardId = 1101007,lv = 143,bklv = 20,star = 5,mon = {id = 207,desc = "kn-14-14-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141411,cardId = 1102012,lv = 143,bklv = 20,star = 5,mon = {id = 248,desc = "kn-14-14-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141410,cardId = 1101007,lv = 143,bklv = 20,star = 5,mon = {id = 207,desc = "kn-14-14-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141411,cardId = 1102012,lv = 143,bklv = 20,star = 5,mon = {id = 248,desc = "kn-14-14-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2141420,cardId = 1101005,lv = 143,bklv = 20,star = 5,mon = {id = 207,desc = "kn-14-14-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141421,cardId = 1102011,lv = 143,bklv = 20,star = 5,mon = {id = 242,desc = "kn-14-14-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141420,cardId = 1101005,lv = 143,bklv = 20,star = 5,mon = {id = 207,desc = "kn-14-14-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141421,cardId = 1102011,lv = 143,bklv = 20,star = 5,mon = {id = 242,desc = "kn-14-14-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2141430,cardId = 1101003,lv = 143,bklv = 20,star = 5,mon = {id = 211,desc = "kn-14-14-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141431,cardId = 1102005,lv = 143,bklv = 20,star = 5,mon = {id = 256,desc = "kn-14-14-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141430,cardId = 1101003,lv = 143,bklv = 20,star = 5,mon = {id = 211,desc = "kn-14-14-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141431,cardId = 1102005,lv = 143,bklv = 20,star = 5,mon = {id = 256,desc = "kn-14-14-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21415] = {
 		[1] = {
-			jlr = {cha = "kn-14",id = 2141510,cardId = 1101007,lv = 144,bklv = 20,star = 5,mon = {id = 205,desc = "kn-14-15-jlr-loc1",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141511,cardId = 1102012,lv = 144,bklv = 20,star = 5,mon = {id = 240,desc = "kn-14-15-shl-loc1",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141510,cardId = 1101007,lv = 144,bklv = 20,star = 5,mon = {id = 205,desc = "kn-14-15-jlr-loc1",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141511,cardId = 1102012,lv = 144,bklv = 20,star = 5,mon = {id = 240,desc = "kn-14-15-shl-loc1",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-14",id = 2141520,cardId = 1101005,lv = 144,bklv = 20,star = 5,mon = {id = 204,desc = "kn-14-15-jlr-loc2",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141521,cardId = 1102011,lv = 144,bklv = 20,star = 5,mon = {id = 245,desc = "kn-14-15-shl-loc2",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141520,cardId = 1101005,lv = 144,bklv = 20,star = 5,mon = {id = 204,desc = "kn-14-15-jlr-loc2",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141521,cardId = 1102011,lv = 144,bklv = 20,star = 5,mon = {id = 245,desc = "kn-14-15-shl-loc2",skillLv = 9,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-14",id = 2141530,cardId = 1101010,lv = 144,bklv = 20,star = 5,mon = {id = 207,desc = "kn-14-15-jlr-loc3",skillLv = 9,exert = 6,suffer = 8}},
-			shl = {cha = "kn-14",id = 2141531,cardId = 1102016,lv = 144,bklv = 20,star = 5,mon = {id = 249,desc = "kn-14-15-shl-loc3",skillLv = 9,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-14",id = 2141530,cardId = 1101010,lv = 144,bklv = 20,star = 5,mon = {id = 207,desc = "kn-14-15-jlr-loc3",skillLv = 9,exert = 12,suffer = 12}},
+			shl = {cha = "kn-14",id = 2141531,cardId = 1102016,lv = 144,bklv = 20,star = 5,mon = {id = 249,desc = "kn-14-15-shl-loc3",skillLv = 9,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21501] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2150110,cardId = 1101007,lv = 145,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-1-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150111,cardId = 1102012,lv = 145,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-1-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150110,cardId = 1101007,lv = 145,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-1-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150111,cardId = 1102012,lv = 145,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-1-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2150120,cardId = 1101003,lv = 145,bklv = 20,star = 5,mon = {id = 208,desc = "kn-15-1-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150121,cardId = 1102005,lv = 145,bklv = 20,star = 5,mon = {id = 252,desc = "kn-15-1-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150120,cardId = 1101003,lv = 145,bklv = 20,star = 5,mon = {id = 208,desc = "kn-15-1-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150121,cardId = 1102005,lv = 145,bklv = 20,star = 5,mon = {id = 252,desc = "kn-15-1-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2150130,cardId = 1101014,lv = 145,bklv = 20,star = 5,mon = {id = 213,desc = "kn-15-1-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150131,cardId = 1102020,lv = 145,bklv = 20,star = 5,mon = {id = 258,desc = "kn-15-1-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150130,cardId = 1101014,lv = 145,bklv = 20,star = 5,mon = {id = 213,desc = "kn-15-1-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150131,cardId = 1102020,lv = 145,bklv = 20,star = 5,mon = {id = 258,desc = "kn-15-1-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21502] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2150210,cardId = 1101007,lv = 146,bklv = 20,star = 5,mon = {id = 201,desc = "kn-15-2-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150211,cardId = 1102012,lv = 146,bklv = 20,star = 5,mon = {id = 241,desc = "kn-15-2-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150210,cardId = 1101007,lv = 146,bklv = 20,star = 5,mon = {id = 201,desc = "kn-15-2-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150211,cardId = 1102012,lv = 146,bklv = 20,star = 5,mon = {id = 241,desc = "kn-15-2-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2150220,cardId = 1101003,lv = 146,bklv = 20,star = 5,mon = {id = 203,desc = "kn-15-2-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150221,cardId = 1102005,lv = 146,bklv = 20,star = 5,mon = {id = 244,desc = "kn-15-2-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150220,cardId = 1101003,lv = 146,bklv = 20,star = 5,mon = {id = 203,desc = "kn-15-2-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150221,cardId = 1102005,lv = 146,bklv = 20,star = 5,mon = {id = 244,desc = "kn-15-2-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2150230,cardId = 1101014,lv = 146,bklv = 20,star = 5,mon = {id = 214,desc = "kn-15-2-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150231,cardId = 1102020,lv = 146,bklv = 20,star = 5,mon = {id = 259,desc = "kn-15-2-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150230,cardId = 1101014,lv = 146,bklv = 20,star = 5,mon = {id = 214,desc = "kn-15-2-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150231,cardId = 1102020,lv = 146,bklv = 20,star = 5,mon = {id = 259,desc = "kn-15-2-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21503] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2150310,cardId = 1101007,lv = 146,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-3-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150311,cardId = 1102012,lv = 146,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-3-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150310,cardId = 1101007,lv = 146,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-3-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150311,cardId = 1102012,lv = 146,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-3-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2150320,cardId = 1101003,lv = 146,bklv = 20,star = 5,mon = {id = 208,desc = "kn-15-3-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150321,cardId = 1102005,lv = 146,bklv = 20,star = 5,mon = {id = 252,desc = "kn-15-3-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150320,cardId = 1101003,lv = 146,bklv = 20,star = 5,mon = {id = 208,desc = "kn-15-3-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150321,cardId = 1102005,lv = 146,bklv = 20,star = 5,mon = {id = 252,desc = "kn-15-3-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2150330,cardId = 1101014,lv = 146,bklv = 20,star = 5,mon = {id = 209,desc = "kn-15-3-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150331,cardId = 1102020,lv = 146,bklv = 20,star = 5,mon = {id = 253,desc = "kn-15-3-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150330,cardId = 1101014,lv = 146,bklv = 20,star = 5,mon = {id = 209,desc = "kn-15-3-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150331,cardId = 1102020,lv = 146,bklv = 20,star = 5,mon = {id = 253,desc = "kn-15-3-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21504] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2150410,cardId = 1101007,lv = 147,bklv = 20,star = 5,mon = {id = 215,desc = "kn-15-4-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150411,cardId = 1102012,lv = 147,bklv = 20,star = 5,mon = {id = 260,desc = "kn-15-4-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150410,cardId = 1101007,lv = 147,bklv = 20,star = 5,mon = {id = 215,desc = "kn-15-4-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150411,cardId = 1102012,lv = 147,bklv = 20,star = 5,mon = {id = 260,desc = "kn-15-4-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2150420,cardId = 1101003,lv = 147,bklv = 20,star = 5,mon = {id = 201,desc = "kn-15-4-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150421,cardId = 1102005,lv = 147,bklv = 20,star = 5,mon = {id = 248,desc = "kn-15-4-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150420,cardId = 1101003,lv = 147,bklv = 20,star = 5,mon = {id = 201,desc = "kn-15-4-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150421,cardId = 1102005,lv = 147,bklv = 20,star = 5,mon = {id = 248,desc = "kn-15-4-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2150430,cardId = 1101014,lv = 147,bklv = 20,star = 5,mon = {id = 211,desc = "kn-15-4-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150431,cardId = 1102020,lv = 147,bklv = 20,star = 5,mon = {id = 256,desc = "kn-15-4-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150430,cardId = 1101014,lv = 147,bklv = 20,star = 5,mon = {id = 211,desc = "kn-15-4-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150431,cardId = 1102020,lv = 147,bklv = 20,star = 5,mon = {id = 256,desc = "kn-15-4-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21505] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2150510,cardId = 1101007,lv = 147,bklv = 20,star = 5,mon = {id = 206,desc = "kn-15-5-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150511,cardId = 1102012,lv = 147,bklv = 20,star = 5,mon = {id = 246,desc = "kn-15-5-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150510,cardId = 1101007,lv = 147,bklv = 20,star = 5,mon = {id = 206,desc = "kn-15-5-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150511,cardId = 1102012,lv = 147,bklv = 20,star = 5,mon = {id = 246,desc = "kn-15-5-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2150520,cardId = 1101003,lv = 147,bklv = 20,star = 5,mon = {id = 203,desc = "kn-15-5-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150521,cardId = 1102005,lv = 147,bklv = 20,star = 5,mon = {id = 244,desc = "kn-15-5-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150520,cardId = 1101003,lv = 147,bklv = 20,star = 5,mon = {id = 203,desc = "kn-15-5-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150521,cardId = 1102005,lv = 147,bklv = 20,star = 5,mon = {id = 244,desc = "kn-15-5-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2150530,cardId = 1101014,lv = 147,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-5-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150531,cardId = 1102020,lv = 147,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-5-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150530,cardId = 1101014,lv = 147,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-5-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150531,cardId = 1102020,lv = 147,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-5-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21506] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2150610,cardId = 1101007,lv = 148,bklv = 20,star = 5,mon = {id = 209,desc = "kn-15-6-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150611,cardId = 1102012,lv = 148,bklv = 20,star = 5,mon = {id = 253,desc = "kn-15-6-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150610,cardId = 1101007,lv = 148,bklv = 20,star = 5,mon = {id = 209,desc = "kn-15-6-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150611,cardId = 1102012,lv = 148,bklv = 20,star = 5,mon = {id = 253,desc = "kn-15-6-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2150620,cardId = 1101003,lv = 148,bklv = 20,star = 5,mon = {id = 208,desc = "kn-15-6-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150621,cardId = 1102005,lv = 148,bklv = 20,star = 5,mon = {id = 252,desc = "kn-15-6-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150620,cardId = 1101003,lv = 148,bklv = 20,star = 5,mon = {id = 208,desc = "kn-15-6-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150621,cardId = 1102005,lv = 148,bklv = 20,star = 5,mon = {id = 252,desc = "kn-15-6-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2150630,cardId = 1101014,lv = 148,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-6-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150631,cardId = 1102020,lv = 148,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-6-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150630,cardId = 1101014,lv = 148,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-6-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150631,cardId = 1102020,lv = 148,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-6-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21507] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2150710,cardId = 1101007,lv = 148,bklv = 20,star = 5,mon = {id = 207,desc = "kn-15-7-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150711,cardId = 1102012,lv = 148,bklv = 20,star = 5,mon = {id = 248,desc = "kn-15-7-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150710,cardId = 1101007,lv = 148,bklv = 20,star = 5,mon = {id = 207,desc = "kn-15-7-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150711,cardId = 1102012,lv = 148,bklv = 20,star = 5,mon = {id = 248,desc = "kn-15-7-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2150720,cardId = 1101003,lv = 148,bklv = 20,star = 5,mon = {id = 207,desc = "kn-15-7-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150721,cardId = 1102005,lv = 148,bklv = 20,star = 5,mon = {id = 242,desc = "kn-15-7-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150720,cardId = 1101003,lv = 148,bklv = 20,star = 5,mon = {id = 207,desc = "kn-15-7-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150721,cardId = 1102005,lv = 148,bklv = 20,star = 5,mon = {id = 242,desc = "kn-15-7-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2150730,cardId = 1101014,lv = 148,bklv = 20,star = 5,mon = {id = 211,desc = "kn-15-7-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150731,cardId = 1102020,lv = 148,bklv = 20,star = 5,mon = {id = 256,desc = "kn-15-7-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150730,cardId = 1101014,lv = 148,bklv = 20,star = 5,mon = {id = 211,desc = "kn-15-7-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150731,cardId = 1102020,lv = 148,bklv = 20,star = 5,mon = {id = 256,desc = "kn-15-7-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21508] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2150810,cardId = 1101007,lv = 149,bklv = 20,star = 5,mon = {id = 207,desc = "kn-15-8-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150811,cardId = 1102012,lv = 149,bklv = 20,star = 5,mon = {id = 251,desc = "kn-15-8-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150810,cardId = 1101007,lv = 149,bklv = 20,star = 5,mon = {id = 207,desc = "kn-15-8-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150811,cardId = 1102012,lv = 149,bklv = 20,star = 5,mon = {id = 251,desc = "kn-15-8-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2150820,cardId = 1101003,lv = 149,bklv = 20,star = 5,mon = {id = 205,desc = "kn-15-8-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150821,cardId = 1102005,lv = 149,bklv = 20,star = 5,mon = {id = 250,desc = "kn-15-8-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150820,cardId = 1101003,lv = 149,bklv = 20,star = 5,mon = {id = 205,desc = "kn-15-8-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150821,cardId = 1102005,lv = 149,bklv = 20,star = 5,mon = {id = 250,desc = "kn-15-8-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2150830,cardId = 1101014,lv = 149,bklv = 20,star = 5,mon = {id = 210,desc = "kn-15-8-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150831,cardId = 1102020,lv = 149,bklv = 20,star = 5,mon = {id = 255,desc = "kn-15-8-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150830,cardId = 1101014,lv = 149,bklv = 20,star = 5,mon = {id = 210,desc = "kn-15-8-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150831,cardId = 1102020,lv = 149,bklv = 20,star = 5,mon = {id = 255,desc = "kn-15-8-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21509] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2150910,cardId = 1101007,lv = 150,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-9-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150911,cardId = 1102012,lv = 150,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-9-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150910,cardId = 1101007,lv = 150,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-9-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150911,cardId = 1102012,lv = 150,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-9-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2150920,cardId = 1101003,lv = 150,bklv = 20,star = 5,mon = {id = 208,desc = "kn-15-9-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150921,cardId = 1102005,lv = 150,bklv = 20,star = 5,mon = {id = 252,desc = "kn-15-9-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150920,cardId = 1101003,lv = 150,bklv = 20,star = 5,mon = {id = 208,desc = "kn-15-9-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150921,cardId = 1102005,lv = 150,bklv = 20,star = 5,mon = {id = 252,desc = "kn-15-9-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2150930,cardId = 1101014,lv = 150,bklv = 20,star = 5,mon = {id = 209,desc = "kn-15-9-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2150931,cardId = 1102020,lv = 150,bklv = 20,star = 5,mon = {id = 253,desc = "kn-15-9-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2150930,cardId = 1101014,lv = 150,bklv = 20,star = 5,mon = {id = 209,desc = "kn-15-9-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2150931,cardId = 1102020,lv = 150,bklv = 20,star = 5,mon = {id = 253,desc = "kn-15-9-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21510] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2151010,cardId = 1101007,lv = 150,bklv = 20,star = 5,mon = {id = 201,desc = "kn-15-10-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151011,cardId = 1102012,lv = 150,bklv = 20,star = 5,mon = {id = 241,desc = "kn-15-10-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151010,cardId = 1101007,lv = 150,bklv = 20,star = 5,mon = {id = 201,desc = "kn-15-10-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151011,cardId = 1102012,lv = 150,bklv = 20,star = 5,mon = {id = 241,desc = "kn-15-10-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2151020,cardId = 1101003,lv = 150,bklv = 20,star = 5,mon = {id = 203,desc = "kn-15-10-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151021,cardId = 1102005,lv = 150,bklv = 20,star = 5,mon = {id = 244,desc = "kn-15-10-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151020,cardId = 1101003,lv = 150,bklv = 20,star = 5,mon = {id = 203,desc = "kn-15-10-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151021,cardId = 1102005,lv = 150,bklv = 20,star = 5,mon = {id = 244,desc = "kn-15-10-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2151030,cardId = 1101014,lv = 150,bklv = 20,star = 5,mon = {id = 214,desc = "kn-15-10-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151031,cardId = 1102020,lv = 150,bklv = 20,star = 5,mon = {id = 259,desc = "kn-15-10-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151030,cardId = 1101014,lv = 150,bklv = 20,star = 5,mon = {id = 214,desc = "kn-15-10-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151031,cardId = 1102020,lv = 150,bklv = 20,star = 5,mon = {id = 259,desc = "kn-15-10-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21511] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2151110,cardId = 1101007,lv = 150,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-11-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151111,cardId = 1102012,lv = 150,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-11-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151110,cardId = 1101007,lv = 150,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-11-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151111,cardId = 1102012,lv = 150,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-11-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2151120,cardId = 1101003,lv = 150,bklv = 20,star = 5,mon = {id = 208,desc = "kn-15-11-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151121,cardId = 1102005,lv = 150,bklv = 20,star = 5,mon = {id = 252,desc = "kn-15-11-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151120,cardId = 1101003,lv = 150,bklv = 20,star = 5,mon = {id = 208,desc = "kn-15-11-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151121,cardId = 1102005,lv = 150,bklv = 20,star = 5,mon = {id = 252,desc = "kn-15-11-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2151130,cardId = 1101014,lv = 150,bklv = 20,star = 5,mon = {id = 209,desc = "kn-15-11-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151131,cardId = 1102020,lv = 150,bklv = 20,star = 5,mon = {id = 253,desc = "kn-15-11-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151130,cardId = 1101014,lv = 150,bklv = 20,star = 5,mon = {id = 209,desc = "kn-15-11-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151131,cardId = 1102020,lv = 150,bklv = 20,star = 5,mon = {id = 253,desc = "kn-15-11-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21512] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2151210,cardId = 1101007,lv = 151,bklv = 20,star = 5,mon = {id = 215,desc = "kn-15-12-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151211,cardId = 1102012,lv = 151,bklv = 20,star = 5,mon = {id = 260,desc = "kn-15-12-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151210,cardId = 1101007,lv = 151,bklv = 20,star = 5,mon = {id = 215,desc = "kn-15-12-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151211,cardId = 1102012,lv = 151,bklv = 20,star = 5,mon = {id = 260,desc = "kn-15-12-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2151220,cardId = 1101003,lv = 151,bklv = 20,star = 5,mon = {id = 201,desc = "kn-15-12-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151221,cardId = 1102005,lv = 151,bklv = 20,star = 5,mon = {id = 248,desc = "kn-15-12-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151220,cardId = 1101003,lv = 151,bklv = 20,star = 5,mon = {id = 201,desc = "kn-15-12-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151221,cardId = 1102005,lv = 151,bklv = 20,star = 5,mon = {id = 248,desc = "kn-15-12-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2151230,cardId = 1101014,lv = 151,bklv = 20,star = 5,mon = {id = 211,desc = "kn-15-12-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151231,cardId = 1102020,lv = 151,bklv = 20,star = 5,mon = {id = 256,desc = "kn-15-12-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151230,cardId = 1101014,lv = 151,bklv = 20,star = 5,mon = {id = 211,desc = "kn-15-12-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151231,cardId = 1102020,lv = 151,bklv = 20,star = 5,mon = {id = 256,desc = "kn-15-12-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21513] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2151310,cardId = 1101007,lv = 152,bklv = 20,star = 5,mon = {id = 209,desc = "kn-15-13-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151311,cardId = 1102012,lv = 152,bklv = 20,star = 5,mon = {id = 253,desc = "kn-15-13-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151310,cardId = 1101007,lv = 152,bklv = 20,star = 5,mon = {id = 209,desc = "kn-15-13-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151311,cardId = 1102012,lv = 152,bklv = 20,star = 5,mon = {id = 253,desc = "kn-15-13-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2151320,cardId = 1101003,lv = 152,bklv = 20,star = 5,mon = {id = 208,desc = "kn-15-13-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151321,cardId = 1102005,lv = 152,bklv = 20,star = 5,mon = {id = 252,desc = "kn-15-13-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151320,cardId = 1101003,lv = 152,bklv = 20,star = 5,mon = {id = 208,desc = "kn-15-13-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151321,cardId = 1102005,lv = 152,bklv = 20,star = 5,mon = {id = 252,desc = "kn-15-13-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2151330,cardId = 1101014,lv = 152,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-13-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151331,cardId = 1102020,lv = 152,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-13-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151330,cardId = 1101014,lv = 152,bklv = 20,star = 5,mon = {id = 212,desc = "kn-15-13-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151331,cardId = 1102020,lv = 152,bklv = 20,star = 5,mon = {id = 257,desc = "kn-15-13-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21514] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2151410,cardId = 1101007,lv = 153,bklv = 20,star = 5,mon = {id = 207,desc = "kn-15-14-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151411,cardId = 1102012,lv = 153,bklv = 20,star = 5,mon = {id = 248,desc = "kn-15-14-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151410,cardId = 1101007,lv = 153,bklv = 20,star = 5,mon = {id = 207,desc = "kn-15-14-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151411,cardId = 1102012,lv = 153,bklv = 20,star = 5,mon = {id = 248,desc = "kn-15-14-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2151420,cardId = 1101005,lv = 153,bklv = 20,star = 5,mon = {id = 207,desc = "kn-15-14-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151421,cardId = 1102011,lv = 153,bklv = 20,star = 5,mon = {id = 242,desc = "kn-15-14-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151420,cardId = 1101005,lv = 153,bklv = 20,star = 5,mon = {id = 207,desc = "kn-15-14-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151421,cardId = 1102011,lv = 153,bklv = 20,star = 5,mon = {id = 242,desc = "kn-15-14-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2151430,cardId = 1101003,lv = 153,bklv = 20,star = 5,mon = {id = 211,desc = "kn-15-14-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151431,cardId = 1102005,lv = 153,bklv = 20,star = 5,mon = {id = 256,desc = "kn-15-14-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151430,cardId = 1101003,lv = 153,bklv = 20,star = 5,mon = {id = 211,desc = "kn-15-14-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151431,cardId = 1102005,lv = 153,bklv = 20,star = 5,mon = {id = 256,desc = "kn-15-14-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21515] = {
 		[1] = {
-			jlr = {cha = "kn-15",id = 2151510,cardId = 1101007,lv = 154,bklv = 20,star = 5,mon = {id = 205,desc = "kn-15-15-jlr-loc1",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151511,cardId = 1102012,lv = 154,bklv = 20,star = 5,mon = {id = 240,desc = "kn-15-15-shl-loc1",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151510,cardId = 1101007,lv = 154,bklv = 20,star = 5,mon = {id = 205,desc = "kn-15-15-jlr-loc1",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151511,cardId = 1102012,lv = 154,bklv = 20,star = 5,mon = {id = 286,desc = "kn-15-15-shl-loc1",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "kn-15",id = 2151520,cardId = 1101005,lv = 154,bklv = 20,star = 5,mon = {id = 204,desc = "kn-15-15-jlr-loc2",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151521,cardId = 1102011,lv = 154,bklv = 20,star = 5,mon = {id = 245,desc = "kn-15-15-shl-loc2",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151520,cardId = 1101005,lv = 154,bklv = 20,star = 5,mon = {id = 204,desc = "kn-15-15-jlr-loc2",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151521,cardId = 1102011,lv = 154,bklv = 20,star = 5,mon = {id = 277,desc = "kn-15-15-shl-loc2",skillLv = 10,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "kn-15",id = 2151530,cardId = 1101010,lv = 154,bklv = 20,star = 5,mon = {id = 207,desc = "kn-15-15-jlr-loc3",skillLv = 10,exert = 6,suffer = 8}},
-			shl = {cha = "kn-15",id = 2151531,cardId = 1102016,lv = 154,bklv = 20,star = 5,mon = {id = 249,desc = "kn-15-15-shl-loc3",skillLv = 10,exert = 9,suffer = 9}}
+			jlr = {cha = "kn-15",id = 2151530,cardId = 1101010,lv = 154,bklv = 20,star = 5,mon = {id = 207,desc = "kn-15-15-jlr-loc3",skillLv = 10,exert = 12,suffer = 12}},
+			shl = {cha = "kn-15",id = 2151531,cardId = 1102016,lv = 154,bklv = 20,star = 5,mon = {id = 268,desc = "kn-15-15-shl-loc3",skillLv = 10,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21601] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2160110,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 201,desc = "ldd-1-1-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160111,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 254,desc = "ldd-1-1-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160110,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 201,desc = "ldd-1-1-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160111,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 254,desc = "ldd-1-1-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2160120,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 202,desc = "ldd-1-1-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160121,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 243,desc = "ldd-1-1-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160120,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 202,desc = "ldd-1-1-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160121,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 243,desc = "ldd-1-1-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2160130,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 203,desc = "ldd-1-1-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160131,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 244,desc = "ldd-1-1-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160130,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 203,desc = "ldd-1-1-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160131,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 244,desc = "ldd-1-1-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21602] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2160210,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 213,desc = "ldd-1-2-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160211,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 258,desc = "ldd-1-2-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160210,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 213,desc = "ldd-1-2-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160211,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 258,desc = "ldd-1-2-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2160220,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 212,desc = "ldd-1-2-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160221,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 257,desc = "ldd-1-2-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160220,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 212,desc = "ldd-1-2-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160221,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 257,desc = "ldd-1-2-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2160230,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 208,desc = "ldd-1-2-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160231,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 252,desc = "ldd-1-2-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160230,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 208,desc = "ldd-1-2-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160231,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 252,desc = "ldd-1-2-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21603] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2160310,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-3-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160311,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 241,desc = "ldd-1-3-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160310,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-3-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160311,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 241,desc = "ldd-1-3-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2160320,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 214,desc = "ldd-1-3-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160321,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 259,desc = "ldd-1-3-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160320,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 214,desc = "ldd-1-3-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160321,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 259,desc = "ldd-1-3-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2160330,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 203,desc = "ldd-1-3-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160331,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 244,desc = "ldd-1-3-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160330,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 203,desc = "ldd-1-3-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160331,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 244,desc = "ldd-1-3-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21604] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2160410,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 209,desc = "ldd-1-4-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160411,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 253,desc = "ldd-1-4-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160410,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 209,desc = "ldd-1-4-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160411,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 253,desc = "ldd-1-4-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2160420,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-4-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160421,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 242,desc = "ldd-1-4-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160420,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-4-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160421,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 242,desc = "ldd-1-4-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2160430,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 211,desc = "ldd-1-4-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160431,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 256,desc = "ldd-1-4-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160430,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 211,desc = "ldd-1-4-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160431,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 256,desc = "ldd-1-4-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21605] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2160510,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 215,desc = "ldd-1-5-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160511,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 260,desc = "ldd-1-5-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160510,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 215,desc = "ldd-1-5-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160511,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 260,desc = "ldd-1-5-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2160520,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-5-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160521,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 248,desc = "ldd-1-5-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160520,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-5-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160521,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 248,desc = "ldd-1-5-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2160530,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 211,desc = "ldd-1-5-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160531,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 256,desc = "ldd-1-5-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160530,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 211,desc = "ldd-1-5-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160531,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 256,desc = "ldd-1-5-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21606] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2160610,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 206,desc = "ldd-1-6-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160611,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 246,desc = "ldd-1-6-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160610,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 206,desc = "ldd-1-6-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160611,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 246,desc = "ldd-1-6-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2160620,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 214,desc = "ldd-1-6-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160621,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 259,desc = "ldd-1-6-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160620,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 214,desc = "ldd-1-6-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160621,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 259,desc = "ldd-1-6-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2160630,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-6-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160631,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 249,desc = "ldd-1-6-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160630,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-6-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160631,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 249,desc = "ldd-1-6-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21607] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2160710,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-7-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160711,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 251,desc = "ldd-1-7-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160710,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-7-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160711,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 251,desc = "ldd-1-7-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2160720,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 205,desc = "ldd-1-7-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160721,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 250,desc = "ldd-1-7-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160720,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 205,desc = "ldd-1-7-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160721,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 250,desc = "ldd-1-7-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2160730,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 210,desc = "ldd-1-7-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160731,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 255,desc = "ldd-1-7-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160730,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 210,desc = "ldd-1-7-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160731,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 255,desc = "ldd-1-7-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21608] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2160810,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 205,desc = "ldd-1-8-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160811,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 240,desc = "ldd-1-8-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160810,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 205,desc = "ldd-1-8-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160811,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 240,desc = "ldd-1-8-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2160820,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-8-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160821,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 242,desc = "ldd-1-8-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160820,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-8-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160821,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 242,desc = "ldd-1-8-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2160830,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 210,desc = "ldd-1-8-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160831,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 255,desc = "ldd-1-8-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160830,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 210,desc = "ldd-1-8-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160831,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 255,desc = "ldd-1-8-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21609] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2160910,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 205,desc = "ldd-1-9-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160911,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 240,desc = "ldd-1-9-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160910,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 205,desc = "ldd-1-9-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160911,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 240,desc = "ldd-1-9-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2160920,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 212,desc = "ldd-1-9-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160921,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 257,desc = "ldd-1-9-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160920,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 212,desc = "ldd-1-9-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160921,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 257,desc = "ldd-1-9-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2160930,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 210,desc = "ldd-1-9-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2160931,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 255,desc = "ldd-1-9-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2160930,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 210,desc = "ldd-1-9-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2160931,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 255,desc = "ldd-1-9-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21610] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2161010,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 206,desc = "ldd-1-10-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161011,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 246,desc = "ldd-1-10-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161010,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 206,desc = "ldd-1-10-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161011,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 246,desc = "ldd-1-10-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2161020,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 209,desc = "ldd-1-10-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161021,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 253,desc = "ldd-1-10-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161020,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 209,desc = "ldd-1-10-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161021,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 253,desc = "ldd-1-10-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2161030,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 212,desc = "ldd-1-10-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161031,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 252,desc = "ldd-1-10-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161030,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 212,desc = "ldd-1-10-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161031,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 252,desc = "ldd-1-10-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21611] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2161110,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 206,desc = "ldd-1-11-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161111,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 246,desc = "ldd-1-11-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161110,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 206,desc = "ldd-1-11-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161111,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 246,desc = "ldd-1-11-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2161120,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 214,desc = "ldd-1-11-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161121,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 259,desc = "ldd-1-11-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161120,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 214,desc = "ldd-1-11-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161121,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 259,desc = "ldd-1-11-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2161130,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 210,desc = "ldd-1-11-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161131,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 255,desc = "ldd-1-11-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161130,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 210,desc = "ldd-1-11-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161131,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 255,desc = "ldd-1-11-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21612] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2161210,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 215,desc = "ldd-1-12-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161211,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 260,desc = "ldd-1-12-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161210,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 215,desc = "ldd-1-12-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161211,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 260,desc = "ldd-1-12-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2161220,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 205,desc = "ldd-1-12-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161221,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 250,desc = "ldd-1-12-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161220,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 205,desc = "ldd-1-12-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161221,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 250,desc = "ldd-1-12-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2161230,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 211,desc = "ldd-1-12-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161231,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 256,desc = "ldd-1-12-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161230,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 211,desc = "ldd-1-12-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161231,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 256,desc = "ldd-1-12-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21613] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2161310,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 205,desc = "ldd-1-13-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161311,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 240,desc = "ldd-1-13-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161310,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 205,desc = "ldd-1-13-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161311,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 240,desc = "ldd-1-13-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2161320,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 204,desc = "ldd-1-13-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161321,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 245,desc = "ldd-1-13-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161320,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 204,desc = "ldd-1-13-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161321,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 245,desc = "ldd-1-13-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2161330,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-13-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161331,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 249,desc = "ldd-1-13-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161330,cardId = 1101014,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-13-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161331,cardId = 1102020,lv = 100,bklv = 13,star = 3,mon = {id = 249,desc = "ldd-1-13-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21614] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2161410,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-14-jlr-loc1",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161411,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 254,desc = "ldd-1-14-shl-loc1",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161410,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-14-jlr-loc1",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161411,cardId = 1102012,lv = 100,bklv = 13,star = 3,mon = {id = 254,desc = "ldd-1-14-shl-loc1",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2161420,cardId = 1101005,lv = 100,bklv = 13,star = 3,mon = {id = 204,desc = "ldd-1-14-jlr-loc2",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161421,cardId = 1102011,lv = 100,bklv = 13,star = 3,mon = {id = 245,desc = "ldd-1-14-shl-loc2",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161420,cardId = 1101005,lv = 100,bklv = 13,star = 3,mon = {id = 204,desc = "ldd-1-14-jlr-loc2",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161421,cardId = 1102011,lv = 100,bklv = 13,star = 3,mon = {id = 245,desc = "ldd-1-14-shl-loc2",skillLv = 7,exert = 18,suffer = 13.5}}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2161430,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 210,desc = "ldd-1-14-jlr-loc3",skillLv = 7,exert = 6,suffer = 7}},
-			shl = {cha = "ldd-1",id = 2161431,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 255,desc = "ldd-1-14-shl-loc3",skillLv = 7,exert = 9,suffer = 9}}
+			jlr = {cha = "ldd-1",id = 2161430,cardId = 1101003,lv = 100,bklv = 13,star = 3,mon = {id = 210,desc = "ldd-1-14-jlr-loc3",skillLv = 7,exert = 12,suffer = 10.5}},
+			shl = {cha = "ldd-1",id = 2161431,cardId = 1102005,lv = 100,bklv = 13,star = 3,mon = {id = 255,desc = "ldd-1-14-shl-loc3",skillLv = 7,exert = 18,suffer = 13.5}}
 		}
 	},
 	[21615] = {
 		[1] = {
-			jlr = {cha = "ldd-1",id = 2161510,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 205,desc = "ldd-1-15-jlr-loc1",skillLv = 7,exert = 25,suffer = 100}},
+			jlr = {cha = "ldd-1",id = 2161510,cardId = 1101007,lv = 100,bklv = 13,star = 3,mon = {id = 205,desc = "ldd-1-15-jlr-loc1",skillLv = 7,exert = 50,suffer = 150}},
 			shl = {cha = "ldd-1",id = 2161511,cardId = 1102012,lv = 100,bklv = 13,star = 3}
 		},
 		[2] = {
-			jlr = {cha = "ldd-1",id = 2161520,cardId = 1101005,lv = 100,bklv = 13,star = 3,mon = {id = 204,desc = "ldd-1-15-jlr-loc2",skillLv = 7,exert = 25,suffer = 100}},
+			jlr = {cha = "ldd-1",id = 2161520,cardId = 1101005,lv = 100,bklv = 13,star = 3,mon = {id = 204,desc = "ldd-1-15-jlr-loc2",skillLv = 7,exert = 50,suffer = 150}},
 			shl = {cha = "ldd-1",id = 2161521,cardId = 1102011,lv = 100,bklv = 13,star = 3}
 		},
 		[3] = {
-			jlr = {cha = "ldd-1",id = 2161530,cardId = 1101010,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-15-jlr-loc3",skillLv = 7,exert = 25,suffer = 100}},
+			jlr = {cha = "ldd-1",id = 2161530,cardId = 1101010,lv = 100,bklv = 13,star = 3,mon = {id = 207,desc = "ldd-1-15-jlr-loc3",skillLv = 7,exert = 50,suffer = 150}},
 			shl = {cha = "ldd-1",id = 2161531,cardId = 1102016,lv = 100,bklv = 13,star = 3}
 		}
 	},

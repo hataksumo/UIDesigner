@@ -245,8 +245,8 @@ local fn_calLevelProp = function()
 						print(string.format("lv:%d-%d-%s id：%d is wrong",lvId,loc,type,data.id))
 					end
 
-					local hp = math.floor(the_prop.Atk * data.mon.suffer)
 					local def = math.floor(the_prop.Atk / 2)
+					local hp = math.floor(the_prop.Atk * data.mon.suffer * the_prop.R / (the_prop.R + def))
 					local atk = math.floor(the_prop.HP / data.mon.exert * (the_prop.R + def) / the_prop.R)
 					the_prop.HP = hp
 					the_prop.Atk = atk

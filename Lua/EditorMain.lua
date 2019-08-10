@@ -82,8 +82,8 @@ function output_excel()
 	--"Excel\\BattleCameraOutput",
 	--"Excel\\jhmOutput"
 	--"Excel\\NewDropOutput"
-	"Excel\\PropBsOutput"
-	--"Excel\\GuaJiPaiQian"
+	--"Excel\\PropBsOutput"
+	"Excel\\GuaJiPaiQian"
 	--"Excel\\RelicAct"
 	}
 	for _i,val in ipairs(output) do

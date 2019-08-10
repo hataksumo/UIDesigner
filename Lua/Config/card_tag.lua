@@ -11,13 +11,13 @@ if ddt["card_tag"] ~= nil then
 	return ddt["card_tag"]
 end
 local data = {
-	[101] = {Name = "均衡型"},
-	[102] = {Name = "防御型"},
-	[103] = {Name = "攻击型"},
-	[104] = {Name = "控制型"},
-	[105] = {Name = "辅助型"},
-	[106] = {Name = "连击"},
-	[107] = {Name = "群攻"}
+	[101] = {Name = _T("均衡型")},
+	[102] = {Name = _T("防御型")},
+	[103] = {Name = _T("攻击型")},
+	[104] = {Name = _T("控制型")},
+	[105] = {Name = _T("辅助型")},
+	[106] = {Name = _T("连击")},
+	[107] = {Name = _T("群攻")}
 }
 ddt["card_tag"] = data
 SetLooseReadonly(data)

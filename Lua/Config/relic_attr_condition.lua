@@ -6,6 +6,7 @@ colums:
 primary key:
 #0 [全局属性筛选器]: Id
 ]]
+local _T = LangUtil.Language
 return{
 	[101] = {mask = {3}},--红水晶守护灵和寄灵人
 	[102] = {mask = {5}},--黄水晶守护灵和寄灵人
