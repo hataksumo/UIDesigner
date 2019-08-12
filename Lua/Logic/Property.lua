@@ -60,6 +60,13 @@ PropMT.print = function(v_self)
 	end
 end
 
+PropMT.add = function(v_self,v_addPropCfg)
+	for _i,propData in ipairs(v_addPropCfg) do
+		v_self[propData.Id] = v_self[propData.Id] + propData.Val
+	end
+	return v_self
+end
+
 _G.CreatePropTable = function()
 	local prop_table = {}
 	prop_table.data = {}
@@ -68,6 +75,13 @@ _G.CreatePropTable = function()
 	end
 	setmetatable(prop_table,PropMT)
 	return prop_table
+end
+
+_G.AddPropByCfg = function(v_prop,v_cfg)
+	for _i,propData in ipairs(v_cfg) do
+		v_prop[propData.Id] = v_prop[propData.Id] + propData.Val
+	end
+	return v_prop
 end
 
 return _G.CreatePropTable

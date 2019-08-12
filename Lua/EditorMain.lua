@@ -73,6 +73,8 @@ function init()
 	_G.ddt = {}
 	require "tools"
 	require "Logic/Property"
+	require "Common/functions"
+	--print("ini")
 end
 
 
@@ -83,8 +85,9 @@ function output_excel()
 	--"Excel\\jhmOutput"
 	--"Excel\\NewDropOutput"
 	--"Excel\\PropBsOutput"
-	"Excel\\GuaJiPaiQian"
+	--"Excel\\GuaJiPaiQian"
 	--"Excel\\RelicAct"
+	"Excel\\EquipDs"
 	}
 	for _i,val in ipairs(output) do
 		local fn = dofile(val)

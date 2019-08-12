@@ -111,6 +111,64 @@ local fn_calLevelProp = function()
 		return relicProp
 	end
 
+	--计算装备属性
+	local cfg_eqp = dofile "Config\\eqp"
+	local cfg_eqp_lvup = dofile "Config\\eqp_lvup"
+	local cfg_eqp_suit = dofile "Config\\eqp_suit"
+	local cfg_prop = dofile "Config\\property"
+	local fn_calEquipProp = function(v_eqps,v_debug)
+		v_debug = v_debug or false
+		--基础属性
+		local prop = CreatePropTable()
+		local suits = {}
+		for _pos,eqpData in ipairs(v_eqps) do
+			local cfg_eqp_data = cfg_eqp[eqpData.id]
+			if not cfg_eqp_data then
+				print(string.format("cfg_eqp[%d] = nil",eqpData.id))
+			end
+			local strengthenLv = eqpData.lv
+			local strengthenId = cfg_eqp_data.StrengthenId
+			local props = cfg_eqp_data.Prop
+			if cfg_eqp_data.Pos ~= _pos then
+				logError(string.format("装备位置%d不对",_i))
+				return prop,false
+			end
+			for _i,eqp_prop in ipairs(props) do
+				local the_prop_cfg = cfg_prop[eqp_prop.Id]
+				local eqp_prop_val = eqp_prop.Base + eqp_prop.Up * cfg_eqp_lvup[strengthenId][strengthenLv].Fac
+				if the_prop_cfg.IsInt then
+					eqp_prop_val = math.floor(eqp_prop_val)
+				end
+				prop[eqp_prop.Id] = prop[eqp_prop.Id] + eqp_prop_val
+			end
+
+			if v_debug then
+				print(string.format("eqp[%d] pos %d, AtkExt = %d",eqpData.id,_pos,prop.AtkExt))
+			end
+
+			if cfg_eqp_data.Suit and cfg_eqp_data.Suit > 0  then
+				if not suits[cfg_eqp_data.Suit] then
+					suits[cfg_eqp_data.Suit] = 0
+				end
+				suits[cfg_eqp_data.Suit] = suits[cfg_eqp_data.Suit] + 1
+			end
+		end
+
+		--计算套装属性
+		for _suitId,suitNum in pairs(suits) do
+			local the_suit = cfg_eqp_suit[_suitId]
+			for _i,suit_prop in ipairs(the_suit.Props) do
+				if suitNum >= suit_prop.Num then
+					local props = suit_prop.Prop
+					prop:add(props)
+				end
+			end
+		end
+
+		return prop,true
+	end
+
+
 	local lvProps = {}--卡牌数据
 	local monProps = {}--怪物的数据
 	for lvId,lvInfo in pairs(dscfg_levelDesigner) do--遍历关卡设计表
@@ -120,6 +178,7 @@ local fn_calLevelProp = function()
 		local cardGroupData = dscfg_cardGroup[cardGroupId]
 		local iniProp = {}
 		local lvProp = {}
+		local eqpProp = {}
 		local transProp = {}
 		local finnalProp = {}
 		finnalProp.lvId = lvId
@@ -196,15 +255,42 @@ local fn_calLevelProp = function()
 					transProp[loc].propShl[val.id] = transProp[loc].propShl[val.id] + lvProp[loc].propShl[val.id] * val.val
 				end
 			end
+
+			--装备计算
+			eqpProp[loc] = {}
+			local success = false
+			if couple.jlr and couple.jlr.equip then
+				eqpProp[loc].propjlr,success = fn_calEquipProp(couple.jlr.equip)
+				if not success then
+					print(string.format("lvId'jlr:%d,loc:%d eqp is wrong",lvId,loc))
+				end
+			else
+				eqpProp[loc].propjlr = CreatePropTable()
+			end
+			if couple.shl and couple.shl.equip then
+				eqpProp[loc].propshl,success = fn_calEquipProp(couple.shl.equip)
+				if not success then
+					print(string.format("lvId'shl:%d,loc:%d eqp is wrong",lvId,loc))
+				end
+			else
+				eqpProp[loc].propshl = CreatePropTable()
+			end
+
 		end
+
+		-- if cardGroupId == 10815 then
+		-- 	print("shl-".."1"..":")
+		-- 	eqpProp[1].propshl:print()
+		-- end 
+
 
 		--数据加和
 		for loc,couple in ipairs(cardGroupData) do
 			if finnalProp[loc].jlr then
-				finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr
+				finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr + eqpProp[loc].propjlr
 			end
 			if finnalProp[loc].shl then
-				finnalProp[loc].shl.prop = iniProp[loc].propShl + finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr
+				finnalProp[loc].shl.prop = iniProp[loc].propShl + finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr + eqpProp[loc].propshl
 			end
 		end
 
@@ -224,6 +310,7 @@ local fn_calLevelProp = function()
 				fn_calRelicProp(dscfg_relicGroup[relicGroup].relic,finnalProp[loc].shl.prop ,cfg_card[couple.shl.cardId].mask,finnalProp[loc].shl.id)
 			end
 		end
+
 
 		--属性乘百分比系数
 		local monProp = {}

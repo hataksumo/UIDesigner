@@ -1,17 +1,17 @@
 
 --输出日志--
 function log(str)
-    Util.Log(str);
+    ZFDebug.Log(str);
 end
 
 --错误日志--
 function logError(str) 
-	Util.LogError(str);
+	ZFDebug.Error(str);
 end
 
 --警告日志--
 function logWarn(str) 
-	Util.LogWarning(str);
+	ZFDebug.LogWarning(str);
 end
 
 --查找对象--
@@ -85,4 +85,19 @@ function table.cloneArr(v_dst,v_src)
 		table.insert(v_dst,val)
 	end
 	return newClone
+end
+
+function table.clone(v_src)
+	function copyData(v_data)
+		local newTable = {}
+		for key,data in pairs(v_data) do
+			if type(data) == "table" then
+				newTable[key] = copyData(data)
+			else
+				newTable[key] = data
+			end
+		end
+		return newTable
+	end
+    return copyData(v_src)
 end

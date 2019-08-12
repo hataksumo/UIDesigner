@@ -54,6 +54,9 @@ return{
 	[10307] = {cardGroup = 10307,relic = 1},--普通3章7关
 	[10308] = {cardGroup = 10308,relic = 1},--普通3章8关
 	[10309] = {cardGroup = 10309,relic = 1},--普通3章9关
+	[10310] = {cardGroup = 10310,relic = 1},--普通3章10关
+	[10311] = {cardGroup = 10311,relic = 1},--普通3章11关
+	[10312] = {cardGroup = 10312,relic = 1},--普通3章12关
 	[10401] = {cardGroup = 10401,relic = 1},--普通4章1关
 	[10402] = {cardGroup = 10402,relic = 1},--普通4章2关
 	[10403] = {cardGroup = 10403,relic = 1},--普通4章3关
@@ -63,6 +66,9 @@ return{
 	[10407] = {cardGroup = 10407,relic = 1},--普通4章7关
 	[10408] = {cardGroup = 10408,relic = 1},--普通4章8关
 	[10409] = {cardGroup = 10409,relic = 1},--普通4章9关
+	[10410] = {cardGroup = 10410,relic = 1},--普通4章10关
+	[10411] = {cardGroup = 10411,relic = 1},--普通4章11关
+	[10412] = {cardGroup = 10412,relic = 1},--普通4章12关
 	[10501] = {cardGroup = 10501,relic = 1},--普通5章1关
 	[10502] = {cardGroup = 10502,relic = 1},--普通5章2关
 	[10503] = {cardGroup = 10503,relic = 1},--普通5章3关
