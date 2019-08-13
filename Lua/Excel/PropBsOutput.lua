@@ -287,10 +287,12 @@ local fn_calLevelProp = function()
 		--数据加和
 		for loc,couple in ipairs(cardGroupData) do
 			if finnalProp[loc].jlr then
-				finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr + eqpProp[loc].propjlr
+				finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr
+				--finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr + eqpProp[loc].propjlr
 			end
 			if finnalProp[loc].shl then
-				finnalProp[loc].shl.prop = iniProp[loc].propShl + finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr + eqpProp[loc].propshl
+				finnalProp[loc].shl.prop = iniProp[loc].propShl + finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr
+				--finnalProp[loc].shl.prop = iniProp[loc].propShl + finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr + eqpProp[loc].propshl
 			end
 		end
 
@@ -345,11 +347,6 @@ local fn_calLevelProp = function()
 					monProp[loc][type].note = data.mon.note
 					monProp[loc][type].lv = data.mon.lv
 					monProp[loc][type].skillLv = data.mon.skillLv
-
-					-- if lvId == 10103 then
-					-- 	print(string.format("lv = %d, monId = %d",lvId,data.id))
-					-- end
-
 					
 				end
 			end
