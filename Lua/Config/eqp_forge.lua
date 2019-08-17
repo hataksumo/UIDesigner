@@ -2,7 +2,7 @@
 --note:
 
 colums:
-{LvId,等级段Id} ,{LvMin,等级Min} ,{LvMax,等级Max} ,{Name,名字} ,{Id,ID} ,{Pos,位置} ,{Pic,图片} ,{Cost[1].Id,消耗道具} ,{Cost[1].Val,消耗值}
+{LvId,等级段Id} ,{LvMin,等级Min} ,{LvMax,等级Max} ,{Name,名字} ,{Desc,打造描述} ,{Id,ID} ,{Pos,位置} ,{Pic,图片} ,{Cost[1].Id,消耗道具} ,{Cost[1].Val,消耗值}
 primary key:
 #0 [装备锻造等级组]: LvId
 #1 [装备锻造]: LvId,HelpCol,Pos
@@ -13,6 +13,7 @@ return{
 		LvMin = 1,
 		LvMax = 29,
 		Name = _T("锻造者1"),
+		Desc = _T("能够打造出20级的装备"),
 		Equips = {
 			[1] = {Id = 1,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 100}}},
 			[2] = {Id = 2,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 50}}},
@@ -28,6 +29,7 @@ return{
 		LvMin = 30,
 		LvMax = 39,
 		Name = _T("锻造者2"),
+		Desc = _T("能够打造出20级，40级的装备"),
 		Equips = {
 			[1] = {Id = 9,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 150}}},
 			[2] = {Id = 10,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 75}}},
@@ -43,6 +45,7 @@ return{
 		LvMin = 40,
 		LvMax = 49,
 		Name = _T("锻造者3"),
+		Desc = _T("能够打造出40级的装备"),
 		Equips = {
 			[1] = {Id = 17,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 200}}},
 			[2] = {Id = 18,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 100}}},
@@ -58,6 +61,7 @@ return{
 		LvMin = 50,
 		LvMax = 59,
 		Name = _T("锻造者4"),
+		Desc = _T("能够打造出40级，60级的装备"),
 		Equips = {
 			[1] = {Id = 25,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 250}}},
 			[2] = {Id = 26,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 125}}},
@@ -73,6 +77,7 @@ return{
 		LvMin = 60,
 		LvMax = 69,
 		Name = _T("锻造者5"),
+		Desc = _T("能够打造出60级的装备"),
 		Equips = {
 			[1] = {Id = 33,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 300}}},
 			[2] = {Id = 34,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 150}}},
@@ -88,6 +93,7 @@ return{
 		LvMin = 70,
 		LvMax = 79,
 		Name = _T("锻造者6"),
+		Desc = _T("能够打造出60级，80级的装备"),
 		Equips = {
 			[1] = {Id = 41,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 400}}},
 			[2] = {Id = 42,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 200}}},
@@ -103,6 +109,7 @@ return{
 		LvMin = 80,
 		LvMax = 89,
 		Name = _T("锻造者7"),
+		Desc = _T("能够打造出80级的装备"),
 		Equips = {
 			[1] = {Id = 49,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 600}}},
 			[2] = {Id = 50,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 300}}},
@@ -118,6 +125,7 @@ return{
 		LvMin = 90,
 		LvMax = 99,
 		Name = _T("锻造者8"),
+		Desc = _T("能够打造出80级，100级的装备"),
 		Equips = {
 			[1] = {Id = 57,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 700}}},
 			[2] = {Id = 58,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 350}}},
@@ -133,6 +141,7 @@ return{
 		LvMin = 100,
 		LvMax = 109,
 		Name = _T("锻造者9"),
+		Desc = _T("能够打造出100级的装备"),
 		Equips = {
 			[1] = {Id = 65,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 750}}},
 			[2] = {Id = 66,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 375}}},
@@ -148,6 +157,7 @@ return{
 		LvMin = 110,
 		LvMax = 119,
 		Name = _T("锻造者10"),
+		Desc = _T("能够打造出100级，120级的装备"),
 		Equips = {
 			[1] = {Id = 73,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 850}}},
 			[2] = {Id = 74,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 425}}},
@@ -163,6 +173,7 @@ return{
 		LvMin = 120,
 		LvMax = 129,
 		Name = _T("锻造者11"),
+		Desc = _T("能够打造出120级的装备"),
 		Equips = {
 			[1] = {Id = 81,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 1050}}},
 			[2] = {Id = 82,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 525}}},
@@ -178,6 +189,7 @@ return{
 		LvMin = 130,
 		LvMax = 139,
 		Name = _T("锻造者12"),
+		Desc = _T("能够打造出120级的装备"),
 		Equips = {
 			[1] = {Id = 89,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 1250}}},
 			[2] = {Id = 90,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 625}}},
@@ -193,6 +205,7 @@ return{
 		LvMin = 140,
 		LvMax = 150,
 		Name = _T("锻造者13"),
+		Desc = _T("能够打造出120级的装备"),
 		Equips = {
 			[1] = {Id = 97,Name = _T("武器锻造"),Pic = "WuQi",Cost = {[1] = {Id = 1401015,Val = 1450}}},
 			[2] = {Id = 98,Name = _T("头盔锻造"),Pic = "TouKui",Cost = {[1] = {Id = 1401015,Val = 725}}},

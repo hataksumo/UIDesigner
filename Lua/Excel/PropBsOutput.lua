@@ -8,6 +8,8 @@ local fn_calLevelProp = function()
 	local cfg_relic_attr_condition = dofile("Config\\relic_attr_condition")
 
 	local dscfg_cardGroup = dofile("Config\\cardGroup")
+	local dscfg_cardGroup1 = dofile("Config\\cardGroup_1")
+	table.copyInto(dscfg_cardGroup,dscfg_cardGroup1)
 	local dscfg_relicGroup = dofile("Config\\relicGroup")
 	local dscfg_levelDesigner = dofile("Config\\levelDesigner")
 
@@ -116,6 +118,9 @@ local fn_calLevelProp = function()
 	local cfg_eqp_lvup = dofile "Config\\eqp_lvup"
 	local cfg_eqp_suit = dofile "Config\\eqp_suit"
 	local cfg_prop = dofile "Config\\property"
+	local cfg_exweapon = dofile "Config\\personal_weapon"
+
+
 	local fn_calEquipProp = function(v_eqps,v_debug)
 		v_debug = v_debug or false
 		--基础属性
@@ -135,7 +140,8 @@ local fn_calLevelProp = function()
 			end
 			for _i,eqp_prop in ipairs(props) do
 				local the_prop_cfg = cfg_prop[eqp_prop.Id]
-				local eqp_prop_val = eqp_prop.Base + eqp_prop.Up * cfg_eqp_lvup[strengthenId][strengthenLv].Fac
+				--local eqp_prop_val = eqp_prop.Base + eqp_prop.Up * cfg_eqp_lvup[strengthenId][strengthenLv].Fac
+				local eqp_prop_val = eqp_prop.Base + eqp_prop.Up * strengthenLv
 				if the_prop_cfg.IsInt then
 					eqp_prop_val = math.floor(eqp_prop_val)
 				end
@@ -179,6 +185,7 @@ local fn_calLevelProp = function()
 		local iniProp = {}
 		local lvProp = {}
 		local eqpProp = {}
+		local exWeaponProp = {}
 		local transProp = {}
 		local finnalProp = {}
 		finnalProp.lvId = lvId
@@ -276,6 +283,28 @@ local fn_calLevelProp = function()
 				eqpProp[loc].propshl = CreatePropTable()
 			end
 
+			--专属武器强化
+			--ExWeapon
+			exWeaponProp[loc] = {}
+			exWeaponProp[loc].propshl = CreatePropTable()
+			if couple.shl and couple.shl.exWeapon then
+				local card_info = cfg_card[couple.shl.cardId]
+				local weapon_info = cfg_exweapon[card_info.ExWeapon]
+				local baseProp = table.clone(weapon_info.Prop)
+				local fac = weapon_info.Strength[couple.shl.exWeapon.lv].PropBonus
+				for _i,propData in ipairs(baseProp) do
+					local the_prop_cfg_info = cfg_prop[propData.id]
+					if the_prop_cfg_info.IsInt then
+						propData.val = math.floor(propData.val * fac)
+					else
+						propData.val = propData.val * fac
+					end
+				end
+				exWeaponProp[loc].propshl:add(baseProp,true)
+			end
+
+
+
 		end
 
 		-- if cardGroupId == 10815 then
@@ -287,12 +316,12 @@ local fn_calLevelProp = function()
 		--数据加和
 		for loc,couple in ipairs(cardGroupData) do
 			if finnalProp[loc].jlr then
-				finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr
-				--finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr + eqpProp[loc].propjlr
+				--finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr
+				finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr + eqpProp[loc].propjlr
 			end
 			if finnalProp[loc].shl then
-				finnalProp[loc].shl.prop = iniProp[loc].propShl + finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr
-				--finnalProp[loc].shl.prop = iniProp[loc].propShl + finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr + eqpProp[loc].propshl
+				--finnalProp[loc].shl.prop = iniProp[loc].propShl + finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr + exWeaponProp[loc].propshl
+				finnalProp[loc].shl.prop = iniProp[loc].propShl + finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr + eqpProp[loc].propshl + exWeaponProp[loc].propshl
 			end
 		end
 
@@ -337,6 +366,12 @@ local fn_calLevelProp = function()
 					local def = math.floor(the_prop.Atk / 2)
 					local hp = math.floor(the_prop.Atk * data.mon.suffer * the_prop.R / (the_prop.R + def))
 					local atk = math.floor(the_prop.HP / data.mon.exert * (the_prop.R + def) / the_prop.R)
+					if atk > hp then
+						print(string.format("lv:%d-%d-%s id：%d atk > hp R = %d Atk = %d Def = %d HP = %d",
+							lvId,loc,type,data.id,the_prop.R,data.prop.Atk,data.prop.Def,data.prop.HP))
+					end
+
+
 					the_prop.HP = hp
 					the_prop.Atk = atk
 					the_prop.Def = def
@@ -477,11 +512,13 @@ local fn_output_excel = function()
 	local gjlvds_sheet = book:get_sheet("挂机关卡")
 	local lhglds_sheet = book:get_sheet("芦花古楼")
 	local wbossds_sheet = book:get_sheet("世界BOSS")
+	local dailyds_sheet = book:get_sheet("日常本")
 	local lvs_multi_sheet = MutiExcelSheetObject.New()
 	lvs_multi_sheet:addSheet(lvds_sheet)
 	lvs_multi_sheet:addSheet(gjlvds_sheet)
 	lvs_multi_sheet:addSheet(lhglds_sheet)
 	lvs_multi_sheet:addSheet(wbossds_sheet)
+	lvs_multi_sheet:addSheet(dailyds_sheet)
 	lvs_multi_sheet:init_data()
 	fn_output_card_prop(card_prop_sheet,mon_prop_sheet,lvs_multi_sheet,level_card_prop,level_mon_prop)
 	book:save(MyTools.OutputExcelPath.."propSim.xlsx")

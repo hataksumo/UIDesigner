@@ -101,3 +101,12 @@ function table.clone(v_src)
 	end
     return copyData(v_src)
 end
+
+function table.copyInto(v_dst,v_src)
+	for key,val in pairs(v_src) do
+		if not v_dst[key] then
+			v_dst[key] = val
+		end
+	end
+	return v_dst
+end

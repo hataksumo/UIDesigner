@@ -53,6 +53,18 @@ PropMT.__add = function(v_t1,v_t2)
 	return rtn
 end
 
+PropMT.__mul = function(v_t1,v_fac)
+	local rtn =CreatePropTable()
+	if type(v_fac) == "number" then
+		for i,val in ipairs(v_t1.data)  do
+			rtn.data[i] = v_t1.data[i] * v_fac
+		end
+	end
+	return rtn
+end
+
+
+
 PropMT.print = function(v_self)
 	for _i,val in ipairs(v_self.data) do
 		local propCfg = cfg_property[_i+PropMT.begin]
@@ -60,9 +72,14 @@ PropMT.print = function(v_self)
 	end
 end
 
-PropMT.add = function(v_self,v_addPropCfg)
+PropMT.add = function(v_self,v_addPropCfg,v_smallBg)
+	v_smallBg = v_smallBg or false
 	for _i,propData in ipairs(v_addPropCfg) do
-		v_self[propData.Id] = v_self[propData.Id] + propData.Val
+		if not v_smallBg then
+			v_self[propData.Id] = v_self[propData.Id] + propData.Val
+		else
+			v_self[propData.id] = v_self[propData.id] + propData.val
+		end
 	end
 	return v_self
 end

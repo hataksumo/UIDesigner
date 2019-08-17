@@ -23,6 +23,11 @@ local _create_lveqp_data = function()
 end
 
 local step_bhvs = {}
+step_bhvs[1] = {
+	[1] = {poses = {1,2,3,4,5,6,7,8},locs = {1,2,3},fields={"shl","jlr"}, lv=1},
+}
+
+
 step_bhvs[15] = {
 	[1] = {poses = {1},locs = {1,2,3},fields={"shl"}, lv=0},
 	[2] = {poses = {1},locs = {1,2,3},fields={"jlr"}, lv=0.1},
@@ -236,6 +241,7 @@ local opt_eqp_ds = function(v_chaData,v_tarSheet,v_idOff,v_idType)
 					local id =1
 					if v_idType == 1 then
 						id = (((v_idOff+chaId) * 100 + lvId) * 10 + loc) *10 + _type - 1
+						--print(string.format("(((%d+%d) * 100 + %d) * 10 + %d) *10 + %d - 1 = %d",v_idOff,chaId,lvId,loc,_type,id))
 					elseif v_idType == 2 then
 						id = (((v_idOff+chaId*10) * 100 + lvId) * 10 + loc) *10 + _type - 1
 					end
@@ -245,6 +251,7 @@ local opt_eqp_ds = function(v_chaData,v_tarSheet,v_idOff,v_idType)
 							local colName_lv = string.format("equip[%d].lv",pos)
 							local eqpName = fn_getEqpName(the_eqp_data[pos].lvId,_type,the_eqp_data[pos].qua,pos)
 							v_tarSheet:set_val_by_pmid(tostring(id),colName_id,eqpName)
+							--print(string.format("v_tarSheet:set_val_by_pmid(tostring(%s),%s,%s)",tostring(id),colName_id,eqpName))
 							v_tarSheet:set_val_by_pmid(tostring(id),colName_lv,math.floor(the_eqp_data[pos].lv))
 						end
 					end
@@ -340,9 +347,9 @@ local fn_output_excel = function()
 			{lvId = 2, qua = 3, lvmin = 1, lvmax = 10, type = 10, lvsum = 10, baseLv = 20, lv = 40},--10层
 			{lvId = 2, qua = 40, lvmin = 11, lvmax = 20, type = 10, lvsum = 10, baseLv = 40, lv = 50},--20层
 			{lvId = 3, qua = 4, lvmin = 21, lvmax = 30, type = 10, lvsum = 10, baseLv = 50, lv = 60},--30层
-			{lvId = 3, qua = 40, lvmin = 31, lvmax = 40, type = 10, lvsum = 10, baseLv = 60, lv = 70},--40层
+			{lvId = 3, qua = 60, lvmin = 31, lvmax = 40, type = 10, lvsum = 10, baseLv = 60, lv = 70},--40层
 			{lvId = 4, qua = 4, lvmin = 41, lvmax = 50, type = 10, lvsum = 10, baseLv = 70, lv = 80},--50层
-			{lvId = 4, qua = 60, lvmin = 51, lvmax = 60, type = 10, lvsum = 10, baseLv = 80, lv = 90},--60层
+			{lvId = 4, qua = 5, lvmin = 51, lvmax = 60, type = 10, lvsum = 10, baseLv = 80, lv = 90},--60层
 			{lvId = 5, qua = 4, lvmin = 61, lvmax = 70, type = 10, lvsum = 10, baseLv = 90, lv = 100},--70层
 			{lvId = 5, qua = 5, lvmin = 71, lvmax = 80, type = 10, lvsum = 10, baseLv = 100, lv = 110},--80层
 			{lvId = 6, qua = 4, lvmin = 81, lvmax = 90, type = 10, lvsum = 10, baseLv = 110, lv = 120},--90层
@@ -352,9 +359,9 @@ local fn_output_excel = function()
 			{lvId = 2, qua = 4, lvmin = 1, lvmax = 10, type = 10, lvsum = 10, baseLv = 30, lv = 40},--10层
 			{lvId = 2, qua = 40, lvmin = 11, lvmax = 20, type = 10, lvsum = 10, baseLv = 40, lv = 50},--20层
 			{lvId = 3, qua = 4, lvmin = 21, lvmax = 30, type = 10, lvsum = 10, baseLv = 50, lv = 60},--30层
-			{lvId = 3, qua = 40, lvmin = 31, lvmax = 40, type = 10, lvsum = 10, baseLv = 60, lv = 70},--40层
+			{lvId = 3, qua = 60, lvmin = 31, lvmax = 40, type = 10, lvsum = 10, baseLv = 60, lv = 70},--40层
 			{lvId = 4, qua = 4, lvmin = 41, lvmax = 50, type = 10, lvsum = 10, baseLv = 70, lv = 80},--50层
-			{lvId = 4, qua = 60, lvmin = 51, lvmax = 60, type = 10, lvsum = 10, baseLv = 80, lv = 90},--60层
+			{lvId = 4, qua = 5, lvmin = 51, lvmax = 60, type = 10, lvsum = 10, baseLv = 80, lv = 90},--60层
 			{lvId = 5, qua = 4, lvmin = 61, lvmax = 70, type = 10, lvsum = 10, baseLv = 90, lv = 100},--70层
 			{lvId = 5, qua = 7, lvmin = 71, lvmax = 80, type = 10, lvsum = 10, baseLv = 100, lv = 110},--80层
 			{lvId = 6, qua = 4, lvmin = 81, lvmax = 90, type = 10, lvsum = 10, baseLv = 110, lv = 120},--90层
@@ -362,17 +369,44 @@ local fn_output_excel = function()
 		}
 	}
 
+	local wBossEqp = {
+		{lvId=1,qua=3,type = 1,lvsum = 1,baseLv = 30,lv = 35},--地煞一30
+		{lvId=1,qua=20,type = 1,lvsum = 1,baseLv = 35,lv = 40},--地煞二40
+		{lvId=2,qua=40,type = 1,lvsum = 1,baseLv = 50,lv = 50},--地煞三50
+		{lvId=3,qua=3,type = 1,lvsum = 1,baseLv = 60,lv = 60},--地煞四60
+		{lvId=3,qua=4,type = 1,lvsum = 1,baseLv = 70,lv = 70},--地煞五70
+		{lvId=3,qua=60,type = 1,lvsum = 1,baseLv = 80,lv = 80},--地煞六80
+		{lvId=3,qua=60,type = 1,lvsum = 1,baseLv = 80,lv = 80},--地煞七80
+		{lvId=3,qua=60,type = 1,lvsum = 1,baseLv = 80,lv = 80},--地煞八80
+		{lvId=4,qua=4,type = 1,lvsum = 1,baseLv = 90,lv = 90},--地煞九90
+		{lvId=4,qua=5,type = 1,lvsum = 1,baseLv = 100,lv = 100},--天罡一100
+		{lvId=4,qua=6,type = 1,lvsum = 1,baseLv = 110,lv = 110},--天罡二110
+		{lvId=4,qua=7,type = 1,lvsum = 1,baseLv = 120,lv = 120},--天罡三120
+		{lvId=4,qua=7,type = 1,lvsum = 1,baseLv = 120,lv = 120},--天罡四120
+		{lvId=4,qua=7,type = 1,lvsum = 1,baseLv = 120,lv = 120},--天罡五120
+		{lvId=5,qua=4,type = 1,lvsum = 1,baseLv = 130,lv = 130},--天罡六130
+		{lvId=5,qua=7,type = 1,lvsum = 1,baseLv = 140,lv = 140},--星耀140
+	}
+
+
+
+
+
+
 	local dropDsSheet = book:get_sheet("卡牌组")
 	local dropDstwSheet = book:get_sheet("芦花卡牌组")
 	local dropGjSheet = book:get_sheet("挂机卡牌组")
-	local eqp_designpt_data = cal_eqp_design(ptChaEqp)
-	local eqp_designkn_data = cal_eqp_design(knChaEqp)
-	local eqp_designtw_data = cal_eqp_tw_design(lhChaEqp)
-	local eqp_designgj_data = cal_eqp_design(gjChaEqp)
+	local dropWBossSheet = book:get_sheet("世界BOSS卡牌组")
+	--local eqp_designpt_data = cal_eqp_design(ptChaEqp)
+	--local eqp_designkn_data = cal_eqp_design(knChaEqp)
+	--local eqp_designtw_data = cal_eqp_tw_design(lhChaEqp)
+	--local eqp_designgj_data = cal_eqp_design(gjChaEqp)
+	local eqp_designWBoss_data = cal_eqp_design(wBossEqp)
 	--opt_eqp_ds(eqp_designpt_data,dropDsSheet,100)
 	--opt_eqp_ds(eqp_designkn_data,dropDsSheet,200)
 	--opt_eqp_ds(eqp_designtw_data,dropDstwSheet,400,2)
-	opt_eqp_ds(eqp_designgj_data,dropGjSheet,300)
+	--opt_eqp_ds(eqp_designgj_data,dropGjSheet,300)
+	opt_eqp_ds(eqp_designWBoss_data,dropWBossSheet,500)
 	book:save(MyTools.OutputExcelPath.."EquipDs.xlsx")
 end
 

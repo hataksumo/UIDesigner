@@ -84,10 +84,10 @@ function output_excel()
 	--"Excel\\BattleCameraOutput",
 	--"Excel\\jhmOutput"
 	--"Excel\\NewDropOutput"
-	--"Excel\\PropBsOutput"
+	"Excel\\PropBsOutput"
 	--"Excel\\GuaJiPaiQian"
 	--"Excel\\RelicAct"
-	"Excel\\EquipDs"
+	--"Excel\\EquipDs"
 	}
 	for _i,val in ipairs(output) do
 		local fn = dofile(val)
