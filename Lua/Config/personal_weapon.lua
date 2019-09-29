@@ -1,1653 +1,3902 @@
 --[[
 --note:
 守护灵拥有专属武器，这是专属武器的配置。专属武器可以消耗对应武将碎片解锁。解锁后和强化，解封，幻化。专属武器激活后则可获得基础属性奖励。
-专属武器激活后可以进行强化，消耗不同数量不同品质的强化石，概率升级。专属武器强化百分比提升专属武器基础属性。
+专属武器魂珠的配置，描述了专属武器各主子的开启条件。
+描述专属武器每个柱子强化的消耗与属性，以及成功概率。实际成功率读ST[i].P，如果i>ST.Length，则必然成功。失败则祝福值提升FvUp，如果祝福值大于ST[i].MaxV，i+=1;
 专属武器的解封，可获得属性或被动技能。消耗对应将魂碎片进行武器解封。
 colums:
-{WpID,专属武器ID} ,{CardId,卡牌ID} ,{Name,武器名} ,{Quality,品质} ,{Prop[1].id,属性ID1} ,{Prop[1].val,属性值1} ,{Prop[2].id,属性ID2} ,{Prop[2].val,属性值2} ,{Prop[3].id,属性ID3} ,{Prop[3].val,属性值3} ,{CostUnlock[1].id,消耗道具ID1} ,{CostUnlock[1].val,消耗道具数量1} ,{CostUnlock[2].id,消耗道具ID2} ,{CostUnlock[2].val,消耗道具数量2} ,{CostUnlock[3].id,消耗道具ID3} ,{CostUnlock[3].val,消耗道具数量3} ,{Icon,图标} ,{HelpCol,辅助列} ,{Lv,等级} ,{Cost[1].id,强化材料ID1} ,{Cost[1].val,强化材料数量1} ,{Cost[2].id,强化材料ID2} ,{Cost[2].val,强化材料数量2} ,{Cost[3].id,强化材料ID3} ,{Cost[3].val,强化材料数量3} ,{StrenthSuccessRate,强化成功率} ,{StrenthFailVoice,失败祝福值提升} ,{MaxVoice,最大祝福值} ,{PropBonus,强化值} ,{WeaponFx,武器特效} ,{PSkill,被动技能} ,{PSkillLevel,效果等级} ,{WeaponPrefab,武器预设}
+{WpID,专属武器ID} ,{CardId,卡牌ID} ,{Name,武器名} ,{Quality,品质} ,{Icon,图标} ,{Id,ID} ,{LvLimit,等级限制} ,{PreLv,上一级等级} ,{UnsealLv,解封等级} ,{Prop[1].Id,属性Id1} ,{Prop[1].Val,属性值1} ,{Prop[1].Sum,属性总值1} ,{Prop[2].Id,属性Id2} ,{Prop[2].Val,属性值2} ,{Prop[2].Sum,属性总值2} ,{Prop[3].Id,属性Id3} ,{Prop[3].Val,属性值3} ,{Prop[3].Sum,属性总值3} ,{Cost[1].Id,消耗道具Id1} ,{Cost[1].Val,消耗道具值1} ,{Cost[2].Id,消耗道具Id2} ,{Cost[2].Val,消耗道具值2} ,{Cost[3].Id,消耗道具Id3} ,{Cost[3].Val,消耗道具值3} ,{StrenthSuccessRate,强化成功率} ,{Fv,失败提升祝福值} ,{MaxV,最高祝福值} ,{HelpCol,辅助列} ,{Lv,等级} ,{PSkill,被动技能} ,{PSkillLevel,效果等级} ,{WeaponPrefab,武器预设}
 primary key:
 #0 [专属武器]: WpID
-#1 [专属武器强化]: WpID,HelpCol,Lv
-#2 [专属武器解封]: WpID,HelpCol,Lv
+#1 [专属武器龙珠]: WpID,HelpCol,Pos
+#2 [新专属武器强化]: WpID,HelpCol,Pos,HelpCol1,Lv
+#3 [专属武器解封]: WpID,HelpCol,Lv
 ]]
 local _T = LangUtil.Language
 return{
-	[1501001] = {
+	[1102001] = {
 		CardId = 1102001,
 		Name = _T("青龙偃月刀"),
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 85207},[2] = {id = 112,val = 42603},[3] = {id = 113,val = 42603}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611001,val = 30}},
-		Icon = "ui_dtex_Equip_1501001",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102001",
+		HunZhu = {
+			[1] = {
+				Id = 200101,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--关羽魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 75,Sum = 75},[2] = {Id = 112,Val = 30,Sum = 30},[3] = {Id = 113,Val = 1200,Sum = 1200}},Cost = {[1] = {Id = 1401002,Val = 160},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--关羽魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 195},[2] = {Id = 112,Val = 48,Sum = 78},[3] = {Id = 113,Val = 1920,Sum = 3120}},Cost = {[1] = {Id = 1401002,Val = 245},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--关羽魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 150,Sum = 345},[2] = {Id = 112,Val = 60,Sum = 138},[3] = {Id = 113,Val = 2400,Sum = 5520}},Cost = {[1] = {Id = 1401002,Val = 405},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--关羽魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 585},[2] = {Id = 112,Val = 96,Sum = 234},[3] = {Id = 113,Val = 3840,Sum = 9360}},Cost = {[1] = {Id = 1401002,Val = 520},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--关羽魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 330,Sum = 915},[2] = {Id = 112,Val = 132,Sum = 366},[3] = {Id = 113,Val = 5280,Sum = 14640}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--关羽魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 420,Sum = 1335},[2] = {Id = 112,Val = 168,Sum = 534},[3] = {Id = 113,Val = 6720,Sum = 21360}},Cost = {[1] = {Id = 1401002,Val = 790},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--关羽魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1815},[2] = {Id = 112,Val = 192,Sum = 726},[3] = {Id = 113,Val = 7680,Sum = 29040}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--关羽魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 570,Sum = 2385},[2] = {Id = 112,Val = 228,Sum = 954},[3] = {Id = 113,Val = 9120,Sum = 38160}},Cost = {[1] = {Id = 1401002,Val = 1055},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--关羽魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 630,Sum = 3015},[2] = {Id = 112,Val = 252,Sum = 1206},[3] = {Id = 113,Val = 10080,Sum = 48240}},Cost = {[1] = {Id = 1401002,Val = 1315},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--关羽魂珠-1 等级-9
+				}
+			},--关羽专属武器魂珠-1
+			[2] = {
+				Id = 200102,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--关羽魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 120},[2] = {Id = 112,Val = 48,Sum = 48},[3] = {Id = 113,Val = 1920,Sum = 1920}},Cost = {[1] = {Id = 1401002,Val = 445},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--关羽魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 180,Sum = 300},[2] = {Id = 112,Val = 72,Sum = 120},[3] = {Id = 113,Val = 2880,Sum = 4800}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--关羽魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 540},[2] = {Id = 112,Val = 96,Sum = 216},[3] = {Id = 113,Val = 3840,Sum = 8640}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--关羽魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 900},[2] = {Id = 112,Val = 144,Sum = 360},[3] = {Id = 113,Val = 5760,Sum = 14400}},Cost = {[1] = {Id = 1401002,Val = 710},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--关羽魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1380},[2] = {Id = 112,Val = 192,Sum = 552},[3] = {Id = 113,Val = 7680,Sum = 22080}},Cost = {[1] = {Id = 1401002,Val = 1080},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--关羽魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 1980},[2] = {Id = 112,Val = 240,Sum = 792},[3] = {Id = 113,Val = 9600,Sum = 31680}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--关羽魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 2700},[2] = {Id = 112,Val = 288,Sum = 1080},[3] = {Id = 113,Val = 11520,Sum = 43200}},Cost = {[1] = {Id = 1401002,Val = 1795},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--关羽魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 840,Sum = 3540},[2] = {Id = 112,Val = 336,Sum = 1416},[3] = {Id = 113,Val = 13440,Sum = 56640}},Cost = {[1] = {Id = 1401002,Val = 2150},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--关羽魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 4500},[2] = {Id = 112,Val = 384,Sum = 1800},[3] = {Id = 113,Val = 15360,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 2870},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--关羽魂珠-2 等级-9
+				}
+			},--关羽专属武器魂珠-2
+			[3] = {
+				Id = 200103,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--关羽魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 150,Sum = 150},[2] = {Id = 112,Val = 60,Sum = 60},[3] = {Id = 113,Val = 2400,Sum = 2400}},Cost = {[1] = {Id = 1401002,Val = 910},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--关羽魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 390},[2] = {Id = 112,Val = 96,Sum = 156},[3] = {Id = 113,Val = 3840,Sum = 6240}},Cost = {[1] = {Id = 1401002,Val = 685},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--关羽魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 315,Sum = 705},[2] = {Id = 112,Val = 126,Sum = 282},[3] = {Id = 113,Val = 5040,Sum = 11280}},Cost = {[1] = {Id = 1401002,Val = 1140},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--关羽魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1185},[2] = {Id = 112,Val = 192,Sum = 474},[3] = {Id = 113,Val = 7680,Sum = 18960}},Cost = {[1] = {Id = 1401002,Val = 1095},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--关羽魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 639,Sum = 1824},[2] = {Id = 112,Val = 256,Sum = 730},[3] = {Id = 113,Val = 10224,Sum = 29184}},Cost = {[1] = {Id = 1401002,Val = 1485},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--关羽魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 810,Sum = 2634},[2] = {Id = 112,Val = 324,Sum = 1054},[3] = {Id = 113,Val = 12960,Sum = 42144}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--关羽魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 3594},[2] = {Id = 112,Val = 384,Sum = 1438},[3] = {Id = 113,Val = 15360,Sum = 57504}},Cost = {[1] = {Id = 1401002,Val = 2215},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--关羽魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1125,Sum = 4719},[2] = {Id = 112,Val = 444,Sum = 1882},[3] = {Id = 113,Val = 18000,Sum = 75504}},Cost = {[1] = {Id = 1401002,Val = 2955},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--关羽魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1275,Sum = 5994},[2] = {Id = 112,Val = 510,Sum = 2392},[3] = {Id = 113,Val = 20400,Sum = 95904}},Cost = {[1] = {Id = 1401002,Val = 3695},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--关羽魂珠-3 等级-9
+				}
+			},--关羽专属武器魂珠-3
+			[4] = {
+				Id = 200104,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--关羽魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 195,Sum = 195},[2] = {Id = 112,Val = 78,Sum = 78},[3] = {Id = 113,Val = 3120,Sum = 3120}},Cost = {[1] = {Id = 1401002,Val = 1480},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--关羽魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 300,Sum = 495},[2] = {Id = 112,Val = 120,Sum = 198},[3] = {Id = 113,Val = 4800,Sum = 7920}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--关羽魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 390,Sum = 885},[2] = {Id = 112,Val = 156,Sum = 354},[3] = {Id = 113,Val = 6240,Sum = 14160}},Cost = {[1] = {Id = 1401002,Val = 1235},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--关羽魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 1485},[2] = {Id = 112,Val = 240,Sum = 594},[3] = {Id = 113,Val = 9600,Sum = 23760}},Cost = {[1] = {Id = 1401002,Val = 2370},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--关羽魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 810,Sum = 2295},[2] = {Id = 112,Val = 324,Sum = 918},[3] = {Id = 113,Val = 12960,Sum = 36720}},Cost = {[1] = {Id = 1401002,Val = 2405},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--关羽魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1005,Sum = 3300},[2] = {Id = 112,Val = 462,Sum = 1380},[3] = {Id = 113,Val = 16080,Sum = 52800}},Cost = {[1] = {Id = 1401002,Val = 2390},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--关羽魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1200,Sum = 4500},[2] = {Id = 112,Val = 480,Sum = 1860},[3] = {Id = 113,Val = 19200,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--关羽魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1425,Sum = 5925},[2] = {Id = 112,Val = 570,Sum = 2430},[3] = {Id = 113,Val = 22800,Sum = 94800}},Cost = {[1] = {Id = 1401002,Val = 4790},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--关羽魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1650,Sum = 7575},[2] = {Id = 112,Val = 660,Sum = 3090},[3] = {Id = 113,Val = 26400,Sum = 121200}},Cost = {[1] = {Id = 1401002,Val = 7190},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--关羽魂珠-4 等级-9
+				}
+			},--关羽专属武器魂珠-4
+			[5] = {
+				Id = 200105,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--关羽魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 270,Sum = 270},[2] = {Id = 112,Val = 108,Sum = 108},[3] = {Id = 113,Val = 4320,Sum = 4320}},Cost = {[1] = {Id = 1401002,Val = 3085},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--关羽魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 420,Sum = 690},[2] = {Id = 112,Val = 168,Sum = 276},[3] = {Id = 113,Val = 6720,Sum = 11040}},Cost = {[1] = {Id = 1401002,Val = 2315},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--关羽魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 555,Sum = 1245},[2] = {Id = 112,Val = 222,Sum = 498},[3] = {Id = 113,Val = 8880,Sum = 19920}},Cost = {[1] = {Id = 1401002,Val = 2570},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--关羽魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 840,Sum = 2085},[2] = {Id = 112,Val = 336,Sum = 834},[3] = {Id = 113,Val = 13440,Sum = 33360}},Cost = {[1] = {Id = 1401002,Val = 3705},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--关羽魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1125,Sum = 3210},[2] = {Id = 112,Val = 450,Sum = 1284},[3] = {Id = 113,Val = 18000,Sum = 51360}},Cost = {[1] = {Id = 1401002,Val = 3760},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--关羽魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1425,Sum = 4635},[2] = {Id = 112,Val = 570,Sum = 1854},[3] = {Id = 113,Val = 22800,Sum = 74160}},Cost = {[1] = {Id = 1401002,Val = 6230},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--关羽魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1800,Sum = 6435},[2] = {Id = 112,Val = 720,Sum = 2574},[3] = {Id = 113,Val = 28800,Sum = 102960}},Cost = {[1] = {Id = 1401002,Val = 6245},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--关羽魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1950,Sum = 8385},[2] = {Id = 112,Val = 780,Sum = 3354},[3] = {Id = 113,Val = 31200,Sum = 134160}},Cost = {[1] = {Id = 1401002,Val = 8740},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--关羽魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2250,Sum = 10635},[2] = {Id = 112,Val = 900,Sum = 4254},[3] = {Id = 113,Val = 36000,Sum = 170160}},Cost = {[1] = {Id = 1401002,Val = 11240},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--关羽魂珠-5 等级-9
+				}
+			},--关羽专属武器魂珠-5
+			[6] = {
+				Id = 200106,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--关羽魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 375,Sum = 375},[2] = {Id = 112,Val = 150,Sum = 150},[3] = {Id = 113,Val = 6000,Sum = 6000}},Cost = {[1] = {Id = 1401002,Val = 2905},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--关羽魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 975},[2] = {Id = 112,Val = 240,Sum = 390},[3] = {Id = 113,Val = 9600,Sum = 15600}},Cost = {[1] = {Id = 1401002,Val = 4360},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--关羽魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 750,Sum = 1725},[2] = {Id = 112,Val = 300,Sum = 690},[3] = {Id = 113,Val = 12000,Sum = 27600}},Cost = {[1] = {Id = 1401002,Val = 4840},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--关羽魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1200,Sum = 2925},[2] = {Id = 112,Val = 480,Sum = 1170},[3] = {Id = 113,Val = 19200,Sum = 46800}},Cost = {[1] = {Id = 1401002,Val = 6970},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--关羽魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1650,Sum = 4575},[2] = {Id = 112,Val = 660,Sum = 1830},[3] = {Id = 113,Val = 26400,Sum = 73200}},Cost = {[1] = {Id = 1401002,Val = 7080},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--关羽魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2025,Sum = 6600},[2] = {Id = 112,Val = 810,Sum = 2640},[3] = {Id = 113,Val = 32400,Sum = 105600}},Cost = {[1] = {Id = 1401002,Val = 9385},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--关羽魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 9000},[2] = {Id = 112,Val = 960,Sum = 3600},[3] = {Id = 113,Val = 38400,Sum = 144000}},Cost = {[1] = {Id = 1401002,Val = 11760},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--关羽魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2850,Sum = 11850},[2] = {Id = 112,Val = 1140,Sum = 4740},[3] = {Id = 113,Val = 45600,Sum = 189600}},Cost = {[1] = {Id = 1401002,Val = 16445},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--关羽魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3300,Sum = 15150},[2] = {Id = 112,Val = 1320,Sum = 6060},[3] = {Id = 113,Val = 52800,Sum = 242400}},Cost = {[1] = {Id = 1401002,Val = 18800},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--关羽魂珠-6 等级-9
+				}
+			},--关羽专属武器魂珠-6
+			[7] = {
+				Id = 200107,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--关羽魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 480},[2] = {Id = 112,Val = 192,Sum = 192},[3] = {Id = 113,Val = 7680,Sum = 7680}},Cost = {[1] = {Id = 1401002,Val = 5710},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--关羽魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1200},[2] = {Id = 112,Val = 288,Sum = 480},[3] = {Id = 113,Val = 11520,Sum = 19200}},Cost = {[1] = {Id = 1401002,Val = 4280},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--关羽魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2160},[2] = {Id = 112,Val = 384,Sum = 864},[3] = {Id = 113,Val = 15360,Sum = 34560}},Cost = {[1] = {Id = 1401002,Val = 7135},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--关羽魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 3600},[2] = {Id = 112,Val = 576,Sum = 1440},[3] = {Id = 113,Val = 23040,Sum = 57600}},Cost = {[1] = {Id = 1401002,Val = 9130},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--关羽魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 5520},[2] = {Id = 112,Val = 768,Sum = 2208},[3] = {Id = 113,Val = 30720,Sum = 88320}},Cost = {[1] = {Id = 1401002,Val = 9275},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--关羽魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 7920},[2] = {Id = 112,Val = 960,Sum = 3168},[3] = {Id = 113,Val = 38400,Sum = 126720}},Cost = {[1] = {Id = 1401002,Val = 11525},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--关羽魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2880,Sum = 10800},[2] = {Id = 112,Val = 1152,Sum = 4320},[3] = {Id = 113,Val = 46080,Sum = 172800}},Cost = {[1] = {Id = 1401002,Val = 16170},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--关羽魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3360,Sum = 14160},[2] = {Id = 112,Val = 1344,Sum = 5664},[3] = {Id = 113,Val = 53760,Sum = 226560}},Cost = {[1] = {Id = 1401002,Val = 18465},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--关羽魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3840,Sum = 18000},[2] = {Id = 112,Val = 1536,Sum = 7200},[3] = {Id = 113,Val = 61440,Sum = 288000}},Cost = {[1] = {Id = 1401002,Val = 23090},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--关羽魂珠-7 等级-9
+				}
+			},--关羽专属武器魂珠-7
+			[8] = {
+				Id = 200108,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--关羽魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 600},[2] = {Id = 112,Val = 240,Sum = 240},[3] = {Id = 113,Val = 9600,Sum = 9600}},Cost = {[1] = {Id = 1401002,Val = 4865},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--关羽魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 1500},[2] = {Id = 112,Val = 360,Sum = 600},[3] = {Id = 113,Val = 14400,Sum = 24000}},Cost = {[1] = {Id = 1401002,Val = 5835},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--关羽魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 1200,Sum = 2700},[2] = {Id = 112,Val = 480,Sum = 1080},[3] = {Id = 113,Val = 19200,Sum = 43200}},Cost = {[1] = {Id = 1401002,Val = 8105},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--关羽魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1800,Sum = 4500},[2] = {Id = 112,Val = 720,Sum = 1800},[3] = {Id = 113,Val = 28800,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 9340},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--关羽魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 6900},[2] = {Id = 112,Val = 960,Sum = 2760},[3] = {Id = 113,Val = 38400,Sum = 110400}},Cost = {[1] = {Id = 1401002,Val = 11855},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--关羽魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 3000,Sum = 9900},[2] = {Id = 112,Val = 1200,Sum = 3960},[3] = {Id = 113,Val = 48000,Sum = 158400}},Cost = {[1] = {Id = 1401002,Val = 14145},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--关羽魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 3600,Sum = 13500},[2] = {Id = 112,Val = 1440,Sum = 5400},[3] = {Id = 113,Val = 57600,Sum = 216000}},Cost = {[1] = {Id = 1401002,Val = 19690},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--关羽魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 4200,Sum = 17700},[2] = {Id = 112,Val = 1680,Sum = 7080},[3] = {Id = 113,Val = 67200,Sum = 283200}},Cost = {[1] = {Id = 1401002,Val = 23605},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--关羽魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 4800,Sum = 22500},[2] = {Id = 112,Val = 1920,Sum = 9000},[3] = {Id = 113,Val = 76800,Sum = 360000}},Cost = {[1] = {Id = 1401002,Val = 23615},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--关羽魂珠-8 等级-9
+				}
+			}--关羽专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611001,val = 5}},PSkill = 130300111,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611001,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611001,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611001,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611001,val = 10}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611001,val = 20}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611001,val = 20}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611001,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611001,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611001,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611001,val = 30}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611001,val = 50}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611001,val = 60}},Prop = {[1] = {id = 104,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502001,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130300111,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502001,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502001,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502001,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502001,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502001,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502001,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502001,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502001,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502001,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502001,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502001,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502001,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 104,Val = 0.14}}}
 		}
 	},--关羽专属武器
-	[1501002] = {
+	[1102002] = {
 		CardId = 1102002,
 		Name = _T("碎岩"),
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 21775},[2] = {id = 112,val = 54438},[3] = {id = 113,val = 54438}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611002,val = 30}},
-		Icon = "ui_dtex_Equip_1501002",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102002",
+		HunZhu = {
+			[1] = {
+				Id = 200201,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--许褚魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 45,Sum = 45},[2] = {Id = 112,Val = 25,Sum = 25},[3] = {Id = 113,Val = 1100,Sum = 1100}},Cost = {[1] = {Id = 1401002,Val = 80},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--许褚魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 72,Sum = 117},[2] = {Id = 112,Val = 40,Sum = 65},[3] = {Id = 113,Val = 1760,Sum = 2860}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--许褚魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 90,Sum = 207},[2] = {Id = 112,Val = 50,Sum = 115},[3] = {Id = 113,Val = 2200,Sum = 5060}},Cost = {[1] = {Id = 1401002,Val = 205},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--许褚魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 351},[2] = {Id = 112,Val = 80,Sum = 195},[3] = {Id = 113,Val = 3520,Sum = 8580}},Cost = {[1] = {Id = 1401002,Val = 260},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--许褚魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 198,Sum = 549},[2] = {Id = 112,Val = 110,Sum = 305},[3] = {Id = 113,Val = 4840,Sum = 13420}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--许褚魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 801},[2] = {Id = 112,Val = 140,Sum = 445},[3] = {Id = 113,Val = 6160,Sum = 19580}},Cost = {[1] = {Id = 1401002,Val = 395},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--许褚魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 1089},[2] = {Id = 112,Val = 160,Sum = 605},[3] = {Id = 113,Val = 7040,Sum = 26620}},Cost = {[1] = {Id = 1401002,Val = 460},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--许褚魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 342,Sum = 1431},[2] = {Id = 112,Val = 190,Sum = 795},[3] = {Id = 113,Val = 8360,Sum = 34980}},Cost = {[1] = {Id = 1401002,Val = 525},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--许褚魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 378,Sum = 1809},[2] = {Id = 112,Val = 210,Sum = 1005},[3] = {Id = 113,Val = 9240,Sum = 44220}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--许褚魂珠-1 等级-9
+				}
+			},--许褚专属武器魂珠-1
+			[2] = {
+				Id = 200202,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--许褚魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 72,Sum = 72},[2] = {Id = 112,Val = 40,Sum = 40},[3] = {Id = 113,Val = 1760,Sum = 1760}},Cost = {[1] = {Id = 1401002,Val = 220},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--许褚魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 108,Sum = 180},[2] = {Id = 112,Val = 60,Sum = 100},[3] = {Id = 113,Val = 2640,Sum = 4400}},Cost = {[1] = {Id = 1401002,Val = 165},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--许褚魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 324},[2] = {Id = 112,Val = 80,Sum = 180},[3] = {Id = 113,Val = 3520,Sum = 7920}},Cost = {[1] = {Id = 1401002,Val = 370},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--许褚魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 540},[2] = {Id = 112,Val = 120,Sum = 300},[3] = {Id = 113,Val = 5280,Sum = 13200}},Cost = {[1] = {Id = 1401002,Val = 355},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--许褚魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 828},[2] = {Id = 112,Val = 160,Sum = 460},[3] = {Id = 113,Val = 7040,Sum = 20240}},Cost = {[1] = {Id = 1401002,Val = 540},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--许褚魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 1188},[2] = {Id = 112,Val = 200,Sum = 660},[3] = {Id = 113,Val = 8800,Sum = 29040}},Cost = {[1] = {Id = 1401002,Val = 715},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--许褚魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 1620},[2] = {Id = 112,Val = 240,Sum = 900},[3] = {Id = 113,Val = 10560,Sum = 39600}},Cost = {[1] = {Id = 1401002,Val = 900},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--许褚魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 2124},[2] = {Id = 112,Val = 280,Sum = 1180},[3] = {Id = 113,Val = 12320,Sum = 51920}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--许褚魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2700},[2] = {Id = 112,Val = 320,Sum = 1500},[3] = {Id = 113,Val = 14080,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--许褚魂珠-2 等级-9
+				}
+			},--许褚专属武器魂珠-2
+			[3] = {
+				Id = 200203,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--许褚魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 90,Sum = 90},[2] = {Id = 112,Val = 50,Sum = 50},[3] = {Id = 113,Val = 2200,Sum = 2200}},Cost = {[1] = {Id = 1401002,Val = 455},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--许褚魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 234},[2] = {Id = 112,Val = 80,Sum = 130},[3] = {Id = 113,Val = 3520,Sum = 5720}},Cost = {[1] = {Id = 1401002,Val = 340},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--许褚魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 189,Sum = 423},[2] = {Id = 112,Val = 105,Sum = 235},[3] = {Id = 113,Val = 4620,Sum = 10340}},Cost = {[1] = {Id = 1401002,Val = 570},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--许褚魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 711},[2] = {Id = 112,Val = 160,Sum = 395},[3] = {Id = 113,Val = 7040,Sum = 17380}},Cost = {[1] = {Id = 1401002,Val = 550},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--许褚魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 383,Sum = 1094},[2] = {Id = 112,Val = 213,Sum = 608},[3] = {Id = 113,Val = 9372,Sum = 26752}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--许褚魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 486,Sum = 1580},[2] = {Id = 112,Val = 270,Sum = 878},[3] = {Id = 113,Val = 11880,Sum = 38632}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--许褚魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2156},[2] = {Id = 112,Val = 320,Sum = 1198},[3] = {Id = 113,Val = 14080,Sum = 52712}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--许褚魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 675,Sum = 2831},[2] = {Id = 112,Val = 370,Sum = 1568},[3] = {Id = 113,Val = 16500,Sum = 69212}},Cost = {[1] = {Id = 1401002,Val = 1475},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--许褚魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 765,Sum = 3596},[2] = {Id = 112,Val = 425,Sum = 1993},[3] = {Id = 113,Val = 18700,Sum = 87912}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--许褚魂珠-3 等级-9
+				}
+			},--许褚专属武器魂珠-3
+			[4] = {
+				Id = 200204,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--许褚魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 117,Sum = 117},[2] = {Id = 112,Val = 65,Sum = 65},[3] = {Id = 113,Val = 2860,Sum = 2860}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--许褚魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 180,Sum = 297},[2] = {Id = 112,Val = 100,Sum = 165},[3] = {Id = 113,Val = 4400,Sum = 7260}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--许褚魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 234,Sum = 531},[2] = {Id = 112,Val = 130,Sum = 295},[3] = {Id = 113,Val = 5720,Sum = 12980}},Cost = {[1] = {Id = 1401002,Val = 615},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--许褚魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 891},[2] = {Id = 112,Val = 200,Sum = 495},[3] = {Id = 113,Val = 8800,Sum = 21780}},Cost = {[1] = {Id = 1401002,Val = 1185},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--许褚魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 486,Sum = 1377},[2] = {Id = 112,Val = 270,Sum = 765},[3] = {Id = 113,Val = 11880,Sum = 33660}},Cost = {[1] = {Id = 1401002,Val = 1205},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--许褚魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 603,Sum = 1980},[2] = {Id = 112,Val = 385,Sum = 1150},[3] = {Id = 113,Val = 14740,Sum = 48400}},Cost = {[1] = {Id = 1401002,Val = 1195},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--许褚魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 2700},[2] = {Id = 112,Val = 400,Sum = 1550},[3] = {Id = 113,Val = 17600,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 1800},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--许褚魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 855,Sum = 3555},[2] = {Id = 112,Val = 475,Sum = 2025},[3] = {Id = 113,Val = 20900,Sum = 86900}},Cost = {[1] = {Id = 1401002,Val = 2395},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--许褚魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 990,Sum = 4545},[2] = {Id = 112,Val = 550,Sum = 2575},[3] = {Id = 113,Val = 24200,Sum = 111100}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--许褚魂珠-4 等级-9
+				}
+			},--许褚专属武器魂珠-4
+			[5] = {
+				Id = 200205,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--许褚魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 162,Sum = 162},[2] = {Id = 112,Val = 90,Sum = 90},[3] = {Id = 113,Val = 3960,Sum = 3960}},Cost = {[1] = {Id = 1401002,Val = 1545},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--许褚魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 414},[2] = {Id = 112,Val = 140,Sum = 230},[3] = {Id = 113,Val = 6160,Sum = 10120}},Cost = {[1] = {Id = 1401002,Val = 1155},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--许褚魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 333,Sum = 747},[2] = {Id = 112,Val = 185,Sum = 415},[3] = {Id = 113,Val = 8140,Sum = 18260}},Cost = {[1] = {Id = 1401002,Val = 1285},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--许褚魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 1251},[2] = {Id = 112,Val = 280,Sum = 695},[3] = {Id = 113,Val = 12320,Sum = 30580}},Cost = {[1] = {Id = 1401002,Val = 1850},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--许褚魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 675,Sum = 1926},[2] = {Id = 112,Val = 375,Sum = 1070},[3] = {Id = 113,Val = 16500,Sum = 47080}},Cost = {[1] = {Id = 1401002,Val = 1880},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--许褚魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 855,Sum = 2781},[2] = {Id = 112,Val = 475,Sum = 1545},[3] = {Id = 113,Val = 20900,Sum = 67980}},Cost = {[1] = {Id = 1401002,Val = 3115},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--许褚魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 3861},[2] = {Id = 112,Val = 600,Sum = 2145},[3] = {Id = 113,Val = 26400,Sum = 94380}},Cost = {[1] = {Id = 1401002,Val = 3125},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--许褚魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1170,Sum = 5031},[2] = {Id = 112,Val = 650,Sum = 2795},[3] = {Id = 113,Val = 28600,Sum = 122980}},Cost = {[1] = {Id = 1401002,Val = 4370},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--许褚魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1350,Sum = 6381},[2] = {Id = 112,Val = 750,Sum = 3545},[3] = {Id = 113,Val = 33000,Sum = 155980}},Cost = {[1] = {Id = 1401002,Val = 5620},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--许褚魂珠-5 等级-9
+				}
+			},--许褚专属武器魂珠-5
+			[6] = {
+				Id = 200206,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--许褚魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 225,Sum = 225},[2] = {Id = 112,Val = 125,Sum = 125},[3] = {Id = 113,Val = 5500,Sum = 5500}},Cost = {[1] = {Id = 1401002,Val = 1450},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--许褚魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 585},[2] = {Id = 112,Val = 200,Sum = 325},[3] = {Id = 113,Val = 8800,Sum = 14300}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--许褚魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 450,Sum = 1035},[2] = {Id = 112,Val = 250,Sum = 575},[3] = {Id = 113,Val = 11000,Sum = 25300}},Cost = {[1] = {Id = 1401002,Val = 2420},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--许褚魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1755},[2] = {Id = 112,Val = 400,Sum = 975},[3] = {Id = 113,Val = 17600,Sum = 42900}},Cost = {[1] = {Id = 1401002,Val = 3485},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--许褚魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 990,Sum = 2745},[2] = {Id = 112,Val = 550,Sum = 1525},[3] = {Id = 113,Val = 24200,Sum = 67100}},Cost = {[1] = {Id = 1401002,Val = 3540},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--许褚魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1215,Sum = 3960},[2] = {Id = 112,Val = 675,Sum = 2200},[3] = {Id = 113,Val = 29700,Sum = 96800}},Cost = {[1] = {Id = 1401002,Val = 4690},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--许褚魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 5400},[2] = {Id = 112,Val = 800,Sum = 3000},[3] = {Id = 113,Val = 35200,Sum = 132000}},Cost = {[1] = {Id = 1401002,Val = 5880},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--许褚魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1710,Sum = 7110},[2] = {Id = 112,Val = 950,Sum = 3950},[3] = {Id = 113,Val = 41800,Sum = 173800}},Cost = {[1] = {Id = 1401002,Val = 8225},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--许褚魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1980,Sum = 9090},[2] = {Id = 112,Val = 1100,Sum = 5050},[3] = {Id = 113,Val = 48400,Sum = 222200}},Cost = {[1] = {Id = 1401002,Val = 9400},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--许褚魂珠-6 等级-9
+				}
+			},--许褚专属武器魂珠-6
+			[7] = {
+				Id = 200207,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--许褚魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 288},[2] = {Id = 112,Val = 160,Sum = 160},[3] = {Id = 113,Val = 7040,Sum = 7040}},Cost = {[1] = {Id = 1401002,Val = 2855},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--许褚魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 720},[2] = {Id = 112,Val = 240,Sum = 400},[3] = {Id = 113,Val = 10560,Sum = 17600}},Cost = {[1] = {Id = 1401002,Val = 2140},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--许褚魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 1296},[2] = {Id = 112,Val = 320,Sum = 720},[3] = {Id = 113,Val = 14080,Sum = 31680}},Cost = {[1] = {Id = 1401002,Val = 3565},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--许褚魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 864,Sum = 2160},[2] = {Id = 112,Val = 480,Sum = 1200},[3] = {Id = 113,Val = 21120,Sum = 52800}},Cost = {[1] = {Id = 1401002,Val = 4565},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--许褚魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1152,Sum = 3312},[2] = {Id = 112,Val = 640,Sum = 1840},[3] = {Id = 113,Val = 28160,Sum = 80960}},Cost = {[1] = {Id = 1401002,Val = 4635},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--许褚魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 4752},[2] = {Id = 112,Val = 800,Sum = 2640},[3] = {Id = 113,Val = 35200,Sum = 116160}},Cost = {[1] = {Id = 1401002,Val = 5760},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--许褚魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1728,Sum = 6480},[2] = {Id = 112,Val = 960,Sum = 3600},[3] = {Id = 113,Val = 42240,Sum = 158400}},Cost = {[1] = {Id = 1401002,Val = 8085},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--许褚魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2016,Sum = 8496},[2] = {Id = 112,Val = 1120,Sum = 4720},[3] = {Id = 113,Val = 49280,Sum = 207680}},Cost = {[1] = {Id = 1401002,Val = 9230},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--许褚魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2304,Sum = 10800},[2] = {Id = 112,Val = 1280,Sum = 6000},[3] = {Id = 113,Val = 56320,Sum = 264000}},Cost = {[1] = {Id = 1401002,Val = 11545},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--许褚魂珠-7 等级-9
+				}
+			},--许褚专属武器魂珠-7
+			[8] = {
+				Id = 200208,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--许褚魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 360},[2] = {Id = 112,Val = 200,Sum = 200},[3] = {Id = 113,Val = 8800,Sum = 8800}},Cost = {[1] = {Id = 1401002,Val = 2430},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--许褚魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 900},[2] = {Id = 112,Val = 300,Sum = 500},[3] = {Id = 113,Val = 13200,Sum = 22000}},Cost = {[1] = {Id = 1401002,Val = 2920},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--许褚魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1620},[2] = {Id = 112,Val = 400,Sum = 900},[3] = {Id = 113,Val = 17600,Sum = 39600}},Cost = {[1] = {Id = 1401002,Val = 4055},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--许褚魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 2700},[2] = {Id = 112,Val = 600,Sum = 1500},[3] = {Id = 113,Val = 26400,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 4670},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--许褚魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 4140},[2] = {Id = 112,Val = 800,Sum = 2300},[3] = {Id = 113,Val = 35200,Sum = 101200}},Cost = {[1] = {Id = 1401002,Val = 5930},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--许褚魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1800,Sum = 5940},[2] = {Id = 112,Val = 1000,Sum = 3300},[3] = {Id = 113,Val = 44000,Sum = 145200}},Cost = {[1] = {Id = 1401002,Val = 7070},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--许褚魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2160,Sum = 8100},[2] = {Id = 112,Val = 1200,Sum = 4500},[3] = {Id = 113,Val = 52800,Sum = 198000}},Cost = {[1] = {Id = 1401002,Val = 9845},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--许褚魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2520,Sum = 10620},[2] = {Id = 112,Val = 1400,Sum = 5900},[3] = {Id = 113,Val = 61600,Sum = 259600}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--许褚魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2880,Sum = 13500},[2] = {Id = 112,Val = 1600,Sum = 7500},[3] = {Id = 113,Val = 70400,Sum = 330000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--许褚魂珠-8 等级-9
+				}
+			}--许褚专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611002,val = 5}},PSkill = 130300211,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611002,val = 5}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611002,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611002,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611002,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611002,val = 20}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611002,val = 20}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611002,val = 20}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611002,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611002,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611002,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611002,val = 50}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611002,val = 60}},Prop = {[1] = {id = 108,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502002,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130300211,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502002,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502002,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502002,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502002,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502002,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502002,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502002,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502002,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502002,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502002,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502002,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502002,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}}
 		}
 	},--许褚专属武器
-	[1501003] = {
+	[1102003] = {
 		CardId = 1102003,
 		Name = _T("狂鲨铁戟"),
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 78390},[2] = {id = 112,val = 30485},[3] = {id = 113,val = 21775}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611003,val = 30}},
-		Icon = "ui_dtex_Equip_1501003",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102003",
+		HunZhu = {
+			[1] = {
+				Id = 200301,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--典韦魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 60,Sum = 60},[2] = {Id = 112,Val = 28,Sum = 28},[3] = {Id = 113,Val = 1100,Sum = 1100}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--典韦魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 156},[2] = {Id = 112,Val = 44,Sum = 72},[3] = {Id = 113,Val = 1760,Sum = 2860}},Cost = {[1] = {Id = 1401002,Val = 185},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--典韦魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 276},[2] = {Id = 112,Val = 55,Sum = 127},[3] = {Id = 113,Val = 2200,Sum = 5060}},Cost = {[1] = {Id = 1401002,Val = 305},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--典韦魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 468},[2] = {Id = 112,Val = 88,Sum = 215},[3] = {Id = 113,Val = 3520,Sum = 8580}},Cost = {[1] = {Id = 1401002,Val = 390},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--典韦魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 264,Sum = 732},[2] = {Id = 112,Val = 121,Sum = 336},[3] = {Id = 113,Val = 4840,Sum = 13420}},Cost = {[1] = {Id = 1401002,Val = 495},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--典韦魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 1068},[2] = {Id = 112,Val = 154,Sum = 490},[3] = {Id = 113,Val = 6160,Sum = 19580}},Cost = {[1] = {Id = 1401002,Val = 590},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--典韦魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1452},[2] = {Id = 112,Val = 176,Sum = 666},[3] = {Id = 113,Val = 7040,Sum = 26620}},Cost = {[1] = {Id = 1401002,Val = 690},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--典韦魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 456,Sum = 1908},[2] = {Id = 112,Val = 209,Sum = 875},[3] = {Id = 113,Val = 8360,Sum = 34980}},Cost = {[1] = {Id = 1401002,Val = 790},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--典韦魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 2412},[2] = {Id = 112,Val = 231,Sum = 1106},[3] = {Id = 113,Val = 9240,Sum = 44220}},Cost = {[1] = {Id = 1401002,Val = 985},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--典韦魂珠-1 等级-9
+				}
+			},--典韦专属武器魂珠-1
+			[2] = {
+				Id = 200302,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--典韦魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 96},[2] = {Id = 112,Val = 44,Sum = 44},[3] = {Id = 113,Val = 1760,Sum = 1760}},Cost = {[1] = {Id = 1401002,Val = 335},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--典韦魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 240},[2] = {Id = 112,Val = 66,Sum = 110},[3] = {Id = 113,Val = 2640,Sum = 4400}},Cost = {[1] = {Id = 1401002,Val = 250},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--典韦魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 432},[2] = {Id = 112,Val = 88,Sum = 198},[3] = {Id = 113,Val = 3520,Sum = 7920}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--典韦魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 720},[2] = {Id = 112,Val = 132,Sum = 330},[3] = {Id = 113,Val = 5280,Sum = 13200}},Cost = {[1] = {Id = 1401002,Val = 535},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--典韦魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1104},[2] = {Id = 112,Val = 176,Sum = 506},[3] = {Id = 113,Val = 7040,Sum = 20240}},Cost = {[1] = {Id = 1401002,Val = 810},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--典韦魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1584},[2] = {Id = 112,Val = 220,Sum = 726},[3] = {Id = 113,Val = 8800,Sum = 29040}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--典韦魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2160},[2] = {Id = 112,Val = 264,Sum = 990},[3] = {Id = 113,Val = 10560,Sum = 39600}},Cost = {[1] = {Id = 1401002,Val = 1345},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--典韦魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 2832},[2] = {Id = 112,Val = 308,Sum = 1298},[3] = {Id = 113,Val = 12320,Sum = 51920}},Cost = {[1] = {Id = 1401002,Val = 1615},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--典韦魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 3600},[2] = {Id = 112,Val = 352,Sum = 1650},[3] = {Id = 113,Val = 14080,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 2155},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--典韦魂珠-2 等级-9
+				}
+			},--典韦专属武器魂珠-2
+			[3] = {
+				Id = 200303,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--典韦魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 120},[2] = {Id = 112,Val = 55,Sum = 55},[3] = {Id = 113,Val = 2200,Sum = 2200}},Cost = {[1] = {Id = 1401002,Val = 685},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--典韦魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 312},[2] = {Id = 112,Val = 88,Sum = 143},[3] = {Id = 113,Val = 3520,Sum = 5720}},Cost = {[1] = {Id = 1401002,Val = 515},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--典韦魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 564},[2] = {Id = 112,Val = 116,Sum = 259},[3] = {Id = 113,Val = 4620,Sum = 10340}},Cost = {[1] = {Id = 1401002,Val = 855},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--典韦魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 948},[2] = {Id = 112,Val = 176,Sum = 435},[3] = {Id = 113,Val = 7040,Sum = 17380}},Cost = {[1] = {Id = 1401002,Val = 820},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--典韦魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 511,Sum = 1459},[2] = {Id = 112,Val = 234,Sum = 669},[3] = {Id = 113,Val = 9372,Sum = 26752}},Cost = {[1] = {Id = 1401002,Val = 1115},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--典韦魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 2107},[2] = {Id = 112,Val = 297,Sum = 966},[3] = {Id = 113,Val = 11880,Sum = 38632}},Cost = {[1] = {Id = 1401002,Val = 1385},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--典韦魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 2875},[2] = {Id = 112,Val = 352,Sum = 1318},[3] = {Id = 113,Val = 14080,Sum = 52712}},Cost = {[1] = {Id = 1401002,Val = 1660},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--典韦魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 3775},[2] = {Id = 112,Val = 407,Sum = 1725},[3] = {Id = 113,Val = 16500,Sum = 69212}},Cost = {[1] = {Id = 1401002,Val = 2215},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--典韦魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1020,Sum = 4795},[2] = {Id = 112,Val = 468,Sum = 2193},[3] = {Id = 113,Val = 18700,Sum = 87912}},Cost = {[1] = {Id = 1401002,Val = 2770},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--典韦魂珠-3 等级-9
+				}
+			},--典韦专属武器魂珠-3
+			[4] = {
+				Id = 200304,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--典韦魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 156,Sum = 156},[2] = {Id = 112,Val = 72,Sum = 72},[3] = {Id = 113,Val = 2860,Sum = 2860}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--典韦魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 396},[2] = {Id = 112,Val = 110,Sum = 182},[3] = {Id = 113,Val = 4400,Sum = 7260}},Cost = {[1] = {Id = 1401002,Val = 835},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--典韦魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 312,Sum = 708},[2] = {Id = 112,Val = 143,Sum = 325},[3] = {Id = 113,Val = 5720,Sum = 12980}},Cost = {[1] = {Id = 1401002,Val = 925},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--典韦魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1188},[2] = {Id = 112,Val = 220,Sum = 545},[3] = {Id = 113,Val = 8800,Sum = 21780}},Cost = {[1] = {Id = 1401002,Val = 1775},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--典韦魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 1836},[2] = {Id = 112,Val = 297,Sum = 842},[3] = {Id = 113,Val = 11880,Sum = 33660}},Cost = {[1] = {Id = 1401002,Val = 1805},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--典韦魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 804,Sum = 2640},[2] = {Id = 112,Val = 424,Sum = 1266},[3] = {Id = 113,Val = 14740,Sum = 48400}},Cost = {[1] = {Id = 1401002,Val = 1795},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--典韦魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 3600},[2] = {Id = 112,Val = 440,Sum = 1706},[3] = {Id = 113,Val = 17600,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 2695},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--典韦魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 4740},[2] = {Id = 112,Val = 523,Sum = 2229},[3] = {Id = 113,Val = 20900,Sum = 86900}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--典韦魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 6060},[2] = {Id = 112,Val = 605,Sum = 2834},[3] = {Id = 113,Val = 24200,Sum = 111100}},Cost = {[1] = {Id = 1401002,Val = 5390},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--典韦魂珠-4 等级-9
+				}
+			},--典韦专属武器魂珠-4
+			[5] = {
+				Id = 200305,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--典韦魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 216},[2] = {Id = 112,Val = 99,Sum = 99},[3] = {Id = 113,Val = 3960,Sum = 3960}},Cost = {[1] = {Id = 1401002,Val = 2315},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--典韦魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 552},[2] = {Id = 112,Val = 154,Sum = 253},[3] = {Id = 113,Val = 6160,Sum = 10120}},Cost = {[1] = {Id = 1401002,Val = 1735},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--典韦魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 444,Sum = 996},[2] = {Id = 112,Val = 204,Sum = 457},[3] = {Id = 113,Val = 8140,Sum = 18260}},Cost = {[1] = {Id = 1401002,Val = 1930},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--典韦魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 1668},[2] = {Id = 112,Val = 308,Sum = 765},[3] = {Id = 113,Val = 12320,Sum = 30580}},Cost = {[1] = {Id = 1401002,Val = 2780},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--典韦魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 2568},[2] = {Id = 112,Val = 413,Sum = 1178},[3] = {Id = 113,Val = 16500,Sum = 47080}},Cost = {[1] = {Id = 1401002,Val = 2820},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--典韦魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 3708},[2] = {Id = 112,Val = 523,Sum = 1701},[3] = {Id = 113,Val = 20900,Sum = 67980}},Cost = {[1] = {Id = 1401002,Val = 4675},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--典韦魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 5148},[2] = {Id = 112,Val = 660,Sum = 2361},[3] = {Id = 113,Val = 26400,Sum = 94380}},Cost = {[1] = {Id = 1401002,Val = 4685},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--典韦魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1560,Sum = 6708},[2] = {Id = 112,Val = 715,Sum = 3076},[3] = {Id = 113,Val = 28600,Sum = 122980}},Cost = {[1] = {Id = 1401002,Val = 6555},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--典韦魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1800,Sum = 8508},[2] = {Id = 112,Val = 825,Sum = 3901},[3] = {Id = 113,Val = 33000,Sum = 155980}},Cost = {[1] = {Id = 1401002,Val = 8430},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--典韦魂珠-5 等级-9
+				}
+			},--典韦专属武器魂珠-5
+			[6] = {
+				Id = 200306,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--典韦魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 300,Sum = 300},[2] = {Id = 112,Val = 138,Sum = 138},[3] = {Id = 113,Val = 5500,Sum = 5500}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--典韦魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 780},[2] = {Id = 112,Val = 220,Sum = 358},[3] = {Id = 113,Val = 8800,Sum = 14300}},Cost = {[1] = {Id = 1401002,Val = 3270},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--典韦魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 1380},[2] = {Id = 112,Val = 275,Sum = 633},[3] = {Id = 113,Val = 11000,Sum = 25300}},Cost = {[1] = {Id = 1401002,Val = 3630},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--典韦魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2340},[2] = {Id = 112,Val = 440,Sum = 1073},[3] = {Id = 113,Val = 17600,Sum = 42900}},Cost = {[1] = {Id = 1401002,Val = 5230},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--典韦魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 3660},[2] = {Id = 112,Val = 605,Sum = 1678},[3] = {Id = 113,Val = 24200,Sum = 67100}},Cost = {[1] = {Id = 1401002,Val = 5310},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--典韦魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 5280},[2] = {Id = 112,Val = 743,Sum = 2421},[3] = {Id = 113,Val = 29700,Sum = 96800}},Cost = {[1] = {Id = 1401002,Val = 7040},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--典韦魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 7200},[2] = {Id = 112,Val = 880,Sum = 3301},[3] = {Id = 113,Val = 35200,Sum = 132000}},Cost = {[1] = {Id = 1401002,Val = 8820},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--典韦魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2280,Sum = 9480},[2] = {Id = 112,Val = 1045,Sum = 4346},[3] = {Id = 113,Val = 41800,Sum = 173800}},Cost = {[1] = {Id = 1401002,Val = 12335},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--典韦魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2640,Sum = 12120},[2] = {Id = 112,Val = 1210,Sum = 5556},[3] = {Id = 113,Val = 48400,Sum = 222200}},Cost = {[1] = {Id = 1401002,Val = 14100},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--典韦魂珠-6 等级-9
+				}
+			},--典韦专属武器魂珠-6
+			[7] = {
+				Id = 200307,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--典韦魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 384},[2] = {Id = 112,Val = 176,Sum = 176},[3] = {Id = 113,Val = 7040,Sum = 7040}},Cost = {[1] = {Id = 1401002,Val = 4280},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--典韦魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 960},[2] = {Id = 112,Val = 264,Sum = 440},[3] = {Id = 113,Val = 10560,Sum = 17600}},Cost = {[1] = {Id = 1401002,Val = 3210},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--典韦魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 1728},[2] = {Id = 112,Val = 352,Sum = 792},[3] = {Id = 113,Val = 14080,Sum = 31680}},Cost = {[1] = {Id = 1401002,Val = 5350},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--典韦魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1152,Sum = 2880},[2] = {Id = 112,Val = 528,Sum = 1320},[3] = {Id = 113,Val = 21120,Sum = 52800}},Cost = {[1] = {Id = 1401002,Val = 6850},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--典韦魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1536,Sum = 4416},[2] = {Id = 112,Val = 704,Sum = 2024},[3] = {Id = 113,Val = 28160,Sum = 80960}},Cost = {[1] = {Id = 1401002,Val = 6955},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--典韦魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 6336},[2] = {Id = 112,Val = 880,Sum = 2904},[3] = {Id = 113,Val = 35200,Sum = 116160}},Cost = {[1] = {Id = 1401002,Val = 8645},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--典韦魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2304,Sum = 8640},[2] = {Id = 112,Val = 1056,Sum = 3960},[3] = {Id = 113,Val = 42240,Sum = 158400}},Cost = {[1] = {Id = 1401002,Val = 12130},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--典韦魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2688,Sum = 11328},[2] = {Id = 112,Val = 1232,Sum = 5192},[3] = {Id = 113,Val = 49280,Sum = 207680}},Cost = {[1] = {Id = 1401002,Val = 13850},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--典韦魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3072,Sum = 14400},[2] = {Id = 112,Val = 1408,Sum = 6600},[3] = {Id = 113,Val = 56320,Sum = 264000}},Cost = {[1] = {Id = 1401002,Val = 17315},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--典韦魂珠-7 等级-9
+				}
+			},--典韦专属武器魂珠-7
+			[8] = {
+				Id = 200308,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--典韦魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 480},[2] = {Id = 112,Val = 220,Sum = 220},[3] = {Id = 113,Val = 8800,Sum = 8800}},Cost = {[1] = {Id = 1401002,Val = 3650},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--典韦魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1200},[2] = {Id = 112,Val = 330,Sum = 550},[3] = {Id = 113,Val = 13200,Sum = 22000}},Cost = {[1] = {Id = 1401002,Val = 4375},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--典韦魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2160},[2] = {Id = 112,Val = 440,Sum = 990},[3] = {Id = 113,Val = 17600,Sum = 39600}},Cost = {[1] = {Id = 1401002,Val = 6080},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--典韦魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 3600},[2] = {Id = 112,Val = 660,Sum = 1650},[3] = {Id = 113,Val = 26400,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 7005},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--典韦魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 5520},[2] = {Id = 112,Val = 880,Sum = 2530},[3] = {Id = 113,Val = 35200,Sum = 101200}},Cost = {[1] = {Id = 1401002,Val = 8890},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--典韦魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 7920},[2] = {Id = 112,Val = 1100,Sum = 3630},[3] = {Id = 113,Val = 44000,Sum = 145200}},Cost = {[1] = {Id = 1401002,Val = 10610},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--典韦魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2880,Sum = 10800},[2] = {Id = 112,Val = 1320,Sum = 4950},[3] = {Id = 113,Val = 52800,Sum = 198000}},Cost = {[1] = {Id = 1401002,Val = 14765},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--典韦魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3360,Sum = 14160},[2] = {Id = 112,Val = 1540,Sum = 6490},[3] = {Id = 113,Val = 61600,Sum = 259600}},Cost = {[1] = {Id = 1401002,Val = 17705},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--典韦魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3840,Sum = 18000},[2] = {Id = 112,Val = 1760,Sum = 8250},[3] = {Id = 113,Val = 70400,Sum = 330000}},Cost = {[1] = {Id = 1401002,Val = 17710},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--典韦魂珠-8 等级-9
+				}
+			}--典韦专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611003,val = 5}},PSkill = 130300311,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611003,val = 5}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611003,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611003,val = 10}},Prop = {[1] = {id = 114,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611003,val = 10}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611003,val = 20}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611003,val = 20}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611003,val = 20}},Prop = {[1] = {id = 104,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611003,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611003,val = 30}},Prop = {[1] = {id = 114,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611003,val = 30}},Prop = {[1] = {id = 104,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611003,val = 50}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611003,val = 60}},Prop = {[1] = {id = 110,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502003,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130300311,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502003,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502003,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502003,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 114,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502003,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502003,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502003,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502003,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502003,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502003,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 114,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502003,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502003,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502003,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 110,Val = 0.14}}}
 		}
 	},--典韦专属武器
-	[1501004] = {
-		CardId = 1102004,
-		Name = _T("天坠灭星"),
-		Quality = 3,
-		Prop = {[1] = {id = 111,val = 83314},[2] = {id = 112,val = 11361},[3] = {id = 113,val = 18935}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611004,val = 30}},
-		Icon = "ui_dtex_Equip_1501004",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
-		},
-		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611004,val = 5}},PSkill = 130300411,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611004,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611004,val = 10}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611004,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611004,val = 10}},Prop = {[1] = {id = 105,val = 0.21}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611004,val = 20}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611004,val = 20}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611004,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611004,val = 30}},Prop = {[1] = {id = 104,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611004,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611004,val = 30}},Prop = {[1] = {id = 105,val = 0.29}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611004,val = 50}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611004,val = 60}},Prop = {[1] = {id = 110,val = 0.14}}}
-		}
-	},--唐流雨专属武器
-	[1501005] = {
+	[1102005] = {
 		CardId = 1102005,
 		Name = _T("清风化煞"),
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 21775},[2] = {id = 112,val = 43550},[3] = {id = 113,val = 65325}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611005,val = 30}},
-		Icon = "ui_dtex_Equip_1501005",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102005",
+		HunZhu = {
+			[1] = {
+				Id = 200501,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--李轩辕魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 45,Sum = 45},[2] = {Id = 112,Val = 25,Sum = 25},[3] = {Id = 113,Val = 1100,Sum = 1100}},Cost = {[1] = {Id = 1401002,Val = 80},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--李轩辕魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 72,Sum = 117},[2] = {Id = 112,Val = 40,Sum = 65},[3] = {Id = 113,Val = 1760,Sum = 2860}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--李轩辕魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 90,Sum = 207},[2] = {Id = 112,Val = 50,Sum = 115},[3] = {Id = 113,Val = 2200,Sum = 5060}},Cost = {[1] = {Id = 1401002,Val = 205},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--李轩辕魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 351},[2] = {Id = 112,Val = 80,Sum = 195},[3] = {Id = 113,Val = 3520,Sum = 8580}},Cost = {[1] = {Id = 1401002,Val = 260},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--李轩辕魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 198,Sum = 549},[2] = {Id = 112,Val = 110,Sum = 305},[3] = {Id = 113,Val = 4840,Sum = 13420}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--李轩辕魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 801},[2] = {Id = 112,Val = 140,Sum = 445},[3] = {Id = 113,Val = 6160,Sum = 19580}},Cost = {[1] = {Id = 1401002,Val = 395},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--李轩辕魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 1089},[2] = {Id = 112,Val = 160,Sum = 605},[3] = {Id = 113,Val = 7040,Sum = 26620}},Cost = {[1] = {Id = 1401002,Val = 460},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--李轩辕魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 342,Sum = 1431},[2] = {Id = 112,Val = 190,Sum = 795},[3] = {Id = 113,Val = 8360,Sum = 34980}},Cost = {[1] = {Id = 1401002,Val = 525},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--李轩辕魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 378,Sum = 1809},[2] = {Id = 112,Val = 210,Sum = 1005},[3] = {Id = 113,Val = 9240,Sum = 44220}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--李轩辕魂珠-1 等级-9
+				}
+			},--李轩辕专属武器魂珠-1
+			[2] = {
+				Id = 200502,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--李轩辕魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 72,Sum = 72},[2] = {Id = 112,Val = 40,Sum = 40},[3] = {Id = 113,Val = 1760,Sum = 1760}},Cost = {[1] = {Id = 1401002,Val = 220},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--李轩辕魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 108,Sum = 180},[2] = {Id = 112,Val = 60,Sum = 100},[3] = {Id = 113,Val = 2640,Sum = 4400}},Cost = {[1] = {Id = 1401002,Val = 165},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--李轩辕魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 324},[2] = {Id = 112,Val = 80,Sum = 180},[3] = {Id = 113,Val = 3520,Sum = 7920}},Cost = {[1] = {Id = 1401002,Val = 370},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--李轩辕魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 540},[2] = {Id = 112,Val = 120,Sum = 300},[3] = {Id = 113,Val = 5280,Sum = 13200}},Cost = {[1] = {Id = 1401002,Val = 355},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--李轩辕魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 828},[2] = {Id = 112,Val = 160,Sum = 460},[3] = {Id = 113,Val = 7040,Sum = 20240}},Cost = {[1] = {Id = 1401002,Val = 540},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--李轩辕魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 1188},[2] = {Id = 112,Val = 200,Sum = 660},[3] = {Id = 113,Val = 8800,Sum = 29040}},Cost = {[1] = {Id = 1401002,Val = 715},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--李轩辕魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 1620},[2] = {Id = 112,Val = 240,Sum = 900},[3] = {Id = 113,Val = 10560,Sum = 39600}},Cost = {[1] = {Id = 1401002,Val = 900},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--李轩辕魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 2124},[2] = {Id = 112,Val = 280,Sum = 1180},[3] = {Id = 113,Val = 12320,Sum = 51920}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--李轩辕魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2700},[2] = {Id = 112,Val = 320,Sum = 1500},[3] = {Id = 113,Val = 14080,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--李轩辕魂珠-2 等级-9
+				}
+			},--李轩辕专属武器魂珠-2
+			[3] = {
+				Id = 200503,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--李轩辕魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 90,Sum = 90},[2] = {Id = 112,Val = 50,Sum = 50},[3] = {Id = 113,Val = 2200,Sum = 2200}},Cost = {[1] = {Id = 1401002,Val = 455},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--李轩辕魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 234},[2] = {Id = 112,Val = 80,Sum = 130},[3] = {Id = 113,Val = 3520,Sum = 5720}},Cost = {[1] = {Id = 1401002,Val = 340},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--李轩辕魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 189,Sum = 423},[2] = {Id = 112,Val = 105,Sum = 235},[3] = {Id = 113,Val = 4620,Sum = 10340}},Cost = {[1] = {Id = 1401002,Val = 570},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--李轩辕魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 711},[2] = {Id = 112,Val = 160,Sum = 395},[3] = {Id = 113,Val = 7040,Sum = 17380}},Cost = {[1] = {Id = 1401002,Val = 550},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--李轩辕魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 383,Sum = 1094},[2] = {Id = 112,Val = 213,Sum = 608},[3] = {Id = 113,Val = 9372,Sum = 26752}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--李轩辕魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 486,Sum = 1580},[2] = {Id = 112,Val = 270,Sum = 878},[3] = {Id = 113,Val = 11880,Sum = 38632}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--李轩辕魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2156},[2] = {Id = 112,Val = 320,Sum = 1198},[3] = {Id = 113,Val = 14080,Sum = 52712}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--李轩辕魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 675,Sum = 2831},[2] = {Id = 112,Val = 370,Sum = 1568},[3] = {Id = 113,Val = 16500,Sum = 69212}},Cost = {[1] = {Id = 1401002,Val = 1475},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--李轩辕魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 765,Sum = 3596},[2] = {Id = 112,Val = 425,Sum = 1993},[3] = {Id = 113,Val = 18700,Sum = 87912}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--李轩辕魂珠-3 等级-9
+				}
+			},--李轩辕专属武器魂珠-3
+			[4] = {
+				Id = 200504,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--李轩辕魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 117,Sum = 117},[2] = {Id = 112,Val = 65,Sum = 65},[3] = {Id = 113,Val = 2860,Sum = 2860}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--李轩辕魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 180,Sum = 297},[2] = {Id = 112,Val = 100,Sum = 165},[3] = {Id = 113,Val = 4400,Sum = 7260}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--李轩辕魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 234,Sum = 531},[2] = {Id = 112,Val = 130,Sum = 295},[3] = {Id = 113,Val = 5720,Sum = 12980}},Cost = {[1] = {Id = 1401002,Val = 615},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--李轩辕魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 891},[2] = {Id = 112,Val = 200,Sum = 495},[3] = {Id = 113,Val = 8800,Sum = 21780}},Cost = {[1] = {Id = 1401002,Val = 1185},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--李轩辕魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 486,Sum = 1377},[2] = {Id = 112,Val = 270,Sum = 765},[3] = {Id = 113,Val = 11880,Sum = 33660}},Cost = {[1] = {Id = 1401002,Val = 1205},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--李轩辕魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 603,Sum = 1980},[2] = {Id = 112,Val = 385,Sum = 1150},[3] = {Id = 113,Val = 14740,Sum = 48400}},Cost = {[1] = {Id = 1401002,Val = 1195},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--李轩辕魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 2700},[2] = {Id = 112,Val = 400,Sum = 1550},[3] = {Id = 113,Val = 17600,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 1800},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--李轩辕魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 855,Sum = 3555},[2] = {Id = 112,Val = 475,Sum = 2025},[3] = {Id = 113,Val = 20900,Sum = 86900}},Cost = {[1] = {Id = 1401002,Val = 2395},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--李轩辕魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 990,Sum = 4545},[2] = {Id = 112,Val = 550,Sum = 2575},[3] = {Id = 113,Val = 24200,Sum = 111100}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--李轩辕魂珠-4 等级-9
+				}
+			},--李轩辕专属武器魂珠-4
+			[5] = {
+				Id = 200505,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--李轩辕魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 162,Sum = 162},[2] = {Id = 112,Val = 90,Sum = 90},[3] = {Id = 113,Val = 3960,Sum = 3960}},Cost = {[1] = {Id = 1401002,Val = 1545},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--李轩辕魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 414},[2] = {Id = 112,Val = 140,Sum = 230},[3] = {Id = 113,Val = 6160,Sum = 10120}},Cost = {[1] = {Id = 1401002,Val = 1155},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--李轩辕魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 333,Sum = 747},[2] = {Id = 112,Val = 185,Sum = 415},[3] = {Id = 113,Val = 8140,Sum = 18260}},Cost = {[1] = {Id = 1401002,Val = 1285},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--李轩辕魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 1251},[2] = {Id = 112,Val = 280,Sum = 695},[3] = {Id = 113,Val = 12320,Sum = 30580}},Cost = {[1] = {Id = 1401002,Val = 1850},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--李轩辕魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 675,Sum = 1926},[2] = {Id = 112,Val = 375,Sum = 1070},[3] = {Id = 113,Val = 16500,Sum = 47080}},Cost = {[1] = {Id = 1401002,Val = 1880},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--李轩辕魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 855,Sum = 2781},[2] = {Id = 112,Val = 475,Sum = 1545},[3] = {Id = 113,Val = 20900,Sum = 67980}},Cost = {[1] = {Id = 1401002,Val = 3115},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--李轩辕魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 3861},[2] = {Id = 112,Val = 600,Sum = 2145},[3] = {Id = 113,Val = 26400,Sum = 94380}},Cost = {[1] = {Id = 1401002,Val = 3125},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--李轩辕魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1170,Sum = 5031},[2] = {Id = 112,Val = 650,Sum = 2795},[3] = {Id = 113,Val = 28600,Sum = 122980}},Cost = {[1] = {Id = 1401002,Val = 4370},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--李轩辕魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1350,Sum = 6381},[2] = {Id = 112,Val = 750,Sum = 3545},[3] = {Id = 113,Val = 33000,Sum = 155980}},Cost = {[1] = {Id = 1401002,Val = 5620},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--李轩辕魂珠-5 等级-9
+				}
+			},--李轩辕专属武器魂珠-5
+			[6] = {
+				Id = 200506,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--李轩辕魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 225,Sum = 225},[2] = {Id = 112,Val = 125,Sum = 125},[3] = {Id = 113,Val = 5500,Sum = 5500}},Cost = {[1] = {Id = 1401002,Val = 1450},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--李轩辕魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 585},[2] = {Id = 112,Val = 200,Sum = 325},[3] = {Id = 113,Val = 8800,Sum = 14300}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--李轩辕魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 450,Sum = 1035},[2] = {Id = 112,Val = 250,Sum = 575},[3] = {Id = 113,Val = 11000,Sum = 25300}},Cost = {[1] = {Id = 1401002,Val = 2420},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--李轩辕魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1755},[2] = {Id = 112,Val = 400,Sum = 975},[3] = {Id = 113,Val = 17600,Sum = 42900}},Cost = {[1] = {Id = 1401002,Val = 3485},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--李轩辕魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 990,Sum = 2745},[2] = {Id = 112,Val = 550,Sum = 1525},[3] = {Id = 113,Val = 24200,Sum = 67100}},Cost = {[1] = {Id = 1401002,Val = 3540},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--李轩辕魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1215,Sum = 3960},[2] = {Id = 112,Val = 675,Sum = 2200},[3] = {Id = 113,Val = 29700,Sum = 96800}},Cost = {[1] = {Id = 1401002,Val = 4690},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--李轩辕魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 5400},[2] = {Id = 112,Val = 800,Sum = 3000},[3] = {Id = 113,Val = 35200,Sum = 132000}},Cost = {[1] = {Id = 1401002,Val = 5880},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--李轩辕魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1710,Sum = 7110},[2] = {Id = 112,Val = 950,Sum = 3950},[3] = {Id = 113,Val = 41800,Sum = 173800}},Cost = {[1] = {Id = 1401002,Val = 8225},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--李轩辕魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1980,Sum = 9090},[2] = {Id = 112,Val = 1100,Sum = 5050},[3] = {Id = 113,Val = 48400,Sum = 222200}},Cost = {[1] = {Id = 1401002,Val = 9400},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--李轩辕魂珠-6 等级-9
+				}
+			},--李轩辕专属武器魂珠-6
+			[7] = {
+				Id = 200507,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--李轩辕魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 288},[2] = {Id = 112,Val = 160,Sum = 160},[3] = {Id = 113,Val = 7040,Sum = 7040}},Cost = {[1] = {Id = 1401002,Val = 2855},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--李轩辕魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 720},[2] = {Id = 112,Val = 240,Sum = 400},[3] = {Id = 113,Val = 10560,Sum = 17600}},Cost = {[1] = {Id = 1401002,Val = 2140},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--李轩辕魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 1296},[2] = {Id = 112,Val = 320,Sum = 720},[3] = {Id = 113,Val = 14080,Sum = 31680}},Cost = {[1] = {Id = 1401002,Val = 3565},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--李轩辕魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 864,Sum = 2160},[2] = {Id = 112,Val = 480,Sum = 1200},[3] = {Id = 113,Val = 21120,Sum = 52800}},Cost = {[1] = {Id = 1401002,Val = 4565},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--李轩辕魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1152,Sum = 3312},[2] = {Id = 112,Val = 640,Sum = 1840},[3] = {Id = 113,Val = 28160,Sum = 80960}},Cost = {[1] = {Id = 1401002,Val = 4635},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--李轩辕魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 4752},[2] = {Id = 112,Val = 800,Sum = 2640},[3] = {Id = 113,Val = 35200,Sum = 116160}},Cost = {[1] = {Id = 1401002,Val = 5760},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--李轩辕魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1728,Sum = 6480},[2] = {Id = 112,Val = 960,Sum = 3600},[3] = {Id = 113,Val = 42240,Sum = 158400}},Cost = {[1] = {Id = 1401002,Val = 8085},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--李轩辕魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2016,Sum = 8496},[2] = {Id = 112,Val = 1120,Sum = 4720},[3] = {Id = 113,Val = 49280,Sum = 207680}},Cost = {[1] = {Id = 1401002,Val = 9230},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--李轩辕魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2304,Sum = 10800},[2] = {Id = 112,Val = 1280,Sum = 6000},[3] = {Id = 113,Val = 56320,Sum = 264000}},Cost = {[1] = {Id = 1401002,Val = 11545},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--李轩辕魂珠-7 等级-9
+				}
+			},--李轩辕专属武器魂珠-7
+			[8] = {
+				Id = 200508,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--李轩辕魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 360},[2] = {Id = 112,Val = 200,Sum = 200},[3] = {Id = 113,Val = 8800,Sum = 8800}},Cost = {[1] = {Id = 1401002,Val = 2430},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--李轩辕魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 900},[2] = {Id = 112,Val = 300,Sum = 500},[3] = {Id = 113,Val = 13200,Sum = 22000}},Cost = {[1] = {Id = 1401002,Val = 2920},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--李轩辕魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1620},[2] = {Id = 112,Val = 400,Sum = 900},[3] = {Id = 113,Val = 17600,Sum = 39600}},Cost = {[1] = {Id = 1401002,Val = 4055},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--李轩辕魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 2700},[2] = {Id = 112,Val = 600,Sum = 1500},[3] = {Id = 113,Val = 26400,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 4670},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--李轩辕魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 4140},[2] = {Id = 112,Val = 800,Sum = 2300},[3] = {Id = 113,Val = 35200,Sum = 101200}},Cost = {[1] = {Id = 1401002,Val = 5930},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--李轩辕魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1800,Sum = 5940},[2] = {Id = 112,Val = 1000,Sum = 3300},[3] = {Id = 113,Val = 44000,Sum = 145200}},Cost = {[1] = {Id = 1401002,Val = 7070},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--李轩辕魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2160,Sum = 8100},[2] = {Id = 112,Val = 1200,Sum = 4500},[3] = {Id = 113,Val = 52800,Sum = 198000}},Cost = {[1] = {Id = 1401002,Val = 9845},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--李轩辕魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2520,Sum = 10620},[2] = {Id = 112,Val = 1400,Sum = 5900},[3] = {Id = 113,Val = 61600,Sum = 259600}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--李轩辕魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2880,Sum = 13500},[2] = {Id = 112,Val = 1600,Sum = 7500},[3] = {Id = 113,Val = 70400,Sum = 330000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--李轩辕魂珠-8 等级-9
+				}
+			}--李轩辕专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611005,val = 5}},PSkill = 130300511,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611005,val = 5}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611005,val = 10}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611005,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611005,val = 10}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611005,val = 20}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611005,val = 20}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611005,val = 20}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611005,val = 30}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611005,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611005,val = 30}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611005,val = 50}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611005,val = 60}},Prop = {[1] = {id = 109,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502005,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130300511,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502005,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502005,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502005,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502005,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502005,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502005,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502005,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502005,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502005,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502005,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502005,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502005,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 109,Val = 0.14}}}
 		}
 	},--李轩辕专属武器
-	[1501006] = {
+	[1102006] = {
 		CardId = 1102006,
 		Name = _T("破军"),
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 85207},[2] = {id = 112,val = 56805},[3] = {id = 113,val = 28402}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611006,val = 30}},
-		Icon = "ui_dtex_Equip_1501006",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102006",
+		HunZhu = {
+			[1] = {
+				Id = 200601,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--项羽魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 68,Sum = 68},[2] = {Id = 112,Val = 38,Sum = 38},[3] = {Id = 113,Val = 1350,Sum = 1350}},Cost = {[1] = {Id = 1401002,Val = 160},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--项羽魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 108,Sum = 176},[2] = {Id = 112,Val = 60,Sum = 98},[3] = {Id = 113,Val = 2160,Sum = 3510}},Cost = {[1] = {Id = 1401002,Val = 245},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--项羽魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 135,Sum = 311},[2] = {Id = 112,Val = 75,Sum = 173},[3] = {Id = 113,Val = 2700,Sum = 6210}},Cost = {[1] = {Id = 1401002,Val = 405},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--项羽魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 527},[2] = {Id = 112,Val = 120,Sum = 293},[3] = {Id = 113,Val = 4320,Sum = 10530}},Cost = {[1] = {Id = 1401002,Val = 520},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--项羽魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 297,Sum = 824},[2] = {Id = 112,Val = 165,Sum = 458},[3] = {Id = 113,Val = 5940,Sum = 16470}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--项羽魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 378,Sum = 1202},[2] = {Id = 112,Val = 210,Sum = 668},[3] = {Id = 113,Val = 7560,Sum = 24030}},Cost = {[1] = {Id = 1401002,Val = 790},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--项羽魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 1634},[2] = {Id = 112,Val = 240,Sum = 908},[3] = {Id = 113,Val = 8640,Sum = 32670}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--项羽魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 513,Sum = 2147},[2] = {Id = 112,Val = 285,Sum = 1193},[3] = {Id = 113,Val = 10260,Sum = 42930}},Cost = {[1] = {Id = 1401002,Val = 1055},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--项羽魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 567,Sum = 2714},[2] = {Id = 112,Val = 315,Sum = 1508},[3] = {Id = 113,Val = 11340,Sum = 54270}},Cost = {[1] = {Id = 1401002,Val = 1315},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--项羽魂珠-1 等级-9
+				}
+			},--项羽专属武器魂珠-1
+			[2] = {
+				Id = 200602,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--项羽魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 108,Sum = 108},[2] = {Id = 112,Val = 60,Sum = 60},[3] = {Id = 113,Val = 2160,Sum = 2160}},Cost = {[1] = {Id = 1401002,Val = 445},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--项羽魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 162,Sum = 270},[2] = {Id = 112,Val = 90,Sum = 150},[3] = {Id = 113,Val = 3240,Sum = 5400}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--项羽魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 486},[2] = {Id = 112,Val = 120,Sum = 270},[3] = {Id = 113,Val = 4320,Sum = 9720}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--项羽魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 324,Sum = 810},[2] = {Id = 112,Val = 180,Sum = 450},[3] = {Id = 113,Val = 6480,Sum = 16200}},Cost = {[1] = {Id = 1401002,Val = 710},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--项羽魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 1242},[2] = {Id = 112,Val = 240,Sum = 690},[3] = {Id = 113,Val = 8640,Sum = 24840}},Cost = {[1] = {Id = 1401002,Val = 1080},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--项羽魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 1782},[2] = {Id = 112,Val = 300,Sum = 990},[3] = {Id = 113,Val = 10800,Sum = 35640}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--项羽魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 2430},[2] = {Id = 112,Val = 360,Sum = 1350},[3] = {Id = 113,Val = 12960,Sum = 48600}},Cost = {[1] = {Id = 1401002,Val = 1795},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--项羽魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 756,Sum = 3186},[2] = {Id = 112,Val = 420,Sum = 1770},[3] = {Id = 113,Val = 15120,Sum = 63720}},Cost = {[1] = {Id = 1401002,Val = 2150},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--项羽魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 864,Sum = 4050},[2] = {Id = 112,Val = 480,Sum = 2250},[3] = {Id = 113,Val = 17280,Sum = 81000}},Cost = {[1] = {Id = 1401002,Val = 2870},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--项羽魂珠-2 等级-9
+				}
+			},--项羽专属武器魂珠-2
+			[3] = {
+				Id = 200603,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--项羽魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 135,Sum = 135},[2] = {Id = 112,Val = 75,Sum = 75},[3] = {Id = 113,Val = 2700,Sum = 2700}},Cost = {[1] = {Id = 1401002,Val = 910},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--项羽魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 351},[2] = {Id = 112,Val = 120,Sum = 195},[3] = {Id = 113,Val = 4320,Sum = 7020}},Cost = {[1] = {Id = 1401002,Val = 685},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--项羽魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 284,Sum = 635},[2] = {Id = 112,Val = 158,Sum = 353},[3] = {Id = 113,Val = 5670,Sum = 12690}},Cost = {[1] = {Id = 1401002,Val = 1140},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--项羽魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 1067},[2] = {Id = 112,Val = 240,Sum = 593},[3] = {Id = 113,Val = 8640,Sum = 21330}},Cost = {[1] = {Id = 1401002,Val = 1095},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--项羽魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 575,Sum = 1642},[2] = {Id = 112,Val = 320,Sum = 913},[3] = {Id = 113,Val = 11502,Sum = 32832}},Cost = {[1] = {Id = 1401002,Val = 1485},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--项羽魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 729,Sum = 2371},[2] = {Id = 112,Val = 405,Sum = 1318},[3] = {Id = 113,Val = 14580,Sum = 47412}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--项羽魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 864,Sum = 3235},[2] = {Id = 112,Val = 480,Sum = 1798},[3] = {Id = 113,Val = 17280,Sum = 64692}},Cost = {[1] = {Id = 1401002,Val = 2215},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--项羽魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1013,Sum = 4248},[2] = {Id = 112,Val = 555,Sum = 2353},[3] = {Id = 113,Val = 20250,Sum = 84942}},Cost = {[1] = {Id = 1401002,Val = 2955},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--项羽魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1148,Sum = 5396},[2] = {Id = 112,Val = 638,Sum = 2991},[3] = {Id = 113,Val = 22950,Sum = 107892}},Cost = {[1] = {Id = 1401002,Val = 3695},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--项羽魂珠-3 等级-9
+				}
+			},--项羽专属武器魂珠-3
+			[4] = {
+				Id = 200604,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--项羽魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 176},[2] = {Id = 112,Val = 98,Sum = 98},[3] = {Id = 113,Val = 3510,Sum = 3510}},Cost = {[1] = {Id = 1401002,Val = 1480},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--项羽魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 270,Sum = 446},[2] = {Id = 112,Val = 150,Sum = 248},[3] = {Id = 113,Val = 5400,Sum = 8910}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--项羽魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 351,Sum = 797},[2] = {Id = 112,Val = 195,Sum = 443},[3] = {Id = 113,Val = 7020,Sum = 15930}},Cost = {[1] = {Id = 1401002,Val = 1235},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--项羽魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 1337},[2] = {Id = 112,Val = 300,Sum = 743},[3] = {Id = 113,Val = 10800,Sum = 26730}},Cost = {[1] = {Id = 1401002,Val = 2370},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--项羽魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 729,Sum = 2066},[2] = {Id = 112,Val = 405,Sum = 1148},[3] = {Id = 113,Val = 14580,Sum = 41310}},Cost = {[1] = {Id = 1401002,Val = 2405},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--项羽魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 905,Sum = 2971},[2] = {Id = 112,Val = 578,Sum = 1726},[3] = {Id = 113,Val = 18090,Sum = 59400}},Cost = {[1] = {Id = 1401002,Val = 2390},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--项羽魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 4051},[2] = {Id = 112,Val = 600,Sum = 2326},[3] = {Id = 113,Val = 21600,Sum = 81000}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--项羽魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1283,Sum = 5334},[2] = {Id = 112,Val = 713,Sum = 3039},[3] = {Id = 113,Val = 25650,Sum = 106650}},Cost = {[1] = {Id = 1401002,Val = 4790},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--项羽魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1485,Sum = 6819},[2] = {Id = 112,Val = 825,Sum = 3864},[3] = {Id = 113,Val = 29700,Sum = 136350}},Cost = {[1] = {Id = 1401002,Val = 7190},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--项羽魂珠-4 等级-9
+				}
+			},--项羽专属武器魂珠-4
+			[5] = {
+				Id = 200605,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--项羽魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 243,Sum = 243},[2] = {Id = 112,Val = 135,Sum = 135},[3] = {Id = 113,Val = 4860,Sum = 4860}},Cost = {[1] = {Id = 1401002,Val = 3085},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--项羽魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 378,Sum = 621},[2] = {Id = 112,Val = 210,Sum = 345},[3] = {Id = 113,Val = 7560,Sum = 12420}},Cost = {[1] = {Id = 1401002,Val = 2315},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--项羽魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 500,Sum = 1121},[2] = {Id = 112,Val = 278,Sum = 623},[3] = {Id = 113,Val = 9990,Sum = 22410}},Cost = {[1] = {Id = 1401002,Val = 2570},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--项羽魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 756,Sum = 1877},[2] = {Id = 112,Val = 420,Sum = 1043},[3] = {Id = 113,Val = 15120,Sum = 37530}},Cost = {[1] = {Id = 1401002,Val = 3705},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--项羽魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1013,Sum = 2890},[2] = {Id = 112,Val = 563,Sum = 1606},[3] = {Id = 113,Val = 20250,Sum = 57780}},Cost = {[1] = {Id = 1401002,Val = 3760},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--项羽魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1283,Sum = 4173},[2] = {Id = 112,Val = 713,Sum = 2319},[3] = {Id = 113,Val = 25650,Sum = 83430}},Cost = {[1] = {Id = 1401002,Val = 6230},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--项羽魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 5793},[2] = {Id = 112,Val = 900,Sum = 3219},[3] = {Id = 113,Val = 32400,Sum = 115830}},Cost = {[1] = {Id = 1401002,Val = 6245},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--项羽魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1755,Sum = 7548},[2] = {Id = 112,Val = 975,Sum = 4194},[3] = {Id = 113,Val = 35100,Sum = 150930}},Cost = {[1] = {Id = 1401002,Val = 8740},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--项羽魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2025,Sum = 9573},[2] = {Id = 112,Val = 1125,Sum = 5319},[3] = {Id = 113,Val = 40500,Sum = 191430}},Cost = {[1] = {Id = 1401002,Val = 11240},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--项羽魂珠-5 等级-9
+				}
+			},--项羽专属武器魂珠-5
+			[6] = {
+				Id = 200606,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--项羽魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 338,Sum = 338},[2] = {Id = 112,Val = 188,Sum = 188},[3] = {Id = 113,Val = 6750,Sum = 6750}},Cost = {[1] = {Id = 1401002,Val = 2905},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--项羽魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 878},[2] = {Id = 112,Val = 300,Sum = 488},[3] = {Id = 113,Val = 10800,Sum = 17550}},Cost = {[1] = {Id = 1401002,Val = 4360},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--项羽魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 675,Sum = 1553},[2] = {Id = 112,Val = 375,Sum = 863},[3] = {Id = 113,Val = 13500,Sum = 31050}},Cost = {[1] = {Id = 1401002,Val = 4840},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--项羽魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 2633},[2] = {Id = 112,Val = 600,Sum = 1463},[3] = {Id = 113,Val = 21600,Sum = 52650}},Cost = {[1] = {Id = 1401002,Val = 6970},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--项羽魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1485,Sum = 4118},[2] = {Id = 112,Val = 825,Sum = 2288},[3] = {Id = 113,Val = 29700,Sum = 82350}},Cost = {[1] = {Id = 1401002,Val = 7080},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--项羽魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1823,Sum = 5941},[2] = {Id = 112,Val = 1013,Sum = 3301},[3] = {Id = 113,Val = 36450,Sum = 118800}},Cost = {[1] = {Id = 1401002,Val = 9385},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--项羽魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2160,Sum = 8101},[2] = {Id = 112,Val = 1200,Sum = 4501},[3] = {Id = 113,Val = 43200,Sum = 162000}},Cost = {[1] = {Id = 1401002,Val = 11760},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--项羽魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2565,Sum = 10666},[2] = {Id = 112,Val = 1425,Sum = 5926},[3] = {Id = 113,Val = 51300,Sum = 213300}},Cost = {[1] = {Id = 1401002,Val = 16445},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--项羽魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2970,Sum = 13636},[2] = {Id = 112,Val = 1650,Sum = 7576},[3] = {Id = 113,Val = 59400,Sum = 272700}},Cost = {[1] = {Id = 1401002,Val = 18800},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--项羽魂珠-6 等级-9
+				}
+			},--项羽专属武器魂珠-6
+			[7] = {
+				Id = 200607,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--项羽魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 432},[2] = {Id = 112,Val = 240,Sum = 240},[3] = {Id = 113,Val = 8640,Sum = 8640}},Cost = {[1] = {Id = 1401002,Val = 5710},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--项羽魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 1080},[2] = {Id = 112,Val = 360,Sum = 600},[3] = {Id = 113,Val = 12960,Sum = 21600}},Cost = {[1] = {Id = 1401002,Val = 4280},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--项羽魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 864,Sum = 1944},[2] = {Id = 112,Val = 480,Sum = 1080},[3] = {Id = 113,Val = 17280,Sum = 38880}},Cost = {[1] = {Id = 1401002,Val = 7135},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--项羽魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1296,Sum = 3240},[2] = {Id = 112,Val = 720,Sum = 1800},[3] = {Id = 113,Val = 25920,Sum = 64800}},Cost = {[1] = {Id = 1401002,Val = 9130},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--项羽魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1728,Sum = 4968},[2] = {Id = 112,Val = 960,Sum = 2760},[3] = {Id = 113,Val = 34560,Sum = 99360}},Cost = {[1] = {Id = 1401002,Val = 9275},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--项羽魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2160,Sum = 7128},[2] = {Id = 112,Val = 1200,Sum = 3960},[3] = {Id = 113,Val = 43200,Sum = 142560}},Cost = {[1] = {Id = 1401002,Val = 11525},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--项羽魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2592,Sum = 9720},[2] = {Id = 112,Val = 1440,Sum = 5400},[3] = {Id = 113,Val = 51840,Sum = 194400}},Cost = {[1] = {Id = 1401002,Val = 16170},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--项羽魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3024,Sum = 12744},[2] = {Id = 112,Val = 1680,Sum = 7080},[3] = {Id = 113,Val = 60480,Sum = 254880}},Cost = {[1] = {Id = 1401002,Val = 18465},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--项羽魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3456,Sum = 16200},[2] = {Id = 112,Val = 1920,Sum = 9000},[3] = {Id = 113,Val = 69120,Sum = 324000}},Cost = {[1] = {Id = 1401002,Val = 23090},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--项羽魂珠-7 等级-9
+				}
+			},--项羽专属武器魂珠-7
+			[8] = {
+				Id = 200608,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--项羽魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 540},[2] = {Id = 112,Val = 300,Sum = 300},[3] = {Id = 113,Val = 10800,Sum = 10800}},Cost = {[1] = {Id = 1401002,Val = 4865},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--项羽魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 810,Sum = 1350},[2] = {Id = 112,Val = 450,Sum = 750},[3] = {Id = 113,Val = 16200,Sum = 27000}},Cost = {[1] = {Id = 1401002,Val = 5835},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--项羽魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 2430},[2] = {Id = 112,Val = 600,Sum = 1350},[3] = {Id = 113,Val = 21600,Sum = 48600}},Cost = {[1] = {Id = 1401002,Val = 8105},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--项羽魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 4050},[2] = {Id = 112,Val = 900,Sum = 2250},[3] = {Id = 113,Val = 32400,Sum = 81000}},Cost = {[1] = {Id = 1401002,Val = 9340},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--项羽魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 2160,Sum = 6210},[2] = {Id = 112,Val = 1200,Sum = 3450},[3] = {Id = 113,Val = 43200,Sum = 124200}},Cost = {[1] = {Id = 1401002,Val = 11855},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--项羽魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2700,Sum = 8910},[2] = {Id = 112,Val = 1500,Sum = 4950},[3] = {Id = 113,Val = 54000,Sum = 178200}},Cost = {[1] = {Id = 1401002,Val = 14145},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--项羽魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 3240,Sum = 12150},[2] = {Id = 112,Val = 1800,Sum = 6750},[3] = {Id = 113,Val = 64800,Sum = 243000}},Cost = {[1] = {Id = 1401002,Val = 19690},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--项羽魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3780,Sum = 15930},[2] = {Id = 112,Val = 2100,Sum = 8850},[3] = {Id = 113,Val = 75600,Sum = 318600}},Cost = {[1] = {Id = 1401002,Val = 23605},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--项羽魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 4320,Sum = 20250},[2] = {Id = 112,Val = 2400,Sum = 11250},[3] = {Id = 113,Val = 86400,Sum = 405000}},Cost = {[1] = {Id = 1401002,Val = 23615},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--项羽魂珠-8 等级-9
+				}
+			}--项羽专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611006,val = 5}},PSkill = 130300611,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611006,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611006,val = 10}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611006,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611006,val = 10}},Prop = {[1] = {id = 105,val = 0.21}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611006,val = 20}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611006,val = 20}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611006,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611006,val = 30}},Prop = {[1] = {id = 104,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611006,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611006,val = 30}},Prop = {[1] = {id = 105,val = 0.29}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611006,val = 50}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611006,val = 60}},Prop = {[1] = {id = 104,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502006,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130300611,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502006,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502006,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502006,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502006,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 105,Val = 0.21}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502006,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502006,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502006,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502006,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502006,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502006,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 105,Val = 0.29}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502006,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502006,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 104,Val = 0.14}}}
 		}
 	},--项羽专属武器
-	[1501007] = {
+	[1102007] = {
 		CardId = 1102007,
 		Name = _T("阿尔法拉"),
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 68923},[2] = {id = 112,val = 39384},[3] = {id = 113,val = 39384}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611007,val = 30}},
-		Icon = "ui_dtex_Equip_1501007",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102007",
+		HunZhu = {
+			[1] = {
+				Id = 200701,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--天使缇娜魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 60,Sum = 60},[2] = {Id = 112,Val = 28,Sum = 28},[3] = {Id = 113,Val = 1100,Sum = 1100}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--天使缇娜魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 156},[2] = {Id = 112,Val = 44,Sum = 72},[3] = {Id = 113,Val = 1760,Sum = 2860}},Cost = {[1] = {Id = 1401002,Val = 185},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--天使缇娜魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 276},[2] = {Id = 112,Val = 55,Sum = 127},[3] = {Id = 113,Val = 2200,Sum = 5060}},Cost = {[1] = {Id = 1401002,Val = 305},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--天使缇娜魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 468},[2] = {Id = 112,Val = 88,Sum = 215},[3] = {Id = 113,Val = 3520,Sum = 8580}},Cost = {[1] = {Id = 1401002,Val = 390},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--天使缇娜魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 264,Sum = 732},[2] = {Id = 112,Val = 121,Sum = 336},[3] = {Id = 113,Val = 4840,Sum = 13420}},Cost = {[1] = {Id = 1401002,Val = 495},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--天使缇娜魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 1068},[2] = {Id = 112,Val = 154,Sum = 490},[3] = {Id = 113,Val = 6160,Sum = 19580}},Cost = {[1] = {Id = 1401002,Val = 590},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--天使缇娜魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1452},[2] = {Id = 112,Val = 176,Sum = 666},[3] = {Id = 113,Val = 7040,Sum = 26620}},Cost = {[1] = {Id = 1401002,Val = 690},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--天使缇娜魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 456,Sum = 1908},[2] = {Id = 112,Val = 209,Sum = 875},[3] = {Id = 113,Val = 8360,Sum = 34980}},Cost = {[1] = {Id = 1401002,Val = 790},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--天使缇娜魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 2412},[2] = {Id = 112,Val = 231,Sum = 1106},[3] = {Id = 113,Val = 9240,Sum = 44220}},Cost = {[1] = {Id = 1401002,Val = 985},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--天使缇娜魂珠-1 等级-9
+				}
+			},--天使缇娜专属武器魂珠-1
+			[2] = {
+				Id = 200702,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--天使缇娜魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 96},[2] = {Id = 112,Val = 44,Sum = 44},[3] = {Id = 113,Val = 1760,Sum = 1760}},Cost = {[1] = {Id = 1401002,Val = 335},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--天使缇娜魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 240},[2] = {Id = 112,Val = 66,Sum = 110},[3] = {Id = 113,Val = 2640,Sum = 4400}},Cost = {[1] = {Id = 1401002,Val = 250},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--天使缇娜魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 432},[2] = {Id = 112,Val = 88,Sum = 198},[3] = {Id = 113,Val = 3520,Sum = 7920}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--天使缇娜魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 720},[2] = {Id = 112,Val = 132,Sum = 330},[3] = {Id = 113,Val = 5280,Sum = 13200}},Cost = {[1] = {Id = 1401002,Val = 535},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--天使缇娜魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1104},[2] = {Id = 112,Val = 176,Sum = 506},[3] = {Id = 113,Val = 7040,Sum = 20240}},Cost = {[1] = {Id = 1401002,Val = 810},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--天使缇娜魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1584},[2] = {Id = 112,Val = 220,Sum = 726},[3] = {Id = 113,Val = 8800,Sum = 29040}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--天使缇娜魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2160},[2] = {Id = 112,Val = 264,Sum = 990},[3] = {Id = 113,Val = 10560,Sum = 39600}},Cost = {[1] = {Id = 1401002,Val = 1345},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--天使缇娜魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 2832},[2] = {Id = 112,Val = 308,Sum = 1298},[3] = {Id = 113,Val = 12320,Sum = 51920}},Cost = {[1] = {Id = 1401002,Val = 1615},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--天使缇娜魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 3600},[2] = {Id = 112,Val = 352,Sum = 1650},[3] = {Id = 113,Val = 14080,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 2155},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--天使缇娜魂珠-2 等级-9
+				}
+			},--天使缇娜专属武器魂珠-2
+			[3] = {
+				Id = 200703,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--天使缇娜魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 120},[2] = {Id = 112,Val = 55,Sum = 55},[3] = {Id = 113,Val = 2200,Sum = 2200}},Cost = {[1] = {Id = 1401002,Val = 685},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--天使缇娜魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 312},[2] = {Id = 112,Val = 88,Sum = 143},[3] = {Id = 113,Val = 3520,Sum = 5720}},Cost = {[1] = {Id = 1401002,Val = 515},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--天使缇娜魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 564},[2] = {Id = 112,Val = 116,Sum = 259},[3] = {Id = 113,Val = 4620,Sum = 10340}},Cost = {[1] = {Id = 1401002,Val = 855},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--天使缇娜魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 948},[2] = {Id = 112,Val = 176,Sum = 435},[3] = {Id = 113,Val = 7040,Sum = 17380}},Cost = {[1] = {Id = 1401002,Val = 820},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--天使缇娜魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 511,Sum = 1459},[2] = {Id = 112,Val = 234,Sum = 669},[3] = {Id = 113,Val = 9372,Sum = 26752}},Cost = {[1] = {Id = 1401002,Val = 1115},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--天使缇娜魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 2107},[2] = {Id = 112,Val = 297,Sum = 966},[3] = {Id = 113,Val = 11880,Sum = 38632}},Cost = {[1] = {Id = 1401002,Val = 1385},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--天使缇娜魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 2875},[2] = {Id = 112,Val = 352,Sum = 1318},[3] = {Id = 113,Val = 14080,Sum = 52712}},Cost = {[1] = {Id = 1401002,Val = 1660},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--天使缇娜魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 3775},[2] = {Id = 112,Val = 407,Sum = 1725},[3] = {Id = 113,Val = 16500,Sum = 69212}},Cost = {[1] = {Id = 1401002,Val = 2215},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--天使缇娜魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1020,Sum = 4795},[2] = {Id = 112,Val = 468,Sum = 2193},[3] = {Id = 113,Val = 18700,Sum = 87912}},Cost = {[1] = {Id = 1401002,Val = 2770},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--天使缇娜魂珠-3 等级-9
+				}
+			},--天使缇娜专属武器魂珠-3
+			[4] = {
+				Id = 200704,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--天使缇娜魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 156,Sum = 156},[2] = {Id = 112,Val = 72,Sum = 72},[3] = {Id = 113,Val = 2860,Sum = 2860}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--天使缇娜魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 396},[2] = {Id = 112,Val = 110,Sum = 182},[3] = {Id = 113,Val = 4400,Sum = 7260}},Cost = {[1] = {Id = 1401002,Val = 835},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--天使缇娜魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 312,Sum = 708},[2] = {Id = 112,Val = 143,Sum = 325},[3] = {Id = 113,Val = 5720,Sum = 12980}},Cost = {[1] = {Id = 1401002,Val = 925},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--天使缇娜魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1188},[2] = {Id = 112,Val = 220,Sum = 545},[3] = {Id = 113,Val = 8800,Sum = 21780}},Cost = {[1] = {Id = 1401002,Val = 1775},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--天使缇娜魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 1836},[2] = {Id = 112,Val = 297,Sum = 842},[3] = {Id = 113,Val = 11880,Sum = 33660}},Cost = {[1] = {Id = 1401002,Val = 1805},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--天使缇娜魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 804,Sum = 2640},[2] = {Id = 112,Val = 424,Sum = 1266},[3] = {Id = 113,Val = 14740,Sum = 48400}},Cost = {[1] = {Id = 1401002,Val = 1795},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--天使缇娜魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 3600},[2] = {Id = 112,Val = 440,Sum = 1706},[3] = {Id = 113,Val = 17600,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 2695},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--天使缇娜魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 4740},[2] = {Id = 112,Val = 523,Sum = 2229},[3] = {Id = 113,Val = 20900,Sum = 86900}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--天使缇娜魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 6060},[2] = {Id = 112,Val = 605,Sum = 2834},[3] = {Id = 113,Val = 24200,Sum = 111100}},Cost = {[1] = {Id = 1401002,Val = 5390},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--天使缇娜魂珠-4 等级-9
+				}
+			},--天使缇娜专属武器魂珠-4
+			[5] = {
+				Id = 200705,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--天使缇娜魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 216},[2] = {Id = 112,Val = 99,Sum = 99},[3] = {Id = 113,Val = 3960,Sum = 3960}},Cost = {[1] = {Id = 1401002,Val = 2315},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--天使缇娜魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 552},[2] = {Id = 112,Val = 154,Sum = 253},[3] = {Id = 113,Val = 6160,Sum = 10120}},Cost = {[1] = {Id = 1401002,Val = 1735},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--天使缇娜魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 444,Sum = 996},[2] = {Id = 112,Val = 204,Sum = 457},[3] = {Id = 113,Val = 8140,Sum = 18260}},Cost = {[1] = {Id = 1401002,Val = 1930},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--天使缇娜魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 1668},[2] = {Id = 112,Val = 308,Sum = 765},[3] = {Id = 113,Val = 12320,Sum = 30580}},Cost = {[1] = {Id = 1401002,Val = 2780},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--天使缇娜魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 2568},[2] = {Id = 112,Val = 413,Sum = 1178},[3] = {Id = 113,Val = 16500,Sum = 47080}},Cost = {[1] = {Id = 1401002,Val = 2820},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--天使缇娜魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 3708},[2] = {Id = 112,Val = 523,Sum = 1701},[3] = {Id = 113,Val = 20900,Sum = 67980}},Cost = {[1] = {Id = 1401002,Val = 4675},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--天使缇娜魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 5148},[2] = {Id = 112,Val = 660,Sum = 2361},[3] = {Id = 113,Val = 26400,Sum = 94380}},Cost = {[1] = {Id = 1401002,Val = 4685},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--天使缇娜魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1560,Sum = 6708},[2] = {Id = 112,Val = 715,Sum = 3076},[3] = {Id = 113,Val = 28600,Sum = 122980}},Cost = {[1] = {Id = 1401002,Val = 6555},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--天使缇娜魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1800,Sum = 8508},[2] = {Id = 112,Val = 825,Sum = 3901},[3] = {Id = 113,Val = 33000,Sum = 155980}},Cost = {[1] = {Id = 1401002,Val = 8430},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--天使缇娜魂珠-5 等级-9
+				}
+			},--天使缇娜专属武器魂珠-5
+			[6] = {
+				Id = 200706,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--天使缇娜魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 300,Sum = 300},[2] = {Id = 112,Val = 138,Sum = 138},[3] = {Id = 113,Val = 5500,Sum = 5500}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--天使缇娜魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 780},[2] = {Id = 112,Val = 220,Sum = 358},[3] = {Id = 113,Val = 8800,Sum = 14300}},Cost = {[1] = {Id = 1401002,Val = 3270},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--天使缇娜魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 1380},[2] = {Id = 112,Val = 275,Sum = 633},[3] = {Id = 113,Val = 11000,Sum = 25300}},Cost = {[1] = {Id = 1401002,Val = 3630},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--天使缇娜魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2340},[2] = {Id = 112,Val = 440,Sum = 1073},[3] = {Id = 113,Val = 17600,Sum = 42900}},Cost = {[1] = {Id = 1401002,Val = 5230},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--天使缇娜魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 3660},[2] = {Id = 112,Val = 605,Sum = 1678},[3] = {Id = 113,Val = 24200,Sum = 67100}},Cost = {[1] = {Id = 1401002,Val = 5310},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--天使缇娜魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 5280},[2] = {Id = 112,Val = 743,Sum = 2421},[3] = {Id = 113,Val = 29700,Sum = 96800}},Cost = {[1] = {Id = 1401002,Val = 7040},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--天使缇娜魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 7200},[2] = {Id = 112,Val = 880,Sum = 3301},[3] = {Id = 113,Val = 35200,Sum = 132000}},Cost = {[1] = {Id = 1401002,Val = 8820},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--天使缇娜魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2280,Sum = 9480},[2] = {Id = 112,Val = 1045,Sum = 4346},[3] = {Id = 113,Val = 41800,Sum = 173800}},Cost = {[1] = {Id = 1401002,Val = 12335},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--天使缇娜魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2640,Sum = 12120},[2] = {Id = 112,Val = 1210,Sum = 5556},[3] = {Id = 113,Val = 48400,Sum = 222200}},Cost = {[1] = {Id = 1401002,Val = 14100},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--天使缇娜魂珠-6 等级-9
+				}
+			},--天使缇娜专属武器魂珠-6
+			[7] = {
+				Id = 200707,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--天使缇娜魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 384},[2] = {Id = 112,Val = 176,Sum = 176},[3] = {Id = 113,Val = 7040,Sum = 7040}},Cost = {[1] = {Id = 1401002,Val = 4280},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--天使缇娜魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 960},[2] = {Id = 112,Val = 264,Sum = 440},[3] = {Id = 113,Val = 10560,Sum = 17600}},Cost = {[1] = {Id = 1401002,Val = 3210},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--天使缇娜魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 1728},[2] = {Id = 112,Val = 352,Sum = 792},[3] = {Id = 113,Val = 14080,Sum = 31680}},Cost = {[1] = {Id = 1401002,Val = 5350},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--天使缇娜魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1152,Sum = 2880},[2] = {Id = 112,Val = 528,Sum = 1320},[3] = {Id = 113,Val = 21120,Sum = 52800}},Cost = {[1] = {Id = 1401002,Val = 6850},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--天使缇娜魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1536,Sum = 4416},[2] = {Id = 112,Val = 704,Sum = 2024},[3] = {Id = 113,Val = 28160,Sum = 80960}},Cost = {[1] = {Id = 1401002,Val = 6955},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--天使缇娜魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 6336},[2] = {Id = 112,Val = 880,Sum = 2904},[3] = {Id = 113,Val = 35200,Sum = 116160}},Cost = {[1] = {Id = 1401002,Val = 8645},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--天使缇娜魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2304,Sum = 8640},[2] = {Id = 112,Val = 1056,Sum = 3960},[3] = {Id = 113,Val = 42240,Sum = 158400}},Cost = {[1] = {Id = 1401002,Val = 12130},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--天使缇娜魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2688,Sum = 11328},[2] = {Id = 112,Val = 1232,Sum = 5192},[3] = {Id = 113,Val = 49280,Sum = 207680}},Cost = {[1] = {Id = 1401002,Val = 13850},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--天使缇娜魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3072,Sum = 14400},[2] = {Id = 112,Val = 1408,Sum = 6600},[3] = {Id = 113,Val = 56320,Sum = 264000}},Cost = {[1] = {Id = 1401002,Val = 17315},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--天使缇娜魂珠-7 等级-9
+				}
+			},--天使缇娜专属武器魂珠-7
+			[8] = {
+				Id = 200708,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--天使缇娜魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 480},[2] = {Id = 112,Val = 220,Sum = 220},[3] = {Id = 113,Val = 8800,Sum = 8800}},Cost = {[1] = {Id = 1401002,Val = 3650},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--天使缇娜魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1200},[2] = {Id = 112,Val = 330,Sum = 550},[3] = {Id = 113,Val = 13200,Sum = 22000}},Cost = {[1] = {Id = 1401002,Val = 4375},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--天使缇娜魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2160},[2] = {Id = 112,Val = 440,Sum = 990},[3] = {Id = 113,Val = 17600,Sum = 39600}},Cost = {[1] = {Id = 1401002,Val = 6080},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--天使缇娜魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 3600},[2] = {Id = 112,Val = 660,Sum = 1650},[3] = {Id = 113,Val = 26400,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 7005},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--天使缇娜魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 5520},[2] = {Id = 112,Val = 880,Sum = 2530},[3] = {Id = 113,Val = 35200,Sum = 101200}},Cost = {[1] = {Id = 1401002,Val = 8890},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--天使缇娜魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 7920},[2] = {Id = 112,Val = 1100,Sum = 3630},[3] = {Id = 113,Val = 44000,Sum = 145200}},Cost = {[1] = {Id = 1401002,Val = 10610},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--天使缇娜魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2880,Sum = 10800},[2] = {Id = 112,Val = 1320,Sum = 4950},[3] = {Id = 113,Val = 52800,Sum = 198000}},Cost = {[1] = {Id = 1401002,Val = 14765},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--天使缇娜魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3360,Sum = 14160},[2] = {Id = 112,Val = 1540,Sum = 6490},[3] = {Id = 113,Val = 61600,Sum = 259600}},Cost = {[1] = {Id = 1401002,Val = 17705},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--天使缇娜魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3840,Sum = 18000},[2] = {Id = 112,Val = 1760,Sum = 8250},[3] = {Id = 113,Val = 70400,Sum = 330000}},Cost = {[1] = {Id = 1401002,Val = 17710},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--天使缇娜魂珠-8 等级-9
+				}
+			}--天使缇娜专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611007,val = 5}},PSkill = 130300711,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611007,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611007,val = 10}},Prop = {[1] = {id = 106,val = 0.15}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611007,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611007,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611007,val = 20}},Prop = {[1] = {id = 106,val = 0.15}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611007,val = 20}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611007,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611007,val = 30}},Prop = {[1] = {id = 106,val = 0.2}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611007,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611007,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611007,val = 50}},Prop = {[1] = {id = 106,val = 0.2}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611007,val = 60}},Prop = {[1] = {id = 109,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502007,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130300711,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502007,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502007,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 106,Val = 0.15}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502007,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502007,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502007,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 106,Val = 0.15}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502007,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502007,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502007,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 106,Val = 0.2}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502007,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502007,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502007,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 106,Val = 0.2}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502007,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 109,Val = 0.14}}}
 		}
 	},--天使缇娜专属武器
-	[1501008] = {
+	[1102008] = {
 		CardId = 1102008,
 		Name = _T("娑伽罗之刃"),
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 98462},[2] = {id = 112,val = 24615},[3] = {id = 113,val = 24615}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611008,val = 30}},
-		Icon = "ui_dtex_Equip_1501008",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102008",
+		HunZhu = {
+			[1] = {
+				Id = 200801,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯渊魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 60,Sum = 60},[2] = {Id = 112,Val = 25,Sum = 25},[3] = {Id = 113,Val = 1500,Sum = 1500}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--夏侯渊魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 156},[2] = {Id = 112,Val = 40,Sum = 65},[3] = {Id = 113,Val = 2400,Sum = 3900}},Cost = {[1] = {Id = 1401002,Val = 185},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--夏侯渊魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 276},[2] = {Id = 112,Val = 50,Sum = 115},[3] = {Id = 113,Val = 3000,Sum = 6900}},Cost = {[1] = {Id = 1401002,Val = 305},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--夏侯渊魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 468},[2] = {Id = 112,Val = 80,Sum = 195},[3] = {Id = 113,Val = 4800,Sum = 11700}},Cost = {[1] = {Id = 1401002,Val = 390},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--夏侯渊魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 264,Sum = 732},[2] = {Id = 112,Val = 110,Sum = 305},[3] = {Id = 113,Val = 6600,Sum = 18300}},Cost = {[1] = {Id = 1401002,Val = 495},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--夏侯渊魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 1068},[2] = {Id = 112,Val = 140,Sum = 445},[3] = {Id = 113,Val = 8400,Sum = 26700}},Cost = {[1] = {Id = 1401002,Val = 590},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--夏侯渊魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1452},[2] = {Id = 112,Val = 160,Sum = 605},[3] = {Id = 113,Val = 9600,Sum = 36300}},Cost = {[1] = {Id = 1401002,Val = 690},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--夏侯渊魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 456,Sum = 1908},[2] = {Id = 112,Val = 190,Sum = 795},[3] = {Id = 113,Val = 11400,Sum = 47700}},Cost = {[1] = {Id = 1401002,Val = 790},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--夏侯渊魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 2412},[2] = {Id = 112,Val = 210,Sum = 1005},[3] = {Id = 113,Val = 12600,Sum = 60300}},Cost = {[1] = {Id = 1401002,Val = 985},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--夏侯渊魂珠-1 等级-9
+				}
+			},--夏侯渊专属武器魂珠-1
+			[2] = {
+				Id = 200802,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯渊魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 96},[2] = {Id = 112,Val = 40,Sum = 40},[3] = {Id = 113,Val = 2400,Sum = 2400}},Cost = {[1] = {Id = 1401002,Val = 335},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--夏侯渊魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 240},[2] = {Id = 112,Val = 60,Sum = 100},[3] = {Id = 113,Val = 3600,Sum = 6000}},Cost = {[1] = {Id = 1401002,Val = 250},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--夏侯渊魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 432},[2] = {Id = 112,Val = 80,Sum = 180},[3] = {Id = 113,Val = 4800,Sum = 10800}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--夏侯渊魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 720},[2] = {Id = 112,Val = 120,Sum = 300},[3] = {Id = 113,Val = 7200,Sum = 18000}},Cost = {[1] = {Id = 1401002,Val = 535},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--夏侯渊魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1104},[2] = {Id = 112,Val = 160,Sum = 460},[3] = {Id = 113,Val = 9600,Sum = 27600}},Cost = {[1] = {Id = 1401002,Val = 810},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--夏侯渊魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1584},[2] = {Id = 112,Val = 200,Sum = 660},[3] = {Id = 113,Val = 12000,Sum = 39600}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--夏侯渊魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2160},[2] = {Id = 112,Val = 240,Sum = 900},[3] = {Id = 113,Val = 14400,Sum = 54000}},Cost = {[1] = {Id = 1401002,Val = 1345},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--夏侯渊魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 2832},[2] = {Id = 112,Val = 280,Sum = 1180},[3] = {Id = 113,Val = 16800,Sum = 70800}},Cost = {[1] = {Id = 1401002,Val = 1615},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--夏侯渊魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 3600},[2] = {Id = 112,Val = 320,Sum = 1500},[3] = {Id = 113,Val = 19200,Sum = 90000}},Cost = {[1] = {Id = 1401002,Val = 2155},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--夏侯渊魂珠-2 等级-9
+				}
+			},--夏侯渊专属武器魂珠-2
+			[3] = {
+				Id = 200803,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯渊魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 120},[2] = {Id = 112,Val = 50,Sum = 50},[3] = {Id = 113,Val = 3000,Sum = 3000}},Cost = {[1] = {Id = 1401002,Val = 685},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--夏侯渊魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 312},[2] = {Id = 112,Val = 80,Sum = 130},[3] = {Id = 113,Val = 4800,Sum = 7800}},Cost = {[1] = {Id = 1401002,Val = 515},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--夏侯渊魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 564},[2] = {Id = 112,Val = 105,Sum = 235},[3] = {Id = 113,Val = 6300,Sum = 14100}},Cost = {[1] = {Id = 1401002,Val = 855},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--夏侯渊魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 948},[2] = {Id = 112,Val = 160,Sum = 395},[3] = {Id = 113,Val = 9600,Sum = 23700}},Cost = {[1] = {Id = 1401002,Val = 820},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--夏侯渊魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 511,Sum = 1459},[2] = {Id = 112,Val = 213,Sum = 608},[3] = {Id = 113,Val = 12780,Sum = 36480}},Cost = {[1] = {Id = 1401002,Val = 1115},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--夏侯渊魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 2107},[2] = {Id = 112,Val = 270,Sum = 878},[3] = {Id = 113,Val = 16200,Sum = 52680}},Cost = {[1] = {Id = 1401002,Val = 1385},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--夏侯渊魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 2875},[2] = {Id = 112,Val = 320,Sum = 1198},[3] = {Id = 113,Val = 19200,Sum = 71880}},Cost = {[1] = {Id = 1401002,Val = 1660},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--夏侯渊魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 3775},[2] = {Id = 112,Val = 370,Sum = 1568},[3] = {Id = 113,Val = 22500,Sum = 94380}},Cost = {[1] = {Id = 1401002,Val = 2215},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--夏侯渊魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1020,Sum = 4795},[2] = {Id = 112,Val = 425,Sum = 1993},[3] = {Id = 113,Val = 25500,Sum = 119880}},Cost = {[1] = {Id = 1401002,Val = 2770},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--夏侯渊魂珠-3 等级-9
+				}
+			},--夏侯渊专属武器魂珠-3
+			[4] = {
+				Id = 200804,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯渊魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 156,Sum = 156},[2] = {Id = 112,Val = 65,Sum = 65},[3] = {Id = 113,Val = 3900,Sum = 3900}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--夏侯渊魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 396},[2] = {Id = 112,Val = 100,Sum = 165},[3] = {Id = 113,Val = 6000,Sum = 9900}},Cost = {[1] = {Id = 1401002,Val = 835},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--夏侯渊魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 312,Sum = 708},[2] = {Id = 112,Val = 130,Sum = 295},[3] = {Id = 113,Val = 7800,Sum = 17700}},Cost = {[1] = {Id = 1401002,Val = 925},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--夏侯渊魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1188},[2] = {Id = 112,Val = 200,Sum = 495},[3] = {Id = 113,Val = 12000,Sum = 29700}},Cost = {[1] = {Id = 1401002,Val = 1775},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--夏侯渊魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 1836},[2] = {Id = 112,Val = 270,Sum = 765},[3] = {Id = 113,Val = 16200,Sum = 45900}},Cost = {[1] = {Id = 1401002,Val = 1805},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--夏侯渊魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 804,Sum = 2640},[2] = {Id = 112,Val = 385,Sum = 1150},[3] = {Id = 113,Val = 20100,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 1795},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--夏侯渊魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 3600},[2] = {Id = 112,Val = 400,Sum = 1550},[3] = {Id = 113,Val = 24000,Sum = 90000}},Cost = {[1] = {Id = 1401002,Val = 2695},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--夏侯渊魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 4740},[2] = {Id = 112,Val = 475,Sum = 2025},[3] = {Id = 113,Val = 28500,Sum = 118500}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--夏侯渊魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 6060},[2] = {Id = 112,Val = 550,Sum = 2575},[3] = {Id = 113,Val = 33000,Sum = 151500}},Cost = {[1] = {Id = 1401002,Val = 5390},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--夏侯渊魂珠-4 等级-9
+				}
+			},--夏侯渊专属武器魂珠-4
+			[5] = {
+				Id = 200805,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯渊魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 216},[2] = {Id = 112,Val = 90,Sum = 90},[3] = {Id = 113,Val = 5400,Sum = 5400}},Cost = {[1] = {Id = 1401002,Val = 2315},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--夏侯渊魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 552},[2] = {Id = 112,Val = 140,Sum = 230},[3] = {Id = 113,Val = 8400,Sum = 13800}},Cost = {[1] = {Id = 1401002,Val = 1735},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--夏侯渊魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 444,Sum = 996},[2] = {Id = 112,Val = 185,Sum = 415},[3] = {Id = 113,Val = 11100,Sum = 24900}},Cost = {[1] = {Id = 1401002,Val = 1930},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--夏侯渊魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 1668},[2] = {Id = 112,Val = 280,Sum = 695},[3] = {Id = 113,Val = 16800,Sum = 41700}},Cost = {[1] = {Id = 1401002,Val = 2780},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--夏侯渊魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 2568},[2] = {Id = 112,Val = 375,Sum = 1070},[3] = {Id = 113,Val = 22500,Sum = 64200}},Cost = {[1] = {Id = 1401002,Val = 2820},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--夏侯渊魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 3708},[2] = {Id = 112,Val = 475,Sum = 1545},[3] = {Id = 113,Val = 28500,Sum = 92700}},Cost = {[1] = {Id = 1401002,Val = 4675},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--夏侯渊魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 5148},[2] = {Id = 112,Val = 600,Sum = 2145},[3] = {Id = 113,Val = 36000,Sum = 128700}},Cost = {[1] = {Id = 1401002,Val = 4685},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--夏侯渊魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1560,Sum = 6708},[2] = {Id = 112,Val = 650,Sum = 2795},[3] = {Id = 113,Val = 39000,Sum = 167700}},Cost = {[1] = {Id = 1401002,Val = 6555},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--夏侯渊魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1800,Sum = 8508},[2] = {Id = 112,Val = 750,Sum = 3545},[3] = {Id = 113,Val = 45000,Sum = 212700}},Cost = {[1] = {Id = 1401002,Val = 8430},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--夏侯渊魂珠-5 等级-9
+				}
+			},--夏侯渊专属武器魂珠-5
+			[6] = {
+				Id = 200806,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯渊魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 300,Sum = 300},[2] = {Id = 112,Val = 125,Sum = 125},[3] = {Id = 113,Val = 7500,Sum = 7500}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--夏侯渊魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 780},[2] = {Id = 112,Val = 200,Sum = 325},[3] = {Id = 113,Val = 12000,Sum = 19500}},Cost = {[1] = {Id = 1401002,Val = 3270},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--夏侯渊魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 1380},[2] = {Id = 112,Val = 250,Sum = 575},[3] = {Id = 113,Val = 15000,Sum = 34500}},Cost = {[1] = {Id = 1401002,Val = 3630},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--夏侯渊魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2340},[2] = {Id = 112,Val = 400,Sum = 975},[3] = {Id = 113,Val = 24000,Sum = 58500}},Cost = {[1] = {Id = 1401002,Val = 5230},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--夏侯渊魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 3660},[2] = {Id = 112,Val = 550,Sum = 1525},[3] = {Id = 113,Val = 33000,Sum = 91500}},Cost = {[1] = {Id = 1401002,Val = 5310},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--夏侯渊魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 5280},[2] = {Id = 112,Val = 675,Sum = 2200},[3] = {Id = 113,Val = 40500,Sum = 132000}},Cost = {[1] = {Id = 1401002,Val = 7040},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--夏侯渊魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 7200},[2] = {Id = 112,Val = 800,Sum = 3000},[3] = {Id = 113,Val = 48000,Sum = 180000}},Cost = {[1] = {Id = 1401002,Val = 8820},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--夏侯渊魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2280,Sum = 9480},[2] = {Id = 112,Val = 950,Sum = 3950},[3] = {Id = 113,Val = 57000,Sum = 237000}},Cost = {[1] = {Id = 1401002,Val = 12335},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--夏侯渊魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2640,Sum = 12120},[2] = {Id = 112,Val = 1100,Sum = 5050},[3] = {Id = 113,Val = 66000,Sum = 303000}},Cost = {[1] = {Id = 1401002,Val = 14100},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--夏侯渊魂珠-6 等级-9
+				}
+			},--夏侯渊专属武器魂珠-6
+			[7] = {
+				Id = 200807,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯渊魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 384},[2] = {Id = 112,Val = 160,Sum = 160},[3] = {Id = 113,Val = 9600,Sum = 9600}},Cost = {[1] = {Id = 1401002,Val = 4280},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--夏侯渊魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 960},[2] = {Id = 112,Val = 240,Sum = 400},[3] = {Id = 113,Val = 14400,Sum = 24000}},Cost = {[1] = {Id = 1401002,Val = 3210},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--夏侯渊魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 1728},[2] = {Id = 112,Val = 320,Sum = 720},[3] = {Id = 113,Val = 19200,Sum = 43200}},Cost = {[1] = {Id = 1401002,Val = 5350},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--夏侯渊魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1152,Sum = 2880},[2] = {Id = 112,Val = 480,Sum = 1200},[3] = {Id = 113,Val = 28800,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 6850},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--夏侯渊魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1536,Sum = 4416},[2] = {Id = 112,Val = 640,Sum = 1840},[3] = {Id = 113,Val = 38400,Sum = 110400}},Cost = {[1] = {Id = 1401002,Val = 6955},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--夏侯渊魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 6336},[2] = {Id = 112,Val = 800,Sum = 2640},[3] = {Id = 113,Val = 48000,Sum = 158400}},Cost = {[1] = {Id = 1401002,Val = 8645},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--夏侯渊魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2304,Sum = 8640},[2] = {Id = 112,Val = 960,Sum = 3600},[3] = {Id = 113,Val = 57600,Sum = 216000}},Cost = {[1] = {Id = 1401002,Val = 12130},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--夏侯渊魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2688,Sum = 11328},[2] = {Id = 112,Val = 1120,Sum = 4720},[3] = {Id = 113,Val = 67200,Sum = 283200}},Cost = {[1] = {Id = 1401002,Val = 13850},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--夏侯渊魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3072,Sum = 14400},[2] = {Id = 112,Val = 1280,Sum = 6000},[3] = {Id = 113,Val = 76800,Sum = 360000}},Cost = {[1] = {Id = 1401002,Val = 17315},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--夏侯渊魂珠-7 等级-9
+				}
+			},--夏侯渊专属武器魂珠-7
+			[8] = {
+				Id = 200808,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯渊魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 480},[2] = {Id = 112,Val = 200,Sum = 200},[3] = {Id = 113,Val = 12000,Sum = 12000}},Cost = {[1] = {Id = 1401002,Val = 3650},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--夏侯渊魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1200},[2] = {Id = 112,Val = 300,Sum = 500},[3] = {Id = 113,Val = 18000,Sum = 30000}},Cost = {[1] = {Id = 1401002,Val = 4375},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--夏侯渊魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2160},[2] = {Id = 112,Val = 400,Sum = 900},[3] = {Id = 113,Val = 24000,Sum = 54000}},Cost = {[1] = {Id = 1401002,Val = 6080},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--夏侯渊魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 3600},[2] = {Id = 112,Val = 600,Sum = 1500},[3] = {Id = 113,Val = 36000,Sum = 90000}},Cost = {[1] = {Id = 1401002,Val = 7005},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--夏侯渊魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 5520},[2] = {Id = 112,Val = 800,Sum = 2300},[3] = {Id = 113,Val = 48000,Sum = 138000}},Cost = {[1] = {Id = 1401002,Val = 8890},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--夏侯渊魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 7920},[2] = {Id = 112,Val = 1000,Sum = 3300},[3] = {Id = 113,Val = 60000,Sum = 198000}},Cost = {[1] = {Id = 1401002,Val = 10610},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--夏侯渊魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2880,Sum = 10800},[2] = {Id = 112,Val = 1200,Sum = 4500},[3] = {Id = 113,Val = 72000,Sum = 270000}},Cost = {[1] = {Id = 1401002,Val = 14765},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--夏侯渊魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3360,Sum = 14160},[2] = {Id = 112,Val = 1400,Sum = 5900},[3] = {Id = 113,Val = 84000,Sum = 354000}},Cost = {[1] = {Id = 1401002,Val = 17705},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--夏侯渊魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3840,Sum = 18000},[2] = {Id = 112,Val = 1600,Sum = 7500},[3] = {Id = 113,Val = 96000,Sum = 450000}},Cost = {[1] = {Id = 1401002,Val = 17710},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--夏侯渊魂珠-8 等级-9
+				}
+			}--夏侯渊专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611008,val = 5}},PSkill = 130300811,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611008,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611008,val = 10}},Prop = {[1] = {id = 106,val = 0.15}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611008,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611008,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611008,val = 20}},Prop = {[1] = {id = 106,val = 0.15}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611008,val = 20}},Prop = {[1] = {id = 115,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611008,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611008,val = 30}},Prop = {[1] = {id = 106,val = 0.2}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611008,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611008,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611008,val = 50}},Prop = {[1] = {id = 106,val = 0.2}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611008,val = 60}},Prop = {[1] = {id = 115,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502008,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130300811,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502008,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502008,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 106,Val = 0.15}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502008,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502008,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502008,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 106,Val = 0.15}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502008,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 115,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502008,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502008,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 106,Val = 0.2}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502008,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502008,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502008,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 106,Val = 0.2}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502008,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 115,Val = 0.14}}}
 		}
 	},--夏侯渊专属武器
-	[1501009] = {
+	[1102009] = {
 		CardId = 1102009,
 		Name = _T("白龙"),
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 24615},[2] = {id = 112,val = 73846},[3] = {id = 113,val = 49231}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611009,val = 30}},
-		Icon = "ui_dtex_Equip_1501009",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102009",
+		HunZhu = {
+			[1] = {
+				Id = 200901,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--徐晃魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 45,Sum = 45},[2] = {Id = 112,Val = 25,Sum = 25},[3] = {Id = 113,Val = 1200,Sum = 1200}},Cost = {[1] = {Id = 1401002,Val = 80},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--徐晃魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 72,Sum = 117},[2] = {Id = 112,Val = 40,Sum = 65},[3] = {Id = 113,Val = 1920,Sum = 3120}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--徐晃魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 90,Sum = 207},[2] = {Id = 112,Val = 50,Sum = 115},[3] = {Id = 113,Val = 2400,Sum = 5520}},Cost = {[1] = {Id = 1401002,Val = 205},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--徐晃魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 351},[2] = {Id = 112,Val = 80,Sum = 195},[3] = {Id = 113,Val = 3840,Sum = 9360}},Cost = {[1] = {Id = 1401002,Val = 260},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--徐晃魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 198,Sum = 549},[2] = {Id = 112,Val = 110,Sum = 305},[3] = {Id = 113,Val = 5280,Sum = 14640}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--徐晃魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 801},[2] = {Id = 112,Val = 140,Sum = 445},[3] = {Id = 113,Val = 6720,Sum = 21360}},Cost = {[1] = {Id = 1401002,Val = 395},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--徐晃魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 1089},[2] = {Id = 112,Val = 160,Sum = 605},[3] = {Id = 113,Val = 7680,Sum = 29040}},Cost = {[1] = {Id = 1401002,Val = 460},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--徐晃魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 342,Sum = 1431},[2] = {Id = 112,Val = 190,Sum = 795},[3] = {Id = 113,Val = 9120,Sum = 38160}},Cost = {[1] = {Id = 1401002,Val = 525},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--徐晃魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 378,Sum = 1809},[2] = {Id = 112,Val = 210,Sum = 1005},[3] = {Id = 113,Val = 10080,Sum = 48240}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--徐晃魂珠-1 等级-9
+				}
+			},--徐晃专属武器魂珠-1
+			[2] = {
+				Id = 200902,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--徐晃魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 72,Sum = 72},[2] = {Id = 112,Val = 40,Sum = 40},[3] = {Id = 113,Val = 1920,Sum = 1920}},Cost = {[1] = {Id = 1401002,Val = 220},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--徐晃魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 108,Sum = 180},[2] = {Id = 112,Val = 60,Sum = 100},[3] = {Id = 113,Val = 2880,Sum = 4800}},Cost = {[1] = {Id = 1401002,Val = 165},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--徐晃魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 324},[2] = {Id = 112,Val = 80,Sum = 180},[3] = {Id = 113,Val = 3840,Sum = 8640}},Cost = {[1] = {Id = 1401002,Val = 370},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--徐晃魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 540},[2] = {Id = 112,Val = 120,Sum = 300},[3] = {Id = 113,Val = 5760,Sum = 14400}},Cost = {[1] = {Id = 1401002,Val = 355},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--徐晃魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 828},[2] = {Id = 112,Val = 160,Sum = 460},[3] = {Id = 113,Val = 7680,Sum = 22080}},Cost = {[1] = {Id = 1401002,Val = 540},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--徐晃魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 1188},[2] = {Id = 112,Val = 200,Sum = 660},[3] = {Id = 113,Val = 9600,Sum = 31680}},Cost = {[1] = {Id = 1401002,Val = 715},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--徐晃魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 1620},[2] = {Id = 112,Val = 240,Sum = 900},[3] = {Id = 113,Val = 11520,Sum = 43200}},Cost = {[1] = {Id = 1401002,Val = 900},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--徐晃魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 2124},[2] = {Id = 112,Val = 280,Sum = 1180},[3] = {Id = 113,Val = 13440,Sum = 56640}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--徐晃魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2700},[2] = {Id = 112,Val = 320,Sum = 1500},[3] = {Id = 113,Val = 15360,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--徐晃魂珠-2 等级-9
+				}
+			},--徐晃专属武器魂珠-2
+			[3] = {
+				Id = 200903,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--徐晃魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 90,Sum = 90},[2] = {Id = 112,Val = 50,Sum = 50},[3] = {Id = 113,Val = 2400,Sum = 2400}},Cost = {[1] = {Id = 1401002,Val = 455},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--徐晃魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 234},[2] = {Id = 112,Val = 80,Sum = 130},[3] = {Id = 113,Val = 3840,Sum = 6240}},Cost = {[1] = {Id = 1401002,Val = 340},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--徐晃魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 189,Sum = 423},[2] = {Id = 112,Val = 105,Sum = 235},[3] = {Id = 113,Val = 5040,Sum = 11280}},Cost = {[1] = {Id = 1401002,Val = 570},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--徐晃魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 711},[2] = {Id = 112,Val = 160,Sum = 395},[3] = {Id = 113,Val = 7680,Sum = 18960}},Cost = {[1] = {Id = 1401002,Val = 550},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--徐晃魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 383,Sum = 1094},[2] = {Id = 112,Val = 213,Sum = 608},[3] = {Id = 113,Val = 10224,Sum = 29184}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--徐晃魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 486,Sum = 1580},[2] = {Id = 112,Val = 270,Sum = 878},[3] = {Id = 113,Val = 12960,Sum = 42144}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--徐晃魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2156},[2] = {Id = 112,Val = 320,Sum = 1198},[3] = {Id = 113,Val = 15360,Sum = 57504}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--徐晃魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 675,Sum = 2831},[2] = {Id = 112,Val = 370,Sum = 1568},[3] = {Id = 113,Val = 18000,Sum = 75504}},Cost = {[1] = {Id = 1401002,Val = 1475},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--徐晃魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 765,Sum = 3596},[2] = {Id = 112,Val = 425,Sum = 1993},[3] = {Id = 113,Val = 20400,Sum = 95904}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--徐晃魂珠-3 等级-9
+				}
+			},--徐晃专属武器魂珠-3
+			[4] = {
+				Id = 200904,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--徐晃魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 117,Sum = 117},[2] = {Id = 112,Val = 65,Sum = 65},[3] = {Id = 113,Val = 3120,Sum = 3120}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--徐晃魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 180,Sum = 297},[2] = {Id = 112,Val = 100,Sum = 165},[3] = {Id = 113,Val = 4800,Sum = 7920}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--徐晃魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 234,Sum = 531},[2] = {Id = 112,Val = 130,Sum = 295},[3] = {Id = 113,Val = 6240,Sum = 14160}},Cost = {[1] = {Id = 1401002,Val = 615},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--徐晃魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 891},[2] = {Id = 112,Val = 200,Sum = 495},[3] = {Id = 113,Val = 9600,Sum = 23760}},Cost = {[1] = {Id = 1401002,Val = 1185},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--徐晃魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 486,Sum = 1377},[2] = {Id = 112,Val = 270,Sum = 765},[3] = {Id = 113,Val = 12960,Sum = 36720}},Cost = {[1] = {Id = 1401002,Val = 1205},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--徐晃魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 603,Sum = 1980},[2] = {Id = 112,Val = 385,Sum = 1150},[3] = {Id = 113,Val = 16080,Sum = 52800}},Cost = {[1] = {Id = 1401002,Val = 1195},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--徐晃魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 2700},[2] = {Id = 112,Val = 400,Sum = 1550},[3] = {Id = 113,Val = 19200,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 1800},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--徐晃魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 855,Sum = 3555},[2] = {Id = 112,Val = 475,Sum = 2025},[3] = {Id = 113,Val = 22800,Sum = 94800}},Cost = {[1] = {Id = 1401002,Val = 2395},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--徐晃魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 990,Sum = 4545},[2] = {Id = 112,Val = 550,Sum = 2575},[3] = {Id = 113,Val = 26400,Sum = 121200}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--徐晃魂珠-4 等级-9
+				}
+			},--徐晃专属武器魂珠-4
+			[5] = {
+				Id = 200905,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--徐晃魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 162,Sum = 162},[2] = {Id = 112,Val = 90,Sum = 90},[3] = {Id = 113,Val = 4320,Sum = 4320}},Cost = {[1] = {Id = 1401002,Val = 1545},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--徐晃魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 414},[2] = {Id = 112,Val = 140,Sum = 230},[3] = {Id = 113,Val = 6720,Sum = 11040}},Cost = {[1] = {Id = 1401002,Val = 1155},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--徐晃魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 333,Sum = 747},[2] = {Id = 112,Val = 185,Sum = 415},[3] = {Id = 113,Val = 8880,Sum = 19920}},Cost = {[1] = {Id = 1401002,Val = 1285},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--徐晃魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 1251},[2] = {Id = 112,Val = 280,Sum = 695},[3] = {Id = 113,Val = 13440,Sum = 33360}},Cost = {[1] = {Id = 1401002,Val = 1850},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--徐晃魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 675,Sum = 1926},[2] = {Id = 112,Val = 375,Sum = 1070},[3] = {Id = 113,Val = 18000,Sum = 51360}},Cost = {[1] = {Id = 1401002,Val = 1880},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--徐晃魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 855,Sum = 2781},[2] = {Id = 112,Val = 475,Sum = 1545},[3] = {Id = 113,Val = 22800,Sum = 74160}},Cost = {[1] = {Id = 1401002,Val = 3115},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--徐晃魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 3861},[2] = {Id = 112,Val = 600,Sum = 2145},[3] = {Id = 113,Val = 28800,Sum = 102960}},Cost = {[1] = {Id = 1401002,Val = 3125},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--徐晃魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1170,Sum = 5031},[2] = {Id = 112,Val = 650,Sum = 2795},[3] = {Id = 113,Val = 31200,Sum = 134160}},Cost = {[1] = {Id = 1401002,Val = 4370},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--徐晃魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1350,Sum = 6381},[2] = {Id = 112,Val = 750,Sum = 3545},[3] = {Id = 113,Val = 36000,Sum = 170160}},Cost = {[1] = {Id = 1401002,Val = 5620},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--徐晃魂珠-5 等级-9
+				}
+			},--徐晃专属武器魂珠-5
+			[6] = {
+				Id = 200906,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--徐晃魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 225,Sum = 225},[2] = {Id = 112,Val = 125,Sum = 125},[3] = {Id = 113,Val = 6000,Sum = 6000}},Cost = {[1] = {Id = 1401002,Val = 1450},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--徐晃魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 585},[2] = {Id = 112,Val = 200,Sum = 325},[3] = {Id = 113,Val = 9600,Sum = 15600}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--徐晃魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 450,Sum = 1035},[2] = {Id = 112,Val = 250,Sum = 575},[3] = {Id = 113,Val = 12000,Sum = 27600}},Cost = {[1] = {Id = 1401002,Val = 2420},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--徐晃魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1755},[2] = {Id = 112,Val = 400,Sum = 975},[3] = {Id = 113,Val = 19200,Sum = 46800}},Cost = {[1] = {Id = 1401002,Val = 3485},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--徐晃魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 990,Sum = 2745},[2] = {Id = 112,Val = 550,Sum = 1525},[3] = {Id = 113,Val = 26400,Sum = 73200}},Cost = {[1] = {Id = 1401002,Val = 3540},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--徐晃魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1215,Sum = 3960},[2] = {Id = 112,Val = 675,Sum = 2200},[3] = {Id = 113,Val = 32400,Sum = 105600}},Cost = {[1] = {Id = 1401002,Val = 4690},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--徐晃魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 5400},[2] = {Id = 112,Val = 800,Sum = 3000},[3] = {Id = 113,Val = 38400,Sum = 144000}},Cost = {[1] = {Id = 1401002,Val = 5880},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--徐晃魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1710,Sum = 7110},[2] = {Id = 112,Val = 950,Sum = 3950},[3] = {Id = 113,Val = 45600,Sum = 189600}},Cost = {[1] = {Id = 1401002,Val = 8225},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--徐晃魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1980,Sum = 9090},[2] = {Id = 112,Val = 1100,Sum = 5050},[3] = {Id = 113,Val = 52800,Sum = 242400}},Cost = {[1] = {Id = 1401002,Val = 9400},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--徐晃魂珠-6 等级-9
+				}
+			},--徐晃专属武器魂珠-6
+			[7] = {
+				Id = 200907,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--徐晃魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 288},[2] = {Id = 112,Val = 160,Sum = 160},[3] = {Id = 113,Val = 7680,Sum = 7680}},Cost = {[1] = {Id = 1401002,Val = 2855},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--徐晃魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 720},[2] = {Id = 112,Val = 240,Sum = 400},[3] = {Id = 113,Val = 11520,Sum = 19200}},Cost = {[1] = {Id = 1401002,Val = 2140},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--徐晃魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 1296},[2] = {Id = 112,Val = 320,Sum = 720},[3] = {Id = 113,Val = 15360,Sum = 34560}},Cost = {[1] = {Id = 1401002,Val = 3565},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--徐晃魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 864,Sum = 2160},[2] = {Id = 112,Val = 480,Sum = 1200},[3] = {Id = 113,Val = 23040,Sum = 57600}},Cost = {[1] = {Id = 1401002,Val = 4565},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--徐晃魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1152,Sum = 3312},[2] = {Id = 112,Val = 640,Sum = 1840},[3] = {Id = 113,Val = 30720,Sum = 88320}},Cost = {[1] = {Id = 1401002,Val = 4635},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--徐晃魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 4752},[2] = {Id = 112,Val = 800,Sum = 2640},[3] = {Id = 113,Val = 38400,Sum = 126720}},Cost = {[1] = {Id = 1401002,Val = 5760},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--徐晃魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1728,Sum = 6480},[2] = {Id = 112,Val = 960,Sum = 3600},[3] = {Id = 113,Val = 46080,Sum = 172800}},Cost = {[1] = {Id = 1401002,Val = 8085},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--徐晃魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2016,Sum = 8496},[2] = {Id = 112,Val = 1120,Sum = 4720},[3] = {Id = 113,Val = 53760,Sum = 226560}},Cost = {[1] = {Id = 1401002,Val = 9230},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--徐晃魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2304,Sum = 10800},[2] = {Id = 112,Val = 1280,Sum = 6000},[3] = {Id = 113,Val = 61440,Sum = 288000}},Cost = {[1] = {Id = 1401002,Val = 11545},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--徐晃魂珠-7 等级-9
+				}
+			},--徐晃专属武器魂珠-7
+			[8] = {
+				Id = 200908,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--徐晃魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 360,Sum = 360},[2] = {Id = 112,Val = 200,Sum = 200},[3] = {Id = 113,Val = 9600,Sum = 9600}},Cost = {[1] = {Id = 1401002,Val = 2430},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--徐晃魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 900},[2] = {Id = 112,Val = 300,Sum = 500},[3] = {Id = 113,Val = 14400,Sum = 24000}},Cost = {[1] = {Id = 1401002,Val = 2920},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--徐晃魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1620},[2] = {Id = 112,Val = 400,Sum = 900},[3] = {Id = 113,Val = 19200,Sum = 43200}},Cost = {[1] = {Id = 1401002,Val = 4055},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--徐晃魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 2700},[2] = {Id = 112,Val = 600,Sum = 1500},[3] = {Id = 113,Val = 28800,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 4670},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--徐晃魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 4140},[2] = {Id = 112,Val = 800,Sum = 2300},[3] = {Id = 113,Val = 38400,Sum = 110400}},Cost = {[1] = {Id = 1401002,Val = 5930},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--徐晃魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1800,Sum = 5940},[2] = {Id = 112,Val = 1000,Sum = 3300},[3] = {Id = 113,Val = 48000,Sum = 158400}},Cost = {[1] = {Id = 1401002,Val = 7070},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--徐晃魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2160,Sum = 8100},[2] = {Id = 112,Val = 1200,Sum = 4500},[3] = {Id = 113,Val = 57600,Sum = 216000}},Cost = {[1] = {Id = 1401002,Val = 9845},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--徐晃魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2520,Sum = 10620},[2] = {Id = 112,Val = 1400,Sum = 5900},[3] = {Id = 113,Val = 67200,Sum = 283200}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--徐晃魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2880,Sum = 13500},[2] = {Id = 112,Val = 1600,Sum = 7500},[3] = {Id = 113,Val = 76800,Sum = 360000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--徐晃魂珠-8 等级-9
+				}
+			}--徐晃专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611009,val = 5}},PSkill = 130300911,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611009,val = 5}},Prop = {[1] = {id = 114,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611009,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611009,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611009,val = 10}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611009,val = 20}},Prop = {[1] = {id = 114,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611009,val = 20}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611009,val = 20}},Prop = {[1] = {id = 114,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611009,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611009,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611009,val = 30}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611009,val = 50}},Prop = {[1] = {id = 114,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611009,val = 60}},Prop = {[1] = {id = 109,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502009,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130300911,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502009,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 114,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502009,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502009,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502009,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502009,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 114,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502009,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502009,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 114,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502009,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502009,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502009,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502009,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 114,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502009,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 109,Val = 0.14}}}
 		}
 	},--徐晃专属武器
-	[1501010] = {
+	[1102010] = {
 		CardId = 1102010,
 		Name = _T("流光·幻影"),
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 85207},[2] = {id = 112,val = 42603},[3] = {id = 113,val = 42603}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611010,val = 30}},
-		Icon = "ui_dtex_Equip_1501010",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102010",
+		HunZhu = {
+			[1] = {
+				Id = 201001,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张郃魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 68,Sum = 68},[2] = {Id = 112,Val = 28,Sum = 28},[3] = {Id = 113,Val = 1000,Sum = 1000}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--张郃魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 108,Sum = 176},[2] = {Id = 112,Val = 44,Sum = 72},[3] = {Id = 113,Val = 1600,Sum = 2600}},Cost = {[1] = {Id = 1401002,Val = 185},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--张郃魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 135,Sum = 311},[2] = {Id = 112,Val = 55,Sum = 127},[3] = {Id = 113,Val = 2000,Sum = 4600}},Cost = {[1] = {Id = 1401002,Val = 305},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--张郃魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 527},[2] = {Id = 112,Val = 88,Sum = 215},[3] = {Id = 113,Val = 3200,Sum = 7800}},Cost = {[1] = {Id = 1401002,Val = 390},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--张郃魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 297,Sum = 824},[2] = {Id = 112,Val = 121,Sum = 336},[3] = {Id = 113,Val = 4400,Sum = 12200}},Cost = {[1] = {Id = 1401002,Val = 495},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--张郃魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 378,Sum = 1202},[2] = {Id = 112,Val = 154,Sum = 490},[3] = {Id = 113,Val = 5600,Sum = 17800}},Cost = {[1] = {Id = 1401002,Val = 590},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--张郃魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 1634},[2] = {Id = 112,Val = 176,Sum = 666},[3] = {Id = 113,Val = 6400,Sum = 24200}},Cost = {[1] = {Id = 1401002,Val = 690},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--张郃魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 513,Sum = 2147},[2] = {Id = 112,Val = 209,Sum = 875},[3] = {Id = 113,Val = 7600,Sum = 31800}},Cost = {[1] = {Id = 1401002,Val = 790},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--张郃魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 567,Sum = 2714},[2] = {Id = 112,Val = 231,Sum = 1106},[3] = {Id = 113,Val = 8400,Sum = 40200}},Cost = {[1] = {Id = 1401002,Val = 985},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--张郃魂珠-1 等级-9
+				}
+			},--张郃专属武器魂珠-1
+			[2] = {
+				Id = 201002,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张郃魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 108,Sum = 108},[2] = {Id = 112,Val = 44,Sum = 44},[3] = {Id = 113,Val = 1600,Sum = 1600}},Cost = {[1] = {Id = 1401002,Val = 335},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--张郃魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 162,Sum = 270},[2] = {Id = 112,Val = 66,Sum = 110},[3] = {Id = 113,Val = 2400,Sum = 4000}},Cost = {[1] = {Id = 1401002,Val = 250},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--张郃魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 486},[2] = {Id = 112,Val = 88,Sum = 198},[3] = {Id = 113,Val = 3200,Sum = 7200}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--张郃魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 324,Sum = 810},[2] = {Id = 112,Val = 132,Sum = 330},[3] = {Id = 113,Val = 4800,Sum = 12000}},Cost = {[1] = {Id = 1401002,Val = 535},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--张郃魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 1242},[2] = {Id = 112,Val = 176,Sum = 506},[3] = {Id = 113,Val = 6400,Sum = 18400}},Cost = {[1] = {Id = 1401002,Val = 810},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--张郃魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 1782},[2] = {Id = 112,Val = 220,Sum = 726},[3] = {Id = 113,Val = 8000,Sum = 26400}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--张郃魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 2430},[2] = {Id = 112,Val = 264,Sum = 990},[3] = {Id = 113,Val = 9600,Sum = 36000}},Cost = {[1] = {Id = 1401002,Val = 1345},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--张郃魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 756,Sum = 3186},[2] = {Id = 112,Val = 308,Sum = 1298},[3] = {Id = 113,Val = 11200,Sum = 47200}},Cost = {[1] = {Id = 1401002,Val = 1615},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--张郃魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 864,Sum = 4050},[2] = {Id = 112,Val = 352,Sum = 1650},[3] = {Id = 113,Val = 12800,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 2155},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--张郃魂珠-2 等级-9
+				}
+			},--张郃专属武器魂珠-2
+			[3] = {
+				Id = 201003,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张郃魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 135,Sum = 135},[2] = {Id = 112,Val = 55,Sum = 55},[3] = {Id = 113,Val = 2000,Sum = 2000}},Cost = {[1] = {Id = 1401002,Val = 685},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--张郃魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 351},[2] = {Id = 112,Val = 88,Sum = 143},[3] = {Id = 113,Val = 3200,Sum = 5200}},Cost = {[1] = {Id = 1401002,Val = 515},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--张郃魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 284,Sum = 635},[2] = {Id = 112,Val = 116,Sum = 259},[3] = {Id = 113,Val = 4200,Sum = 9400}},Cost = {[1] = {Id = 1401002,Val = 855},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--张郃魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 1067},[2] = {Id = 112,Val = 176,Sum = 435},[3] = {Id = 113,Val = 6400,Sum = 15800}},Cost = {[1] = {Id = 1401002,Val = 820},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--张郃魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 575,Sum = 1642},[2] = {Id = 112,Val = 234,Sum = 669},[3] = {Id = 113,Val = 8520,Sum = 24320}},Cost = {[1] = {Id = 1401002,Val = 1115},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--张郃魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 729,Sum = 2371},[2] = {Id = 112,Val = 297,Sum = 966},[3] = {Id = 113,Val = 10800,Sum = 35120}},Cost = {[1] = {Id = 1401002,Val = 1385},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--张郃魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 864,Sum = 3235},[2] = {Id = 112,Val = 352,Sum = 1318},[3] = {Id = 113,Val = 12800,Sum = 47920}},Cost = {[1] = {Id = 1401002,Val = 1660},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--张郃魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1013,Sum = 4248},[2] = {Id = 112,Val = 407,Sum = 1725},[3] = {Id = 113,Val = 15000,Sum = 62920}},Cost = {[1] = {Id = 1401002,Val = 2215},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--张郃魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1148,Sum = 5396},[2] = {Id = 112,Val = 468,Sum = 2193},[3] = {Id = 113,Val = 17000,Sum = 79920}},Cost = {[1] = {Id = 1401002,Val = 2770},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--张郃魂珠-3 等级-9
+				}
+			},--张郃专属武器魂珠-3
+			[4] = {
+				Id = 201004,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张郃魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 176},[2] = {Id = 112,Val = 72,Sum = 72},[3] = {Id = 113,Val = 2600,Sum = 2600}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--张郃魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 270,Sum = 446},[2] = {Id = 112,Val = 110,Sum = 182},[3] = {Id = 113,Val = 4000,Sum = 6600}},Cost = {[1] = {Id = 1401002,Val = 835},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--张郃魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 351,Sum = 797},[2] = {Id = 112,Val = 143,Sum = 325},[3] = {Id = 113,Val = 5200,Sum = 11800}},Cost = {[1] = {Id = 1401002,Val = 925},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--张郃魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 1337},[2] = {Id = 112,Val = 220,Sum = 545},[3] = {Id = 113,Val = 8000,Sum = 19800}},Cost = {[1] = {Id = 1401002,Val = 1775},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--张郃魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 729,Sum = 2066},[2] = {Id = 112,Val = 297,Sum = 842},[3] = {Id = 113,Val = 10800,Sum = 30600}},Cost = {[1] = {Id = 1401002,Val = 1805},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--张郃魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 905,Sum = 2971},[2] = {Id = 112,Val = 424,Sum = 1266},[3] = {Id = 113,Val = 13400,Sum = 44000}},Cost = {[1] = {Id = 1401002,Val = 1795},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--张郃魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 4051},[2] = {Id = 112,Val = 440,Sum = 1706},[3] = {Id = 113,Val = 16000,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 2695},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--张郃魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1283,Sum = 5334},[2] = {Id = 112,Val = 523,Sum = 2229},[3] = {Id = 113,Val = 19000,Sum = 79000}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--张郃魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1485,Sum = 6819},[2] = {Id = 112,Val = 605,Sum = 2834},[3] = {Id = 113,Val = 22000,Sum = 101000}},Cost = {[1] = {Id = 1401002,Val = 5390},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--张郃魂珠-4 等级-9
+				}
+			},--张郃专属武器魂珠-4
+			[5] = {
+				Id = 201005,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张郃魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 243,Sum = 243},[2] = {Id = 112,Val = 99,Sum = 99},[3] = {Id = 113,Val = 3600,Sum = 3600}},Cost = {[1] = {Id = 1401002,Val = 2315},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--张郃魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 378,Sum = 621},[2] = {Id = 112,Val = 154,Sum = 253},[3] = {Id = 113,Val = 5600,Sum = 9200}},Cost = {[1] = {Id = 1401002,Val = 1735},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--张郃魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 500,Sum = 1121},[2] = {Id = 112,Val = 204,Sum = 457},[3] = {Id = 113,Val = 7400,Sum = 16600}},Cost = {[1] = {Id = 1401002,Val = 1930},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--张郃魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 756,Sum = 1877},[2] = {Id = 112,Val = 308,Sum = 765},[3] = {Id = 113,Val = 11200,Sum = 27800}},Cost = {[1] = {Id = 1401002,Val = 2780},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--张郃魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1013,Sum = 2890},[2] = {Id = 112,Val = 413,Sum = 1178},[3] = {Id = 113,Val = 15000,Sum = 42800}},Cost = {[1] = {Id = 1401002,Val = 2820},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--张郃魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1283,Sum = 4173},[2] = {Id = 112,Val = 523,Sum = 1701},[3] = {Id = 113,Val = 19000,Sum = 61800}},Cost = {[1] = {Id = 1401002,Val = 4675},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--张郃魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 5793},[2] = {Id = 112,Val = 660,Sum = 2361},[3] = {Id = 113,Val = 24000,Sum = 85800}},Cost = {[1] = {Id = 1401002,Val = 4685},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--张郃魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1755,Sum = 7548},[2] = {Id = 112,Val = 715,Sum = 3076},[3] = {Id = 113,Val = 26000,Sum = 111800}},Cost = {[1] = {Id = 1401002,Val = 6555},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--张郃魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2025,Sum = 9573},[2] = {Id = 112,Val = 825,Sum = 3901},[3] = {Id = 113,Val = 30000,Sum = 141800}},Cost = {[1] = {Id = 1401002,Val = 8430},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--张郃魂珠-5 等级-9
+				}
+			},--张郃专属武器魂珠-5
+			[6] = {
+				Id = 201006,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张郃魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 338,Sum = 338},[2] = {Id = 112,Val = 138,Sum = 138},[3] = {Id = 113,Val = 5000,Sum = 5000}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--张郃魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 878},[2] = {Id = 112,Val = 220,Sum = 358},[3] = {Id = 113,Val = 8000,Sum = 13000}},Cost = {[1] = {Id = 1401002,Val = 3270},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--张郃魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 675,Sum = 1553},[2] = {Id = 112,Val = 275,Sum = 633},[3] = {Id = 113,Val = 10000,Sum = 23000}},Cost = {[1] = {Id = 1401002,Val = 3630},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--张郃魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 2633},[2] = {Id = 112,Val = 440,Sum = 1073},[3] = {Id = 113,Val = 16000,Sum = 39000}},Cost = {[1] = {Id = 1401002,Val = 5230},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--张郃魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1485,Sum = 4118},[2] = {Id = 112,Val = 605,Sum = 1678},[3] = {Id = 113,Val = 22000,Sum = 61000}},Cost = {[1] = {Id = 1401002,Val = 5310},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--张郃魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1823,Sum = 5941},[2] = {Id = 112,Val = 743,Sum = 2421},[3] = {Id = 113,Val = 27000,Sum = 88000}},Cost = {[1] = {Id = 1401002,Val = 7040},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--张郃魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2160,Sum = 8101},[2] = {Id = 112,Val = 880,Sum = 3301},[3] = {Id = 113,Val = 32000,Sum = 120000}},Cost = {[1] = {Id = 1401002,Val = 8820},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--张郃魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2565,Sum = 10666},[2] = {Id = 112,Val = 1045,Sum = 4346},[3] = {Id = 113,Val = 38000,Sum = 158000}},Cost = {[1] = {Id = 1401002,Val = 12335},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--张郃魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2970,Sum = 13636},[2] = {Id = 112,Val = 1210,Sum = 5556},[3] = {Id = 113,Val = 44000,Sum = 202000}},Cost = {[1] = {Id = 1401002,Val = 14100},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--张郃魂珠-6 等级-9
+				}
+			},--张郃专属武器魂珠-6
+			[7] = {
+				Id = 201007,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张郃魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 432},[2] = {Id = 112,Val = 176,Sum = 176},[3] = {Id = 113,Val = 6400,Sum = 6400}},Cost = {[1] = {Id = 1401002,Val = 4280},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--张郃魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 1080},[2] = {Id = 112,Val = 264,Sum = 440},[3] = {Id = 113,Val = 9600,Sum = 16000}},Cost = {[1] = {Id = 1401002,Val = 3210},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--张郃魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 864,Sum = 1944},[2] = {Id = 112,Val = 352,Sum = 792},[3] = {Id = 113,Val = 12800,Sum = 28800}},Cost = {[1] = {Id = 1401002,Val = 5350},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--张郃魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1296,Sum = 3240},[2] = {Id = 112,Val = 528,Sum = 1320},[3] = {Id = 113,Val = 19200,Sum = 48000}},Cost = {[1] = {Id = 1401002,Val = 6850},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--张郃魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1728,Sum = 4968},[2] = {Id = 112,Val = 704,Sum = 2024},[3] = {Id = 113,Val = 25600,Sum = 73600}},Cost = {[1] = {Id = 1401002,Val = 6955},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--张郃魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2160,Sum = 7128},[2] = {Id = 112,Val = 880,Sum = 2904},[3] = {Id = 113,Val = 32000,Sum = 105600}},Cost = {[1] = {Id = 1401002,Val = 8645},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--张郃魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2592,Sum = 9720},[2] = {Id = 112,Val = 1056,Sum = 3960},[3] = {Id = 113,Val = 38400,Sum = 144000}},Cost = {[1] = {Id = 1401002,Val = 12130},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--张郃魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3024,Sum = 12744},[2] = {Id = 112,Val = 1232,Sum = 5192},[3] = {Id = 113,Val = 44800,Sum = 188800}},Cost = {[1] = {Id = 1401002,Val = 13850},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--张郃魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3456,Sum = 16200},[2] = {Id = 112,Val = 1408,Sum = 6600},[3] = {Id = 113,Val = 51200,Sum = 240000}},Cost = {[1] = {Id = 1401002,Val = 17315},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--张郃魂珠-7 等级-9
+				}
+			},--张郃专属武器魂珠-7
+			[8] = {
+				Id = 201008,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张郃魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 540},[2] = {Id = 112,Val = 220,Sum = 220},[3] = {Id = 113,Val = 8000,Sum = 8000}},Cost = {[1] = {Id = 1401002,Val = 3650},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--张郃魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 810,Sum = 1350},[2] = {Id = 112,Val = 330,Sum = 550},[3] = {Id = 113,Val = 12000,Sum = 20000}},Cost = {[1] = {Id = 1401002,Val = 4375},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--张郃魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 2430},[2] = {Id = 112,Val = 440,Sum = 990},[3] = {Id = 113,Val = 16000,Sum = 36000}},Cost = {[1] = {Id = 1401002,Val = 6080},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--张郃魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 4050},[2] = {Id = 112,Val = 660,Sum = 1650},[3] = {Id = 113,Val = 24000,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 7005},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--张郃魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 2160,Sum = 6210},[2] = {Id = 112,Val = 880,Sum = 2530},[3] = {Id = 113,Val = 32000,Sum = 92000}},Cost = {[1] = {Id = 1401002,Val = 8890},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--张郃魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2700,Sum = 8910},[2] = {Id = 112,Val = 1100,Sum = 3630},[3] = {Id = 113,Val = 40000,Sum = 132000}},Cost = {[1] = {Id = 1401002,Val = 10610},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--张郃魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 3240,Sum = 12150},[2] = {Id = 112,Val = 1320,Sum = 4950},[3] = {Id = 113,Val = 48000,Sum = 180000}},Cost = {[1] = {Id = 1401002,Val = 14765},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--张郃魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3780,Sum = 15930},[2] = {Id = 112,Val = 1540,Sum = 6490},[3] = {Id = 113,Val = 56000,Sum = 236000}},Cost = {[1] = {Id = 1401002,Val = 17705},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--张郃魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 4320,Sum = 20250},[2] = {Id = 112,Val = 1760,Sum = 8250},[3] = {Id = 113,Val = 64000,Sum = 300000}},Cost = {[1] = {Id = 1401002,Val = 17710},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--张郃魂珠-8 等级-9
+				}
+			}--张郃专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611010,val = 5}},PSkill = 130301011,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611010,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611010,val = 10}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611010,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611010,val = 10}},Prop = {[1] = {id = 106,val = 0.15}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611010,val = 20}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611010,val = 20}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611010,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611010,val = 30}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611010,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611010,val = 30}},Prop = {[1] = {id = 106,val = 0.2}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611010,val = 50}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611010,val = 60}},Prop = {[1] = {id = 104,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502010,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130301011,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502010,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502010,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502010,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502010,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 106,Val = 0.15}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502010,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502010,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502010,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502010,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502010,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502010,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 106,Val = 0.2}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502010,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502010,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 104,Val = 0.14}}}
 		}
 	},--张郃专属武器
-	[1501011] = {
+	[1102011] = {
 		CardId = 1102011,
 		Name = _T("丈八蛇矛"),
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 45444},[2] = {id = 112,val = 28402},[3] = {id = 113,val = 96568}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611011,val = 30}},
-		Icon = "ui_dtex_Equip_1501011",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102011",
+		HunZhu = {
+			[1] = {
+				Id = 201101,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张飞魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 50,Sum = 50},[2] = {Id = 112,Val = 28,Sum = 28},[3] = {Id = 113,Val = 1350,Sum = 1350}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--张飞魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 80,Sum = 130},[2] = {Id = 112,Val = 44,Sum = 72},[3] = {Id = 113,Val = 2160,Sum = 3510}},Cost = {[1] = {Id = 1401002,Val = 185},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--张飞魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 100,Sum = 230},[2] = {Id = 112,Val = 55,Sum = 127},[3] = {Id = 113,Val = 2700,Sum = 6210}},Cost = {[1] = {Id = 1401002,Val = 305},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--张飞魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 160,Sum = 390},[2] = {Id = 112,Val = 88,Sum = 215},[3] = {Id = 113,Val = 4320,Sum = 10530}},Cost = {[1] = {Id = 1401002,Val = 390},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--张飞魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 220,Sum = 610},[2] = {Id = 112,Val = 121,Sum = 336},[3] = {Id = 113,Val = 5940,Sum = 16470}},Cost = {[1] = {Id = 1401002,Val = 495},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--张飞魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 280,Sum = 890},[2] = {Id = 112,Val = 154,Sum = 490},[3] = {Id = 113,Val = 7560,Sum = 24030}},Cost = {[1] = {Id = 1401002,Val = 590},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--张飞魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 320,Sum = 1210},[2] = {Id = 112,Val = 176,Sum = 666},[3] = {Id = 113,Val = 8640,Sum = 32670}},Cost = {[1] = {Id = 1401002,Val = 690},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--张飞魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 380,Sum = 1590},[2] = {Id = 112,Val = 209,Sum = 875},[3] = {Id = 113,Val = 10260,Sum = 42930}},Cost = {[1] = {Id = 1401002,Val = 790},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--张飞魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 420,Sum = 2010},[2] = {Id = 112,Val = 231,Sum = 1106},[3] = {Id = 113,Val = 11340,Sum = 54270}},Cost = {[1] = {Id = 1401002,Val = 985},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--张飞魂珠-1 等级-9
+				}
+			},--张飞专属武器魂珠-1
+			[2] = {
+				Id = 201102,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张飞魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 80,Sum = 80},[2] = {Id = 112,Val = 44,Sum = 44},[3] = {Id = 113,Val = 2160,Sum = 2160}},Cost = {[1] = {Id = 1401002,Val = 335},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--张飞魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 200},[2] = {Id = 112,Val = 66,Sum = 110},[3] = {Id = 113,Val = 3240,Sum = 5400}},Cost = {[1] = {Id = 1401002,Val = 250},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--张飞魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 160,Sum = 360},[2] = {Id = 112,Val = 88,Sum = 198},[3] = {Id = 113,Val = 4320,Sum = 9720}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--张飞魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 600},[2] = {Id = 112,Val = 132,Sum = 330},[3] = {Id = 113,Val = 6480,Sum = 16200}},Cost = {[1] = {Id = 1401002,Val = 535},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--张飞魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 320,Sum = 920},[2] = {Id = 112,Val = 176,Sum = 506},[3] = {Id = 113,Val = 8640,Sum = 24840}},Cost = {[1] = {Id = 1401002,Val = 810},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--张飞魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 400,Sum = 1320},[2] = {Id = 112,Val = 220,Sum = 726},[3] = {Id = 113,Val = 10800,Sum = 35640}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--张飞魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1800},[2] = {Id = 112,Val = 264,Sum = 990},[3] = {Id = 113,Val = 12960,Sum = 48600}},Cost = {[1] = {Id = 1401002,Val = 1345},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--张飞魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 560,Sum = 2360},[2] = {Id = 112,Val = 308,Sum = 1298},[3] = {Id = 113,Val = 15120,Sum = 63720}},Cost = {[1] = {Id = 1401002,Val = 1615},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--张飞魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 640,Sum = 3000},[2] = {Id = 112,Val = 352,Sum = 1650},[3] = {Id = 113,Val = 17280,Sum = 81000}},Cost = {[1] = {Id = 1401002,Val = 2155},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--张飞魂珠-2 等级-9
+				}
+			},--张飞专属武器魂珠-2
+			[3] = {
+				Id = 201103,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张飞魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 100,Sum = 100},[2] = {Id = 112,Val = 55,Sum = 55},[3] = {Id = 113,Val = 2700,Sum = 2700}},Cost = {[1] = {Id = 1401002,Val = 685},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--张飞魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 160,Sum = 260},[2] = {Id = 112,Val = 88,Sum = 143},[3] = {Id = 113,Val = 4320,Sum = 7020}},Cost = {[1] = {Id = 1401002,Val = 515},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--张飞魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 210,Sum = 470},[2] = {Id = 112,Val = 116,Sum = 259},[3] = {Id = 113,Val = 5670,Sum = 12690}},Cost = {[1] = {Id = 1401002,Val = 855},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--张飞魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 320,Sum = 790},[2] = {Id = 112,Val = 176,Sum = 435},[3] = {Id = 113,Val = 8640,Sum = 21330}},Cost = {[1] = {Id = 1401002,Val = 820},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--张飞魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 426,Sum = 1216},[2] = {Id = 112,Val = 234,Sum = 669},[3] = {Id = 113,Val = 11502,Sum = 32832}},Cost = {[1] = {Id = 1401002,Val = 1115},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--张飞魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 1756},[2] = {Id = 112,Val = 297,Sum = 966},[3] = {Id = 113,Val = 14580,Sum = 47412}},Cost = {[1] = {Id = 1401002,Val = 1385},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--张飞魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 640,Sum = 2396},[2] = {Id = 112,Val = 352,Sum = 1318},[3] = {Id = 113,Val = 17280,Sum = 64692}},Cost = {[1] = {Id = 1401002,Val = 1660},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--张飞魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 750,Sum = 3146},[2] = {Id = 112,Val = 407,Sum = 1725},[3] = {Id = 113,Val = 20250,Sum = 84942}},Cost = {[1] = {Id = 1401002,Val = 2215},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--张飞魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 850,Sum = 3996},[2] = {Id = 112,Val = 468,Sum = 2193},[3] = {Id = 113,Val = 22950,Sum = 107892}},Cost = {[1] = {Id = 1401002,Val = 2770},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--张飞魂珠-3 等级-9
+				}
+			},--张飞专属武器魂珠-3
+			[4] = {
+				Id = 201104,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张飞魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 130,Sum = 130},[2] = {Id = 112,Val = 72,Sum = 72},[3] = {Id = 113,Val = 3510,Sum = 3510}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--张飞魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 200,Sum = 330},[2] = {Id = 112,Val = 110,Sum = 182},[3] = {Id = 113,Val = 5400,Sum = 8910}},Cost = {[1] = {Id = 1401002,Val = 835},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--张飞魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 260,Sum = 590},[2] = {Id = 112,Val = 143,Sum = 325},[3] = {Id = 113,Val = 7020,Sum = 15930}},Cost = {[1] = {Id = 1401002,Val = 925},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--张飞魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 400,Sum = 990},[2] = {Id = 112,Val = 220,Sum = 545},[3] = {Id = 113,Val = 10800,Sum = 26730}},Cost = {[1] = {Id = 1401002,Val = 1775},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--张飞魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 1530},[2] = {Id = 112,Val = 297,Sum = 842},[3] = {Id = 113,Val = 14580,Sum = 41310}},Cost = {[1] = {Id = 1401002,Val = 1805},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--张飞魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 670,Sum = 2200},[2] = {Id = 112,Val = 424,Sum = 1266},[3] = {Id = 113,Val = 18090,Sum = 59400}},Cost = {[1] = {Id = 1401002,Val = 1795},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--张飞魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 800,Sum = 3000},[2] = {Id = 112,Val = 440,Sum = 1706},[3] = {Id = 113,Val = 21600,Sum = 81000}},Cost = {[1] = {Id = 1401002,Val = 2695},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--张飞魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 950,Sum = 3950},[2] = {Id = 112,Val = 523,Sum = 2229},[3] = {Id = 113,Val = 25650,Sum = 106650}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--张飞魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1100,Sum = 5050},[2] = {Id = 112,Val = 605,Sum = 2834},[3] = {Id = 113,Val = 29700,Sum = 136350}},Cost = {[1] = {Id = 1401002,Val = 5390},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--张飞魂珠-4 等级-9
+				}
+			},--张飞专属武器魂珠-4
+			[5] = {
+				Id = 201105,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张飞魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 180,Sum = 180},[2] = {Id = 112,Val = 99,Sum = 99},[3] = {Id = 113,Val = 4860,Sum = 4860}},Cost = {[1] = {Id = 1401002,Val = 2315},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--张飞魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 280,Sum = 460},[2] = {Id = 112,Val = 154,Sum = 253},[3] = {Id = 113,Val = 7560,Sum = 12420}},Cost = {[1] = {Id = 1401002,Val = 1735},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--张飞魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 370,Sum = 830},[2] = {Id = 112,Val = 204,Sum = 457},[3] = {Id = 113,Val = 9990,Sum = 22410}},Cost = {[1] = {Id = 1401002,Val = 1930},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--张飞魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 560,Sum = 1390},[2] = {Id = 112,Val = 308,Sum = 765},[3] = {Id = 113,Val = 15120,Sum = 37530}},Cost = {[1] = {Id = 1401002,Val = 2780},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--张飞魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 750,Sum = 2140},[2] = {Id = 112,Val = 413,Sum = 1178},[3] = {Id = 113,Val = 20250,Sum = 57780}},Cost = {[1] = {Id = 1401002,Val = 2820},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--张飞魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 950,Sum = 3090},[2] = {Id = 112,Val = 523,Sum = 1701},[3] = {Id = 113,Val = 25650,Sum = 83430}},Cost = {[1] = {Id = 1401002,Val = 4675},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--张飞魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1200,Sum = 4290},[2] = {Id = 112,Val = 660,Sum = 2361},[3] = {Id = 113,Val = 32400,Sum = 115830}},Cost = {[1] = {Id = 1401002,Val = 4685},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--张飞魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1300,Sum = 5590},[2] = {Id = 112,Val = 715,Sum = 3076},[3] = {Id = 113,Val = 35100,Sum = 150930}},Cost = {[1] = {Id = 1401002,Val = 6555},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--张飞魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1500,Sum = 7090},[2] = {Id = 112,Val = 825,Sum = 3901},[3] = {Id = 113,Val = 40500,Sum = 191430}},Cost = {[1] = {Id = 1401002,Val = 8430},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--张飞魂珠-5 等级-9
+				}
+			},--张飞专属武器魂珠-5
+			[6] = {
+				Id = 201106,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张飞魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 250,Sum = 250},[2] = {Id = 112,Val = 138,Sum = 138},[3] = {Id = 113,Val = 6750,Sum = 6750}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--张飞魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 400,Sum = 650},[2] = {Id = 112,Val = 220,Sum = 358},[3] = {Id = 113,Val = 10800,Sum = 17550}},Cost = {[1] = {Id = 1401002,Val = 3270},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--张飞魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 500,Sum = 1150},[2] = {Id = 112,Val = 275,Sum = 633},[3] = {Id = 113,Val = 13500,Sum = 31050}},Cost = {[1] = {Id = 1401002,Val = 3630},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--张飞魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 800,Sum = 1950},[2] = {Id = 112,Val = 440,Sum = 1073},[3] = {Id = 113,Val = 21600,Sum = 52650}},Cost = {[1] = {Id = 1401002,Val = 5230},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--张飞魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1100,Sum = 3050},[2] = {Id = 112,Val = 605,Sum = 1678},[3] = {Id = 113,Val = 29700,Sum = 82350}},Cost = {[1] = {Id = 1401002,Val = 5310},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--张飞魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1350,Sum = 4400},[2] = {Id = 112,Val = 743,Sum = 2421},[3] = {Id = 113,Val = 36450,Sum = 118800}},Cost = {[1] = {Id = 1401002,Val = 7040},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--张飞魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1600,Sum = 6000},[2] = {Id = 112,Val = 880,Sum = 3301},[3] = {Id = 113,Val = 43200,Sum = 162000}},Cost = {[1] = {Id = 1401002,Val = 8820},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--张飞魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1900,Sum = 7900},[2] = {Id = 112,Val = 1045,Sum = 4346},[3] = {Id = 113,Val = 51300,Sum = 213300}},Cost = {[1] = {Id = 1401002,Val = 12335},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--张飞魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2200,Sum = 10100},[2] = {Id = 112,Val = 1210,Sum = 5556},[3] = {Id = 113,Val = 59400,Sum = 272700}},Cost = {[1] = {Id = 1401002,Val = 14100},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--张飞魂珠-6 等级-9
+				}
+			},--张飞专属武器魂珠-6
+			[7] = {
+				Id = 201107,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张飞魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 320,Sum = 320},[2] = {Id = 112,Val = 176,Sum = 176},[3] = {Id = 113,Val = 8640,Sum = 8640}},Cost = {[1] = {Id = 1401002,Val = 4280},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--张飞魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 800},[2] = {Id = 112,Val = 264,Sum = 440},[3] = {Id = 113,Val = 12960,Sum = 21600}},Cost = {[1] = {Id = 1401002,Val = 3210},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--张飞魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 640,Sum = 1440},[2] = {Id = 112,Val = 352,Sum = 792},[3] = {Id = 113,Val = 17280,Sum = 38880}},Cost = {[1] = {Id = 1401002,Val = 5350},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--张飞魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2400},[2] = {Id = 112,Val = 528,Sum = 1320},[3] = {Id = 113,Val = 25920,Sum = 64800}},Cost = {[1] = {Id = 1401002,Val = 6850},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--张飞魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1280,Sum = 3680},[2] = {Id = 112,Val = 704,Sum = 2024},[3] = {Id = 113,Val = 34560,Sum = 99360}},Cost = {[1] = {Id = 1401002,Val = 6955},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--张飞魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1600,Sum = 5280},[2] = {Id = 112,Val = 880,Sum = 2904},[3] = {Id = 113,Val = 43200,Sum = 142560}},Cost = {[1] = {Id = 1401002,Val = 8645},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--张飞魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 7200},[2] = {Id = 112,Val = 1056,Sum = 3960},[3] = {Id = 113,Val = 51840,Sum = 194400}},Cost = {[1] = {Id = 1401002,Val = 12130},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--张飞魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2240,Sum = 9440},[2] = {Id = 112,Val = 1232,Sum = 5192},[3] = {Id = 113,Val = 60480,Sum = 254880}},Cost = {[1] = {Id = 1401002,Val = 13850},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--张飞魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2560,Sum = 12000},[2] = {Id = 112,Val = 1408,Sum = 6600},[3] = {Id = 113,Val = 69120,Sum = 324000}},Cost = {[1] = {Id = 1401002,Val = 17315},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--张飞魂珠-7 等级-9
+				}
+			},--张飞专属武器魂珠-7
+			[8] = {
+				Id = 201108,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--张飞魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 400,Sum = 400},[2] = {Id = 112,Val = 220,Sum = 220},[3] = {Id = 113,Val = 10800,Sum = 10800}},Cost = {[1] = {Id = 1401002,Val = 3650},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--张飞魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 1000},[2] = {Id = 112,Val = 330,Sum = 550},[3] = {Id = 113,Val = 16200,Sum = 27000}},Cost = {[1] = {Id = 1401002,Val = 4375},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--张飞魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 800,Sum = 1800},[2] = {Id = 112,Val = 440,Sum = 990},[3] = {Id = 113,Val = 21600,Sum = 48600}},Cost = {[1] = {Id = 1401002,Val = 6080},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--张飞魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1200,Sum = 3000},[2] = {Id = 112,Val = 660,Sum = 1650},[3] = {Id = 113,Val = 32400,Sum = 81000}},Cost = {[1] = {Id = 1401002,Val = 7005},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--张飞魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1600,Sum = 4600},[2] = {Id = 112,Val = 880,Sum = 2530},[3] = {Id = 113,Val = 43200,Sum = 124200}},Cost = {[1] = {Id = 1401002,Val = 8890},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--张飞魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2000,Sum = 6600},[2] = {Id = 112,Val = 1100,Sum = 3630},[3] = {Id = 113,Val = 54000,Sum = 178200}},Cost = {[1] = {Id = 1401002,Val = 10610},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--张飞魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 9000},[2] = {Id = 112,Val = 1320,Sum = 4950},[3] = {Id = 113,Val = 64800,Sum = 243000}},Cost = {[1] = {Id = 1401002,Val = 14765},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--张飞魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2800,Sum = 11800},[2] = {Id = 112,Val = 1540,Sum = 6490},[3] = {Id = 113,Val = 75600,Sum = 318600}},Cost = {[1] = {Id = 1401002,Val = 17705},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--张飞魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3200,Sum = 15000},[2] = {Id = 112,Val = 1760,Sum = 8250},[3] = {Id = 113,Val = 86400,Sum = 405000}},Cost = {[1] = {Id = 1401002,Val = 17710},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--张飞魂珠-8 等级-9
+				}
+			}--张飞专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611011,val = 5}},PSkill = 130301111,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611011,val = 5}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611011,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611011,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611011,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611011,val = 20}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611011,val = 20}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611011,val = 20}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611011,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611011,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611011,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611011,val = 50}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611011,val = 60}},Prop = {[1] = {id = 110,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502011,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130301111,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502011,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502011,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502011,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502011,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502011,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502011,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502011,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502011,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502011,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502011,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502011,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502011,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 110,Val = 0.14}}}
 		}
 	},--张飞专属武器
-	[1501012] = {
+	[1102012] = {
 		CardId = 1102012,
 		Name = _T("鬼哭地狱"),
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 56805},[2] = {id = 112,val = 56805},[3] = {id = 113,val = 56805}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611012,val = 30}},
-		Icon = "ui_dtex_Equip_1501012",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102012",
+		HunZhu = {
+			[1] = {
+				Id = 201201,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯惇魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 60,Sum = 60},[2] = {Id = 112,Val = 30,Sum = 30},[3] = {Id = 113,Val = 1500,Sum = 1500}},Cost = {[1] = {Id = 1401002,Val = 160},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--夏侯惇魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 156},[2] = {Id = 112,Val = 48,Sum = 78},[3] = {Id = 113,Val = 2400,Sum = 3900}},Cost = {[1] = {Id = 1401002,Val = 245},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--夏侯惇魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 276},[2] = {Id = 112,Val = 60,Sum = 138},[3] = {Id = 113,Val = 3000,Sum = 6900}},Cost = {[1] = {Id = 1401002,Val = 405},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--夏侯惇魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 468},[2] = {Id = 112,Val = 96,Sum = 234},[3] = {Id = 113,Val = 4800,Sum = 11700}},Cost = {[1] = {Id = 1401002,Val = 520},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--夏侯惇魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 264,Sum = 732},[2] = {Id = 112,Val = 132,Sum = 366},[3] = {Id = 113,Val = 6600,Sum = 18300}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--夏侯惇魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 1068},[2] = {Id = 112,Val = 168,Sum = 534},[3] = {Id = 113,Val = 8400,Sum = 26700}},Cost = {[1] = {Id = 1401002,Val = 790},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--夏侯惇魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1452},[2] = {Id = 112,Val = 192,Sum = 726},[3] = {Id = 113,Val = 9600,Sum = 36300}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--夏侯惇魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 456,Sum = 1908},[2] = {Id = 112,Val = 228,Sum = 954},[3] = {Id = 113,Val = 11400,Sum = 47700}},Cost = {[1] = {Id = 1401002,Val = 1055},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--夏侯惇魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 2412},[2] = {Id = 112,Val = 252,Sum = 1206},[3] = {Id = 113,Val = 12600,Sum = 60300}},Cost = {[1] = {Id = 1401002,Val = 1315},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--夏侯惇魂珠-1 等级-9
+				}
+			},--夏侯惇专属武器魂珠-1
+			[2] = {
+				Id = 201202,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯惇魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 96},[2] = {Id = 112,Val = 48,Sum = 48},[3] = {Id = 113,Val = 2400,Sum = 2400}},Cost = {[1] = {Id = 1401002,Val = 445},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--夏侯惇魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 240},[2] = {Id = 112,Val = 72,Sum = 120},[3] = {Id = 113,Val = 3600,Sum = 6000}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--夏侯惇魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 432},[2] = {Id = 112,Val = 96,Sum = 216},[3] = {Id = 113,Val = 4800,Sum = 10800}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--夏侯惇魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 720},[2] = {Id = 112,Val = 144,Sum = 360},[3] = {Id = 113,Val = 7200,Sum = 18000}},Cost = {[1] = {Id = 1401002,Val = 710},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--夏侯惇魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1104},[2] = {Id = 112,Val = 192,Sum = 552},[3] = {Id = 113,Val = 9600,Sum = 27600}},Cost = {[1] = {Id = 1401002,Val = 1080},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--夏侯惇魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1584},[2] = {Id = 112,Val = 240,Sum = 792},[3] = {Id = 113,Val = 12000,Sum = 39600}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--夏侯惇魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2160},[2] = {Id = 112,Val = 288,Sum = 1080},[3] = {Id = 113,Val = 14400,Sum = 54000}},Cost = {[1] = {Id = 1401002,Val = 1795},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--夏侯惇魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 2832},[2] = {Id = 112,Val = 336,Sum = 1416},[3] = {Id = 113,Val = 16800,Sum = 70800}},Cost = {[1] = {Id = 1401002,Val = 2150},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--夏侯惇魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 3600},[2] = {Id = 112,Val = 384,Sum = 1800},[3] = {Id = 113,Val = 19200,Sum = 90000}},Cost = {[1] = {Id = 1401002,Val = 2870},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--夏侯惇魂珠-2 等级-9
+				}
+			},--夏侯惇专属武器魂珠-2
+			[3] = {
+				Id = 201203,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯惇魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 120},[2] = {Id = 112,Val = 60,Sum = 60},[3] = {Id = 113,Val = 3000,Sum = 3000}},Cost = {[1] = {Id = 1401002,Val = 910},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--夏侯惇魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 312},[2] = {Id = 112,Val = 96,Sum = 156},[3] = {Id = 113,Val = 4800,Sum = 7800}},Cost = {[1] = {Id = 1401002,Val = 685},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--夏侯惇魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 564},[2] = {Id = 112,Val = 126,Sum = 282},[3] = {Id = 113,Val = 6300,Sum = 14100}},Cost = {[1] = {Id = 1401002,Val = 1140},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--夏侯惇魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 948},[2] = {Id = 112,Val = 192,Sum = 474},[3] = {Id = 113,Val = 9600,Sum = 23700}},Cost = {[1] = {Id = 1401002,Val = 1095},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--夏侯惇魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 511,Sum = 1459},[2] = {Id = 112,Val = 256,Sum = 730},[3] = {Id = 113,Val = 12780,Sum = 36480}},Cost = {[1] = {Id = 1401002,Val = 1485},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--夏侯惇魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 2107},[2] = {Id = 112,Val = 324,Sum = 1054},[3] = {Id = 113,Val = 16200,Sum = 52680}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--夏侯惇魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 2875},[2] = {Id = 112,Val = 384,Sum = 1438},[3] = {Id = 113,Val = 19200,Sum = 71880}},Cost = {[1] = {Id = 1401002,Val = 2215},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--夏侯惇魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 3775},[2] = {Id = 112,Val = 444,Sum = 1882},[3] = {Id = 113,Val = 22500,Sum = 94380}},Cost = {[1] = {Id = 1401002,Val = 2955},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--夏侯惇魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1020,Sum = 4795},[2] = {Id = 112,Val = 510,Sum = 2392},[3] = {Id = 113,Val = 25500,Sum = 119880}},Cost = {[1] = {Id = 1401002,Val = 3695},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--夏侯惇魂珠-3 等级-9
+				}
+			},--夏侯惇专属武器魂珠-3
+			[4] = {
+				Id = 201204,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯惇魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 156,Sum = 156},[2] = {Id = 112,Val = 78,Sum = 78},[3] = {Id = 113,Val = 3900,Sum = 3900}},Cost = {[1] = {Id = 1401002,Val = 1480},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--夏侯惇魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 396},[2] = {Id = 112,Val = 120,Sum = 198},[3] = {Id = 113,Val = 6000,Sum = 9900}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--夏侯惇魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 312,Sum = 708},[2] = {Id = 112,Val = 156,Sum = 354},[3] = {Id = 113,Val = 7800,Sum = 17700}},Cost = {[1] = {Id = 1401002,Val = 1235},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--夏侯惇魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1188},[2] = {Id = 112,Val = 240,Sum = 594},[3] = {Id = 113,Val = 12000,Sum = 29700}},Cost = {[1] = {Id = 1401002,Val = 2370},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--夏侯惇魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 1836},[2] = {Id = 112,Val = 324,Sum = 918},[3] = {Id = 113,Val = 16200,Sum = 45900}},Cost = {[1] = {Id = 1401002,Val = 2405},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--夏侯惇魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 804,Sum = 2640},[2] = {Id = 112,Val = 462,Sum = 1380},[3] = {Id = 113,Val = 20100,Sum = 66000}},Cost = {[1] = {Id = 1401002,Val = 2390},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--夏侯惇魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 3600},[2] = {Id = 112,Val = 480,Sum = 1860},[3] = {Id = 113,Val = 24000,Sum = 90000}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--夏侯惇魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 4740},[2] = {Id = 112,Val = 570,Sum = 2430},[3] = {Id = 113,Val = 28500,Sum = 118500}},Cost = {[1] = {Id = 1401002,Val = 4790},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--夏侯惇魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 6060},[2] = {Id = 112,Val = 660,Sum = 3090},[3] = {Id = 113,Val = 33000,Sum = 151500}},Cost = {[1] = {Id = 1401002,Val = 7190},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--夏侯惇魂珠-4 等级-9
+				}
+			},--夏侯惇专属武器魂珠-4
+			[5] = {
+				Id = 201205,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯惇魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 216},[2] = {Id = 112,Val = 108,Sum = 108},[3] = {Id = 113,Val = 5400,Sum = 5400}},Cost = {[1] = {Id = 1401002,Val = 3085},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--夏侯惇魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 552},[2] = {Id = 112,Val = 168,Sum = 276},[3] = {Id = 113,Val = 8400,Sum = 13800}},Cost = {[1] = {Id = 1401002,Val = 2315},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--夏侯惇魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 444,Sum = 996},[2] = {Id = 112,Val = 222,Sum = 498},[3] = {Id = 113,Val = 11100,Sum = 24900}},Cost = {[1] = {Id = 1401002,Val = 2570},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--夏侯惇魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 1668},[2] = {Id = 112,Val = 336,Sum = 834},[3] = {Id = 113,Val = 16800,Sum = 41700}},Cost = {[1] = {Id = 1401002,Val = 3705},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--夏侯惇魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 2568},[2] = {Id = 112,Val = 450,Sum = 1284},[3] = {Id = 113,Val = 22500,Sum = 64200}},Cost = {[1] = {Id = 1401002,Val = 3760},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--夏侯惇魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 3708},[2] = {Id = 112,Val = 570,Sum = 1854},[3] = {Id = 113,Val = 28500,Sum = 92700}},Cost = {[1] = {Id = 1401002,Val = 6230},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--夏侯惇魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 5148},[2] = {Id = 112,Val = 720,Sum = 2574},[3] = {Id = 113,Val = 36000,Sum = 128700}},Cost = {[1] = {Id = 1401002,Val = 6245},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--夏侯惇魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1560,Sum = 6708},[2] = {Id = 112,Val = 780,Sum = 3354},[3] = {Id = 113,Val = 39000,Sum = 167700}},Cost = {[1] = {Id = 1401002,Val = 8740},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--夏侯惇魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1800,Sum = 8508},[2] = {Id = 112,Val = 900,Sum = 4254},[3] = {Id = 113,Val = 45000,Sum = 212700}},Cost = {[1] = {Id = 1401002,Val = 11240},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--夏侯惇魂珠-5 等级-9
+				}
+			},--夏侯惇专属武器魂珠-5
+			[6] = {
+				Id = 201206,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯惇魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 300,Sum = 300},[2] = {Id = 112,Val = 150,Sum = 150},[3] = {Id = 113,Val = 7500,Sum = 7500}},Cost = {[1] = {Id = 1401002,Val = 2905},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--夏侯惇魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 780},[2] = {Id = 112,Val = 240,Sum = 390},[3] = {Id = 113,Val = 12000,Sum = 19500}},Cost = {[1] = {Id = 1401002,Val = 4360},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--夏侯惇魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 1380},[2] = {Id = 112,Val = 300,Sum = 690},[3] = {Id = 113,Val = 15000,Sum = 34500}},Cost = {[1] = {Id = 1401002,Val = 4840},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--夏侯惇魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2340},[2] = {Id = 112,Val = 480,Sum = 1170},[3] = {Id = 113,Val = 24000,Sum = 58500}},Cost = {[1] = {Id = 1401002,Val = 6970},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--夏侯惇魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 3660},[2] = {Id = 112,Val = 660,Sum = 1830},[3] = {Id = 113,Val = 33000,Sum = 91500}},Cost = {[1] = {Id = 1401002,Val = 7080},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--夏侯惇魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 5280},[2] = {Id = 112,Val = 810,Sum = 2640},[3] = {Id = 113,Val = 40500,Sum = 132000}},Cost = {[1] = {Id = 1401002,Val = 9385},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--夏侯惇魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 7200},[2] = {Id = 112,Val = 960,Sum = 3600},[3] = {Id = 113,Val = 48000,Sum = 180000}},Cost = {[1] = {Id = 1401002,Val = 11760},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--夏侯惇魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2280,Sum = 9480},[2] = {Id = 112,Val = 1140,Sum = 4740},[3] = {Id = 113,Val = 57000,Sum = 237000}},Cost = {[1] = {Id = 1401002,Val = 16445},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--夏侯惇魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2640,Sum = 12120},[2] = {Id = 112,Val = 1320,Sum = 6060},[3] = {Id = 113,Val = 66000,Sum = 303000}},Cost = {[1] = {Id = 1401002,Val = 18800},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--夏侯惇魂珠-6 等级-9
+				}
+			},--夏侯惇专属武器魂珠-6
+			[7] = {
+				Id = 201207,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯惇魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 384},[2] = {Id = 112,Val = 192,Sum = 192},[3] = {Id = 113,Val = 9600,Sum = 9600}},Cost = {[1] = {Id = 1401002,Val = 5710},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--夏侯惇魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 960},[2] = {Id = 112,Val = 288,Sum = 480},[3] = {Id = 113,Val = 14400,Sum = 24000}},Cost = {[1] = {Id = 1401002,Val = 4280},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--夏侯惇魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 1728},[2] = {Id = 112,Val = 384,Sum = 864},[3] = {Id = 113,Val = 19200,Sum = 43200}},Cost = {[1] = {Id = 1401002,Val = 7135},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--夏侯惇魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1152,Sum = 2880},[2] = {Id = 112,Val = 576,Sum = 1440},[3] = {Id = 113,Val = 28800,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 9130},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--夏侯惇魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1536,Sum = 4416},[2] = {Id = 112,Val = 768,Sum = 2208},[3] = {Id = 113,Val = 38400,Sum = 110400}},Cost = {[1] = {Id = 1401002,Val = 9275},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--夏侯惇魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 6336},[2] = {Id = 112,Val = 960,Sum = 3168},[3] = {Id = 113,Val = 48000,Sum = 158400}},Cost = {[1] = {Id = 1401002,Val = 11525},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--夏侯惇魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2304,Sum = 8640},[2] = {Id = 112,Val = 1152,Sum = 4320},[3] = {Id = 113,Val = 57600,Sum = 216000}},Cost = {[1] = {Id = 1401002,Val = 16170},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--夏侯惇魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2688,Sum = 11328},[2] = {Id = 112,Val = 1344,Sum = 5664},[3] = {Id = 113,Val = 67200,Sum = 283200}},Cost = {[1] = {Id = 1401002,Val = 18465},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--夏侯惇魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3072,Sum = 14400},[2] = {Id = 112,Val = 1536,Sum = 7200},[3] = {Id = 113,Val = 76800,Sum = 360000}},Cost = {[1] = {Id = 1401002,Val = 23090},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--夏侯惇魂珠-7 等级-9
+				}
+			},--夏侯惇专属武器魂珠-7
+			[8] = {
+				Id = 201208,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--夏侯惇魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 480},[2] = {Id = 112,Val = 240,Sum = 240},[3] = {Id = 113,Val = 12000,Sum = 12000}},Cost = {[1] = {Id = 1401002,Val = 4865},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--夏侯惇魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1200},[2] = {Id = 112,Val = 360,Sum = 600},[3] = {Id = 113,Val = 18000,Sum = 30000}},Cost = {[1] = {Id = 1401002,Val = 5835},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--夏侯惇魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2160},[2] = {Id = 112,Val = 480,Sum = 1080},[3] = {Id = 113,Val = 24000,Sum = 54000}},Cost = {[1] = {Id = 1401002,Val = 8105},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--夏侯惇魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 3600},[2] = {Id = 112,Val = 720,Sum = 1800},[3] = {Id = 113,Val = 36000,Sum = 90000}},Cost = {[1] = {Id = 1401002,Val = 9340},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--夏侯惇魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 5520},[2] = {Id = 112,Val = 960,Sum = 2760},[3] = {Id = 113,Val = 48000,Sum = 138000}},Cost = {[1] = {Id = 1401002,Val = 11855},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--夏侯惇魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 7920},[2] = {Id = 112,Val = 1200,Sum = 3960},[3] = {Id = 113,Val = 60000,Sum = 198000}},Cost = {[1] = {Id = 1401002,Val = 14145},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--夏侯惇魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2880,Sum = 10800},[2] = {Id = 112,Val = 1440,Sum = 5400},[3] = {Id = 113,Val = 72000,Sum = 270000}},Cost = {[1] = {Id = 1401002,Val = 19690},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--夏侯惇魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3360,Sum = 14160},[2] = {Id = 112,Val = 1680,Sum = 7080},[3] = {Id = 113,Val = 84000,Sum = 354000}},Cost = {[1] = {Id = 1401002,Val = 23605},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--夏侯惇魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3840,Sum = 18000},[2] = {Id = 112,Val = 1920,Sum = 9000},[3] = {Id = 113,Val = 96000,Sum = 450000}},Cost = {[1] = {Id = 1401002,Val = 23615},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--夏侯惇魂珠-8 等级-9
+				}
+			}--夏侯惇专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611012,val = 5}},PSkill = 130301211,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611012,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611012,val = 10}},Prop = {[1] = {id = 115,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611012,val = 10}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611012,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611012,val = 20}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611012,val = 20}},Prop = {[1] = {id = 115,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611012,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611012,val = 30}},Prop = {[1] = {id = 115,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611012,val = 30}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611012,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611012,val = 50}},Prop = {[1] = {id = 104,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611012,val = 60}},Prop = {[1] = {id = 115,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502012,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130301211,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502012,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502012,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 115,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502012,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502012,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502012,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502012,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 115,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502012,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502012,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 115,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502012,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502012,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502012,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502012,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 115,Val = 0.14}}}
 		}
 	},--夏侯惇专属武器
-	[1501013] = {
-		CardId = 1102013,
-		Name = _T("暴食之爪"),
-		Quality = 3,
-		Prop = {[1] = {id = 111,val = 75740},[2] = {id = 112,val = 18935},[3] = {id = 113,val = 18935}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611013,val = 30}},
-		Icon = "ui_dtex_Equip_1501013",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
-		},
-		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611013,val = 5}},PSkill = 130301311,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611013,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611013,val = 10}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611013,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611013,val = 10}},Prop = {[1] = {id = 105,val = 0.21}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611013,val = 20}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611013,val = 20}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611013,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611013,val = 30}},Prop = {[1] = {id = 104,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611013,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611013,val = 30}},Prop = {[1] = {id = 105,val = 0.29}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611013,val = 50}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611013,val = 60}},Prop = {[1] = {id = 108,val = 0.14}}}
-		}
-	},--塞伯罗斯专属武器
-	[1501014] = {
+	[1102014] = {
 		CardId = 1102014,
 		Name = _T("镔铁盘龙棍"),
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 73846},[2] = {id = 112,val = 49231},[3] = {id = 113,val = 24615}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611014,val = 30}},
-		Icon = "ui_dtex_Equip_1501014",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102014",
+		HunZhu = {
+			[1] = {
+				Id = 201401,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--石灵明魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 50,Sum = 50},[2] = {Id = 112,Val = 25,Sum = 25},[3] = {Id = 113,Val = 1000,Sum = 1000}},Cost = {[1] = {Id = 1401002,Val = 80},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--石灵明魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 80,Sum = 130},[2] = {Id = 112,Val = 40,Sum = 65},[3] = {Id = 113,Val = 1600,Sum = 2600}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--石灵明魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 100,Sum = 230},[2] = {Id = 112,Val = 50,Sum = 115},[3] = {Id = 113,Val = 2000,Sum = 4600}},Cost = {[1] = {Id = 1401002,Val = 205},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--石灵明魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 160,Sum = 390},[2] = {Id = 112,Val = 80,Sum = 195},[3] = {Id = 113,Val = 3200,Sum = 7800}},Cost = {[1] = {Id = 1401002,Val = 260},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--石灵明魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 220,Sum = 610},[2] = {Id = 112,Val = 110,Sum = 305},[3] = {Id = 113,Val = 4400,Sum = 12200}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--石灵明魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 280,Sum = 890},[2] = {Id = 112,Val = 140,Sum = 445},[3] = {Id = 113,Val = 5600,Sum = 17800}},Cost = {[1] = {Id = 1401002,Val = 395},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--石灵明魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 320,Sum = 1210},[2] = {Id = 112,Val = 160,Sum = 605},[3] = {Id = 113,Val = 6400,Sum = 24200}},Cost = {[1] = {Id = 1401002,Val = 460},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--石灵明魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 380,Sum = 1590},[2] = {Id = 112,Val = 190,Sum = 795},[3] = {Id = 113,Val = 7600,Sum = 31800}},Cost = {[1] = {Id = 1401002,Val = 525},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--石灵明魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 420,Sum = 2010},[2] = {Id = 112,Val = 210,Sum = 1005},[3] = {Id = 113,Val = 8400,Sum = 40200}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--石灵明魂珠-1 等级-9
+				}
+			},--石灵明专属武器魂珠-1
+			[2] = {
+				Id = 201402,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--石灵明魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 80,Sum = 80},[2] = {Id = 112,Val = 40,Sum = 40},[3] = {Id = 113,Val = 1600,Sum = 1600}},Cost = {[1] = {Id = 1401002,Val = 220},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--石灵明魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 200},[2] = {Id = 112,Val = 60,Sum = 100},[3] = {Id = 113,Val = 2400,Sum = 4000}},Cost = {[1] = {Id = 1401002,Val = 165},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--石灵明魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 160,Sum = 360},[2] = {Id = 112,Val = 80,Sum = 180},[3] = {Id = 113,Val = 3200,Sum = 7200}},Cost = {[1] = {Id = 1401002,Val = 370},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--石灵明魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 600},[2] = {Id = 112,Val = 120,Sum = 300},[3] = {Id = 113,Val = 4800,Sum = 12000}},Cost = {[1] = {Id = 1401002,Val = 355},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--石灵明魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 320,Sum = 920},[2] = {Id = 112,Val = 160,Sum = 460},[3] = {Id = 113,Val = 6400,Sum = 18400}},Cost = {[1] = {Id = 1401002,Val = 540},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--石灵明魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 400,Sum = 1320},[2] = {Id = 112,Val = 200,Sum = 660},[3] = {Id = 113,Val = 8000,Sum = 26400}},Cost = {[1] = {Id = 1401002,Val = 715},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--石灵明魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1800},[2] = {Id = 112,Val = 240,Sum = 900},[3] = {Id = 113,Val = 9600,Sum = 36000}},Cost = {[1] = {Id = 1401002,Val = 900},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--石灵明魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 560,Sum = 2360},[2] = {Id = 112,Val = 280,Sum = 1180},[3] = {Id = 113,Val = 11200,Sum = 47200}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--石灵明魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 640,Sum = 3000},[2] = {Id = 112,Val = 320,Sum = 1500},[3] = {Id = 113,Val = 12800,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--石灵明魂珠-2 等级-9
+				}
+			},--石灵明专属武器魂珠-2
+			[3] = {
+				Id = 201403,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--石灵明魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 100,Sum = 100},[2] = {Id = 112,Val = 50,Sum = 50},[3] = {Id = 113,Val = 2000,Sum = 2000}},Cost = {[1] = {Id = 1401002,Val = 455},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--石灵明魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 160,Sum = 260},[2] = {Id = 112,Val = 80,Sum = 130},[3] = {Id = 113,Val = 3200,Sum = 5200}},Cost = {[1] = {Id = 1401002,Val = 340},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--石灵明魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 210,Sum = 470},[2] = {Id = 112,Val = 105,Sum = 235},[3] = {Id = 113,Val = 4200,Sum = 9400}},Cost = {[1] = {Id = 1401002,Val = 570},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--石灵明魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 320,Sum = 790},[2] = {Id = 112,Val = 160,Sum = 395},[3] = {Id = 113,Val = 6400,Sum = 15800}},Cost = {[1] = {Id = 1401002,Val = 550},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--石灵明魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 426,Sum = 1216},[2] = {Id = 112,Val = 213,Sum = 608},[3] = {Id = 113,Val = 8520,Sum = 24320}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--石灵明魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 1756},[2] = {Id = 112,Val = 270,Sum = 878},[3] = {Id = 113,Val = 10800,Sum = 35120}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--石灵明魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 640,Sum = 2396},[2] = {Id = 112,Val = 320,Sum = 1198},[3] = {Id = 113,Val = 12800,Sum = 47920}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--石灵明魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 750,Sum = 3146},[2] = {Id = 112,Val = 370,Sum = 1568},[3] = {Id = 113,Val = 15000,Sum = 62920}},Cost = {[1] = {Id = 1401002,Val = 1475},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--石灵明魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 850,Sum = 3996},[2] = {Id = 112,Val = 425,Sum = 1993},[3] = {Id = 113,Val = 17000,Sum = 79920}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--石灵明魂珠-3 等级-9
+				}
+			},--石灵明专属武器魂珠-3
+			[4] = {
+				Id = 201404,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--石灵明魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 130,Sum = 130},[2] = {Id = 112,Val = 65,Sum = 65},[3] = {Id = 113,Val = 2600,Sum = 2600}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--石灵明魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 200,Sum = 330},[2] = {Id = 112,Val = 100,Sum = 165},[3] = {Id = 113,Val = 4000,Sum = 6600}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--石灵明魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 260,Sum = 590},[2] = {Id = 112,Val = 130,Sum = 295},[3] = {Id = 113,Val = 5200,Sum = 11800}},Cost = {[1] = {Id = 1401002,Val = 615},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--石灵明魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 400,Sum = 990},[2] = {Id = 112,Val = 200,Sum = 495},[3] = {Id = 113,Val = 8000,Sum = 19800}},Cost = {[1] = {Id = 1401002,Val = 1185},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--石灵明魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 1530},[2] = {Id = 112,Val = 270,Sum = 765},[3] = {Id = 113,Val = 10800,Sum = 30600}},Cost = {[1] = {Id = 1401002,Val = 1205},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--石灵明魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 670,Sum = 2200},[2] = {Id = 112,Val = 385,Sum = 1150},[3] = {Id = 113,Val = 13400,Sum = 44000}},Cost = {[1] = {Id = 1401002,Val = 1195},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--石灵明魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 800,Sum = 3000},[2] = {Id = 112,Val = 400,Sum = 1550},[3] = {Id = 113,Val = 16000,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 1800},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--石灵明魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 950,Sum = 3950},[2] = {Id = 112,Val = 475,Sum = 2025},[3] = {Id = 113,Val = 19000,Sum = 79000}},Cost = {[1] = {Id = 1401002,Val = 2395},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--石灵明魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1100,Sum = 5050},[2] = {Id = 112,Val = 550,Sum = 2575},[3] = {Id = 113,Val = 22000,Sum = 101000}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--石灵明魂珠-4 等级-9
+				}
+			},--石灵明专属武器魂珠-4
+			[5] = {
+				Id = 201405,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--石灵明魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 180,Sum = 180},[2] = {Id = 112,Val = 90,Sum = 90},[3] = {Id = 113,Val = 3600,Sum = 3600}},Cost = {[1] = {Id = 1401002,Val = 1545},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--石灵明魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 280,Sum = 460},[2] = {Id = 112,Val = 140,Sum = 230},[3] = {Id = 113,Val = 5600,Sum = 9200}},Cost = {[1] = {Id = 1401002,Val = 1155},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--石灵明魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 370,Sum = 830},[2] = {Id = 112,Val = 185,Sum = 415},[3] = {Id = 113,Val = 7400,Sum = 16600}},Cost = {[1] = {Id = 1401002,Val = 1285},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--石灵明魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 560,Sum = 1390},[2] = {Id = 112,Val = 280,Sum = 695},[3] = {Id = 113,Val = 11200,Sum = 27800}},Cost = {[1] = {Id = 1401002,Val = 1850},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--石灵明魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 750,Sum = 2140},[2] = {Id = 112,Val = 375,Sum = 1070},[3] = {Id = 113,Val = 15000,Sum = 42800}},Cost = {[1] = {Id = 1401002,Val = 1880},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--石灵明魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 950,Sum = 3090},[2] = {Id = 112,Val = 475,Sum = 1545},[3] = {Id = 113,Val = 19000,Sum = 61800}},Cost = {[1] = {Id = 1401002,Val = 3115},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--石灵明魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1200,Sum = 4290},[2] = {Id = 112,Val = 600,Sum = 2145},[3] = {Id = 113,Val = 24000,Sum = 85800}},Cost = {[1] = {Id = 1401002,Val = 3125},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--石灵明魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1300,Sum = 5590},[2] = {Id = 112,Val = 650,Sum = 2795},[3] = {Id = 113,Val = 26000,Sum = 111800}},Cost = {[1] = {Id = 1401002,Val = 4370},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--石灵明魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1500,Sum = 7090},[2] = {Id = 112,Val = 750,Sum = 3545},[3] = {Id = 113,Val = 30000,Sum = 141800}},Cost = {[1] = {Id = 1401002,Val = 5620},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--石灵明魂珠-5 等级-9
+				}
+			},--石灵明专属武器魂珠-5
+			[6] = {
+				Id = 201406,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--石灵明魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 250,Sum = 250},[2] = {Id = 112,Val = 125,Sum = 125},[3] = {Id = 113,Val = 5000,Sum = 5000}},Cost = {[1] = {Id = 1401002,Val = 1450},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--石灵明魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 400,Sum = 650},[2] = {Id = 112,Val = 200,Sum = 325},[3] = {Id = 113,Val = 8000,Sum = 13000}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--石灵明魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 500,Sum = 1150},[2] = {Id = 112,Val = 250,Sum = 575},[3] = {Id = 113,Val = 10000,Sum = 23000}},Cost = {[1] = {Id = 1401002,Val = 2420},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--石灵明魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 800,Sum = 1950},[2] = {Id = 112,Val = 400,Sum = 975},[3] = {Id = 113,Val = 16000,Sum = 39000}},Cost = {[1] = {Id = 1401002,Val = 3485},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--石灵明魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1100,Sum = 3050},[2] = {Id = 112,Val = 550,Sum = 1525},[3] = {Id = 113,Val = 22000,Sum = 61000}},Cost = {[1] = {Id = 1401002,Val = 3540},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--石灵明魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1350,Sum = 4400},[2] = {Id = 112,Val = 675,Sum = 2200},[3] = {Id = 113,Val = 27000,Sum = 88000}},Cost = {[1] = {Id = 1401002,Val = 4690},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--石灵明魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1600,Sum = 6000},[2] = {Id = 112,Val = 800,Sum = 3000},[3] = {Id = 113,Val = 32000,Sum = 120000}},Cost = {[1] = {Id = 1401002,Val = 5880},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--石灵明魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1900,Sum = 7900},[2] = {Id = 112,Val = 950,Sum = 3950},[3] = {Id = 113,Val = 38000,Sum = 158000}},Cost = {[1] = {Id = 1401002,Val = 8225},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--石灵明魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2200,Sum = 10100},[2] = {Id = 112,Val = 1100,Sum = 5050},[3] = {Id = 113,Val = 44000,Sum = 202000}},Cost = {[1] = {Id = 1401002,Val = 9400},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--石灵明魂珠-6 等级-9
+				}
+			},--石灵明专属武器魂珠-6
+			[7] = {
+				Id = 201407,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--石灵明魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 320,Sum = 320},[2] = {Id = 112,Val = 160,Sum = 160},[3] = {Id = 113,Val = 6400,Sum = 6400}},Cost = {[1] = {Id = 1401002,Val = 2855},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--石灵明魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 800},[2] = {Id = 112,Val = 240,Sum = 400},[3] = {Id = 113,Val = 9600,Sum = 16000}},Cost = {[1] = {Id = 1401002,Val = 2140},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--石灵明魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 640,Sum = 1440},[2] = {Id = 112,Val = 320,Sum = 720},[3] = {Id = 113,Val = 12800,Sum = 28800}},Cost = {[1] = {Id = 1401002,Val = 3565},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--石灵明魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2400},[2] = {Id = 112,Val = 480,Sum = 1200},[3] = {Id = 113,Val = 19200,Sum = 48000}},Cost = {[1] = {Id = 1401002,Val = 4565},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--石灵明魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1280,Sum = 3680},[2] = {Id = 112,Val = 640,Sum = 1840},[3] = {Id = 113,Val = 25600,Sum = 73600}},Cost = {[1] = {Id = 1401002,Val = 4635},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--石灵明魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1600,Sum = 5280},[2] = {Id = 112,Val = 800,Sum = 2640},[3] = {Id = 113,Val = 32000,Sum = 105600}},Cost = {[1] = {Id = 1401002,Val = 5760},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--石灵明魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 7200},[2] = {Id = 112,Val = 960,Sum = 3600},[3] = {Id = 113,Val = 38400,Sum = 144000}},Cost = {[1] = {Id = 1401002,Val = 8085},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--石灵明魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2240,Sum = 9440},[2] = {Id = 112,Val = 1120,Sum = 4720},[3] = {Id = 113,Val = 44800,Sum = 188800}},Cost = {[1] = {Id = 1401002,Val = 9230},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--石灵明魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2560,Sum = 12000},[2] = {Id = 112,Val = 1280,Sum = 6000},[3] = {Id = 113,Val = 51200,Sum = 240000}},Cost = {[1] = {Id = 1401002,Val = 11545},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--石灵明魂珠-7 等级-9
+				}
+			},--石灵明专属武器魂珠-7
+			[8] = {
+				Id = 201408,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--石灵明魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 400,Sum = 400},[2] = {Id = 112,Val = 200,Sum = 200},[3] = {Id = 113,Val = 8000,Sum = 8000}},Cost = {[1] = {Id = 1401002,Val = 2430},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--石灵明魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 1000},[2] = {Id = 112,Val = 300,Sum = 500},[3] = {Id = 113,Val = 12000,Sum = 20000}},Cost = {[1] = {Id = 1401002,Val = 2920},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--石灵明魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 800,Sum = 1800},[2] = {Id = 112,Val = 400,Sum = 900},[3] = {Id = 113,Val = 16000,Sum = 36000}},Cost = {[1] = {Id = 1401002,Val = 4055},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--石灵明魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1200,Sum = 3000},[2] = {Id = 112,Val = 600,Sum = 1500},[3] = {Id = 113,Val = 24000,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 4670},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--石灵明魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1600,Sum = 4600},[2] = {Id = 112,Val = 800,Sum = 2300},[3] = {Id = 113,Val = 32000,Sum = 92000}},Cost = {[1] = {Id = 1401002,Val = 5930},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--石灵明魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2000,Sum = 6600},[2] = {Id = 112,Val = 1000,Sum = 3300},[3] = {Id = 113,Val = 40000,Sum = 132000}},Cost = {[1] = {Id = 1401002,Val = 7070},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--石灵明魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 9000},[2] = {Id = 112,Val = 1200,Sum = 4500},[3] = {Id = 113,Val = 48000,Sum = 180000}},Cost = {[1] = {Id = 1401002,Val = 9845},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--石灵明魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2800,Sum = 11800},[2] = {Id = 112,Val = 1400,Sum = 5900},[3] = {Id = 113,Val = 56000,Sum = 236000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--石灵明魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3200,Sum = 15000},[2] = {Id = 112,Val = 1600,Sum = 7500},[3] = {Id = 113,Val = 64000,Sum = 300000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--石灵明魂珠-8 等级-9
+				}
+			}--石灵明专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611014,val = 5}},PSkill = 130301411,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611014,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611014,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611014,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611014,val = 10}},Prop = {[1] = {id = 105,val = 0.21}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611014,val = 20}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611014,val = 20}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611014,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611014,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611014,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611014,val = 30}},Prop = {[1] = {id = 105,val = 0.29}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611014,val = 50}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611014,val = 60}},Prop = {[1] = {id = 104,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502014,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130301411,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502014,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502014,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502014,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502014,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 105,Val = 0.21}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502014,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502014,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502014,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502014,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502014,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502014,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 105,Val = 0.29}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502014,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502014,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 104,Val = 0.14}}}
 		}
 	},--石灵明专属武器
-	[1501015] = {
-		CardId = 1102015,
-		Name = _T("恶灵灾祸"),
-		Quality = 3,
-		Prop = {[1] = {id = 111,val = 37870},[2] = {id = 112,val = 37870},[3] = {id = 113,val = 37870}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611015,val = 30}},
-		Icon = "ui_dtex_Equip_1501015",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
-		},
-		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611015,val = 5}},PSkill = 130301511,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611015,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611015,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611015,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611015,val = 10}},Prop = {[1] = {id = 114,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611015,val = 20}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611015,val = 20}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611015,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611015,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611015,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611015,val = 30}},Prop = {[1] = {id = 114,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611015,val = 50}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611015,val = 60}},Prop = {[1] = {id = 109,val = 0.14}}}
-		}
-	},--于禁专属武器
-	[1501016] = {
+	[1102016] = {
 		CardId = 1102016,
 		Name = _T("诸神的裁决"),
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 28402},[2] = {id = 112,val = 85207},[3] = {id = 113,val = 56805}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611016,val = 30}},
-		Icon = "ui_dtex_Equip_1501016",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102016",
+		HunZhu = {
+			[1] = {
+				Id = 201601,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--西方龙魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 55,Sum = 55},[2] = {Id = 112,Val = 30,Sum = 30},[3] = {Id = 113,Val = 1350,Sum = 1350}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--西方龙魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 88,Sum = 143},[2] = {Id = 112,Val = 48,Sum = 78},[3] = {Id = 113,Val = 2160,Sum = 3510}},Cost = {[1] = {Id = 1401002,Val = 185},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--西方龙魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 110,Sum = 253},[2] = {Id = 112,Val = 60,Sum = 138},[3] = {Id = 113,Val = 2700,Sum = 6210}},Cost = {[1] = {Id = 1401002,Val = 305},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--西方龙魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 429},[2] = {Id = 112,Val = 96,Sum = 234},[3] = {Id = 113,Val = 4320,Sum = 10530}},Cost = {[1] = {Id = 1401002,Val = 390},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--西方龙魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 242,Sum = 671},[2] = {Id = 112,Val = 132,Sum = 366},[3] = {Id = 113,Val = 5940,Sum = 16470}},Cost = {[1] = {Id = 1401002,Val = 495},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--西方龙魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 308,Sum = 979},[2] = {Id = 112,Val = 168,Sum = 534},[3] = {Id = 113,Val = 7560,Sum = 24030}},Cost = {[1] = {Id = 1401002,Val = 590},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--西方龙魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 1331},[2] = {Id = 112,Val = 192,Sum = 726},[3] = {Id = 113,Val = 8640,Sum = 32670}},Cost = {[1] = {Id = 1401002,Val = 690},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--西方龙魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 418,Sum = 1749},[2] = {Id = 112,Val = 228,Sum = 954},[3] = {Id = 113,Val = 10260,Sum = 42930}},Cost = {[1] = {Id = 1401002,Val = 790},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--西方龙魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 462,Sum = 2211},[2] = {Id = 112,Val = 252,Sum = 1206},[3] = {Id = 113,Val = 11340,Sum = 54270}},Cost = {[1] = {Id = 1401002,Val = 985},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--西方龙魂珠-1 等级-9
+				}
+			},--西方龙专属武器魂珠-1
+			[2] = {
+				Id = 201602,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--西方龙魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 88,Sum = 88},[2] = {Id = 112,Val = 48,Sum = 48},[3] = {Id = 113,Val = 2160,Sum = 2160}},Cost = {[1] = {Id = 1401002,Val = 335},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--西方龙魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 132,Sum = 220},[2] = {Id = 112,Val = 72,Sum = 120},[3] = {Id = 113,Val = 3240,Sum = 5400}},Cost = {[1] = {Id = 1401002,Val = 250},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--西方龙魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 396},[2] = {Id = 112,Val = 96,Sum = 216},[3] = {Id = 113,Val = 4320,Sum = 9720}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--西方龙魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 264,Sum = 660},[2] = {Id = 112,Val = 144,Sum = 360},[3] = {Id = 113,Val = 6480,Sum = 16200}},Cost = {[1] = {Id = 1401002,Val = 535},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--西方龙魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 1012},[2] = {Id = 112,Val = 192,Sum = 552},[3] = {Id = 113,Val = 8640,Sum = 24840}},Cost = {[1] = {Id = 1401002,Val = 810},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--西方龙魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 1452},[2] = {Id = 112,Val = 240,Sum = 792},[3] = {Id = 113,Val = 10800,Sum = 35640}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--西方龙魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 528,Sum = 1980},[2] = {Id = 112,Val = 288,Sum = 1080},[3] = {Id = 113,Val = 12960,Sum = 48600}},Cost = {[1] = {Id = 1401002,Val = 1345},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--西方龙魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 616,Sum = 2596},[2] = {Id = 112,Val = 336,Sum = 1416},[3] = {Id = 113,Val = 15120,Sum = 63720}},Cost = {[1] = {Id = 1401002,Val = 1615},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--西方龙魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 704,Sum = 3300},[2] = {Id = 112,Val = 384,Sum = 1800},[3] = {Id = 113,Val = 17280,Sum = 81000}},Cost = {[1] = {Id = 1401002,Val = 2155},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--西方龙魂珠-2 等级-9
+				}
+			},--西方龙专属武器魂珠-2
+			[3] = {
+				Id = 201603,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--西方龙魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 110,Sum = 110},[2] = {Id = 112,Val = 60,Sum = 60},[3] = {Id = 113,Val = 2700,Sum = 2700}},Cost = {[1] = {Id = 1401002,Val = 685},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--西方龙魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 286},[2] = {Id = 112,Val = 96,Sum = 156},[3] = {Id = 113,Val = 4320,Sum = 7020}},Cost = {[1] = {Id = 1401002,Val = 515},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--西方龙魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 231,Sum = 517},[2] = {Id = 112,Val = 126,Sum = 282},[3] = {Id = 113,Val = 5670,Sum = 12690}},Cost = {[1] = {Id = 1401002,Val = 855},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--西方龙魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 869},[2] = {Id = 112,Val = 192,Sum = 474},[3] = {Id = 113,Val = 8640,Sum = 21330}},Cost = {[1] = {Id = 1401002,Val = 820},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--西方龙魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 469,Sum = 1338},[2] = {Id = 112,Val = 256,Sum = 730},[3] = {Id = 113,Val = 11502,Sum = 32832}},Cost = {[1] = {Id = 1401002,Val = 1115},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--西方龙魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 594,Sum = 1932},[2] = {Id = 112,Val = 324,Sum = 1054},[3] = {Id = 113,Val = 14580,Sum = 47412}},Cost = {[1] = {Id = 1401002,Val = 1385},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--西方龙魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 704,Sum = 2636},[2] = {Id = 112,Val = 384,Sum = 1438},[3] = {Id = 113,Val = 17280,Sum = 64692}},Cost = {[1] = {Id = 1401002,Val = 1660},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--西方龙魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 825,Sum = 3461},[2] = {Id = 112,Val = 444,Sum = 1882},[3] = {Id = 113,Val = 20250,Sum = 84942}},Cost = {[1] = {Id = 1401002,Val = 2215},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--西方龙魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 935,Sum = 4396},[2] = {Id = 112,Val = 510,Sum = 2392},[3] = {Id = 113,Val = 22950,Sum = 107892}},Cost = {[1] = {Id = 1401002,Val = 2770},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--西方龙魂珠-3 等级-9
+				}
+			},--西方龙专属武器魂珠-3
+			[4] = {
+				Id = 201604,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--西方龙魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 143,Sum = 143},[2] = {Id = 112,Val = 78,Sum = 78},[3] = {Id = 113,Val = 3510,Sum = 3510}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--西方龙魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 220,Sum = 363},[2] = {Id = 112,Val = 120,Sum = 198},[3] = {Id = 113,Val = 5400,Sum = 8910}},Cost = {[1] = {Id = 1401002,Val = 835},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--西方龙魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 286,Sum = 649},[2] = {Id = 112,Val = 156,Sum = 354},[3] = {Id = 113,Val = 7020,Sum = 15930}},Cost = {[1] = {Id = 1401002,Val = 925},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--西方龙魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 1089},[2] = {Id = 112,Val = 240,Sum = 594},[3] = {Id = 113,Val = 10800,Sum = 26730}},Cost = {[1] = {Id = 1401002,Val = 1775},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--西方龙魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 594,Sum = 1683},[2] = {Id = 112,Val = 324,Sum = 918},[3] = {Id = 113,Val = 14580,Sum = 41310}},Cost = {[1] = {Id = 1401002,Val = 1805},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--西方龙魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 737,Sum = 2420},[2] = {Id = 112,Val = 462,Sum = 1380},[3] = {Id = 113,Val = 18090,Sum = 59400}},Cost = {[1] = {Id = 1401002,Val = 1795},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--西方龙魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 880,Sum = 3300},[2] = {Id = 112,Val = 480,Sum = 1860},[3] = {Id = 113,Val = 21600,Sum = 81000}},Cost = {[1] = {Id = 1401002,Val = 2695},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--西方龙魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1045,Sum = 4345},[2] = {Id = 112,Val = 570,Sum = 2430},[3] = {Id = 113,Val = 25650,Sum = 106650}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--西方龙魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1210,Sum = 5555},[2] = {Id = 112,Val = 660,Sum = 3090},[3] = {Id = 113,Val = 29700,Sum = 136350}},Cost = {[1] = {Id = 1401002,Val = 5390},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--西方龙魂珠-4 等级-9
+				}
+			},--西方龙专属武器魂珠-4
+			[5] = {
+				Id = 201605,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--西方龙魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 198,Sum = 198},[2] = {Id = 112,Val = 108,Sum = 108},[3] = {Id = 113,Val = 4860,Sum = 4860}},Cost = {[1] = {Id = 1401002,Val = 2315},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--西方龙魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 308,Sum = 506},[2] = {Id = 112,Val = 168,Sum = 276},[3] = {Id = 113,Val = 7560,Sum = 12420}},Cost = {[1] = {Id = 1401002,Val = 1735},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--西方龙魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 407,Sum = 913},[2] = {Id = 112,Val = 222,Sum = 498},[3] = {Id = 113,Val = 9990,Sum = 22410}},Cost = {[1] = {Id = 1401002,Val = 1930},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--西方龙魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 616,Sum = 1529},[2] = {Id = 112,Val = 336,Sum = 834},[3] = {Id = 113,Val = 15120,Sum = 37530}},Cost = {[1] = {Id = 1401002,Val = 2780},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--西方龙魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 825,Sum = 2354},[2] = {Id = 112,Val = 450,Sum = 1284},[3] = {Id = 113,Val = 20250,Sum = 57780}},Cost = {[1] = {Id = 1401002,Val = 2820},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--西方龙魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1045,Sum = 3399},[2] = {Id = 112,Val = 570,Sum = 1854},[3] = {Id = 113,Val = 25650,Sum = 83430}},Cost = {[1] = {Id = 1401002,Val = 4675},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--西方龙魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 4719},[2] = {Id = 112,Val = 720,Sum = 2574},[3] = {Id = 113,Val = 32400,Sum = 115830}},Cost = {[1] = {Id = 1401002,Val = 4685},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--西方龙魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1430,Sum = 6149},[2] = {Id = 112,Val = 780,Sum = 3354},[3] = {Id = 113,Val = 35100,Sum = 150930}},Cost = {[1] = {Id = 1401002,Val = 6555},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--西方龙魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1650,Sum = 7799},[2] = {Id = 112,Val = 900,Sum = 4254},[3] = {Id = 113,Val = 40500,Sum = 191430}},Cost = {[1] = {Id = 1401002,Val = 8430},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--西方龙魂珠-5 等级-9
+				}
+			},--西方龙专属武器魂珠-5
+			[6] = {
+				Id = 201606,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--西方龙魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 275,Sum = 275},[2] = {Id = 112,Val = 150,Sum = 150},[3] = {Id = 113,Val = 6750,Sum = 6750}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--西方龙魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 715},[2] = {Id = 112,Val = 240,Sum = 390},[3] = {Id = 113,Val = 10800,Sum = 17550}},Cost = {[1] = {Id = 1401002,Val = 3270},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--西方龙魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 550,Sum = 1265},[2] = {Id = 112,Val = 300,Sum = 690},[3] = {Id = 113,Val = 13500,Sum = 31050}},Cost = {[1] = {Id = 1401002,Val = 3630},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--西方龙魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 880,Sum = 2145},[2] = {Id = 112,Val = 480,Sum = 1170},[3] = {Id = 113,Val = 21600,Sum = 52650}},Cost = {[1] = {Id = 1401002,Val = 5230},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--西方龙魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1210,Sum = 3355},[2] = {Id = 112,Val = 660,Sum = 1830},[3] = {Id = 113,Val = 29700,Sum = 82350}},Cost = {[1] = {Id = 1401002,Val = 5310},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--西方龙魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1485,Sum = 4840},[2] = {Id = 112,Val = 810,Sum = 2640},[3] = {Id = 113,Val = 36450,Sum = 118800}},Cost = {[1] = {Id = 1401002,Val = 7040},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--西方龙魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1760,Sum = 6600},[2] = {Id = 112,Val = 960,Sum = 3600},[3] = {Id = 113,Val = 43200,Sum = 162000}},Cost = {[1] = {Id = 1401002,Val = 8820},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--西方龙魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2090,Sum = 8690},[2] = {Id = 112,Val = 1140,Sum = 4740},[3] = {Id = 113,Val = 51300,Sum = 213300}},Cost = {[1] = {Id = 1401002,Val = 12335},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--西方龙魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2420,Sum = 11110},[2] = {Id = 112,Val = 1320,Sum = 6060},[3] = {Id = 113,Val = 59400,Sum = 272700}},Cost = {[1] = {Id = 1401002,Val = 14100},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--西方龙魂珠-6 等级-9
+				}
+			},--西方龙专属武器魂珠-6
+			[7] = {
+				Id = 201607,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--西方龙魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 352},[2] = {Id = 112,Val = 192,Sum = 192},[3] = {Id = 113,Val = 8640,Sum = 8640}},Cost = {[1] = {Id = 1401002,Val = 4280},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--西方龙魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 528,Sum = 880},[2] = {Id = 112,Val = 288,Sum = 480},[3] = {Id = 113,Val = 12960,Sum = 21600}},Cost = {[1] = {Id = 1401002,Val = 3210},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--西方龙魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 704,Sum = 1584},[2] = {Id = 112,Val = 384,Sum = 864},[3] = {Id = 113,Val = 17280,Sum = 38880}},Cost = {[1] = {Id = 1401002,Val = 5350},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--西方龙魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1056,Sum = 2640},[2] = {Id = 112,Val = 576,Sum = 1440},[3] = {Id = 113,Val = 25920,Sum = 64800}},Cost = {[1] = {Id = 1401002,Val = 6850},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--西方龙魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1408,Sum = 4048},[2] = {Id = 112,Val = 768,Sum = 2208},[3] = {Id = 113,Val = 34560,Sum = 99360}},Cost = {[1] = {Id = 1401002,Val = 6955},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--西方龙魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1760,Sum = 5808},[2] = {Id = 112,Val = 960,Sum = 3168},[3] = {Id = 113,Val = 43200,Sum = 142560}},Cost = {[1] = {Id = 1401002,Val = 8645},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--西方龙魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2112,Sum = 7920},[2] = {Id = 112,Val = 1152,Sum = 4320},[3] = {Id = 113,Val = 51840,Sum = 194400}},Cost = {[1] = {Id = 1401002,Val = 12130},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--西方龙魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2464,Sum = 10384},[2] = {Id = 112,Val = 1344,Sum = 5664},[3] = {Id = 113,Val = 60480,Sum = 254880}},Cost = {[1] = {Id = 1401002,Val = 13850},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--西方龙魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2816,Sum = 13200},[2] = {Id = 112,Val = 1536,Sum = 7200},[3] = {Id = 113,Val = 69120,Sum = 324000}},Cost = {[1] = {Id = 1401002,Val = 17315},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--西方龙魂珠-7 等级-9
+				}
+			},--西方龙专属武器魂珠-7
+			[8] = {
+				Id = 201608,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--西方龙魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 440},[2] = {Id = 112,Val = 240,Sum = 240},[3] = {Id = 113,Val = 10800,Sum = 10800}},Cost = {[1] = {Id = 1401002,Val = 3650},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--西方龙魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 660,Sum = 1100},[2] = {Id = 112,Val = 360,Sum = 600},[3] = {Id = 113,Val = 16200,Sum = 27000}},Cost = {[1] = {Id = 1401002,Val = 4375},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--西方龙魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 880,Sum = 1980},[2] = {Id = 112,Val = 480,Sum = 1080},[3] = {Id = 113,Val = 21600,Sum = 48600}},Cost = {[1] = {Id = 1401002,Val = 6080},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--西方龙魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 3300},[2] = {Id = 112,Val = 720,Sum = 1800},[3] = {Id = 113,Val = 32400,Sum = 81000}},Cost = {[1] = {Id = 1401002,Val = 7005},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--西方龙魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1760,Sum = 5060},[2] = {Id = 112,Val = 960,Sum = 2760},[3] = {Id = 113,Val = 43200,Sum = 124200}},Cost = {[1] = {Id = 1401002,Val = 8890},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--西方龙魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2200,Sum = 7260},[2] = {Id = 112,Val = 1200,Sum = 3960},[3] = {Id = 113,Val = 54000,Sum = 178200}},Cost = {[1] = {Id = 1401002,Val = 10610},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--西方龙魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2640,Sum = 9900},[2] = {Id = 112,Val = 1440,Sum = 5400},[3] = {Id = 113,Val = 64800,Sum = 243000}},Cost = {[1] = {Id = 1401002,Val = 14765},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--西方龙魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3080,Sum = 12980},[2] = {Id = 112,Val = 1680,Sum = 7080},[3] = {Id = 113,Val = 75600,Sum = 318600}},Cost = {[1] = {Id = 1401002,Val = 17705},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--西方龙魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3520,Sum = 16500},[2] = {Id = 112,Val = 1920,Sum = 9000},[3] = {Id = 113,Val = 86400,Sum = 405000}},Cost = {[1] = {Id = 1401002,Val = 17710},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--西方龙魂珠-8 等级-9
+				}
+			}--西方龙专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611016,val = 5}},PSkill = 130301611,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611016,val = 5}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611016,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611016,val = 10}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611016,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611016,val = 20}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611016,val = 20}},Prop = {[1] = {id = 106,val = 0.15}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611016,val = 20}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611016,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611016,val = 30}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611016,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611016,val = 50}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611016,val = 60}},Prop = {[1] = {id = 106,val = 0.2}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502016,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130301611,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502016,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502016,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502016,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502016,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502016,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502016,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 106,Val = 0.15}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502016,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502016,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502016,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502016,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502016,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502016,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 106,Val = 0.2}}}
 		}
 	},--西方龙专属武器
-	[1501017] = {
+	[1102017] = {
 		CardId = 1102017,
 		Name = _T("黑色死神"),
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 98462},[2] = {id = 112,val = 24615},[3] = {id = 113,val = 24615}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611017,val = 30}},
-		Icon = "ui_dtex_Equip_1501017",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102017",
+		HunZhu = {
+			[1] = {
+				Id = 201701,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--飞廉魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 55,Sum = 55},[2] = {Id = 112,Val = 28,Sum = 28},[3] = {Id = 113,Val = 900,Sum = 900}},Cost = {[1] = {Id = 1401002,Val = 80},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--飞廉魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 88,Sum = 143},[2] = {Id = 112,Val = 44,Sum = 72},[3] = {Id = 113,Val = 1440,Sum = 2340}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--飞廉魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 110,Sum = 253},[2] = {Id = 112,Val = 55,Sum = 127},[3] = {Id = 113,Val = 1800,Sum = 4140}},Cost = {[1] = {Id = 1401002,Val = 205},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--飞廉魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 429},[2] = {Id = 112,Val = 88,Sum = 215},[3] = {Id = 113,Val = 2880,Sum = 7020}},Cost = {[1] = {Id = 1401002,Val = 260},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--飞廉魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 242,Sum = 671},[2] = {Id = 112,Val = 121,Sum = 336},[3] = {Id = 113,Val = 3960,Sum = 10980}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--飞廉魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 308,Sum = 979},[2] = {Id = 112,Val = 154,Sum = 490},[3] = {Id = 113,Val = 5040,Sum = 16020}},Cost = {[1] = {Id = 1401002,Val = 395},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--飞廉魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 1331},[2] = {Id = 112,Val = 176,Sum = 666},[3] = {Id = 113,Val = 5760,Sum = 21780}},Cost = {[1] = {Id = 1401002,Val = 460},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--飞廉魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 418,Sum = 1749},[2] = {Id = 112,Val = 209,Sum = 875},[3] = {Id = 113,Val = 6840,Sum = 28620}},Cost = {[1] = {Id = 1401002,Val = 525},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--飞廉魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 462,Sum = 2211},[2] = {Id = 112,Val = 231,Sum = 1106},[3] = {Id = 113,Val = 7560,Sum = 36180}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--飞廉魂珠-1 等级-9
+				}
+			},--飞廉专属武器魂珠-1
+			[2] = {
+				Id = 201702,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--飞廉魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 88,Sum = 88},[2] = {Id = 112,Val = 44,Sum = 44},[3] = {Id = 113,Val = 1440,Sum = 1440}},Cost = {[1] = {Id = 1401002,Val = 220},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--飞廉魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 132,Sum = 220},[2] = {Id = 112,Val = 66,Sum = 110},[3] = {Id = 113,Val = 2160,Sum = 3600}},Cost = {[1] = {Id = 1401002,Val = 165},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--飞廉魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 396},[2] = {Id = 112,Val = 88,Sum = 198},[3] = {Id = 113,Val = 2880,Sum = 6480}},Cost = {[1] = {Id = 1401002,Val = 370},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--飞廉魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 264,Sum = 660},[2] = {Id = 112,Val = 132,Sum = 330},[3] = {Id = 113,Val = 4320,Sum = 10800}},Cost = {[1] = {Id = 1401002,Val = 355},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--飞廉魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 1012},[2] = {Id = 112,Val = 176,Sum = 506},[3] = {Id = 113,Val = 5760,Sum = 16560}},Cost = {[1] = {Id = 1401002,Val = 540},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--飞廉魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 1452},[2] = {Id = 112,Val = 220,Sum = 726},[3] = {Id = 113,Val = 7200,Sum = 23760}},Cost = {[1] = {Id = 1401002,Val = 715},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--飞廉魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 528,Sum = 1980},[2] = {Id = 112,Val = 264,Sum = 990},[3] = {Id = 113,Val = 8640,Sum = 32400}},Cost = {[1] = {Id = 1401002,Val = 900},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--飞廉魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 616,Sum = 2596},[2] = {Id = 112,Val = 308,Sum = 1298},[3] = {Id = 113,Val = 10080,Sum = 42480}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--飞廉魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 704,Sum = 3300},[2] = {Id = 112,Val = 352,Sum = 1650},[3] = {Id = 113,Val = 11520,Sum = 54000}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--飞廉魂珠-2 等级-9
+				}
+			},--飞廉专属武器魂珠-2
+			[3] = {
+				Id = 201703,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--飞廉魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 110,Sum = 110},[2] = {Id = 112,Val = 55,Sum = 55},[3] = {Id = 113,Val = 1800,Sum = 1800}},Cost = {[1] = {Id = 1401002,Val = 455},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--飞廉魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 286},[2] = {Id = 112,Val = 88,Sum = 143},[3] = {Id = 113,Val = 2880,Sum = 4680}},Cost = {[1] = {Id = 1401002,Val = 340},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--飞廉魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 231,Sum = 517},[2] = {Id = 112,Val = 116,Sum = 259},[3] = {Id = 113,Val = 3780,Sum = 8460}},Cost = {[1] = {Id = 1401002,Val = 570},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--飞廉魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 869},[2] = {Id = 112,Val = 176,Sum = 435},[3] = {Id = 113,Val = 5760,Sum = 14220}},Cost = {[1] = {Id = 1401002,Val = 550},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--飞廉魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 469,Sum = 1338},[2] = {Id = 112,Val = 234,Sum = 669},[3] = {Id = 113,Val = 7668,Sum = 21888}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--飞廉魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 594,Sum = 1932},[2] = {Id = 112,Val = 297,Sum = 966},[3] = {Id = 113,Val = 9720,Sum = 31608}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--飞廉魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 704,Sum = 2636},[2] = {Id = 112,Val = 352,Sum = 1318},[3] = {Id = 113,Val = 11520,Sum = 43128}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--飞廉魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 825,Sum = 3461},[2] = {Id = 112,Val = 407,Sum = 1725},[3] = {Id = 113,Val = 13500,Sum = 56628}},Cost = {[1] = {Id = 1401002,Val = 1475},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--飞廉魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 935,Sum = 4396},[2] = {Id = 112,Val = 468,Sum = 2193},[3] = {Id = 113,Val = 15300,Sum = 71928}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--飞廉魂珠-3 等级-9
+				}
+			},--飞廉专属武器魂珠-3
+			[4] = {
+				Id = 201704,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--飞廉魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 143,Sum = 143},[2] = {Id = 112,Val = 72,Sum = 72},[3] = {Id = 113,Val = 2340,Sum = 2340}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--飞廉魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 220,Sum = 363},[2] = {Id = 112,Val = 110,Sum = 182},[3] = {Id = 113,Val = 3600,Sum = 5940}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--飞廉魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 286,Sum = 649},[2] = {Id = 112,Val = 143,Sum = 325},[3] = {Id = 113,Val = 4680,Sum = 10620}},Cost = {[1] = {Id = 1401002,Val = 615},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--飞廉魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 1089},[2] = {Id = 112,Val = 220,Sum = 545},[3] = {Id = 113,Val = 7200,Sum = 17820}},Cost = {[1] = {Id = 1401002,Val = 1185},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--飞廉魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 594,Sum = 1683},[2] = {Id = 112,Val = 297,Sum = 842},[3] = {Id = 113,Val = 9720,Sum = 27540}},Cost = {[1] = {Id = 1401002,Val = 1205},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--飞廉魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 737,Sum = 2420},[2] = {Id = 112,Val = 424,Sum = 1266},[3] = {Id = 113,Val = 12060,Sum = 39600}},Cost = {[1] = {Id = 1401002,Val = 1195},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--飞廉魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 880,Sum = 3300},[2] = {Id = 112,Val = 440,Sum = 1706},[3] = {Id = 113,Val = 14400,Sum = 54000}},Cost = {[1] = {Id = 1401002,Val = 1800},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--飞廉魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1045,Sum = 4345},[2] = {Id = 112,Val = 523,Sum = 2229},[3] = {Id = 113,Val = 17100,Sum = 71100}},Cost = {[1] = {Id = 1401002,Val = 2395},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--飞廉魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1210,Sum = 5555},[2] = {Id = 112,Val = 605,Sum = 2834},[3] = {Id = 113,Val = 19800,Sum = 90900}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--飞廉魂珠-4 等级-9
+				}
+			},--飞廉专属武器魂珠-4
+			[5] = {
+				Id = 201705,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--飞廉魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 198,Sum = 198},[2] = {Id = 112,Val = 99,Sum = 99},[3] = {Id = 113,Val = 3240,Sum = 3240}},Cost = {[1] = {Id = 1401002,Val = 1545},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--飞廉魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 308,Sum = 506},[2] = {Id = 112,Val = 154,Sum = 253},[3] = {Id = 113,Val = 5040,Sum = 8280}},Cost = {[1] = {Id = 1401002,Val = 1155},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--飞廉魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 407,Sum = 913},[2] = {Id = 112,Val = 204,Sum = 457},[3] = {Id = 113,Val = 6660,Sum = 14940}},Cost = {[1] = {Id = 1401002,Val = 1285},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--飞廉魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 616,Sum = 1529},[2] = {Id = 112,Val = 308,Sum = 765},[3] = {Id = 113,Val = 10080,Sum = 25020}},Cost = {[1] = {Id = 1401002,Val = 1850},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--飞廉魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 825,Sum = 2354},[2] = {Id = 112,Val = 413,Sum = 1178},[3] = {Id = 113,Val = 13500,Sum = 38520}},Cost = {[1] = {Id = 1401002,Val = 1880},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--飞廉魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1045,Sum = 3399},[2] = {Id = 112,Val = 523,Sum = 1701},[3] = {Id = 113,Val = 17100,Sum = 55620}},Cost = {[1] = {Id = 1401002,Val = 3115},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--飞廉魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 4719},[2] = {Id = 112,Val = 660,Sum = 2361},[3] = {Id = 113,Val = 21600,Sum = 77220}},Cost = {[1] = {Id = 1401002,Val = 3125},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--飞廉魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1430,Sum = 6149},[2] = {Id = 112,Val = 715,Sum = 3076},[3] = {Id = 113,Val = 23400,Sum = 100620}},Cost = {[1] = {Id = 1401002,Val = 4370},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--飞廉魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1650,Sum = 7799},[2] = {Id = 112,Val = 825,Sum = 3901},[3] = {Id = 113,Val = 27000,Sum = 127620}},Cost = {[1] = {Id = 1401002,Val = 5620},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--飞廉魂珠-5 等级-9
+				}
+			},--飞廉专属武器魂珠-5
+			[6] = {
+				Id = 201706,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--飞廉魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 275,Sum = 275},[2] = {Id = 112,Val = 138,Sum = 138},[3] = {Id = 113,Val = 4500,Sum = 4500}},Cost = {[1] = {Id = 1401002,Val = 1450},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--飞廉魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 715},[2] = {Id = 112,Val = 220,Sum = 358},[3] = {Id = 113,Val = 7200,Sum = 11700}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--飞廉魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 550,Sum = 1265},[2] = {Id = 112,Val = 275,Sum = 633},[3] = {Id = 113,Val = 9000,Sum = 20700}},Cost = {[1] = {Id = 1401002,Val = 2420},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--飞廉魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 880,Sum = 2145},[2] = {Id = 112,Val = 440,Sum = 1073},[3] = {Id = 113,Val = 14400,Sum = 35100}},Cost = {[1] = {Id = 1401002,Val = 3485},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--飞廉魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1210,Sum = 3355},[2] = {Id = 112,Val = 605,Sum = 1678},[3] = {Id = 113,Val = 19800,Sum = 54900}},Cost = {[1] = {Id = 1401002,Val = 3540},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--飞廉魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1485,Sum = 4840},[2] = {Id = 112,Val = 743,Sum = 2421},[3] = {Id = 113,Val = 24300,Sum = 79200}},Cost = {[1] = {Id = 1401002,Val = 4690},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--飞廉魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1760,Sum = 6600},[2] = {Id = 112,Val = 880,Sum = 3301},[3] = {Id = 113,Val = 28800,Sum = 108000}},Cost = {[1] = {Id = 1401002,Val = 5880},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--飞廉魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2090,Sum = 8690},[2] = {Id = 112,Val = 1045,Sum = 4346},[3] = {Id = 113,Val = 34200,Sum = 142200}},Cost = {[1] = {Id = 1401002,Val = 8225},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--飞廉魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2420,Sum = 11110},[2] = {Id = 112,Val = 1210,Sum = 5556},[3] = {Id = 113,Val = 39600,Sum = 181800}},Cost = {[1] = {Id = 1401002,Val = 9400},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--飞廉魂珠-6 等级-9
+				}
+			},--飞廉专属武器魂珠-6
+			[7] = {
+				Id = 201707,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--飞廉魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 352},[2] = {Id = 112,Val = 176,Sum = 176},[3] = {Id = 113,Val = 5760,Sum = 5760}},Cost = {[1] = {Id = 1401002,Val = 2855},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--飞廉魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 528,Sum = 880},[2] = {Id = 112,Val = 264,Sum = 440},[3] = {Id = 113,Val = 8640,Sum = 14400}},Cost = {[1] = {Id = 1401002,Val = 2140},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--飞廉魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 704,Sum = 1584},[2] = {Id = 112,Val = 352,Sum = 792},[3] = {Id = 113,Val = 11520,Sum = 25920}},Cost = {[1] = {Id = 1401002,Val = 3565},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--飞廉魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1056,Sum = 2640},[2] = {Id = 112,Val = 528,Sum = 1320},[3] = {Id = 113,Val = 17280,Sum = 43200}},Cost = {[1] = {Id = 1401002,Val = 4565},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--飞廉魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1408,Sum = 4048},[2] = {Id = 112,Val = 704,Sum = 2024},[3] = {Id = 113,Val = 23040,Sum = 66240}},Cost = {[1] = {Id = 1401002,Val = 4635},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--飞廉魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1760,Sum = 5808},[2] = {Id = 112,Val = 880,Sum = 2904},[3] = {Id = 113,Val = 28800,Sum = 95040}},Cost = {[1] = {Id = 1401002,Val = 5760},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--飞廉魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2112,Sum = 7920},[2] = {Id = 112,Val = 1056,Sum = 3960},[3] = {Id = 113,Val = 34560,Sum = 129600}},Cost = {[1] = {Id = 1401002,Val = 8085},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--飞廉魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2464,Sum = 10384},[2] = {Id = 112,Val = 1232,Sum = 5192},[3] = {Id = 113,Val = 40320,Sum = 169920}},Cost = {[1] = {Id = 1401002,Val = 9230},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--飞廉魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2816,Sum = 13200},[2] = {Id = 112,Val = 1408,Sum = 6600},[3] = {Id = 113,Val = 46080,Sum = 216000}},Cost = {[1] = {Id = 1401002,Val = 11545},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--飞廉魂珠-7 等级-9
+				}
+			},--飞廉专属武器魂珠-7
+			[8] = {
+				Id = 201708,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--飞廉魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 440},[2] = {Id = 112,Val = 220,Sum = 220},[3] = {Id = 113,Val = 7200,Sum = 7200}},Cost = {[1] = {Id = 1401002,Val = 2430},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--飞廉魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 660,Sum = 1100},[2] = {Id = 112,Val = 330,Sum = 550},[3] = {Id = 113,Val = 10800,Sum = 18000}},Cost = {[1] = {Id = 1401002,Val = 2920},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--飞廉魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 880,Sum = 1980},[2] = {Id = 112,Val = 440,Sum = 990},[3] = {Id = 113,Val = 14400,Sum = 32400}},Cost = {[1] = {Id = 1401002,Val = 4055},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--飞廉魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 3300},[2] = {Id = 112,Val = 660,Sum = 1650},[3] = {Id = 113,Val = 21600,Sum = 54000}},Cost = {[1] = {Id = 1401002,Val = 4670},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--飞廉魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1760,Sum = 5060},[2] = {Id = 112,Val = 880,Sum = 2530},[3] = {Id = 113,Val = 28800,Sum = 82800}},Cost = {[1] = {Id = 1401002,Val = 5930},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--飞廉魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2200,Sum = 7260},[2] = {Id = 112,Val = 1100,Sum = 3630},[3] = {Id = 113,Val = 36000,Sum = 118800}},Cost = {[1] = {Id = 1401002,Val = 7070},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--飞廉魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2640,Sum = 9900},[2] = {Id = 112,Val = 1320,Sum = 4950},[3] = {Id = 113,Val = 43200,Sum = 162000}},Cost = {[1] = {Id = 1401002,Val = 9845},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--飞廉魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3080,Sum = 12980},[2] = {Id = 112,Val = 1540,Sum = 6490},[3] = {Id = 113,Val = 50400,Sum = 212400}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--飞廉魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3520,Sum = 16500},[2] = {Id = 112,Val = 1760,Sum = 8250},[3] = {Id = 113,Val = 57600,Sum = 270000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--飞廉魂珠-8 等级-9
+				}
+			}--飞廉专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611017,val = 5}},PSkill = 130301711,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611017,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611017,val = 10}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611017,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611017,val = 10}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611017,val = 20}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611017,val = 20}},Prop = {[1] = {id = 105,val = 0.21}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611017,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611017,val = 30}},Prop = {[1] = {id = 104,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611017,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611017,val = 30}},Prop = {[1] = {id = 104,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611017,val = 50}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611017,val = 60}},Prop = {[1] = {id = 105,val = 0.29}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502017,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130301711,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502017,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502017,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502017,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502017,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502017,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502017,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 105,Val = 0.21}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502017,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502017,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502017,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502017,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502017,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502017,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 105,Val = 0.29}}}
 		}
 	},--飞廉专属武器
-	[1501018] = {
-		CardId = 1102018,
-		Name = _T("致命掠夺"),
-		Quality = 3,
-		Prop = {[1] = {id = 111,val = 75740},[2] = {id = 112,val = 18935},[3] = {id = 113,val = 18935}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611018,val = 30}},
-		Icon = "ui_dtex_Equip_1501018",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
-		},
-		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611018,val = 5}},PSkill = 130301811,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611018,val = 5}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611018,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611018,val = 10}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611018,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611018,val = 20}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611018,val = 20}},Prop = {[1] = {id = 105,val = 0.21}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611018,val = 20}},Prop = {[1] = {id = 104,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611018,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611018,val = 30}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611018,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611018,val = 50}},Prop = {[1] = {id = 104,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611018,val = 60}},Prop = {[1] = {id = 105,val = 0.29}}}
-		}
-	},--噬日专属武器
-	[1501019] = {
-		CardId = 1102019,
-		Name = _T("火焰克星"),
-		Quality = 3,
-		Prop = {[1] = {id = 111,val = 30296},[2] = {id = 112,val = 45444},[3] = {id = 113,val = 37870}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611019,val = 30}},
-		Icon = "ui_dtex_Equip_1501019",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
-		},
-		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611019,val = 5}},PSkill = 130301911,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611019,val = 5}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611019,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611019,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611019,val = 10}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611019,val = 20}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611019,val = 20}},Prop = {[1] = {id = 114,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611019,val = 20}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611019,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611019,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611019,val = 30}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611019,val = 50}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611019,val = 60}},Prop = {[1] = {id = 114,val = 0.14}}}
-		}
-	},--食火蜥专属武器
-	[1501020] = {
+	[1102020] = {
 		CardId = 1102020,
 		Name = _T("百战陷阵枪"),
 		Quality = 4,
-		Prop = {[1] = {id = 111,val = 87101},[2] = {id = 112,val = 21775},[3] = {id = 113,val = 21775}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611020,val = 30}},
-		Icon = "ui_dtex_Equip_1501020",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102020",
+		HunZhu = {
+			[1] = {
+				Id = 202001,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--高顺魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 55,Sum = 55},[2] = {Id = 112,Val = 25,Sum = 25},[3] = {Id = 113,Val = 1000,Sum = 1000}},Cost = {[1] = {Id = 1401002,Val = 80},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--高顺魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 88,Sum = 143},[2] = {Id = 112,Val = 40,Sum = 65},[3] = {Id = 113,Val = 1600,Sum = 2600}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--高顺魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 110,Sum = 253},[2] = {Id = 112,Val = 50,Sum = 115},[3] = {Id = 113,Val = 2000,Sum = 4600}},Cost = {[1] = {Id = 1401002,Val = 205},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--高顺魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 429},[2] = {Id = 112,Val = 80,Sum = 195},[3] = {Id = 113,Val = 3200,Sum = 7800}},Cost = {[1] = {Id = 1401002,Val = 260},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--高顺魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 242,Sum = 671},[2] = {Id = 112,Val = 110,Sum = 305},[3] = {Id = 113,Val = 4400,Sum = 12200}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--高顺魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 308,Sum = 979},[2] = {Id = 112,Val = 140,Sum = 445},[3] = {Id = 113,Val = 5600,Sum = 17800}},Cost = {[1] = {Id = 1401002,Val = 395},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--高顺魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 1331},[2] = {Id = 112,Val = 160,Sum = 605},[3] = {Id = 113,Val = 6400,Sum = 24200}},Cost = {[1] = {Id = 1401002,Val = 460},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--高顺魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 418,Sum = 1749},[2] = {Id = 112,Val = 190,Sum = 795},[3] = {Id = 113,Val = 7600,Sum = 31800}},Cost = {[1] = {Id = 1401002,Val = 525},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--高顺魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 462,Sum = 2211},[2] = {Id = 112,Val = 210,Sum = 1005},[3] = {Id = 113,Val = 8400,Sum = 40200}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--高顺魂珠-1 等级-9
+				}
+			},--高顺专属武器魂珠-1
+			[2] = {
+				Id = 202002,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--高顺魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 88,Sum = 88},[2] = {Id = 112,Val = 40,Sum = 40},[3] = {Id = 113,Val = 1600,Sum = 1600}},Cost = {[1] = {Id = 1401002,Val = 220},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--高顺魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 132,Sum = 220},[2] = {Id = 112,Val = 60,Sum = 100},[3] = {Id = 113,Val = 2400,Sum = 4000}},Cost = {[1] = {Id = 1401002,Val = 165},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--高顺魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 396},[2] = {Id = 112,Val = 80,Sum = 180},[3] = {Id = 113,Val = 3200,Sum = 7200}},Cost = {[1] = {Id = 1401002,Val = 370},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--高顺魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 264,Sum = 660},[2] = {Id = 112,Val = 120,Sum = 300},[3] = {Id = 113,Val = 4800,Sum = 12000}},Cost = {[1] = {Id = 1401002,Val = 355},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--高顺魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 1012},[2] = {Id = 112,Val = 160,Sum = 460},[3] = {Id = 113,Val = 6400,Sum = 18400}},Cost = {[1] = {Id = 1401002,Val = 540},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--高顺魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 1452},[2] = {Id = 112,Val = 200,Sum = 660},[3] = {Id = 113,Val = 8000,Sum = 26400}},Cost = {[1] = {Id = 1401002,Val = 715},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--高顺魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 528,Sum = 1980},[2] = {Id = 112,Val = 240,Sum = 900},[3] = {Id = 113,Val = 9600,Sum = 36000}},Cost = {[1] = {Id = 1401002,Val = 900},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--高顺魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 616,Sum = 2596},[2] = {Id = 112,Val = 280,Sum = 1180},[3] = {Id = 113,Val = 11200,Sum = 47200}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--高顺魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 704,Sum = 3300},[2] = {Id = 112,Val = 320,Sum = 1500},[3] = {Id = 113,Val = 12800,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--高顺魂珠-2 等级-9
+				}
+			},--高顺专属武器魂珠-2
+			[3] = {
+				Id = 202003,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--高顺魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 110,Sum = 110},[2] = {Id = 112,Val = 50,Sum = 50},[3] = {Id = 113,Val = 2000,Sum = 2000}},Cost = {[1] = {Id = 1401002,Val = 455},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--高顺魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 286},[2] = {Id = 112,Val = 80,Sum = 130},[3] = {Id = 113,Val = 3200,Sum = 5200}},Cost = {[1] = {Id = 1401002,Val = 340},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--高顺魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 231,Sum = 517},[2] = {Id = 112,Val = 105,Sum = 235},[3] = {Id = 113,Val = 4200,Sum = 9400}},Cost = {[1] = {Id = 1401002,Val = 570},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--高顺魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 869},[2] = {Id = 112,Val = 160,Sum = 395},[3] = {Id = 113,Val = 6400,Sum = 15800}},Cost = {[1] = {Id = 1401002,Val = 550},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--高顺魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 469,Sum = 1338},[2] = {Id = 112,Val = 213,Sum = 608},[3] = {Id = 113,Val = 8520,Sum = 24320}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--高顺魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 594,Sum = 1932},[2] = {Id = 112,Val = 270,Sum = 878},[3] = {Id = 113,Val = 10800,Sum = 35120}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--高顺魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 704,Sum = 2636},[2] = {Id = 112,Val = 320,Sum = 1198},[3] = {Id = 113,Val = 12800,Sum = 47920}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--高顺魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 825,Sum = 3461},[2] = {Id = 112,Val = 370,Sum = 1568},[3] = {Id = 113,Val = 15000,Sum = 62920}},Cost = {[1] = {Id = 1401002,Val = 1475},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--高顺魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 935,Sum = 4396},[2] = {Id = 112,Val = 425,Sum = 1993},[3] = {Id = 113,Val = 17000,Sum = 79920}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--高顺魂珠-3 等级-9
+				}
+			},--高顺专属武器魂珠-3
+			[4] = {
+				Id = 202004,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--高顺魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 143,Sum = 143},[2] = {Id = 112,Val = 65,Sum = 65},[3] = {Id = 113,Val = 2600,Sum = 2600}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--高顺魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 220,Sum = 363},[2] = {Id = 112,Val = 100,Sum = 165},[3] = {Id = 113,Val = 4000,Sum = 6600}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--高顺魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 286,Sum = 649},[2] = {Id = 112,Val = 130,Sum = 295},[3] = {Id = 113,Val = 5200,Sum = 11800}},Cost = {[1] = {Id = 1401002,Val = 615},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--高顺魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 1089},[2] = {Id = 112,Val = 200,Sum = 495},[3] = {Id = 113,Val = 8000,Sum = 19800}},Cost = {[1] = {Id = 1401002,Val = 1185},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--高顺魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 594,Sum = 1683},[2] = {Id = 112,Val = 270,Sum = 765},[3] = {Id = 113,Val = 10800,Sum = 30600}},Cost = {[1] = {Id = 1401002,Val = 1205},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--高顺魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 737,Sum = 2420},[2] = {Id = 112,Val = 385,Sum = 1150},[3] = {Id = 113,Val = 13400,Sum = 44000}},Cost = {[1] = {Id = 1401002,Val = 1195},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--高顺魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 880,Sum = 3300},[2] = {Id = 112,Val = 400,Sum = 1550},[3] = {Id = 113,Val = 16000,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 1800},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--高顺魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1045,Sum = 4345},[2] = {Id = 112,Val = 475,Sum = 2025},[3] = {Id = 113,Val = 19000,Sum = 79000}},Cost = {[1] = {Id = 1401002,Val = 2395},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--高顺魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1210,Sum = 5555},[2] = {Id = 112,Val = 550,Sum = 2575},[3] = {Id = 113,Val = 22000,Sum = 101000}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--高顺魂珠-4 等级-9
+				}
+			},--高顺专属武器魂珠-4
+			[5] = {
+				Id = 202005,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--高顺魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 198,Sum = 198},[2] = {Id = 112,Val = 90,Sum = 90},[3] = {Id = 113,Val = 3600,Sum = 3600}},Cost = {[1] = {Id = 1401002,Val = 1545},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--高顺魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 308,Sum = 506},[2] = {Id = 112,Val = 140,Sum = 230},[3] = {Id = 113,Val = 5600,Sum = 9200}},Cost = {[1] = {Id = 1401002,Val = 1155},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--高顺魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 407,Sum = 913},[2] = {Id = 112,Val = 185,Sum = 415},[3] = {Id = 113,Val = 7400,Sum = 16600}},Cost = {[1] = {Id = 1401002,Val = 1285},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--高顺魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 616,Sum = 1529},[2] = {Id = 112,Val = 280,Sum = 695},[3] = {Id = 113,Val = 11200,Sum = 27800}},Cost = {[1] = {Id = 1401002,Val = 1850},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--高顺魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 825,Sum = 2354},[2] = {Id = 112,Val = 375,Sum = 1070},[3] = {Id = 113,Val = 15000,Sum = 42800}},Cost = {[1] = {Id = 1401002,Val = 1880},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--高顺魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1045,Sum = 3399},[2] = {Id = 112,Val = 475,Sum = 1545},[3] = {Id = 113,Val = 19000,Sum = 61800}},Cost = {[1] = {Id = 1401002,Val = 3115},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--高顺魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 4719},[2] = {Id = 112,Val = 600,Sum = 2145},[3] = {Id = 113,Val = 24000,Sum = 85800}},Cost = {[1] = {Id = 1401002,Val = 3125},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--高顺魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1430,Sum = 6149},[2] = {Id = 112,Val = 650,Sum = 2795},[3] = {Id = 113,Val = 26000,Sum = 111800}},Cost = {[1] = {Id = 1401002,Val = 4370},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--高顺魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1650,Sum = 7799},[2] = {Id = 112,Val = 750,Sum = 3545},[3] = {Id = 113,Val = 30000,Sum = 141800}},Cost = {[1] = {Id = 1401002,Val = 5620},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--高顺魂珠-5 等级-9
+				}
+			},--高顺专属武器魂珠-5
+			[6] = {
+				Id = 202006,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--高顺魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 275,Sum = 275},[2] = {Id = 112,Val = 125,Sum = 125},[3] = {Id = 113,Val = 5000,Sum = 5000}},Cost = {[1] = {Id = 1401002,Val = 1450},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--高顺魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 715},[2] = {Id = 112,Val = 200,Sum = 325},[3] = {Id = 113,Val = 8000,Sum = 13000}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--高顺魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 550,Sum = 1265},[2] = {Id = 112,Val = 250,Sum = 575},[3] = {Id = 113,Val = 10000,Sum = 23000}},Cost = {[1] = {Id = 1401002,Val = 2420},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--高顺魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 880,Sum = 2145},[2] = {Id = 112,Val = 400,Sum = 975},[3] = {Id = 113,Val = 16000,Sum = 39000}},Cost = {[1] = {Id = 1401002,Val = 3485},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--高顺魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1210,Sum = 3355},[2] = {Id = 112,Val = 550,Sum = 1525},[3] = {Id = 113,Val = 22000,Sum = 61000}},Cost = {[1] = {Id = 1401002,Val = 3540},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--高顺魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1485,Sum = 4840},[2] = {Id = 112,Val = 675,Sum = 2200},[3] = {Id = 113,Val = 27000,Sum = 88000}},Cost = {[1] = {Id = 1401002,Val = 4690},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--高顺魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1760,Sum = 6600},[2] = {Id = 112,Val = 800,Sum = 3000},[3] = {Id = 113,Val = 32000,Sum = 120000}},Cost = {[1] = {Id = 1401002,Val = 5880},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--高顺魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2090,Sum = 8690},[2] = {Id = 112,Val = 950,Sum = 3950},[3] = {Id = 113,Val = 38000,Sum = 158000}},Cost = {[1] = {Id = 1401002,Val = 8225},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--高顺魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2420,Sum = 11110},[2] = {Id = 112,Val = 1100,Sum = 5050},[3] = {Id = 113,Val = 44000,Sum = 202000}},Cost = {[1] = {Id = 1401002,Val = 9400},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--高顺魂珠-6 等级-9
+				}
+			},--高顺专属武器魂珠-6
+			[7] = {
+				Id = 202007,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--高顺魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 352},[2] = {Id = 112,Val = 160,Sum = 160},[3] = {Id = 113,Val = 6400,Sum = 6400}},Cost = {[1] = {Id = 1401002,Val = 2855},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--高顺魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 528,Sum = 880},[2] = {Id = 112,Val = 240,Sum = 400},[3] = {Id = 113,Val = 9600,Sum = 16000}},Cost = {[1] = {Id = 1401002,Val = 2140},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--高顺魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 704,Sum = 1584},[2] = {Id = 112,Val = 320,Sum = 720},[3] = {Id = 113,Val = 12800,Sum = 28800}},Cost = {[1] = {Id = 1401002,Val = 3565},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--高顺魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1056,Sum = 2640},[2] = {Id = 112,Val = 480,Sum = 1200},[3] = {Id = 113,Val = 19200,Sum = 48000}},Cost = {[1] = {Id = 1401002,Val = 4565},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--高顺魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1408,Sum = 4048},[2] = {Id = 112,Val = 640,Sum = 1840},[3] = {Id = 113,Val = 25600,Sum = 73600}},Cost = {[1] = {Id = 1401002,Val = 4635},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--高顺魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1760,Sum = 5808},[2] = {Id = 112,Val = 800,Sum = 2640},[3] = {Id = 113,Val = 32000,Sum = 105600}},Cost = {[1] = {Id = 1401002,Val = 5760},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--高顺魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2112,Sum = 7920},[2] = {Id = 112,Val = 960,Sum = 3600},[3] = {Id = 113,Val = 38400,Sum = 144000}},Cost = {[1] = {Id = 1401002,Val = 8085},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--高顺魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2464,Sum = 10384},[2] = {Id = 112,Val = 1120,Sum = 4720},[3] = {Id = 113,Val = 44800,Sum = 188800}},Cost = {[1] = {Id = 1401002,Val = 9230},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--高顺魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2816,Sum = 13200},[2] = {Id = 112,Val = 1280,Sum = 6000},[3] = {Id = 113,Val = 51200,Sum = 240000}},Cost = {[1] = {Id = 1401002,Val = 11545},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--高顺魂珠-7 等级-9
+				}
+			},--高顺专属武器魂珠-7
+			[8] = {
+				Id = 202008,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--高顺魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 440},[2] = {Id = 112,Val = 200,Sum = 200},[3] = {Id = 113,Val = 8000,Sum = 8000}},Cost = {[1] = {Id = 1401002,Val = 2430},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--高顺魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 660,Sum = 1100},[2] = {Id = 112,Val = 300,Sum = 500},[3] = {Id = 113,Val = 12000,Sum = 20000}},Cost = {[1] = {Id = 1401002,Val = 2920},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--高顺魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 880,Sum = 1980},[2] = {Id = 112,Val = 400,Sum = 900},[3] = {Id = 113,Val = 16000,Sum = 36000}},Cost = {[1] = {Id = 1401002,Val = 4055},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--高顺魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 3300},[2] = {Id = 112,Val = 600,Sum = 1500},[3] = {Id = 113,Val = 24000,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 4670},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--高顺魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1760,Sum = 5060},[2] = {Id = 112,Val = 800,Sum = 2300},[3] = {Id = 113,Val = 32000,Sum = 92000}},Cost = {[1] = {Id = 1401002,Val = 5930},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--高顺魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2200,Sum = 7260},[2] = {Id = 112,Val = 1000,Sum = 3300},[3] = {Id = 113,Val = 40000,Sum = 132000}},Cost = {[1] = {Id = 1401002,Val = 7070},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--高顺魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2640,Sum = 9900},[2] = {Id = 112,Val = 1200,Sum = 4500},[3] = {Id = 113,Val = 48000,Sum = 180000}},Cost = {[1] = {Id = 1401002,Val = 9845},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--高顺魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3080,Sum = 12980},[2] = {Id = 112,Val = 1400,Sum = 5900},[3] = {Id = 113,Val = 56000,Sum = 236000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--高顺魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3520,Sum = 16500},[2] = {Id = 112,Val = 1600,Sum = 7500},[3] = {Id = 113,Val = 64000,Sum = 300000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--高顺魂珠-8 等级-9
+				}
+			}--高顺专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611020,val = 5}},PSkill = 130302011,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611020,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611020,val = 10}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611020,val = 10}},Prop = {[1] = {id = 105,val = 0.21}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611020,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611020,val = 20}},Prop = {[1] = {id = 105,val = 0.21}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611020,val = 20}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611020,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611020,val = 30}},Prop = {[1] = {id = 104,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611020,val = 30}},Prop = {[1] = {id = 105,val = 0.29}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611020,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611020,val = 50}},Prop = {[1] = {id = 105,val = 0.29}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611020,val = 60}},Prop = {[1] = {id = 108,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502020,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130302011,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502020,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502020,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502020,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 105,Val = 0.21}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502020,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502020,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 105,Val = 0.21}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502020,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502020,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502020,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502020,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 105,Val = 0.29}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502020,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502020,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 105,Val = 0.29}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502020,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}}
 		}
 	},--高顺专属武器
-	[1501021] = {
+	[1102021] = {
 		CardId = 1102021,
 		Name = _T("断灭一闪"),
 		Quality = 3,
-		Prop = {[1] = {id = 111,val = 56805},[2] = {id = 112,val = 28402},[3] = {id = 113,val = 28402}},
-		CostUnlock = {[1] = {id = 1401002,val = 1000},[2] = {id = 1611021,val = 30}},
-		Icon = "ui_dtex_Equip_1501021",
-		Strength = {
-			[0] = {PropBonus = 0},
-			[1] = {Cost = {[1] = {id = 1401002,val = 100},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 1,StrenthFailVoice = 1,MaxVoice = 1,PropBonus = 0.0067},
-			[2] = {Cost = {[1] = {id = 1401002,val = 200},[2] = {id = 1609001,val = 1}},StrenthSuccessRate = 0.5,StrenthFailVoice = 1,MaxVoice = 2,PropBonus = 0.0133},
-			[3] = {Cost = {[1] = {id = 1401002,val = 300},[2] = {id = 1609001,val = 2}},StrenthSuccessRate = 0.48,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.02},
-			[4] = {Cost = {[1] = {id = 1401002,val = 400},[2] = {id = 1609001,val = 3}},StrenthSuccessRate = 0.46,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0267},
-			[5] = {Cost = {[1] = {id = 1401002,val = 500},[2] = {id = 1609001,val = 4}},StrenthSuccessRate = 0.44,StrenthFailVoice = 1,MaxVoice = 3,PropBonus = 0.0333},
-			[6] = {Cost = {[1] = {id = 1401002,val = 600},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.42,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.04},
-			[7] = {Cost = {[1] = {id = 1401002,val = 700},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.4,StrenthFailVoice = 1,MaxVoice = 4,PropBonus = 0.0467},
-			[8] = {Cost = {[1] = {id = 1401002,val = 800},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.38,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0533},
-			[9] = {Cost = {[1] = {id = 1401002,val = 900},[2] = {id = 1609001,val = 5}},StrenthSuccessRate = 0.36,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.06},
-			[10] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.35,StrenthFailVoice = 1,MaxVoice = 5,PropBonus = 0.0667},
-			[11] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.33,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.08},
-			[12] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.31,StrenthFailVoice = 1,MaxVoice = 6,PropBonus = 0.0933},
-			[13] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.29,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.1067},
-			[14] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 7}},StrenthSuccessRate = 0.27,StrenthFailVoice = 1,MaxVoice = 7,PropBonus = 0.12},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.25,StrenthFailVoice = 1,MaxVoice = 8,PropBonus = 0.1333},
-			[16] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.23,StrenthFailVoice = 1,MaxVoice = 9,PropBonus = 0.1467},
-			[17] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.21,StrenthFailVoice = 1,MaxVoice = 10,PropBonus = 0.16},
-			[18] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.19,StrenthFailVoice = 1,MaxVoice = 11,PropBonus = 0.1733},
-			[19] = {Cost = {[1] = {id = 1401002,val = 1000},[2] = {id = 1609001,val = 10}},StrenthSuccessRate = 0.17,StrenthFailVoice = 1,MaxVoice = 12,PropBonus = 0.1867},
-			[20] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.2},
-			[21] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.22},
-			[22] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 15,PropBonus = 0.24},
-			[23] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.26},
-			[24] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.28},
-			[25] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 18,PropBonus = 0.3},
-			[26] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 21,PropBonus = 0.32},
-			[27] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 22,PropBonus = 0.34},
-			[28] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 23,PropBonus = 0.36},
-			[29] = {Cost = {[1] = {id = 1401002,val = 5000},[2] = {id = 1609001,val = 15},[3] = {id = 1609002,val = 7}},StrenthSuccessRate = 0.15,StrenthFailVoice = 1,MaxVoice = 25,PropBonus = 0.38},
-			[30] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4},
-			[31] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4267},
-			[32] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.4533},
-			[33] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.48},
-			[34] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5067},
-			[35] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5333},
-			[36] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.56},
-			[37] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.5867},
-			[38] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.6133},
-			[39] = {Cost = {[1] = {id = 1401002,val = 10000},[2] = {id = 1609002,val = 8},[3] = {id = 1609003,val = 3}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 30,PropBonus = 0.64},
-			[40] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 35,PropBonus = 0.6667},
-			[41] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 40,PropBonus = 0.7},
-			[42] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 45,PropBonus = 0.7333},
-			[43] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 50,PropBonus = 0.7667},
-			[44] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 5}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 55,PropBonus = 0.8},
-			[45] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 6}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 60,PropBonus = 0.8333},
-			[46] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 7}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 70,PropBonus = 0.8667},
-			[47] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 8}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 80,PropBonus = 0.9},
-			[48] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 9}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 100,PropBonus = 0.9333},
-			[49] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 10}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 120,PropBonus = 0.9667},
-			[50] = {Cost = {[1] = {id = 1401002,val = 20000},[2] = {id = 1609003,val = 15}},StrenthSuccessRate = 0.1,StrenthFailVoice = 1,MaxVoice = 150,PropBonus = 1}
+		Icon = "ui_dtex_Equip_1102021",
+		HunZhu = {
+			[1] = {
+				Id = 202101,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--烈风螳螂魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 60,Sum = 60},[2] = {Id = 112,Val = 25,Sum = 25},[3] = {Id = 113,Val = 800,Sum = 800}},Cost = {[1] = {Id = 1401002,Val = 80},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--烈风螳螂魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 156},[2] = {Id = 112,Val = 40,Sum = 65},[3] = {Id = 113,Val = 1280,Sum = 2080}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--烈风螳螂魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 276},[2] = {Id = 112,Val = 50,Sum = 115},[3] = {Id = 113,Val = 1600,Sum = 3680}},Cost = {[1] = {Id = 1401002,Val = 205},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--烈风螳螂魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 468},[2] = {Id = 112,Val = 80,Sum = 195},[3] = {Id = 113,Val = 2560,Sum = 6240}},Cost = {[1] = {Id = 1401002,Val = 260},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--烈风螳螂魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 264,Sum = 732},[2] = {Id = 112,Val = 110,Sum = 305},[3] = {Id = 113,Val = 3520,Sum = 9760}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--烈风螳螂魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 1068},[2] = {Id = 112,Val = 140,Sum = 445},[3] = {Id = 113,Val = 4480,Sum = 14240}},Cost = {[1] = {Id = 1401002,Val = 395},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--烈风螳螂魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1452},[2] = {Id = 112,Val = 160,Sum = 605},[3] = {Id = 113,Val = 5120,Sum = 19360}},Cost = {[1] = {Id = 1401002,Val = 460},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--烈风螳螂魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 456,Sum = 1908},[2] = {Id = 112,Val = 190,Sum = 795},[3] = {Id = 113,Val = 6080,Sum = 25440}},Cost = {[1] = {Id = 1401002,Val = 525},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--烈风螳螂魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 2412},[2] = {Id = 112,Val = 210,Sum = 1005},[3] = {Id = 113,Val = 6720,Sum = 32160}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--烈风螳螂魂珠-1 等级-9
+				}
+			},--烈风螳螂专属武器魂珠-1
+			[2] = {
+				Id = 202102,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--烈风螳螂魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 96},[2] = {Id = 112,Val = 40,Sum = 40},[3] = {Id = 113,Val = 1280,Sum = 1280}},Cost = {[1] = {Id = 1401002,Val = 220},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--烈风螳螂魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 240},[2] = {Id = 112,Val = 60,Sum = 100},[3] = {Id = 113,Val = 1920,Sum = 3200}},Cost = {[1] = {Id = 1401002,Val = 165},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--烈风螳螂魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 432},[2] = {Id = 112,Val = 80,Sum = 180},[3] = {Id = 113,Val = 2560,Sum = 5760}},Cost = {[1] = {Id = 1401002,Val = 370},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--烈风螳螂魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 720},[2] = {Id = 112,Val = 120,Sum = 300},[3] = {Id = 113,Val = 3840,Sum = 9600}},Cost = {[1] = {Id = 1401002,Val = 355},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--烈风螳螂魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1104},[2] = {Id = 112,Val = 160,Sum = 460},[3] = {Id = 113,Val = 5120,Sum = 14720}},Cost = {[1] = {Id = 1401002,Val = 540},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--烈风螳螂魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1584},[2] = {Id = 112,Val = 200,Sum = 660},[3] = {Id = 113,Val = 6400,Sum = 21120}},Cost = {[1] = {Id = 1401002,Val = 715},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--烈风螳螂魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2160},[2] = {Id = 112,Val = 240,Sum = 900},[3] = {Id = 113,Val = 7680,Sum = 28800}},Cost = {[1] = {Id = 1401002,Val = 900},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--烈风螳螂魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 2832},[2] = {Id = 112,Val = 280,Sum = 1180},[3] = {Id = 113,Val = 8960,Sum = 37760}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--烈风螳螂魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 3600},[2] = {Id = 112,Val = 320,Sum = 1500},[3] = {Id = 113,Val = 10240,Sum = 48000}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--烈风螳螂魂珠-2 等级-9
+				}
+			},--烈风螳螂专属武器魂珠-2
+			[3] = {
+				Id = 202103,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--烈风螳螂魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 120},[2] = {Id = 112,Val = 50,Sum = 50},[3] = {Id = 113,Val = 1600,Sum = 1600}},Cost = {[1] = {Id = 1401002,Val = 455},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--烈风螳螂魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 312},[2] = {Id = 112,Val = 80,Sum = 130},[3] = {Id = 113,Val = 2560,Sum = 4160}},Cost = {[1] = {Id = 1401002,Val = 340},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--烈风螳螂魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 564},[2] = {Id = 112,Val = 105,Sum = 235},[3] = {Id = 113,Val = 3360,Sum = 7520}},Cost = {[1] = {Id = 1401002,Val = 570},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--烈风螳螂魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 948},[2] = {Id = 112,Val = 160,Sum = 395},[3] = {Id = 113,Val = 5120,Sum = 12640}},Cost = {[1] = {Id = 1401002,Val = 550},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--烈风螳螂魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 511,Sum = 1459},[2] = {Id = 112,Val = 213,Sum = 608},[3] = {Id = 113,Val = 6816,Sum = 19456}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--烈风螳螂魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 2107},[2] = {Id = 112,Val = 270,Sum = 878},[3] = {Id = 113,Val = 8640,Sum = 28096}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--烈风螳螂魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 2875},[2] = {Id = 112,Val = 320,Sum = 1198},[3] = {Id = 113,Val = 10240,Sum = 38336}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--烈风螳螂魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 3775},[2] = {Id = 112,Val = 370,Sum = 1568},[3] = {Id = 113,Val = 12000,Sum = 50336}},Cost = {[1] = {Id = 1401002,Val = 1475},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--烈风螳螂魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1020,Sum = 4795},[2] = {Id = 112,Val = 425,Sum = 1993},[3] = {Id = 113,Val = 13600,Sum = 63936}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--烈风螳螂魂珠-3 等级-9
+				}
+			},--烈风螳螂专属武器魂珠-3
+			[4] = {
+				Id = 202104,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--烈风螳螂魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 156,Sum = 156},[2] = {Id = 112,Val = 65,Sum = 65},[3] = {Id = 113,Val = 2080,Sum = 2080}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--烈风螳螂魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 396},[2] = {Id = 112,Val = 100,Sum = 165},[3] = {Id = 113,Val = 3200,Sum = 5280}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--烈风螳螂魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 312,Sum = 708},[2] = {Id = 112,Val = 130,Sum = 295},[3] = {Id = 113,Val = 4160,Sum = 9440}},Cost = {[1] = {Id = 1401002,Val = 615},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--烈风螳螂魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1188},[2] = {Id = 112,Val = 200,Sum = 495},[3] = {Id = 113,Val = 6400,Sum = 15840}},Cost = {[1] = {Id = 1401002,Val = 1185},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--烈风螳螂魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 1836},[2] = {Id = 112,Val = 270,Sum = 765},[3] = {Id = 113,Val = 8640,Sum = 24480}},Cost = {[1] = {Id = 1401002,Val = 1205},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--烈风螳螂魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 804,Sum = 2640},[2] = {Id = 112,Val = 385,Sum = 1150},[3] = {Id = 113,Val = 10720,Sum = 35200}},Cost = {[1] = {Id = 1401002,Val = 1195},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--烈风螳螂魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 3600},[2] = {Id = 112,Val = 400,Sum = 1550},[3] = {Id = 113,Val = 12800,Sum = 48000}},Cost = {[1] = {Id = 1401002,Val = 1800},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--烈风螳螂魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 4740},[2] = {Id = 112,Val = 475,Sum = 2025},[3] = {Id = 113,Val = 15200,Sum = 63200}},Cost = {[1] = {Id = 1401002,Val = 2395},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--烈风螳螂魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 6060},[2] = {Id = 112,Val = 550,Sum = 2575},[3] = {Id = 113,Val = 17600,Sum = 80800}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--烈风螳螂魂珠-4 等级-9
+				}
+			},--烈风螳螂专属武器魂珠-4
+			[5] = {
+				Id = 202105,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--烈风螳螂魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 216},[2] = {Id = 112,Val = 90,Sum = 90},[3] = {Id = 113,Val = 2880,Sum = 2880}},Cost = {[1] = {Id = 1401002,Val = 1545},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--烈风螳螂魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 552},[2] = {Id = 112,Val = 140,Sum = 230},[3] = {Id = 113,Val = 4480,Sum = 7360}},Cost = {[1] = {Id = 1401002,Val = 1155},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--烈风螳螂魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 444,Sum = 996},[2] = {Id = 112,Val = 185,Sum = 415},[3] = {Id = 113,Val = 5920,Sum = 13280}},Cost = {[1] = {Id = 1401002,Val = 1285},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--烈风螳螂魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 1668},[2] = {Id = 112,Val = 280,Sum = 695},[3] = {Id = 113,Val = 8960,Sum = 22240}},Cost = {[1] = {Id = 1401002,Val = 1850},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--烈风螳螂魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 2568},[2] = {Id = 112,Val = 375,Sum = 1070},[3] = {Id = 113,Val = 12000,Sum = 34240}},Cost = {[1] = {Id = 1401002,Val = 1880},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--烈风螳螂魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 3708},[2] = {Id = 112,Val = 475,Sum = 1545},[3] = {Id = 113,Val = 15200,Sum = 49440}},Cost = {[1] = {Id = 1401002,Val = 3115},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--烈风螳螂魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 5148},[2] = {Id = 112,Val = 600,Sum = 2145},[3] = {Id = 113,Val = 19200,Sum = 68640}},Cost = {[1] = {Id = 1401002,Val = 3125},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--烈风螳螂魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1560,Sum = 6708},[2] = {Id = 112,Val = 650,Sum = 2795},[3] = {Id = 113,Val = 20800,Sum = 89440}},Cost = {[1] = {Id = 1401002,Val = 4370},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--烈风螳螂魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1800,Sum = 8508},[2] = {Id = 112,Val = 750,Sum = 3545},[3] = {Id = 113,Val = 24000,Sum = 113440}},Cost = {[1] = {Id = 1401002,Val = 5620},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--烈风螳螂魂珠-5 等级-9
+				}
+			},--烈风螳螂专属武器魂珠-5
+			[6] = {
+				Id = 202106,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--烈风螳螂魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 300,Sum = 300},[2] = {Id = 112,Val = 125,Sum = 125},[3] = {Id = 113,Val = 4000,Sum = 4000}},Cost = {[1] = {Id = 1401002,Val = 1450},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--烈风螳螂魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 780},[2] = {Id = 112,Val = 200,Sum = 325},[3] = {Id = 113,Val = 6400,Sum = 10400}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--烈风螳螂魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 1380},[2] = {Id = 112,Val = 250,Sum = 575},[3] = {Id = 113,Val = 8000,Sum = 18400}},Cost = {[1] = {Id = 1401002,Val = 2420},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--烈风螳螂魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2340},[2] = {Id = 112,Val = 400,Sum = 975},[3] = {Id = 113,Val = 12800,Sum = 31200}},Cost = {[1] = {Id = 1401002,Val = 3485},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--烈风螳螂魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 3660},[2] = {Id = 112,Val = 550,Sum = 1525},[3] = {Id = 113,Val = 17600,Sum = 48800}},Cost = {[1] = {Id = 1401002,Val = 3540},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--烈风螳螂魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 5280},[2] = {Id = 112,Val = 675,Sum = 2200},[3] = {Id = 113,Val = 21600,Sum = 70400}},Cost = {[1] = {Id = 1401002,Val = 4690},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--烈风螳螂魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 7200},[2] = {Id = 112,Val = 800,Sum = 3000},[3] = {Id = 113,Val = 25600,Sum = 96000}},Cost = {[1] = {Id = 1401002,Val = 5880},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--烈风螳螂魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2280,Sum = 9480},[2] = {Id = 112,Val = 950,Sum = 3950},[3] = {Id = 113,Val = 30400,Sum = 126400}},Cost = {[1] = {Id = 1401002,Val = 8225},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--烈风螳螂魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2640,Sum = 12120},[2] = {Id = 112,Val = 1100,Sum = 5050},[3] = {Id = 113,Val = 35200,Sum = 161600}},Cost = {[1] = {Id = 1401002,Val = 9400},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--烈风螳螂魂珠-6 等级-9
+				}
+			},--烈风螳螂专属武器魂珠-6
+			[7] = {
+				Id = 202107,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--烈风螳螂魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 384},[2] = {Id = 112,Val = 160,Sum = 160},[3] = {Id = 113,Val = 5120,Sum = 5120}},Cost = {[1] = {Id = 1401002,Val = 2855},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--烈风螳螂魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 960},[2] = {Id = 112,Val = 240,Sum = 400},[3] = {Id = 113,Val = 7680,Sum = 12800}},Cost = {[1] = {Id = 1401002,Val = 2140},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--烈风螳螂魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 1728},[2] = {Id = 112,Val = 320,Sum = 720},[3] = {Id = 113,Val = 10240,Sum = 23040}},Cost = {[1] = {Id = 1401002,Val = 3565},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--烈风螳螂魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1152,Sum = 2880},[2] = {Id = 112,Val = 480,Sum = 1200},[3] = {Id = 113,Val = 15360,Sum = 38400}},Cost = {[1] = {Id = 1401002,Val = 4565},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--烈风螳螂魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1536,Sum = 4416},[2] = {Id = 112,Val = 640,Sum = 1840},[3] = {Id = 113,Val = 20480,Sum = 58880}},Cost = {[1] = {Id = 1401002,Val = 4635},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--烈风螳螂魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 6336},[2] = {Id = 112,Val = 800,Sum = 2640},[3] = {Id = 113,Val = 25600,Sum = 84480}},Cost = {[1] = {Id = 1401002,Val = 5760},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--烈风螳螂魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2304,Sum = 8640},[2] = {Id = 112,Val = 960,Sum = 3600},[3] = {Id = 113,Val = 30720,Sum = 115200}},Cost = {[1] = {Id = 1401002,Val = 8085},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--烈风螳螂魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2688,Sum = 11328},[2] = {Id = 112,Val = 1120,Sum = 4720},[3] = {Id = 113,Val = 35840,Sum = 151040}},Cost = {[1] = {Id = 1401002,Val = 9230},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--烈风螳螂魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3072,Sum = 14400},[2] = {Id = 112,Val = 1280,Sum = 6000},[3] = {Id = 113,Val = 40960,Sum = 192000}},Cost = {[1] = {Id = 1401002,Val = 11545},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--烈风螳螂魂珠-7 等级-9
+				}
+			},--烈风螳螂专属武器魂珠-7
+			[8] = {
+				Id = 202108,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--烈风螳螂魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 480},[2] = {Id = 112,Val = 200,Sum = 200},[3] = {Id = 113,Val = 6400,Sum = 6400}},Cost = {[1] = {Id = 1401002,Val = 2430},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--烈风螳螂魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1200},[2] = {Id = 112,Val = 300,Sum = 500},[3] = {Id = 113,Val = 9600,Sum = 16000}},Cost = {[1] = {Id = 1401002,Val = 2920},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--烈风螳螂魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2160},[2] = {Id = 112,Val = 400,Sum = 900},[3] = {Id = 113,Val = 12800,Sum = 28800}},Cost = {[1] = {Id = 1401002,Val = 4055},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--烈风螳螂魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 3600},[2] = {Id = 112,Val = 600,Sum = 1500},[3] = {Id = 113,Val = 19200,Sum = 48000}},Cost = {[1] = {Id = 1401002,Val = 4670},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--烈风螳螂魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 5520},[2] = {Id = 112,Val = 800,Sum = 2300},[3] = {Id = 113,Val = 25600,Sum = 73600}},Cost = {[1] = {Id = 1401002,Val = 5930},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--烈风螳螂魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 7920},[2] = {Id = 112,Val = 1000,Sum = 3300},[3] = {Id = 113,Val = 32000,Sum = 105600}},Cost = {[1] = {Id = 1401002,Val = 7070},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--烈风螳螂魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2880,Sum = 10800},[2] = {Id = 112,Val = 1200,Sum = 4500},[3] = {Id = 113,Val = 38400,Sum = 144000}},Cost = {[1] = {Id = 1401002,Val = 9845},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--烈风螳螂魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3360,Sum = 14160},[2] = {Id = 112,Val = 1400,Sum = 5900},[3] = {Id = 113,Val = 44800,Sum = 188800}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--烈风螳螂魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3840,Sum = 18000},[2] = {Id = 112,Val = 1600,Sum = 7500},[3] = {Id = 113,Val = 51200,Sum = 240000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--烈风螳螂魂珠-8 等级-9
+				}
+			}--烈风螳螂专属武器魂珠-8
 		},
 		Unseal = {
-			[1] = {Cost = {[1] = {id = 1401002,val = 10000}},Prop = {[1] = {id = 111,val = 250}}},
-			[2] = {Cost = {[1] = {id = 1401002,val = 20000}},Prop = {[1] = {id = 113,val = 2250}}},
-			[3] = {Cost = {[1] = {id = 1401002,val = 30000},[2] = {id = 1611021,val = 5}},PSkill = 130302111,PSkillLevel = 1},
-			[4] = {Cost = {[1] = {id = 1401002,val = 50000},[2] = {id = 1611021,val = 5}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[5] = {Cost = {[1] = {id = 1401002,val = 100000},[2] = {id = 1611021,val = 10}},Prop = {[1] = {id = 110,val = 0.11}}},
-			[6] = {Cost = {[1] = {id = 1401002,val = 150000},[2] = {id = 1611021,val = 10}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[7] = {Cost = {[1] = {id = 1401002,val = 200000},[2] = {id = 1611021,val = 10}},Prop = {[1] = {id = 104,val = 0.11}}},
-			[8] = {Cost = {[1] = {id = 1401002,val = 250000},[2] = {id = 1611021,val = 20}},Prop = {[1] = {id = 109,val = 0.11}}},
-			[9] = {Cost = {[1] = {id = 1401002,val = 300000},[2] = {id = 1611021,val = 20}},Prop = {[1] = {id = 108,val = 0.11}}},
-			[10] = {Cost = {[1] = {id = 1401002,val = 400000},[2] = {id = 1611021,val = 20}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[11] = {Cost = {[1] = {id = 1401002,val = 500000},[2] = {id = 1611021,val = 30}},Prop = {[1] = {id = 110,val = 0.14}}},
-			[12] = {Cost = {[1] = {id = 1401002,val = 600000},[2] = {id = 1611021,val = 30}},Prop = {[1] = {id = 108,val = 0.14}}},
-			[13] = {Cost = {[1] = {id = 1401002,val = 700000},[2] = {id = 1611021,val = 30}},Prop = {[1] = {id = 104,val = 0.14}}},
-			[14] = {Cost = {[1] = {id = 1401002,val = 800000},[2] = {id = 1611021,val = 50}},Prop = {[1] = {id = 109,val = 0.14}}},
-			[15] = {Cost = {[1] = {id = 1401002,val = 1000000},[2] = {id = 1611021,val = 60}},Prop = {[1] = {id = 108,val = 0.14}}}
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502021,Val = 5},[3] = {Id = 1609001,Val = 20}},PSkill = 130302111,PSkillLevel = 1},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502021,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502021,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502021,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502021,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502021,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502021,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502021,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502021,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502021,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502021,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502021,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502021,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}}
 		}
-	}--烈风螳螂专属武器
+	},--烈风螳螂专属武器
+	[1102024] = {
+		CardId = 1102024,
+		Name = _T("朱仙专属武器"),
+		Quality = 3,
+		Icon = "ui_dtex_Equip_1102024",
+		HunZhu = {
+			[1] = {
+				Id = 202401,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--朱仙魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 50,Sum = 50},[2] = {Id = 112,Val = 25,Sum = 25},[3] = {Id = 113,Val = 1000,Sum = 1000}},Cost = {[1] = {Id = 1401002,Val = 80},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--朱仙魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 80,Sum = 130},[2] = {Id = 112,Val = 40,Sum = 65},[3] = {Id = 113,Val = 1600,Sum = 2600}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--朱仙魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 100,Sum = 230},[2] = {Id = 112,Val = 50,Sum = 115},[3] = {Id = 113,Val = 2000,Sum = 4600}},Cost = {[1] = {Id = 1401002,Val = 205},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--朱仙魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 160,Sum = 390},[2] = {Id = 112,Val = 80,Sum = 195},[3] = {Id = 113,Val = 3200,Sum = 7800}},Cost = {[1] = {Id = 1401002,Val = 260},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--朱仙魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 220,Sum = 610},[2] = {Id = 112,Val = 110,Sum = 305},[3] = {Id = 113,Val = 4400,Sum = 12200}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--朱仙魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 280,Sum = 890},[2] = {Id = 112,Val = 140,Sum = 445},[3] = {Id = 113,Val = 5600,Sum = 17800}},Cost = {[1] = {Id = 1401002,Val = 395},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--朱仙魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 320,Sum = 1210},[2] = {Id = 112,Val = 160,Sum = 605},[3] = {Id = 113,Val = 6400,Sum = 24200}},Cost = {[1] = {Id = 1401002,Val = 460},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--朱仙魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 380,Sum = 1590},[2] = {Id = 112,Val = 190,Sum = 795},[3] = {Id = 113,Val = 7600,Sum = 31800}},Cost = {[1] = {Id = 1401002,Val = 525},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--朱仙魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 420,Sum = 2010},[2] = {Id = 112,Val = 210,Sum = 1005},[3] = {Id = 113,Val = 8400,Sum = 40200}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--朱仙魂珠-1 等级-9
+				}
+			},--朱仙专属武器魂珠-1
+			[2] = {
+				Id = 202402,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--朱仙魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 80,Sum = 80},[2] = {Id = 112,Val = 40,Sum = 40},[3] = {Id = 113,Val = 1600,Sum = 1600}},Cost = {[1] = {Id = 1401002,Val = 220},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--朱仙魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 200},[2] = {Id = 112,Val = 60,Sum = 100},[3] = {Id = 113,Val = 2400,Sum = 4000}},Cost = {[1] = {Id = 1401002,Val = 165},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--朱仙魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 160,Sum = 360},[2] = {Id = 112,Val = 80,Sum = 180},[3] = {Id = 113,Val = 3200,Sum = 7200}},Cost = {[1] = {Id = 1401002,Val = 370},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--朱仙魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 600},[2] = {Id = 112,Val = 120,Sum = 300},[3] = {Id = 113,Val = 4800,Sum = 12000}},Cost = {[1] = {Id = 1401002,Val = 355},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--朱仙魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 320,Sum = 920},[2] = {Id = 112,Val = 160,Sum = 460},[3] = {Id = 113,Val = 6400,Sum = 18400}},Cost = {[1] = {Id = 1401002,Val = 540},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--朱仙魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 400,Sum = 1320},[2] = {Id = 112,Val = 200,Sum = 660},[3] = {Id = 113,Val = 8000,Sum = 26400}},Cost = {[1] = {Id = 1401002,Val = 715},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--朱仙魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1800},[2] = {Id = 112,Val = 240,Sum = 900},[3] = {Id = 113,Val = 9600,Sum = 36000}},Cost = {[1] = {Id = 1401002,Val = 900},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--朱仙魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 560,Sum = 2360},[2] = {Id = 112,Val = 280,Sum = 1180},[3] = {Id = 113,Val = 11200,Sum = 47200}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--朱仙魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 640,Sum = 3000},[2] = {Id = 112,Val = 320,Sum = 1500},[3] = {Id = 113,Val = 12800,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--朱仙魂珠-2 等级-9
+				}
+			},--朱仙专属武器魂珠-2
+			[3] = {
+				Id = 202403,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--朱仙魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 100,Sum = 100},[2] = {Id = 112,Val = 50,Sum = 50},[3] = {Id = 113,Val = 2000,Sum = 2000}},Cost = {[1] = {Id = 1401002,Val = 455},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--朱仙魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 160,Sum = 260},[2] = {Id = 112,Val = 80,Sum = 130},[3] = {Id = 113,Val = 3200,Sum = 5200}},Cost = {[1] = {Id = 1401002,Val = 340},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--朱仙魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 210,Sum = 470},[2] = {Id = 112,Val = 105,Sum = 235},[3] = {Id = 113,Val = 4200,Sum = 9400}},Cost = {[1] = {Id = 1401002,Val = 570},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--朱仙魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 320,Sum = 790},[2] = {Id = 112,Val = 160,Sum = 395},[3] = {Id = 113,Val = 6400,Sum = 15800}},Cost = {[1] = {Id = 1401002,Val = 550},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--朱仙魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 426,Sum = 1216},[2] = {Id = 112,Val = 213,Sum = 608},[3] = {Id = 113,Val = 8520,Sum = 24320}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--朱仙魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 1756},[2] = {Id = 112,Val = 270,Sum = 878},[3] = {Id = 113,Val = 10800,Sum = 35120}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--朱仙魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 640,Sum = 2396},[2] = {Id = 112,Val = 320,Sum = 1198},[3] = {Id = 113,Val = 12800,Sum = 47920}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--朱仙魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 750,Sum = 3146},[2] = {Id = 112,Val = 370,Sum = 1568},[3] = {Id = 113,Val = 15000,Sum = 62920}},Cost = {[1] = {Id = 1401002,Val = 1475},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--朱仙魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 850,Sum = 3996},[2] = {Id = 112,Val = 425,Sum = 1993},[3] = {Id = 113,Val = 17000,Sum = 79920}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--朱仙魂珠-3 等级-9
+				}
+			},--朱仙专属武器魂珠-3
+			[4] = {
+				Id = 202404,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--朱仙魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 130,Sum = 130},[2] = {Id = 112,Val = 65,Sum = 65},[3] = {Id = 113,Val = 2600,Sum = 2600}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--朱仙魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 200,Sum = 330},[2] = {Id = 112,Val = 100,Sum = 165},[3] = {Id = 113,Val = 4000,Sum = 6600}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--朱仙魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 260,Sum = 590},[2] = {Id = 112,Val = 130,Sum = 295},[3] = {Id = 113,Val = 5200,Sum = 11800}},Cost = {[1] = {Id = 1401002,Val = 615},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--朱仙魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 400,Sum = 990},[2] = {Id = 112,Val = 200,Sum = 495},[3] = {Id = 113,Val = 8000,Sum = 19800}},Cost = {[1] = {Id = 1401002,Val = 1185},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--朱仙魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 1530},[2] = {Id = 112,Val = 270,Sum = 765},[3] = {Id = 113,Val = 10800,Sum = 30600}},Cost = {[1] = {Id = 1401002,Val = 1205},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--朱仙魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 670,Sum = 2200},[2] = {Id = 112,Val = 385,Sum = 1150},[3] = {Id = 113,Val = 13400,Sum = 44000}},Cost = {[1] = {Id = 1401002,Val = 1195},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--朱仙魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 800,Sum = 3000},[2] = {Id = 112,Val = 400,Sum = 1550},[3] = {Id = 113,Val = 16000,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 1800},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--朱仙魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 950,Sum = 3950},[2] = {Id = 112,Val = 475,Sum = 2025},[3] = {Id = 113,Val = 19000,Sum = 79000}},Cost = {[1] = {Id = 1401002,Val = 2395},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--朱仙魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1100,Sum = 5050},[2] = {Id = 112,Val = 550,Sum = 2575},[3] = {Id = 113,Val = 22000,Sum = 101000}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--朱仙魂珠-4 等级-9
+				}
+			},--朱仙专属武器魂珠-4
+			[5] = {
+				Id = 202405,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--朱仙魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 180,Sum = 180},[2] = {Id = 112,Val = 90,Sum = 90},[3] = {Id = 113,Val = 3600,Sum = 3600}},Cost = {[1] = {Id = 1401002,Val = 1545},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--朱仙魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 280,Sum = 460},[2] = {Id = 112,Val = 140,Sum = 230},[3] = {Id = 113,Val = 5600,Sum = 9200}},Cost = {[1] = {Id = 1401002,Val = 1155},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--朱仙魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 370,Sum = 830},[2] = {Id = 112,Val = 185,Sum = 415},[3] = {Id = 113,Val = 7400,Sum = 16600}},Cost = {[1] = {Id = 1401002,Val = 1285},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--朱仙魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 560,Sum = 1390},[2] = {Id = 112,Val = 280,Sum = 695},[3] = {Id = 113,Val = 11200,Sum = 27800}},Cost = {[1] = {Id = 1401002,Val = 1850},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--朱仙魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 750,Sum = 2140},[2] = {Id = 112,Val = 375,Sum = 1070},[3] = {Id = 113,Val = 15000,Sum = 42800}},Cost = {[1] = {Id = 1401002,Val = 1880},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--朱仙魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 950,Sum = 3090},[2] = {Id = 112,Val = 475,Sum = 1545},[3] = {Id = 113,Val = 19000,Sum = 61800}},Cost = {[1] = {Id = 1401002,Val = 3115},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--朱仙魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1200,Sum = 4290},[2] = {Id = 112,Val = 600,Sum = 2145},[3] = {Id = 113,Val = 24000,Sum = 85800}},Cost = {[1] = {Id = 1401002,Val = 3125},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--朱仙魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1300,Sum = 5590},[2] = {Id = 112,Val = 650,Sum = 2795},[3] = {Id = 113,Val = 26000,Sum = 111800}},Cost = {[1] = {Id = 1401002,Val = 4370},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--朱仙魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1500,Sum = 7090},[2] = {Id = 112,Val = 750,Sum = 3545},[3] = {Id = 113,Val = 30000,Sum = 141800}},Cost = {[1] = {Id = 1401002,Val = 5620},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--朱仙魂珠-5 等级-9
+				}
+			},--朱仙专属武器魂珠-5
+			[6] = {
+				Id = 202406,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--朱仙魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 250,Sum = 250},[2] = {Id = 112,Val = 125,Sum = 125},[3] = {Id = 113,Val = 5000,Sum = 5000}},Cost = {[1] = {Id = 1401002,Val = 1450},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--朱仙魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 400,Sum = 650},[2] = {Id = 112,Val = 200,Sum = 325},[3] = {Id = 113,Val = 8000,Sum = 13000}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--朱仙魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 500,Sum = 1150},[2] = {Id = 112,Val = 250,Sum = 575},[3] = {Id = 113,Val = 10000,Sum = 23000}},Cost = {[1] = {Id = 1401002,Val = 2420},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--朱仙魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 800,Sum = 1950},[2] = {Id = 112,Val = 400,Sum = 975},[3] = {Id = 113,Val = 16000,Sum = 39000}},Cost = {[1] = {Id = 1401002,Val = 3485},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--朱仙魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1100,Sum = 3050},[2] = {Id = 112,Val = 550,Sum = 1525},[3] = {Id = 113,Val = 22000,Sum = 61000}},Cost = {[1] = {Id = 1401002,Val = 3540},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--朱仙魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1350,Sum = 4400},[2] = {Id = 112,Val = 675,Sum = 2200},[3] = {Id = 113,Val = 27000,Sum = 88000}},Cost = {[1] = {Id = 1401002,Val = 4690},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--朱仙魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1600,Sum = 6000},[2] = {Id = 112,Val = 800,Sum = 3000},[3] = {Id = 113,Val = 32000,Sum = 120000}},Cost = {[1] = {Id = 1401002,Val = 5880},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--朱仙魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1900,Sum = 7900},[2] = {Id = 112,Val = 950,Sum = 3950},[3] = {Id = 113,Val = 38000,Sum = 158000}},Cost = {[1] = {Id = 1401002,Val = 8225},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--朱仙魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2200,Sum = 10100},[2] = {Id = 112,Val = 1100,Sum = 5050},[3] = {Id = 113,Val = 44000,Sum = 202000}},Cost = {[1] = {Id = 1401002,Val = 9400},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--朱仙魂珠-6 等级-9
+				}
+			},--朱仙专属武器魂珠-6
+			[7] = {
+				Id = 202407,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--朱仙魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 320,Sum = 320},[2] = {Id = 112,Val = 160,Sum = 160},[3] = {Id = 113,Val = 6400,Sum = 6400}},Cost = {[1] = {Id = 1401002,Val = 2855},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--朱仙魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 800},[2] = {Id = 112,Val = 240,Sum = 400},[3] = {Id = 113,Val = 9600,Sum = 16000}},Cost = {[1] = {Id = 1401002,Val = 2140},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--朱仙魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 640,Sum = 1440},[2] = {Id = 112,Val = 320,Sum = 720},[3] = {Id = 113,Val = 12800,Sum = 28800}},Cost = {[1] = {Id = 1401002,Val = 3565},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--朱仙魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2400},[2] = {Id = 112,Val = 480,Sum = 1200},[3] = {Id = 113,Val = 19200,Sum = 48000}},Cost = {[1] = {Id = 1401002,Val = 4565},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--朱仙魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1280,Sum = 3680},[2] = {Id = 112,Val = 640,Sum = 1840},[3] = {Id = 113,Val = 25600,Sum = 73600}},Cost = {[1] = {Id = 1401002,Val = 4635},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--朱仙魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1600,Sum = 5280},[2] = {Id = 112,Val = 800,Sum = 2640},[3] = {Id = 113,Val = 32000,Sum = 105600}},Cost = {[1] = {Id = 1401002,Val = 5760},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--朱仙魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 7200},[2] = {Id = 112,Val = 960,Sum = 3600},[3] = {Id = 113,Val = 38400,Sum = 144000}},Cost = {[1] = {Id = 1401002,Val = 8085},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--朱仙魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2240,Sum = 9440},[2] = {Id = 112,Val = 1120,Sum = 4720},[3] = {Id = 113,Val = 44800,Sum = 188800}},Cost = {[1] = {Id = 1401002,Val = 9230},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--朱仙魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2560,Sum = 12000},[2] = {Id = 112,Val = 1280,Sum = 6000},[3] = {Id = 113,Val = 51200,Sum = 240000}},Cost = {[1] = {Id = 1401002,Val = 11545},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--朱仙魂珠-7 等级-9
+				}
+			},--朱仙专属武器魂珠-7
+			[8] = {
+				Id = 202408,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--朱仙魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 400,Sum = 400},[2] = {Id = 112,Val = 200,Sum = 200},[3] = {Id = 113,Val = 8000,Sum = 8000}},Cost = {[1] = {Id = 1401002,Val = 2430},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--朱仙魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 1000},[2] = {Id = 112,Val = 300,Sum = 500},[3] = {Id = 113,Val = 12000,Sum = 20000}},Cost = {[1] = {Id = 1401002,Val = 2920},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--朱仙魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 800,Sum = 1800},[2] = {Id = 112,Val = 400,Sum = 900},[3] = {Id = 113,Val = 16000,Sum = 36000}},Cost = {[1] = {Id = 1401002,Val = 4055},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--朱仙魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1200,Sum = 3000},[2] = {Id = 112,Val = 600,Sum = 1500},[3] = {Id = 113,Val = 24000,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 4670},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--朱仙魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1600,Sum = 4600},[2] = {Id = 112,Val = 800,Sum = 2300},[3] = {Id = 113,Val = 32000,Sum = 92000}},Cost = {[1] = {Id = 1401002,Val = 5930},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--朱仙魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2000,Sum = 6600},[2] = {Id = 112,Val = 1000,Sum = 3300},[3] = {Id = 113,Val = 40000,Sum = 132000}},Cost = {[1] = {Id = 1401002,Val = 7070},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--朱仙魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 9000},[2] = {Id = 112,Val = 1200,Sum = 4500},[3] = {Id = 113,Val = 48000,Sum = 180000}},Cost = {[1] = {Id = 1401002,Val = 9845},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--朱仙魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2800,Sum = 11800},[2] = {Id = 112,Val = 1400,Sum = 5900},[3] = {Id = 113,Val = 56000,Sum = 236000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--朱仙魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3200,Sum = 15000},[2] = {Id = 112,Val = 1600,Sum = 7500},[3] = {Id = 113,Val = 64000,Sum = 300000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--朱仙魂珠-8 等级-9
+				}
+			}--朱仙专属武器魂珠-8
+		},
+		Unseal = {
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502024,Val = 5},[3] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 112,Val = 125}}},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502024,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502024,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502024,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502024,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502024,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502024,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502024,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502024,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502024,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502024,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502024,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502024,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}}
+		}
+	},--朱仙专属武器
+	[1102026] = {
+		CardId = 1102026,
+		Name = _T("雷神之锤"),
+		Quality = 3,
+		Icon = "ui_dtex_Equip_1102026",
+		HunZhu = {
+			[1] = {
+				Id = 202601,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--雷震子魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 60,Sum = 60},[2] = {Id = 112,Val = 23,Sum = 23},[3] = {Id = 113,Val = 900,Sum = 900}},Cost = {[1] = {Id = 1401002,Val = 80},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--雷震子魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 156},[2] = {Id = 112,Val = 36,Sum = 59},[3] = {Id = 113,Val = 1440,Sum = 2340}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--雷震子魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 276},[2] = {Id = 112,Val = 45,Sum = 104},[3] = {Id = 113,Val = 1800,Sum = 4140}},Cost = {[1] = {Id = 1401002,Val = 205},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--雷震子魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 468},[2] = {Id = 112,Val = 72,Sum = 176},[3] = {Id = 113,Val = 2880,Sum = 7020}},Cost = {[1] = {Id = 1401002,Val = 260},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--雷震子魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 264,Sum = 732},[2] = {Id = 112,Val = 99,Sum = 275},[3] = {Id = 113,Val = 3960,Sum = 10980}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--雷震子魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 1068},[2] = {Id = 112,Val = 126,Sum = 401},[3] = {Id = 113,Val = 5040,Sum = 16020}},Cost = {[1] = {Id = 1401002,Val = 395},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--雷震子魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1452},[2] = {Id = 112,Val = 144,Sum = 545},[3] = {Id = 113,Val = 5760,Sum = 21780}},Cost = {[1] = {Id = 1401002,Val = 460},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--雷震子魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 456,Sum = 1908},[2] = {Id = 112,Val = 171,Sum = 716},[3] = {Id = 113,Val = 6840,Sum = 28620}},Cost = {[1] = {Id = 1401002,Val = 525},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--雷震子魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 2412},[2] = {Id = 112,Val = 189,Sum = 905},[3] = {Id = 113,Val = 7560,Sum = 36180}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--雷震子魂珠-1 等级-9
+				}
+			},--雷震子专属武器魂珠-1
+			[2] = {
+				Id = 202602,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--雷震子魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 96},[2] = {Id = 112,Val = 36,Sum = 36},[3] = {Id = 113,Val = 1440,Sum = 1440}},Cost = {[1] = {Id = 1401002,Val = 220},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--雷震子魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 240},[2] = {Id = 112,Val = 54,Sum = 90},[3] = {Id = 113,Val = 2160,Sum = 3600}},Cost = {[1] = {Id = 1401002,Val = 165},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--雷震子魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 432},[2] = {Id = 112,Val = 72,Sum = 162},[3] = {Id = 113,Val = 2880,Sum = 6480}},Cost = {[1] = {Id = 1401002,Val = 370},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--雷震子魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 720},[2] = {Id = 112,Val = 108,Sum = 270},[3] = {Id = 113,Val = 4320,Sum = 10800}},Cost = {[1] = {Id = 1401002,Val = 355},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--雷震子魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1104},[2] = {Id = 112,Val = 144,Sum = 414},[3] = {Id = 113,Val = 5760,Sum = 16560}},Cost = {[1] = {Id = 1401002,Val = 540},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--雷震子魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1584},[2] = {Id = 112,Val = 180,Sum = 594},[3] = {Id = 113,Val = 7200,Sum = 23760}},Cost = {[1] = {Id = 1401002,Val = 715},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--雷震子魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2160},[2] = {Id = 112,Val = 216,Sum = 810},[3] = {Id = 113,Val = 8640,Sum = 32400}},Cost = {[1] = {Id = 1401002,Val = 900},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--雷震子魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 2832},[2] = {Id = 112,Val = 252,Sum = 1062},[3] = {Id = 113,Val = 10080,Sum = 42480}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--雷震子魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 3600},[2] = {Id = 112,Val = 288,Sum = 1350},[3] = {Id = 113,Val = 11520,Sum = 54000}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--雷震子魂珠-2 等级-9
+				}
+			},--雷震子专属武器魂珠-2
+			[3] = {
+				Id = 202603,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--雷震子魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 120},[2] = {Id = 112,Val = 45,Sum = 45},[3] = {Id = 113,Val = 1800,Sum = 1800}},Cost = {[1] = {Id = 1401002,Val = 455},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--雷震子魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 312},[2] = {Id = 112,Val = 72,Sum = 117},[3] = {Id = 113,Val = 2880,Sum = 4680}},Cost = {[1] = {Id = 1401002,Val = 340},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--雷震子魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 564},[2] = {Id = 112,Val = 95,Sum = 212},[3] = {Id = 113,Val = 3780,Sum = 8460}},Cost = {[1] = {Id = 1401002,Val = 570},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--雷震子魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 948},[2] = {Id = 112,Val = 144,Sum = 356},[3] = {Id = 113,Val = 5760,Sum = 14220}},Cost = {[1] = {Id = 1401002,Val = 550},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--雷震子魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 511,Sum = 1459},[2] = {Id = 112,Val = 192,Sum = 548},[3] = {Id = 113,Val = 7668,Sum = 21888}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--雷震子魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 2107},[2] = {Id = 112,Val = 243,Sum = 791},[3] = {Id = 113,Val = 9720,Sum = 31608}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--雷震子魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 2875},[2] = {Id = 112,Val = 288,Sum = 1079},[3] = {Id = 113,Val = 11520,Sum = 43128}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--雷震子魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 3775},[2] = {Id = 112,Val = 333,Sum = 1412},[3] = {Id = 113,Val = 13500,Sum = 56628}},Cost = {[1] = {Id = 1401002,Val = 1475},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--雷震子魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1020,Sum = 4795},[2] = {Id = 112,Val = 383,Sum = 1795},[3] = {Id = 113,Val = 15300,Sum = 71928}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--雷震子魂珠-3 等级-9
+				}
+			},--雷震子专属武器魂珠-3
+			[4] = {
+				Id = 202604,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--雷震子魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 156,Sum = 156},[2] = {Id = 112,Val = 59,Sum = 59},[3] = {Id = 113,Val = 2340,Sum = 2340}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--雷震子魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 396},[2] = {Id = 112,Val = 90,Sum = 149},[3] = {Id = 113,Val = 3600,Sum = 5940}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--雷震子魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 312,Sum = 708},[2] = {Id = 112,Val = 117,Sum = 266},[3] = {Id = 113,Val = 4680,Sum = 10620}},Cost = {[1] = {Id = 1401002,Val = 615},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--雷震子魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1188},[2] = {Id = 112,Val = 180,Sum = 446},[3] = {Id = 113,Val = 7200,Sum = 17820}},Cost = {[1] = {Id = 1401002,Val = 1185},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--雷震子魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 1836},[2] = {Id = 112,Val = 243,Sum = 689},[3] = {Id = 113,Val = 9720,Sum = 27540}},Cost = {[1] = {Id = 1401002,Val = 1205},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--雷震子魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 804,Sum = 2640},[2] = {Id = 112,Val = 347,Sum = 1036},[3] = {Id = 113,Val = 12060,Sum = 39600}},Cost = {[1] = {Id = 1401002,Val = 1195},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--雷震子魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 3600},[2] = {Id = 112,Val = 360,Sum = 1396},[3] = {Id = 113,Val = 14400,Sum = 54000}},Cost = {[1] = {Id = 1401002,Val = 1800},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--雷震子魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 4740},[2] = {Id = 112,Val = 428,Sum = 1824},[3] = {Id = 113,Val = 17100,Sum = 71100}},Cost = {[1] = {Id = 1401002,Val = 2395},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--雷震子魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 6060},[2] = {Id = 112,Val = 495,Sum = 2319},[3] = {Id = 113,Val = 19800,Sum = 90900}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--雷震子魂珠-4 等级-9
+				}
+			},--雷震子专属武器魂珠-4
+			[5] = {
+				Id = 202605,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--雷震子魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 216},[2] = {Id = 112,Val = 81,Sum = 81},[3] = {Id = 113,Val = 3240,Sum = 3240}},Cost = {[1] = {Id = 1401002,Val = 1545},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--雷震子魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 552},[2] = {Id = 112,Val = 126,Sum = 207},[3] = {Id = 113,Val = 5040,Sum = 8280}},Cost = {[1] = {Id = 1401002,Val = 1155},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--雷震子魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 444,Sum = 996},[2] = {Id = 112,Val = 167,Sum = 374},[3] = {Id = 113,Val = 6660,Sum = 14940}},Cost = {[1] = {Id = 1401002,Val = 1285},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--雷震子魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 1668},[2] = {Id = 112,Val = 252,Sum = 626},[3] = {Id = 113,Val = 10080,Sum = 25020}},Cost = {[1] = {Id = 1401002,Val = 1850},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--雷震子魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 2568},[2] = {Id = 112,Val = 338,Sum = 964},[3] = {Id = 113,Val = 13500,Sum = 38520}},Cost = {[1] = {Id = 1401002,Val = 1880},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--雷震子魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 3708},[2] = {Id = 112,Val = 428,Sum = 1392},[3] = {Id = 113,Val = 17100,Sum = 55620}},Cost = {[1] = {Id = 1401002,Val = 3115},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--雷震子魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 5148},[2] = {Id = 112,Val = 540,Sum = 1932},[3] = {Id = 113,Val = 21600,Sum = 77220}},Cost = {[1] = {Id = 1401002,Val = 3125},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--雷震子魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1560,Sum = 6708},[2] = {Id = 112,Val = 585,Sum = 2517},[3] = {Id = 113,Val = 23400,Sum = 100620}},Cost = {[1] = {Id = 1401002,Val = 4370},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--雷震子魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1800,Sum = 8508},[2] = {Id = 112,Val = 675,Sum = 3192},[3] = {Id = 113,Val = 27000,Sum = 127620}},Cost = {[1] = {Id = 1401002,Val = 5620},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--雷震子魂珠-5 等级-9
+				}
+			},--雷震子专属武器魂珠-5
+			[6] = {
+				Id = 202606,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--雷震子魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 300,Sum = 300},[2] = {Id = 112,Val = 113,Sum = 113},[3] = {Id = 113,Val = 4500,Sum = 4500}},Cost = {[1] = {Id = 1401002,Val = 1450},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--雷震子魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 780},[2] = {Id = 112,Val = 180,Sum = 293},[3] = {Id = 113,Val = 7200,Sum = 11700}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--雷震子魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 1380},[2] = {Id = 112,Val = 225,Sum = 518},[3] = {Id = 113,Val = 9000,Sum = 20700}},Cost = {[1] = {Id = 1401002,Val = 2420},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--雷震子魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2340},[2] = {Id = 112,Val = 360,Sum = 878},[3] = {Id = 113,Val = 14400,Sum = 35100}},Cost = {[1] = {Id = 1401002,Val = 3485},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--雷震子魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 3660},[2] = {Id = 112,Val = 495,Sum = 1373},[3] = {Id = 113,Val = 19800,Sum = 54900}},Cost = {[1] = {Id = 1401002,Val = 3540},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--雷震子魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 5280},[2] = {Id = 112,Val = 608,Sum = 1981},[3] = {Id = 113,Val = 24300,Sum = 79200}},Cost = {[1] = {Id = 1401002,Val = 4690},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--雷震子魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 7200},[2] = {Id = 112,Val = 720,Sum = 2701},[3] = {Id = 113,Val = 28800,Sum = 108000}},Cost = {[1] = {Id = 1401002,Val = 5880},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--雷震子魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2280,Sum = 9480},[2] = {Id = 112,Val = 855,Sum = 3556},[3] = {Id = 113,Val = 34200,Sum = 142200}},Cost = {[1] = {Id = 1401002,Val = 8225},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--雷震子魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2640,Sum = 12120},[2] = {Id = 112,Val = 990,Sum = 4546},[3] = {Id = 113,Val = 39600,Sum = 181800}},Cost = {[1] = {Id = 1401002,Val = 9400},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--雷震子魂珠-6 等级-9
+				}
+			},--雷震子专属武器魂珠-6
+			[7] = {
+				Id = 202607,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--雷震子魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 384},[2] = {Id = 112,Val = 144,Sum = 144},[3] = {Id = 113,Val = 5760,Sum = 5760}},Cost = {[1] = {Id = 1401002,Val = 2855},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--雷震子魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 960},[2] = {Id = 112,Val = 216,Sum = 360},[3] = {Id = 113,Val = 8640,Sum = 14400}},Cost = {[1] = {Id = 1401002,Val = 2140},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--雷震子魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 1728},[2] = {Id = 112,Val = 288,Sum = 648},[3] = {Id = 113,Val = 11520,Sum = 25920}},Cost = {[1] = {Id = 1401002,Val = 3565},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--雷震子魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1152,Sum = 2880},[2] = {Id = 112,Val = 432,Sum = 1080},[3] = {Id = 113,Val = 17280,Sum = 43200}},Cost = {[1] = {Id = 1401002,Val = 4565},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--雷震子魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1536,Sum = 4416},[2] = {Id = 112,Val = 576,Sum = 1656},[3] = {Id = 113,Val = 23040,Sum = 66240}},Cost = {[1] = {Id = 1401002,Val = 4635},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--雷震子魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 6336},[2] = {Id = 112,Val = 720,Sum = 2376},[3] = {Id = 113,Val = 28800,Sum = 95040}},Cost = {[1] = {Id = 1401002,Val = 5760},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--雷震子魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2304,Sum = 8640},[2] = {Id = 112,Val = 864,Sum = 3240},[3] = {Id = 113,Val = 34560,Sum = 129600}},Cost = {[1] = {Id = 1401002,Val = 8085},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--雷震子魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2688,Sum = 11328},[2] = {Id = 112,Val = 1008,Sum = 4248},[3] = {Id = 113,Val = 40320,Sum = 169920}},Cost = {[1] = {Id = 1401002,Val = 9230},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--雷震子魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3072,Sum = 14400},[2] = {Id = 112,Val = 1152,Sum = 5400},[3] = {Id = 113,Val = 46080,Sum = 216000}},Cost = {[1] = {Id = 1401002,Val = 11545},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--雷震子魂珠-7 等级-9
+				}
+			},--雷震子专属武器魂珠-7
+			[8] = {
+				Id = 202608,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--雷震子魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 480},[2] = {Id = 112,Val = 180,Sum = 180},[3] = {Id = 113,Val = 7200,Sum = 7200}},Cost = {[1] = {Id = 1401002,Val = 2430},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--雷震子魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1200},[2] = {Id = 112,Val = 270,Sum = 450},[3] = {Id = 113,Val = 10800,Sum = 18000}},Cost = {[1] = {Id = 1401002,Val = 2920},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--雷震子魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2160},[2] = {Id = 112,Val = 360,Sum = 810},[3] = {Id = 113,Val = 14400,Sum = 32400}},Cost = {[1] = {Id = 1401002,Val = 4055},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--雷震子魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 3600},[2] = {Id = 112,Val = 540,Sum = 1350},[3] = {Id = 113,Val = 21600,Sum = 54000}},Cost = {[1] = {Id = 1401002,Val = 4670},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--雷震子魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 5520},[2] = {Id = 112,Val = 720,Sum = 2070},[3] = {Id = 113,Val = 28800,Sum = 82800}},Cost = {[1] = {Id = 1401002,Val = 5930},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--雷震子魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 7920},[2] = {Id = 112,Val = 900,Sum = 2970},[3] = {Id = 113,Val = 36000,Sum = 118800}},Cost = {[1] = {Id = 1401002,Val = 7070},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--雷震子魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2880,Sum = 10800},[2] = {Id = 112,Val = 1080,Sum = 4050},[3] = {Id = 113,Val = 43200,Sum = 162000}},Cost = {[1] = {Id = 1401002,Val = 9845},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--雷震子魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3360,Sum = 14160},[2] = {Id = 112,Val = 1260,Sum = 5310},[3] = {Id = 113,Val = 50400,Sum = 212400}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--雷震子魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3840,Sum = 18000},[2] = {Id = 112,Val = 1440,Sum = 6750},[3] = {Id = 113,Val = 57600,Sum = 270000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--雷震子魂珠-8 等级-9
+				}
+			}--雷震子专属武器魂珠-8
+		},
+		Unseal = {
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502026,Val = 5},[3] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 112,Val = 125}}},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502026,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502026,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502026,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502026,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502026,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502026,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502026,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502026,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502026,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502026,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502026,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502026,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}}
+		}
+	},--雷震子专属武器
+	[1102028] = {
+		CardId = 1102028,
+		Name = _T("方天画戟"),
+		Quality = 4,
+		Icon = "ui_dtex_Equip_1102028",
+		HunZhu = {
+			[1] = {
+				Id = 202801,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--吕布魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 68,Sum = 68},[2] = {Id = 112,Val = 34,Sum = 34},[3] = {Id = 113,Val = 1200,Sum = 1200}},Cost = {[1] = {Id = 1401002,Val = 160},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--吕布魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 108,Sum = 176},[2] = {Id = 112,Val = 54,Sum = 88},[3] = {Id = 113,Val = 1920,Sum = 3120}},Cost = {[1] = {Id = 1401002,Val = 245},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--吕布魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 135,Sum = 311},[2] = {Id = 112,Val = 68,Sum = 156},[3] = {Id = 113,Val = 2400,Sum = 5520}},Cost = {[1] = {Id = 1401002,Val = 405},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--吕布魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 527},[2] = {Id = 112,Val = 108,Sum = 264},[3] = {Id = 113,Val = 3840,Sum = 9360}},Cost = {[1] = {Id = 1401002,Val = 520},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--吕布魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 297,Sum = 824},[2] = {Id = 112,Val = 149,Sum = 413},[3] = {Id = 113,Val = 5280,Sum = 14640}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--吕布魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 378,Sum = 1202},[2] = {Id = 112,Val = 189,Sum = 602},[3] = {Id = 113,Val = 6720,Sum = 21360}},Cost = {[1] = {Id = 1401002,Val = 790},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--吕布魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 1634},[2] = {Id = 112,Val = 216,Sum = 818},[3] = {Id = 113,Val = 7680,Sum = 29040}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--吕布魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 513,Sum = 2147},[2] = {Id = 112,Val = 257,Sum = 1075},[3] = {Id = 113,Val = 9120,Sum = 38160}},Cost = {[1] = {Id = 1401002,Val = 1055},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--吕布魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 567,Sum = 2714},[2] = {Id = 112,Val = 284,Sum = 1359},[3] = {Id = 113,Val = 10080,Sum = 48240}},Cost = {[1] = {Id = 1401002,Val = 1315},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--吕布魂珠-1 等级-9
+				}
+			},--吕布专属武器魂珠-1
+			[2] = {
+				Id = 202802,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--吕布魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 108,Sum = 108},[2] = {Id = 112,Val = 54,Sum = 54},[3] = {Id = 113,Val = 1920,Sum = 1920}},Cost = {[1] = {Id = 1401002,Val = 445},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--吕布魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 162,Sum = 270},[2] = {Id = 112,Val = 81,Sum = 135},[3] = {Id = 113,Val = 2880,Sum = 4800}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--吕布魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 486},[2] = {Id = 112,Val = 108,Sum = 243},[3] = {Id = 113,Val = 3840,Sum = 8640}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--吕布魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 324,Sum = 810},[2] = {Id = 112,Val = 162,Sum = 405},[3] = {Id = 113,Val = 5760,Sum = 14400}},Cost = {[1] = {Id = 1401002,Val = 710},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--吕布魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 1242},[2] = {Id = 112,Val = 216,Sum = 621},[3] = {Id = 113,Val = 7680,Sum = 22080}},Cost = {[1] = {Id = 1401002,Val = 1080},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--吕布魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 1782},[2] = {Id = 112,Val = 270,Sum = 891},[3] = {Id = 113,Val = 9600,Sum = 31680}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--吕布魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 2430},[2] = {Id = 112,Val = 324,Sum = 1215},[3] = {Id = 113,Val = 11520,Sum = 43200}},Cost = {[1] = {Id = 1401002,Val = 1795},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--吕布魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 756,Sum = 3186},[2] = {Id = 112,Val = 378,Sum = 1593},[3] = {Id = 113,Val = 13440,Sum = 56640}},Cost = {[1] = {Id = 1401002,Val = 2150},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--吕布魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 864,Sum = 4050},[2] = {Id = 112,Val = 432,Sum = 2025},[3] = {Id = 113,Val = 15360,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 2870},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--吕布魂珠-2 等级-9
+				}
+			},--吕布专属武器魂珠-2
+			[3] = {
+				Id = 202803,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--吕布魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 135,Sum = 135},[2] = {Id = 112,Val = 68,Sum = 68},[3] = {Id = 113,Val = 2400,Sum = 2400}},Cost = {[1] = {Id = 1401002,Val = 910},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--吕布魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 351},[2] = {Id = 112,Val = 108,Sum = 176},[3] = {Id = 113,Val = 3840,Sum = 6240}},Cost = {[1] = {Id = 1401002,Val = 685},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--吕布魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 284,Sum = 635},[2] = {Id = 112,Val = 142,Sum = 318},[3] = {Id = 113,Val = 5040,Sum = 11280}},Cost = {[1] = {Id = 1401002,Val = 1140},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--吕布魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 1067},[2] = {Id = 112,Val = 216,Sum = 534},[3] = {Id = 113,Val = 7680,Sum = 18960}},Cost = {[1] = {Id = 1401002,Val = 1095},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--吕布魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 575,Sum = 1642},[2] = {Id = 112,Val = 288,Sum = 822},[3] = {Id = 113,Val = 10224,Sum = 29184}},Cost = {[1] = {Id = 1401002,Val = 1485},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--吕布魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 729,Sum = 2371},[2] = {Id = 112,Val = 365,Sum = 1187},[3] = {Id = 113,Val = 12960,Sum = 42144}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--吕布魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 864,Sum = 3235},[2] = {Id = 112,Val = 432,Sum = 1619},[3] = {Id = 113,Val = 15360,Sum = 57504}},Cost = {[1] = {Id = 1401002,Val = 2215},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--吕布魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1013,Sum = 4248},[2] = {Id = 112,Val = 500,Sum = 2119},[3] = {Id = 113,Val = 18000,Sum = 75504}},Cost = {[1] = {Id = 1401002,Val = 2955},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--吕布魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1148,Sum = 5396},[2] = {Id = 112,Val = 574,Sum = 2693},[3] = {Id = 113,Val = 20400,Sum = 95904}},Cost = {[1] = {Id = 1401002,Val = 3695},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--吕布魂珠-3 等级-9
+				}
+			},--吕布专属武器魂珠-3
+			[4] = {
+				Id = 202804,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--吕布魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 176},[2] = {Id = 112,Val = 88,Sum = 88},[3] = {Id = 113,Val = 3120,Sum = 3120}},Cost = {[1] = {Id = 1401002,Val = 1480},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--吕布魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 270,Sum = 446},[2] = {Id = 112,Val = 135,Sum = 223},[3] = {Id = 113,Val = 4800,Sum = 7920}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--吕布魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 351,Sum = 797},[2] = {Id = 112,Val = 176,Sum = 399},[3] = {Id = 113,Val = 6240,Sum = 14160}},Cost = {[1] = {Id = 1401002,Val = 1235},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--吕布魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 1337},[2] = {Id = 112,Val = 270,Sum = 669},[3] = {Id = 113,Val = 9600,Sum = 23760}},Cost = {[1] = {Id = 1401002,Val = 2370},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--吕布魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 729,Sum = 2066},[2] = {Id = 112,Val = 365,Sum = 1034},[3] = {Id = 113,Val = 12960,Sum = 36720}},Cost = {[1] = {Id = 1401002,Val = 2405},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--吕布魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 905,Sum = 2971},[2] = {Id = 112,Val = 520,Sum = 1554},[3] = {Id = 113,Val = 16080,Sum = 52800}},Cost = {[1] = {Id = 1401002,Val = 2390},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--吕布魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 4051},[2] = {Id = 112,Val = 540,Sum = 2094},[3] = {Id = 113,Val = 19200,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--吕布魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1283,Sum = 5334},[2] = {Id = 112,Val = 641,Sum = 2735},[3] = {Id = 113,Val = 22800,Sum = 94800}},Cost = {[1] = {Id = 1401002,Val = 4790},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--吕布魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1485,Sum = 6819},[2] = {Id = 112,Val = 743,Sum = 3478},[3] = {Id = 113,Val = 26400,Sum = 121200}},Cost = {[1] = {Id = 1401002,Val = 7190},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--吕布魂珠-4 等级-9
+				}
+			},--吕布专属武器魂珠-4
+			[5] = {
+				Id = 202805,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--吕布魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 243,Sum = 243},[2] = {Id = 112,Val = 122,Sum = 122},[3] = {Id = 113,Val = 4320,Sum = 4320}},Cost = {[1] = {Id = 1401002,Val = 3085},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--吕布魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 378,Sum = 621},[2] = {Id = 112,Val = 189,Sum = 311},[3] = {Id = 113,Val = 6720,Sum = 11040}},Cost = {[1] = {Id = 1401002,Val = 2315},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--吕布魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 500,Sum = 1121},[2] = {Id = 112,Val = 250,Sum = 561},[3] = {Id = 113,Val = 8880,Sum = 19920}},Cost = {[1] = {Id = 1401002,Val = 2570},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--吕布魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 756,Sum = 1877},[2] = {Id = 112,Val = 378,Sum = 939},[3] = {Id = 113,Val = 13440,Sum = 33360}},Cost = {[1] = {Id = 1401002,Val = 3705},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--吕布魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1013,Sum = 2890},[2] = {Id = 112,Val = 506,Sum = 1445},[3] = {Id = 113,Val = 18000,Sum = 51360}},Cost = {[1] = {Id = 1401002,Val = 3760},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--吕布魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1283,Sum = 4173},[2] = {Id = 112,Val = 641,Sum = 2086},[3] = {Id = 113,Val = 22800,Sum = 74160}},Cost = {[1] = {Id = 1401002,Val = 6230},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--吕布魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 5793},[2] = {Id = 112,Val = 810,Sum = 2896},[3] = {Id = 113,Val = 28800,Sum = 102960}},Cost = {[1] = {Id = 1401002,Val = 6245},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--吕布魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1755,Sum = 7548},[2] = {Id = 112,Val = 878,Sum = 3774},[3] = {Id = 113,Val = 31200,Sum = 134160}},Cost = {[1] = {Id = 1401002,Val = 8740},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--吕布魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2025,Sum = 9573},[2] = {Id = 112,Val = 1013,Sum = 4787},[3] = {Id = 113,Val = 36000,Sum = 170160}},Cost = {[1] = {Id = 1401002,Val = 11240},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--吕布魂珠-5 等级-9
+				}
+			},--吕布专属武器魂珠-5
+			[6] = {
+				Id = 202806,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--吕布魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 338,Sum = 338},[2] = {Id = 112,Val = 169,Sum = 169},[3] = {Id = 113,Val = 6000,Sum = 6000}},Cost = {[1] = {Id = 1401002,Val = 2905},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--吕布魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 878},[2] = {Id = 112,Val = 270,Sum = 439},[3] = {Id = 113,Val = 9600,Sum = 15600}},Cost = {[1] = {Id = 1401002,Val = 4360},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--吕布魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 675,Sum = 1553},[2] = {Id = 112,Val = 338,Sum = 777},[3] = {Id = 113,Val = 12000,Sum = 27600}},Cost = {[1] = {Id = 1401002,Val = 4840},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--吕布魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 2633},[2] = {Id = 112,Val = 540,Sum = 1317},[3] = {Id = 113,Val = 19200,Sum = 46800}},Cost = {[1] = {Id = 1401002,Val = 6970},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--吕布魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1485,Sum = 4118},[2] = {Id = 112,Val = 743,Sum = 2060},[3] = {Id = 113,Val = 26400,Sum = 73200}},Cost = {[1] = {Id = 1401002,Val = 7080},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--吕布魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1823,Sum = 5941},[2] = {Id = 112,Val = 911,Sum = 2971},[3] = {Id = 113,Val = 32400,Sum = 105600}},Cost = {[1] = {Id = 1401002,Val = 9385},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--吕布魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2160,Sum = 8101},[2] = {Id = 112,Val = 1080,Sum = 4051},[3] = {Id = 113,Val = 38400,Sum = 144000}},Cost = {[1] = {Id = 1401002,Val = 11760},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--吕布魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2565,Sum = 10666},[2] = {Id = 112,Val = 1283,Sum = 5334},[3] = {Id = 113,Val = 45600,Sum = 189600}},Cost = {[1] = {Id = 1401002,Val = 16445},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--吕布魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2970,Sum = 13636},[2] = {Id = 112,Val = 1485,Sum = 6819},[3] = {Id = 113,Val = 52800,Sum = 242400}},Cost = {[1] = {Id = 1401002,Val = 18800},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--吕布魂珠-6 等级-9
+				}
+			},--吕布专属武器魂珠-6
+			[7] = {
+				Id = 202807,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--吕布魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 432,Sum = 432},[2] = {Id = 112,Val = 216,Sum = 216},[3] = {Id = 113,Val = 7680,Sum = 7680}},Cost = {[1] = {Id = 1401002,Val = 5710},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--吕布魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 1080},[2] = {Id = 112,Val = 324,Sum = 540},[3] = {Id = 113,Val = 11520,Sum = 19200}},Cost = {[1] = {Id = 1401002,Val = 4280},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--吕布魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 864,Sum = 1944},[2] = {Id = 112,Val = 432,Sum = 972},[3] = {Id = 113,Val = 15360,Sum = 34560}},Cost = {[1] = {Id = 1401002,Val = 7135},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--吕布魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1296,Sum = 3240},[2] = {Id = 112,Val = 648,Sum = 1620},[3] = {Id = 113,Val = 23040,Sum = 57600}},Cost = {[1] = {Id = 1401002,Val = 9130},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--吕布魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1728,Sum = 4968},[2] = {Id = 112,Val = 864,Sum = 2484},[3] = {Id = 113,Val = 30720,Sum = 88320}},Cost = {[1] = {Id = 1401002,Val = 9275},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--吕布魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2160,Sum = 7128},[2] = {Id = 112,Val = 1080,Sum = 3564},[3] = {Id = 113,Val = 38400,Sum = 126720}},Cost = {[1] = {Id = 1401002,Val = 11525},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--吕布魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2592,Sum = 9720},[2] = {Id = 112,Val = 1296,Sum = 4860},[3] = {Id = 113,Val = 46080,Sum = 172800}},Cost = {[1] = {Id = 1401002,Val = 16170},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--吕布魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3024,Sum = 12744},[2] = {Id = 112,Val = 1512,Sum = 6372},[3] = {Id = 113,Val = 53760,Sum = 226560}},Cost = {[1] = {Id = 1401002,Val = 18465},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--吕布魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3456,Sum = 16200},[2] = {Id = 112,Val = 1728,Sum = 8100},[3] = {Id = 113,Val = 61440,Sum = 288000}},Cost = {[1] = {Id = 1401002,Val = 23090},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--吕布魂珠-7 等级-9
+				}
+			},--吕布专属武器魂珠-7
+			[8] = {
+				Id = 202808,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--吕布魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 540,Sum = 540},[2] = {Id = 112,Val = 270,Sum = 270},[3] = {Id = 113,Val = 9600,Sum = 9600}},Cost = {[1] = {Id = 1401002,Val = 4865},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--吕布魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 810,Sum = 1350},[2] = {Id = 112,Val = 405,Sum = 675},[3] = {Id = 113,Val = 14400,Sum = 24000}},Cost = {[1] = {Id = 1401002,Val = 5835},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--吕布魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 1080,Sum = 2430},[2] = {Id = 112,Val = 540,Sum = 1215},[3] = {Id = 113,Val = 19200,Sum = 43200}},Cost = {[1] = {Id = 1401002,Val = 8105},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--吕布魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 4050},[2] = {Id = 112,Val = 810,Sum = 2025},[3] = {Id = 113,Val = 28800,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 9340},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--吕布魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 2160,Sum = 6210},[2] = {Id = 112,Val = 1080,Sum = 3105},[3] = {Id = 113,Val = 38400,Sum = 110400}},Cost = {[1] = {Id = 1401002,Val = 11855},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--吕布魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2700,Sum = 8910},[2] = {Id = 112,Val = 1350,Sum = 4455},[3] = {Id = 113,Val = 48000,Sum = 158400}},Cost = {[1] = {Id = 1401002,Val = 14145},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--吕布魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 3240,Sum = 12150},[2] = {Id = 112,Val = 1620,Sum = 6075},[3] = {Id = 113,Val = 57600,Sum = 216000}},Cost = {[1] = {Id = 1401002,Val = 19690},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--吕布魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3780,Sum = 15930},[2] = {Id = 112,Val = 1890,Sum = 7965},[3] = {Id = 113,Val = 67200,Sum = 283200}},Cost = {[1] = {Id = 1401002,Val = 23605},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--吕布魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 4320,Sum = 20250},[2] = {Id = 112,Val = 2160,Sum = 10125},[3] = {Id = 113,Val = 76800,Sum = 360000}},Cost = {[1] = {Id = 1401002,Val = 23615},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--吕布魂珠-8 等级-9
+				}
+			}--吕布专属武器魂珠-8
+		},
+		Unseal = {
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502028,Val = 5},[3] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 112,Val = 125}}},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502028,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502028,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502028,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502028,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502028,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502028,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502028,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502028,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502028,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502028,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502028,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502028,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}}
+		}
+	},--吕布专属武器
+	[1102030] = {
+		CardId = 1102030,
+		Name = _T("小乙玉笛"),
+		Quality = 3,
+		Icon = "ui_dtex_Equip_1102030",
+		HunZhu = {
+			[1] = {
+				Id = 203001,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--燕青魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 55,Sum = 55},[2] = {Id = 112,Val = 28,Sum = 28},[3] = {Id = 113,Val = 1000,Sum = 1000}},Cost = {[1] = {Id = 1401002,Val = 80},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--燕青魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 88,Sum = 143},[2] = {Id = 112,Val = 44,Sum = 72},[3] = {Id = 113,Val = 1600,Sum = 2600}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--燕青魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 110,Sum = 253},[2] = {Id = 112,Val = 55,Sum = 127},[3] = {Id = 113,Val = 2000,Sum = 4600}},Cost = {[1] = {Id = 1401002,Val = 205},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--燕青魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 429},[2] = {Id = 112,Val = 88,Sum = 215},[3] = {Id = 113,Val = 3200,Sum = 7800}},Cost = {[1] = {Id = 1401002,Val = 260},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--燕青魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 242,Sum = 671},[2] = {Id = 112,Val = 121,Sum = 336},[3] = {Id = 113,Val = 4400,Sum = 12200}},Cost = {[1] = {Id = 1401002,Val = 330},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--燕青魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 308,Sum = 979},[2] = {Id = 112,Val = 154,Sum = 490},[3] = {Id = 113,Val = 5600,Sum = 17800}},Cost = {[1] = {Id = 1401002,Val = 395},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--燕青魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 1331},[2] = {Id = 112,Val = 176,Sum = 666},[3] = {Id = 113,Val = 6400,Sum = 24200}},Cost = {[1] = {Id = 1401002,Val = 460},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--燕青魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 418,Sum = 1749},[2] = {Id = 112,Val = 209,Sum = 875},[3] = {Id = 113,Val = 7600,Sum = 31800}},Cost = {[1] = {Id = 1401002,Val = 525},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--燕青魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 462,Sum = 2211},[2] = {Id = 112,Val = 231,Sum = 1106},[3] = {Id = 113,Val = 8400,Sum = 40200}},Cost = {[1] = {Id = 1401002,Val = 660},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--燕青魂珠-1 等级-9
+				}
+			},--燕青专属武器魂珠-1
+			[2] = {
+				Id = 203002,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--燕青魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 88,Sum = 88},[2] = {Id = 112,Val = 44,Sum = 44},[3] = {Id = 113,Val = 1600,Sum = 1600}},Cost = {[1] = {Id = 1401002,Val = 220},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--燕青魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 132,Sum = 220},[2] = {Id = 112,Val = 66,Sum = 110},[3] = {Id = 113,Val = 2400,Sum = 4000}},Cost = {[1] = {Id = 1401002,Val = 165},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--燕青魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 396},[2] = {Id = 112,Val = 88,Sum = 198},[3] = {Id = 113,Val = 3200,Sum = 7200}},Cost = {[1] = {Id = 1401002,Val = 370},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--燕青魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 264,Sum = 660},[2] = {Id = 112,Val = 132,Sum = 330},[3] = {Id = 113,Val = 4800,Sum = 12000}},Cost = {[1] = {Id = 1401002,Val = 355},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--燕青魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 1012},[2] = {Id = 112,Val = 176,Sum = 506},[3] = {Id = 113,Val = 6400,Sum = 18400}},Cost = {[1] = {Id = 1401002,Val = 540},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--燕青魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 1452},[2] = {Id = 112,Val = 220,Sum = 726},[3] = {Id = 113,Val = 8000,Sum = 26400}},Cost = {[1] = {Id = 1401002,Val = 715},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--燕青魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 528,Sum = 1980},[2] = {Id = 112,Val = 264,Sum = 990},[3] = {Id = 113,Val = 9600,Sum = 36000}},Cost = {[1] = {Id = 1401002,Val = 900},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--燕青魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 616,Sum = 2596},[2] = {Id = 112,Val = 308,Sum = 1298},[3] = {Id = 113,Val = 11200,Sum = 47200}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--燕青魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 704,Sum = 3300},[2] = {Id = 112,Val = 352,Sum = 1650},[3] = {Id = 113,Val = 12800,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 1435},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--燕青魂珠-2 等级-9
+				}
+			},--燕青专属武器魂珠-2
+			[3] = {
+				Id = 203003,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--燕青魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 110,Sum = 110},[2] = {Id = 112,Val = 55,Sum = 55},[3] = {Id = 113,Val = 2000,Sum = 2000}},Cost = {[1] = {Id = 1401002,Val = 455},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--燕青魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 176,Sum = 286},[2] = {Id = 112,Val = 88,Sum = 143},[3] = {Id = 113,Val = 3200,Sum = 5200}},Cost = {[1] = {Id = 1401002,Val = 340},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--燕青魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 231,Sum = 517},[2] = {Id = 112,Val = 116,Sum = 259},[3] = {Id = 113,Val = 4200,Sum = 9400}},Cost = {[1] = {Id = 1401002,Val = 570},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--燕青魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 869},[2] = {Id = 112,Val = 176,Sum = 435},[3] = {Id = 113,Val = 6400,Sum = 15800}},Cost = {[1] = {Id = 1401002,Val = 550},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--燕青魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 469,Sum = 1338},[2] = {Id = 112,Val = 234,Sum = 669},[3] = {Id = 113,Val = 8520,Sum = 24320}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--燕青魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 594,Sum = 1932},[2] = {Id = 112,Val = 297,Sum = 966},[3] = {Id = 113,Val = 10800,Sum = 35120}},Cost = {[1] = {Id = 1401002,Val = 920},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--燕青魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 704,Sum = 2636},[2] = {Id = 112,Val = 352,Sum = 1318},[3] = {Id = 113,Val = 12800,Sum = 47920}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--燕青魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 825,Sum = 3461},[2] = {Id = 112,Val = 407,Sum = 1725},[3] = {Id = 113,Val = 15000,Sum = 62920}},Cost = {[1] = {Id = 1401002,Val = 1475},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--燕青魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 935,Sum = 4396},[2] = {Id = 112,Val = 468,Sum = 2193},[3] = {Id = 113,Val = 17000,Sum = 79920}},Cost = {[1] = {Id = 1401002,Val = 1845},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--燕青魂珠-3 等级-9
+				}
+			},--燕青专属武器魂珠-3
+			[4] = {
+				Id = 203004,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--燕青魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 143,Sum = 143},[2] = {Id = 112,Val = 72,Sum = 72},[3] = {Id = 113,Val = 2600,Sum = 2600}},Cost = {[1] = {Id = 1401002,Val = 740},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--燕青魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 220,Sum = 363},[2] = {Id = 112,Val = 110,Sum = 182},[3] = {Id = 113,Val = 4000,Sum = 6600}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--燕青魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 286,Sum = 649},[2] = {Id = 112,Val = 143,Sum = 325},[3] = {Id = 113,Val = 5200,Sum = 11800}},Cost = {[1] = {Id = 1401002,Val = 615},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--燕青魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 1089},[2] = {Id = 112,Val = 220,Sum = 545},[3] = {Id = 113,Val = 8000,Sum = 19800}},Cost = {[1] = {Id = 1401002,Val = 1185},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--燕青魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 594,Sum = 1683},[2] = {Id = 112,Val = 297,Sum = 842},[3] = {Id = 113,Val = 10800,Sum = 30600}},Cost = {[1] = {Id = 1401002,Val = 1205},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--燕青魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 737,Sum = 2420},[2] = {Id = 112,Val = 424,Sum = 1266},[3] = {Id = 113,Val = 13400,Sum = 44000}},Cost = {[1] = {Id = 1401002,Val = 1195},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--燕青魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 880,Sum = 3300},[2] = {Id = 112,Val = 440,Sum = 1706},[3] = {Id = 113,Val = 16000,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 1800},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--燕青魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1045,Sum = 4345},[2] = {Id = 112,Val = 523,Sum = 2229},[3] = {Id = 113,Val = 19000,Sum = 79000}},Cost = {[1] = {Id = 1401002,Val = 2395},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--燕青魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1210,Sum = 5555},[2] = {Id = 112,Val = 605,Sum = 2834},[3] = {Id = 113,Val = 22000,Sum = 101000}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--燕青魂珠-4 等级-9
+				}
+			},--燕青专属武器魂珠-4
+			[5] = {
+				Id = 203005,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--燕青魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 198,Sum = 198},[2] = {Id = 112,Val = 99,Sum = 99},[3] = {Id = 113,Val = 3600,Sum = 3600}},Cost = {[1] = {Id = 1401002,Val = 1545},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--燕青魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 308,Sum = 506},[2] = {Id = 112,Val = 154,Sum = 253},[3] = {Id = 113,Val = 5600,Sum = 9200}},Cost = {[1] = {Id = 1401002,Val = 1155},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--燕青魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 407,Sum = 913},[2] = {Id = 112,Val = 204,Sum = 457},[3] = {Id = 113,Val = 7400,Sum = 16600}},Cost = {[1] = {Id = 1401002,Val = 1285},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--燕青魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 616,Sum = 1529},[2] = {Id = 112,Val = 308,Sum = 765},[3] = {Id = 113,Val = 11200,Sum = 27800}},Cost = {[1] = {Id = 1401002,Val = 1850},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--燕青魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 825,Sum = 2354},[2] = {Id = 112,Val = 413,Sum = 1178},[3] = {Id = 113,Val = 15000,Sum = 42800}},Cost = {[1] = {Id = 1401002,Val = 1880},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--燕青魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1045,Sum = 3399},[2] = {Id = 112,Val = 523,Sum = 1701},[3] = {Id = 113,Val = 19000,Sum = 61800}},Cost = {[1] = {Id = 1401002,Val = 3115},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--燕青魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 4719},[2] = {Id = 112,Val = 660,Sum = 2361},[3] = {Id = 113,Val = 24000,Sum = 85800}},Cost = {[1] = {Id = 1401002,Val = 3125},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--燕青魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1430,Sum = 6149},[2] = {Id = 112,Val = 715,Sum = 3076},[3] = {Id = 113,Val = 26000,Sum = 111800}},Cost = {[1] = {Id = 1401002,Val = 4370},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--燕青魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1650,Sum = 7799},[2] = {Id = 112,Val = 825,Sum = 3901},[3] = {Id = 113,Val = 30000,Sum = 141800}},Cost = {[1] = {Id = 1401002,Val = 5620},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--燕青魂珠-5 等级-9
+				}
+			},--燕青专属武器魂珠-5
+			[6] = {
+				Id = 203006,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--燕青魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 275,Sum = 275},[2] = {Id = 112,Val = 138,Sum = 138},[3] = {Id = 113,Val = 5000,Sum = 5000}},Cost = {[1] = {Id = 1401002,Val = 1450},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--燕青魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 715},[2] = {Id = 112,Val = 220,Sum = 358},[3] = {Id = 113,Val = 8000,Sum = 13000}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--燕青魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 550,Sum = 1265},[2] = {Id = 112,Val = 275,Sum = 633},[3] = {Id = 113,Val = 10000,Sum = 23000}},Cost = {[1] = {Id = 1401002,Val = 2420},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--燕青魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 880,Sum = 2145},[2] = {Id = 112,Val = 440,Sum = 1073},[3] = {Id = 113,Val = 16000,Sum = 39000}},Cost = {[1] = {Id = 1401002,Val = 3485},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--燕青魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1210,Sum = 3355},[2] = {Id = 112,Val = 605,Sum = 1678},[3] = {Id = 113,Val = 22000,Sum = 61000}},Cost = {[1] = {Id = 1401002,Val = 3540},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--燕青魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1485,Sum = 4840},[2] = {Id = 112,Val = 743,Sum = 2421},[3] = {Id = 113,Val = 27000,Sum = 88000}},Cost = {[1] = {Id = 1401002,Val = 4690},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--燕青魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1760,Sum = 6600},[2] = {Id = 112,Val = 880,Sum = 3301},[3] = {Id = 113,Val = 32000,Sum = 120000}},Cost = {[1] = {Id = 1401002,Val = 5880},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--燕青魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2090,Sum = 8690},[2] = {Id = 112,Val = 1045,Sum = 4346},[3] = {Id = 113,Val = 38000,Sum = 158000}},Cost = {[1] = {Id = 1401002,Val = 8225},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--燕青魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2420,Sum = 11110},[2] = {Id = 112,Val = 1210,Sum = 5556},[3] = {Id = 113,Val = 44000,Sum = 202000}},Cost = {[1] = {Id = 1401002,Val = 9400},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--燕青魂珠-6 等级-9
+				}
+			},--燕青专属武器魂珠-6
+			[7] = {
+				Id = 203007,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--燕青魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 352,Sum = 352},[2] = {Id = 112,Val = 176,Sum = 176},[3] = {Id = 113,Val = 6400,Sum = 6400}},Cost = {[1] = {Id = 1401002,Val = 2855},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--燕青魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 528,Sum = 880},[2] = {Id = 112,Val = 264,Sum = 440},[3] = {Id = 113,Val = 9600,Sum = 16000}},Cost = {[1] = {Id = 1401002,Val = 2140},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--燕青魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 704,Sum = 1584},[2] = {Id = 112,Val = 352,Sum = 792},[3] = {Id = 113,Val = 12800,Sum = 28800}},Cost = {[1] = {Id = 1401002,Val = 3565},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--燕青魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1056,Sum = 2640},[2] = {Id = 112,Val = 528,Sum = 1320},[3] = {Id = 113,Val = 19200,Sum = 48000}},Cost = {[1] = {Id = 1401002,Val = 4565},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--燕青魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1408,Sum = 4048},[2] = {Id = 112,Val = 704,Sum = 2024},[3] = {Id = 113,Val = 25600,Sum = 73600}},Cost = {[1] = {Id = 1401002,Val = 4635},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--燕青魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1760,Sum = 5808},[2] = {Id = 112,Val = 880,Sum = 2904},[3] = {Id = 113,Val = 32000,Sum = 105600}},Cost = {[1] = {Id = 1401002,Val = 5760},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--燕青魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2112,Sum = 7920},[2] = {Id = 112,Val = 1056,Sum = 3960},[3] = {Id = 113,Val = 38400,Sum = 144000}},Cost = {[1] = {Id = 1401002,Val = 8085},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--燕青魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2464,Sum = 10384},[2] = {Id = 112,Val = 1232,Sum = 5192},[3] = {Id = 113,Val = 44800,Sum = 188800}},Cost = {[1] = {Id = 1401002,Val = 9230},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--燕青魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2816,Sum = 13200},[2] = {Id = 112,Val = 1408,Sum = 6600},[3] = {Id = 113,Val = 51200,Sum = 240000}},Cost = {[1] = {Id = 1401002,Val = 11545},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--燕青魂珠-7 等级-9
+				}
+			},--燕青专属武器魂珠-7
+			[8] = {
+				Id = 203008,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--燕青魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 440,Sum = 440},[2] = {Id = 112,Val = 220,Sum = 220},[3] = {Id = 113,Val = 8000,Sum = 8000}},Cost = {[1] = {Id = 1401002,Val = 2430},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--燕青魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 660,Sum = 1100},[2] = {Id = 112,Val = 330,Sum = 550},[3] = {Id = 113,Val = 12000,Sum = 20000}},Cost = {[1] = {Id = 1401002,Val = 2920},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--燕青魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 880,Sum = 1980},[2] = {Id = 112,Val = 440,Sum = 990},[3] = {Id = 113,Val = 16000,Sum = 36000}},Cost = {[1] = {Id = 1401002,Val = 4055},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--燕青魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 3300},[2] = {Id = 112,Val = 660,Sum = 1650},[3] = {Id = 113,Val = 24000,Sum = 60000}},Cost = {[1] = {Id = 1401002,Val = 4670},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--燕青魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1760,Sum = 5060},[2] = {Id = 112,Val = 880,Sum = 2530},[3] = {Id = 113,Val = 32000,Sum = 92000}},Cost = {[1] = {Id = 1401002,Val = 5930},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--燕青魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2200,Sum = 7260},[2] = {Id = 112,Val = 1100,Sum = 3630},[3] = {Id = 113,Val = 40000,Sum = 132000}},Cost = {[1] = {Id = 1401002,Val = 7070},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--燕青魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2640,Sum = 9900},[2] = {Id = 112,Val = 1320,Sum = 4950},[3] = {Id = 113,Val = 48000,Sum = 180000}},Cost = {[1] = {Id = 1401002,Val = 9845},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--燕青魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3080,Sum = 12980},[2] = {Id = 112,Val = 1540,Sum = 6490},[3] = {Id = 113,Val = 56000,Sum = 236000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--燕青魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3520,Sum = 16500},[2] = {Id = 112,Val = 1760,Sum = 8250},[3] = {Id = 113,Val = 64000,Sum = 300000}},Cost = {[1] = {Id = 1401002,Val = 11805},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--燕青魂珠-8 等级-9
+				}
+			}--燕青专属武器魂珠-8
+		},
+		Unseal = {
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502030,Val = 5},[3] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 112,Val = 125}}},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502030,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502030,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502030,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502030,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502030,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502030,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502030,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502030,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502030,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502030,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502030,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502030,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}}
+		}
+	},--燕青专属武器
+	[1102031] = {
+		CardId = 1102031,
+		Name = _T("虎头錾金枪"),
+		Quality = 4,
+		Icon = "ui_dtex_Equip_1102031",
+		HunZhu = {
+			[1] = {
+				Id = 203101,
+				Icon = "ui_dtex_Item_1603016",
+				Name = "乾位",
+				LvLimit = 40,
+				PreLv = 0,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--秦琼魂珠-1 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 60,Sum = 60},[2] = {Id = 112,Val = 30,Sum = 30},[3] = {Id = 113,Val = 1200,Sum = 1200}},Cost = {[1] = {Id = 1401002,Val = 120},[2] = {Id = 1609001,Val = 1}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--秦琼魂珠-1 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 156},[2] = {Id = 112,Val = 48,Sum = 78},[3] = {Id = 113,Val = 1920,Sum = 3120}},Cost = {[1] = {Id = 1401002,Val = 185},[2] = {Id = 1609001,Val = 2}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--秦琼魂珠-1 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 276},[2] = {Id = 112,Val = 60,Sum = 138},[3] = {Id = 113,Val = 2400,Sum = 5520}},Cost = {[1] = {Id = 1401002,Val = 305},[2] = {Id = 1609001,Val = 3}},StrenthSuccessRate = 0.24,Fv = 1,MaxV = 6},--秦琼魂珠-1 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 468},[2] = {Id = 112,Val = 96,Sum = 234},[3] = {Id = 113,Val = 3840,Sum = 9360}},Cost = {[1] = {Id = 1401002,Val = 390},[2] = {Id = 1609001,Val = 4}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--秦琼魂珠-1 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 264,Sum = 732},[2] = {Id = 112,Val = 132,Sum = 366},[3] = {Id = 113,Val = 5280,Sum = 14640}},Cost = {[1] = {Id = 1401002,Val = 495},[2] = {Id = 1609001,Val = 5}},StrenthSuccessRate = 0.15,Fv = 1,MaxV = 10},--秦琼魂珠-1 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 1068},[2] = {Id = 112,Val = 168,Sum = 534},[3] = {Id = 113,Val = 6720,Sum = 21360}},Cost = {[1] = {Id = 1401002,Val = 590},[2] = {Id = 1609001,Val = 6}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--秦琼魂珠-1 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1452},[2] = {Id = 112,Val = 192,Sum = 726},[3] = {Id = 113,Val = 7680,Sum = 29040}},Cost = {[1] = {Id = 1401002,Val = 690},[2] = {Id = 1609001,Val = 7}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--秦琼魂珠-1 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 456,Sum = 1908},[2] = {Id = 112,Val = 228,Sum = 954},[3] = {Id = 113,Val = 9120,Sum = 38160}},Cost = {[1] = {Id = 1401002,Val = 790},[2] = {Id = 1609001,Val = 8}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--秦琼魂珠-1 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 504,Sum = 2412},[2] = {Id = 112,Val = 252,Sum = 1206},[3] = {Id = 113,Val = 10080,Sum = 48240}},Cost = {[1] = {Id = 1401002,Val = 985},[2] = {Id = 1609001,Val = 10}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34}--秦琼魂珠-1 等级-9
+				}
+			},--秦琼专属武器魂珠-1
+			[2] = {
+				Id = 203102,
+				Icon = "ui_dtex_Item_1603017",
+				Name = "坤位",
+				LvLimit = 55,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--秦琼魂珠-2 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 96,Sum = 96},[2] = {Id = 112,Val = 48,Sum = 48},[3] = {Id = 113,Val = 1920,Sum = 1920}},Cost = {[1] = {Id = 1401002,Val = 335},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.29,Fv = 1,MaxV = 5},--秦琼魂珠-2 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 144,Sum = 240},[2] = {Id = 112,Val = 72,Sum = 120},[3] = {Id = 113,Val = 2880,Sum = 4800}},Cost = {[1] = {Id = 1401002,Val = 250},[2] = {Id = 1609001,Val = 3},[3] = {Id = 1609002,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--秦琼魂珠-2 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 432},[2] = {Id = 112,Val = 96,Sum = 216},[3] = {Id = 113,Val = 3840,Sum = 8640}},Cost = {[1] = {Id = 1401002,Val = 555},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--秦琼魂珠-2 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 288,Sum = 720},[2] = {Id = 112,Val = 144,Sum = 360},[3] = {Id = 113,Val = 5760,Sum = 14400}},Cost = {[1] = {Id = 1401002,Val = 535},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--秦琼魂珠-2 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 1104},[2] = {Id = 112,Val = 192,Sum = 552},[3] = {Id = 113,Val = 7680,Sum = 22080}},Cost = {[1] = {Id = 1401002,Val = 810},[2] = {Id = 1609001,Val = 9},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.11,Fv = 1,MaxV = 14},--秦琼魂珠-2 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1584},[2] = {Id = 112,Val = 240,Sum = 792},[3] = {Id = 113,Val = 9600,Sum = 31680}},Cost = {[1] = {Id = 1401002,Val = 1075},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--秦琼魂珠-2 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 2160},[2] = {Id = 112,Val = 288,Sum = 1080},[3] = {Id = 113,Val = 11520,Sum = 43200}},Cost = {[1] = {Id = 1401002,Val = 1345},[2] = {Id = 1609001,Val = 15},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--秦琼魂珠-2 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 2832},[2] = {Id = 112,Val = 336,Sum = 1416},[3] = {Id = 113,Val = 13440,Sum = 56640}},Cost = {[1] = {Id = 1401002,Val = 1615},[2] = {Id = 1609001,Val = 18},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 29},--秦琼魂珠-2 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 3600},[2] = {Id = 112,Val = 384,Sum = 1800},[3] = {Id = 113,Val = 15360,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 2155},[2] = {Id = 1609001,Val = 24},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 36}--秦琼魂珠-2 等级-9
+				}
+			},--秦琼专属武器魂珠-2
+			[3] = {
+				Id = 203103,
+				Icon = "ui_dtex_Item_1603018",
+				Name = "巽位",
+				LvLimit = 75,
+				PreLv = 3,
+				UnsealLv = 0,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--秦琼魂珠-3 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 120,Sum = 120},[2] = {Id = 112,Val = 60,Sum = 60},[3] = {Id = 113,Val = 2400,Sum = 2400}},Cost = {[1] = {Id = 1401002,Val = 685},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.23,Fv = 1,MaxV = 6},--秦琼魂珠-3 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 192,Sum = 312},[2] = {Id = 112,Val = 96,Sum = 156},[3] = {Id = 113,Val = 3840,Sum = 6240}},Cost = {[1] = {Id = 1401002,Val = 515},[2] = {Id = 1609001,Val = 4},[3] = {Id = 1609002,Val = 2}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--秦琼魂珠-3 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 252,Sum = 564},[2] = {Id = 112,Val = 126,Sum = 282},[3] = {Id = 113,Val = 5040,Sum = 11280}},Cost = {[1] = {Id = 1401002,Val = 855},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.12,Fv = 1,MaxV = 13},--秦琼魂珠-3 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 948},[2] = {Id = 112,Val = 192,Sum = 474},[3] = {Id = 113,Val = 7680,Sum = 18960}},Cost = {[1] = {Id = 1401002,Val = 820},[2] = {Id = 1609001,Val = 6},[3] = {Id = 1609002,Val = 3}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--秦琼魂珠-3 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 511,Sum = 1459},[2] = {Id = 112,Val = 256,Sum = 730},[3] = {Id = 113,Val = 10224,Sum = 29184}},Cost = {[1] = {Id = 1401002,Val = 1115},[2] = {Id = 1609001,Val = 8},[3] = {Id = 1609002,Val = 4}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 26},--秦琼魂珠-3 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 2107},[2] = {Id = 112,Val = 324,Sum = 1054},[3] = {Id = 113,Val = 12960,Sum = 42144}},Cost = {[1] = {Id = 1401002,Val = 1385},[2] = {Id = 1609001,Val = 10},[3] = {Id = 1609002,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--秦琼魂珠-3 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 2875},[2] = {Id = 112,Val = 384,Sum = 1438},[3] = {Id = 113,Val = 15360,Sum = 57504}},Cost = {[1] = {Id = 1401002,Val = 1660},[2] = {Id = 1609001,Val = 12},[3] = {Id = 1609002,Val = 6}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--秦琼魂珠-3 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 3775},[2] = {Id = 112,Val = 444,Sum = 1882},[3] = {Id = 113,Val = 18000,Sum = 75504}},Cost = {[1] = {Id = 1401002,Val = 2215},[2] = {Id = 1609001,Val = 16},[3] = {Id = 1609002,Val = 8}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--秦琼魂珠-3 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1020,Sum = 4795},[2] = {Id = 112,Val = 510,Sum = 2392},[3] = {Id = 113,Val = 20400,Sum = 95904}},Cost = {[1] = {Id = 1401002,Val = 2770},[2] = {Id = 1609001,Val = 20},[3] = {Id = 1609002,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--秦琼魂珠-3 等级-9
+				}
+			},--秦琼专属武器魂珠-3
+			[4] = {
+				Id = 203104,
+				Icon = "ui_dtex_Item_1603019",
+				Name = "震位",
+				LvLimit = 85,
+				PreLv = 3,
+				UnsealLv = 1,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--秦琼魂珠-4 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 156,Sum = 156},[2] = {Id = 112,Val = 78,Sum = 78},[3] = {Id = 113,Val = 3120,Sum = 3120}},Cost = {[1] = {Id = 1401002,Val = 1110},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--秦琼魂珠-4 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 240,Sum = 396},[2] = {Id = 112,Val = 120,Sum = 198},[3] = {Id = 113,Val = 4800,Sum = 7920}},Cost = {[1] = {Id = 1401002,Val = 835},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--秦琼魂珠-4 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 312,Sum = 708},[2] = {Id = 112,Val = 156,Sum = 354},[3] = {Id = 113,Val = 6240,Sum = 14160}},Cost = {[1] = {Id = 1401002,Val = 925},[2] = {Id = 1609002,Val = 3},[3] = {Id = 1609003,Val = 1}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--秦琼魂珠-4 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 1188},[2] = {Id = 112,Val = 240,Sum = 594},[3] = {Id = 113,Val = 9600,Sum = 23760}},Cost = {[1] = {Id = 1401002,Val = 1775},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 20},--秦琼魂珠-4 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 648,Sum = 1836},[2] = {Id = 112,Val = 324,Sum = 918},[3] = {Id = 113,Val = 12960,Sum = 36720}},Cost = {[1] = {Id = 1401002,Val = 1805},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--秦琼魂珠-4 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 804,Sum = 2640},[2] = {Id = 112,Val = 462,Sum = 1380},[3] = {Id = 113,Val = 16080,Sum = 52800}},Cost = {[1] = {Id = 1401002,Val = 1795},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 53},--秦琼魂珠-4 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 3600},[2] = {Id = 112,Val = 480,Sum = 1860},[3] = {Id = 113,Val = 19200,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 2695},[2] = {Id = 1609002,Val = 10},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 57},--秦琼魂珠-4 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 4740},[2] = {Id = 112,Val = 570,Sum = 2430},[3] = {Id = 113,Val = 22800,Sum = 94800}},Cost = {[1] = {Id = 1401002,Val = 3595},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 4}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 69},--秦琼魂珠-4 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 6060},[2] = {Id = 112,Val = 660,Sum = 3090},[3] = {Id = 113,Val = 26400,Sum = 121200}},Cost = {[1] = {Id = 1401002,Val = 5390},[2] = {Id = 1609002,Val = 19},[3] = {Id = 1609003,Val = 6}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74}--秦琼魂珠-4 等级-9
+				}
+			},--秦琼专属武器魂珠-4
+			[5] = {
+				Id = 203105,
+				Icon = "ui_dtex_Item_1603020",
+				Name = "坎位",
+				LvLimit = 110,
+				PreLv = 3,
+				UnsealLv = 2,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--秦琼魂珠-5 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 216,Sum = 216},[2] = {Id = 112,Val = 108,Sum = 108},[3] = {Id = 113,Val = 4320,Sum = 4320}},Cost = {[1] = {Id = 1401002,Val = 2315},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.19,Fv = 1,MaxV = 8},--秦琼魂珠-5 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 336,Sum = 552},[2] = {Id = 112,Val = 168,Sum = 276},[3] = {Id = 113,Val = 6720,Sum = 11040}},Cost = {[1] = {Id = 1401002,Val = 1735},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 16},--秦琼魂珠-5 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 444,Sum = 996},[2] = {Id = 112,Val = 222,Sum = 498},[3] = {Id = 113,Val = 8880,Sum = 19920}},Cost = {[1] = {Id = 1401002,Val = 1930},[2] = {Id = 1609002,Val = 4},[3] = {Id = 1609003,Val = 2}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 24},--秦琼魂珠-5 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 672,Sum = 1668},[2] = {Id = 112,Val = 336,Sum = 834},[3] = {Id = 113,Val = 13440,Sum = 33360}},Cost = {[1] = {Id = 1401002,Val = 2780},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.06,Fv = 1,MaxV = 27},--秦琼魂珠-5 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 900,Sum = 2568},[2] = {Id = 112,Val = 450,Sum = 1284},[3] = {Id = 113,Val = 18000,Sum = 51360}},Cost = {[1] = {Id = 1401002,Val = 2820},[2] = {Id = 1609002,Val = 6},[3] = {Id = 1609003,Val = 3}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 43},--秦琼魂珠-5 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1140,Sum = 3708},[2] = {Id = 112,Val = 570,Sum = 1854},[3] = {Id = 113,Val = 22800,Sum = 74160}},Cost = {[1] = {Id = 1401002,Val = 4675},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 42},--秦琼魂珠-5 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 5148},[2] = {Id = 112,Val = 720,Sum = 2574},[3] = {Id = 113,Val = 28800,Sum = 102960}},Cost = {[1] = {Id = 1401002,Val = 4685},[2] = {Id = 1609002,Val = 9},[3] = {Id = 1609003,Val = 5}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 68},--秦琼魂珠-5 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 1560,Sum = 6708},[2] = {Id = 112,Val = 780,Sum = 3354},[3] = {Id = 113,Val = 31200,Sum = 134160}},Cost = {[1] = {Id = 1401002,Val = 6555},[2] = {Id = 1609002,Val = 13},[3] = {Id = 1609003,Val = 7}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 79},--秦琼魂珠-5 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 1800,Sum = 8508},[2] = {Id = 112,Val = 900,Sum = 4254},[3] = {Id = 113,Val = 36000,Sum = 170160}},Cost = {[1] = {Id = 1401002,Val = 8430},[2] = {Id = 1609002,Val = 17},[3] = {Id = 1609003,Val = 9}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 99}--秦琼魂珠-5 等级-9
+				}
+			},--秦琼专属武器魂珠-5
+			[6] = {
+				Id = 203106,
+				Icon = "ui_dtex_Item_1603021",
+				Name = "离位",
+				LvLimit = 125,
+				PreLv = 3,
+				UnsealLv = 3,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--秦琼魂珠-6 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 300,Sum = 300},[2] = {Id = 112,Val = 150,Sum = 150},[3] = {Id = 113,Val = 6000,Sum = 6000}},Cost = {[1] = {Id = 1401002,Val = 2180},[2] = {Id = 1609003,Val = 5},[3] = {Id = 1609004,Val = 1}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--秦琼魂珠-6 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 780},[2] = {Id = 112,Val = 240,Sum = 390},[3] = {Id = 113,Val = 9600,Sum = 15600}},Cost = {[1] = {Id = 1401002,Val = 3270},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.14,Fv = 1,MaxV = 10},--秦琼魂珠-6 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 600,Sum = 1380},[2] = {Id = 112,Val = 300,Sum = 690},[3] = {Id = 113,Val = 12000,Sum = 27600}},Cost = {[1] = {Id = 1401002,Val = 3630},[2] = {Id = 1609003,Val = 9},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 16},--秦琼魂珠-6 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2340},[2] = {Id = 112,Val = 480,Sum = 1170},[3] = {Id = 113,Val = 19200,Sum = 46800}},Cost = {[1] = {Id = 1401002,Val = 5230},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--秦琼魂珠-6 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1320,Sum = 3660},[2] = {Id = 112,Val = 660,Sum = 1830},[3] = {Id = 113,Val = 26400,Sum = 73200}},Cost = {[1] = {Id = 1401002,Val = 5310},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 28},--秦琼魂珠-6 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1620,Sum = 5280},[2] = {Id = 112,Val = 810,Sum = 2640},[3] = {Id = 113,Val = 32400,Sum = 105600}},Cost = {[1] = {Id = 1401002,Val = 7040},[2] = {Id = 1609003,Val = 19},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 34},--秦琼魂珠-6 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 7200},[2] = {Id = 112,Val = 960,Sum = 3600},[3] = {Id = 113,Val = 38400,Sum = 144000}},Cost = {[1] = {Id = 1401002,Val = 8820},[2] = {Id = 1609003,Val = 24},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 44},--秦琼魂珠-6 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2280,Sum = 9480},[2] = {Id = 112,Val = 1140,Sum = 4740},[3] = {Id = 113,Val = 45600,Sum = 189600}},Cost = {[1] = {Id = 1401002,Val = 12335},[2] = {Id = 1609003,Val = 33},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 50},--秦琼魂珠-6 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 2640,Sum = 12120},[2] = {Id = 112,Val = 1320,Sum = 6060},[3] = {Id = 113,Val = 52800,Sum = 242400}},Cost = {[1] = {Id = 1401002,Val = 14100},[2] = {Id = 1609003,Val = 38},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 71}--秦琼魂珠-6 等级-9
+				}
+			},--秦琼专属武器魂珠-6
+			[7] = {
+				Id = 203107,
+				Icon = "ui_dtex_Item_1603022",
+				Name = "艮位",
+				LvLimit = 135,
+				PreLv = 3,
+				UnsealLv = 4,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--秦琼魂珠-7 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 384,Sum = 384},[2] = {Id = 112,Val = 192,Sum = 192},[3] = {Id = 113,Val = 7680,Sum = 7680}},Cost = {[1] = {Id = 1401002,Val = 4280},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.17,Fv = 1,MaxV = 9},--秦琼魂珠-7 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 576,Sum = 960},[2] = {Id = 112,Val = 288,Sum = 480},[3] = {Id = 113,Val = 11520,Sum = 19200}},Cost = {[1] = {Id = 1401002,Val = 3210},[2] = {Id = 1609003,Val = 6},[3] = {Id = 1609004,Val = 2}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--秦琼魂珠-7 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 768,Sum = 1728},[2] = {Id = 112,Val = 384,Sum = 864},[3] = {Id = 113,Val = 15360,Sum = 34560}},Cost = {[1] = {Id = 1401002,Val = 5350},[2] = {Id = 1609003,Val = 8},[3] = {Id = 1609004,Val = 3}},StrenthSuccessRate = 0.09,Fv = 1,MaxV = 17},--秦琼魂珠-7 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1152,Sum = 2880},[2] = {Id = 112,Val = 576,Sum = 1440},[3] = {Id = 113,Val = 23040,Sum = 57600}},Cost = {[1] = {Id = 1401002,Val = 6850},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 22},--秦琼魂珠-7 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1536,Sum = 4416},[2] = {Id = 112,Val = 768,Sum = 2208},[3] = {Id = 113,Val = 30720,Sum = 88320}},Cost = {[1] = {Id = 1401002,Val = 6955},[2] = {Id = 1609003,Val = 11},[3] = {Id = 1609004,Val = 4}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 35},--秦琼魂珠-7 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 6336},[2] = {Id = 112,Val = 960,Sum = 3168},[3] = {Id = 113,Val = 38400,Sum = 126720}},Cost = {[1] = {Id = 1401002,Val = 8645},[2] = {Id = 1609003,Val = 14},[3] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 45},--秦琼魂珠-7 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2304,Sum = 8640},[2] = {Id = 112,Val = 1152,Sum = 4320},[3] = {Id = 113,Val = 46080,Sum = 172800}},Cost = {[1] = {Id = 1401002,Val = 12130},[2] = {Id = 1609003,Val = 20},[3] = {Id = 1609004,Val = 7}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 52},--秦琼魂珠-7 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 2688,Sum = 11328},[2] = {Id = 112,Val = 1344,Sum = 5664},[3] = {Id = 113,Val = 53760,Sum = 226560}},Cost = {[1] = {Id = 1401002,Val = 13850},[2] = {Id = 1609003,Val = 23},[3] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 74},--秦琼魂珠-7 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3072,Sum = 14400},[2] = {Id = 112,Val = 1536,Sum = 7200},[3] = {Id = 113,Val = 61440,Sum = 288000}},Cost = {[1] = {Id = 1401002,Val = 17315},[2] = {Id = 1609003,Val = 28},[3] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 95}--秦琼魂珠-7 等级-9
+				}
+			},--秦琼专属武器魂珠-7
+			[8] = {
+				Id = 203108,
+				Icon = "ui_dtex_Item_1603023",
+				Name = "兑位",
+				LvLimit = 150,
+				PreLv = 3,
+				UnsealLv = 5,
+				Lvs = {
+					[0] = {Prop = {[1] = {Id = 111,Val = 0,Sum = 0},[2] = {Id = 112,Val = 0,Sum = 0},[3] = {Id = 113,Val = 0,Sum = 0}}},--秦琼魂珠-8 等级-0
+					[1] = {Prop = {[1] = {Id = 111,Val = 480,Sum = 480},[2] = {Id = 112,Val = 240,Sum = 240},[3] = {Id = 113,Val = 9600,Sum = 9600}},Cost = {[1] = {Id = 1401002,Val = 3650},[2] = {Id = 1609004,Val = 5}},StrenthSuccessRate = 0.1,Fv = 1,MaxV = 15},--秦琼魂珠-8 等级-1
+					[2] = {Prop = {[1] = {Id = 111,Val = 720,Sum = 1200},[2] = {Id = 112,Val = 360,Sum = 600},[3] = {Id = 113,Val = 14400,Sum = 24000}},Cost = {[1] = {Id = 1401002,Val = 4375},[2] = {Id = 1609004,Val = 8}},StrenthSuccessRate = 0.08,Fv = 1,MaxV = 19},--秦琼魂珠-8 等级-2
+					[3] = {Prop = {[1] = {Id = 111,Val = 960,Sum = 2160},[2] = {Id = 112,Val = 480,Sum = 1080},[3] = {Id = 113,Val = 19200,Sum = 43200}},Cost = {[1] = {Id = 1401002,Val = 6080},[2] = {Id = 1609004,Val = 10}},StrenthSuccessRate = 0.07,Fv = 1,MaxV = 23},--秦琼魂珠-8 等级-3
+					[4] = {Prop = {[1] = {Id = 111,Val = 1440,Sum = 3600},[2] = {Id = 112,Val = 720,Sum = 1800},[3] = {Id = 113,Val = 28800,Sum = 72000}},Cost = {[1] = {Id = 1401002,Val = 7005},[2] = {Id = 1609004,Val = 12}},StrenthSuccessRate = 0.05,Fv = 1,MaxV = 32},--秦琼魂珠-8 等级-4
+					[5] = {Prop = {[1] = {Id = 111,Val = 1920,Sum = 5520},[2] = {Id = 112,Val = 960,Sum = 2760},[3] = {Id = 113,Val = 38400,Sum = 110400}},Cost = {[1] = {Id = 1401002,Val = 8890},[2] = {Id = 1609004,Val = 15}},StrenthSuccessRate = 0.04,Fv = 1,MaxV = 41},--秦琼魂珠-8 等级-5
+					[6] = {Prop = {[1] = {Id = 111,Val = 2400,Sum = 7920},[2] = {Id = 112,Val = 1200,Sum = 3960},[3] = {Id = 113,Val = 48000,Sum = 158400}},Cost = {[1] = {Id = 1401002,Val = 10610},[2] = {Id = 1609004,Val = 18}},StrenthSuccessRate = 0.03,Fv = 1,MaxV = 55},--秦琼魂珠-8 等级-6
+					[7] = {Prop = {[1] = {Id = 111,Val = 2880,Sum = 10800},[2] = {Id = 112,Val = 1440,Sum = 5400},[3] = {Id = 113,Val = 57600,Sum = 216000}},Cost = {[1] = {Id = 1401002,Val = 14765},[2] = {Id = 1609004,Val = 25}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 64},--秦琼魂珠-8 等级-7
+					[8] = {Prop = {[1] = {Id = 111,Val = 3360,Sum = 14160},[2] = {Id = 112,Val = 1680,Sum = 7080},[3] = {Id = 113,Val = 67200,Sum = 283200}},Cost = {[1] = {Id = 1401002,Val = 17705},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.02,Fv = 1,MaxV = 86},--秦琼魂珠-8 等级-8
+					[9] = {Prop = {[1] = {Id = 111,Val = 3840,Sum = 18000},[2] = {Id = 112,Val = 1920,Sum = 9000},[3] = {Id = 113,Val = 76800,Sum = 360000}},Cost = {[1] = {Id = 1401002,Val = 17710},[2] = {Id = 1609004,Val = 30}},StrenthSuccessRate = 0.01,Fv = 1,MaxV = 140}--秦琼魂珠-8 等级-9
+				}
+			}--秦琼专属武器魂珠-8
+		},
+		Unseal = {
+			[1] = {Cost = {[1] = {Id = 1401002,Val = 10000},[2] = {Id = 1609001,Val = 10}},Prop = {[1] = {Id = 111,Val = 250}}},
+			[2] = {Cost = {[1] = {Id = 1401002,Val = 20000},[2] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 113,Val = 2250}}},
+			[3] = {Cost = {[1] = {Id = 1401002,Val = 30000},[2] = {Id = 1502031,Val = 5},[3] = {Id = 1609001,Val = 20}},Prop = {[1] = {Id = 112,Val = 125}}},
+			[4] = {Cost = {[1] = {Id = 1401002,Val = 50000},[2] = {Id = 1502031,Val = 5},[3] = {Id = 1609001,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[5] = {Cost = {[1] = {Id = 1401002,Val = 100000},[2] = {Id = 1502031,Val = 10},[3] = {Id = 1609002,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.11}}},
+			[6] = {Cost = {[1] = {Id = 1401002,Val = 150000},[2] = {Id = 1502031,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[7] = {Cost = {[1] = {Id = 1401002,Val = 200000},[2] = {Id = 1502031,Val = 10},[3] = {Id = 1609002,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.11}}},
+			[8] = {Cost = {[1] = {Id = 1401002,Val = 250000},[2] = {Id = 1502031,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.11}}},
+			[9] = {Cost = {[1] = {Id = 1401002,Val = 300000},[2] = {Id = 1502031,Val = 20},[3] = {Id = 1609002,Val = 30}},Prop = {[1] = {Id = 108,Val = 0.11}}},
+			[10] = {Cost = {[1] = {Id = 1401002,Val = 400000},[2] = {Id = 1502031,Val = 20},[3] = {Id = 1609002,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[11] = {Cost = {[1] = {Id = 1401002,Val = 500000},[2] = {Id = 1502031,Val = 30},[3] = {Id = 1609003,Val = 10}},Prop = {[1] = {Id = 110,Val = 0.14}}},
+			[12] = {Cost = {[1] = {Id = 1401002,Val = 600000},[2] = {Id = 1502031,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 108,Val = 0.14}}},
+			[13] = {Cost = {[1] = {Id = 1401002,Val = 700000},[2] = {Id = 1502031,Val = 30},[3] = {Id = 1609003,Val = 20}},Prop = {[1] = {Id = 104,Val = 0.14}}},
+			[14] = {Cost = {[1] = {Id = 1401002,Val = 800000},[2] = {Id = 1502031,Val = 50},[3] = {Id = 1609003,Val = 30}},Prop = {[1] = {Id = 109,Val = 0.14}}},
+			[15] = {Cost = {[1] = {Id = 1401002,Val = 1000000},[2] = {Id = 1502031,Val = 60},[3] = {Id = 1609003,Val = 50}},Prop = {[1] = {Id = 108,Val = 0.14}}}
+		}
+	}--秦琼专属武器
 }

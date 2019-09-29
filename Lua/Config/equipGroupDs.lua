@@ -2,763 +2,1231 @@
 --note:
 
 colums:
-{Group,组} ,{Loc,位置} ,{Pos,装备位置} ,{Id,ID} ,{IsSuit,套装} ,{Rare,是否稀有} ,{LvId,等级Id} ,{Qua,品质Id}
+{Type,组} ,{Loc,位置} ,{Pos,装备位置} ,{Id,ID} ,{IsSuit,套装} ,{Rare,是否稀有} ,{LvId,等级Id} ,{Qua,品质Id} ,{SQua,套装为5的品质}
 primary key:
-#0 [装备组]: LvId,Qua,Group,Loc
+#0 [装备组]: LvId,SQua,Type,Loc
 ]]
 local _T = LangUtil.Language
 return{
 	[1] = {
 		[1] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2011011,IsSuit = false,Rare = false},--20级寄灵人绿色-武器
-				[2] = {Pos = 2,Id = 2011012,IsSuit = false,Rare = false},--20级寄灵人绿色-头盔
-				[3] = {Pos = 3,Id = 2011013,IsSuit = false,Rare = false},--20级寄灵人绿色-肩甲
-				[4] = {Pos = 4,Id = 2011014,IsSuit = false,Rare = false},--20级寄灵人绿色-衣服
-				[5] = {Pos = 5,Id = 2011015,IsSuit = false,Rare = false},--20级寄灵人绿色-鞋子
-				[6] = {Pos = 6,Id = 2011016,IsSuit = false,Rare = false},--20级寄灵人绿色-护手
-				[7] = {Pos = 7,Id = 2011017,IsSuit = false,Rare = false},--20级寄灵人绿色-项链
-				[8] = {Pos = 8,Id = 2011018,IsSuit = false,Rare = false}--20级寄灵人绿色-戒指
+				[1] = {Pos = 1,Id = 2001101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通寄灵人の灵器
+				[2] = {Pos = 2,Id = 2001102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通寄灵人の头盔
+				[3] = {Pos = 3,Id = 2001103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2001104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通寄灵人の裤子
+				[5] = {Pos = 5,Id = 2001105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2001106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通寄灵人の护手
+				[7] = {Pos = 7,Id = 2001107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通寄灵人の项链
+				[8] = {Pos = 8,Id = 2001108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--20级-普通寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2011021,IsSuit = false,Rare = false},--20级守护灵绿色-武器
-				[2] = {Pos = 2,Id = 2011022,IsSuit = false,Rare = false},--20级守护灵绿色-头盔
-				[3] = {Pos = 3,Id = 2011023,IsSuit = false,Rare = false},--20级守护灵绿色-肩甲
-				[4] = {Pos = 4,Id = 2011024,IsSuit = false,Rare = false},--20级守护灵绿色-衣服
-				[5] = {Pos = 5,Id = 2011025,IsSuit = false,Rare = false},--20级守护灵绿色-鞋子
-				[6] = {Pos = 6,Id = 2011026,IsSuit = false,Rare = false},--20级守护灵绿色-护手
-				[7] = {Pos = 7,Id = 2011027,IsSuit = false,Rare = false},--20级守护灵绿色-项链
-				[8] = {Pos = 8,Id = 2011028,IsSuit = false,Rare = false}--20级守护灵绿色-戒指
+				[1] = {Pos = 1,Id = 2101101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通守护灵の灵器
+				[2] = {Pos = 2,Id = 2101102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通守护灵の头盔
+				[3] = {Pos = 3,Id = 2101103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通守护灵の铠甲
+				[4] = {Pos = 4,Id = 2101104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通守护灵の裤子
+				[5] = {Pos = 5,Id = 2101105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通守护灵の鞋子
+				[6] = {Pos = 6,Id = 2101106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通守护灵の护手
+				[7] = {Pos = 7,Id = 2101107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--20级-普通守护灵の项链
+				[8] = {Pos = 8,Id = 2101108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--20级-普通守护灵の戒指
 			}
 		},
 		[2] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2012011,IsSuit = false,Rare = false},--20级寄灵人蓝色-武器
-				[2] = {Pos = 2,Id = 2012012,IsSuit = false,Rare = false},--20级寄灵人蓝色-头盔
-				[3] = {Pos = 3,Id = 2012013,IsSuit = false,Rare = false},--20级寄灵人蓝色-肩甲
-				[4] = {Pos = 4,Id = 2012014,IsSuit = false,Rare = false},--20级寄灵人蓝色-衣服
-				[5] = {Pos = 5,Id = 2012015,IsSuit = false,Rare = false},--20级寄灵人蓝色-鞋子
-				[6] = {Pos = 6,Id = 2012016,IsSuit = false,Rare = false},--20级寄灵人蓝色-护手
-				[7] = {Pos = 7,Id = 2012017,IsSuit = false,Rare = false},--20级寄灵人蓝色-项链
-				[8] = {Pos = 8,Id = 2012018,IsSuit = false,Rare = false}--20级寄灵人蓝色-戒指
+				[1] = {Pos = 1,Id = 2001201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀寄灵人の灵器
+				[2] = {Pos = 2,Id = 2001202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀寄灵人の头盔
+				[3] = {Pos = 3,Id = 2001203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2001204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀寄灵人の裤子
+				[5] = {Pos = 5,Id = 2001205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2001206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀寄灵人の护手
+				[7] = {Pos = 7,Id = 2001207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀寄灵人の项链
+				[8] = {Pos = 8,Id = 2001208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--20级-优秀寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2012021,IsSuit = false,Rare = false},--20级守护灵蓝色-武器
-				[2] = {Pos = 2,Id = 2012022,IsSuit = false,Rare = false},--20级守护灵蓝色-头盔
-				[3] = {Pos = 3,Id = 2012023,IsSuit = false,Rare = false},--20级守护灵蓝色-肩甲
-				[4] = {Pos = 4,Id = 2012024,IsSuit = false,Rare = false},--20级守护灵蓝色-衣服
-				[5] = {Pos = 5,Id = 2012025,IsSuit = false,Rare = false},--20级守护灵蓝色-鞋子
-				[6] = {Pos = 6,Id = 2012026,IsSuit = false,Rare = false},--20级守护灵蓝色-护手
-				[7] = {Pos = 7,Id = 2012027,IsSuit = false,Rare = false},--20级守护灵蓝色-项链
-				[8] = {Pos = 8,Id = 2012028,IsSuit = false,Rare = false}--20级守护灵蓝色-戒指
+				[1] = {Pos = 1,Id = 2101201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀守护灵の灵器
+				[2] = {Pos = 2,Id = 2101202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀守护灵の头盔
+				[3] = {Pos = 3,Id = 2101203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀守护灵の铠甲
+				[4] = {Pos = 4,Id = 2101204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀守护灵の裤子
+				[5] = {Pos = 5,Id = 2101205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀守护灵の鞋子
+				[6] = {Pos = 6,Id = 2101206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀守护灵の护手
+				[7] = {Pos = 7,Id = 2101207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--20级-优秀守护灵の项链
+				[8] = {Pos = 8,Id = 2101208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--20级-优秀守护灵の戒指
 			}
 		},
 		[3] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2013011,IsSuit = false,Rare = false},--20级寄灵人紫色-武器
-				[2] = {Pos = 2,Id = 2013012,IsSuit = false,Rare = false},--20级寄灵人紫色-头盔
-				[3] = {Pos = 3,Id = 2013013,IsSuit = false,Rare = false},--20级寄灵人紫色-肩甲
-				[4] = {Pos = 4,Id = 2013014,IsSuit = false,Rare = false},--20级寄灵人紫色-衣服
-				[5] = {Pos = 5,Id = 2013015,IsSuit = false,Rare = false},--20级寄灵人紫色-鞋子
-				[6] = {Pos = 6,Id = 2013016,IsSuit = false,Rare = false},--20级寄灵人紫色-护手
-				[7] = {Pos = 7,Id = 2013017,IsSuit = false,Rare = false},--20级寄灵人紫色-项链
-				[8] = {Pos = 8,Id = 2013018,IsSuit = false,Rare = false}--20级寄灵人紫色-戒指
+				[1] = {Pos = 1,Id = 2001301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良寄灵人の灵器
+				[2] = {Pos = 2,Id = 2001302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良寄灵人の头盔
+				[3] = {Pos = 3,Id = 2001303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2001304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良寄灵人の裤子
+				[5] = {Pos = 5,Id = 2001305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2001306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良寄灵人の护手
+				[7] = {Pos = 7,Id = 2001307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良寄灵人の项链
+				[8] = {Pos = 8,Id = 2001308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--20级-精良寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2013021,IsSuit = false,Rare = false},--20级守护灵紫色-武器
-				[2] = {Pos = 2,Id = 2013022,IsSuit = false,Rare = false},--20级守护灵紫色-头盔
-				[3] = {Pos = 3,Id = 2013023,IsSuit = false,Rare = false},--20级守护灵紫色-肩甲
-				[4] = {Pos = 4,Id = 2013024,IsSuit = false,Rare = false},--20级守护灵紫色-衣服
-				[5] = {Pos = 5,Id = 2013025,IsSuit = false,Rare = false},--20级守护灵紫色-鞋子
-				[6] = {Pos = 6,Id = 2013026,IsSuit = false,Rare = false},--20级守护灵紫色-护手
-				[7] = {Pos = 7,Id = 2013027,IsSuit = false,Rare = false},--20级守护灵紫色-项链
-				[8] = {Pos = 8,Id = 2013028,IsSuit = false,Rare = false}--20级守护灵紫色-戒指
+				[1] = {Pos = 1,Id = 2101301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良守护灵の灵器
+				[2] = {Pos = 2,Id = 2101302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良守护灵の头盔
+				[3] = {Pos = 3,Id = 2101303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良守护灵の铠甲
+				[4] = {Pos = 4,Id = 2101304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良守护灵の裤子
+				[5] = {Pos = 5,Id = 2101305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良守护灵の鞋子
+				[6] = {Pos = 6,Id = 2101306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良守护灵の护手
+				[7] = {Pos = 7,Id = 2101307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--20级-精良守护灵の项链
+				[8] = {Pos = 8,Id = 2101308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--20级-精良守护灵の戒指
 			}
 		},
 		[4] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2014011,IsSuit = false,Rare = false},--20级寄灵人橙色-武器
-				[2] = {Pos = 2,Id = 2014012,IsSuit = false,Rare = false},--20级寄灵人橙色-头盔
-				[3] = {Pos = 3,Id = 2014013,IsSuit = false,Rare = false},--20级寄灵人橙色-肩甲
-				[4] = {Pos = 4,Id = 2014014,IsSuit = false,Rare = false},--20级寄灵人橙色-衣服
-				[5] = {Pos = 5,Id = 2014015,IsSuit = false,Rare = false},--20级寄灵人橙色-鞋子
-				[6] = {Pos = 6,Id = 2014016,IsSuit = false,Rare = false},--20级寄灵人橙色-护手
-				[7] = {Pos = 7,Id = 2014017,IsSuit = false,Rare = false},--20级寄灵人橙色-项链
-				[8] = {Pos = 8,Id = 2014018,IsSuit = false,Rare = false}--20级寄灵人橙色-戒指
+				[1] = {Pos = 1,Id = 2001401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗寄灵人の灵器
+				[2] = {Pos = 2,Id = 2001402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗寄灵人の头盔
+				[3] = {Pos = 3,Id = 2001403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2001404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗寄灵人の裤子
+				[5] = {Pos = 5,Id = 2001405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2001406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗寄灵人の护手
+				[7] = {Pos = 7,Id = 2001407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗寄灵人の项链
+				[8] = {Pos = 8,Id = 2001408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--20级-史诗寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2014021,IsSuit = false,Rare = false},--20级守护灵橙色-武器
-				[2] = {Pos = 2,Id = 2014022,IsSuit = false,Rare = false},--20级守护灵橙色-头盔
-				[3] = {Pos = 3,Id = 2014023,IsSuit = false,Rare = false},--20级守护灵橙色-肩甲
-				[4] = {Pos = 4,Id = 2014024,IsSuit = false,Rare = false},--20级守护灵橙色-衣服
-				[5] = {Pos = 5,Id = 2014025,IsSuit = false,Rare = false},--20级守护灵橙色-鞋子
-				[6] = {Pos = 6,Id = 2014026,IsSuit = false,Rare = false},--20级守护灵橙色-护手
-				[7] = {Pos = 7,Id = 2014027,IsSuit = false,Rare = false},--20级守护灵橙色-项链
-				[8] = {Pos = 8,Id = 2014028,IsSuit = false,Rare = false}--20级守护灵橙色-戒指
+				[1] = {Pos = 1,Id = 2101401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗守护灵の灵器
+				[2] = {Pos = 2,Id = 2101402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗守护灵の头盔
+				[3] = {Pos = 3,Id = 2101403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗守护灵の铠甲
+				[4] = {Pos = 4,Id = 2101404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗守护灵の裤子
+				[5] = {Pos = 5,Id = 2101405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗守护灵の鞋子
+				[6] = {Pos = 6,Id = 2101406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗守护灵の护手
+				[7] = {Pos = 7,Id = 2101407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--20级-史诗守护灵の项链
+				[8] = {Pos = 8,Id = 2101408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--20级-史诗守护灵の戒指
+			}
+		},
+		[5] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2001431,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套寄灵人の灵器
+				[2] = {Pos = 2,Id = 2001432,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套寄灵人の头盔
+				[3] = {Pos = 3,Id = 2001433,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2001434,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套寄灵人の裤子
+				[5] = {Pos = 5,Id = 2001435,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2001436,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套寄灵人の护手
+				[7] = {Pos = 7,Id = 2001437,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套寄灵人の项链
+				[8] = {Pos = 8,Id = 2001438,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--20级-新手套寄灵人の戒指
 			},
-			[3] = {
-				[1] = {Pos = 1,Id = 2014031,IsSuit = true,Rare = false},--20级寄灵人橙色套1-武器
-				[2] = {Pos = 2,Id = 2014032,IsSuit = true,Rare = false},--20级寄灵人橙色套1-头盔
-				[3] = {Pos = 3,Id = 2014033,IsSuit = true,Rare = false},--20级寄灵人橙色套1-肩甲
-				[4] = {Pos = 4,Id = 2014034,IsSuit = true,Rare = false},--20级寄灵人橙色套1-衣服
-				[5] = {Pos = 5,Id = 2014035,IsSuit = true,Rare = false},--20级寄灵人橙色套1-鞋子
-				[6] = {Pos = 6,Id = 2014036,IsSuit = true,Rare = false},--20级寄灵人橙色套1-护手
-				[7] = {Pos = 7,Id = 2014037,IsSuit = true,Rare = false},--20级寄灵人橙色套1-项链
-				[8] = {Pos = 8,Id = 2014038,IsSuit = true,Rare = false}--20级寄灵人橙色套1-戒指
-			},
-			[4] = {
-				[1] = {Pos = 1,Id = 2014041,IsSuit = true,Rare = false},--20级守护灵橙色套1-武器
-				[2] = {Pos = 2,Id = 2014042,IsSuit = true,Rare = false},--20级守护灵橙色套1-头盔
-				[3] = {Pos = 3,Id = 2014043,IsSuit = true,Rare = false},--20级守护灵橙色套1-肩甲
-				[4] = {Pos = 4,Id = 2014044,IsSuit = true,Rare = false},--20级守护灵橙色套1-衣服
-				[5] = {Pos = 5,Id = 2014045,IsSuit = true,Rare = false},--20级守护灵橙色套1-鞋子
-				[6] = {Pos = 6,Id = 2014046,IsSuit = true,Rare = false},--20级守护灵橙色套1-护手
-				[7] = {Pos = 7,Id = 2014047,IsSuit = true,Rare = false},--20级守护灵橙色套1-项链
-				[8] = {Pos = 8,Id = 2014048,IsSuit = true,Rare = false}--20级守护灵橙色套1-戒指
+			[2] = {
+				[1] = {Pos = 1,Id = 2101431,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套守护灵の灵器
+				[2] = {Pos = 2,Id = 2101432,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套守护灵の头盔
+				[3] = {Pos = 3,Id = 2101433,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套守护灵の铠甲
+				[4] = {Pos = 4,Id = 2101434,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套守护灵の裤子
+				[5] = {Pos = 5,Id = 2101435,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套守护灵の鞋子
+				[6] = {Pos = 6,Id = 2101436,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套守护灵の护手
+				[7] = {Pos = 7,Id = 2101437,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--20级-新手套守护灵の项链
+				[8] = {Pos = 8,Id = 2101438,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--20级-新手套守护灵の戒指
 			}
 		}
 	},
 	[2] = {
 		[1] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2021011,IsSuit = false,Rare = false},--40级寄灵人绿色-武器
-				[2] = {Pos = 2,Id = 2021012,IsSuit = false,Rare = false},--40级寄灵人绿色-头盔
-				[3] = {Pos = 3,Id = 2021013,IsSuit = false,Rare = false},--40级寄灵人绿色-肩甲
-				[4] = {Pos = 4,Id = 2021014,IsSuit = false,Rare = false},--40级寄灵人绿色-衣服
-				[5] = {Pos = 5,Id = 2021015,IsSuit = false,Rare = false},--40级寄灵人绿色-鞋子
-				[6] = {Pos = 6,Id = 2021016,IsSuit = false,Rare = false},--40级寄灵人绿色-护手
-				[7] = {Pos = 7,Id = 2021017,IsSuit = false,Rare = false},--40级寄灵人绿色-项链
-				[8] = {Pos = 8,Id = 2021018,IsSuit = false,Rare = false}--40级寄灵人绿色-戒指
+				[1] = {Pos = 1,Id = 2002101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通寄灵人の灵器
+				[2] = {Pos = 2,Id = 2002102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通寄灵人の头盔
+				[3] = {Pos = 3,Id = 2002103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2002104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通寄灵人の裤子
+				[5] = {Pos = 5,Id = 2002105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2002106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通寄灵人の护手
+				[7] = {Pos = 7,Id = 2002107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通寄灵人の项链
+				[8] = {Pos = 8,Id = 2002108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--40级-普通寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2021021,IsSuit = false,Rare = false},--40级守护灵绿色-武器
-				[2] = {Pos = 2,Id = 2021022,IsSuit = false,Rare = false},--40级守护灵绿色-头盔
-				[3] = {Pos = 3,Id = 2021023,IsSuit = false,Rare = false},--40级守护灵绿色-肩甲
-				[4] = {Pos = 4,Id = 2021024,IsSuit = false,Rare = false},--40级守护灵绿色-衣服
-				[5] = {Pos = 5,Id = 2021025,IsSuit = false,Rare = false},--40级守护灵绿色-鞋子
-				[6] = {Pos = 6,Id = 2021026,IsSuit = false,Rare = false},--40级守护灵绿色-护手
-				[7] = {Pos = 7,Id = 2021027,IsSuit = false,Rare = false},--40级守护灵绿色-项链
-				[8] = {Pos = 8,Id = 2021028,IsSuit = false,Rare = false}--40级守护灵绿色-戒指
+				[1] = {Pos = 1,Id = 2102101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通守护灵の灵器
+				[2] = {Pos = 2,Id = 2102102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通守护灵の头盔
+				[3] = {Pos = 3,Id = 2102103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通守护灵の铠甲
+				[4] = {Pos = 4,Id = 2102104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通守护灵の裤子
+				[5] = {Pos = 5,Id = 2102105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通守护灵の鞋子
+				[6] = {Pos = 6,Id = 2102106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通守护灵の护手
+				[7] = {Pos = 7,Id = 2102107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--40级-普通守护灵の项链
+				[8] = {Pos = 8,Id = 2102108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--40级-普通守护灵の戒指
 			}
 		},
 		[2] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2022011,IsSuit = false,Rare = false},--40级寄灵人蓝色-武器
-				[2] = {Pos = 2,Id = 2022012,IsSuit = false,Rare = false},--40级寄灵人蓝色-头盔
-				[3] = {Pos = 3,Id = 2022013,IsSuit = false,Rare = false},--40级寄灵人蓝色-肩甲
-				[4] = {Pos = 4,Id = 2022014,IsSuit = false,Rare = false},--40级寄灵人蓝色-衣服
-				[5] = {Pos = 5,Id = 2022015,IsSuit = false,Rare = false},--40级寄灵人蓝色-鞋子
-				[6] = {Pos = 6,Id = 2022016,IsSuit = false,Rare = false},--40级寄灵人蓝色-护手
-				[7] = {Pos = 7,Id = 2022017,IsSuit = false,Rare = false},--40级寄灵人蓝色-项链
-				[8] = {Pos = 8,Id = 2022018,IsSuit = false,Rare = false}--40级寄灵人蓝色-戒指
+				[1] = {Pos = 1,Id = 2002201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀寄灵人の灵器
+				[2] = {Pos = 2,Id = 2002202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀寄灵人の头盔
+				[3] = {Pos = 3,Id = 2002203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2002204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀寄灵人の裤子
+				[5] = {Pos = 5,Id = 2002205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2002206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀寄灵人の护手
+				[7] = {Pos = 7,Id = 2002207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀寄灵人の项链
+				[8] = {Pos = 8,Id = 2002208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--40级-优秀寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2022021,IsSuit = false,Rare = false},--40级守护灵蓝色-武器
-				[2] = {Pos = 2,Id = 2022022,IsSuit = false,Rare = false},--40级守护灵蓝色-头盔
-				[3] = {Pos = 3,Id = 2022023,IsSuit = false,Rare = false},--40级守护灵蓝色-肩甲
-				[4] = {Pos = 4,Id = 2022024,IsSuit = false,Rare = false},--40级守护灵蓝色-衣服
-				[5] = {Pos = 5,Id = 2022025,IsSuit = false,Rare = false},--40级守护灵蓝色-鞋子
-				[6] = {Pos = 6,Id = 2022026,IsSuit = false,Rare = false},--40级守护灵蓝色-护手
-				[7] = {Pos = 7,Id = 2022027,IsSuit = false,Rare = false},--40级守护灵蓝色-项链
-				[8] = {Pos = 8,Id = 2022028,IsSuit = false,Rare = false}--40级守护灵蓝色-戒指
+				[1] = {Pos = 1,Id = 2102201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀守护灵の灵器
+				[2] = {Pos = 2,Id = 2102202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀守护灵の头盔
+				[3] = {Pos = 3,Id = 2102203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀守护灵の铠甲
+				[4] = {Pos = 4,Id = 2102204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀守护灵の裤子
+				[5] = {Pos = 5,Id = 2102205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀守护灵の鞋子
+				[6] = {Pos = 6,Id = 2102206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀守护灵の护手
+				[7] = {Pos = 7,Id = 2102207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--40级-优秀守护灵の项链
+				[8] = {Pos = 8,Id = 2102208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--40级-优秀守护灵の戒指
 			}
 		},
 		[3] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2023011,IsSuit = false,Rare = false},--40级寄灵人紫色-武器
-				[2] = {Pos = 2,Id = 2023012,IsSuit = false,Rare = false},--40级寄灵人紫色-头盔
-				[3] = {Pos = 3,Id = 2023013,IsSuit = false,Rare = false},--40级寄灵人紫色-肩甲
-				[4] = {Pos = 4,Id = 2023014,IsSuit = false,Rare = false},--40级寄灵人紫色-衣服
-				[5] = {Pos = 5,Id = 2023015,IsSuit = false,Rare = false},--40级寄灵人紫色-鞋子
-				[6] = {Pos = 6,Id = 2023016,IsSuit = false,Rare = false},--40级寄灵人紫色-护手
-				[7] = {Pos = 7,Id = 2023017,IsSuit = false,Rare = false},--40级寄灵人紫色-项链
-				[8] = {Pos = 8,Id = 2023018,IsSuit = false,Rare = false}--40级寄灵人紫色-戒指
+				[1] = {Pos = 1,Id = 2002301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良寄灵人の灵器
+				[2] = {Pos = 2,Id = 2002302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良寄灵人の头盔
+				[3] = {Pos = 3,Id = 2002303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2002304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良寄灵人の裤子
+				[5] = {Pos = 5,Id = 2002305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2002306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良寄灵人の护手
+				[7] = {Pos = 7,Id = 2002307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良寄灵人の项链
+				[8] = {Pos = 8,Id = 2002308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--40级-精良寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2023021,IsSuit = false,Rare = false},--40级守护灵紫色-武器
-				[2] = {Pos = 2,Id = 2023022,IsSuit = false,Rare = false},--40级守护灵紫色-头盔
-				[3] = {Pos = 3,Id = 2023023,IsSuit = false,Rare = false},--40级守护灵紫色-肩甲
-				[4] = {Pos = 4,Id = 2023024,IsSuit = false,Rare = false},--40级守护灵紫色-衣服
-				[5] = {Pos = 5,Id = 2023025,IsSuit = false,Rare = false},--40级守护灵紫色-鞋子
-				[6] = {Pos = 6,Id = 2023026,IsSuit = false,Rare = false},--40级守护灵紫色-护手
-				[7] = {Pos = 7,Id = 2023027,IsSuit = false,Rare = false},--40级守护灵紫色-项链
-				[8] = {Pos = 8,Id = 2023028,IsSuit = false,Rare = false}--40级守护灵紫色-戒指
+				[1] = {Pos = 1,Id = 2102301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良守护灵の灵器
+				[2] = {Pos = 2,Id = 2102302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良守护灵の头盔
+				[3] = {Pos = 3,Id = 2102303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良守护灵の铠甲
+				[4] = {Pos = 4,Id = 2102304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良守护灵の裤子
+				[5] = {Pos = 5,Id = 2102305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良守护灵の鞋子
+				[6] = {Pos = 6,Id = 2102306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良守护灵の护手
+				[7] = {Pos = 7,Id = 2102307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--40级-精良守护灵の项链
+				[8] = {Pos = 8,Id = 2102308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--40级-精良守护灵の戒指
 			}
 		},
 		[4] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2024011,IsSuit = false,Rare = false},--40级寄灵人橙色-武器
-				[2] = {Pos = 2,Id = 2024012,IsSuit = false,Rare = false},--40级寄灵人橙色-头盔
-				[3] = {Pos = 3,Id = 2024013,IsSuit = false,Rare = false},--40级寄灵人橙色-肩甲
-				[4] = {Pos = 4,Id = 2024014,IsSuit = false,Rare = false},--40级寄灵人橙色-衣服
-				[5] = {Pos = 5,Id = 2024015,IsSuit = false,Rare = false},--40级寄灵人橙色-鞋子
-				[6] = {Pos = 6,Id = 2024016,IsSuit = false,Rare = false},--40级寄灵人橙色-护手
-				[7] = {Pos = 7,Id = 2024017,IsSuit = false,Rare = false},--40级寄灵人橙色-项链
-				[8] = {Pos = 8,Id = 2024018,IsSuit = false,Rare = false}--40级寄灵人橙色-戒指
+				[1] = {Pos = 1,Id = 2002401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗寄灵人の灵器
+				[2] = {Pos = 2,Id = 2002402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗寄灵人の头盔
+				[3] = {Pos = 3,Id = 2002403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2002404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗寄灵人の裤子
+				[5] = {Pos = 5,Id = 2002405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2002406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗寄灵人の护手
+				[7] = {Pos = 7,Id = 2002407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗寄灵人の项链
+				[8] = {Pos = 8,Id = 2002408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--40级-史诗寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2024021,IsSuit = false,Rare = false},--40级守护灵橙色-武器
-				[2] = {Pos = 2,Id = 2024022,IsSuit = false,Rare = false},--40级守护灵橙色-头盔
-				[3] = {Pos = 3,Id = 2024023,IsSuit = false,Rare = false},--40级守护灵橙色-肩甲
-				[4] = {Pos = 4,Id = 2024024,IsSuit = false,Rare = false},--40级守护灵橙色-衣服
-				[5] = {Pos = 5,Id = 2024025,IsSuit = false,Rare = false},--40级守护灵橙色-鞋子
-				[6] = {Pos = 6,Id = 2024026,IsSuit = false,Rare = false},--40级守护灵橙色-护手
-				[7] = {Pos = 7,Id = 2024027,IsSuit = false,Rare = false},--40级守护灵橙色-项链
-				[8] = {Pos = 8,Id = 2024028,IsSuit = false,Rare = false}--40级守护灵橙色-戒指
+				[1] = {Pos = 1,Id = 2102401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗守护灵の灵器
+				[2] = {Pos = 2,Id = 2102402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗守护灵の头盔
+				[3] = {Pos = 3,Id = 2102403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗守护灵の铠甲
+				[4] = {Pos = 4,Id = 2102404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗守护灵の裤子
+				[5] = {Pos = 5,Id = 2102405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗守护灵の鞋子
+				[6] = {Pos = 6,Id = 2102406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗守护灵の护手
+				[7] = {Pos = 7,Id = 2102407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--40级-史诗守护灵の项链
+				[8] = {Pos = 8,Id = 2102408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--40级-史诗守护灵の戒指
+			}
+		},
+		[5] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2002411,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--40级-攻击套寄灵人の灵器
+				[2] = {Pos = 2,Id = 2002412,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--40级-攻击套寄灵人の头盔
+				[3] = {Pos = 3,Id = 2002413,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--40级-攻击套寄灵人の铠甲
+				[4] = {Pos = 5,Id = 2002415,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--40级-攻击套寄灵人の鞋子
+				[5] = {Pos = 7,Id = 2002417,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--40级-攻击套寄灵人の项链
+				[6] = {Pos = 8,Id = 2002418,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--40级-攻击套寄灵人の戒指
 			},
-			[3] = {
-				[1] = {Pos = 1,Id = 2024031,IsSuit = true,Rare = false},--40级寄灵人橙色套1-武器
-				[2] = {Pos = 2,Id = 2024032,IsSuit = true,Rare = false},--40级寄灵人橙色套1-头盔
-				[3] = {Pos = 3,Id = 2024033,IsSuit = true,Rare = false},--40级寄灵人橙色套1-肩甲
-				[4] = {Pos = 4,Id = 2024034,IsSuit = true,Rare = false}--40级寄灵人橙色套1-衣服
-			},
-			[4] = {
-				[1] = {Pos = 1,Id = 2024041,IsSuit = true,Rare = false},--40级守护灵橙色套1-武器
-				[2] = {Pos = 2,Id = 2024042,IsSuit = true,Rare = false},--40级守护灵橙色套1-头盔
-				[3] = {Pos = 3,Id = 2024043,IsSuit = true,Rare = false},--40级守护灵橙色套1-肩甲
-				[4] = {Pos = 4,Id = 2024044,IsSuit = true,Rare = false}--40级守护灵橙色套1-衣服
-			},
-			[5] = {
-				[1] = {Pos = 5,Id = 2024055,IsSuit = true,Rare = false},--40级寄灵人橙色套2-鞋子
-				[2] = {Pos = 6,Id = 2024056,IsSuit = true,Rare = false},--40级寄灵人橙色套2-护手
-				[3] = {Pos = 7,Id = 2024057,IsSuit = true,Rare = false},--40级寄灵人橙色套2-项链
-				[4] = {Pos = 8,Id = 2024058,IsSuit = true,Rare = false}--40级寄灵人橙色套2-戒指
-			},
-			[6] = {
-				[1] = {Pos = 5,Id = 2024065,IsSuit = true,Rare = false},--40级守护灵橙色套2-鞋子
-				[2] = {Pos = 6,Id = 2024066,IsSuit = true,Rare = false},--40级守护灵橙色套2-护手
-				[3] = {Pos = 7,Id = 2024067,IsSuit = true,Rare = false},--40级守护灵橙色套2-项链
-				[4] = {Pos = 8,Id = 2024068,IsSuit = true,Rare = false}--40级守护灵橙色套2-戒指
+			[2] = {
+				[1] = {Pos = 1,Id = 2102411,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--40级-攻击套守护灵の灵器
+				[2] = {Pos = 2,Id = 2102412,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--40级-攻击套守护灵の头盔
+				[3] = {Pos = 3,Id = 2102413,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--40级-攻击套守护灵の铠甲
+				[4] = {Pos = 5,Id = 2102415,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--40级-攻击套守护灵の鞋子
+				[5] = {Pos = 7,Id = 2102417,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--40级-攻击套守护灵の项链
+				[6] = {Pos = 8,Id = 2102418,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--40级-攻击套守护灵の戒指
 			}
 		}
 	},
 	[3] = {
 		[1] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2031011,IsSuit = false,Rare = false},--60级寄灵人绿色-武器
-				[2] = {Pos = 2,Id = 2031012,IsSuit = false,Rare = false},--60级寄灵人绿色-头盔
-				[3] = {Pos = 3,Id = 2031013,IsSuit = false,Rare = false},--60级寄灵人绿色-肩甲
-				[4] = {Pos = 4,Id = 2031014,IsSuit = false,Rare = false},--60级寄灵人绿色-衣服
-				[5] = {Pos = 5,Id = 2031015,IsSuit = false,Rare = false},--60级寄灵人绿色-鞋子
-				[6] = {Pos = 6,Id = 2031016,IsSuit = false,Rare = false},--60级寄灵人绿色-护手
-				[7] = {Pos = 7,Id = 2031017,IsSuit = false,Rare = false},--60级寄灵人绿色-项链
-				[8] = {Pos = 8,Id = 2031018,IsSuit = false,Rare = false}--60级寄灵人绿色-戒指
+				[1] = {Pos = 1,Id = 2003101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通寄灵人の灵器
+				[2] = {Pos = 2,Id = 2003102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通寄灵人の头盔
+				[3] = {Pos = 3,Id = 2003103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2003104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通寄灵人の裤子
+				[5] = {Pos = 5,Id = 2003105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2003106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通寄灵人の护手
+				[7] = {Pos = 7,Id = 2003107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通寄灵人の项链
+				[8] = {Pos = 8,Id = 2003108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--60级-普通寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2031021,IsSuit = false,Rare = false},--60级守护灵绿色-武器
-				[2] = {Pos = 2,Id = 2031022,IsSuit = false,Rare = false},--60级守护灵绿色-头盔
-				[3] = {Pos = 3,Id = 2031023,IsSuit = false,Rare = false},--60级守护灵绿色-肩甲
-				[4] = {Pos = 4,Id = 2031024,IsSuit = false,Rare = false},--60级守护灵绿色-衣服
-				[5] = {Pos = 5,Id = 2031025,IsSuit = false,Rare = false},--60级守护灵绿色-鞋子
-				[6] = {Pos = 6,Id = 2031026,IsSuit = false,Rare = false},--60级守护灵绿色-护手
-				[7] = {Pos = 7,Id = 2031027,IsSuit = false,Rare = false},--60级守护灵绿色-项链
-				[8] = {Pos = 8,Id = 2031028,IsSuit = false,Rare = false}--60级守护灵绿色-戒指
+				[1] = {Pos = 1,Id = 2103101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通守护灵の灵器
+				[2] = {Pos = 2,Id = 2103102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通守护灵の头盔
+				[3] = {Pos = 3,Id = 2103103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通守护灵の铠甲
+				[4] = {Pos = 4,Id = 2103104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通守护灵の裤子
+				[5] = {Pos = 5,Id = 2103105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通守护灵の鞋子
+				[6] = {Pos = 6,Id = 2103106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通守护灵の护手
+				[7] = {Pos = 7,Id = 2103107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--60级-普通守护灵の项链
+				[8] = {Pos = 8,Id = 2103108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--60级-普通守护灵の戒指
 			}
 		},
 		[2] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2032011,IsSuit = false,Rare = false},--60级寄灵人蓝色-武器
-				[2] = {Pos = 2,Id = 2032012,IsSuit = false,Rare = false},--60级寄灵人蓝色-头盔
-				[3] = {Pos = 3,Id = 2032013,IsSuit = false,Rare = false},--60级寄灵人蓝色-肩甲
-				[4] = {Pos = 4,Id = 2032014,IsSuit = false,Rare = false},--60级寄灵人蓝色-衣服
-				[5] = {Pos = 5,Id = 2032015,IsSuit = false,Rare = false},--60级寄灵人蓝色-鞋子
-				[6] = {Pos = 6,Id = 2032016,IsSuit = false,Rare = false},--60级寄灵人蓝色-护手
-				[7] = {Pos = 7,Id = 2032017,IsSuit = false,Rare = false},--60级寄灵人蓝色-项链
-				[8] = {Pos = 8,Id = 2032018,IsSuit = false,Rare = false}--60级寄灵人蓝色-戒指
+				[1] = {Pos = 1,Id = 2003201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀寄灵人の灵器
+				[2] = {Pos = 2,Id = 2003202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀寄灵人の头盔
+				[3] = {Pos = 3,Id = 2003203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2003204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀寄灵人の裤子
+				[5] = {Pos = 5,Id = 2003205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2003206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀寄灵人の护手
+				[7] = {Pos = 7,Id = 2003207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀寄灵人の项链
+				[8] = {Pos = 8,Id = 2003208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--60级-优秀寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2032021,IsSuit = false,Rare = false},--60级守护灵蓝色-武器
-				[2] = {Pos = 2,Id = 2032022,IsSuit = false,Rare = false},--60级守护灵蓝色-头盔
-				[3] = {Pos = 3,Id = 2032023,IsSuit = false,Rare = false},--60级守护灵蓝色-肩甲
-				[4] = {Pos = 4,Id = 2032024,IsSuit = false,Rare = false},--60级守护灵蓝色-衣服
-				[5] = {Pos = 5,Id = 2032025,IsSuit = false,Rare = false},--60级守护灵蓝色-鞋子
-				[6] = {Pos = 6,Id = 2032026,IsSuit = false,Rare = false},--60级守护灵蓝色-护手
-				[7] = {Pos = 7,Id = 2032027,IsSuit = false,Rare = false},--60级守护灵蓝色-项链
-				[8] = {Pos = 8,Id = 2032028,IsSuit = false,Rare = false}--60级守护灵蓝色-戒指
+				[1] = {Pos = 1,Id = 2103201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀守护灵の灵器
+				[2] = {Pos = 2,Id = 2103202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀守护灵の头盔
+				[3] = {Pos = 3,Id = 2103203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀守护灵の铠甲
+				[4] = {Pos = 4,Id = 2103204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀守护灵の裤子
+				[5] = {Pos = 5,Id = 2103205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀守护灵の鞋子
+				[6] = {Pos = 6,Id = 2103206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀守护灵の护手
+				[7] = {Pos = 7,Id = 2103207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--60级-优秀守护灵の项链
+				[8] = {Pos = 8,Id = 2103208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--60级-优秀守护灵の戒指
 			}
 		},
 		[3] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2033011,IsSuit = false,Rare = false},--60级寄灵人紫色-武器
-				[2] = {Pos = 2,Id = 2033012,IsSuit = false,Rare = false},--60级寄灵人紫色-头盔
-				[3] = {Pos = 3,Id = 2033013,IsSuit = false,Rare = false},--60级寄灵人紫色-肩甲
-				[4] = {Pos = 4,Id = 2033014,IsSuit = false,Rare = false},--60级寄灵人紫色-衣服
-				[5] = {Pos = 5,Id = 2033015,IsSuit = false,Rare = false},--60级寄灵人紫色-鞋子
-				[6] = {Pos = 6,Id = 2033016,IsSuit = false,Rare = false},--60级寄灵人紫色-护手
-				[7] = {Pos = 7,Id = 2033017,IsSuit = false,Rare = false},--60级寄灵人紫色-项链
-				[8] = {Pos = 8,Id = 2033018,IsSuit = false,Rare = false}--60级寄灵人紫色-戒指
+				[1] = {Pos = 1,Id = 2003301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良寄灵人の灵器
+				[2] = {Pos = 2,Id = 2003302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良寄灵人の头盔
+				[3] = {Pos = 3,Id = 2003303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2003304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良寄灵人の裤子
+				[5] = {Pos = 5,Id = 2003305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2003306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良寄灵人の护手
+				[7] = {Pos = 7,Id = 2003307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良寄灵人の项链
+				[8] = {Pos = 8,Id = 2003308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--60级-精良寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2033021,IsSuit = false,Rare = false},--60级守护灵紫色-武器
-				[2] = {Pos = 2,Id = 2033022,IsSuit = false,Rare = false},--60级守护灵紫色-头盔
-				[3] = {Pos = 3,Id = 2033023,IsSuit = false,Rare = false},--60级守护灵紫色-肩甲
-				[4] = {Pos = 4,Id = 2033024,IsSuit = false,Rare = false},--60级守护灵紫色-衣服
-				[5] = {Pos = 5,Id = 2033025,IsSuit = false,Rare = false},--60级守护灵紫色-鞋子
-				[6] = {Pos = 6,Id = 2033026,IsSuit = false,Rare = false},--60级守护灵紫色-护手
-				[7] = {Pos = 7,Id = 2033027,IsSuit = false,Rare = false},--60级守护灵紫色-项链
-				[8] = {Pos = 8,Id = 2033028,IsSuit = false,Rare = false}--60级守护灵紫色-戒指
+				[1] = {Pos = 1,Id = 2103301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良守护灵の灵器
+				[2] = {Pos = 2,Id = 2103302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良守护灵の头盔
+				[3] = {Pos = 3,Id = 2103303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良守护灵の铠甲
+				[4] = {Pos = 4,Id = 2103304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良守护灵の裤子
+				[5] = {Pos = 5,Id = 2103305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良守护灵の鞋子
+				[6] = {Pos = 6,Id = 2103306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良守护灵の护手
+				[7] = {Pos = 7,Id = 2103307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--60级-精良守护灵の项链
+				[8] = {Pos = 8,Id = 2103308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--60级-精良守护灵の戒指
 			}
 		},
 		[4] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2034011,IsSuit = false,Rare = false},--60级寄灵人橙色-武器
-				[2] = {Pos = 2,Id = 2034012,IsSuit = false,Rare = false},--60级寄灵人橙色-头盔
-				[3] = {Pos = 3,Id = 2034013,IsSuit = false,Rare = false},--60级寄灵人橙色-肩甲
-				[4] = {Pos = 4,Id = 2034014,IsSuit = false,Rare = false},--60级寄灵人橙色-衣服
-				[5] = {Pos = 5,Id = 2034015,IsSuit = false,Rare = false},--60级寄灵人橙色-鞋子
-				[6] = {Pos = 6,Id = 2034016,IsSuit = false,Rare = false},--60级寄灵人橙色-护手
-				[7] = {Pos = 7,Id = 2034017,IsSuit = false,Rare = false},--60级寄灵人橙色-项链
-				[8] = {Pos = 8,Id = 2034018,IsSuit = false,Rare = false}--60级寄灵人橙色-戒指
+				[1] = {Pos = 1,Id = 2003401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗寄灵人の灵器
+				[2] = {Pos = 2,Id = 2003402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗寄灵人の头盔
+				[3] = {Pos = 3,Id = 2003403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2003404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗寄灵人の裤子
+				[5] = {Pos = 5,Id = 2003405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2003406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗寄灵人の护手
+				[7] = {Pos = 7,Id = 2003407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗寄灵人の项链
+				[8] = {Pos = 8,Id = 2003408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--60级-史诗寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2034021,IsSuit = false,Rare = false},--60级守护灵橙色-武器
-				[2] = {Pos = 2,Id = 2034022,IsSuit = false,Rare = false},--60级守护灵橙色-头盔
-				[3] = {Pos = 3,Id = 2034023,IsSuit = false,Rare = false},--60级守护灵橙色-肩甲
-				[4] = {Pos = 4,Id = 2034024,IsSuit = false,Rare = false},--60级守护灵橙色-衣服
-				[5] = {Pos = 5,Id = 2034025,IsSuit = false,Rare = false},--60级守护灵橙色-鞋子
-				[6] = {Pos = 6,Id = 2034026,IsSuit = false,Rare = false},--60级守护灵橙色-护手
-				[7] = {Pos = 7,Id = 2034027,IsSuit = false,Rare = false},--60级守护灵橙色-项链
-				[8] = {Pos = 8,Id = 2034028,IsSuit = false,Rare = false}--60级守护灵橙色-戒指
+				[1] = {Pos = 1,Id = 2103401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗守护灵の灵器
+				[2] = {Pos = 2,Id = 2103402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗守护灵の头盔
+				[3] = {Pos = 3,Id = 2103403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗守护灵の铠甲
+				[4] = {Pos = 4,Id = 2103404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗守护灵の裤子
+				[5] = {Pos = 5,Id = 2103405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗守护灵の鞋子
+				[6] = {Pos = 6,Id = 2103406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗守护灵の护手
+				[7] = {Pos = 7,Id = 2103407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--60级-史诗守护灵の项链
+				[8] = {Pos = 8,Id = 2103408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--60级-史诗守护灵の戒指
+			}
+		},
+		[5] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2003421,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--60级-防御套寄灵人の灵器
+				[2] = {Pos = 2,Id = 2003422,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--60级-防御套寄灵人の头盔
+				[3] = {Pos = 3,Id = 2003423,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--60级-防御套寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2003424,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--60级-防御套寄灵人の裤子
+				[5] = {Pos = 5,Id = 2003425,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--60级-防御套寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2003426,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--60级-防御套寄灵人の护手
 			},
-			[3] = {
-				[1] = {Pos = 1,Id = 2034031,IsSuit = true,Rare = false},--60级寄灵人橙色套1-武器
-				[2] = {Pos = 2,Id = 2034032,IsSuit = true,Rare = false},--60级寄灵人橙色套1-头盔
-				[3] = {Pos = 3,Id = 2034033,IsSuit = true,Rare = false},--60级寄灵人橙色套1-肩甲
-				[4] = {Pos = 4,Id = 2034034,IsSuit = true,Rare = false},--60级寄灵人橙色套1-衣服
-				[5] = {Pos = 5,Id = 2034035,IsSuit = true,Rare = false},--60级寄灵人橙色套1-鞋子
-				[6] = {Pos = 6,Id = 2034036,IsSuit = true,Rare = false}--60级寄灵人橙色套1-护手
-			},
-			[4] = {
-				[1] = {Pos = 1,Id = 2034041,IsSuit = true,Rare = false},--60级守护灵橙色套1-武器
-				[2] = {Pos = 2,Id = 2034042,IsSuit = true,Rare = false},--60级守护灵橙色套1-头盔
-				[3] = {Pos = 3,Id = 2034043,IsSuit = true,Rare = false},--60级守护灵橙色套1-肩甲
-				[4] = {Pos = 4,Id = 2034044,IsSuit = true,Rare = false},--60级守护灵橙色套1-衣服
-				[5] = {Pos = 5,Id = 2034045,IsSuit = true,Rare = false},--60级守护灵橙色套1-鞋子
-				[6] = {Pos = 6,Id = 2034046,IsSuit = true,Rare = false}--60级守护灵橙色套1-护手
-			},
-			[5] = {
-				[1] = {Pos = 1,Id = 2034051,IsSuit = true,Rare = false},--60级寄灵人橙色套2-武器
-				[2] = {Pos = 4,Id = 2034054,IsSuit = true,Rare = false},--60级寄灵人橙色套2-衣服
-				[3] = {Pos = 5,Id = 2034055,IsSuit = true,Rare = false},--60级寄灵人橙色套2-鞋子
-				[4] = {Pos = 6,Id = 2034056,IsSuit = true,Rare = false},--60级寄灵人橙色套2-护手
-				[5] = {Pos = 7,Id = 2034057,IsSuit = true,Rare = false},--60级寄灵人橙色套2-项链
-				[6] = {Pos = 8,Id = 2034058,IsSuit = true,Rare = false}--60级寄灵人橙色套2-戒指
-			},
-			[6] = {
-				[1] = {Pos = 1,Id = 2034061,IsSuit = true,Rare = false},--60级守护灵橙色套2-武器
-				[2] = {Pos = 4,Id = 2034064,IsSuit = true,Rare = false},--60级守护灵橙色套2-衣服
-				[3] = {Pos = 5,Id = 2034065,IsSuit = true,Rare = false},--60级守护灵橙色套2-鞋子
-				[4] = {Pos = 6,Id = 2034066,IsSuit = true,Rare = false},--60级守护灵橙色套2-护手
-				[5] = {Pos = 7,Id = 2034067,IsSuit = true,Rare = false},--60级守护灵橙色套2-项链
-				[6] = {Pos = 8,Id = 2034068,IsSuit = true,Rare = false}--60级守护灵橙色套2-戒指
+			[2] = {
+				[1] = {Pos = 1,Id = 2103421,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--60级-防御套守护灵の灵器
+				[2] = {Pos = 2,Id = 2103422,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--60级-防御套守护灵の头盔
+				[3] = {Pos = 3,Id = 2103423,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--60级-防御套守护灵の铠甲
+				[4] = {Pos = 4,Id = 2103424,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--60级-防御套守护灵の裤子
+				[5] = {Pos = 5,Id = 2103425,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--60级-防御套守护灵の鞋子
+				[6] = {Pos = 6,Id = 2103426,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--60级-防御套守护灵の护手
 			}
 		}
 	},
 	[4] = {
 		[1] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2041011,IsSuit = false,Rare = false},--80级寄灵人绿色-武器
-				[2] = {Pos = 2,Id = 2041012,IsSuit = false,Rare = false},--80级寄灵人绿色-头盔
-				[3] = {Pos = 3,Id = 2041013,IsSuit = false,Rare = false},--80级寄灵人绿色-肩甲
-				[4] = {Pos = 4,Id = 2041014,IsSuit = false,Rare = false},--80级寄灵人绿色-衣服
-				[5] = {Pos = 5,Id = 2041015,IsSuit = false,Rare = false},--80级寄灵人绿色-鞋子
-				[6] = {Pos = 6,Id = 2041016,IsSuit = false,Rare = false},--80级寄灵人绿色-护手
-				[7] = {Pos = 7,Id = 2041017,IsSuit = false,Rare = false},--80级寄灵人绿色-项链
-				[8] = {Pos = 8,Id = 2041018,IsSuit = false,Rare = false}--80级寄灵人绿色-戒指
+				[1] = {Pos = 1,Id = 2004101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通寄灵人の灵器
+				[2] = {Pos = 2,Id = 2004102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通寄灵人の头盔
+				[3] = {Pos = 3,Id = 2004103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2004104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通寄灵人の裤子
+				[5] = {Pos = 5,Id = 2004105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2004106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通寄灵人の护手
+				[7] = {Pos = 7,Id = 2004107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通寄灵人の项链
+				[8] = {Pos = 8,Id = 2004108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--80级-普通寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2041021,IsSuit = false,Rare = false},--80级守护灵绿色-武器
-				[2] = {Pos = 2,Id = 2041022,IsSuit = false,Rare = false},--80级守护灵绿色-头盔
-				[3] = {Pos = 3,Id = 2041023,IsSuit = false,Rare = false},--80级守护灵绿色-肩甲
-				[4] = {Pos = 4,Id = 2041024,IsSuit = false,Rare = false},--80级守护灵绿色-衣服
-				[5] = {Pos = 5,Id = 2041025,IsSuit = false,Rare = false},--80级守护灵绿色-鞋子
-				[6] = {Pos = 6,Id = 2041026,IsSuit = false,Rare = false},--80级守护灵绿色-护手
-				[7] = {Pos = 7,Id = 2041027,IsSuit = false,Rare = false},--80级守护灵绿色-项链
-				[8] = {Pos = 8,Id = 2041028,IsSuit = false,Rare = false}--80级守护灵绿色-戒指
+				[1] = {Pos = 1,Id = 2104101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通守护灵の灵器
+				[2] = {Pos = 2,Id = 2104102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通守护灵の头盔
+				[3] = {Pos = 3,Id = 2104103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通守护灵の铠甲
+				[4] = {Pos = 4,Id = 2104104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通守护灵の裤子
+				[5] = {Pos = 5,Id = 2104105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通守护灵の鞋子
+				[6] = {Pos = 6,Id = 2104106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通守护灵の护手
+				[7] = {Pos = 7,Id = 2104107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--80级-普通守护灵の项链
+				[8] = {Pos = 8,Id = 2104108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--80级-普通守护灵の戒指
 			}
 		},
 		[2] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2042011,IsSuit = false,Rare = false},--80级寄灵人蓝色-武器
-				[2] = {Pos = 2,Id = 2042012,IsSuit = false,Rare = false},--80级寄灵人蓝色-头盔
-				[3] = {Pos = 3,Id = 2042013,IsSuit = false,Rare = false},--80级寄灵人蓝色-肩甲
-				[4] = {Pos = 4,Id = 2042014,IsSuit = false,Rare = false},--80级寄灵人蓝色-衣服
-				[5] = {Pos = 5,Id = 2042015,IsSuit = false,Rare = false},--80级寄灵人蓝色-鞋子
-				[6] = {Pos = 6,Id = 2042016,IsSuit = false,Rare = false},--80级寄灵人蓝色-护手
-				[7] = {Pos = 7,Id = 2042017,IsSuit = false,Rare = false},--80级寄灵人蓝色-项链
-				[8] = {Pos = 8,Id = 2042018,IsSuit = false,Rare = false}--80级寄灵人蓝色-戒指
+				[1] = {Pos = 1,Id = 2004201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀寄灵人の灵器
+				[2] = {Pos = 2,Id = 2004202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀寄灵人の头盔
+				[3] = {Pos = 3,Id = 2004203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2004204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀寄灵人の裤子
+				[5] = {Pos = 5,Id = 2004205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2004206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀寄灵人の护手
+				[7] = {Pos = 7,Id = 2004207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀寄灵人の项链
+				[8] = {Pos = 8,Id = 2004208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--80级-优秀寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2042021,IsSuit = false,Rare = false},--80级守护灵蓝色-武器
-				[2] = {Pos = 2,Id = 2042022,IsSuit = false,Rare = false},--80级守护灵蓝色-头盔
-				[3] = {Pos = 3,Id = 2042023,IsSuit = false,Rare = false},--80级守护灵蓝色-肩甲
-				[4] = {Pos = 4,Id = 2042024,IsSuit = false,Rare = false},--80级守护灵蓝色-衣服
-				[5] = {Pos = 5,Id = 2042025,IsSuit = false,Rare = false},--80级守护灵蓝色-鞋子
-				[6] = {Pos = 6,Id = 2042026,IsSuit = false,Rare = false},--80级守护灵蓝色-护手
-				[7] = {Pos = 7,Id = 2042027,IsSuit = false,Rare = false},--80级守护灵蓝色-项链
-				[8] = {Pos = 8,Id = 2042028,IsSuit = false,Rare = false}--80级守护灵蓝色-戒指
+				[1] = {Pos = 1,Id = 2104201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀守护灵の灵器
+				[2] = {Pos = 2,Id = 2104202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀守护灵の头盔
+				[3] = {Pos = 3,Id = 2104203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀守护灵の铠甲
+				[4] = {Pos = 4,Id = 2104204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀守护灵の裤子
+				[5] = {Pos = 5,Id = 2104205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀守护灵の鞋子
+				[6] = {Pos = 6,Id = 2104206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀守护灵の护手
+				[7] = {Pos = 7,Id = 2104207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--80级-优秀守护灵の项链
+				[8] = {Pos = 8,Id = 2104208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--80级-优秀守护灵の戒指
 			}
 		},
 		[3] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2043011,IsSuit = false,Rare = false},--80级寄灵人紫色-武器
-				[2] = {Pos = 2,Id = 2043012,IsSuit = false,Rare = false},--80级寄灵人紫色-头盔
-				[3] = {Pos = 3,Id = 2043013,IsSuit = false,Rare = false},--80级寄灵人紫色-肩甲
-				[4] = {Pos = 4,Id = 2043014,IsSuit = false,Rare = false},--80级寄灵人紫色-衣服
-				[5] = {Pos = 5,Id = 2043015,IsSuit = false,Rare = false},--80级寄灵人紫色-鞋子
-				[6] = {Pos = 6,Id = 2043016,IsSuit = false,Rare = false},--80级寄灵人紫色-护手
-				[7] = {Pos = 7,Id = 2043017,IsSuit = false,Rare = false},--80级寄灵人紫色-项链
-				[8] = {Pos = 8,Id = 2043018,IsSuit = false,Rare = false}--80级寄灵人紫色-戒指
+				[1] = {Pos = 1,Id = 2004301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良寄灵人の灵器
+				[2] = {Pos = 2,Id = 2004302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良寄灵人の头盔
+				[3] = {Pos = 3,Id = 2004303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2004304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良寄灵人の裤子
+				[5] = {Pos = 5,Id = 2004305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2004306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良寄灵人の护手
+				[7] = {Pos = 7,Id = 2004307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良寄灵人の项链
+				[8] = {Pos = 8,Id = 2004308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--80级-精良寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2043021,IsSuit = false,Rare = false},--80级守护灵紫色-武器
-				[2] = {Pos = 2,Id = 2043022,IsSuit = false,Rare = false},--80级守护灵紫色-头盔
-				[3] = {Pos = 3,Id = 2043023,IsSuit = false,Rare = false},--80级守护灵紫色-肩甲
-				[4] = {Pos = 4,Id = 2043024,IsSuit = false,Rare = false},--80级守护灵紫色-衣服
-				[5] = {Pos = 5,Id = 2043025,IsSuit = false,Rare = false},--80级守护灵紫色-鞋子
-				[6] = {Pos = 6,Id = 2043026,IsSuit = false,Rare = false},--80级守护灵紫色-护手
-				[7] = {Pos = 7,Id = 2043027,IsSuit = false,Rare = false},--80级守护灵紫色-项链
-				[8] = {Pos = 8,Id = 2043028,IsSuit = false,Rare = false}--80级守护灵紫色-戒指
+				[1] = {Pos = 1,Id = 2104301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良守护灵の灵器
+				[2] = {Pos = 2,Id = 2104302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良守护灵の头盔
+				[3] = {Pos = 3,Id = 2104303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良守护灵の铠甲
+				[4] = {Pos = 4,Id = 2104304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良守护灵の裤子
+				[5] = {Pos = 5,Id = 2104305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良守护灵の鞋子
+				[6] = {Pos = 6,Id = 2104306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良守护灵の护手
+				[7] = {Pos = 7,Id = 2104307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--80级-精良守护灵の项链
+				[8] = {Pos = 8,Id = 2104308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--80级-精良守护灵の戒指
 			}
 		},
 		[4] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2044011,IsSuit = false,Rare = false},--80级寄灵人橙色-武器
-				[2] = {Pos = 2,Id = 2044012,IsSuit = false,Rare = false},--80级寄灵人橙色-头盔
-				[3] = {Pos = 3,Id = 2044013,IsSuit = false,Rare = false},--80级寄灵人橙色-肩甲
-				[4] = {Pos = 4,Id = 2044014,IsSuit = false,Rare = false},--80级寄灵人橙色-衣服
-				[5] = {Pos = 5,Id = 2044015,IsSuit = false,Rare = false},--80级寄灵人橙色-鞋子
-				[6] = {Pos = 6,Id = 2044016,IsSuit = false,Rare = false},--80级寄灵人橙色-护手
-				[7] = {Pos = 7,Id = 2044017,IsSuit = false,Rare = false},--80级寄灵人橙色-项链
-				[8] = {Pos = 8,Id = 2044018,IsSuit = false,Rare = false}--80级寄灵人橙色-戒指
+				[1] = {Pos = 1,Id = 2004401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗寄灵人の灵器
+				[2] = {Pos = 2,Id = 2004402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗寄灵人の头盔
+				[3] = {Pos = 3,Id = 2004403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2004404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗寄灵人の裤子
+				[5] = {Pos = 5,Id = 2004405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2004406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗寄灵人の护手
+				[7] = {Pos = 7,Id = 2004407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗寄灵人の项链
+				[8] = {Pos = 8,Id = 2004408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--80级-史诗寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2044021,IsSuit = false,Rare = false},--80级守护灵橙色-武器
-				[2] = {Pos = 2,Id = 2044022,IsSuit = false,Rare = false},--80级守护灵橙色-头盔
-				[3] = {Pos = 3,Id = 2044023,IsSuit = false,Rare = false},--80级守护灵橙色-肩甲
-				[4] = {Pos = 4,Id = 2044024,IsSuit = false,Rare = false},--80级守护灵橙色-衣服
-				[5] = {Pos = 5,Id = 2044025,IsSuit = false,Rare = false},--80级守护灵橙色-鞋子
-				[6] = {Pos = 6,Id = 2044026,IsSuit = false,Rare = false},--80级守护灵橙色-护手
-				[7] = {Pos = 7,Id = 2044027,IsSuit = false,Rare = false},--80级守护灵橙色-项链
-				[8] = {Pos = 8,Id = 2044028,IsSuit = false,Rare = false}--80级守护灵橙色-戒指
+				[1] = {Pos = 1,Id = 2104401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗守护灵の灵器
+				[2] = {Pos = 2,Id = 2104402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗守护灵の头盔
+				[3] = {Pos = 3,Id = 2104403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗守护灵の铠甲
+				[4] = {Pos = 4,Id = 2104404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗守护灵の裤子
+				[5] = {Pos = 5,Id = 2104405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗守护灵の鞋子
+				[6] = {Pos = 6,Id = 2104406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗守护灵の护手
+				[7] = {Pos = 7,Id = 2104407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--80级-史诗守护灵の项链
+				[8] = {Pos = 8,Id = 2104408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--80级-史诗守护灵の戒指
+			}
+		},
+		[5] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2004421,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--80级-攻击套寄灵人の灵器
+				[2] = {Pos = 2,Id = 2004422,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--80级-攻击套寄灵人の头盔
+				[3] = {Pos = 3,Id = 2004423,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--80级-攻击套寄灵人の铠甲
+				[4] = {Pos = 5,Id = 2004425,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--80级-攻击套寄灵人の鞋子
+				[5] = {Pos = 7,Id = 2004427,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--80级-攻击套寄灵人の项链
+				[6] = {Pos = 8,Id = 2004428,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--80级-攻击套寄灵人の戒指
 			},
-			[3] = {
-				[1] = {Pos = 1,Id = 2044031,IsSuit = true,Rare = true},--80级寄灵人橙色套1-武器
-				[2] = {Pos = 2,Id = 2044032,IsSuit = true,Rare = true},--80级寄灵人橙色套1-头盔
-				[3] = {Pos = 3,Id = 2044033,IsSuit = true,Rare = true},--80级寄灵人橙色套1-肩甲
-				[4] = {Pos = 7,Id = 2044037,IsSuit = true,Rare = true},--80级寄灵人橙色套1-项链
-				[5] = {Pos = 8,Id = 2044038,IsSuit = true,Rare = true}--80级寄灵人橙色套1-戒指
-			},
-			[4] = {
-				[1] = {Pos = 1,Id = 2044041,IsSuit = true,Rare = true},--80级守护灵橙色套1-武器
-				[2] = {Pos = 2,Id = 2044042,IsSuit = true,Rare = true},--80级守护灵橙色套1-头盔
-				[3] = {Pos = 3,Id = 2044043,IsSuit = true,Rare = true},--80级守护灵橙色套1-肩甲
-				[4] = {Pos = 7,Id = 2044047,IsSuit = true,Rare = true},--80级守护灵橙色套1-项链
-				[5] = {Pos = 8,Id = 2044048,IsSuit = true,Rare = true}--80级守护灵橙色套1-戒指
-			},
-			[5] = {
-				[1] = {Pos = 1,Id = 2044051,IsSuit = true,Rare = false},--80级寄灵人橙色套2-武器
-				[2] = {Pos = 2,Id = 2044052,IsSuit = true,Rare = false},--80级寄灵人橙色套2-头盔
-				[3] = {Pos = 3,Id = 2044053,IsSuit = true,Rare = false},--80级寄灵人橙色套2-肩甲
-				[4] = {Pos = 4,Id = 2044054,IsSuit = true,Rare = false},--80级寄灵人橙色套2-衣服
-				[5] = {Pos = 5,Id = 2044055,IsSuit = true,Rare = false},--80级寄灵人橙色套2-鞋子
-				[6] = {Pos = 6,Id = 2044056,IsSuit = true,Rare = false}--80级寄灵人橙色套2-护手
-			},
-			[6] = {
-				[1] = {Pos = 1,Id = 2044061,IsSuit = true,Rare = false},--80级守护灵橙色套2-武器
-				[2] = {Pos = 2,Id = 2044062,IsSuit = true,Rare = false},--80级守护灵橙色套2-头盔
-				[3] = {Pos = 3,Id = 2044063,IsSuit = true,Rare = false},--80级守护灵橙色套2-肩甲
-				[4] = {Pos = 4,Id = 2044064,IsSuit = true,Rare = false},--80级守护灵橙色套2-衣服
-				[5] = {Pos = 5,Id = 2044065,IsSuit = true,Rare = false},--80级守护灵橙色套2-鞋子
-				[6] = {Pos = 6,Id = 2044066,IsSuit = true,Rare = false}--80级守护灵橙色套2-护手
-			},
-			[7] = {
-				[1] = {Pos = 1,Id = 2044071,IsSuit = true,Rare = false},--80级寄灵人橙色套3-武器
-				[2] = {Pos = 4,Id = 2044074,IsSuit = true,Rare = false},--80级寄灵人橙色套3-衣服
-				[3] = {Pos = 5,Id = 2044075,IsSuit = true,Rare = false},--80级寄灵人橙色套3-鞋子
-				[4] = {Pos = 6,Id = 2044076,IsSuit = true,Rare = false},--80级寄灵人橙色套3-护手
-				[5] = {Pos = 7,Id = 2044077,IsSuit = true,Rare = false},--80级寄灵人橙色套3-项链
-				[6] = {Pos = 8,Id = 2044078,IsSuit = true,Rare = false}--80级寄灵人橙色套3-戒指
-			},
-			[8] = {
-				[1] = {Pos = 1,Id = 2044081,IsSuit = true,Rare = false},--80级守护灵橙色套3-武器
-				[2] = {Pos = 4,Id = 2044084,IsSuit = true,Rare = false},--80级守护灵橙色套3-衣服
-				[3] = {Pos = 5,Id = 2044085,IsSuit = true,Rare = false},--80级守护灵橙色套3-鞋子
-				[4] = {Pos = 6,Id = 2044086,IsSuit = true,Rare = false},--80级守护灵橙色套3-护手
-				[5] = {Pos = 7,Id = 2044087,IsSuit = true,Rare = false},--80级守护灵橙色套3-项链
-				[6] = {Pos = 8,Id = 2044088,IsSuit = true,Rare = false}--80级守护灵橙色套3-戒指
+			[2] = {
+				[1] = {Pos = 1,Id = 2104421,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--80级-攻击套守护灵の灵器
+				[2] = {Pos = 2,Id = 2104422,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--80级-攻击套守护灵の头盔
+				[3] = {Pos = 3,Id = 2104423,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--80级-攻击套守护灵の铠甲
+				[4] = {Pos = 5,Id = 2104425,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--80级-攻击套守护灵の鞋子
+				[5] = {Pos = 7,Id = 2104427,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--80级-攻击套守护灵の项链
+				[6] = {Pos = 8,Id = 2104428,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--80级-攻击套守护灵の戒指
 			}
 		}
 	},
 	[5] = {
 		[1] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2051011,IsSuit = false,Rare = false},--100级寄灵人绿色-武器
-				[2] = {Pos = 2,Id = 2051012,IsSuit = false,Rare = false},--100级寄灵人绿色-头盔
-				[3] = {Pos = 3,Id = 2051013,IsSuit = false,Rare = false},--100级寄灵人绿色-肩甲
-				[4] = {Pos = 4,Id = 2051014,IsSuit = false,Rare = false},--100级寄灵人绿色-衣服
-				[5] = {Pos = 5,Id = 2051015,IsSuit = false,Rare = false},--100级寄灵人绿色-鞋子
-				[6] = {Pos = 6,Id = 2051016,IsSuit = false,Rare = false},--100级寄灵人绿色-护手
-				[7] = {Pos = 7,Id = 2051017,IsSuit = false,Rare = false},--100级寄灵人绿色-项链
-				[8] = {Pos = 8,Id = 2051018,IsSuit = false,Rare = false}--100级寄灵人绿色-戒指
+				[1] = {Pos = 1,Id = 2005101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通寄灵人の灵器
+				[2] = {Pos = 2,Id = 2005102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通寄灵人の头盔
+				[3] = {Pos = 3,Id = 2005103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2005104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通寄灵人の裤子
+				[5] = {Pos = 5,Id = 2005105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2005106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通寄灵人の护手
+				[7] = {Pos = 7,Id = 2005107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通寄灵人の项链
+				[8] = {Pos = 8,Id = 2005108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--90级-普通寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2051021,IsSuit = false,Rare = false},--100级守护灵绿色-武器
-				[2] = {Pos = 2,Id = 2051022,IsSuit = false,Rare = false},--100级守护灵绿色-头盔
-				[3] = {Pos = 3,Id = 2051023,IsSuit = false,Rare = false},--100级守护灵绿色-肩甲
-				[4] = {Pos = 4,Id = 2051024,IsSuit = false,Rare = false},--100级守护灵绿色-衣服
-				[5] = {Pos = 5,Id = 2051025,IsSuit = false,Rare = false},--100级守护灵绿色-鞋子
-				[6] = {Pos = 6,Id = 2051026,IsSuit = false,Rare = false},--100级守护灵绿色-护手
-				[7] = {Pos = 7,Id = 2051027,IsSuit = false,Rare = false},--100级守护灵绿色-项链
-				[8] = {Pos = 8,Id = 2051028,IsSuit = false,Rare = false}--100级守护灵绿色-戒指
+				[1] = {Pos = 1,Id = 2105101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通守护灵の灵器
+				[2] = {Pos = 2,Id = 2105102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通守护灵の头盔
+				[3] = {Pos = 3,Id = 2105103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通守护灵の铠甲
+				[4] = {Pos = 4,Id = 2105104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通守护灵の裤子
+				[5] = {Pos = 5,Id = 2105105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通守护灵の鞋子
+				[6] = {Pos = 6,Id = 2105106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通守护灵の护手
+				[7] = {Pos = 7,Id = 2105107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--90级-普通守护灵の项链
+				[8] = {Pos = 8,Id = 2105108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--90级-普通守护灵の戒指
 			}
 		},
 		[2] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2052011,IsSuit = false,Rare = false},--100级寄灵人蓝色-武器
-				[2] = {Pos = 2,Id = 2052012,IsSuit = false,Rare = false},--100级寄灵人蓝色-头盔
-				[3] = {Pos = 3,Id = 2052013,IsSuit = false,Rare = false},--100级寄灵人蓝色-肩甲
-				[4] = {Pos = 4,Id = 2052014,IsSuit = false,Rare = false},--100级寄灵人蓝色-衣服
-				[5] = {Pos = 5,Id = 2052015,IsSuit = false,Rare = false},--100级寄灵人蓝色-鞋子
-				[6] = {Pos = 6,Id = 2052016,IsSuit = false,Rare = false},--100级寄灵人蓝色-护手
-				[7] = {Pos = 7,Id = 2052017,IsSuit = false,Rare = false},--100级寄灵人蓝色-项链
-				[8] = {Pos = 8,Id = 2052018,IsSuit = false,Rare = false}--100级寄灵人蓝色-戒指
+				[1] = {Pos = 1,Id = 2005201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀寄灵人の灵器
+				[2] = {Pos = 2,Id = 2005202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀寄灵人の头盔
+				[3] = {Pos = 3,Id = 2005203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2005204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀寄灵人の裤子
+				[5] = {Pos = 5,Id = 2005205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2005206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀寄灵人の护手
+				[7] = {Pos = 7,Id = 2005207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀寄灵人の项链
+				[8] = {Pos = 8,Id = 2005208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--90级-优秀寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2052021,IsSuit = false,Rare = false},--100级守护灵蓝色-武器
-				[2] = {Pos = 2,Id = 2052022,IsSuit = false,Rare = false},--100级守护灵蓝色-头盔
-				[3] = {Pos = 3,Id = 2052023,IsSuit = false,Rare = false},--100级守护灵蓝色-肩甲
-				[4] = {Pos = 4,Id = 2052024,IsSuit = false,Rare = false},--100级守护灵蓝色-衣服
-				[5] = {Pos = 5,Id = 2052025,IsSuit = false,Rare = false},--100级守护灵蓝色-鞋子
-				[6] = {Pos = 6,Id = 2052026,IsSuit = false,Rare = false},--100级守护灵蓝色-护手
-				[7] = {Pos = 7,Id = 2052027,IsSuit = false,Rare = false},--100级守护灵蓝色-项链
-				[8] = {Pos = 8,Id = 2052028,IsSuit = false,Rare = false}--100级守护灵蓝色-戒指
+				[1] = {Pos = 1,Id = 2105201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀守护灵の灵器
+				[2] = {Pos = 2,Id = 2105202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀守护灵の头盔
+				[3] = {Pos = 3,Id = 2105203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀守护灵の铠甲
+				[4] = {Pos = 4,Id = 2105204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀守护灵の裤子
+				[5] = {Pos = 5,Id = 2105205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀守护灵の鞋子
+				[6] = {Pos = 6,Id = 2105206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀守护灵の护手
+				[7] = {Pos = 7,Id = 2105207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--90级-优秀守护灵の项链
+				[8] = {Pos = 8,Id = 2105208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--90级-优秀守护灵の戒指
 			}
 		},
 		[3] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2053011,IsSuit = false,Rare = false},--100级寄灵人紫色-武器
-				[2] = {Pos = 2,Id = 2053012,IsSuit = false,Rare = false},--100级寄灵人紫色-头盔
-				[3] = {Pos = 3,Id = 2053013,IsSuit = false,Rare = false},--100级寄灵人紫色-肩甲
-				[4] = {Pos = 4,Id = 2053014,IsSuit = false,Rare = false},--100级寄灵人紫色-衣服
-				[5] = {Pos = 5,Id = 2053015,IsSuit = false,Rare = false},--100级寄灵人紫色-鞋子
-				[6] = {Pos = 6,Id = 2053016,IsSuit = false,Rare = false},--100级寄灵人紫色-护手
-				[7] = {Pos = 7,Id = 2053017,IsSuit = false,Rare = false},--100级寄灵人紫色-项链
-				[8] = {Pos = 8,Id = 2053018,IsSuit = false,Rare = false}--100级寄灵人紫色-戒指
+				[1] = {Pos = 1,Id = 2005301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良寄灵人の灵器
+				[2] = {Pos = 2,Id = 2005302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良寄灵人の头盔
+				[3] = {Pos = 3,Id = 2005303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2005304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良寄灵人の裤子
+				[5] = {Pos = 5,Id = 2005305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2005306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良寄灵人の护手
+				[7] = {Pos = 7,Id = 2005307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良寄灵人の项链
+				[8] = {Pos = 8,Id = 2005308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--90级-精良寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2053021,IsSuit = false,Rare = false},--100级守护灵紫色-武器
-				[2] = {Pos = 2,Id = 2053022,IsSuit = false,Rare = false},--100级守护灵紫色-头盔
-				[3] = {Pos = 3,Id = 2053023,IsSuit = false,Rare = false},--100级守护灵紫色-肩甲
-				[4] = {Pos = 4,Id = 2053024,IsSuit = false,Rare = false},--100级守护灵紫色-衣服
-				[5] = {Pos = 5,Id = 2053025,IsSuit = false,Rare = false},--100级守护灵紫色-鞋子
-				[6] = {Pos = 6,Id = 2053026,IsSuit = false,Rare = false},--100级守护灵紫色-护手
-				[7] = {Pos = 7,Id = 2053027,IsSuit = false,Rare = false},--100级守护灵紫色-项链
-				[8] = {Pos = 8,Id = 2053028,IsSuit = false,Rare = false}--100级守护灵紫色-戒指
+				[1] = {Pos = 1,Id = 2105301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良守护灵の灵器
+				[2] = {Pos = 2,Id = 2105302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良守护灵の头盔
+				[3] = {Pos = 3,Id = 2105303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良守护灵の铠甲
+				[4] = {Pos = 4,Id = 2105304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良守护灵の裤子
+				[5] = {Pos = 5,Id = 2105305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良守护灵の鞋子
+				[6] = {Pos = 6,Id = 2105306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良守护灵の护手
+				[7] = {Pos = 7,Id = 2105307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--90级-精良守护灵の项链
+				[8] = {Pos = 8,Id = 2105308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--90级-精良守护灵の戒指
 			}
 		},
 		[4] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2054011,IsSuit = false,Rare = false},--100级寄灵人橙色-武器
-				[2] = {Pos = 2,Id = 2054012,IsSuit = false,Rare = false},--100级寄灵人橙色-头盔
-				[3] = {Pos = 3,Id = 2054013,IsSuit = false,Rare = false},--100级寄灵人橙色-肩甲
-				[4] = {Pos = 4,Id = 2054014,IsSuit = false,Rare = false},--100级寄灵人橙色-衣服
-				[5] = {Pos = 5,Id = 2054015,IsSuit = false,Rare = false},--100级寄灵人橙色-鞋子
-				[6] = {Pos = 6,Id = 2054016,IsSuit = false,Rare = false},--100级寄灵人橙色-护手
-				[7] = {Pos = 7,Id = 2054017,IsSuit = false,Rare = false},--100级寄灵人橙色-项链
-				[8] = {Pos = 8,Id = 2054018,IsSuit = false,Rare = false}--100级寄灵人橙色-戒指
+				[1] = {Pos = 1,Id = 2005401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗寄灵人の灵器
+				[2] = {Pos = 2,Id = 2005402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗寄灵人の头盔
+				[3] = {Pos = 3,Id = 2005403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2005404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗寄灵人の裤子
+				[5] = {Pos = 5,Id = 2005405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2005406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗寄灵人の护手
+				[7] = {Pos = 7,Id = 2005407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗寄灵人の项链
+				[8] = {Pos = 8,Id = 2005408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--90级-史诗寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2054021,IsSuit = false,Rare = false},--100级守护灵橙色-武器
-				[2] = {Pos = 2,Id = 2054022,IsSuit = false,Rare = false},--100级守护灵橙色-头盔
-				[3] = {Pos = 3,Id = 2054023,IsSuit = false,Rare = false},--100级守护灵橙色-肩甲
-				[4] = {Pos = 4,Id = 2054024,IsSuit = false,Rare = false},--100级守护灵橙色-衣服
-				[5] = {Pos = 5,Id = 2054025,IsSuit = false,Rare = false},--100级守护灵橙色-鞋子
-				[6] = {Pos = 6,Id = 2054026,IsSuit = false,Rare = false},--100级守护灵橙色-护手
-				[7] = {Pos = 7,Id = 2054027,IsSuit = false,Rare = false},--100级守护灵橙色-项链
-				[8] = {Pos = 8,Id = 2054028,IsSuit = false,Rare = false}--100级守护灵橙色-戒指
+				[1] = {Pos = 1,Id = 2105401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗守护灵の灵器
+				[2] = {Pos = 2,Id = 2105402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗守护灵の头盔
+				[3] = {Pos = 3,Id = 2105403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗守护灵の铠甲
+				[4] = {Pos = 4,Id = 2105404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗守护灵の裤子
+				[5] = {Pos = 5,Id = 2105405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗守护灵の鞋子
+				[6] = {Pos = 6,Id = 2105406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗守护灵の护手
+				[7] = {Pos = 7,Id = 2105407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--90级-史诗守护灵の项链
+				[8] = {Pos = 8,Id = 2105408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--90级-史诗守护灵の戒指
+			}
+		},
+		[5] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2005421,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--90级-防御套寄灵人の灵器
+				[2] = {Pos = 2,Id = 2005422,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--90级-防御套寄灵人の头盔
+				[3] = {Pos = 3,Id = 2005423,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--90级-防御套寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2005424,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--90级-防御套寄灵人の裤子
+				[5] = {Pos = 5,Id = 2005425,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--90级-防御套寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2005426,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--90级-防御套寄灵人の护手
+				[7] = {Pos = 1,Id = 2005431,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--90级-绝世套寄灵人の灵器
+				[8] = {Pos = 2,Id = 2005432,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--90级-绝世套寄灵人の头盔
+				[9] = {Pos = 3,Id = 2005433,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--90级-绝世套寄灵人の铠甲
+				[10] = {Pos = 4,Id = 2005434,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--90级-绝世套寄灵人の裤子
+				[11] = {Pos = 6,Id = 2005436,IsSuit = true,Rare = true,Qua = 4,SQua = 5}--90级-绝世套寄灵人の护手
 			},
-			[3] = {
-				[1] = {Pos = 1,Id = 2054031,IsSuit = true,Rare = true},--100级寄灵人橙色套1-武器
-				[2] = {Pos = 2,Id = 2054032,IsSuit = true,Rare = true},--100级寄灵人橙色套1-头盔
-				[3] = {Pos = 3,Id = 2054033,IsSuit = true,Rare = true},--100级寄灵人橙色套1-肩甲
-				[4] = {Pos = 7,Id = 2054037,IsSuit = true,Rare = true},--100级寄灵人橙色套1-项链
-				[5] = {Pos = 8,Id = 2054038,IsSuit = true,Rare = true}--100级寄灵人橙色套1-戒指
-			},
-			[4] = {
-				[1] = {Pos = 1,Id = 2054041,IsSuit = true,Rare = true},--100级守护灵橙色套1-武器
-				[2] = {Pos = 2,Id = 2054042,IsSuit = true,Rare = true},--100级守护灵橙色套1-头盔
-				[3] = {Pos = 3,Id = 2054043,IsSuit = true,Rare = true},--100级守护灵橙色套1-肩甲
-				[4] = {Pos = 7,Id = 2054047,IsSuit = true,Rare = true},--100级守护灵橙色套1-项链
-				[5] = {Pos = 8,Id = 2054048,IsSuit = true,Rare = true}--100级守护灵橙色套1-戒指
-			},
-			[5] = {
-				[1] = {Pos = 1,Id = 2054051,IsSuit = true,Rare = false},--100级寄灵人橙色套2-武器
-				[2] = {Pos = 2,Id = 2054052,IsSuit = true,Rare = false},--100级寄灵人橙色套2-头盔
-				[3] = {Pos = 3,Id = 2054053,IsSuit = true,Rare = false},--100级寄灵人橙色套2-肩甲
-				[4] = {Pos = 4,Id = 2054054,IsSuit = true,Rare = false},--100级寄灵人橙色套2-衣服
-				[5] = {Pos = 5,Id = 2054055,IsSuit = true,Rare = false},--100级寄灵人橙色套2-鞋子
-				[6] = {Pos = 6,Id = 2054056,IsSuit = true,Rare = false}--100级寄灵人橙色套2-护手
-			},
-			[6] = {
-				[1] = {Pos = 1,Id = 2054061,IsSuit = true,Rare = false},--100级守护灵橙色套2-武器
-				[2] = {Pos = 2,Id = 2054062,IsSuit = true,Rare = false},--100级守护灵橙色套2-头盔
-				[3] = {Pos = 3,Id = 2054063,IsSuit = true,Rare = false},--100级守护灵橙色套2-肩甲
-				[4] = {Pos = 4,Id = 2054064,IsSuit = true,Rare = false},--100级守护灵橙色套2-衣服
-				[5] = {Pos = 5,Id = 2054065,IsSuit = true,Rare = false},--100级守护灵橙色套2-鞋子
-				[6] = {Pos = 6,Id = 2054066,IsSuit = true,Rare = false}--100级守护灵橙色套2-护手
-			},
-			[7] = {
-				[1] = {Pos = 1,Id = 2054071,IsSuit = true,Rare = false},--100级寄灵人橙色套3-武器
-				[2] = {Pos = 4,Id = 2054074,IsSuit = true,Rare = false},--100级寄灵人橙色套3-衣服
-				[3] = {Pos = 5,Id = 2054075,IsSuit = true,Rare = false},--100级寄灵人橙色套3-鞋子
-				[4] = {Pos = 6,Id = 2054076,IsSuit = true,Rare = false},--100级寄灵人橙色套3-护手
-				[5] = {Pos = 7,Id = 2054077,IsSuit = true,Rare = false},--100级寄灵人橙色套3-项链
-				[6] = {Pos = 8,Id = 2054078,IsSuit = true,Rare = false}--100级寄灵人橙色套3-戒指
-			},
-			[8] = {
-				[1] = {Pos = 1,Id = 2054081,IsSuit = true,Rare = false},--100级守护灵橙色套3-武器
-				[2] = {Pos = 4,Id = 2054084,IsSuit = true,Rare = false},--100级守护灵橙色套3-衣服
-				[3] = {Pos = 5,Id = 2054085,IsSuit = true,Rare = false},--100级守护灵橙色套3-鞋子
-				[4] = {Pos = 6,Id = 2054086,IsSuit = true,Rare = false},--100级守护灵橙色套3-护手
-				[5] = {Pos = 7,Id = 2054087,IsSuit = true,Rare = false},--100级守护灵橙色套3-项链
-				[6] = {Pos = 8,Id = 2054088,IsSuit = true,Rare = false}--100级守护灵橙色套3-戒指
+			[2] = {
+				[1] = {Pos = 1,Id = 2105421,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--90级-防御套守护灵の灵器
+				[2] = {Pos = 2,Id = 2105422,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--90级-防御套守护灵の头盔
+				[3] = {Pos = 3,Id = 2105423,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--90级-防御套守护灵の铠甲
+				[4] = {Pos = 4,Id = 2105424,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--90级-防御套守护灵の裤子
+				[5] = {Pos = 5,Id = 2105425,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--90级-防御套守护灵の鞋子
+				[6] = {Pos = 6,Id = 2105426,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--90级-防御套守护灵の护手
+				[7] = {Pos = 1,Id = 2105431,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--90级-绝世套守护灵の灵器
+				[8] = {Pos = 2,Id = 2105432,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--90级-绝世套守护灵の头盔
+				[9] = {Pos = 3,Id = 2105433,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--90级-绝世套守护灵の铠甲
+				[10] = {Pos = 4,Id = 2105434,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--90级-绝世套守护灵の裤子
+				[11] = {Pos = 6,Id = 2105436,IsSuit = true,Rare = true,Qua = 4,SQua = 5}--90级-绝世套守护灵の护手
 			}
 		}
 	},
 	[6] = {
 		[1] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2061011,IsSuit = false,Rare = false},--120级寄灵人绿色-武器
-				[2] = {Pos = 2,Id = 2061012,IsSuit = false,Rare = false},--120级寄灵人绿色-头盔
-				[3] = {Pos = 3,Id = 2061013,IsSuit = false,Rare = false},--120级寄灵人绿色-肩甲
-				[4] = {Pos = 4,Id = 2061014,IsSuit = false,Rare = false},--120级寄灵人绿色-衣服
-				[5] = {Pos = 5,Id = 2061015,IsSuit = false,Rare = false},--120级寄灵人绿色-鞋子
-				[6] = {Pos = 6,Id = 2061016,IsSuit = false,Rare = false},--120级寄灵人绿色-护手
-				[7] = {Pos = 7,Id = 2061017,IsSuit = false,Rare = false},--120级寄灵人绿色-项链
-				[8] = {Pos = 8,Id = 2061018,IsSuit = false,Rare = false}--120级寄灵人绿色-戒指
+				[1] = {Pos = 1,Id = 2006101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通寄灵人の灵器
+				[2] = {Pos = 2,Id = 2006102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通寄灵人の头盔
+				[3] = {Pos = 3,Id = 2006103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2006104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通寄灵人の裤子
+				[5] = {Pos = 5,Id = 2006105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2006106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通寄灵人の护手
+				[7] = {Pos = 7,Id = 2006107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通寄灵人の项链
+				[8] = {Pos = 8,Id = 2006108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--100级-普通寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2061021,IsSuit = false,Rare = false},--120级守护灵绿色-武器
-				[2] = {Pos = 2,Id = 2061022,IsSuit = false,Rare = false},--120级守护灵绿色-头盔
-				[3] = {Pos = 3,Id = 2061023,IsSuit = false,Rare = false},--120级守护灵绿色-肩甲
-				[4] = {Pos = 4,Id = 2061024,IsSuit = false,Rare = false},--120级守护灵绿色-衣服
-				[5] = {Pos = 5,Id = 2061025,IsSuit = false,Rare = false},--120级守护灵绿色-鞋子
-				[6] = {Pos = 6,Id = 2061026,IsSuit = false,Rare = false},--120级守护灵绿色-护手
-				[7] = {Pos = 7,Id = 2061027,IsSuit = false,Rare = false},--120级守护灵绿色-项链
-				[8] = {Pos = 8,Id = 2061028,IsSuit = false,Rare = false}--120级守护灵绿色-戒指
+				[1] = {Pos = 1,Id = 2106101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通守护灵の灵器
+				[2] = {Pos = 2,Id = 2106102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通守护灵の头盔
+				[3] = {Pos = 3,Id = 2106103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通守护灵の铠甲
+				[4] = {Pos = 4,Id = 2106104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通守护灵の裤子
+				[5] = {Pos = 5,Id = 2106105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通守护灵の鞋子
+				[6] = {Pos = 6,Id = 2106106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通守护灵の护手
+				[7] = {Pos = 7,Id = 2106107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--100级-普通守护灵の项链
+				[8] = {Pos = 8,Id = 2106108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--100级-普通守护灵の戒指
 			}
 		},
 		[2] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2062011,IsSuit = false,Rare = false},--120级寄灵人蓝色-武器
-				[2] = {Pos = 2,Id = 2062012,IsSuit = false,Rare = false},--120级寄灵人蓝色-头盔
-				[3] = {Pos = 3,Id = 2062013,IsSuit = false,Rare = false},--120级寄灵人蓝色-肩甲
-				[4] = {Pos = 4,Id = 2062014,IsSuit = false,Rare = false},--120级寄灵人蓝色-衣服
-				[5] = {Pos = 5,Id = 2062015,IsSuit = false,Rare = false},--120级寄灵人蓝色-鞋子
-				[6] = {Pos = 6,Id = 2062016,IsSuit = false,Rare = false},--120级寄灵人蓝色-护手
-				[7] = {Pos = 7,Id = 2062017,IsSuit = false,Rare = false},--120级寄灵人蓝色-项链
-				[8] = {Pos = 8,Id = 2062018,IsSuit = false,Rare = false}--120级寄灵人蓝色-戒指
+				[1] = {Pos = 1,Id = 2006201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀寄灵人の灵器
+				[2] = {Pos = 2,Id = 2006202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀寄灵人の头盔
+				[3] = {Pos = 3,Id = 2006203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2006204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀寄灵人の裤子
+				[5] = {Pos = 5,Id = 2006205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2006206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀寄灵人の护手
+				[7] = {Pos = 7,Id = 2006207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀寄灵人の项链
+				[8] = {Pos = 8,Id = 2006208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--100级-优秀寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2062021,IsSuit = false,Rare = false},--120级守护灵蓝色-武器
-				[2] = {Pos = 2,Id = 2062022,IsSuit = false,Rare = false},--120级守护灵蓝色-头盔
-				[3] = {Pos = 3,Id = 2062023,IsSuit = false,Rare = false},--120级守护灵蓝色-肩甲
-				[4] = {Pos = 4,Id = 2062024,IsSuit = false,Rare = false},--120级守护灵蓝色-衣服
-				[5] = {Pos = 5,Id = 2062025,IsSuit = false,Rare = false},--120级守护灵蓝色-鞋子
-				[6] = {Pos = 6,Id = 2062026,IsSuit = false,Rare = false},--120级守护灵蓝色-护手
-				[7] = {Pos = 7,Id = 2062027,IsSuit = false,Rare = false},--120级守护灵蓝色-项链
-				[8] = {Pos = 8,Id = 2062028,IsSuit = false,Rare = false}--120级守护灵蓝色-戒指
+				[1] = {Pos = 1,Id = 2106201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀守护灵の灵器
+				[2] = {Pos = 2,Id = 2106202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀守护灵の头盔
+				[3] = {Pos = 3,Id = 2106203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀守护灵の铠甲
+				[4] = {Pos = 4,Id = 2106204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀守护灵の裤子
+				[5] = {Pos = 5,Id = 2106205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀守护灵の鞋子
+				[6] = {Pos = 6,Id = 2106206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀守护灵の护手
+				[7] = {Pos = 7,Id = 2106207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--100级-优秀守护灵の项链
+				[8] = {Pos = 8,Id = 2106208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--100级-优秀守护灵の戒指
 			}
 		},
 		[3] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2063011,IsSuit = false,Rare = false},--120级寄灵人紫色-武器
-				[2] = {Pos = 2,Id = 2063012,IsSuit = false,Rare = false},--120级寄灵人紫色-头盔
-				[3] = {Pos = 3,Id = 2063013,IsSuit = false,Rare = false},--120级寄灵人紫色-肩甲
-				[4] = {Pos = 4,Id = 2063014,IsSuit = false,Rare = false},--120级寄灵人紫色-衣服
-				[5] = {Pos = 5,Id = 2063015,IsSuit = false,Rare = false},--120级寄灵人紫色-鞋子
-				[6] = {Pos = 6,Id = 2063016,IsSuit = false,Rare = false},--120级寄灵人紫色-护手
-				[7] = {Pos = 7,Id = 2063017,IsSuit = false,Rare = false},--120级寄灵人紫色-项链
-				[8] = {Pos = 8,Id = 2063018,IsSuit = false,Rare = false}--120级寄灵人紫色-戒指
+				[1] = {Pos = 1,Id = 2006301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良寄灵人の灵器
+				[2] = {Pos = 2,Id = 2006302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良寄灵人の头盔
+				[3] = {Pos = 3,Id = 2006303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2006304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良寄灵人の裤子
+				[5] = {Pos = 5,Id = 2006305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2006306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良寄灵人の护手
+				[7] = {Pos = 7,Id = 2006307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良寄灵人の项链
+				[8] = {Pos = 8,Id = 2006308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--100级-精良寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2063021,IsSuit = false,Rare = false},--120级守护灵紫色-武器
-				[2] = {Pos = 2,Id = 2063022,IsSuit = false,Rare = false},--120级守护灵紫色-头盔
-				[3] = {Pos = 3,Id = 2063023,IsSuit = false,Rare = false},--120级守护灵紫色-肩甲
-				[4] = {Pos = 4,Id = 2063024,IsSuit = false,Rare = false},--120级守护灵紫色-衣服
-				[5] = {Pos = 5,Id = 2063025,IsSuit = false,Rare = false},--120级守护灵紫色-鞋子
-				[6] = {Pos = 6,Id = 2063026,IsSuit = false,Rare = false},--120级守护灵紫色-护手
-				[7] = {Pos = 7,Id = 2063027,IsSuit = false,Rare = false},--120级守护灵紫色-项链
-				[8] = {Pos = 8,Id = 2063028,IsSuit = false,Rare = false}--120级守护灵紫色-戒指
+				[1] = {Pos = 1,Id = 2106301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良守护灵の灵器
+				[2] = {Pos = 2,Id = 2106302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良守护灵の头盔
+				[3] = {Pos = 3,Id = 2106303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良守护灵の铠甲
+				[4] = {Pos = 4,Id = 2106304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良守护灵の裤子
+				[5] = {Pos = 5,Id = 2106305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良守护灵の鞋子
+				[6] = {Pos = 6,Id = 2106306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良守护灵の护手
+				[7] = {Pos = 7,Id = 2106307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--100级-精良守护灵の项链
+				[8] = {Pos = 8,Id = 2106308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--100级-精良守护灵の戒指
 			}
 		},
 		[4] = {
 			[1] = {
-				[1] = {Pos = 1,Id = 2064011,IsSuit = false,Rare = false},--120级寄灵人橙色-武器
-				[2] = {Pos = 2,Id = 2064012,IsSuit = false,Rare = false},--120级寄灵人橙色-头盔
-				[3] = {Pos = 3,Id = 2064013,IsSuit = false,Rare = false},--120级寄灵人橙色-肩甲
-				[4] = {Pos = 4,Id = 2064014,IsSuit = false,Rare = false},--120级寄灵人橙色-衣服
-				[5] = {Pos = 5,Id = 2064015,IsSuit = false,Rare = false},--120级寄灵人橙色-鞋子
-				[6] = {Pos = 6,Id = 2064016,IsSuit = false,Rare = false},--120级寄灵人橙色-护手
-				[7] = {Pos = 7,Id = 2064017,IsSuit = false,Rare = false},--120级寄灵人橙色-项链
-				[8] = {Pos = 8,Id = 2064018,IsSuit = false,Rare = false}--120级寄灵人橙色-戒指
+				[1] = {Pos = 1,Id = 2006401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗寄灵人の灵器
+				[2] = {Pos = 2,Id = 2006402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗寄灵人の头盔
+				[3] = {Pos = 3,Id = 2006403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2006404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗寄灵人の裤子
+				[5] = {Pos = 5,Id = 2006405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2006406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗寄灵人の护手
+				[7] = {Pos = 7,Id = 2006407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗寄灵人の项链
+				[8] = {Pos = 8,Id = 2006408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--100级-史诗寄灵人の戒指
 			},
 			[2] = {
-				[1] = {Pos = 1,Id = 2064021,IsSuit = false,Rare = false},--120级守护灵橙色-武器
-				[2] = {Pos = 2,Id = 2064022,IsSuit = false,Rare = false},--120级守护灵橙色-头盔
-				[3] = {Pos = 3,Id = 2064023,IsSuit = false,Rare = false},--120级守护灵橙色-肩甲
-				[4] = {Pos = 4,Id = 2064024,IsSuit = false,Rare = false},--120级守护灵橙色-衣服
-				[5] = {Pos = 5,Id = 2064025,IsSuit = false,Rare = false},--120级守护灵橙色-鞋子
-				[6] = {Pos = 6,Id = 2064026,IsSuit = false,Rare = false},--120级守护灵橙色-护手
-				[7] = {Pos = 7,Id = 2064027,IsSuit = false,Rare = false},--120级守护灵橙色-项链
-				[8] = {Pos = 8,Id = 2064028,IsSuit = false,Rare = false}--120级守护灵橙色-戒指
+				[1] = {Pos = 1,Id = 2106401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗守护灵の灵器
+				[2] = {Pos = 2,Id = 2106402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗守护灵の头盔
+				[3] = {Pos = 3,Id = 2106403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗守护灵の铠甲
+				[4] = {Pos = 4,Id = 2106404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗守护灵の裤子
+				[5] = {Pos = 5,Id = 2106405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗守护灵の鞋子
+				[6] = {Pos = 6,Id = 2106406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗守护灵の护手
+				[7] = {Pos = 7,Id = 2106407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--100级-史诗守护灵の项链
+				[8] = {Pos = 8,Id = 2106408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--100级-史诗守护灵の戒指
+			}
+		},
+		[5] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2006411,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--100级-攻击套寄灵人の灵器
+				[2] = {Pos = 2,Id = 2006412,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--100级-攻击套寄灵人の头盔
+				[3] = {Pos = 3,Id = 2006413,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--100级-攻击套寄灵人の铠甲
+				[4] = {Pos = 5,Id = 2006415,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--100级-攻击套寄灵人の鞋子
+				[5] = {Pos = 7,Id = 2006417,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--100级-攻击套寄灵人の项链
+				[6] = {Pos = 8,Id = 2006418,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--100级-攻击套寄灵人の戒指
 			},
-			[3] = {
-				[1] = {Pos = 1,Id = 2064031,IsSuit = true,Rare = true},--120级寄灵人橙色套1-武器
-				[2] = {Pos = 2,Id = 2064032,IsSuit = true,Rare = true},--120级寄灵人橙色套1-头盔
-				[3] = {Pos = 3,Id = 2064033,IsSuit = true,Rare = true},--120级寄灵人橙色套1-肩甲
-				[4] = {Pos = 7,Id = 2064037,IsSuit = true,Rare = true},--120级寄灵人橙色套1-项链
-				[5] = {Pos = 8,Id = 2064038,IsSuit = true,Rare = true}--120级寄灵人橙色套1-戒指
+			[2] = {
+				[1] = {Pos = 1,Id = 2106411,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--100级-攻击套守护灵の灵器
+				[2] = {Pos = 2,Id = 2106412,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--100级-攻击套守护灵の头盔
+				[3] = {Pos = 3,Id = 2106413,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--100级-攻击套守护灵の铠甲
+				[4] = {Pos = 5,Id = 2106415,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--100级-攻击套守护灵の鞋子
+				[5] = {Pos = 7,Id = 2106417,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--100级-攻击套守护灵の项链
+				[6] = {Pos = 8,Id = 2106418,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--100级-攻击套守护灵の戒指
+			}
+		}
+	},
+	[7] = {
+		[1] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2007101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通寄灵人の灵器
+				[2] = {Pos = 2,Id = 2007102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通寄灵人の头盔
+				[3] = {Pos = 3,Id = 2007103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2007104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通寄灵人の裤子
+				[5] = {Pos = 5,Id = 2007105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2007106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通寄灵人の护手
+				[7] = {Pos = 7,Id = 2007107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通寄灵人の项链
+				[8] = {Pos = 8,Id = 2007108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--110级-普通寄灵人の戒指
 			},
-			[4] = {
-				[1] = {Pos = 1,Id = 2064041,IsSuit = true,Rare = true},--120级守护灵橙色套1-武器
-				[2] = {Pos = 2,Id = 2064042,IsSuit = true,Rare = true},--120级守护灵橙色套1-头盔
-				[3] = {Pos = 3,Id = 2064043,IsSuit = true,Rare = true},--120级守护灵橙色套1-肩甲
-				[4] = {Pos = 7,Id = 2064047,IsSuit = true,Rare = true},--120级守护灵橙色套1-项链
-				[5] = {Pos = 8,Id = 2064048,IsSuit = true,Rare = true}--120级守护灵橙色套1-戒指
+			[2] = {
+				[1] = {Pos = 1,Id = 2107101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通守护灵の灵器
+				[2] = {Pos = 2,Id = 2107102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通守护灵の头盔
+				[3] = {Pos = 3,Id = 2107103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通守护灵の铠甲
+				[4] = {Pos = 4,Id = 2107104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通守护灵の裤子
+				[5] = {Pos = 5,Id = 2107105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通守护灵の鞋子
+				[6] = {Pos = 6,Id = 2107106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通守护灵の护手
+				[7] = {Pos = 7,Id = 2107107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--110级-普通守护灵の项链
+				[8] = {Pos = 8,Id = 2107108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--110级-普通守护灵の戒指
+			}
+		},
+		[2] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2007201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀寄灵人の灵器
+				[2] = {Pos = 2,Id = 2007202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀寄灵人の头盔
+				[3] = {Pos = 3,Id = 2007203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2007204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀寄灵人の裤子
+				[5] = {Pos = 5,Id = 2007205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2007206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀寄灵人の护手
+				[7] = {Pos = 7,Id = 2007207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀寄灵人の项链
+				[8] = {Pos = 8,Id = 2007208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--110级-优秀寄灵人の戒指
 			},
-			[5] = {
-				[1] = {Pos = 1,Id = 2064051,IsSuit = true,Rare = false},--120级寄灵人橙色套2-武器
-				[2] = {Pos = 2,Id = 2064052,IsSuit = true,Rare = false},--120级寄灵人橙色套2-头盔
-				[3] = {Pos = 3,Id = 2064053,IsSuit = true,Rare = false},--120级寄灵人橙色套2-肩甲
-				[4] = {Pos = 4,Id = 2064054,IsSuit = true,Rare = false},--120级寄灵人橙色套2-衣服
-				[5] = {Pos = 5,Id = 2064055,IsSuit = true,Rare = false},--120级寄灵人橙色套2-鞋子
-				[6] = {Pos = 6,Id = 2064056,IsSuit = true,Rare = false}--120级寄灵人橙色套2-护手
+			[2] = {
+				[1] = {Pos = 1,Id = 2107201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀守护灵の灵器
+				[2] = {Pos = 2,Id = 2107202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀守护灵の头盔
+				[3] = {Pos = 3,Id = 2107203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀守护灵の铠甲
+				[4] = {Pos = 4,Id = 2107204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀守护灵の裤子
+				[5] = {Pos = 5,Id = 2107205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀守护灵の鞋子
+				[6] = {Pos = 6,Id = 2107206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀守护灵の护手
+				[7] = {Pos = 7,Id = 2107207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--110级-优秀守护灵の项链
+				[8] = {Pos = 8,Id = 2107208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--110级-优秀守护灵の戒指
+			}
+		},
+		[3] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2007301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良寄灵人の灵器
+				[2] = {Pos = 2,Id = 2007302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良寄灵人の头盔
+				[3] = {Pos = 3,Id = 2007303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2007304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良寄灵人の裤子
+				[5] = {Pos = 5,Id = 2007305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2007306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良寄灵人の护手
+				[7] = {Pos = 7,Id = 2007307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良寄灵人の项链
+				[8] = {Pos = 8,Id = 2007308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--110级-精良寄灵人の戒指
 			},
-			[6] = {
-				[1] = {Pos = 1,Id = 2064061,IsSuit = true,Rare = false},--120级守护灵橙色套2-武器
-				[2] = {Pos = 2,Id = 2064062,IsSuit = true,Rare = false},--120级守护灵橙色套2-头盔
-				[3] = {Pos = 3,Id = 2064063,IsSuit = true,Rare = false},--120级守护灵橙色套2-肩甲
-				[4] = {Pos = 4,Id = 2064064,IsSuit = true,Rare = false},--120级守护灵橙色套2-衣服
-				[5] = {Pos = 5,Id = 2064065,IsSuit = true,Rare = false},--120级守护灵橙色套2-鞋子
-				[6] = {Pos = 6,Id = 2064066,IsSuit = true,Rare = false}--120级守护灵橙色套2-护手
+			[2] = {
+				[1] = {Pos = 1,Id = 2107301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良守护灵の灵器
+				[2] = {Pos = 2,Id = 2107302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良守护灵の头盔
+				[3] = {Pos = 3,Id = 2107303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良守护灵の铠甲
+				[4] = {Pos = 4,Id = 2107304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良守护灵の裤子
+				[5] = {Pos = 5,Id = 2107305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良守护灵の鞋子
+				[6] = {Pos = 6,Id = 2107306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良守护灵の护手
+				[7] = {Pos = 7,Id = 2107307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--110级-精良守护灵の项链
+				[8] = {Pos = 8,Id = 2107308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--110级-精良守护灵の戒指
+			}
+		},
+		[4] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2007401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗寄灵人の灵器
+				[2] = {Pos = 2,Id = 2007402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗寄灵人の头盔
+				[3] = {Pos = 3,Id = 2007403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2007404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗寄灵人の裤子
+				[5] = {Pos = 5,Id = 2007405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2007406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗寄灵人の护手
+				[7] = {Pos = 7,Id = 2007407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗寄灵人の项链
+				[8] = {Pos = 8,Id = 2007408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--110级-史诗寄灵人の戒指
 			},
-			[7] = {
-				[1] = {Pos = 1,Id = 2064071,IsSuit = true,Rare = false},--120级寄灵人橙色套3-武器
-				[2] = {Pos = 4,Id = 2064074,IsSuit = true,Rare = false},--120级寄灵人橙色套3-衣服
-				[3] = {Pos = 5,Id = 2064075,IsSuit = true,Rare = false},--120级寄灵人橙色套3-鞋子
-				[4] = {Pos = 6,Id = 2064076,IsSuit = true,Rare = false},--120级寄灵人橙色套3-护手
-				[5] = {Pos = 7,Id = 2064077,IsSuit = true,Rare = false},--120级寄灵人橙色套3-项链
-				[6] = {Pos = 8,Id = 2064078,IsSuit = true,Rare = false}--120级寄灵人橙色套3-戒指
+			[2] = {
+				[1] = {Pos = 1,Id = 2107401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗守护灵の灵器
+				[2] = {Pos = 2,Id = 2107402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗守护灵の头盔
+				[3] = {Pos = 3,Id = 2107403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗守护灵の铠甲
+				[4] = {Pos = 4,Id = 2107404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗守护灵の裤子
+				[5] = {Pos = 5,Id = 2107405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗守护灵の鞋子
+				[6] = {Pos = 6,Id = 2107406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗守护灵の护手
+				[7] = {Pos = 7,Id = 2107407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--110级-史诗守护灵の项链
+				[8] = {Pos = 8,Id = 2107408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--110级-史诗守护灵の戒指
+			}
+		},
+		[5] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2007421,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--110级-防御套寄灵人の灵器
+				[2] = {Pos = 2,Id = 2007422,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--110级-防御套寄灵人の头盔
+				[3] = {Pos = 3,Id = 2007423,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--110级-防御套寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2007424,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--110级-防御套寄灵人の裤子
+				[5] = {Pos = 5,Id = 2007425,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--110级-防御套寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2007426,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--110级-防御套寄灵人の护手
 			},
-			[8] = {
-				[1] = {Pos = 1,Id = 2064081,IsSuit = true,Rare = false},--120级守护灵橙色套3-武器
-				[2] = {Pos = 4,Id = 2064084,IsSuit = true,Rare = false},--120级守护灵橙色套3-衣服
-				[3] = {Pos = 5,Id = 2064085,IsSuit = true,Rare = false},--120级守护灵橙色套3-鞋子
-				[4] = {Pos = 6,Id = 2064086,IsSuit = true,Rare = false},--120级守护灵橙色套3-护手
-				[5] = {Pos = 7,Id = 2064087,IsSuit = true,Rare = false},--120级守护灵橙色套3-项链
-				[6] = {Pos = 8,Id = 2064088,IsSuit = true,Rare = false}--120级守护灵橙色套3-戒指
+			[2] = {
+				[1] = {Pos = 1,Id = 2107421,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--110级-防御套守护灵の灵器
+				[2] = {Pos = 2,Id = 2107422,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--110级-防御套守护灵の头盔
+				[3] = {Pos = 3,Id = 2107423,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--110级-防御套守护灵の铠甲
+				[4] = {Pos = 4,Id = 2107424,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--110级-防御套守护灵の裤子
+				[5] = {Pos = 5,Id = 2107425,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--110级-防御套守护灵の鞋子
+				[6] = {Pos = 6,Id = 2107426,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--110级-防御套守护灵の护手
+			}
+		}
+	},
+	[8] = {
+		[1] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2008101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通寄灵人の灵器
+				[2] = {Pos = 2,Id = 2008102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通寄灵人の头盔
+				[3] = {Pos = 3,Id = 2008103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2008104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通寄灵人の裤子
+				[5] = {Pos = 5,Id = 2008105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2008106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通寄灵人の护手
+				[7] = {Pos = 7,Id = 2008107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通寄灵人の项链
+				[8] = {Pos = 8,Id = 2008108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--120级-普通寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2108101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通守护灵の灵器
+				[2] = {Pos = 2,Id = 2108102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通守护灵の头盔
+				[3] = {Pos = 3,Id = 2108103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通守护灵の铠甲
+				[4] = {Pos = 4,Id = 2108104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通守护灵の裤子
+				[5] = {Pos = 5,Id = 2108105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通守护灵の鞋子
+				[6] = {Pos = 6,Id = 2108106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通守护灵の护手
+				[7] = {Pos = 7,Id = 2108107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--120级-普通守护灵の项链
+				[8] = {Pos = 8,Id = 2108108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--120级-普通守护灵の戒指
+			}
+		},
+		[2] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2008201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀寄灵人の灵器
+				[2] = {Pos = 2,Id = 2008202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀寄灵人の头盔
+				[3] = {Pos = 3,Id = 2008203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2008204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀寄灵人の裤子
+				[5] = {Pos = 5,Id = 2008205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2008206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀寄灵人の护手
+				[7] = {Pos = 7,Id = 2008207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀寄灵人の项链
+				[8] = {Pos = 8,Id = 2008208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--120级-优秀寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2108201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀守护灵の灵器
+				[2] = {Pos = 2,Id = 2108202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀守护灵の头盔
+				[3] = {Pos = 3,Id = 2108203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀守护灵の铠甲
+				[4] = {Pos = 4,Id = 2108204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀守护灵の裤子
+				[5] = {Pos = 5,Id = 2108205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀守护灵の鞋子
+				[6] = {Pos = 6,Id = 2108206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀守护灵の护手
+				[7] = {Pos = 7,Id = 2108207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--120级-优秀守护灵の项链
+				[8] = {Pos = 8,Id = 2108208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--120级-优秀守护灵の戒指
+			}
+		},
+		[3] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2008301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良寄灵人の灵器
+				[2] = {Pos = 2,Id = 2008302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良寄灵人の头盔
+				[3] = {Pos = 3,Id = 2008303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2008304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良寄灵人の裤子
+				[5] = {Pos = 5,Id = 2008305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2008306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良寄灵人の护手
+				[7] = {Pos = 7,Id = 2008307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良寄灵人の项链
+				[8] = {Pos = 8,Id = 2008308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--120级-精良寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2108301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良守护灵の灵器
+				[2] = {Pos = 2,Id = 2108302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良守护灵の头盔
+				[3] = {Pos = 3,Id = 2108303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良守护灵の铠甲
+				[4] = {Pos = 4,Id = 2108304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良守护灵の裤子
+				[5] = {Pos = 5,Id = 2108305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良守护灵の鞋子
+				[6] = {Pos = 6,Id = 2108306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良守护灵の护手
+				[7] = {Pos = 7,Id = 2108307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--120级-精良守护灵の项链
+				[8] = {Pos = 8,Id = 2108308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--120级-精良守护灵の戒指
+			}
+		},
+		[4] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2008401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗寄灵人の灵器
+				[2] = {Pos = 2,Id = 2008402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗寄灵人の头盔
+				[3] = {Pos = 3,Id = 2008403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2008404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗寄灵人の裤子
+				[5] = {Pos = 5,Id = 2008405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2008406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗寄灵人の护手
+				[7] = {Pos = 7,Id = 2008407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗寄灵人の项链
+				[8] = {Pos = 8,Id = 2008408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--120级-史诗寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2108401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗守护灵の灵器
+				[2] = {Pos = 2,Id = 2108402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗守护灵の头盔
+				[3] = {Pos = 3,Id = 2108403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗守护灵の铠甲
+				[4] = {Pos = 4,Id = 2108404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗守护灵の裤子
+				[5] = {Pos = 5,Id = 2108405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗守护灵の鞋子
+				[6] = {Pos = 6,Id = 2108406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗守护灵の护手
+				[7] = {Pos = 7,Id = 2108407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--120级-史诗守护灵の项链
+				[8] = {Pos = 8,Id = 2108408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--120级-史诗守护灵の戒指
+			}
+		},
+		[5] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2008411,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--120级-攻击套寄灵人の灵器
+				[2] = {Pos = 2,Id = 2008412,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--120级-攻击套寄灵人の头盔
+				[3] = {Pos = 3,Id = 2008413,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--120级-攻击套寄灵人の铠甲
+				[4] = {Pos = 5,Id = 2008415,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--120级-攻击套寄灵人の鞋子
+				[5] = {Pos = 7,Id = 2008417,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--120级-攻击套寄灵人の项链
+				[6] = {Pos = 8,Id = 2008418,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--120级-攻击套寄灵人の戒指
+				[7] = {Pos = 1,Id = 2008421,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--120级-绝世套寄灵人の灵器
+				[8] = {Pos = 2,Id = 2008422,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--120级-绝世套寄灵人の头盔
+				[9] = {Pos = 3,Id = 2008423,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--120级-绝世套寄灵人の铠甲
+				[10] = {Pos = 7,Id = 2008427,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--120级-绝世套寄灵人の项链
+				[11] = {Pos = 8,Id = 2008428,IsSuit = true,Rare = true,Qua = 4,SQua = 5}--120级-绝世套寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2108411,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--120级-攻击套守护灵の灵器
+				[2] = {Pos = 2,Id = 2108412,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--120级-攻击套守护灵の头盔
+				[3] = {Pos = 3,Id = 2108413,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--120级-攻击套守护灵の铠甲
+				[4] = {Pos = 5,Id = 2108415,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--120级-攻击套守护灵の鞋子
+				[5] = {Pos = 7,Id = 2108417,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--120级-攻击套守护灵の项链
+				[6] = {Pos = 8,Id = 2108418,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--120级-攻击套守护灵の戒指
+				[7] = {Pos = 1,Id = 2108421,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--120级-绝世套守护灵の灵器
+				[8] = {Pos = 2,Id = 2108422,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--120级-绝世套守护灵の头盔
+				[9] = {Pos = 3,Id = 2108423,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--120级-绝世套守护灵の铠甲
+				[10] = {Pos = 7,Id = 2108427,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--120级-绝世套守护灵の项链
+				[11] = {Pos = 8,Id = 2108428,IsSuit = true,Rare = true,Qua = 4,SQua = 5}--120级-绝世套守护灵の戒指
+			}
+		}
+	},
+	[9] = {
+		[1] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2009101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通寄灵人の灵器
+				[2] = {Pos = 2,Id = 2009102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通寄灵人の头盔
+				[3] = {Pos = 3,Id = 2009103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2009104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通寄灵人の裤子
+				[5] = {Pos = 5,Id = 2009105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2009106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通寄灵人の护手
+				[7] = {Pos = 7,Id = 2009107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通寄灵人の项链
+				[8] = {Pos = 8,Id = 2009108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--130级-普通寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2109101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通守护灵の灵器
+				[2] = {Pos = 2,Id = 2109102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通守护灵の头盔
+				[3] = {Pos = 3,Id = 2109103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通守护灵の铠甲
+				[4] = {Pos = 4,Id = 2109104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通守护灵の裤子
+				[5] = {Pos = 5,Id = 2109105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通守护灵の鞋子
+				[6] = {Pos = 6,Id = 2109106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通守护灵の护手
+				[7] = {Pos = 7,Id = 2109107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--130级-普通守护灵の项链
+				[8] = {Pos = 8,Id = 2109108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--130级-普通守护灵の戒指
+			}
+		},
+		[2] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2009201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀寄灵人の灵器
+				[2] = {Pos = 2,Id = 2009202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀寄灵人の头盔
+				[3] = {Pos = 3,Id = 2009203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2009204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀寄灵人の裤子
+				[5] = {Pos = 5,Id = 2009205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2009206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀寄灵人の护手
+				[7] = {Pos = 7,Id = 2009207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀寄灵人の项链
+				[8] = {Pos = 8,Id = 2009208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--130级-优秀寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2109201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀守护灵の灵器
+				[2] = {Pos = 2,Id = 2109202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀守护灵の头盔
+				[3] = {Pos = 3,Id = 2109203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀守护灵の铠甲
+				[4] = {Pos = 4,Id = 2109204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀守护灵の裤子
+				[5] = {Pos = 5,Id = 2109205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀守护灵の鞋子
+				[6] = {Pos = 6,Id = 2109206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀守护灵の护手
+				[7] = {Pos = 7,Id = 2109207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--130级-优秀守护灵の项链
+				[8] = {Pos = 8,Id = 2109208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--130级-优秀守护灵の戒指
+			}
+		},
+		[3] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2009301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良寄灵人の灵器
+				[2] = {Pos = 2,Id = 2009302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良寄灵人の头盔
+				[3] = {Pos = 3,Id = 2009303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2009304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良寄灵人の裤子
+				[5] = {Pos = 5,Id = 2009305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2009306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良寄灵人の护手
+				[7] = {Pos = 7,Id = 2009307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良寄灵人の项链
+				[8] = {Pos = 8,Id = 2009308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--130级-精良寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2109301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良守护灵の灵器
+				[2] = {Pos = 2,Id = 2109302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良守护灵の头盔
+				[3] = {Pos = 3,Id = 2109303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良守护灵の铠甲
+				[4] = {Pos = 4,Id = 2109304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良守护灵の裤子
+				[5] = {Pos = 5,Id = 2109305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良守护灵の鞋子
+				[6] = {Pos = 6,Id = 2109306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良守护灵の护手
+				[7] = {Pos = 7,Id = 2109307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--130级-精良守护灵の项链
+				[8] = {Pos = 8,Id = 2109308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--130级-精良守护灵の戒指
+			}
+		},
+		[4] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2009401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗寄灵人の灵器
+				[2] = {Pos = 2,Id = 2009402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗寄灵人の头盔
+				[3] = {Pos = 3,Id = 2009403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2009404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗寄灵人の裤子
+				[5] = {Pos = 5,Id = 2009405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2009406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗寄灵人の护手
+				[7] = {Pos = 7,Id = 2009407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗寄灵人の项链
+				[8] = {Pos = 8,Id = 2009408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--130级-史诗寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2109401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗守护灵の灵器
+				[2] = {Pos = 2,Id = 2109402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗守护灵の头盔
+				[3] = {Pos = 3,Id = 2109403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗守护灵の铠甲
+				[4] = {Pos = 4,Id = 2109404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗守护灵の裤子
+				[5] = {Pos = 5,Id = 2109405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗守护灵の鞋子
+				[6] = {Pos = 6,Id = 2109406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗守护灵の护手
+				[7] = {Pos = 7,Id = 2109407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--130级-史诗守护灵の项链
+				[8] = {Pos = 8,Id = 2109408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--130级-史诗守护灵の戒指
+			}
+		},
+		[5] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2009421,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--130级-防御套寄灵人の灵器
+				[2] = {Pos = 2,Id = 2009422,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--130级-防御套寄灵人の头盔
+				[3] = {Pos = 3,Id = 2009423,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--130级-防御套寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2009424,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--130级-防御套寄灵人の裤子
+				[5] = {Pos = 5,Id = 2009425,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--130级-防御套寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2009426,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--130级-防御套寄灵人の护手
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2109421,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--130级-防御套守护灵の灵器
+				[2] = {Pos = 2,Id = 2109422,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--130级-防御套守护灵の头盔
+				[3] = {Pos = 3,Id = 2109423,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--130级-防御套守护灵の铠甲
+				[4] = {Pos = 4,Id = 2109424,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--130级-防御套守护灵の裤子
+				[5] = {Pos = 5,Id = 2109425,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--130级-防御套守护灵の鞋子
+				[6] = {Pos = 6,Id = 2109426,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--130级-防御套守护灵の护手
+			}
+		}
+	},
+	[10] = {
+		[1] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2010101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通寄灵人の灵器
+				[2] = {Pos = 2,Id = 2010102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通寄灵人の头盔
+				[3] = {Pos = 3,Id = 2010103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2010104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通寄灵人の裤子
+				[5] = {Pos = 5,Id = 2010105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2010106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通寄灵人の护手
+				[7] = {Pos = 7,Id = 2010107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通寄灵人の项链
+				[8] = {Pos = 8,Id = 2010108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--140级-普通寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2110101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通守护灵の灵器
+				[2] = {Pos = 2,Id = 2110102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通守护灵の头盔
+				[3] = {Pos = 3,Id = 2110103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通守护灵の铠甲
+				[4] = {Pos = 4,Id = 2110104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通守护灵の裤子
+				[5] = {Pos = 5,Id = 2110105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通守护灵の鞋子
+				[6] = {Pos = 6,Id = 2110106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通守护灵の护手
+				[7] = {Pos = 7,Id = 2110107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--140级-普通守护灵の项链
+				[8] = {Pos = 8,Id = 2110108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--140级-普通守护灵の戒指
+			}
+		},
+		[2] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2010201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀寄灵人の灵器
+				[2] = {Pos = 2,Id = 2010202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀寄灵人の头盔
+				[3] = {Pos = 3,Id = 2010203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2010204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀寄灵人の裤子
+				[5] = {Pos = 5,Id = 2010205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2010206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀寄灵人の护手
+				[7] = {Pos = 7,Id = 2010207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀寄灵人の项链
+				[8] = {Pos = 8,Id = 2010208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--140级-优秀寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2110201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀守护灵の灵器
+				[2] = {Pos = 2,Id = 2110202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀守护灵の头盔
+				[3] = {Pos = 3,Id = 2110203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀守护灵の铠甲
+				[4] = {Pos = 4,Id = 2110204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀守护灵の裤子
+				[5] = {Pos = 5,Id = 2110205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀守护灵の鞋子
+				[6] = {Pos = 6,Id = 2110206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀守护灵の护手
+				[7] = {Pos = 7,Id = 2110207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--140级-优秀守护灵の项链
+				[8] = {Pos = 8,Id = 2110208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--140级-优秀守护灵の戒指
+			}
+		},
+		[3] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2010301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良寄灵人の灵器
+				[2] = {Pos = 2,Id = 2010302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良寄灵人の头盔
+				[3] = {Pos = 3,Id = 2010303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2010304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良寄灵人の裤子
+				[5] = {Pos = 5,Id = 2010305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2010306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良寄灵人の护手
+				[7] = {Pos = 7,Id = 2010307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良寄灵人の项链
+				[8] = {Pos = 8,Id = 2010308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--140级-精良寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2110301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良守护灵の灵器
+				[2] = {Pos = 2,Id = 2110302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良守护灵の头盔
+				[3] = {Pos = 3,Id = 2110303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良守护灵の铠甲
+				[4] = {Pos = 4,Id = 2110304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良守护灵の裤子
+				[5] = {Pos = 5,Id = 2110305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良守护灵の鞋子
+				[6] = {Pos = 6,Id = 2110306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良守护灵の护手
+				[7] = {Pos = 7,Id = 2110307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--140级-精良守护灵の项链
+				[8] = {Pos = 8,Id = 2110308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--140级-精良守护灵の戒指
+			}
+		},
+		[4] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2010401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗寄灵人の灵器
+				[2] = {Pos = 2,Id = 2010402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗寄灵人の头盔
+				[3] = {Pos = 3,Id = 2010403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2010404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗寄灵人の裤子
+				[5] = {Pos = 5,Id = 2010405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2010406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗寄灵人の护手
+				[7] = {Pos = 7,Id = 2010407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗寄灵人の项链
+				[8] = {Pos = 8,Id = 2010408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--140级-史诗寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2110401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗守护灵の灵器
+				[2] = {Pos = 2,Id = 2110402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗守护灵の头盔
+				[3] = {Pos = 3,Id = 2110403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗守护灵の铠甲
+				[4] = {Pos = 4,Id = 2110404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗守护灵の裤子
+				[5] = {Pos = 5,Id = 2110405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗守护灵の鞋子
+				[6] = {Pos = 6,Id = 2110406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗守护灵の护手
+				[7] = {Pos = 7,Id = 2110407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--140级-史诗守护灵の项链
+				[8] = {Pos = 8,Id = 2110408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--140级-史诗守护灵の戒指
+			}
+		},
+		[5] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2010411,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--140级-攻击套寄灵人の灵器
+				[2] = {Pos = 2,Id = 2010412,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--140级-攻击套寄灵人の头盔
+				[3] = {Pos = 3,Id = 2010413,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--140级-攻击套寄灵人の铠甲
+				[4] = {Pos = 5,Id = 2010415,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--140级-攻击套寄灵人の鞋子
+				[5] = {Pos = 7,Id = 2010417,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--140级-攻击套寄灵人の项链
+				[6] = {Pos = 8,Id = 2010418,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--140级-攻击套寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2110411,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--140级-攻击套守护灵の灵器
+				[2] = {Pos = 2,Id = 2110412,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--140级-攻击套守护灵の头盔
+				[3] = {Pos = 3,Id = 2110413,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--140级-攻击套守护灵の铠甲
+				[4] = {Pos = 5,Id = 2110415,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--140级-攻击套守护灵の鞋子
+				[5] = {Pos = 7,Id = 2110417,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--140级-攻击套守护灵の项链
+				[6] = {Pos = 8,Id = 2110418,IsSuit = true,Rare = false,Qua = 4,SQua = 5}--140级-攻击套守护灵の戒指
+			}
+		}
+	},
+	[11] = {
+		[1] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2011101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通寄灵人の灵器
+				[2] = {Pos = 2,Id = 2011102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通寄灵人の头盔
+				[3] = {Pos = 3,Id = 2011103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2011104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通寄灵人の裤子
+				[5] = {Pos = 5,Id = 2011105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2011106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通寄灵人の护手
+				[7] = {Pos = 7,Id = 2011107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通寄灵人の项链
+				[8] = {Pos = 8,Id = 2011108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--150级-普通寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2111101,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通守护灵の灵器
+				[2] = {Pos = 2,Id = 2111102,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通守护灵の头盔
+				[3] = {Pos = 3,Id = 2111103,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通守护灵の铠甲
+				[4] = {Pos = 4,Id = 2111104,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通守护灵の裤子
+				[5] = {Pos = 5,Id = 2111105,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通守护灵の鞋子
+				[6] = {Pos = 6,Id = 2111106,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通守护灵の护手
+				[7] = {Pos = 7,Id = 2111107,IsSuit = false,Rare = false,Qua = 1,SQua = 1},--150级-普通守护灵の项链
+				[8] = {Pos = 8,Id = 2111108,IsSuit = false,Rare = false,Qua = 1,SQua = 1}--150级-普通守护灵の戒指
+			}
+		},
+		[2] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2011201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀寄灵人の灵器
+				[2] = {Pos = 2,Id = 2011202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀寄灵人の头盔
+				[3] = {Pos = 3,Id = 2011203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2011204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀寄灵人の裤子
+				[5] = {Pos = 5,Id = 2011205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2011206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀寄灵人の护手
+				[7] = {Pos = 7,Id = 2011207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀寄灵人の项链
+				[8] = {Pos = 8,Id = 2011208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--150级-优秀寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2111201,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀守护灵の灵器
+				[2] = {Pos = 2,Id = 2111202,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀守护灵の头盔
+				[3] = {Pos = 3,Id = 2111203,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀守护灵の铠甲
+				[4] = {Pos = 4,Id = 2111204,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀守护灵の裤子
+				[5] = {Pos = 5,Id = 2111205,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀守护灵の鞋子
+				[6] = {Pos = 6,Id = 2111206,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀守护灵の护手
+				[7] = {Pos = 7,Id = 2111207,IsSuit = false,Rare = false,Qua = 2,SQua = 2},--150级-优秀守护灵の项链
+				[8] = {Pos = 8,Id = 2111208,IsSuit = false,Rare = false,Qua = 2,SQua = 2}--150级-优秀守护灵の戒指
+			}
+		},
+		[3] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2011301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良寄灵人の灵器
+				[2] = {Pos = 2,Id = 2011302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良寄灵人の头盔
+				[3] = {Pos = 3,Id = 2011303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2011304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良寄灵人の裤子
+				[5] = {Pos = 5,Id = 2011305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2011306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良寄灵人の护手
+				[7] = {Pos = 7,Id = 2011307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良寄灵人の项链
+				[8] = {Pos = 8,Id = 2011308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--150级-精良寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2111301,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良守护灵の灵器
+				[2] = {Pos = 2,Id = 2111302,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良守护灵の头盔
+				[3] = {Pos = 3,Id = 2111303,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良守护灵の铠甲
+				[4] = {Pos = 4,Id = 2111304,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良守护灵の裤子
+				[5] = {Pos = 5,Id = 2111305,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良守护灵の鞋子
+				[6] = {Pos = 6,Id = 2111306,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良守护灵の护手
+				[7] = {Pos = 7,Id = 2111307,IsSuit = false,Rare = false,Qua = 3,SQua = 3},--150级-精良守护灵の项链
+				[8] = {Pos = 8,Id = 2111308,IsSuit = false,Rare = false,Qua = 3,SQua = 3}--150级-精良守护灵の戒指
+			}
+		},
+		[4] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2011401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗寄灵人の灵器
+				[2] = {Pos = 2,Id = 2011402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗寄灵人の头盔
+				[3] = {Pos = 3,Id = 2011403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2011404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗寄灵人の裤子
+				[5] = {Pos = 5,Id = 2011405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2011406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗寄灵人の护手
+				[7] = {Pos = 7,Id = 2011407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗寄灵人の项链
+				[8] = {Pos = 8,Id = 2011408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--150级-史诗寄灵人の戒指
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2111401,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗守护灵の灵器
+				[2] = {Pos = 2,Id = 2111402,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗守护灵の头盔
+				[3] = {Pos = 3,Id = 2111403,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗守护灵の铠甲
+				[4] = {Pos = 4,Id = 2111404,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗守护灵の裤子
+				[5] = {Pos = 5,Id = 2111405,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗守护灵の鞋子
+				[6] = {Pos = 6,Id = 2111406,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗守护灵の护手
+				[7] = {Pos = 7,Id = 2111407,IsSuit = false,Rare = false,Qua = 4,SQua = 4},--150级-史诗守护灵の项链
+				[8] = {Pos = 8,Id = 2111408,IsSuit = false,Rare = false,Qua = 4,SQua = 4}--150级-史诗守护灵の戒指
+			}
+		},
+		[5] = {
+			[1] = {
+				[1] = {Pos = 1,Id = 2011421,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--150级-防御套寄灵人の灵器
+				[2] = {Pos = 2,Id = 2011422,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--150级-防御套寄灵人の头盔
+				[3] = {Pos = 3,Id = 2011423,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--150级-防御套寄灵人の铠甲
+				[4] = {Pos = 4,Id = 2011424,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--150级-防御套寄灵人の裤子
+				[5] = {Pos = 5,Id = 2011425,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--150级-防御套寄灵人の鞋子
+				[6] = {Pos = 6,Id = 2011426,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--150级-防御套寄灵人の护手
+				[7] = {Pos = 1,Id = 2011431,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--150级-绝世寄灵人の灵器
+				[8] = {Pos = 2,Id = 2011432,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--150级-绝世寄灵人の头盔
+				[9] = {Pos = 3,Id = 2011433,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--150级-绝世寄灵人の铠甲
+				[10] = {Pos = 4,Id = 2011434,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--150级-绝世寄灵人の裤子
+				[11] = {Pos = 6,Id = 2011436,IsSuit = true,Rare = true,Qua = 4,SQua = 5}--150级-绝世寄灵人の护手
+			},
+			[2] = {
+				[1] = {Pos = 1,Id = 2111421,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--150级-防御套守护灵の灵器
+				[2] = {Pos = 2,Id = 2111422,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--150级-防御套守护灵の头盔
+				[3] = {Pos = 3,Id = 2111423,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--150级-防御套守护灵の铠甲
+				[4] = {Pos = 4,Id = 2111424,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--150级-防御套守护灵の裤子
+				[5] = {Pos = 5,Id = 2111425,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--150级-防御套守护灵の鞋子
+				[6] = {Pos = 6,Id = 2111426,IsSuit = true,Rare = false,Qua = 4,SQua = 5},--150级-防御套守护灵の护手
+				[7] = {Pos = 1,Id = 2111431,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--150级-绝世守护灵の灵器
+				[8] = {Pos = 2,Id = 2111432,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--150级-绝世守护灵の头盔
+				[9] = {Pos = 3,Id = 2111433,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--150级-绝世守护灵の铠甲
+				[10] = {Pos = 4,Id = 2111434,IsSuit = true,Rare = true,Qua = 4,SQua = 5},--150级-绝世守护灵の裤子
+				[11] = {Pos = 6,Id = 2111436,IsSuit = true,Rare = true,Qua = 4,SQua = 5}--150级-绝世守护灵の护手
 			}
 		}
 	}

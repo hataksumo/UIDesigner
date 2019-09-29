@@ -88,6 +88,7 @@ function output_excel()
 	--"Excel\\GuaJiPaiQian"
 	--"Excel\\RelicAct"
 	--"Excel\\EquipDs"
+	--"Excel\\ExWpWbossOutput"
 	}
 	for _i,val in ipairs(output) do
 		local fn = dofile(val)

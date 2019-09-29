@@ -42,7 +42,7 @@ local locs = {
 
 local constraints = {
 	[1] = {0,0,0,0,0,0,0},
-	[2] = {3,0,0,0,0,0,0},
+	[2] = {1,0,0,0,0,0,0},
 	[3] = {4,3,0,0,0,0,0},
 	[4] = {4,3,0,0,0,0,0},
 	[5] = {4,3,0,0,0,0,0},
@@ -58,10 +58,6 @@ local fn_cal_minLv = function(v_setp)
 		local minLv = 40
 		for _j,loc in ipairs(arrLoc) do
 			local lv = v_setp.lvs[loc]
-
-
-
-
 
 			if lv < minLv then
 				minLv = lv
@@ -128,6 +124,14 @@ local fn_cal_Relic = function()
 	end
 	return step_modules
 end
+
+local relicAnysis = function()
+	local bag = {}
+	
+end
+
+
+
 
 
 local fn_opt_excel = function()

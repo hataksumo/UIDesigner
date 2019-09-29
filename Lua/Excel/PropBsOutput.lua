@@ -6,6 +6,8 @@ local fn_calLevelProp = function()
 	local cfg_relic_body = dofile("Config\\relic_body")
 	local cfg_relic_module = dofile("Config\\relic_module")
 	local cfg_relic_attr_condition = dofile("Config\\relic_attr_condition")
+	local cfg_mon = dofile "Config\\monModle"
+
 
 	local dscfg_cardGroup = dofile("Config\\cardGroup")
 	local dscfg_cardGroup1 = dofile("Config\\cardGroup_1")
@@ -21,7 +23,7 @@ local fn_calLevelProp = function()
 	--初始化卡牌数值
 	local fn_iniCardProp = function(card_id)
 		local Prop = CreatePropTable()
-		local propKey= {"Atk","Def","HP","Crit","CritRate","EffectHit","EffectResist","Block","DefIgnor","R"}
+		local propKey= {"Atk","Def","HP","Crit","CritRate","EffectHit","EffectResist","Block","DefIgnor"}
 		local cardInfo = cfg_card[card_id]
 
 		if not cardInfo then
@@ -35,9 +37,11 @@ local fn_calLevelProp = function()
 	end
 
 	--计算卡牌数值
-	local fn_calCardProp = function(v_cType,v_cfg)
+	local fn_calCardProp = function(v_iType,v_cfg)
 		local prop = CreatePropTable()
-		if not v_cfg then return prop end
+		if not v_cfg then
+		 	return prop
+		end
 		local card_info = cfg_card[v_cfg.cardId]
 		if not card_info then
 			print("card_info is nil")
@@ -45,56 +49,53 @@ local fn_calLevelProp = function()
 		end
 		local cardbk_info = card_info.hells[v_cfg.bklv]
 		local cardstar_info = card_info.stars[v_cfg.star]
-		local hell_info = cfg_hell_name[v_cType][v_cfg.bklv]
+		local hell_info = cfg_hell_name[v_iType][v_cfg.bklv]
+		local ghost_info = v_iType == 2 and card_info.ghost[v_cfg.ghost] or {}
+		local break_info = cfg_hell_name[v_iType][v_cfg.bklv]
 
-		if not hell_info then
+		if not cardbk_info then
 			print(string.format("hell_info is nil, note = %s, v_cfg.bklv = %d",v_cfg.mon.note,v_cfg.bklv))
 		end
-
-		local hpid = 103
-		local atkid = 101
-		local defid = 102
-
-		local tmpProp = {}
-		tmpProp[hpid] = {}
-		tmpProp[hpid].ini = card_info.HP
-		tmpProp[atkid] = {}
-		tmpProp[atkid].ini = card_info.Atk
-		tmpProp[defid] = {}
-		tmpProp[defid].ini = card_info.Def
-
-		for _i,val in ipairs(cardbk_info.BaseAttr) do
-			tmpProp[val.id].base = val.val
+		if not break_info then
+			print(string.format("cfg_hell_name[%d][%d] = nil",v_iType,v_cfg.bklv))
 		end
 
-		for _i,val in ipairs(cardbk_info.UpAttr) do
-			tmpProp[val.id].up = val.val
-		end
+		prop.Atk = cardbk_info.BaseAtk[v_cfg.star] + cardbk_info.UpAtk[v_cfg.star] * (v_cfg.lv - break_info.BegLevel)
+		prop.Def = cardbk_info.BaseDef[v_cfg.star] + cardbk_info.UpDef[v_cfg.star] * (v_cfg.lv - break_info.BegLevel)
+		prop.HP = cardbk_info.BaseHP[v_cfg.star] + cardbk_info.UpHP[v_cfg.star] * (v_cfg.lv - break_info.BegLevel)
 
-		for key,val in pairs(tmpProp) do
-			prop[key] = (val.ini + val.base + val.up * math.max(v_cfg.lv - hell_info.BegLevel,0)) * cardstar_info.AttrFac
+		if v_iType == 2 and v_cfg.ghost > 0 then
+			for _i,data in ipairs(ghost_info) do
+				prop[data.Id] = prop[data.Id] + data.Sum
+			end
 		end
+		prop.BasePropAll = cardstar_info.BasePropAll
 
-		prop.R = hell_info.R
+
+		--[[print(string.format("id = %d, name = %s, bklv =%d, lv = %d, ghost = %d star = %d"
+			.."\natk = %d, def = %d, hp = %d",
+			v_cfg.id,card_info.Name,v_cfg.bklv,v_cfg.lv,v_cfg.ghost,v_cfg.star,
+			prop.Atk,prop.Def,prop.HP))]]
 
 		return prop
 	end
 
 
-	local fn_calRelicProp = function(v_cfg,v_prop,v_mask,v_id)
+
+	--计算神器数值
+	local fn_calRelicProp = function(v_cfg,v_prop,v_mask)
 		local relicProp = CreatePropTable()
 		for _i,val in ipairs(v_cfg) do
 			local lvCfg = cfg_relic_body[_i].Lvs[val.lv]
 			if lvCfg and lvCfg.Prop then
 				local relicMask = cfg_relic_attr_condition[cfg_relic_body[_i].Condition].mask[1]
 				for _j,theprop in ipairs(lvCfg.Prop) do
-					relicProp[theprop.id] = relicProp[theprop.id] + theprop.val
+					relicProp[theprop.Id] = relicProp[theprop.Id] + theprop.Val
 					if bit32.band(relicMask,v_mask) > 0 then
-						v_prop[theprop.id] = v_prop[theprop.id] + theprop.val
+						v_prop[theprop.Id] = v_prop[theprop.Id] + theprop.Val
 					end
 				end
 			end
-
 			local modules = cfg_relic_body[_i].Components
 			for mdId,info in ipairs(val.md) do
 				local moduleCfg = cfg_relic_module[modules[mdId]]
@@ -102,9 +103,12 @@ local fn_calLevelProp = function()
 				if moduleLvCfg then
 					local moduleMask = cfg_relic_attr_condition[moduleCfg.ConditionId].mask[1]
 					for _j,moduleVal in ipairs(moduleLvCfg.Prop) do
-						relicProp[moduleVal.id] = relicProp[moduleVal.id] + moduleVal.num
+						relicProp[moduleVal.Id] = relicProp[moduleVal.Id] + moduleVal.Val
 						if bit32.band(moduleMask,v_mask) > 0 then
-							v_prop[moduleVal.id] = v_prop[moduleVal.id] + moduleVal.num
+							if not v_prop[moduleVal.Id] then
+								print(moduleVal.Id.." not find")
+							end
+							v_prop[moduleVal.Id] = v_prop[moduleVal.Id] + moduleVal.Val
 						end
 					end
 				end
@@ -121,6 +125,7 @@ local fn_calLevelProp = function()
 	local cfg_exweapon = dofile "Config\\personal_weapon"
 
 
+	--计算装备数值
 	local fn_calEquipProp = function(v_eqps,v_debug)
 		v_debug = v_debug or false
 		--基础属性
@@ -138,6 +143,7 @@ local fn_calLevelProp = function()
 				logError(string.format("装备位置%d不对",_i))
 				return prop,false
 			end
+
 			for _i,eqp_prop in ipairs(props) do
 				local the_prop_cfg = cfg_prop[eqp_prop.Id]
 				--local eqp_prop_val = eqp_prop.Base + eqp_prop.Up * cfg_eqp_lvup[strengthenId][strengthenLv].Fac
@@ -174,220 +180,129 @@ local fn_calLevelProp = function()
 		return prop,true
 	end
 
+	--计算专属武器数值
+	local cfg_exWeapon = dofile"Config\\personal_weapon"
+	local fn_calExWeaponProp = function(v_cardId,v_exWeaponCfg)
+		local rtnProp = CreatePropTable()
+		if not v_exWeaponCfg then
+			return rtnProp
+		end
+		local the_weapon_cfg = cfg_exWeapon[v_cardId]
+		if not the_weapon_cfg then
+			return rtnProp
+		end
+
+		for loc,lv in ipairs(v_exWeaponCfg) do
+			the_prop = the_weapon_cfg.HunZhu[loc].Lvs[lv].Prop
+			for _i,val in ipairs(the_prop) do
+				rtnProp[val.Id] = rtnProp[val.Id] + val.Val
+			end
+		end
+		return rtnProp
+	end
+
 
 	local lvProps = {}--卡牌数据
 	local monProps = {}--怪物的数据
+	local iTypesMemp = {jlr = 1,shl = 2}
 	for lvId,lvInfo in pairs(dscfg_levelDesigner) do--遍历关卡设计表
 		local cardGroupId = lvInfo.cardGroup
 		local relicGroup = lvInfo.relic
 		--处理卡牌数据
 		local cardGroupData = dscfg_cardGroup[cardGroupId]
-		local iniProp = {}
-		local lvProp = {}
-		local eqpProp = {}
-		local exWeaponProp = {}
-		local transProp = {}
-		local finnalProp = {}
-		finnalProp.lvId = lvId
+		local teamData = {}
+		teamData.lvId = lvId
+		teamData.cards = {}
 		if not cardGroupData then
 			print(string.format("dscfg_cardGroup[%d] is nil",cardGroupId))
 		end
-		for loc,couple in ipairs(cardGroupData) do
-			finnalProp[loc] = {}
-			iniProp[loc] = {}
-			if couple.jlr and couple.jlr.cardId then
-				finnalProp[loc].jlr = {}
-				if not couple.jlr.id then
-					print(string.format("lv:%d | loc:%d | shl",lvId,loc))
-				end
-				finnalProp[loc].jlr.id = couple.jlr.id
-				finnalProp[loc].jlr.cardId = couple.jlr.cardId
-				finnalProp[loc].jlr.prop = CreatePropTable()
-				if couple.jlr.mon then
-					finnalProp[loc].jlr.mon = {}
-					finnalProp[loc].jlr.mon.lv = couple.jlr.lv
-					finnalProp[loc].jlr.mon.id = couple.jlr.mon.id
-					finnalProp[loc].jlr.mon.skillLv = couple.jlr.mon.skillLv
-					finnalProp[loc].jlr.mon.suffer = couple.jlr.mon.suffer
-					finnalProp[loc].jlr.mon.exert = couple.jlr.mon.exert
-					finnalProp[loc].jlr.mon.note = couple.jlr.mon.desc
-				end
-				if not couple.jlr.cardId then
-					print("couple.jlr.cardId = nil")
-				end
-				iniProp[loc].propjlr = fn_iniCardProp(couple.jlr.cardId)
-			end
-			if couple.shl and couple.shl.cardId then
-				finnalProp[loc].shl = {}
-				if not couple.shl.id then
-					print(string.format("lv:%d | loc:%d | shl",lvId,loc))
-				end
-				finnalProp[loc].shl.id = couple.shl.id
-				finnalProp[loc].shl.cardId = couple.shl.cardId
-				finnalProp[loc].shl.prop = CreatePropTable()
-				if couple.shl.mon then
-					finnalProp[loc].shl.mon = {}
-					finnalProp[loc].shl.mon.lv = couple.shl.lv
-					finnalProp[loc].shl.mon.id = couple.shl.mon.id
-					finnalProp[loc].shl.mon.skillLv = couple.shl.mon.skillLv
-					finnalProp[loc].shl.mon.exert = couple.shl.mon.exert
-					finnalProp[loc].shl.mon.suffer = couple.shl.mon.suffer
-					finnalProp[loc].shl.mon.note = couple.shl.mon.desc
-				end
-				if not couple.shl.cardId then
-					print("couple.shl.cardId = nil")
-				end
-				iniProp[loc].propShl = fn_iniCardProp(couple.shl.cardId)
-			end
-			--计算升星升级等属性
-			local propjlr = fn_calCardProp(1,couple.jlr)
-			local propShl = fn_calCardProp(2,couple.shl)
-			lvProp[loc] = {}
-			lvProp[loc].propjlr = propjlr
-			lvProp[loc].propShl = propShl
-			--计算灵力共享
-			transProp[loc] = {}
-			transProp[loc].propjlr = CreatePropTable()
-			transProp[loc].propShl = CreatePropTable()
-
-			local jlrAttrTrans = couple.jlr and cfg_card[couple.jlr.cardId].stars[couple.jlr.star].AttrTrans
-			local shlAttrTrans = couple.shl and cfg_card[couple.shl.cardId].stars[couple.shl.star].AttrTrans
-			if jlrAttrTrans ~= nil then
-				for _ii,val in ipairs(jlrAttrTrans) do
-					transProp[loc].propjlr[val.id] = transProp[loc].propjlr[val.id] + lvProp[loc].propjlr[val.id] * val.val
-				end
-			end
-			if shlAttrTrans ~= nil then
-				for _ii,val in ipairs(shlAttrTrans) do
-					transProp[loc].propShl[val.id] = transProp[loc].propShl[val.id] + lvProp[loc].propShl[val.id] * val.val
-				end
-			end
-
-			--装备计算
-			eqpProp[loc] = {}
-			local success = false
-			if couple.jlr and couple.jlr.equip then
-				eqpProp[loc].propjlr,success = fn_calEquipProp(couple.jlr.equip)
-				if not success then
-					print(string.format("lvId'jlr:%d,loc:%d eqp is wrong",lvId,loc))
-				end
-			else
-				eqpProp[loc].propjlr = CreatePropTable()
-			end
-			if couple.shl and couple.shl.equip then
-				eqpProp[loc].propshl,success = fn_calEquipProp(couple.shl.equip)
-				if not success then
-					print(string.format("lvId'shl:%d,loc:%d eqp is wrong",lvId,loc))
-				end
-			else
-				eqpProp[loc].propshl = CreatePropTable()
-			end
-
-			--专属武器强化
-			--ExWeapon
-			exWeaponProp[loc] = {}
-			exWeaponProp[loc].propshl = CreatePropTable()
-			if couple.shl and couple.shl.exWeapon then
-				local card_info = cfg_card[couple.shl.cardId]
-				local weapon_info = cfg_exweapon[card_info.ExWeapon]
-				local baseProp = table.clone(weapon_info.Prop)
-				local fac = weapon_info.Strength[couple.shl.exWeapon.lv].PropBonus
-				for _i,propData in ipairs(baseProp) do
-					local the_prop_cfg_info = cfg_prop[propData.id]
-					if the_prop_cfg_info.IsInt then
-						propData.val = math.floor(propData.val * fac)
+		for loc=1,3 do
+			local couple = cardGroupData[loc]
+			teamData.cards[loc] = {}
+			for the_type,the_card_info in pairs(couple) do
+				teamData.cards[loc][the_type] = nil
+				if the_card_info.cardId then
+					teamData.cards[loc][the_type] = {}
+					teamData.cards[loc][the_type].id = the_card_info.id
+					teamData.cards[loc][the_type].cardId = the_card_info.cardId
+					--卡牌基础属性
+					teamData.cards[loc][the_type].tmpProp = {}
+					local iType = iTypesMemp[the_type]
+					teamData.cards[loc][the_type].tmpProp.cardProp = fn_calCardProp(iType,the_card_info)
+					--装备属性
+					if the_card_info.equip then
+						teamData.cards[loc][the_type].tmpProp.eqpProp = fn_calEquipProp(the_card_info.equip)
 					else
-						propData.val = propData.val * fac
+						teamData.cards[loc][the_type].tmpProp.eqpProp = CreatePropTable()
+					end
+					--神器属性
+					teamData.cards[loc][the_type].tmpProp.relicProp = CreatePropTable()
+					fn_calRelicProp(dscfg_relicGroup[relicGroup].relic, teamData.cards[loc][the_type].tmpProp.relicProp,cfg_card[the_card_info.cardId].mask)
+					--专属武器龙珠属性
+					if the_type == "shl" then
+						teamData.cards[loc][the_type].tmpProp.exWeaponProp = fn_calExWeaponProp(the_card_info.cardId,the_card_info.exWeapon)
+					end
+					--灵力共享
+					if the_type == "jlr" then
+						--teamData.cards[loc][the_type].transProp = teamData.cards[loc][the_type].cardProp * 
+						--太麻烦，暂时先不加
 					end
 				end
-				exWeaponProp[loc].propshl:add(baseProp,true)
 			end
-
-
-
 		end
-
-		-- if cardGroupId == 10815 then
-		-- 	print("shl-".."1"..":")
-		-- 	eqpProp[1].propshl:print()
-		-- end 
-
 
 		--数据加和
-		for loc,couple in ipairs(cardGroupData) do
-			if finnalProp[loc].jlr then
-				--finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr
-				finnalProp[loc].jlr.prop = iniProp[loc].propjlr +  finnalProp[loc].jlr.prop + lvProp[loc].propjlr + eqpProp[loc].propjlr
-			end
-			if finnalProp[loc].shl then
-				--finnalProp[loc].shl.prop = iniProp[loc].propShl + finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr + exWeaponProp[loc].propshl
-				finnalProp[loc].shl.prop = iniProp[loc].propShl + finnalProp[loc].shl.prop + lvProp[loc].propShl + transProp[loc].propjlr + eqpProp[loc].propshl + exWeaponProp[loc].propshl
-			end
+		for loc,couple in ipairs(teamData.cards) do
+			--寄灵人属性
+			couple.jlr.finalProp = couple.jlr.tmpProp.cardProp + couple.jlr.tmpProp.relicProp + couple.jlr.tmpProp.eqpProp
+			couple.jlr.tmpProp = nil
+			--守护灵属性
+			couple.shl.finalProp = couple.shl.tmpProp.cardProp + couple.shl.tmpProp.relicProp + couple.shl.tmpProp.eqpProp + couple.shl.tmpProp.exWeaponProp
+			couple.shl.tmpProp = nil
 		end
-
-		--处理神器数据
-		for loc,couple in ipairs(cardGroupData) do
-			if couple.jlr then
-				local the_data = couple.jlr
-				local the_prop = finnalProp[loc].jlr.prop
-				if not dscfg_relicGroup[relicGroup] then
-					print("can't find the relicGroup ",relicGroup)
-				end
-				if finnalProp[loc] == nil then print("loc = "..loc.." can't find") end
-				if cfg_card[couple.jlr.cardId] == nil then print("couple.jlr.cardId = "..couple.jlr.cardId.." can't find") end
-				fn_calRelicProp(dscfg_relicGroup[relicGroup].relic,finnalProp[loc].jlr.prop ,cfg_card[couple.jlr.cardId].mask,finnalProp[loc].jlr.id)
-			end
-			if couple.shl then
-				fn_calRelicProp(dscfg_relicGroup[relicGroup].relic,finnalProp[loc].shl.prop ,cfg_card[couple.shl.cardId].mask,finnalProp[loc].shl.id)
-			end
-		end
-
 
 		--属性乘百分比系数
-		local monProp = {}
-		monProp.lvId = lvId
-		for loc,couple in ipairs(finnalProp) do
-			monProp[loc] = {}
+		for loc,couple in ipairs(teamData.cards) do
 			for type,data in pairs(couple) do
-				data.prop.Atk = math.floor(data.prop.Atk * (1 + data.prop.AtkRate) + data.prop.AtkExt)
-				data.prop.Def = math.floor(data.prop.Def * (1 + data.prop.DefRate) + data.prop.DefExt)
-				data.prop.HP = math.floor(data.prop.HP * (1 + data.prop.HPRate) + data.prop.HPExt)
-				--处理怪物数据
-				if data.mon then	
-					monProp[loc][type] ={}
-					local the_prop = CreatePropTable()
-					the_prop = the_prop + data.prop
-					--the_prop.HP =  math.floor(the_prop.HP * math.sqrt(data.mon.bsFac) * math.sqrt(data.mon.rou))
-					--the_prop.Atk = math.floor(the_prop.Atk * math.sqrt(data.mon.bsFac) / math.sqrt(data.mon.rou))
-					if data.mon.suffer == nil or data.mon.exert == nil then
-						print(string.format("lv:%d-%d-%s id：%d is wrong",lvId,loc,type,data.id))
+				data.finalProp.Atk = math.floor(data.finalProp.Atk * (1 + data.finalProp.AtkRate) * (1 + data.finalProp.BasePropAll) + data.finalProp.AtkExt)
+				data.finalProp.Def = math.floor(data.finalProp.Def * (1 + data.finalProp.DefRate) * (1 + data.finalProp.BasePropAll) + data.finalProp.DefExt)
+				data.finalProp.HP = math.floor(data.finalProp.HP * (1 + data.finalProp.HPRate) * (1 + data.finalProp.BasePropAll) + data.finalProp.HPExt)
+			end
+		end
+		table.insert(lvProps,teamData)
+		--计算怪物属性
+		local monTeam = {}
+		local sType = {"jlr","shl"}
+		local hpDAtk = {5,10}
+		monTeam.lvId = lvId
+		for loc=1,3 do
+			local couple = cardGroupData[loc]
+			monTeam[loc] = {}
+			for type,data in pairs(couple) do
+				if data.mon then
+					monTeam[loc][type] = {}
+					local curData = monTeam[loc][type]
+					local srcType = data.mon.srcType
+					local srcLoc = data.mon.srcLoc
+					if not teamData.cards[srcLoc] then
+						print("can't find the loc "..srcLoc)
 					end
-
-					local def = math.floor(the_prop.Atk / 2)
-					local hp = math.floor(the_prop.Atk * data.mon.suffer * the_prop.R / (the_prop.R + def))
-					local atk = math.floor(the_prop.HP / data.mon.exert * (the_prop.R + def) / the_prop.R)
-					if atk > hp then
-						print(string.format("lv:%d-%d-%s id：%d atk > hp R = %d Atk = %d Def = %d HP = %d",
-							lvId,loc,type,data.id,the_prop.R,data.prop.Atk,data.prop.Def,data.prop.HP))
-					end
-
-
-					the_prop.HP = hp
-					the_prop.Atk = atk
-					the_prop.Def = def
-
-					monProp[loc][type].prop = the_prop
-					monProp[loc][type].monId = data.mon.id
-					monProp[loc][type].id = data.id
-					monProp[loc][type].note = data.mon.note
-					monProp[loc][type].lv = data.mon.lv
-					monProp[loc][type].skillLv = data.mon.skillLv
-					
+					local srcProp = teamData.cards[srcLoc][sType[srcType]].finalProp
+					curData.id = data.id
+					curData.monId = data.mon.id
+					curData.skillLv = data.mon.skillLv
+					curData.lv = data.lv
+					curData.note = data.mon.desc
+					--计算怪物属性
+					curData.prop = CreatePropTable()
+					curData.prop.Atk =  math.floor(math.max(srcProp.HP / hpDAtk[srcType], srcProp.Def * 2))
+					curData.prop.Def = math.floor(srcProp.Atk / 2)
+					curData.prop.HP = math.floor(srcProp.Atk / 2 * data.mon.suffer)
+					curData.prop.DmgBonus = 1 / data.mon.exert * hpDAtk[srcType] - 1
 				end
 			end
 		end
-		table.insert(monProps,monProp)
-		table.insert(lvProps,finnalProp)
+		table.insert(monProps,monTeam)
 	end
 	table.sort(lvProps,function(a,b)
 		return a.lvId < b.lvId
@@ -409,12 +324,11 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 	for _row,data in ipairs(v_cardData) do
 		local totalBs = 0
 		local monsters = {}
-		for _loc,locData in ipairs(data) do
+		for _loc,locData in ipairs(data.cards) do
 			local couple = {locData.jlr,locData.shl}
 			for _i,sgCardData in ipairs(couple) do
-
 				if sgCardData.id then
-					local prop = sgCardData.prop
+					local prop = sgCardData.finalProp
 					v_card_attr_sheet:set_valf("lvid",row,sgCardData.id)
 					v_card_attr_sheet:set_valf("loc",row,_loc)
 					v_card_attr_sheet:set_vals("type",row,card_type_name[_i])
@@ -426,7 +340,7 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 						end
 						bs = bs + propCfgData.BsFactor * prop[propCfgData.EnName]
 					end
-					bs = bs - cfg_global.DefaultCritDmg * cfg_prop[105].BsFactor
+					--bs = bs - cfg_global.DefaultCritDmg * cfg_prop[105].BsFactor
 					v_card_attr_sheet:set_vali("bs",row,bs)
 					totalBs = totalBs + bs
 					row = row + 1
@@ -451,7 +365,6 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 					local prop = sgMonData.prop
 					local monId = sgMonData.monId
 					local moncfgData = cfg_mon[monId]
-
 					if not monId then
 						print("can't find sgMonData.id ",sgMonData.id)
 					end
@@ -469,13 +382,15 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 						end
 					end
 					v_mon_attr_sheet:set_vali("RoleId",row,moncfgData.roleId)
+					for BubbleIdx,BubbleId in ipairs(moncfgData.Bubble) do
+						v_mon_attr_sheet:set_vali(string.format("Bubble[%d]",BubbleIdx),row,BubbleId)
+					end
 					if moncfgData.shl then
 						v_mon_attr_sheet:set_vali("CallCost",row,moncfgData.shl.callCost)
 						v_mon_attr_sheet:set_vali("CallCD",row,moncfgData.shl.callCd)
 						v_mon_attr_sheet:set_vali("CrystalType",row,moncfgData.shl.crystalType)
-						--print("lvid ",data.lvid  * 100 + _loc*10 + _i," loc ",_loc," ",card_type_name[_i])
 					else
-						--print("lvid ",data.lvid  * 100 + _loc*10 + _i," loc ",_loc," ",card_type_name[_i])
+
 					end
 					
 					for key,propCfgData in pairs(cfg_prop) do
