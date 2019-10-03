@@ -27,11 +27,11 @@ local data = {
 		[13] = {Name = "焦热",QuaColorIdx = 6,QuaSmLv = 0,HellLevel = 13,BegLevel = 90,LevelLimit = 120},
 		[14] = {Name = "焦热+1",QuaColorIdx = 6,QuaSmLv = 1,HellLevel = 14,BegLevel = 90,LevelLimit = 120},
 		[15] = {Name = "焦热+2",QuaColorIdx = 6,QuaSmLv = 2,HellLevel = 15,BegLevel = 90,LevelLimit = 120},
-		[16] = {Name = "大焦热",QuaColorIdx = 7,QuaSmLv = 0,HellLevel = 16,BegLevel = 110,LevelLimit = 150},
-		[17] = {Name = "大焦热+1",QuaColorIdx = 7,QuaSmLv = 1,HellLevel = 17,BegLevel = 110,LevelLimit = 150},
-		[18] = {Name = "大焦热+2",QuaColorIdx = 7,QuaSmLv = 2,HellLevel = 18,BegLevel = 110,LevelLimit = 150},
-		[19] = {Name = "无间",QuaColorIdx = 8,QuaSmLv = 0,HellLevel = 19,BegLevel = 135,LevelLimit = 150},
-		[20] = {Name = "无间+1",QuaColorIdx = 8,QuaSmLv = 1,HellLevel = 20,BegLevel = 135,LevelLimit = 150}
+		[16] = {Name = "大焦热",QuaColorIdx = 7,QuaSmLv = 0,HellLevel = 16,BegLevel = 120,LevelLimit = 150},
+		[17] = {Name = "大焦热+1",QuaColorIdx = 7,QuaSmLv = 1,HellLevel = 17,BegLevel = 120,LevelLimit = 150},
+		[18] = {Name = "大焦热+2",QuaColorIdx = 7,QuaSmLv = 2,HellLevel = 18,BegLevel = 120,LevelLimit = 150},
+		[19] = {Name = "无间",QuaColorIdx = 8,QuaSmLv = 0,HellLevel = 19,BegLevel = 140,LevelLimit = 150},
+		[20] = {Name = "无间+1",QuaColorIdx = 8,QuaSmLv = 1,HellLevel = 20,BegLevel = 140,LevelLimit = 150}
 	},
 	[2] = {
 		[1] = {Name = "白",QuaColorIdx = 1,QuaSmLv = 0,HellLevel = 1,BegLevel = 1,LevelLimit = 5},

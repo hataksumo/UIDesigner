@@ -89,6 +89,7 @@ function output_excel()
 	--"Excel\\RelicAct"
 	--"Excel\\EquipDs"
 	--"Excel\\ExWpWbossOutput"
+	--"Excel\\UpProcessOutput"
 	}
 	for _i,val in ipairs(output) do
 		local fn = dofile(val)

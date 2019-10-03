@@ -9,6 +9,7 @@ primary key:
 local _T = LangUtil.Language
 return{
 	[1] = {
+		[0] = {Cost = {[1] = {Id = 1401002,Val = 0,ValSum = 0}},Fac = 0},
 		[1] = {Cost = {[1] = {Id = 1401002,Val = 80,ValSum = 80}},Fac = 1},
 		[2] = {Cost = {[1] = {Id = 1401002,Val = 85,ValSum = 165}},Fac = 2},
 		[3] = {Cost = {[1] = {Id = 1401002,Val = 90,ValSum = 255}},Fac = 3},
@@ -161,6 +162,7 @@ return{
 		[150] = {Cost = {[1] = {Id = 1401002,Val = 30045,ValSum = 724085}},Fac = 150}
 	},
 	[2] = {
+		[0] = {Cost = {[1] = {Id = 1401002,Val = 0,ValSum = 0}},Fac = 0},
 		[1] = {Cost = {[1] = {Id = 1401002,Val = 130,ValSum = 130}},Fac = 1},
 		[2] = {Cost = {[1] = {Id = 1401002,Val = 135,ValSum = 265}},Fac = 2},
 		[3] = {Cost = {[1] = {Id = 1401002,Val = 140,ValSum = 405}},Fac = 3},
@@ -313,6 +315,7 @@ return{
 		[150] = {Cost = {[1] = {Id = 1401002,Val = 48070,ValSum = 1158405}},Fac = 150}
 	},
 	[3] = {
+		[0] = {Cost = {[1] = {Id = 1401002,Val = 0,ValSum = 0}},Fac = 0},
 		[1] = {Cost = {[1] = {Id = 1401002,Val = 160,ValSum = 160}},Fac = 1},
 		[2] = {Cost = {[1] = {Id = 1401002,Val = 170,ValSum = 330}},Fac = 2},
 		[3] = {Cost = {[1] = {Id = 1401002,Val = 175,ValSum = 505}},Fac = 3},
@@ -465,6 +468,7 @@ return{
 		[150] = {Cost = {[1] = {Id = 1401002,Val = 60085,ValSum = 1447975}},Fac = 150}
 	},
 	[4] = {
+		[0] = {Cost = {[1] = {Id = 1401002,Val = 0,ValSum = 0}},Fac = 0},
 		[1] = {Cost = {[1] = {Id = 1401002,Val = 195,ValSum = 195}},Fac = 1},
 		[2] = {Cost = {[1] = {Id = 1401002,Val = 205,ValSum = 400}},Fac = 2},
 		[3] = {Cost = {[1] = {Id = 1401002,Val = 210,ValSum = 610}},Fac = 3},

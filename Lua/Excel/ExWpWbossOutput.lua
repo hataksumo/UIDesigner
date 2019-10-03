@@ -4,6 +4,10 @@ local fn_calDrop = function(v_dropGroupSheet,v_dropSheet)
 	local cfgWpDpDs = dofile "Config\\exWeaponDropDs"
 	local cfgWpGroupDs = dofile "Config\\exWeaponGroupDs"
 	local quaStr = {"SR","SR+","SSR","SSR+","UR"}
+	local quaNum = {40,40,80,80,80}
+
+
+
 
 	for id,data in ipairs(cfgWpDpDs) do
 		--掉落组表
@@ -34,8 +38,6 @@ local fn_calDrop = function(v_dropGroupSheet,v_dropSheet)
 		xis_drop.Item.numMax = data.XLP.Max
 		xis_drop.Weight = 10000
 		table.insert(drop,xis_drop)
-
-
 		--掉落表
 		--专属武器碎片
 		for qua=1,6 do
@@ -85,6 +87,46 @@ local fn_calDrop = function(v_dropGroupSheet,v_dropSheet)
 				end
 			end
 		end
+
+		local hardDropGroup = {}
+		local nightmareDropGroup = {}
+		hardDropGroup.id = 5000+id*10+7
+		hardDropGroup.type = 2
+		hardDropGroup.note = data.Name.."困难专属整件掉落组"
+		hardDropGroup.Weight = 10000
+
+		nightmareDropGroup.id = 5000+id*10+8
+		nightmareDropGroup.type = 2
+		nightmareDropGroup.note = data.Name.."噩梦专属整件掉落组"
+		nightmareDropGroup.Weight = 10000
+
+		table.insert(dropGroup,hardDropGroup)
+		table.insert(dropGroup,nightmareDropGroup)
+
+		for qua=1,6 do
+			local the_qua_num = data.D[qua]
+			if the_qua_num and the_qua_num > 0 then
+				local prob_hard = the_qua_num / quaNum[qua] / 2.0
+				local prob_nightmare = the_qua_num / quaNum[qua]
+				for _i,dropItemData in ipairs(cfgWpGroupDs[qua].wps) do
+					local hard_drop = {}
+					hard_drop.GroupId = hardDropGroup.id
+					hard_drop.note = hardDropGroup.note.."  "..dropItemData.Note.."x"..quaNum[qua]
+					hard_drop.Item = {}
+					hard_drop.Item.id = dropItemData.Note
+					hard_drop.Item.numMin = quaNum[qua]
+					hard_drop.Item.numMax = quaNum[qua]
+					hard_drop.Weight = math.floor(prob_hard * dropItemData.Weight)
+					local nightmare_drop = table.clone(hard_drop)
+					nightmare_drop.GroupId = nightmareDropGroup.id
+					nightmare_drop.note = nightmareDropGroup.note.."  "..dropItemData.Note.."x"..quaNum[qua]
+					nightmare_drop.Weight = math.floor(prob_nightmare * dropItemData.Weight)
+					table.insert(drop,hard_drop)
+					table.insert(drop,nightmare_drop)
+				end
+			end
+		end
+
 	end
 	--导出DropGroup
 	local row = 3

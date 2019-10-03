@@ -12,8 +12,8 @@ if ddt["card_relation"] ~= nil then
 end
 local data = {
 	[1101001] = {
-		[1] = {Id = 1,Name = "末将于禁",RelationIds = {[1] = 1101001,[2] = 1102015},Prop = {[1] = {Id = 113,Val = 200}}},
-		[2] = {Id = 2,Name = "虎痴悍将",RelationIds = {[1] = 1101001,[2] = 1102002},Prop = {[1] = {Id = 111,Val = 50}}},
+		[1] = {Id = 1,Name = "末将于禁",RelationIds = {[1] = 1101001,[2] = 1102015},Prop = {[1] = {Id = 110,Val = 0.01}}},
+		[2] = {Id = 2,Name = "虎痴悍将",RelationIds = {[1] = 1101001,[2] = 1102002},Prop = {[1] = {Id = 108,Val = 0.01}}},
 		[3] = {Id = 3,Name = "忠勇护卫",RelationIds = {[1] = 1101001,[2] = 1102009},Prop = {[1] = {Id = 110,Val = 0.05}}}
 	},
 	[1101002] = {

@@ -43,13 +43,18 @@ local fn_calLevelProp = function()
 		 	return prop
 		end
 		local card_info = cfg_card[v_cfg.cardId]
-		if not card_info then
+		if not card_info and card_info.Type == 1 then
 			print("card_info is nil")
 			return prop
 		end
 		local cardbk_info = card_info.hells[v_cfg.bklv]
 		local cardstar_info = card_info.stars[v_cfg.star]
 		local hell_info = cfg_hell_name[v_iType][v_cfg.bklv]
+		if not card_info.ghost then
+			print(card_info.Name.."  no ghost")
+		end
+
+
 		local ghost_info = v_iType == 2 and card_info.ghost[v_cfg.ghost] or {}
 		local break_info = cfg_hell_name[v_iType][v_cfg.bklv]
 
@@ -382,8 +387,10 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 						end
 					end
 					v_mon_attr_sheet:set_vali("RoleId",row,moncfgData.roleId)
-					for BubbleIdx,BubbleId in ipairs(moncfgData.Bubble) do
-						v_mon_attr_sheet:set_vali(string.format("Bubble[%d]",BubbleIdx),row,BubbleId)
+					if moncfgData.Bubble then
+						for BubbleIdx,BubbleId in ipairs(moncfgData.Bubble) do
+							v_mon_attr_sheet:set_vali(string.format("Bubble[%d]",BubbleIdx),row,BubbleId)
+						end
 					end
 					if moncfgData.shl then
 						v_mon_attr_sheet:set_vali("CallCost",row,moncfgData.shl.callCost)
