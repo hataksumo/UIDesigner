@@ -1,4 +1,7 @@
-local fn_classfy_eqpcfg = function()
+_G.fn_classfy_eqpcfg = function()
+	if _G["classfy_eqp"] then
+		return _G["classfy_eqp"]
+	end
 	local eqp_cfg_classfy = {}
 	eqp_cfg_classfy[1] = {}
 	eqp_cfg_classfy[2] = {}
@@ -47,6 +50,8 @@ local fn_classfy_eqpcfg = function()
 		return eqpData.name
 	end
 
+	_G["classfy_eqp"] = eqp_cfg_classfy
+
 	return eqp_cfg_classfy
 end
 
@@ -54,19 +59,44 @@ end
 local fn_cal_eqp_process = function()
 	local cfg_up_process = dofile "Config\\upProcessCfg"
 	local lvTypeSeqs = {
-		["gq10"] = {1,1,2,1,1,3,1,1,4,5}
+		["gq10"] = {1,1,2,1,1,3,1,1,4,5},
+		["tw2"] = {4,4},
+		["tw3"] = {4,4,4},
+		["tw5"] = {4,4,4,4,5},
+		["daily1"] = {1}
 	}
 	local lvProcessSeqs = {
-		["gq10"] = {0,0.1,0.3,0.4,0.5,0.7,0.8,0.9,1,1}
+		["gq10"] = {0,0.1,0.3,0.4,0.5,0.7,0.8,0.9,1,1},
+		["tw2"] = {0.5,1},
+		["tw3"] = {0.3,0.6,1},
+		["tw5"] = {0.2,0.4,0.6,0.8,1},
+		["daily1"] = {1}
 	}
 
 	local eqpQuaProcessSeqs = {
 		["gq10"] = {
 			jlr = {0,0,0,0,0,1,1,1,1,1},
 			shl = {0,0,1,1,1,1,1,1,1,1}
+		},
+		["tw2"] = {
+			jlr = {0,1},
+			shl = {1,1}
+		},
+		["tw3"] = {
+			jlr = {0,0,1},
+			shl = {0,1,1}
+		},
+		["tw5"] = {
+			jlr = {0,0,0,1,1},
+			shl = {0,1,1,1,1}
+		},
+		["daily1"] = {
+			jlr = {1},
+			shl = {1}
 		}
 	}
-	local stype = {"pt","kn"}
+	local stype = {"pt","kn","tw_f","tw_h","tw_x","tw_y","daily_ghost","daily_break","daily_gold","daily_relic","daily_exwp"}
+	--local stype = {"tw_f"}
 	local sFieldTypes = {"jlr","shl"}
 
 	local eqp_cfg_classfy = fn_classfy_eqpcfg()
@@ -105,14 +135,19 @@ local fn_cal_eqp_process = function()
 			local nTypeCfg = lvTypeSeqs[nType]
 			local nQuaProcessCfg = eqpQuaProcessSeqs[nType]
 			local chaId = cha_groups[_i].ChaId
-			chaOptProcessData_eqp[chaId] = {}		
+			local baseLvId = cha_groups[_i].BegLvId
+			if not chaOptProcessData_eqp[chaId] then
+				chaOptProcessData_eqp[chaId] = {}
+			end		
 			local rtnChaData = chaOptProcessData_eqp[chaId]
 			--各关卡
-			for lvLoc,lvnType in ipairs(nTypeCfg) do
+			for lvLoc=1,cha_groups[_i].n do
+				local lvnType = nTypeCfg[lvLoc]
 				local process_rate = lvProcessSeqs[nType][lvLoc]
-				local lvId = chaId * 100 + lvLoc
+				local lvId = baseLvId + lvLoc
 				rtnChaData[lvId] = {}
 				local rtnLvData = rtnChaData[lvId]
+				--print(string.format("chaOptProcessData_eqp[%d][%d] = {}",chaId,lvId))
 				for loc=1,3 do
 					rtnLvData[loc] = {}
 					local rtnLocData = rtnLvData[loc]
@@ -134,7 +169,7 @@ local fn_cal_eqp_process = function()
 						local lvQuaPre = pre_cha_cfg.EqpLvId[loc][sFieldType].qua
 						local lvQuaCur = cur_cha_cfg.EqpLvId[loc][sFieldType].qua
 						local lvQua = lvQuaPre * (1-qua_process_rate) + lvQuaCur * qua_process_rate
-
+						--print(string.format("chaOptProcessData_eqp[%d][%d][%d].%s.equipts = {}",chaId,lvId,loc,sFieldType))
 						for pos=1,8 do
 							rtnEqps[pos] = {}
 							local the_eqp_data = rtnEqps[pos]

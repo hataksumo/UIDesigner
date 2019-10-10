@@ -164,16 +164,26 @@ return{
 	[334] = {name = "魔导机兵团",card_id = nil,roleId = 1201011,color = 0,exert = 1,suffer = 1,skill = {[1] = 1820001,[2] = 1802011,[3] = 1803011},shl = {callCost = 4,callCd = 4,crystalType = 2},Bubble = {[1] = 8}},--魔导机兵团-行动-蓝
 	[335] = {name = "异邦刀客",card_id = nil,roleId = 1102023,color = 0,exert = 1,suffer = 1,skill = {[1] = 1821001,[2] = 1801006},shl = {callCost = 4,callCd = 4,crystalType = 2},Bubble = {[1] = 9}},--异邦刀客-优先-蓝
 	[336] = {name = "柠檬精",card_id = nil,roleId = 1102050,color = 0,exert = 1,suffer = 1,skill = {[1] = 1820001,[2] = 1802011,[3] = 1803011},shl = {callCost = 4,callCd = 4,crystalType = 3},Bubble = {[1] = 8}},--柠檬精-行动-蓝
-	[337] = {name = "伏尸将军",card_id = nil,roleId = 1201008,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801008,[2] = 1802008,[3] = 1826001},shl = {callCost = 4,callCd = 4,crystalType = 1}},--伏尸将军-伤害增幅-红
-	[338] = {name = "伏尸将军",card_id = nil,roleId = 1201008,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801008,[2] = 1802008,[3] = 1826001},shl = {callCost = 4,callCd = 4,crystalType = 2}},--伏尸将军-伤害增幅-黄
-	[339] = {name = "伏尸将军",card_id = nil,roleId = 1201008,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801008,[2] = 1802008,[3] = 1826001},shl = {callCost = 4,callCd = 4,crystalType = 3}},--伏尸将军-伤害增幅-蓝
-	[340] = {name = "山蜘蛛",card_id = nil,roleId = 1201012,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801012,[2] = 1802012,[3] = 1827001},shl = {callCost = 4,callCd = 4,crystalType = 1}},--山蜘蛛-持续回血-红
-	[341] = {name = "山蜘蛛",card_id = nil,roleId = 1201012,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801012,[2] = 1802012,[3] = 1827001},shl = {callCost = 4,callCd = 4,crystalType = 2}},--山蜘蛛-持续回血-黄
-	[342] = {name = "山蜘蛛",card_id = nil,roleId = 1201012,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801012,[2] = 1802012,[3] = 1827001},shl = {callCost = 4,callCd = 4,crystalType = 3}},--山蜘蛛-持续回血-蓝
-	[343] = {name = "食火蜥",card_id = nil,roleId = 1102019,color = 0,exert = 1,suffer = 1,skill = {[1] = 1809001,[2] = 1807001,[3] = 1828001},shl = {callCost = 4,callCd = 4,crystalType = 1}},--食火蜥-反弹伤害-红
-	[344] = {name = "食火蜥",card_id = nil,roleId = 1102019,color = 0,exert = 1,suffer = 1,skill = {[1] = 1809001,[2] = 1807001,[3] = 1828001},shl = {callCost = 4,callCd = 4,crystalType = 2}},--食火蜥-反弹伤害-黄
-	[345] = {name = "食火蜥",card_id = nil,roleId = 1102019,color = 0,exert = 1,suffer = 1,skill = {[1] = 1809001,[2] = 1807001,[3] = 1828001},shl = {callCost = 4,callCd = 4,crystalType = 3}},--食火蜥-反弹伤害-蓝
-	[346] = {name = "小蜘蛛",card_id = nil,roleId = 1201010,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801010,[2] = 1829001},shl = {callCost = 4,callCd = 4,crystalType = 1}},--小蜘蛛-死亡增伤-红
-	[347] = {name = "小蜘蛛",card_id = nil,roleId = 1201010,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801010,[2] = 1829001},shl = {callCost = 4,callCd = 4,crystalType = 2}},--小蜘蛛-死亡增伤-黄
-	[348] = {name = "小蜘蛛",card_id = nil,roleId = 1201010,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801010,[2] = 1829001},shl = {callCost = 4,callCd = 4,crystalType = 3}}--小蜘蛛-死亡增伤-蓝
+	[337] = {name = "伏尸将军",card_id = nil,roleId = 1201008,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801008,[2] = 1802008,[3] = 1826001},shl = {callCost = 4,callCd = 4,crystalType = 1}},--伏尸将军-3-3-红
+	[338] = {name = "山蜘蛛",card_id = nil,roleId = 1201012,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801012,[2] = 1802012,[3] = 1827001},shl = {callCost = 4,callCd = 4,crystalType = 1}},--山蜘蛛-3-6-红
+	[339] = {name = "食火蜥",card_id = nil,roleId = 1102019,color = 0,exert = 1,suffer = 1,skill = {[1] = 1809001,[2] = 1807001,[3] = 1828001},shl = {callCost = 4,callCd = 4,crystalType = 1}},--食火蜥-3-9-红
+	[340] = {name = "小蜘蛛",card_id = nil,roleId = 1201010,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801010,[2] = 1829001},shl = {callCost = 4,callCd = 4,crystalType = 2}},--小蜘蛛-3-10-黄
+	[341] = {name = "小蜘蛛",card_id = nil,roleId = 1201010,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801010,[2] = 1829001},shl = {callCost = 4,callCd = 4,crystalType = 3}},--小蜘蛛-3-10-蓝
+	[342] = {name = "魔导机兵团",card_id = nil,roleId = 1201011,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802011,[2] = 1803011,[3] = 1831001},shl = {callCost = 4,callCd = 4,crystalType = 1}},--魔导机兵团-4-3-红
+	[343] = {name = "魔导机兵团",card_id = nil,roleId = 1201011,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802011,[2] = 1803011,[3] = 1831001},shl = {callCost = 4,callCd = 4,crystalType = 2}},--魔导机兵团-4-3-黄
+	[344] = {name = "魔导机兵团",card_id = nil,roleId = 1201011,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802011,[2] = 1803011,[3] = 1831001},shl = {callCost = 4,callCd = 4,crystalType = 3}},--魔导机兵团-4-3-蓝
+	[345] = {name = "魔导机兵团",card_id = nil,roleId = 1201011,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802011,[2] = 1803011,[3] = 1832001},shl = {callCost = 4,callCd = 4,crystalType = 1}},--魔导机兵团-4-9-红
+	[346] = {name = "魔导机兵团",card_id = nil,roleId = 1201011,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802011,[2] = 1803011,[3] = 1832001},shl = {callCost = 4,callCd = 4,crystalType = 2}},--魔导机兵团-4-9-黄
+	[347] = {name = "魔导机兵团",card_id = nil,roleId = 1201011,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802011,[2] = 1803011,[3] = 1832001},shl = {callCost = 4,callCd = 4,crystalType = 3}},--魔导机兵团-4-9-蓝
+	[348] = {name = "石瀑将军",card_id = nil,roleId = 1201009,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801009,[2] = 1802009},shl = {callCost = 4,callCd = 4,crystalType = 1}},--石瀑将军-4-10-红
+	[349] = {name = "魔导机兵团",card_id = nil,roleId = 1201011,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802011,[2] = 1803011,[3] = 1835001},shl = {callCost = 4,callCd = 4,crystalType = 2}},--魔导机兵团-4-10-黄
+	[350] = {name = "魔导机兵团",card_id = nil,roleId = 1201011,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802011,[2] = 1803011,[3] = 1835001},shl = {callCost = 4,callCd = 4,crystalType = 3}},--魔导机兵团-4-10-蓝
+	[351] = {name = "双刃鬼兵",card_id = nil,roleId = 1201003,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802003,[2] = 1803003,[3] = 1837001},shl = {callCost = 4,callCd = 4,crystalType = 1}},--双刃鬼兵-5-3-红
+	[352] = {name = "链球鬼兵",card_id = nil,roleId = 1201001,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802001,[2] = 1803001,[3] = 1838001},shl = {callCost = 4,callCd = 4,crystalType = 1}},--链球鬼兵-5-6-红
+	[353] = {name = "链球鬼兵",card_id = nil,roleId = 1201001,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802001,[2] = 1803001,[3] = 1838001},shl = {callCost = 4,callCd = 4,crystalType = 2}},--链球鬼兵-5-6-黄
+	[354] = {name = "链球鬼兵",card_id = nil,roleId = 1201001,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802001,[2] = 1803001,[3] = 1838001},shl = {callCost = 4,callCd = 4,crystalType = 3}},--链球鬼兵-5-6-蓝
+	[355] = {name = "双刃鬼兵",card_id = nil,roleId = 1201003,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802003,[2] = 1803003,[3] = 1839001},shl = {callCost = 4,callCd = 4,crystalType = 1}},--双刃鬼兵-5-9-红
+	[356] = {name = "双刃鬼兵",card_id = nil,roleId = 1201003,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802003,[2] = 1803003,[3] = 1839001},shl = {callCost = 4,callCd = 4,crystalType = 2}},--双刃鬼兵-5-9-黄
+	[357] = {name = "双刃鬼兵",card_id = nil,roleId = 1201003,color = 0,exert = 1,suffer = 1,skill = {[1] = 1802003,[2] = 1803003,[3] = 1839001},shl = {callCost = 4,callCd = 4,crystalType = 3}},--双刃鬼兵-5-9-蓝
+	[358] = {name = "伏尸将军",card_id = nil,roleId = 1201008,color = 0,exert = 1,suffer = 1,skill = {[1] = 1801008,[2] = 1840001,[3] = 1841001},shl = {callCost = 4,callCd = 4,crystalType = 1}}--伏尸将军-5-10-红
 }

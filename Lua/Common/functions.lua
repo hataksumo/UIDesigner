@@ -110,3 +110,49 @@ function table.copyInto(v_dst,v_src)
 	end
 	return v_dst
 end
+
+
+
+local _println = function(v_sb,v_msg)
+	v_sb.data = v_sb.data..v_msg.."\n"
+	return v_sb.data
+end
+
+function PrintTable(v_sb, tbl, level, filteDefault)
+	local msg = ""
+	filteDefault = filteDefault or true --默认过滤关键字（DeleteMe, _class_type）
+	level = level or 1
+	local indent_str = ""
+	for i = 1, level do
+    	indent_str = indent_str.."  "
+	end
+
+	_println(v_sb,indent_str .. "{")
+	for k,v in pairs(tbl) do
+    	if filteDefault then
+      		if k ~= "_class_type" and k ~= "DeleteMe" then
+        		local item_str = string.format("%s%s = %s", indent_str .. " ",tostring(k), tostring(v))
+        		_println(v_sb,item_str)
+        	if type(v) == "table" then
+          		PrintTable(v_sb, v, level + 1)
+        	end
+      	end
+	    else
+	      	local item_str = string.format("%s%s = %s", indent_str .. " ",tostring(k), tostring(v))
+	      	_println(v_sb,item_str)
+	      	if type(v) == "table" then
+	        	PrintTable(v_sb, v, level + 1)
+	      	end
+	    end
+	end
+  _println(v_sb,indent_str .. "}")
+end
+
+
+
+table.debug = function(tbl, level, filteDefault)
+	local sb = {}
+	sb.data = ""
+	PrintTable(sb,tbl,level,filteDefault)
+	print(sb.data)
+end

@@ -11,7 +11,9 @@ local fn_calLevelProp = function()
 
 	local dscfg_cardGroup = dofile("Config\\cardGroup")
 	local dscfg_cardGroup1 = dofile("Config\\cardGroup_1")
+	local dscfg_cardGroup2 = dofile("Config\\cardGroup_2")
 	table.copyInto(dscfg_cardGroup,dscfg_cardGroup1)
+	table.copyInto(dscfg_cardGroup,dscfg_cardGroup2)
 	local dscfg_relicGroup = dofile("Config\\relicGroup")
 	local dscfg_levelDesigner = dofile("Config\\levelDesigner")
 
@@ -47,10 +49,15 @@ local fn_calLevelProp = function()
 			print("card_info is nil")
 			return prop
 		end
+
+		if not card_info.hells then
+			print(card_info.Name.." no hell")
+		end
+
 		local cardbk_info = card_info.hells[v_cfg.bklv]
 		local cardstar_info = card_info.stars[v_cfg.star]
 		local hell_info = cfg_hell_name[v_iType][v_cfg.bklv]
-		if not card_info.ghost then
+		if card_info.Type == 2 and (not card_info.ghost) then
 			print(card_info.Name.."  no ghost")
 		end
 
@@ -69,6 +76,9 @@ local fn_calLevelProp = function()
 		prop.Def = cardbk_info.BaseDef[v_cfg.star] + cardbk_info.UpDef[v_cfg.star] * (v_cfg.lv - break_info.BegLevel)
 		prop.HP = cardbk_info.BaseHP[v_cfg.star] + cardbk_info.UpHP[v_cfg.star] * (v_cfg.lv - break_info.BegLevel)
 
+		if v_iType == 2 and not v_cfg.ghost then
+			print(string.format("%d can't find ghost",v_cfg.id))
+		end
 		if v_iType == 2 and v_cfg.ghost > 0 then
 			for _i,data in ipairs(ghost_info) do
 				prop[data.Id] = prop[data.Id] + data.Sum
@@ -221,7 +231,7 @@ local fn_calLevelProp = function()
 		if not cardGroupData then
 			print(string.format("dscfg_cardGroup[%d] is nil",cardGroupId))
 		end
-		for loc=1,3 do
+		for loc=1,#cardGroupData do
 			local couple = cardGroupData[loc]
 			teamData.cards[loc] = {}
 			for the_type,the_card_info in pairs(couple) do
@@ -259,11 +269,15 @@ local fn_calLevelProp = function()
 		--数据加和
 		for loc,couple in ipairs(teamData.cards) do
 			--寄灵人属性
-			couple.jlr.finalProp = couple.jlr.tmpProp.cardProp + couple.jlr.tmpProp.relicProp + couple.jlr.tmpProp.eqpProp
-			couple.jlr.tmpProp = nil
+			if couple.jlr then
+				couple.jlr.finalProp = couple.jlr.tmpProp.cardProp + couple.jlr.tmpProp.relicProp + couple.jlr.tmpProp.eqpProp
+				couple.jlr.tmpProp = nil
+			end
 			--守护灵属性
-			couple.shl.finalProp = couple.shl.tmpProp.cardProp + couple.shl.tmpProp.relicProp + couple.shl.tmpProp.eqpProp + couple.shl.tmpProp.exWeaponProp
-			couple.shl.tmpProp = nil
+			if couple.shl then
+				couple.shl.finalProp = couple.shl.tmpProp.cardProp + couple.shl.tmpProp.relicProp + couple.shl.tmpProp.eqpProp + couple.shl.tmpProp.exWeaponProp
+				couple.shl.tmpProp = nil
+			end
 		end
 
 		--属性乘百分比系数
@@ -280,7 +294,7 @@ local fn_calLevelProp = function()
 		local sType = {"jlr","shl"}
 		local hpDAtk = {5,10}
 		monTeam.lvId = lvId
-		for loc=1,3 do
+		for loc=1,#cardGroupData do
 			local couple = cardGroupData[loc]
 			monTeam[loc] = {}
 			for type,data in pairs(couple) do
@@ -331,25 +345,29 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 		local monsters = {}
 		for _loc,locData in ipairs(data.cards) do
 			local couple = {locData.jlr,locData.shl}
-			for _i,sgCardData in ipairs(couple) do
-				if sgCardData.id then
-					local prop = sgCardData.finalProp
-					v_card_attr_sheet:set_valf("lvid",row,sgCardData.id)
-					v_card_attr_sheet:set_valf("loc",row,_loc)
-					v_card_attr_sheet:set_vals("type",row,card_type_name[_i])
-					v_card_attr_sheet:set_vals("name",row,cfg_card[sgCardData.cardId].Name)
-					local bs = 0
-					for key,propCfgData in pairs(cfg_prop) do
-						if propCfgData.IsMonProp then
-							v_card_attr_sheet:set_valf(propCfgData.EnName,row,prop[propCfgData.EnName])
+			for _i=1,2 do
+				local sgCardData = couple[_i]
+				if sgCardData then
+					if sgCardData.id then
+						local prop = sgCardData.finalProp
+						v_card_attr_sheet:set_valf("lvid",row,sgCardData.id)
+						v_card_attr_sheet:set_valf("loc",row,_loc)
+						v_card_attr_sheet:set_vals("type",row,card_type_name[_i])
+						v_card_attr_sheet:set_vals("name",row,cfg_card[sgCardData.cardId].Name)
+						local bs = 0
+						for key,propCfgData in pairs(cfg_prop) do
+							if propCfgData.IsMonProp then
+								v_card_attr_sheet:set_valf(propCfgData.EnName,row,prop[propCfgData.EnName])
+							end
+							bs = bs + propCfgData.BsFactor * prop[propCfgData.EnName]
 						end
-						bs = bs + propCfgData.BsFactor * prop[propCfgData.EnName]
+						--bs = bs - cfg_global.DefaultCritDmg * cfg_prop[105].BsFactor
+						v_card_attr_sheet:set_vali("bs",row,bs)
+						totalBs = totalBs + bs
+						row = row + 1
 					end
-					--bs = bs - cfg_global.DefaultCritDmg * cfg_prop[105].BsFactor
-					v_card_attr_sheet:set_vali("bs",row,bs)
-					totalBs = totalBs + bs
-					row = row + 1
 				end
+				
 			end
 		end
 		v_levelSheets:set_val_by_pmid(tostring(data.lvId) ,"bs",totalBs)	
