@@ -202,10 +202,13 @@ local fn_calLevelProp = function()
 		if not v_exWeaponCfg then
 			return rtnProp
 		end
+
 		local the_weapon_cfg = cfg_exWeapon[v_cardId]
 		if not the_weapon_cfg then
 			return rtnProp
 		end
+		local cardName = cfg_card[v_cardId].Name
+		--print("计算属性专属武器 "..cardName..string.format(" %d %d %d %d %d %d %d %d",v_exWeaponCfg[1],v_exWeaponCfg[2],v_exWeaponCfg[3],v_exWeaponCfg[4],v_exWeaponCfg[5],v_exWeaponCfg[6],v_exWeaponCfg[7],v_exWeaponCfg[8]))
 
 		for loc,lv in ipairs(v_exWeaponCfg) do
 			the_prop = the_weapon_cfg.HunZhu[loc].Lvs[lv].Prop
@@ -293,6 +296,7 @@ local fn_calLevelProp = function()
 		local monTeam = {}
 		local sType = {"jlr","shl"}
 		local hpDAtk = {5,10}
+		local atkEffectRate = {jlr = 5.0/12.0, shl = 10.0/21.0}
 		monTeam.lvId = lvId
 		for loc=1,#cardGroupData do
 			local couple = cardGroupData[loc]
@@ -316,7 +320,7 @@ local fn_calLevelProp = function()
 					curData.prop = CreatePropTable()
 					curData.prop.Atk =  math.floor(math.max(srcProp.HP / hpDAtk[srcType], srcProp.Def * 2))
 					curData.prop.Def = math.floor(srcProp.Atk / 2)
-					curData.prop.HP = math.floor(srcProp.Atk / 2 * data.mon.suffer)
+					curData.prop.HP = math.floor(srcProp.Atk * atkEffectRate[type] * data.mon.suffer)
 					curData.prop.DmgBonus = 1 / data.mon.exert * hpDAtk[srcType] - 1
 				end
 			end

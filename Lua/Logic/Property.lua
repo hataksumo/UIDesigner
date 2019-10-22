@@ -18,6 +18,7 @@ local _fnGetIndex = function(v_key)
 			return PropMT.keyHash[v_key] - PropMT.begin
 		end
 	elseif type(v_key) == "number" and v_key <= PropMT.begin + PropMT.len then
+		--print("in get number key "..v_key - PropMT.begin)
 		return v_key - PropMT.begin
 	end
 	return -1

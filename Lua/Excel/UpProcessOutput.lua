@@ -38,6 +38,13 @@ local fn_fill_the_sheet = function(v_sChaType,v_chaProcessData,v_chaEqpProcessDa
 						if cardData.iOptGhost then
 							v_propSimSheet:set_vali("ghost",row,cardData.iOptGhost)
 						end
+						--导出专属武器
+						if the_type_field == "shl" then
+							for exWpPos=1,8 do
+								local sExWpHeader = string.format("exWeapon[%d]",exWpPos)
+								v_propSimSheet:set_vali(sExWpHeader,row,cardData.arrOptExwp[exWpPos])
+							end
+						end
 						--导出装备
 						if not v_chaEqpProcessData[chaData.iChaId][levelData.iOptLvId]then
 							for key,val in pairs(v_chaEqpProcessData[chaData.iChaId]) do
@@ -84,11 +91,13 @@ local fn_cal_lv_process = function()
 	local cfg_card = dofile "Config\\card"
 	local cardQuaFieldSeqs = {"pt","jy1","jy2","jy3","boss"}
 	local lvTypeSeqs = {
-		["gq10"] = {1,1,2,1,1,3,1,1,4,5},
+		["gq10"] = {3,3,4,3,3,4,3,3,4,5},
 		["tw2"] = {4,4},
 		["tw3"] = {4,4,4},
 		["tw5"] = {4,4,4,4,5},
 		["daily1"] = {1},
+		["wBoss5"] = {2,2,3,3,4},
+		["cardDaily1"] = {3}
 	}
 	local lvProcessSeqs = {
 		["gq10"] = {0,0.1,0.3,0.4,0.5,0.7,0.8,0.9,1,1},
@@ -96,6 +105,8 @@ local fn_cal_lv_process = function()
 		["tw3"] = {0.3,0.6,1},
 		["tw5"] = {0.2,0.4,0.6,0.8,1},
 		["daily1"] = {1},
+		["wBoss5"] = {1,1,1,1,1},
+		["cardDaily1"] = {1}
 	}
 	local hellProcessSeqs = {
 		["gq10"] = {0,0,0,0,0,1,1,1,1,1},
@@ -103,6 +114,8 @@ local fn_cal_lv_process = function()
 		["tw3"] = {1,1,1},
 		["tw5"] = {1,1,1,1,1},
 		["daily1"] = {1},
+		["wBoss5"] = {1,1,1,1,1},
+		["cardDaily1"] = {1}
 	}
 	local cardLvProcessSeqs = {
 		["gq10"] = {{0,0.5,0},{0.2,0.5,0.2},{0.2,1,0.2},{0.3,1,0.3},{0.5,1,0.3},{1,1,0.4},{1,1,0.5},{1,1,0.8},{1,1,1},{1,1,1}},
@@ -110,6 +123,9 @@ local fn_cal_lv_process = function()
 		["tw3"] = {{0,1,0},{0,1,1},{1,1,1}},
 		["tw5"] = {{0.1,0.1,0.1},{0.25,0.25,0.25},{0.5,0.5,0.5},{0.75,0.75,0.75},{1,1,1}},
 		["daily1"] = {{1,1,1}},
+		["gj4"] = {{1,1,1},{1,1,1},{1,1,1}},
+		["wBoss5"] = {{1,1,1},{1,1,1},{1,1,1},{1,1,1},{1,1,1}},
+		["cardDaily1"] = {{1,1,1}}
 	}
 	local bkProcessSeqs = {
 		["gq10"] = {{0,0,0},{0,0,0},{0,1,0},{0,1,0},{0,1,0},{1,1,0},{1,1,0},{1,1,0},{1,1,1},{1,1,1}},
@@ -117,25 +133,43 @@ local fn_cal_lv_process = function()
 		["tw3"] = {{0,1,0},{0,1,1},{1,1,1}},
 		["tw5"] = {{0,0,0},{0,1,0},{0,1,1},{1,1,0},{1,1,1}},
 		["daily1"] = {{1,1,1}},
-		["gj4"] = {1,1,1,1}
+		["gj4"] = {{1,1,1},{1,1,1},{1,1,1},{1,1,1}},
+		["wBoss5"] = {{1,1,1},{1,1,1},{1,1,1},{1,1,1},{1,1,1}},
+		["cardDaily1"] = {{1,1,1}}
 	}
 	local bkGhostSeqs = {
 		["gq10"] = {{0,0,0},{0,0,0},{0,0.5,0},{0.5,0.5,0},{0.5,0.5,0.5},{0.5,1,0.5},{0.5,1,0.5},{0.5,1,0.5},{1,1,1},{1,1,1}},
 		["tw2"] = {{0,1,0},{1,1,1}},
 		["tw3"] = {{0,0.5,0},{0.5,1,0.5},{1,1,1}},
 		["tw5"] = {{0,0,0},{0,0.5,0},{0.5,0.5,0.5},{1,1,0.5},{1,1,1}},
-		["daily1"] = {{1,1,1}}
+		["daily1"] = {{1,1,1}},
+		["wBoss5"] = {{1,1,1},{1,1,1},{1,1,1},{1,1,1},{1,1,1}},
+		["cardDaily1"] = {{1,1,1}}
 	}
 	local cardQuaProcessSeqs = {
 		["gq10"] = {{0,0,0},{0,0,0},{0,1,0},{0,1,0},{0,1,0},{1,1,0},{1,1,0},{1,1,0},{1,1,1},{1,1,1}},
 		["tw2"] = {{0,1,0},{1,1,1}},
 		["tw3"] = {{0,1,0},{0,1,1},{1,1,1}},
 		["tw5"] = {{0,0,0},{0,1,0},{0,1,1},{1,1,0},{1,1,1}},
-		["daily1"] = {{1,1,1}}
+		["daily1"] = {{1,1,1}},
+		["wBoss5"] = {{1,1,1},{1,1,1},{1,1,1},{1,1,1},{1,1,1}},
+		["cardDaily1"] = {{1,1,1}}
+	}
+	local exWpLvProcess = {
+		["gq10"] = {0,0.1,0.3,0.4,0.5,0.7,0.8,0.9,1,1},
+		["tw2"] = {0.5,1},
+		["tw3"] = {0.3,0.6,1},
+		["tw5"] = {0.2,0.4,0.6,0.8,1},
+		["daily1"] = {1},
+		["wBoss5"] = {1,1,1,1,1},
+		["cardDaily1"] = {1}
 	}
 
 
-	local stype = {"pt","kn","tw_f","tw_h","tw_x","tw_y","daily_ghost","daily_break","daily_gold","daily_relic","daily_exwp"}
+
+
+	local stype = {"pt","kn","tw_f","tw_h","tw_x","tw_y","daily_ghost","daily_break","daily_gold","daily_relic","daily_exwp","wBoss",
+	"cardDaily_SR","cardDaily_SSR","cardDaily_UR"}
 	--local stype = {"tw_f"}
 	--local chaIdBase = {100,200}
 	local chaOptProcessData = {}
@@ -183,6 +217,10 @@ local fn_cal_lv_process = function()
 			table.insert(the_chaOptProcessData,chaOptData)
 			local cur_cha_cfg = cha_groups[_i].Cards
 			local pre_cha_cfg = cha_groups[_i-1].Cards
+
+			local cur_cha_exwp_cfg = cha_groups[_i].ExWp
+			local pre_cha_exwp_cfg = cha_groups[_i-1].ExWp
+
 			local nType = cha_groups[_i].nType
 			local nTypeCfg = lvTypeSeqs[nType]
 
@@ -212,7 +250,7 @@ local fn_cal_lv_process = function()
 				for loc=1,3 do
 					--计算玩家等级
 					local lvProcess = lvProcessSeqs[nType][lvLoc]
-					local iPlayerLv = math.floor(pre_cha_cfg.Card.Lv * (1 - lvProcess) + cur_cha_cfg.Card.Lv * lvProcess)
+					local iPlayerLv = math.floor(pre_cha_cfg.PlayerLv * (1 - lvProcess) + cur_cha_cfg.PlayerLv * lvProcess)
 					--计算玩家地狱道
 					local hellProcess = hellProcessSeqs[nType][lvLoc]
 					local iHell = math.floor(pre_cha_cfg.HellLv * (1 - hellProcess) + cur_cha_cfg.HellLv * hellProcess)
@@ -257,6 +295,12 @@ local fn_cal_lv_process = function()
 					if cardQuaProcess == 1 then
 						shlStar = cardInfoCfgCur.Shl.Star
 					end
+					--守护灵专属武器
+					local exlvProcess = exWpLvProcess[nType][lvLoc]
+					local exWps = {}
+					for exWpPos=1,8 do
+						exWps[exWpPos] = math.floor(cur_cha_exwp_cfg[cardQuaField][exWpPos] * exlvProcess + pre_cha_exwp_cfg[cardQuaField][exWpPos] * (1 - exlvProcess))
+					end
 					--赋值到cardGroup
 					--寄灵人
 					cardGroup[loc].jlr.iOptId = jlrId
@@ -271,6 +315,7 @@ local fn_cal_lv_process = function()
 					cardGroup[loc].shl.iOptLv = iCardLv
 					cardGroup[loc].shl.iOptGhost = iCardGhost
 					cardGroup[loc].shl.iOptBk = iCardBk
+					cardGroup[loc].shl.arrOptExwp = exWps
 				end
 			end
 		end
@@ -306,6 +351,12 @@ local fn_fill_gj_sheet = function(v_process_data,v_propSimSheet)
 						v_propSimSheet:set_vali(string.format("equip[%d].lv",pos),row,eqpInfo.stLv)
 					end
 				end
+				local exWpInfoArr = cardData.exEquipt
+				for pos=1,8 do
+					local eqpLv = exWpInfoArr[pos]
+					v_propSimSheet:set_vali(string.format("exWeapon[%d]",pos),row,eqpLv)
+				end
+
 				row = row + 1
 			end
 		end
@@ -321,6 +372,8 @@ local fn_output_excel = function()
 	local sheetTowerCardgroup = book:get_sheet("芦花古楼卡牌组")
 	local sheetDailyCardgroup = book:get_sheet("日常副本卡牌组")
 	local sheetGJCardgroup = book:get_sheet("挂机副本卡牌组")
+	local sheetWBossCardgroup = book:get_sheet("恶灵入侵卡牌组")
+	local sheetCardDailyCardgroup = book:get_sheet("传记副本卡牌组")
 	local lv_process_data = fn_cal_lv_process()
 	local fn_cal_eqp_process,ok = dofile "Excel\\UpProcessOutput_eqp"
 	if ok == false then
@@ -338,10 +391,14 @@ local fn_output_excel = function()
 	local sMainChaType = {"pt","kn"}
 	local sTowerChaType = {"tw_f","tw_h","tw_x","tw_y"}
 	local sDailyChaType = {"daily_ghost","daily_break","daily_gold","daily_relic","daily_exwp"}
+	local sWbossChaType = {"wBoss"}
+	local sCardDailyChaType = {"cardDaily_SR","cardDaily_SSR","cardDaily_UR"}
 
 	fn_fill_the_sheet(sMainChaType,lv_process_data,eqp_process_data,sheetMainCardgroup)
 	fn_fill_the_sheet(sTowerChaType,lv_process_data,eqp_process_data,sheetTowerCardgroup)
 	fn_fill_the_sheet(sDailyChaType,lv_process_data,eqp_process_data,sheetDailyCardgroup)
+	fn_fill_the_sheet(sWbossChaType,lv_process_data,eqp_process_data,sheetWBossCardgroup)
+	fn_fill_the_sheet(sCardDailyChaType,lv_process_data,eqp_process_data,sheetCardDailyCardgroup)
 	fn_fill_gj_sheet(hang_process_data,sheetGJCardgroup)
 	book:save(MyTools.OutputExcelPath.."shuxingmoni.xlsx")
 end

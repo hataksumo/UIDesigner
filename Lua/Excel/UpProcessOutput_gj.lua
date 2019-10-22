@@ -56,6 +56,14 @@ local fn_cal_lv_process = function()
 		{1,1,1,1,1,1,1,1,1},
 	}
 
+	local exWpProcessSeq = {
+		{0,0.5,0},
+		{0.25,0.5,0.25},
+		{0.5,1,0.5},
+		{1,1,1}
+	}
+
+
 	local lvPhaseSeq = {1,1,1,2,2,2,3,3,3}
 	local eqpQuaPhaseSeq = {2,1,2,3,3,3,4,4,4}
 
@@ -124,7 +132,7 @@ local fn_cal_lv_process = function()
 					if cardQuaStar == 0 then
 						eqpLvId = pre_chaData.Eqp[eqpQuaPhase].LvId
 						eqpQua = pre_chaData.Eqp[eqpQuaPhase].Qua
-					end
+					end 
 					theEqp.eqpNote = cfg_classfy_eqp:getEqpNote(2,eqpLvId,eqpQua,eqpPos)
 					
 					theEqp.stLv = math.floor(the_chaData.EqpLv[lvPhase] * lvProcess + pre_chaData.EqpLv[lvPhase] * (1 - lvProcess))
@@ -132,6 +140,19 @@ local fn_cal_lv_process = function()
 						theEqp.stLv = 0
 					end
 				end
+
+				--导出专属武器数据
+				the_processData_card.exEquipt = {}
+				local exWpProcess = exWpProcessSeq[lvLoc][cardLoc]
+				
+				for exEqpPos=1,8 do
+					the_processData_card.exEquipt[exEqpPos] = 0
+					if cardLoc <= 3 then
+						the_processData_card.exEquipt[exEqpPos] = math.floor(the_chaData.exWeapon[exEqpPos] * exWpProcess + 
+						pre_chaData.exWeapon[exEqpPos] * (1-exWpProcess))
+					end
+				end
+
 
 			end
 		end
