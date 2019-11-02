@@ -38,6 +38,7 @@ local fn_fill_the_sheet = function(v_sChaType,v_chaProcessData,v_chaEqpProcessDa
 						if cardData.iOptGhost then
 							v_propSimSheet:set_vali("ghost",row,cardData.iOptGhost)
 						end
+						v_propSimSheet:set_vali("mon.skillLv",row,cardData.iOptSkillLv)
 						--导出专属武器
 						if the_type_field == "shl" then
 							for exWpPos=1,8 do
@@ -301,6 +302,8 @@ local fn_cal_lv_process = function()
 					for exWpPos=1,8 do
 						exWps[exWpPos] = math.floor(cur_cha_exwp_cfg[cardQuaField][exWpPos] * exlvProcess + pre_cha_exwp_cfg[cardQuaField][exWpPos] * (1 - exlvProcess))
 					end
+
+					local skillLv = cur_cha_cfg.SkillLv
 					--赋值到cardGroup
 					--寄灵人
 					cardGroup[loc].jlr.iOptId = jlrId
@@ -308,6 +311,7 @@ local fn_cal_lv_process = function()
 					cardGroup[loc].jlr.iOptStar = jlrStar
 					cardGroup[loc].jlr.iOptLv = iPlayerLv
 					cardGroup[loc].jlr.iOptBk = iHell
+					cardGroup[loc].jlr.iOptSkillLv = skillLv
 					--守护灵
 					cardGroup[loc].shl.iOptId = shlId
 					cardGroup[loc].shl.sOptCardNote = shlNote
@@ -316,6 +320,7 @@ local fn_cal_lv_process = function()
 					cardGroup[loc].shl.iOptGhost = iCardGhost
 					cardGroup[loc].shl.iOptBk = iCardBk
 					cardGroup[loc].shl.arrOptExwp = exWps
+					cardGroup[loc].shl.iOptSkillLv = skillLv
 				end
 			end
 		end

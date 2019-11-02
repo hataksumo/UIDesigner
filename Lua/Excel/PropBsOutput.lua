@@ -295,8 +295,9 @@ local fn_calLevelProp = function()
 		--计算怪物属性
 		local monTeam = {}
 		local sType = {"jlr","shl"}
-		local hpDAtk = {5,10}
-		local atkEffectRate = {jlr = 5.0/12.0, shl = 10.0/21.0}
+		--local hpDAtk = {10,10}
+		local atkEffectRate = {jlr = 10/21.0, shl = 10.0/25.0}
+		local skillLvFac = {0.7,0.75,0.8,0.9,0.95,1,1.1,1.15,1.2,1.25}
 		monTeam.lvId = lvId
 		for loc=1,#cardGroupData do
 			local couple = cardGroupData[loc]
@@ -307,6 +308,9 @@ local fn_calLevelProp = function()
 					local curData = monTeam[loc][type]
 					local srcType = data.mon.srcType
 					local srcLoc = data.mon.srcLoc
+					if not srcLoc then
+						print(string.format("lvId = %d, Loc = %d, type = %s srcLoc = nil",lvId,loc,type))
+					end
 					if not teamData.cards[srcLoc] then
 						print("can't find the loc "..srcLoc)
 					end
@@ -318,10 +322,11 @@ local fn_calLevelProp = function()
 					curData.note = data.mon.desc
 					--计算怪物属性
 					curData.prop = CreatePropTable()
-					curData.prop.Atk =  math.floor(math.max(srcProp.HP / hpDAtk[srcType], srcProp.Def * 2))
+					curData.prop.Atk =  math.floor(math.max(srcProp.HP / data.mon.suffer, srcProp.Def * 2))
 					curData.prop.Def = math.floor(srcProp.Atk / 2)
-					curData.prop.HP = math.floor(srcProp.Atk * atkEffectRate[type] * data.mon.suffer)
-					curData.prop.DmgBonus = 1 / data.mon.exert * hpDAtk[srcType] - 1
+					local skillFac = skillLvFac[curData.skillLv]
+					curData.prop.HP = math.floor(srcProp.Atk * atkEffectRate[type] * data.mon.suffer * skillFac)
+					curData.prop.DmgBonus = srcProp.HP / curData.prop.Atk / data.mon.exert  / atkEffectRate[type] / skillFac - 1
 				end
 			end
 		end
