@@ -14,8 +14,8 @@ if ddt["property"] ~= nil then
 	return ddt["property"]
 end
 local data = {
-	[101] = {EnName = "Atk",CnName = "基础攻击",IsHide = false,Show_Str = "基础攻击 +%d",Show_Fac = 1,IsMonProp = true,IsInt = true,IsFinal = true,BsFactor = 5,Desc = "决定角色的伤害能力，攻击力越高，角色技能的伤害也越高。"},
-	[102] = {EnName = "Def",CnName = "基础防御",IsHide = false,Show_Str = "基础防御 +%d",Show_Fac = 1,IsMonProp = true,IsInt = true,IsFinal = true,BsFactor = 10,Desc = "防御力越高，角色所受伤害越低。"},
+	[101] = {EnName = "Atk",CnName = "基础攻击",IsHide = false,Show_Str = "基础攻击 +%d",Show_Fac = 1,IsMonProp = true,IsInt = true,IsFinal = true,BsFactor = 10,Desc = "决定角色的伤害能力，攻击力越高，角色技能的伤害也越高。"},
+	[102] = {EnName = "Def",CnName = "基础防御",IsHide = false,Show_Str = "基础防御 +%d",Show_Fac = 1,IsMonProp = true,IsInt = true,IsFinal = true,BsFactor = 20,Desc = "防御力越高，角色所受伤害越低。"},
 	[103] = {EnName = "HP",CnName = "基础生命",IsHide = false,Show_Str = "基础生命 +%d",Show_Fac = 1,IsMonProp = true,IsInt = true,IsFinal = true,BsFactor = 1,Desc = "生命值为0时，角色死亡。"},
 	[104] = {EnName = "Crit",CnName = "暴击率",IsHide = false,Show_Str = "暴击率 +%.2f%%",Show_Fac = 100,IsMonProp = true,IsInt = false,IsFinal = true,BsFactor = 100000,Desc = "伤害性技能和恢复技能会发生暴击，默认暴击伤害为1.5倍。"},
 	[105] = {EnName = "CritRate",CnName = "暴击伤害",IsHide = false,Show_Str = "暴击伤害 +%.2f%%",Show_Fac = 100,IsMonProp = true,IsInt = false,IsFinal = true,BsFactor = 50000,Desc = "提升暴击后造成的伤害。"},
@@ -28,7 +28,7 @@ local data = {
 	[112] = {EnName = "DefExt",CnName = "防御",IsHide = true,Show_Str = "防御 +%d",Show_Fac = 1,IsInt = true,BsFactor = 0,Desc = "额外防御力，不受百分比影响。"},
 	[113] = {EnName = "HPExt",CnName = "生命",IsHide = true,Show_Str = "生命 +%d",Show_Fac = 1,IsInt = true,BsFactor = 0,Desc = "额外生命，不受百分比影响。"},
 	[114] = {EnName = "Block",CnName = "格挡",IsHide = false,Show_Str = "格挡 +%.2f%%",Show_Fac = 100,IsMonProp = true,IsInt = false,IsFinal = true,BsFactor = 100000,Desc = "角色受到攻击时，有概率发生格挡，只受到一半的伤害。"},
-	[115] = {EnName = "DefIgnor",CnName = "穿透",IsHide = false,Show_Str = "穿透 +%.2f%%",Show_Fac = 100,IsMonProp = true,IsInt = false,IsFinal = true,BsFactor = 100000,Desc = "角色攻击敌方时，有概率忽略对方的防御，可与暴击同时发生。"},
+	[115] = {EnName = "DefIgnor",CnName = "幸运一击",IsHide = false,Show_Str = "幸运一击 +%.2f%%",Show_Fac = 100,IsMonProp = true,IsInt = false,IsFinal = true,BsFactor = 100000,Desc = "角色攻击敌方时，有概率忽略对方的防御，可与暴击同时发生。"},
 	[116] = {EnName = "R",CnName = "防御基值",IsHide = true,Show_Str = "防御基值 +%d",Show_Fac = 1,IsInt = false,IsFinal = true,BsFactor = 0,Desc = "防御系数 = Ra/(Ra+防御b)。"},
 	[117] = {EnName = "Suck",CnName = "吸血",IsHide = false,Show_Str = "吸血+%.2f%%",Show_Fac = 100,IsInt = false,IsFinal = true,BsFactor = 0,Desc = "伤害*Suck=回复生命"},
 	[118] = {EnName = "DmgBonus",CnName = "伤害提升",IsHide = false,Show_Str = "输出伤害提升+%.2f%%",Show_Fac = 100,IsMonProp = true,IsInt = false,IsFinal = true,BsFactor = 0,Desc = "最终伤害 = 伤害 * max(0.25, (1+DmgBonus))"},

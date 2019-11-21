@@ -1,0 +1,16 @@
+diff a/Assets/LuaScripts/Framework/Common/BaseClass.lua b/Assets/LuaScripts/Framework/Common/BaseClass.lua	(rejected hunks)
+@@ -68,12 +68,12 @@
+ 	-- added by wsh @ 2017-12-08
+ 	assert(_class[class_type] == nil, "Aready defined class : ", classname)
+ 	_class[class_type] = vtbl
+- 
++
+ 	setmetatable(class_type, {
+ 		__newindex = function(t,k,v)
+ 			vtbl[k] = v
+ 		end
+-		, 
++	,
+ 		--For call parent method
+ 		__index = vtbl,
+ 	})

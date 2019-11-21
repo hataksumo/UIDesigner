@@ -1,0 +1,391 @@
+--[[
+-- added by wsh @ 2017-12-05
+-- 数据消息定义，手动添加
+--]]
+
+local DataMessageNames = {
+    --
+    ON_ACCOUNT_INFO_CHG = "DataOnAccountInfoChg",
+    ON_LOGIN_SERVER_ID_CHG = "DataOnLoginServerIDChg",
+    ON_SERVER_LIST_CHG = "DataOnServerListChg",
+    ON_SWITCH_SECTION = "DataOnSwitchSection",
+    ON_SWITCH_DIFFICULT = "DataOnSwitchDifficult",
+    ON_SWITCH_CHAPTER = "DataOnSwitchChapter",
+    ON_TARGET_REWARD_UPDATE = "ON_TARGET_REWARD_UPDATE",
+    ON_PASS_LEVEL = "OnPassLevel",
+    ON_REFRESH_CHAPTER_GIFT = "OnRefreshChapterGift",
+    --战中布阵模块
+    ON_UIEMBATTLE_LIST_ITEM_CLICK = "DataOnListItemClick",
+    ON_UIEMBATTLE_LIST_SWITCH = "DataOnListSwitch",
+    ON_UIEMBATTLE_START = "DataOnBattleStart",
+    ON_UIBATTLE_IN_START = "ON_UIBATTLE_IN_START",
+    ON_UIBATTLE_START_EFFECT = "ON_UIBATTLE_START_EFFECT",
+    ON_UIBATTLE_ENEMY_EFFECT = "ON_UIBATTLE_ENEMY_EFFECT",
+    ON_UIEMBATTLE_SAVE_ROLES = "OnUIBettleSaveRoles",
+    ON_BATTLE_SWITCH_ROLE = "OnBattleSwitchRole",
+    --战外布阵
+    ON_UIEMBATTLE2D_LIST_ITEM_CLICK = "ON_UIEMBATTLE2D_LIST_ITEM_CLICK",
+    ON_UIEMBATTLE2D_LIST_ITEM_SORT = "ON_UIEMBATTLE2D_LIST_ITEM_SORT",
+    ON_UIEMBATTLE2D_SAVE_ROLES = "ON_UIEMBATTLE2D_SAVE_ROLES",
+    --卡牌详情切换子页签
+    ON_UI_CARD_DETAILS_CHANGE_CHILD_VIEW = "UICardDetailsChangeChildView",
+    ON_UI_BACKPACK_SAVE_INDEX = "UIBackpackSaveIndex",
+    ON_CARD_DATA_LIST_CHANGE = "OnCardDataListChange",
+
+    ON_CARD_LEVEL_UP = "OnCardLevelUp",
+    ON_CARD_HELL_LEVEL_UP = "OnCardHellLevelUp",
+
+    ON_SELECT_CAN_LEARN_SKILL_ITEM = "OnSelectCanLearnSkillItem",
+    ON_SELECT_CAN_LEARN_SKILL_SHOW_TYPE = "OnSelectCanLearnSkillShowType",
+    ON_MAIN_CITY_WINDOW_CLOSE = "OnMainCityWindowClose",
+    ON_MAIN_TASK_DATA_UPDATE = "OnMainTaskDataUpdate",
+    ON_ARTIFACT_DATA_UPDATE = "ON_ARTIFACT_DATA_UPDATE",
+    --
+    ON_BATTLE_ROUND_DATA = "ON_BATTLE_ROUND_DATA",
+
+    --单人boss
+    ON_SOLO_BOSS_SELECT_LEVEL = "OnSoloBossSelectLevel",
+    ON_SOLO_BOSS_REFRESH = "OnSoloBossRefresh",
+    --邮件相关的刷新
+    ON_SINGLE_MAIL_READ_STATE = "OnSingleMailReadState",
+    On_SINGLE_MAIL_DELEGATE_STATE = "OnSingleMailDelegateState",
+    ON_MAILALL_GET_UPDATE_STATE = "OnMaillGetUpdateState",
+    ON_UPDATE_MAINCITY_MAILREDPOINT = "OnUpdateMaincityMailRedpoint",
+    --物品变化
+    ON_ITEM_CHANGE = "OnItemChange",
+    ON_CARD_COST_ITEM_UPDATE = "ON_CARD_COST_ITEM_UPDATE",
+    ON_CARD_COST_ITEM_UPDATE_ClOSE = "ON_CARD_COST_ITEM_UPDATE_ClOSE",
+    --技能升级成功
+    ON_SKILL_LV_SUCCEED = "OnSkillLvSucceed",
+    --技能兑换
+    ON_SKILL_EXCHANGE_SUCCEED = "OnSkillExchangeSucceed",
+    ON_SKILL_BACKPACK_UPDATEALL = "OnSkillBackPackUpdateAll",
+    --抽卡
+    ON_CARD_POOL_SELECT = "OnCardPoolSelect",
+
+    --竞技场
+    ON_GET_SINGLE_PLAYER_DATA = "OnGetSinglePlayerData",
+    ON_GET_ARENA_REPORT_DATA = "OnGetArenaReportData",
+    ON_UPDATE_ARENA_RANK_DATA = "OnUpdateArenaRankData",
+    ON_UPDATE_ARENA_CHALLENGE_PRO_DATA = "OnUpdateChallengePeoData",
+    --芦花鼓楼
+    ON_GET_REED_TOWER_DATA = "ON_GET_REED_TOWER_DATA",
+    --挂机派遣
+    ON_HANG_UP_REFRESH = "On_Hang_Up_Refresh",
+    ON_TEAM_CHANGE = "On_Team_Change",
+    --商店数据请求完毕
+    ON_SHOP_INFO_END = "On_Shop_Info_End",
+    --收集数据请求完毕
+    ON_COLLECT_INFO_END = "On_Collect_Info_End",
+    --神器
+    ON_ARTIfACT_LV_UP = "OnArtifactLvUp",
+    --通灵
+    ON_GET_RESULT_TONGLING = "ON_GET_RESULT_TONGLING",
+    --阵法
+    ON_CIRCLE_INFO_END = "OnCircleInfoEnd",
+
+    --刷新在线界面
+    ON_ONLINE_REFRESH = "On_Online_Refresh",
+    --刷新等级礼包界面
+    ON_LVGIFT_REFRESH = "On_Lvgift_Refresh",
+    --聊天
+    ON_CHAT_UPDATE = "OnChatUpdate",
+    --卡片英雄发生改变
+    ON_CARD_HERO_CHANGE = "OnCardHeroChange",
+    --卡片英雄类型变了
+    ON_CARD_HERO_CHANGE_TYPE = "OnCardHeroChangeType",
+    --卡片池类型变化
+    ON_CARD_POOR_TYPE_CHANGE = "OnCardPoorTypeChange",
+    --好友
+    ON_FRIEND_LIST_REFRESH = "OnFriendListRefresh",
+    --注册成功
+    ON_REGISTER_GET_SUCCESS = "OnRegisterGetSuccess",
+
+    --等级礼包
+    ON_LEVEL_GIFT = "LevelGift",
+    --已领取的最大等级
+    ON_LEVEL_GIFT_MAX = "OnLevelGiftMax",
+    --排行榜
+    ON_RECIVE_RANK_DATA = "OnReciveRankData",
+
+    --武技灵背包技能激活刷新
+    ON_CELL_SKILL_ACTIVE_UPDATE = "OnCellSkillActiveUpdate",
+    --武技灵背包技能升级刷新
+    ON_CELL_SKILL_LEVEL_UPDATE = "OnCellSkillLevelUpdate",
+    --等级改变请求
+    ON_REQUEST_LEVEL_CHANGE = "OnRequestLevelChange",
+    --场景切换回调
+    ON_SCENE_CHANGE = "OnSceneChage",
+    --引导
+    -- 战斗UI动画播放结束返回
+    UI_Guide_NeedEvent = "UIGuideNeedEvent",
+    UI_Guide_UpLevelEvent = "UI_Guide_UpLevelEvent",
+    UI_Guide_LockEvent = "UI_Guide_LockEvent",
+    UI_Guide_Skill_Add_CryEvent = "UI_Guide_Skill_Add_CryEvent",
+    UI_Guide_SkillEvent = "UIGuideSkillEvent",
+    UI_Guide_MidEvent = "UIGuideMidEvent",
+    UI_Guide_CardListMoveEvent = "UI_Guide_CardListMoveEvent",
+    UIGuide_OverEvent = "UIGuide_OverEvent",
+    UIGuide_TXOverEvent = "UIGuide_TXOverEvent",
+    ON_GUIDE_CRY_BEGIN = "ON_GUIDE_CRY_BEGIN",
+    ON_GUIDE_CRY_PLAY_OVER = "ON_GUIDE_CRY_PLAY_OVER",
+    ON_GUIDE_CRY_PLAY_OVER_ROUND = "ON_GUIDE_CRY_PLAY_OVER_ROUND",
+    ON_GUIDE_STORY_BATTLE = "ON_GUIDE_STORY_BATTLE",
+    ON_GUIDE_BOARD_CREATE = "ON_GUIDE_BOARD_CREATE",
+    --技能突破刷新
+    ON_SKILL_BREAK_THROUGH_INFO = "OnSkillBreakThroughInfo",
+    --玩家等级变化
+    ON_PLAYER_LEVEL_UPDATE = "OnPlayerLevelUpdate",
+    --玩家地狱道数据变换
+    ON_USERHELL_UPDATE = "OnUserHellUpdate",
+    --洗练刷新
+    ON_CARD_XILIAN_UPDATE = "ON_CARD_XILIAN_UPDATE",
+
+    ON_USER_HELL_LV_UP = "ON_USER_HELL_LV_UP",
+    ON_GET_NEW_CARD_REFRESH = "ON_GET_NEW_CARD_REFRESH",
+    --集训营
+    ON_TRAININGCAMP_SELECT_ITEM = "OnSelectItem",
+    ON_TRAININGCAMP_SELECT_SUBITEM = "OnSelectSubItem",
+    --恶灵关卡刷新
+    ON_CACODEMON_DATA_UPDATE = "OnCacodemonDataUpdate",
+    --试炼宝库通关
+    ON_TESTHOARD_PASS_LEVEL = "ON_TESTHOARD_PASS_LEVEL",
+    --刷新传记副本界面
+    ON_BIOGRAPHY_REFRESH = "ON_BIOGRAPHY_REFRESH",
+    --------------------新界面通知Begin--------------
+    ON_NEWUICARD_CARDLIST = "ON_NEWUICARD_CARDLIST",
+    ON_UI_CARD_DETAILS_SAVE_INDEX = "UICardDetailsSaveIndex",
+    ON_NEWUICARD_GET_NEW_CARD = "ON_NEWUICARD_GET_NEW_CARD",
+    UI_CARD_STAR_REFRESH = "UI_CARD_STAR_REFRESH", --卡牌升星
+    ON_NEWUICARD_CHNAGE_UITYPE = "ON_NEWUICARD_CHNAGE_UITYPE",
+    ON_NEWUICARD_LEFTRIGHT_FUN = "ON_NEWUICARD_LEFTRIGHT_FUN",
+    ON_NEWUICARD_UPDATE_SKILL = "ON_NEWUICARD_UPDATE_SKILL",
+    ON_NEWUICARD_CLICKVIEW_SKILL = "ON_NEWUICARD_CLICKVIEW_SKILL",
+    ON_SKILL_DATA_CHANGE = "OnSkillDataChange",
+    ON_CACODEMON_DATA_CHANGE = "OnCacoDemonChange",
+    UI_ONLY_CHANGE_SHLBOOL = "UI_ONLY_CHANGE_SHLBOOL",
+    ON_CARD_NATION_DATA_UPDATE = "ON_CARD_NATION_DATA_UPDATE",
+    ON_LD_TAKE_REWARD_REFRESH = "ON_LD_TAKE_REWARD_REFRESH",
+    --------------------新界面通知Over--------------
+    MainUILockDataNotice = "MainUILockDataNotice",
+    --实时竞技战报刷新
+    ON_ARENA_PVP_REPORT_UPDATE = "ON_ARENA_PVP_REPORT_UPDATE",
+    --嘉年华
+    ON_CARNIVAL_DATA_UPDATE = "ON_CARNIVAL_DATA_UPDATE",
+    ON_CARNIVAL_DATA_INIT = "ON_CARNIVAL_DATA_INIT",
+
+    -------------------------------------灵探--------------------------------------
+    ON_LT_DATA_INITIAL_COMPLETE = "ON_LT_DATA_INITIAL_COMPLETE", --灵探数据初始化完成
+    ON_LT_DATA_REFRESH_NEXT_DIALOG = "ON_LT_DATA_REFRESH_NEXT_DIALOG", --灵探刷新下一条对话
+
+    --关卡
+    ON_LEVEL_BOX_REWARD_REFRESH = "ON_LEVEL_BOX_REWARD_REFRESH", --刷新关卡宝箱数据
+    -----------------------------------国战相关通知-------------------------------------
+    ON_NATION_MARCH_3D_MODEL_TEXTURE_SIZE_CHANGE = "ON_NATION_MARCH_3D_MODEL_TEXTURE_SIZE_CHANGE", --国战行军线3d模型贴图大小改变
+    --根据当前屏幕的建筑， 更新建筑的名称
+    ON_NATION_UPDATE_BUILDING_NAME = "ON_NATION_UPDATE_BUILDING_NAME",
+    --根据当前屏蔽的接战区,更新接战区地块的UI
+    ON_NATION_UPDATE_WARCELL_STATE = "ON_NATION_UPDATE_WARCELL_STATE",
+    --玩家声望数值变化
+    ON_NAITON_PLAYER_FAME_VALUE_CHANGE = "ON_NAITON_PLAYER_FAME_VALUE_CHANGE",
+    --玩家声望等级变化
+    ON_NAITON_PLAYER_FAME_LEVEL_CHANGE = "ON_NAITON_PLAYER_FAME_LEVEL_CHANGE",
+    --玩家资源数量变化
+    ON_NATION_PLAYER_RES_VALUE_CHANGE = "ON_NATION_PLAYER_RES_VALUE_CHANGE",
+
+    --国战主线任务更新
+    ON_NATION_MAIN_TASK_UPDATE = "ON_NATION_MAIN_TASK_UPDATE",
+
+    --国战世界地图
+    ON_NATION_WORLD_MAP_UPDATE_PATH = "ON_NATION_WORLD_MAP_UPDATE_PATH", --寻路路线更新
+
+    --国战资源区更新通知
+    ON_NATION_RES_STATE_UPDATE = "ON_NATION_RES_STATE_UPDATE", --资源区资源点更新
+
+    --国战讨伐区更新通知
+    ON_NATION_PUNITIVE_TEAM_UPDATE = "ON_NATION_PUNITIVE_TEAM_UPDATE",
+    ON_NATION_PUNITIVE_SELECT_AREA = "ON_NATION_PUNITIVE_SELECT_AREA", --切换分区
+
+    --国战资源刷新通知
+    ON_NATION_PLAYER_DATA_FLUSH = "ON_NATION_PLAYER_DATA_FLUSH",
+
+    --国战接战区，资源区，驻守队伍数据通知
+    ON_NATION_DEFEND_TEAM_UPDATE = "ON_NATION_DEFEND_TEAM_UPDATE",
+
+    --国战攻城战
+    ON_NATION_SIEGE_KILL_ACTIVE_END = "ON_NATION_SIEGE_KILL_ACTIVE_END", --国战攻城战杀敌结束
+    ON_NATION_SIEGE_UPDATE_ATTACK_TEAM = "ON_NATION_SIEGE_UPDATE_ATTACK_TEAM", --国战攻城战进攻队伍更新
+    ON_NATION_SIEGE_UPDATE_DEFEND_TEAM = "ON_NATION_SIEGE_UPDATE_DEFEND_TEAM", --国战攻城战防守玩家队伍更新
+    ON_NATION_SIEGE_UPDATE_SYSTEM_TEAM = "ON_NATION_SIEGE_UPDATE_SYSTEM_TEAM", --国战攻城战防守系统队伍更新
+    ON_NATION_SIEGE_REMOVE_ONE_TEAM = "ON_NATION_SIEGE_REMOVE_ONE_TEAM", --国战攻城战玩家队伍撤退，删除该数据
+
+    ---国战，占领领地界面
+    ON_NATION_OCCUPY_LAND_DELETE = "ON_NATION_OCCUPY_LAND_DELETE", --删除一块地
+    ON_NATION_OCCUPY_LAND_UPDATE = "ON_NATION_OCCUPY_LAND_UPDATE", --更新一块地
+    ON_NATION_OCCUPY_LAND_SELECT_TYPE = "ON_NATION_OCCUPY_LAND_SELECT_TYPE", --筛选类型
+    ON_NATION_OCCUPY_LAND_ALL_SELECT = "ON_NATION_OCCUPY_LAND_ALL_SELECT", --筛选类型,全选
+
+    --获得国战资源
+    ON_NATION_RESOURCE = "OnNationResource",
+    --更新声望等级
+    NATION_USER_FAME_LEVEL = "Nation_User_Fame_Level",
+
+    --国战建筑信息
+    ON_NATION_BUILDING_INFO_FLUSH = "ON_NATION_BUILDING_INFO_FLUSH",
+    --国战选择区域刷新通知
+    ON_NATION_CHOICE_ASCRIPTION = "ON_NATION_CHOICE_ASCRIPTION",
+    --国战军团刷新
+    ON_NATION_GUARDIAN_UPDATE = "ON_NATION_GUARDIAN_UPDATE",
+
+    --国战，坐标标记收藏更新
+    ON_NATION_POS_LIST_UPDATE = "ON_NATION_POS_LIST_UPDATE",
+
+    --国战队伍一级界面选择队伍
+    ON_NATION_UI_FIRST_SELECT_TEAM = "ON_NATION_UI_FIRST_SELECT_TEAM",
+
+    --国战发送刷新声望
+    ON_NATION_UI_FAME_TIMER_UPDATE = "ON_NATION_UI_FAME_TIMER_UPDATE",
+
+    --国战队伍二级界面寄灵人按钮点击
+    ON_DEPLOYAFTERPANELJLRBTN_CLICK = "ON_DEPLOYAFTERPANELJLRBTN_CLICK",
+    --国战队伍二级界面守护灵按钮点击
+    ON_DEPLOYAFTERPANELSHLBTN_CLICK = "ON_DEPLOYAFTERPANELSHLBTN_CLICK",
+    --国战纪事界面更新通知
+    ON_NATION_EVENT_UPDATE_CONTENT = "ON_NATION_EVENT_UPDATE_CONTENT",
+    --国战纪事界面刷新通知
+    ON_NATION_EVENT_UPDATE_ALL_CONTENT = "ON_NATION_EVENT_UPDATE_ALL_CONTENT",
+    --国战纪事界面更新一个纪事通知
+    ON_NATION_EVENT_ONE_STATUS_UPDATE = "ON_NATION_EVENT_ONE_STATUS_UPDATE",
+    -----------------------------------国战队伍和卡牌相关通知-------------------------------------
+    --国战一个队伍行为发生改变
+    ON_NATION_TEAM_BEHAVIOR_CHANGE = "ON_NATION_TEAM_BEHAVIOR_CHANGE",
+    --国战队伍多个队伍更新
+    ON_NATION_TEAM_MULTI_TEAM_UPDATE = "ON_NATION_TEAM_MULTI_TEAM_UPDATE",
+
+    --国战卡牌若干个卡牌刷新(新的)
+    ON_NATION_CARD_MULTI_FLUSH = "ON_NATION_CARD_MULTI_FLUSH",
+
+    --国战队伍卡牌招募结束
+    ON_NATION_CARD_RECRUIT_ARMY_END = "ON_NATION_CARD_RECRUIT_ARMY_END",
+    --国战卡牌受伤状态恢复
+    ON_NATION_CARD_INJURY_END = "ON_NATION_CARD_INJURY_END",
+
+    --国战征兵模式切换 普通征兵 快速征兵
+    ON_NATION_RECRUIT_MODE_CHANGE = "ON_NATION_RECRUIT_MODE_CHANGE",
+
+    ----国战卡牌一个卡牌更新(废弃)
+    --ON_NATION_CARD_ONE_CARD_UPDATE = "ON_NATION_CARD_ONE_CARD_UPDATE",
+    -----------------------------------国战队伍和卡牌相关通知结束-------------------------------------
+
+    --国战城镇状态刷新
+    ON_NATION_USER_TOWN_DATA_FLUSH = "ON_NATION_USER_TOWN_DATA_FLUSH",
+    ON_NATION_USER_TOWN_DATA_ACTIVE = "ON_NATION_USER_TOWN_DATA_ACTIVE", -- 国战城镇激活事件
+    ----国战队伍开始移动命令
+    --ON_NATION_TEAM_MOVE_START = "ON_NATION_TEAM_MOVE_START",
+
+    --国战选择队伍界面左侧按钮点击
+    ON_NATION_SELECTTEAM__SELECT = "ON_NATION_SELECTTEAM__SELECT",
+
+    --国战我的资源点某个点状态刷新
+    ON_NATION_ONE_RES_AREA_DATA_FLUSH = "ON_NATION_ONE_RES_AREA_DATA_FLUSH",
+    --国战我的资源点所有状态刷新
+    ON_NATION_ALL_RES_AREA_DATA_FLUSH = "ON_NATION_ALL_RES_AREA_DATA_FLUSH",
+    --国战我的接战区所有状态刷新
+    ON_NATION_ALL_WAR_CELL_DATA_FLUSH = "ON_NATION_ALL_WAR_CELL_DATA_FLUSH",
+
+    --国战科技发生改变
+    ON_NATION_SCIENCE_DATA_FLUSH = "ON_NATION_SCIENCE_DATA_FLUSH",
+    --国战一个科技刷新
+    ON_NATION_SCIENCE_ONE_FLUSH = "ON_NATION_SCIENCE_ONE_FLUSH",
+    -----------------------------------国战新队伍相关通知-------------------------------------
+    -- 国战行军数据更新
+    ON_NATION_MARCH_LIST_ADD = "ON_NATION_MARCH_LIST_ADD",
+    ON_NATION_MARCH_LIST_REMOVE = "ON_NATION_MARCH_LIST_REMOVE",
+    ON_NATION_MARCH_GO_END = "ON_NATION_MARCH_GO_END",
+
+    -- 队伍战斗动画
+    ON_NATION_TEAM_BATTLE_TWEEN_PLAY = "ON_NATION_TEAM_BATTLE_TWEEN_PLAY",
+
+    --某个队伍被选中逻辑
+    ON_NATION_ONE_TEAM_MARCH_SELECT = "ON_NATION_ONE_TEAM_MARCH_SELECT",
+    ON_NATION_UNION_TEAM_SIDE_INFO_CLOSE = "ON_NATION_UNION_TEAM_SIDE_INFO_CLOSE", -- 侧边栏界面关闭
+    ON_NATION_UNION_TEAM_SIDE_INFO_UPDATE = "ON_NATION_UNION_TEAM_SIDE_INFO_UPDATE", --队伍侧边栏界面刷新
+    ON_NATION_ROUTE_CHANGE = "ON_NATION_ROUTE_CHANGE", --地图路线更新
+    -----------------------------------国战新队伍相关END-------------------------------------
+
+    -----------------------------------国战联盟相关通知-------------------------------------
+    --国战我的联盟状态刷新 总口
+    ON_NATION_USER_UNION_DATA_FLUSH = "ON_NATION_USER_UNION_DATA_FLUSH",
+
+    ON_NATION_UNION_CAN_JOIN_LIST_DATA_ADD = "ON_NATION_UNION_CAN_JOIN_LIST_DATA_ADD", --国战联盟增加推荐联盟数据
+    ON_NATION_UNION_SEARCH_UNION_DATA = "ON_NATION_UNION_SEARCH_UNION_DATA", --国战联盟搜索成功
+    ON_NATION_UNION_INVITE_LIST_GET = "ON_NATION_UNION_INVITE_LIST_GET", --国战联盟邀请成员列表
+    ON_NATION_UNION_CAN_JOIN_LIST_DATA_JOIN_ONE = "ON_NATION_UNION_CAN_JOIN_LIST_DATA_JOIN_ONE", --国战联盟推荐联盟列表数据改变
+    ON_NATION_UNION_JOIN_INVITE_LIST_REFUSE = "ON_NATION_UNION_JOIN_INVITE_LIST_REFUSE", --国战联盟推荐联盟拒绝一条联盟邀请
+    --国战联盟我的加入联盟切换tab释放资源
+    ON_NATION_UNION_JOIN_TABS_RES_RESET = "ON_NATION_UNION_JOIN_TABS_RES_RESET",
+    --国战联盟我的加入联盟切换tab目标tab
+    ON_NATION_UNION_JOIN_TABS_RES_SWITCH = "ON_NATION_UNION_JOIN_TABS_RES_SWITCH",
+
+    ON_NATION_UNION_UPDATE_LOG = "ON_NATION_UNION_UPDATE_LOG", --更新联盟的日志
+    ON_NATION_UNION_LOG_RANK_OPEN = "ON_NATION_UNION_LOG_RANK_OPEN", --打开日志的排行榜
+
+    ON_NATION_UNION_MY_UNION_TABS_RES_RESET = "ON_NATION_UNION_MY_UNION_TABS_RES_RESET", --国战联盟我的联盟页签释放资源
+    ON_NATION_UNION_MY_UNION_TABS_RES_SWITCH = "ON_NATION_UNION_MY_UNION_TABS_RES_SWITCH", --国战联盟我的联盟页签切换
+    ON_NATION_UNION_MEMBER_CTRL_SETBTN_CLICK = "ON_NATION_UNION_MEMBER_CTRL_SETBTN_CLICK", --成员操作点击
+    ON_NATION_UNION_MEMBER_CTRL_POSITION_CLICK = "ON_NATION_UNION_MEMBER_CTRL_POSITION_CLICK", --职位管理点击
+    ON_NATION_UNION_MEMBER_CTRL_TICHU_CLICK = "ON_NATION_UNION_MEMBER_CTRL_TICHU_CLICK", --踢出成员
+    ON_NATION_UNION_MEMBER_CTRL_GRANT_CLICK = "ON_NATION_UNION_MEMBER_CTRL_GRANT_CLICK", --禅让盟主
+    ON_NATION_UNION_MEMBER_CTRL_FANGQI_CLICK = "ON_NATION_UNION_MEMBER_CTRL_FANGQI_CLICK", --放弃职务
+    ON_NATION_UNION_MEMBER_CTRL_POSITION_MANAGER_CLICK = "ON_NATION_UNION_MEMBER_CTRL_POSITION_MANAGER_CLICK", --职位任命
+    ON_NATION_UNION_MANAGER_SUB_AGREE_DEAL = "ON_NATION_UNION_MANAGER_SUB_AGREE_DEAL", --国战联盟我的联盟管理页签申请处理
+    ON_NATION_UNION_MANAGER_SUB_INVITE_DEAL = "ON_NATION_UNION_MANAGER_SUB_INVITE_DEAL", --国战联盟我的联盟管理页签邀请进入处理
+
+    ON_NATION_UNION_BUILD_ACTIVE_UPDATE = "ON_NATION_UNION_BUILD_ACTIVE_UPDATE", --国战联盟所有玩家已激活的城镇刷新
+
+    -- 国战战斗日志相关通知
+    ON_NATION_BATTLE_LOGS_FILTER_LOOK_CHANGE = "ON_NATION_BATTLE_LOGS_FILTER_LOOK_CHANGE", --国战战斗日志看改变
+    ON_NATION_BATTLE_LOGS_FILTER_CAMP_CHANGE = "ON_NATION_BATTLE_LOGS_FILTER_CAMP_CHANGE", --国战战斗日志进攻防守改变
+    ON_NATION_BATTLE_LOGS_ALL_IS_READ = "ON_NATION_BATTLE_LOGS_ALL_IS_READ", --国战战斗日志已经全部已读
+
+    -- 国战守军恢复相关
+    ON_NATION_DEF_RECOVER_LIST_REMOVE = "ON_NATION_DEF_RECOVER_LIST_REMOVE", --国战守军移除通知
+    ON_NATION_DEF_RECOVER_LIST_ADD = "ON_NATION_DEF_RECOVER_LIST_ADD", --国战守军增加通知
+    -----------------------------------国战联盟通知END------------------------------------
+
+    -- 国战新手引导
+    Data_Nation_Camera_Move_End = "Data_Nation_Camera_Move_End", -- 国战新手引导NeedEvent
+
+
+    ON_NATION_EASY_TOUCH_SWIPE_START = "ON_NATION_EASY_TOUCH_SWIPE_START", --国战easyTouch拖动开始
+    ON_NATION_EASY_TOUCH_SWIPE_END = "ON_NATION_EASY_TOUCH_SWIPE_END", --国战easyTouch拖动结束
+
+    -----------------------------------国战相关通知END-------------------------------------
+    ON_PVP_LOADING_END = "ON_PVP_LOADING_END", --pvp加载完毕
+    ON_PVP_CONVERT_CRY = "ON_PVP_CONVERT_CRY", --pvp恢复水晶
+    ON_PVP_ACTION = "ON_PVP_ACTION", --pvp回合
+
+    ON_EXPLORE_DATA_INIT = "ON_EXPLORE_DATA_INIT", --初始化探险数据ok
+    ON_EXPLORE_TEAM_REFRESH = "ON_EXPLORE_TEAM_REFRESH", --探险队伍刷新
+    ON_EXPLORE_TAKE_REWARD_REFRESH = "ON_EXPLORE_TAKE_REWARD_REFRESH", --探险获取奖励刷新
+    ON_EXPLORE_MAX_LV_REFRESH = "ON_EXPLORE_MAX_LV_REFRESH", --最大探险关卡刷新
+    ON_NET_CONNECT_RE_OK = "ON_NET_CONNECT_RE_OK", -- 重新连接成功
+    ON_LOADING_OVER = "ON_LOADING_OVER", --loading加载完,
+    ----装备界面刷新----
+    ON_EQUIP_DATA_REFRESH = "ON_EQUIP_DATA_REFRESH"; --装备界面刷新
+    ON_EQUIP_PROP_DATA_REFRESH = "ON_EQUIP_PROP_DATA_REFRESH"; --装备属性界面刷新
+    ON_EQUIP_DECOMPOSE_REFRESH = "ON_EQUIP_DECOMPOSE_REFRESH"; --装备分解刷新
+    --跑马灯
+    ON_HORSE_LAMP_UPDATE = "ON_HORSE_LAMP_UPDATE";
+
+    ---------千机黑煞（多人boss）--------
+    ON_WORLD_BOSS_ROOM_INFO_REFRESH = "ON_WORLD_BOSS_ROOM_INFO_REFRESH"; --多人boss房间信息刷新
+    ON_WORLD_BOSS_ROOM_CALL_POSITION = "ON_WORLD_BOSS_ROOM_CALL_POSITION"; --喊话换位置和房主
+    ON_WORLD_BOSS_ROOM_INVITE_LIST = "ON_WORLD_BOSS_ROOM_INVITE_LIST"; --邀请好友列表
+    ON_WORLD_BOSS_ROOM_INVITE_LIST_REFRESH = "ON_WORLD_BOSS_ROOM_INVITE_LIST_REFRESH"; --刷新邀请界面
+    ON_WORLD_BOSS_TEAM_DATA_UPDATE = "ON_WORLD_BOSS_TEAM_DATA_UPDATE", --某个队伍数据刷新
+    ON_WORLD_BOSS_TEAM_ADD_MOVE = "ON_WORLD_BOSS_TEAM_ADD_MOVE", --某个队伍移动
+    ------------end-----------------
+}
+
+return ConstClass("DataMessageNames", DataMessageNames)

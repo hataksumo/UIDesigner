@@ -11,7 +11,7 @@ return{
 	[1013] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 9,MaxVal = 26}},--15级寄灵人洗练-Q3-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 6,MaxVal = 19}},--15级寄灵人洗练-Q3-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 11,MaxVal = 33}},--15级寄灵人洗练-Q3-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 23,MaxVal = 66}},--15级寄灵人洗练-Q3-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--15级寄灵人洗练-Q3-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--15级寄灵人洗练-Q3-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--15级寄灵人洗练-Q3-6
@@ -25,7 +25,7 @@ return{
 	[1014] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 9,MaxVal = 26}},--15级寄灵人洗练-Q4-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 6,MaxVal = 19}},--15级寄灵人洗练-Q4-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 11,MaxVal = 33}},--15级寄灵人洗练-Q4-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 23,MaxVal = 66}},--15级寄灵人洗练-Q4-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--15级寄灵人洗练-Q4-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--15级寄灵人洗练-Q4-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--15级寄灵人洗练-Q4-6
@@ -39,7 +39,7 @@ return{
 	[1023] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 17,MaxVal = 51}},--30级寄灵人洗练-Q3-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 9,MaxVal = 26}},--30级寄灵人洗练-Q3-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 38,MaxVal = 109}},--30级寄灵人洗练-Q3-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 76,MaxVal = 219}},--30级寄灵人洗练-Q3-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--30级寄灵人洗练-Q3-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--30级寄灵人洗练-Q3-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--30级寄灵人洗练-Q3-6
@@ -53,7 +53,7 @@ return{
 	[1024] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 17,MaxVal = 51}},--30级寄灵人洗练-Q4-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 9,MaxVal = 26}},--30级寄灵人洗练-Q4-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 38,MaxVal = 109}},--30级寄灵人洗练-Q4-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 76,MaxVal = 219}},--30级寄灵人洗练-Q4-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--30级寄灵人洗练-Q4-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--30级寄灵人洗练-Q4-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--30级寄灵人洗练-Q4-6
@@ -67,7 +67,7 @@ return{
 	[1033] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 27,MaxVal = 78}},--50级寄灵人洗练-Q3-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 14,MaxVal = 40}},--50级寄灵人洗练-Q3-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 95,MaxVal = 272}},--50级寄灵人洗练-Q3-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 190,MaxVal = 544}},--50级寄灵人洗练-Q3-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--50级寄灵人洗练-Q3-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--50级寄灵人洗练-Q3-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--50级寄灵人洗练-Q3-6
@@ -81,7 +81,7 @@ return{
 	[1034] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 27,MaxVal = 78}},--50级寄灵人洗练-Q4-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 14,MaxVal = 40}},--50级寄灵人洗练-Q4-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 95,MaxVal = 272}},--50级寄灵人洗练-Q4-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 190,MaxVal = 544}},--50级寄灵人洗练-Q4-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--50级寄灵人洗练-Q4-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--50级寄灵人洗练-Q4-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--50级寄灵人洗练-Q4-6
@@ -95,7 +95,7 @@ return{
 	[1043] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 62,MaxVal = 179}},--70级寄灵人洗练-Q3-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 26,MaxVal = 76}},--70级寄灵人洗练-Q3-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 197,MaxVal = 565}},--70级寄灵人洗练-Q3-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 395,MaxVal = 1129}},--70级寄灵人洗练-Q3-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--70级寄灵人洗练-Q3-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--70级寄灵人洗练-Q3-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--70级寄灵人洗练-Q3-6
@@ -109,7 +109,7 @@ return{
 	[1044] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 62,MaxVal = 179}},--70级寄灵人洗练-Q4-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 26,MaxVal = 76}},--70级寄灵人洗练-Q4-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 197,MaxVal = 565}},--70级寄灵人洗练-Q4-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 395,MaxVal = 1129}},--70级寄灵人洗练-Q4-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--70级寄灵人洗练-Q4-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--70级寄灵人洗练-Q4-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--70级寄灵人洗练-Q4-6
@@ -123,7 +123,7 @@ return{
 	[1053] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 82,MaxVal = 236}},--90级寄灵人洗练-Q3-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 34,MaxVal = 99}},--90级寄灵人洗练-Q3-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 334,MaxVal = 955}},--90级寄灵人洗练-Q3-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 669,MaxVal = 1913}},--90级寄灵人洗练-Q3-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--90级寄灵人洗练-Q3-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--90级寄灵人洗练-Q3-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--90级寄灵人洗练-Q3-6
@@ -137,7 +137,7 @@ return{
 	[1054] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 82,MaxVal = 236}},--90级寄灵人洗练-Q4-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 34,MaxVal = 99}},--90级寄灵人洗练-Q4-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 334,MaxVal = 955}},--90级寄灵人洗练-Q4-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 669,MaxVal = 1913}},--90级寄灵人洗练-Q4-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--90级寄灵人洗练-Q4-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--90级寄灵人洗练-Q4-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--90级寄灵人洗练-Q4-6
@@ -151,7 +151,7 @@ return{
 	[1063] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 157,MaxVal = 451}},--100级寄灵人洗练-Q3-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 55,MaxVal = 158}},--100级寄灵人洗练-Q3-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 563,MaxVal = 1611}},--100级寄灵人洗练-Q3-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 1127,MaxVal = 3222}},--100级寄灵人洗练-Q3-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--100级寄灵人洗练-Q3-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--100级寄灵人洗练-Q3-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--100级寄灵人洗练-Q3-6
@@ -165,7 +165,7 @@ return{
 	[1064] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 157,MaxVal = 451}},--100级寄灵人洗练-Q4-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 55,MaxVal = 158}},--100级寄灵人洗练-Q4-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 563,MaxVal = 1611}},--100级寄灵人洗练-Q4-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 1127,MaxVal = 3222}},--100级寄灵人洗练-Q4-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--100级寄灵人洗练-Q4-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--100级寄灵人洗练-Q4-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--100级寄灵人洗练-Q4-6
@@ -179,7 +179,7 @@ return{
 	[1073] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 182,MaxVal = 522}},--110级寄灵人洗练-Q3-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 64,MaxVal = 183}},--110级寄灵人洗练-Q3-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 723,MaxVal = 2067}},--110级寄灵人洗练-Q3-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 1447,MaxVal = 4136}},--110级寄灵人洗练-Q3-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--110级寄灵人洗练-Q3-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--110级寄灵人洗练-Q3-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--110级寄灵人洗练-Q3-6
@@ -193,7 +193,7 @@ return{
 	[1074] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 182,MaxVal = 522}},--110级寄灵人洗练-Q4-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 64,MaxVal = 183}},--110级寄灵人洗练-Q4-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 723,MaxVal = 2067}},--110级寄灵人洗练-Q4-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 1447,MaxVal = 4136}},--110级寄灵人洗练-Q4-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--110级寄灵人洗练-Q4-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--110级寄灵人洗练-Q4-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--110级寄灵人洗练-Q4-6
@@ -207,7 +207,7 @@ return{
 	[1083] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 243,MaxVal = 695}},--120级寄灵人洗练-Q3-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 84,MaxVal = 242}},--120级寄灵人洗练-Q3-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 1131,MaxVal = 3232}},--120级寄灵人洗练-Q3-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 2262,MaxVal = 6464}},--120级寄灵人洗练-Q3-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--120级寄灵人洗练-Q3-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--120级寄灵人洗练-Q3-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--120级寄灵人洗练-Q3-6
@@ -221,7 +221,7 @@ return{
 	[1084] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 243,MaxVal = 695}},--120级寄灵人洗练-Q4-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 84,MaxVal = 242}},--120级寄灵人洗练-Q4-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 1131,MaxVal = 3232}},--120级寄灵人洗练-Q4-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 2262,MaxVal = 6464}},--120级寄灵人洗练-Q4-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--120级寄灵人洗练-Q4-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--120级寄灵人洗练-Q4-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--120级寄灵人洗练-Q4-6
@@ -235,7 +235,7 @@ return{
 	[1093] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 318,MaxVal = 910}},--130级寄灵人洗练-Q3-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 116,MaxVal = 332}},--130级寄灵人洗练-Q3-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 1417,MaxVal = 4051}},--130级寄灵人洗练-Q3-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 2834,MaxVal = 8099}},--130级寄灵人洗练-Q3-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--130级寄灵人洗练-Q3-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--130级寄灵人洗练-Q3-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--130级寄灵人洗练-Q3-6
@@ -249,7 +249,7 @@ return{
 	[1094] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 318,MaxVal = 910}},--130级寄灵人洗练-Q4-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 116,MaxVal = 332}},--130级寄灵人洗练-Q4-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 1417,MaxVal = 4051}},--130级寄灵人洗练-Q4-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 2834,MaxVal = 8099}},--130级寄灵人洗练-Q4-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--130级寄灵人洗练-Q4-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--130级寄灵人洗练-Q4-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--130级寄灵人洗练-Q4-6
@@ -263,7 +263,7 @@ return{
 	[1103] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 368,MaxVal = 1054}},--140级寄灵人洗练-Q3-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 134,MaxVal = 384}},--140级寄灵人洗练-Q3-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 1756,MaxVal = 5019}},--140级寄灵人洗练-Q3-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 3514,MaxVal = 10042}},--140级寄灵人洗练-Q3-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--140级寄灵人洗练-Q3-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--140级寄灵人洗练-Q3-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--140级寄灵人洗练-Q3-6
@@ -277,7 +277,7 @@ return{
 	[1104] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 368,MaxVal = 1054}},--140级寄灵人洗练-Q4-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 134,MaxVal = 384}},--140级寄灵人洗练-Q4-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 1756,MaxVal = 5019}},--140级寄灵人洗练-Q4-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 3514,MaxVal = 10042}},--140级寄灵人洗练-Q4-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--140级寄灵人洗练-Q4-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--140级寄灵人洗练-Q4-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--140级寄灵人洗练-Q4-6
@@ -291,7 +291,7 @@ return{
 	[1113] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 462,MaxVal = 1322}},--150级寄灵人洗练-Q3-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 170,MaxVal = 486}},--150级寄灵人洗练-Q3-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 2228,MaxVal = 6366}},--150级寄灵人洗练-Q3-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 4455,MaxVal = 12731}},--150级寄灵人洗练-Q3-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--150级寄灵人洗练-Q3-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--150级寄灵人洗练-Q3-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--150级寄灵人洗练-Q3-6
@@ -305,7 +305,7 @@ return{
 	[1114] = {
 		[1] = {Weight = 1800,Prop = {Id = 111,MinVal = 462,MaxVal = 1322}},--150级寄灵人洗练-Q4-1
 		[2] = {Weight = 1800,Prop = {Id = 112,MinVal = 170,MaxVal = 486}},--150级寄灵人洗练-Q4-2
-		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 2228,MaxVal = 6366}},--150级寄灵人洗练-Q4-3
+		[3] = {Weight = 2000,Prop = {Id = 113,MinVal = 4455,MaxVal = 12731}},--150级寄灵人洗练-Q4-3
 		[4] = {Weight = 500,Prop = {Id = 108,MinVal = 0.014,MaxVal = 0.04}},--150级寄灵人洗练-Q4-4
 		[5] = {Weight = 400,Prop = {Id = 109,MinVal = 0.014,MaxVal = 0.04}},--150级寄灵人洗练-Q4-5
 		[6] = {Weight = 500,Prop = {Id = 110,MinVal = 0.014,MaxVal = 0.04}},--150级寄灵人洗练-Q4-6

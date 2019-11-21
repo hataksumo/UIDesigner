@@ -423,6 +423,9 @@ local fn_output_card_prop = function(v_card_attr_sheet,v_mon_attr_sheet,v_levelS
 						v_mon_attr_sheet:set_vali("CallCost",row,moncfgData.shl.callCost)
 						v_mon_attr_sheet:set_vali("CallCD",row,moncfgData.shl.callCd)
 						v_mon_attr_sheet:set_vali("CrystalType",row,moncfgData.shl.crystalType)
+						if moncfgData.shl.enterEffect then
+							v_mon_attr_sheet:set_vali("EnterEffect",row,moncfgData.shl.enterEffect)
+						end
 					else
 
 					end
