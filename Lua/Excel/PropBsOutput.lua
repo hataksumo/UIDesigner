@@ -62,11 +62,16 @@ local fn_calLevelProp = function()
 		end
 
 
-		local ghost_info = v_iType == 2 and card_info.ghost[v_cfg.ghost] or {}
+		local ghost_info = v_iType == 2 and card_info.ghost or {}
 		local break_info = cfg_hell_name[v_iType][v_cfg.bklv]
 
+		if not v_cfg.bklv then
+			print("id "..v_cfg.id.."no bklv")
+		end
+
 		if not cardbk_info then
-			print(string.format("hell_info is nil, note = %s, v_cfg.bklv = %d",v_cfg.mon.note,v_cfg.bklv))
+			print("id "..v_cfg.id.." cardid "..v_cfg.cardId.."bklv "..v_cfg.bklv.." no bkinfo")
+			--print(string.format("hell_info is nil, note = %s, v_cfg.bklv = %d",v_cfg.mon.note,v_cfg.bklv))
 		end
 		if not break_info then
 			print(string.format("cfg_hell_name[%d][%d] = nil",v_iType,v_cfg.bklv))
@@ -80,17 +85,17 @@ local fn_calLevelProp = function()
 			print(string.format("%d can't find ghost",v_cfg.id))
 		end
 		if v_iType == 2 and v_cfg.ghost > 0 then
-			for _i,data in ipairs(ghost_info) do
-				prop[data.Id] = prop[data.Id] + data.Sum
+			local ghostLv = v_cfg.ghost
+			for i=1,ghostLv do
+				local the_ghost_cfg = ghost_info[i]
+				for j=1,#the_ghost_cfg do
+					local id = the_ghost_cfg.PropId[j]
+					local val = the_ghost_cfg.Prop[v_cfg.star][j]
+					prop[id] = prop[id] + val
+				end
 			end
 		end
 		prop.BasePropAll = cardstar_info.BasePropAll
-
-
-		--[[print(string.format("id = %d, name = %s, bklv =%d, lv = %d, ghost = %d star = %d"
-			.."\natk = %d, def = %d, hp = %d",
-			v_cfg.id,card_info.Name,v_cfg.bklv,v_cfg.lv,v_cfg.ghost,v_cfg.star,
-			prop.Atk,prop.Def,prop.HP))]]
 
 		return prop
 	end
@@ -322,7 +327,7 @@ local fn_calLevelProp = function()
 					curData.note = data.mon.desc
 					--计算怪物属性
 					curData.prop = CreatePropTable()
-					curData.prop.Atk =  math.floor(math.max(srcProp.HP / data.mon.suffer, srcProp.Def * 2))
+					curData.prop.Atk =  math.floor(math.max(srcProp.HP / data.mon.exert, srcProp.Def * 2))
 					curData.prop.Def = math.floor(srcProp.Atk / 2)
 					local skillFac = skillLvFac[curData.skillLv]
 					curData.prop.HP = math.floor(srcProp.Atk * atkEffectRate[type] * data.mon.suffer * skillFac)

@@ -1,4 +1,5 @@
 --[[
+output from excel eqp.装备.xlsx
 --note:
 
 colums:

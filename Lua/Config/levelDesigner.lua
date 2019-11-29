@@ -1,4 +1,5 @@
 --[[
+output from excel 属性模拟.xlsx
 --note:
 
 colums:

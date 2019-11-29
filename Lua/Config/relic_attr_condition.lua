@@ -1,4 +1,5 @@
 --[[
+output from excel relic.神器.xlsx
 --note:
 配置全局属性的筛选器。该筛选id的mask与卡牌的mask相与值大于0，则可把该属性加个对应卡牌
 colums:

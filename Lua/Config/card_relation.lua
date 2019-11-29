@@ -1,4 +1,5 @@
 --[[
+output from excel card.卡牌表.xlsx
 --note:
 卡牌缘分表
 colums:
